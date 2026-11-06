@@ -10,6 +10,8 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: true
+env:
+  VERSETIME_SHA: 6092b98125d1db6077ba999c2d9bc5ccc3b2ff99
 jobs:
   deploy:
     environment:
@@ -18,7 +20,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dydrmr/VerseTime
+          ref: ${{ env.VERSETIME_SHA }}
+          path: _versetime
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/build-data.mjs _versetime/data
+      - run: node --test tests/*.test.mjs
+      - run: mkdir -p chatgpt && cp data/locations.json chatgpt/locations.json && rm -rf _versetime
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .

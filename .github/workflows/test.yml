@@ -8,7 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dydrmr/VerseTime
+          ref: 6092b98125d1db6077ba999c2d9bc5ccc3b2ff99
+          path: _versetime
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: node tools/build-data.mjs _versetime/data
       - run: node --test tests/*.test.mjs
