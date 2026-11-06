@@ -20,6 +20,11 @@
 html,body{margin:0;min-height:100%;background:#05080f;color:var(--ink);font:500 16px/1.4 var(--hud)}
 #scene{position:fixed;inset:0 0 auto;width:100%;height:74vh;z-index:0}
 @media (min-width:960px){#scene{height:100%}}
+#photo{position:fixed;inset:0;z-index:0;overflow:hidden;opacity:0;transition:opacity .8s}
+#photo.ready{opacity:1}
+#photo picture{position:absolute;inset:0;opacity:0;transition:opacity 1.2s linear}
+#photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:drift 90s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.02) translateX(0)}to{transform:scale(1.08) translateX(-1.2%)}}
 .shade{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,6,12,.55),rgba(3,6,12,0) 30%,rgba(3,6,12,0) 55%,rgba(3,6,12,.8))}
 main{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));display:grid;gap:14px;
  grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "hero" "view" "solar" "tl" "cards" "search" "info" "foot"}
@@ -82,10 +87,17 @@ footer a{color:var(--mute)}
  #cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}
  footer{align-self:center;justify-content:flex-end}
 }
-@media (prefers-reduced-motion:reduce){#bar{transition:none}}
+@media (prefers-reduced-motion:reduce){#bar,#photo picture{transition:none}#photo img{animation:none}}
 </style></head>
 <body>
-<svg id="scene" aria-hidden="true"></svg><div class="shade"></div>
+<svg id="scene" aria-hidden="true"></svg>
+<div id="photo" aria-hidden="true">
+ <picture data-k="night"><source media="(orientation: portrait)" srcset="./img/bg/night-tall.webp"><img src="./img/bg/night-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="sunrise"><source media="(orientation: portrait)" srcset="./img/bg/sunrise-tall.webp"><img src="./img/bg/sunrise-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="day"><source media="(orientation: portrait)" srcset="./img/bg/day-tall.webp"><img src="./img/bg/day-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="sunset"><source media="(orientation: portrait)" srcset="./img/bg/sunset-tall.webp"><img src="./img/bg/sunset-wide.webp" alt="" decoding="async"></picture>
+</div>
+<div class="shade"></div>
 <main>
  <header>
   <div class="brand">
@@ -131,7 +143,7 @@ footer a{color:var(--mute)}
   <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
  </div>
 
- <footer><span id="count"></span><span>Paisaje: visualización artística</span><span>Cálculo: modelo <a href="https://github.com/dydrmr/VerseTime">VerseTime</a> (GPL-3.0). No es una lectura del servidor de Star Citizen.</span></footer>
+ <footer><span id="count"></span><span>Paisaje: visualización artística, no imagen del juego</span><span>Cálculo: modelo <a href="https://github.com/dydrmr/VerseTime">VerseTime</a> (GPL-3.0). No es una lectura del servidor de Star Citizen.</span></footer>
 </main>
 <script type="module" src="./src/app.js"></script>
 </body></html>

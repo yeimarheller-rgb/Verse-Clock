@@ -109,3 +109,19 @@ export function paintScene(svg, st, body) {
   $('halo').setAttribute('opacity', clamp(st.elevation + 0.35, 0, 1).toFixed(3));
   return P;
 }
+
+
+// Fotografías por fase (img/bg/*). Pesos continuos según la elevación solar: fundido sin saltos.
+// Si las imágenes no están o no cargan, se queda visible la escena procedural de arriba.
+const ramp = (v, a, b) => clamp((v - a) / (b - a), 0, 1);
+export function photoWeights(st) {
+  if (st.phase === 'polar') return { night: 1, sunrise: 0, day: 0, sunset: 0 };
+  const e = st.elevation;
+  const night = 1 - ramp(e, -0.16, 0.0);
+  const twilight = ramp(e, -0.2, -0.02) * (1 - ramp(e, 0.08, 0.3));
+  const day = ramp(e, 0.12, 0.38);
+  const w = { night, sunrise: st.side < 0 ? twilight : 0, sunset: st.side < 0 ? 0 : twilight, day };
+  const sum = w.night + w.sunrise + w.sunset + w.day || 1;
+  for (const k in w) w[k] /= sum;
+  return w;
+}

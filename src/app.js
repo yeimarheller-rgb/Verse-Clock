@@ -1,6 +1,6 @@
 // VERSE CLOCK 1.0 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
-import { sunState, buildScene, paintScene } from './scene.js';
+import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -55,6 +55,8 @@ function tick() {
   $('phase').textContent = PHASE[st.phase];
   const P = paintScene($('scene'), st, cur.body);
   document.body.style.background = P.near; // suelo continuo bajo la escena en móvil
+  const W = photoWeights(st), ph = $('photo');
+  if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
 
   const lodS = cur.lengthOfDayDays * 86400;
   if (r.polar) {
@@ -101,6 +103,9 @@ function find(v) {
 function fromHash() { const h = decodeURIComponent(location.hash.slice(1)).replace(/_/g, ' ').toLowerCase(); return h && locs.find(l => l.name.toLowerCase() === h); }
 
 buildScene($('scene'));
+// Las fotos solo se muestran si cargan las cuatro; si falta alguna, queda la escena procedural.
+Promise.all([...$('photo').querySelectorAll('img')].map(img => img.decode ? img.decode() : Promise.resolve()))
+  .then(() => $('photo').classList.add('ready')).catch(() => $('photo').remove());
 $('q').addEventListener('change', e => { const l = find(e.target.value); if (l) select(l); else $('where').textContent = 'Sin resultados: prueba con el nombre de la base o del planeta'; });
 $('q').addEventListener('keydown', e => { if (e.key === 'Enter') { const l = find(e.target.value); if (l) { select(l); e.target.blur(); } } });
 $('fav').addEventListener('click', () => { if (!cur) return; favs = favs.includes(cur.name) ? favs.filter(n => n !== cur.name) : [...favs, cur.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
