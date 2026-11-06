@@ -17,4 +17,5 @@ jobs:
         with:
           node-version: '22'
       - run: node tools/build-data.mjs _versetime/data
+      - run: sh tools/fetch-fonts.sh
       - run: node --test tests/*.test.mjs

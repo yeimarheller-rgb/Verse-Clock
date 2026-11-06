@@ -1,121 +1,137 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0e1626"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
+<html lang="es" data-phase="night"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05080f"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Verse Clock">
+<link rel="preload" href="./fonts/orbitron-700.woff2" as="font" type="font/woff2" crossorigin>
 <title>Verse Clock</title>
 <style>
-:root{--sky:#0e1626;--deep:#16223a;--line:#2c3d5c;--ink:#e9eef7;--mute:#9aabc6;--sun:#f2b544;--dusk:#6f8fd1;color-scheme:dark}
-*{box-sizing:border-box}html{background:var(--sky)}
-body{margin:0;color:var(--ink);font:16px/1.5 "Avenir Next","Segoe UI",system-ui,sans-serif;padding:max(20px,env(safe-area-inset-top)) 20px max(28px,env(safe-area-inset-bottom));max-width:560px;margin-inline:auto}
-header{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-h1{font-size:20px;font-weight:600;letter-spacing:.02em;margin:0}
-.clocks{color:var(--mute);font-size:13px;font-variant-numeric:tabular-nums;text-align:right}
-label{display:block;color:var(--mute);font-size:14px;margin:22px 0 6px}
-input{width:100%;font:inherit;font-size:17px;color:var(--ink);background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
-input:focus-visible,button:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
-.where{color:var(--mute);font-size:14px;margin:6px 2px 0;min-height:21px}
-.dial{display:block;width:100%;max-width:340px;margin:18px auto 0}
-.local{text-align:center;margin-top:-6px}
-.local b{display:block;font-size:clamp(46px,15vw,68px);font-weight:300;font-variant-numeric:tabular-nums;letter-spacing:-.01em;line-height:1}
-.local span{color:var(--mute)}
-.events{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:24px}
-.ev{background:var(--deep);padding:14px 16px}
-.ev h2{font-size:14px;font-weight:500;color:var(--mute);margin:0 0 4px}
-.ev .in{font-size:26px;font-variant-numeric:tabular-nums}
-.ev .at{font-size:14px;color:var(--mute);font-variant-numeric:tabular-nums}
-.polar{grid-column:1/-1;background:var(--deep);padding:16px;color:var(--mute)}
-footer{margin-top:28px;font-size:13px;color:var(--mute)}
-footer a{color:var(--dusk)}
+@font-face{font-family:Orbitron;font-weight:700;font-display:swap;src:url(./fonts/orbitron-700.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:500;font-display:swap;src:url(./fonts/rajdhani-500.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:600;font-display:swap;src:url(./fonts/rajdhani-600.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:700;font-display:swap;src:url(./fonts/rajdhani-700.woff2) format("woff2")}
+:root{--ink:#e6edf6;--mute:#8fa3bd;--line:rgba(160,190,225,.22);--glass:rgba(6,10,20,.55);--acc:#ff8a3c;--acc2:#ffc070;
+ --night:#1b2a4a;--dawn:#ff9aa0;--day:#ffc95a;--dusk:#ff6a2a;
+ --hud:"Rajdhani","Bahnschrift","DIN Alternate","Arial Narrow",system-ui,sans-serif;--num:"Orbitron","Rajdhani",ui-monospace,monospace;color-scheme:dark}
+[data-phase=night],[data-phase=polar]{--acc:#7fb4ff;--acc2:#b8d4ff}
+[data-phase=sunrise]{--acc:#ff8aa0;--acc2:#ffc0b0}
+[data-phase=day]{--acc:#ffb347;--acc2:#ffe0a0}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#05080f;color:var(--ink);font:500 16px/1.4 var(--hud)}
+#scene{position:fixed;inset:0 0 auto;width:100%;height:74vh;z-index:0}
+@media (min-width:960px){#scene{height:100%}}
+.shade{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,6,12,.55),rgba(3,6,12,0) 30%,rgba(3,6,12,0) 55%,rgba(3,6,12,.8))}
+main{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));display:grid;gap:14px;
+ grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "hero" "view" "solar" "tl" "cards" "search" "info" "foot"}
+.view{grid-area:view;height:28vh}
+.cap{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--mute)}
+header{grid-area:top;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{display:block;font:700 clamp(15px,4.4vw,20px)/1 var(--num);letter-spacing:.24em;white-space:nowrap}
+.net{display:flex;align-items:center;gap:8px}.net::before{content:"";width:7px;height:7px;border-radius:50%;background:#58d68d;box-shadow:0 0 8px #58d68d}
+.panel{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)}
+.hero{grid-area:hero;text-align:center;padding:18px 12px 16px;position:relative;container-type:inline-size}
+.hero::before,.hero::after{content:"";position:absolute;left:50%;width:46px;height:2px;background:var(--acc);transform:translateX(-50%)}
+.hero::before{top:0}.hero::after{bottom:0}
+#place{font:700 clamp(18px,4.6vw,26px)/1.1 var(--hud);letter-spacing:.34em;text-transform:uppercase;color:var(--acc);margin:0 0 6px}
+#clock{display:block;font:700 clamp(40px,13.5cqi,124px)/1 var(--num);white-space:nowrap;letter-spacing:.02em;font-variant-numeric:tabular-nums;text-shadow:0 0 28px rgba(0,0,0,.6)}
+.sub{margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px}
+.solar{grid-area:solar;padding:16px 18px;display:grid;gap:14px}
+.ph{display:flex;justify-content:space-between;align-items:baseline}
+#phase{font:700 24px/1 var(--hud);letter-spacing:.12em;text-transform:uppercase}
+.meter{height:5px;background:rgba(255,255,255,.12);margin-top:8px}#bar{height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1s linear}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ev div{border-left:2px solid var(--line);padding-left:12px}
+.ev strong{display:block;font:700 19px/1.2 var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ev .cap{color:var(--acc2)}
+.solar.polar strong{font-size:16px}
+.tlw{grid-area:tl;padding:16px 18px 12px}
+.tl{position:relative;height:6px;border-radius:3px;margin:22px 0 10px}
+.mk{position:absolute;top:-5px;width:2px;height:16px;background:var(--ink);transform:translateX(-1px);opacity:.7}
+#tlNow{position:absolute;top:-17px;transform:translateX(-50%);color:var(--acc);font-size:14px;line-height:1}
+#tlNow::after{content:"";display:block;width:2px;height:24px;background:var(--acc);margin:2px auto 0;box-shadow:0 0 10px var(--acc)}
+.tll{display:flex;justify-content:space-between}
+.info{grid-area:info;padding:14px 18px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 16px}
+.info dd{margin:2px 0 0;font:700 17px/1.2 var(--hud)}.info dt{margin:0}
+#cards{grid-area:cards;display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,260px);scroll-snap-type:x mandatory;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.card{all:unset;scroll-snap-align:start;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:14px 16px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.card:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+.cn{font:700 15px/1.2 var(--hud);letter-spacing:.14em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ct{font:700 17px/1.2 var(--num);font-variant-numeric:tabular-nums;text-align:right}
+.cb,.cp{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}.cp{text-align:right}
+.card[data-phase=day] .cp,.card[data-phase=sunset] .cp{color:#ffc070}.card[data-phase=night] .cp{color:#9cc2ff}.card[data-phase=sunrise] .cp{color:#ffaab8}
+.search{grid-area:search;display:flex;gap:10px}
+#q{flex:1;min-width:0;font:600 17px var(--hud);letter-spacing:.04em;color:var(--ink);background:var(--glass);border:1px solid var(--line);padding:13px 14px;border-radius:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#q::placeholder{color:var(--mute)}
+#fav{font:700 13px var(--hud);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--acc);padding:0 14px;cursor:pointer}
+#fav[aria-pressed=true]{background:var(--acc);color:#0a0a0a}
+#fav .ico{font-size:18px;letter-spacing:0}#fav .txt{display:none}
+@media (min-width:560px){#fav .txt{display:inline;margin-left:6px}}
+#q:focus-visible,#fav:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+footer{grid-area:foot;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--mute);padding:4px 2px}
+footer a{color:var(--mute)}
+@media (min-width:960px){
+ main{min-height:100vh;grid-template-columns:280px minmax(0,1fr) 340px;grid-template-rows:auto auto 1fr auto auto auto;
+  grid-template-areas:"top top top" "info hero solar" "view view view" "tl tl tl" "cards cards cards" "search search foot" }
+ .view{height:auto;min-height:120px}
+ .hero{align-self:start;padding:26px 20px 22px}
+ .info{grid-template-columns:1fr;align-self:start}
+ .solar{align-self:start}
+ #cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}
+ footer{align-self:center;justify-content:flex-end}
+}
+@media (prefers-reduced-motion:reduce){#bar{transition:none}}
 </style></head>
 <body>
-<header><h1>Verse Clock</h1><div class="clocks">Madrid <span id="madrid">--:--:--</span><br>UTC <span id="utc">--:--:--</span></div></header>
+<svg id="scene" aria-hidden="true"></svg><div class="shade"></div>
+<main>
+ <header>
+  <div class="brand">
+   <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 20 20 37 3 20Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="6.5" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M20 9v4M20 27v4M9 20h4M27 20h4" stroke="currentColor" stroke-width="1.6"/></svg>
+   <div><b>VERSE CLOCK</b><span class="cap">Hora y ciclo de luz</span></div>
+  </div>
+  <span class="cap net" id="net">En línea</span>
+ </header>
 
-<label for="q">Ubicación de superficie</label>
-<input id="q" list="places" autocomplete="off" spellcheck="false" placeholder="Busca una base, p. ej. HDSF-Elbridge">
-<datalist id="places"></datalist>
-<p class="where" id="where">Cargando catálogo…</p>
+ <section class="panel hero" aria-live="off">
+  <h1 id="place">—</h1>
+  <time id="clock">--:--:--</time>
+  <div class="sub cap"><span id="where">Cargando catálogo…</span><span>Madrid <span id="mad">--:--:--</span></span><span id="date"></span></div>
+ </section>
+ <div class="view" aria-hidden="true"></div>
 
-<svg class="dial" viewBox="-110 -110 220 220" aria-hidden="true">
-  <circle r="96" fill="none" stroke="var(--line)" stroke-width="1.5"/>
-  <path id="dayArc" fill="none" stroke="var(--sun)" stroke-width="6" stroke-linecap="round" opacity=".85"/>
-  <path id="nightArc" fill="none" stroke="var(--dusk)" stroke-width="6" stroke-linecap="round" opacity=".45"/>
-  <text y="-78" text-anchor="middle" fill="var(--mute)" font-size="9">12:00</text>
-  <text y="86" text-anchor="middle" fill="var(--mute)" font-size="9">00:00</text>
-  <g id="hand"><line y1="0" y2="-96" stroke="var(--ink)" stroke-width="1.2"/><circle cy="-96" r="7" fill="var(--sky)" stroke="var(--ink)" stroke-width="2"/></g>
-</svg>
-<div class="local"><b id="local">--:--:--</b><span id="phase">hora local en el juego</span></div>
+ <section class="panel solar" id="solar">
+  <div><div class="ph"><span class="cap">Ciclo solar</span><span class="cap" id="pct"></span></div>
+   <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
+  <div class="ev">
+   <div><span class="cap">Amanecer</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
+   <div><span class="cap">Anochecer</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
+  </div>
+ </section>
 
-<section class="events" id="events">
-  <div class="ev"><h2>Amanecer</h2><div class="in" id="riseIn">—</div><div class="at" id="riseAt"></div></div>
-  <div class="ev"><h2>Anochecer</h2><div class="in" id="setIn">—</div><div class="at" id="setAt"></div></div>
-</section>
+ <section class="panel tlw" aria-label="Día local de la ubicación">
+  <div class="tl" id="tl"><span class="mk" id="tlRise"></span><span class="mk" id="tlSet"></span><span id="tlNow">▼</span></div>
+  <div class="tll cap"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+ </section>
 
-<footer>Predicción calculada en tu dispositivo a partir del reloj UTC y del modelo de <a href="https://github.com/dydrmr/VerseTime">VerseTime</a> (GPL-3.0). No es una lectura del servidor de Star Citizen. Coincidencia con VerseTime verificada por tests; en el juego solo se ha contrastado un punto en HDSF-Elbridge.</footer>
+ <dl class="panel info">
+  <div><dt class="cap">Latitud</dt><dd id="lat">—</dd></div>
+  <div><dt class="cap">Duración del día</dt><dd id="dayLen">—</dd></div>
+  <div><dt class="cap">Altitud</dt><dd id="alt">—</dd></div>
+  <div><dt class="cap">Tipo</dt><dd id="kind">—</dd></div>
+ </dl>
 
-<script type="module">
-import { compute, fmt } from './src/engine.js';
-const $ = id => document.getElementById(id);
-const tz = z => new Intl.DateTimeFormat('es-ES',{timeZone:z,hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
-const MAD = tz('Europe/Madrid'), UTC = tz('UTC');
-let locs = [], cur = null;
+ <div id="cards" aria-label="Ubicaciones fijadas"></div>
 
-const label = l => `${l.name} (${l.body})`;
-const arc = (a0, a1) => { // ángulos en grados, 0 = medianoche abajo, sentido horario
-  const p = a => { const r = (a + 90) * Math.PI / 180; return [96 * Math.cos(r), 96 * Math.sin(r)]; };
-  const [x0,y0]=p(a0),[x1,y1]=p(a1); const large=((a1-a0+360)%360)>180?1:0;
-  return `M${x0.toFixed(2)} ${y0.toFixed(2)}A96 96 0 ${large} 1 ${x1.toFixed(2)} ${y1.toFixed(2)}`;
-};
-const dur = s => { s=Math.max(0,Math.round(s)); const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60; return (h?h+' h ':'')+String(m).padStart(h?2:1,'0')+' min'+(h?'':' '+String(x).padStart(2,'0')+' s'); };
+ <div class="search">
+  <input id="q" list="places" autocomplete="off" spellcheck="false" placeholder="Buscar ubicación…" aria-label="Buscar ubicación">
+  <datalist id="places"></datalist>
+  <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
+ </div>
 
-function select(l){
-  cur = l; if(!l) return;
-  $('q').value = l.name;
-  $('where').textContent = `${l.body} · ${l.system} · día de ${(l.lengthOfDayDays*1440).toFixed(0)} min reales`;
-  history.replaceState(null,'','#'+encodeURIComponent(l.name.replace(/ /g,'_')));
-  try{ localStorage.setItem('vc-last', l.name); }catch{}
-}
-function tick(){
-  const now = Date.now();
-  $('madrid').textContent = MAD.format(now); $('utc').textContent = UTC.format(now);
-  if(!cur) return;
-  const r = compute(cur, now);
-  $('local').textContent = r.localTime;
-  const ang = r.localTimeSeconds / 86400 * 360;
-  $('hand').setAttribute('transform', `rotate(${ang+180})`);
-  if (r.polar){
-    $('phase').textContent = 'ciclo polar';
-    $('events').innerHTML = '<div class="polar">En esta latitud no hay amanecer ni anochecer ordinario en el modelo. No se muestra cuenta atrás.</div>';
-    $('dayArc').setAttribute('d',''); $('nightArc').setAttribute('d','');
-    return;
-  }
-  if(!$('riseIn')) location.reload();
-  const daySec = r.nextStarsetInSeconds < r.nextStarriseInSeconds;
-  $('phase').textContent = daySec ? 'de día en la superficie' : 'de noche en la superficie';
-  const riseAng = (r.localTimeSeconds/86400*360 + r.nextStarriseInSeconds/ (cur.lengthOfDayDays*86400) *360)%360;
-  const setAng = (r.localTimeSeconds/86400*360 + r.nextStarsetInSeconds/ (cur.lengthOfDayDays*86400) *360)%360;
-  $('dayArc').setAttribute('d', arc(riseAng, setAng)); $('nightArc').setAttribute('d', arc(setAng, riseAng));
-  $('riseIn').textContent = r.starriseNow ? 'ahora' : dur(r.nextStarriseInSeconds); $('riseAt').textContent = MAD.format(Date.parse(r.nextStarriseUtc)) + ' Madrid';
-  $('setIn').textContent = r.starsetNow ? 'ahora' : dur(r.nextStarsetInSeconds);   $('setAt').textContent = MAD.format(Date.parse(r.nextStarsetUtc)) + ' Madrid';
-}
-function fromHash(){
-  const h = decodeURIComponent(location.hash.slice(1)).replace(/_/g,' ').toLowerCase();
-  return h && locs.find(l => l.name.toLowerCase() === h);
-}
-$('q').addEventListener('change', e => {
-  const v = e.target.value.trim().toLowerCase();
-  const l = locs.find(x => label(x).toLowerCase() === v) || locs.find(x => x.name.toLowerCase() === v) || locs.find(x => x.name.toLowerCase().includes(v));
-  if (l) { select(l); tick(); } else $('where').textContent = 'Sin resultados. Prueba con el nombre de la base o del planeta.';
-});
-window.addEventListener('hashchange', () => { const l = fromHash(); if (l) { select(l); tick(); } });
-
-fetch('./data/locations.json').then(r => r.json()).then(d => {
-  locs = d.locations;
-  $('places').innerHTML = locs.map(l => `<option value="${label(l).replace(/"/g,'&quot;')}">`).join('');
-  let last=null; try{ last = localStorage.getItem('vc-last'); }catch{}
-  select(fromHash() || locs.find(l => l.name === last) || locs.find(l => l.name === 'HDSF-Elbridge'));
-  tick();
-}).catch(() => { $('where').textContent = 'No se pudo cargar el catálogo. Comprueba la conexión y recarga.'; });
-tick(); setInterval(tick, 1000);
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script>
+ <footer><span id="count"></span><span>Paisaje: visualización artística</span><span>Cálculo: modelo <a href="https://github.com/dydrmr/VerseTime">VerseTime</a> (GPL-3.0). No es una lectura del servidor de Star Citizen.</span></footer>
+</main>
+<script type="module" src="./src/app.js"></script>
 </body></html>
