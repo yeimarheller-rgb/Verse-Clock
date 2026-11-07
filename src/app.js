@@ -36,7 +36,8 @@ function renderFavs() {
   $('fav').setAttribute('aria-pressed', String(!!isFav));
   $('fav').innerHTML = `<span class="ico" aria-hidden="true">${isFav ? '★' : '☆'}</span><span class="txt">${isFav ? 'Fijada' : 'Fijar'}</span>`;
   $('fav').setAttribute('aria-label', isFav ? 'Quitar de fijadas' : 'Fijar ubicación');
-  $('cards').hidden = !favs.length;\n  $('cards').innerHTML = favs.map(byName).filter(Boolean).map(l => `
+  $('cards').hidden = !favs.length;
+  $('cards').innerHTML = favs.map(byName).filter(Boolean).map(l => `
     <button class="card${cur && l.name === cur.name ? ' on' : ''}" data-name="${l.name.replace(/"/g, '&quot;')}">
       <span class="cn">${l.name}</span><span class="cb">${l.body}</span>
       <span class="ct" data-t></span><span class="cp" data-p></span>
