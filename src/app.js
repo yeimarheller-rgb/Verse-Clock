@@ -13,12 +13,22 @@ const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? 
 const SIM = (() => { const t = Date.parse(new URLSearchParams(location.search).get('t')); return Number.isFinite(t) ? t - Date.now() : 0; })();
 const nowMs = () => Date.now() + SIM;
 let locs = [], cur = null, favs = store.get('vc-favs', []);
+// Migración: quita los tres favoritos que venían por defecto en 1.0, sin tocar favoritos elegidos por el usuario.
+const OLD_DEFAULT = ['Lorville', 'HDSF-Elbridge', 'Dupree Industrial Manufacturing Facility'];
+if (!store.get('vc-favs-v2', false)) { if (JSON.stringify(favs) === JSON.stringify(OLD_DEFAULT)) { favs = []; store.set('vc-favs', favs); } store.set('vc-favs-v2', true); }
+// Orbitron no tiene cifras tabulares: cada dígito va en una celda de ancho fijo para que el texto no tiemble.
+function mono(el, text) {
+  if (!el || el.dataset.v === text) return;
+  el.dataset.v = text; el.setAttribute('aria-label', text);
+  el.innerHTML = [...text].map(c => /\d/.test(c) ? `<span class="dg" aria-hidden="true">${c}</span>` : c === ':' ? '<span class="cl" aria-hidden="true">:</span>' : `<span aria-hidden="true">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+}
 const byName = n => locs.find(l => l.name === n);
 const label = l => `${l.name} (${l.body})`;
 const dur = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min ${String(s % 60).padStart(2, '0')} s`; };
 
 function select(l) {
-  if (!l) return; cur = l;\n  lastScenePaint = 0;
+  if (!l) return; cur = l;
+  lastScenePaint = 0;
   $('q').value = '';
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
@@ -44,32 +54,37 @@ function renderFavs() {
     </button>`).join('');
 }
 
-let lastScenePaint = 0;\nfunction tick() {
+let lastScenePaint = 0;
+const SCENE_EVERY_MS = 15000; // el paisaje cambia despacio: repintado cada 15 s; el reloj, cada segundo
+function tick() {
   const now = nowMs();
   $('mad').textContent = MAD.format(now);
   $('date').textContent = DATE.format(now);
   $('net').textContent = SIM ? 'Hora simulada' : navigator.onLine ? 'En línea' : 'Sin conexión · modo offline';
   if (!cur) return;
   const r = compute(cur, now), st = sunState(cur, r);
-  $('clock').textContent = r.localTime;
+  mono($('clock'), r.localTime);
   document.documentElement.dataset.phase = st.phase;
   $('phase').textContent = PHASE[st.phase];
-  const P = paintScene($('scene'), st, cur.body);
-  document.body.style.background = P.near; // suelo continuo bajo la escena en móvil
-  const W = photoWeights(st), ph = $('photo');
-  if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
+  if (!lastScenePaint || now - lastScenePaint >= SCENE_EVERY_MS || now < lastScenePaint) {
+    lastScenePaint = now;
+    const P = paintScene($('scene'), st, cur.body);
+    document.body.style.background = P.near; // suelo continuo bajo la escena en móvil
+    const W = photoWeights(st), ph = $('photo');
+    if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
+  }
 
   const lodS = cur.lengthOfDayDays * 86400;
   if (r.polar) {
     $('solar').classList.add('polar');
-    $('riseIn').textContent = $('setIn').textContent = 'Sin evento';
+    mono($('riseIn'), 'Sin evento'); mono($('setIn'), 'Sin evento');
     $('riseAt').textContent = $('setAt').textContent = 'Ciclo polar en el modelo';
     $('bar').style.width = '0%'; $('pct').textContent = '—';
     $('tl').style.background = 'var(--night)'; $('tlRise').hidden = $('tlSet').hidden = true;
   } else {
     $('solar').classList.remove('polar');
-    $('riseIn').textContent = r.starriseNow ? 'Ahora' : dur(r.nextStarriseInSeconds);
-    $('setIn').textContent = r.starsetNow ? 'Ahora' : dur(r.nextStarsetInSeconds);
+    mono($('riseIn'), r.starriseNow ? 'Ahora' : dur(r.nextStarriseInSeconds));
+    mono($('setIn'), r.starsetNow ? 'Ahora' : dur(r.nextStarsetInSeconds));
     $('riseAt').textContent = MAD.format(Date.parse(r.nextStarriseUtc)) + ' Madrid';
     $('setAt').textContent = MAD.format(Date.parse(r.nextStarsetUtc)) + ' Madrid';
     // progreso de la fase actual (día o noche) en tiempo real
@@ -90,7 +105,7 @@ let lastScenePaint = 0;\nfunction tick() {
   for (const el of $('cards').children) {
     const l = byName(el.dataset.name); if (!l) continue;
     const rr = compute(l, now), s = sunState(l, rr);
-    el.querySelector('[data-t]').textContent = rr.localTime;
+    mono(el.querySelector('[data-t]'), rr.localTime);
     el.querySelector('[data-p]').textContent = PHASE[s.phase];
     el.dataset.phase = s.phase;
   }

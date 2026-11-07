@@ -32,6 +32,13 @@ jobs:
       - run: sh tools/fetch-fonts.sh
       - run: pip install --quiet pillow && python3 tools/build-images.py
       - run: node --test tests/*.test.mjs
+      - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
+        run: |
+          pip install --quiet playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+          python3 -m http.server 8000 >/dev/null 2>&1 &
+          sleep 1
+          python3 tests/browser_smoke.py http://localhost:8000/
       - run: mkdir -p chatgpt && cp data/locations.json chatgpt/locations.json && rm -rf _versetime
       - uses: actions/configure-pages@v5
         with:
