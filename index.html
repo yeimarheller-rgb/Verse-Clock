@@ -23,7 +23,7 @@ html,body{margin:0;min-height:100%;background:#05080f;color:var(--ink);font:500 
 #photo{position:fixed;inset:0;z-index:0;overflow:hidden;opacity:0;transition:opacity .8s}
 #photo.ready{opacity:1}
 #photo picture{position:absolute;inset:0;opacity:0;transition:opacity 1.2s linear}
-#photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:drift 90s ease-in-out infinite alternate}
+#photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:none}
 @keyframes drift{from{transform:scale(1.02) translateX(0)}to{transform:scale(1.08) translateX(-1.2%)}}
 .shade{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,6,12,.55),rgba(3,6,12,0) 30%,rgba(3,6,12,0) 55%,rgba(3,6,12,.8))}
 main{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));display:grid;gap:14px;
@@ -40,15 +40,15 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 .hero::before,.hero::after{content:"";position:absolute;left:50%;width:46px;height:2px;background:var(--acc);transform:translateX(-50%)}
 .hero::before{top:0}.hero::after{bottom:0}
 #place{font:700 clamp(18px,4.6vw,26px)/1.1 var(--hud);letter-spacing:.34em;text-transform:uppercase;color:var(--acc);margin:0 0 6px}
-#clock{display:block;font:700 clamp(40px,13.5cqi,124px)/1 var(--num);white-space:nowrap;letter-spacing:.02em;font-variant-numeric:tabular-nums;text-shadow:0 0 28px rgba(0,0,0,.6)}
-.sub{margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px}
-.solar{grid-area:solar;padding:16px 18px;display:grid;gap:14px}
-.ph{display:flex;justify-content:space-between;align-items:baseline}
+#clock{display:block;width:100%;font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1;font:700 clamp(40px,13.5cqi,124px)/1 var(--num);white-space:nowrap;letter-spacing:.02em;font-variant-numeric:tabular-nums;text-shadow:0 0 28px rgba(0,0,0,.6)}
+.sub{min-height:2.5em;margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px}
+.solar{grid-area:solar;padding:16px 18px;display:grid;gap:14px;min-height:210px;align-content:start}
+.ph{min-height:20px;display:flex;justify-content:space-between;align-items:baseline}
 #phase{font:700 24px/1 var(--hud);letter-spacing:.12em;text-transform:uppercase}
 .meter{height:5px;background:rgba(255,255,255,.12);margin-top:8px}#bar{height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1s linear}
-.ev{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;min-height:90px}.ev>div{min-width:0}
 .ev div{border-left:2px solid var(--line);padding-left:12px}
-.ev strong{display:block;font:700 19px/1.2 var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ev strong{display:block;min-height:1.5em;font-feature-settings:'tnum' 1;font:700 19px/1.2 var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
 .ev .cap{color:var(--acc2)}
 .solar.polar strong{font-size:16px}
 .tlw{grid-area:tl;padding:16px 18px 12px}
@@ -59,7 +59,7 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 .tll{display:flex;justify-content:space-between}
 .info{grid-area:info;padding:14px 18px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 16px}
 .info dd{margin:2px 0 0;font:700 17px/1.2 var(--hud)}.info dt{margin:0}
-#cards{grid-area:cards;display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,260px);scroll-snap-type:x mandatory;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+#cards[hidden]{display:none}#cards{grid-area:cards;display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,260px);scroll-snap-type:x mandatory;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
 .card{all:unset;scroll-snap-align:start;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:14px 16px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .card.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 .card:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
