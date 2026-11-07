@@ -18,7 +18,7 @@ const label = l => `${l.name} (${l.body})`;
 const dur = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min ${String(s % 60).padStart(2, '0')} s`; };
 
 function select(l) {
-  if (!l) return; cur = l;
+  if (!l) return; cur = l;\n  lastScenePaint = 0;
   $('q').value = '';
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
@@ -44,7 +44,7 @@ function renderFavs() {
     </button>`).join('');
 }
 
-function tick() {
+let lastScenePaint = 0;\nfunction tick() {
   const now = nowMs();
   $('mad').textContent = MAD.format(now);
   $('date').textContent = DATE.format(now);
