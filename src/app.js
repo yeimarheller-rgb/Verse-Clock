@@ -1,6 +1,7 @@
 // VERSE CLOCK 1.0 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
+import { envFor, SOURCE } from './environment.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -19,8 +20,15 @@ if (!store.get('vc-favs-v2', false)) { if (JSON.stringify(favs) === JSON.stringi
 // Orbitron no tiene cifras tabulares: cada dígito va en una celda de ancho fijo para que el texto no tiemble.
 function mono(el, text) {
   if (!el || el.dataset.v === text) return;
+  const prev = el.dataset.v || '';
   el.dataset.v = text; el.setAttribute('aria-label', text);
-  el.innerHTML = [...text].map(c => /\d/.test(c) ? `<span class="dg" aria-hidden="true">${c}</span>` : c === ':' ? '<span class="cl" aria-hidden="true">:</span>' : `<span aria-hidden="true">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+  const kind = c => /\d/.test(c) ? 'd' : c === ':' ? 'c' : 'o';
+  // misma forma (p. ej. 12:34:56 → 12:35:05): solo se cambian las cifras que varían, sin reconstruir nada
+  if (prev.length === text.length && [...prev].every((c, i) => kind(c) === kind(text[i])) && el.children.length === text.length) {
+    for (let i = 0; i < text.length; i++) if (prev[i] !== text[i]) el.children[i].textContent = text[i] === ' ' ? '\u00a0' : text[i];
+    return;
+  }
+  el.innerHTML = [...text].map(c => kind(c) === 'd' ? `<span class="dg" aria-hidden="true">${c}</span>` : kind(c) === 'c' ? '<span class="cl" aria-hidden="true">:</span>' : `<span aria-hidden="true">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
 }
 const byName = n => locs.find(l => l.name === n);
 const label = l => `${l.name} (${l.body})`;
@@ -36,6 +44,13 @@ function select(l) {
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
   $('alt').textContent = `${Math.max(0, l.elevationKm).toFixed(2)} km`;
   $('kind').textContent = l.type || '—';
+  const env = envFor(l);
+  $('grav').textContent = env.gravity.label; $('grav').dataset.g = env.gravity.key; $('gravHint').textContent = env.gravity.hint;
+  $('hazWrap').hidden = !env.tags.length;
+  $('haz').innerHTML = env.tags.map(t => `<span class="chip" data-k="${t.key}">${t.label}</span>`).join('');
+  $('envMini').textContent = [env.gravity.key === 'low' ? 'Gravedad baja' : env.gravity.key === 'mid' ? 'Gravedad media' : '', ...env.tags.map(t => t.label.split(' ')[0])].filter(Boolean).join(' · ');
+  $('envSrc').textContent = `Entorno según la comunidad (gravedad: ${SOURCE.gravity}; peligros: ${SOURCE.hazards}). Puede cambiar con cada parche.`;
+  $('rate').textContent = `1 s real = ${(1 / l.lengthOfDayDays).toFixed(1).replace('.', ',')} s de juego`;
   history.replaceState(null, '', '#' + encodeURIComponent(l.name.replace(/ /g, '_')));
   store.set('vc-last', l.name);
   renderFavs(); tick();
@@ -63,7 +78,7 @@ function tick() {
   $('net').textContent = SIM ? 'Hora simulada' : navigator.onLine ? 'En línea' : 'Sin conexión · modo offline';
   if (!cur) return;
   const r = compute(cur, now), st = sunState(cur, r);
-  mono($('clock'), r.localTime);
+  fast(now);
   document.documentElement.dataset.phase = st.phase;
   $('phase').textContent = PHASE[st.phase];
   if (!lastScenePaint || now - lastScenePaint >= SCENE_EVERY_MS || now < lastScenePaint) {
@@ -100,16 +115,24 @@ function tick() {
     $('tlRise').style.left = riseL + '%'; $('tlSet').style.left = setL + '%';
     $('tl').style.background = `linear-gradient(90deg, var(--night) 0%, var(--night) ${riseL - 4}%, var(--dawn) ${riseL}%, var(--day) ${riseL + 6}%, var(--day) ${setL - 6}%, var(--dusk) ${setL}%, var(--night) ${setL + 4}%, var(--night) 100%)`;
   }
-  $('tlNow').style.left = (r.localTimeSeconds / 864) + '%';
-
   for (const el of $('cards').children) {
     const l = byName(el.dataset.name); if (!l) continue;
-    const rr = compute(l, now), s = sunState(l, rr);
-    mono(el.querySelector('[data-t]'), rr.localTime);
-    el.querySelector('[data-p]').textContent = PHASE[s.phase];
-    el.dataset.phase = s.phase;
+    const ph = sunState(l, compute(l, now)).phase;
+    el.querySelector('[data-p]').textContent = PHASE[ph]; el.dataset.phase = ph;
   }
 }
+// En el juego el día dura mucho menos que en la Tierra (Hurston: 1 s real ≈ 9,7 s de juego).
+// Si el reloj se pinta una vez por segundo, los segundos saltan de ~10 en ~10 y de forma irregular.
+// Por eso la hora local, la línea temporal y las tarjetas se pintan en cada fotograma.
+function fast(now = nowMs()) {
+  if (!cur) return;
+  const r = compute(cur, now);
+  mono($('clock'), r.localTime);
+  $('tlNow').style.left = (r.localTimeSeconds / 864) + '%';
+  for (const el of $('cards').children) { const l = byName(el.dataset.name); if (l) mono(el.querySelector('[data-t]'), compute(l, now).localTime); }
+}
+function frame() { fast(); requestAnimationFrame(frame); }
+requestAnimationFrame(frame);
 const clampPct = v => Math.min(100, Math.max(0, v));
 
 function find(v) {

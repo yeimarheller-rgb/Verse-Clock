@@ -25,6 +25,12 @@ with sync_playwright() as p:
           const f = (t) => { c.dataset.v=''; c.innerHTML=[...t].map(ch=>/\\d/.test(ch)?`<span class="dg">${ch}</span>`:'<span class="cl">:</span>').join(''); return box(); };
           return [f('11:11:11'), f('00:00:00')]; }""")
         if abs(w[0] - w[1]) > 0.5: fails.append(f'{name}: el reloj cambia de ancho {w}')
+        # reloj fluido: en Hurston 1 s real ≈ 9,7 s de juego; los segundos deben avanzar de 1 en 1, sin saltos
+        steps = pg.evaluate("""() => new Promise(res => { const seen = []; const t0 = performance.now();
+          const sec = v => { const [h, m, s] = v.split(':').map(Number); return h * 3600 + m * 60 + s; };
+          (function f() { const v = document.getElementById('clock').getAttribute('aria-label'); if (seen.at(-1) !== v) seen.push(v);
+            if (performance.now() - t0 < 1500) requestAnimationFrame(f); else res(seen.slice(1).map((v, i) => (sec(v) - sec(seen[i]) + 86400) % 86400)); })(); })""")
+        if not steps or max(steps) > 2: fails.append(f'{name}: los segundos saltan {steps[:12]}')
         # buscador predictivo
         pg.fill('#q', 'jumpt'); pg.wait_for_timeout(200)
         if 'Jumptown' not in pg.inner_text('#suggestions'): fails.append(f'{name}: el buscador no sugiere')
