@@ -106,8 +106,54 @@ buildScene($('scene'));
 // Las fotos solo se muestran si cargan las cuatro; si falta alguna, queda la escena procedural.
 Promise.all([...$('photo').querySelectorAll('img')].map(img => img.decode ? img.decode() : Promise.resolve()))
   .then(() => $('photo').classList.add('ready')).catch(() => $('photo').remove());
-$('q').addEventListener('change', e => { const l = find(e.target.value); if (l) select(l); else $('where').textContent = 'Sin resultados: prueba con el nombre de la base o del planeta'; });
-$('q').addEventListener('keydown', e => { if (e.key === 'Enter') { const l = find(e.target.value); if (l) { select(l); e.target.blur(); } } });
+
+const input = $('q'), menu = $('suggestions');
+let suggestions = [], cursor = -1;
+const normalize = v => String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+function hideMenu() {
+  menu.hidden = true; menu.replaceChildren(); suggestions = []; cursor = -1;
+  input.setAttribute('aria-expanded','false'); input.removeAttribute('aria-activedescendant');
+}
+function pick(i) { if (!suggestions[i]) return; select(suggestions[i]); hideMenu(); input.blur(); }
+function updateMenu() {
+  const q = normalize(input.value);
+  if (!q || !locs.length) { hideMenu(); return; }
+  suggestions = locs.map(l => {
+    const n = normalize(l.name), b = normalize(l.body), sys = normalize(l.system);
+    const score = n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : b.startsWith(q) ? 3 : b.includes(q) ? 4 : sys.includes(q) ? 5 : 99;
+    return {l,score};
+  }).filter(x => x.score < 99).sort((a,b) => a.score - b.score || a.l.name.localeCompare(b.l.name,'es')).slice(0,9).map(x => x.l);
+  menu.replaceChildren(); cursor = -1;
+  if (!suggestions.length) {
+    const empty = document.createElement('div'); empty.className='empty'; empty.textContent='Sin coincidencias'; menu.append(empty);
+  }
+  suggestions.forEach((l,i) => {
+    const btn=document.createElement('button'); btn.type='button'; btn.id='suggestion-'+i;
+    btn.setAttribute('role','option'); btn.setAttribute('aria-selected','false');
+    const name=document.createElement('span'); name.textContent=l.name;
+    const meta=document.createElement('small'); meta.textContent=[l.body,l.system].filter(Boolean).join(' · ');
+    btn.append(name,meta);
+    btn.addEventListener('pointerdown',e=>e.preventDefault());
+    btn.addEventListener('click',()=>pick(i)); menu.append(btn);
+  });
+  menu.hidden=false; input.setAttribute('aria-expanded','true');
+}
+input.addEventListener('input',updateMenu);
+input.addEventListener('focus',updateMenu);
+input.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){hideMenu();return;}
+  if((e.key==='ArrowDown'||e.key==='ArrowUp')&&suggestions.length){
+    e.preventDefault(); cursor=(cursor+(e.key==='ArrowDown'?1:-1)+suggestions.length)%suggestions.length;
+    menu.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-selected',String(i===cursor)));
+    input.setAttribute('aria-activedescendant','suggestion-'+cursor);
+    menu.querySelectorAll('button')[cursor]?.scrollIntoView({block:'nearest'});
+  }
+  if(e.key==='Enter'){
+    const l=suggestions[cursor<0?0:cursor]||find(input.value);
+    if(l){e.preventDefault();pick(suggestions.indexOf(l));if(cur!==l)select(l);}
+  }
+});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))hideMenu();});
 $('fav').addEventListener('click', () => { if (!cur) return; favs = favs.includes(cur.name) ? favs.filter(n => n !== cur.name) : [...favs, cur.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
 $('cards').addEventListener('click', e => { const b = e.target.closest('.card'); if (b) select(byName(b.dataset.name)); });
 window.addEventListener('hashchange', () => { const l = fromHash(); if (l && l !== cur) select(l); });
@@ -115,7 +161,7 @@ window.addEventListener('hashchange', () => { const l = fromHash(); if (l && l !
 fetch('./data/locations.json').then(r => r.json()).then(d => {
   locs = d.locations;
   $('count').textContent = `${d.count} ubicaciones`;
-  $('places').innerHTML = locs.map(l => `<option value="${label(l).replace(/"/g, '&quot;')}">`).join('');
+
   select(fromHash() || byName(store.get('vc-last', '')) || byName('Lorville'));
 }).catch(() => { $('where').textContent = 'No se pudo cargar el catálogo. Comprueba la conexión y recarga.'; });
 setInterval(tick, 1000); tick();
