@@ -12,7 +12,7 @@ const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? 
 // ?t=2026-11-04T21:39:00Z simula otro instante (para revisar fases). Se avisa en pantalla.
 const SIM = (() => { const t = Date.parse(new URLSearchParams(location.search).get('t')); return Number.isFinite(t) ? t - Date.now() : 0; })();
 const nowMs = () => Date.now() + SIM;
-let locs = [], cur = null, favs = store.get('vc-favs', ['Lorville', 'HDSF-Elbridge', 'Dupree Industrial Manufacturing Facility']);
+let locs = [], cur = null, favs = store.get('vc-favs', []);
 const byName = n => locs.find(l => l.name === n);
 const label = l => `${l.name} (${l.body})`;
 const dur = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min ${String(s % 60).padStart(2, '0')} s`; };
@@ -36,7 +36,7 @@ function renderFavs() {
   $('fav').setAttribute('aria-pressed', String(!!isFav));
   $('fav').innerHTML = `<span class="ico" aria-hidden="true">${isFav ? '★' : '☆'}</span><span class="txt">${isFav ? 'Fijada' : 'Fijar'}</span>`;
   $('fav').setAttribute('aria-label', isFav ? 'Quitar de fijadas' : 'Fijar ubicación');
-  $('cards').innerHTML = favs.map(byName).filter(Boolean).map(l => `
+  $('cards').hidden = !favs.length;\n  $('cards').innerHTML = favs.map(byName).filter(Boolean).map(l => `
     <button class="card${cur && l.name === cur.name ? ' on' : ''}" data-name="${l.name.replace(/"/g, '&quot;')}">
       <span class="cn">${l.name}</span><span class="cb">${l.body}</span>
       <span class="ct" data-t></span><span class="cp" data-p></span>
