@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071019">
+<title>Verse Clock · Explorador</title>
+<style>
+@font-face{font-family:Orbitron;font-weight:500 700;font-display:swap;src:url('./fonts/orbitron-700.woff2') format('woff2')}
+@font-face{font-family:Rajdhani;font-weight:500;font-display:swap;src:url('./fonts/rajdhani-500.woff2') format('woff2')}
+@font-face{font-family:Rajdhani;font-weight:600;font-display:swap;src:url('./fonts/rajdhani-600.woff2') format('woff2')}
+@font-face{font-family:Rajdhani;font-weight:700;font-display:swap;src:url('./fonts/rajdhani-700.woff2') format('woff2')}
+:root{color-scheme:dark;--bg:#071019;--panel:#0b151f;--panel2:#101d29;--line:rgba(154,184,205,.16);--ink:#edf5f5;--muted:#8a9da6;--accent:#f3aa55;--accent2:#ffd290;--green:#75d6ad;--shadow:0 24px 70px rgba(0,0,0,.35);--ui:'Rajdhani','Arial Narrow',system-ui,sans-serif;--num:'Orbitron',ui-monospace,monospace}
+*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 65% 0%,rgba(44,80,91,.22),transparent 42%),var(--bg);color:var(--ink);font:500 16px/1.4 var(--ui);letter-spacing:.015em}
+body[data-phase=sunrise]{--accent:#f29d8b;--accent2:#ffd4b6}body[data-phase=day]{--accent:#f2bd65;--accent2:#ffdda0}body[data-phase=sunset]{--accent:#f18b48;--accent2:#ffd090}body[data-phase=night],body[data-phase=polar]{--accent:#78bddd;--accent2:#cae8fb}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}.shell{max-width:1440px;margin:0 auto;padding:0 28px 40px}
+header{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}.crest{width:38px;height:38px;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);font:600 20px var(--num)}
+.brand-name{font:700 16px var(--num);letter-spacing:.18em}.brand-sub{display:block;margin-top:3px;color:var(--muted);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.top-right{display:flex;align-items:center;gap:20px}.data-status{color:var(--muted);font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px}.data-status:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.nav{display:flex;gap:4px;padding:4px;border:1px solid var(--line);background:rgba(255,255,255,.025)}.nav button{background:transparent;border:0;color:var(--muted);padding:8px 16px;text-transform:uppercase;letter-spacing:.14em;font-size:12px}.nav button.active{color:var(--ink);background:rgba(243,170,85,.13);box-shadow:inset 0 -2px var(--accent)}
+main{padding-top:32px}.intro{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}.eyebrow{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase}.intro h1{font-size:clamp(32px,4vw,50px);line-height:.96;letter-spacing:.035em;text-transform:uppercase;margin:10px 0}.intro p{margin:9px 0 0;color:#a4b4ba;font-size:17px;max-width:620px}.catalog-total{text-align:right;white-space:nowrap}.catalog-total strong{display:block;color:var(--accent2);font:600 30px var(--num)}.catalog-total span{font-size:11px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;align-items:start;gap:22px}
+.directory{min-width:0}.searchbox{display:flex;align-items:center;gap:14px;min-height:66px;padding:0 18px;background:linear-gradient(110deg,rgba(16,29,41,.96),rgba(11,21,31,.96));border:1px solid rgba(243,170,85,.36);box-shadow:0 0 0 4px rgba(243,170,85,.035)}
+.searchicon{color:var(--accent);font-size:23px;line-height:1}.searchbox input{flex:1;min-width:0;background:none;border:0;outline:none;font-size:20px;letter-spacing:.04em}.searchbox input::placeholder{color:#71848c}.keyhint{border:1px solid var(--line);color:#74868d;padding:3px 7px;font-size:11px;letter-spacing:.1em}
+.filter-head{display:flex;align-items:center;justify-content:space-between;margin:21px 0 9px}.label{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.clear{border:0;background:none;color:var(--accent2);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.filters{display:grid;grid-template-columns:1fr 1.15fr 1.25fr;gap:10px}.filter{position:relative;border:1px solid var(--line);background:rgba(12,23,32,.85);padding:9px 12px 7px}.filter label{display:block;color:#778c96;font-size:10px;letter-spacing:.18em;text-transform:uppercase}.filter select{width:100%;margin-top:3px;background:transparent;border:0;outline:0;font-size:16px;font-weight:600;padding:2px 20px 2px 0;appearance:none}.filter:after{content:"⌄";position:absolute;right:12px;bottom:10px;color:var(--accent);pointer-events:none}
+.quick{display:flex;gap:7px;overflow-x:auto;padding:16px 0 3px;scrollbar-width:thin;scrollbar-color:#43545c transparent}.chip{flex:none;background:transparent;border:1px solid var(--line);color:#a5b4ba;padding:7px 11px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}.chip b{color:#72848c;font:500 11px var(--num);margin-left:5px}.chip.active{border-color:var(--accent);background:rgba(243,170,85,.12);color:var(--accent2)}.chip.active b{color:var(--accent2)}
+.listbar{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:14px 0 9px;margin-top:11px}.resultcount{font-size:13px;color:#afbec3;letter-spacing:.08em}.resultcount strong{color:var(--ink);font:500 13px var(--num)}.sort{background:transparent;border:0;color:var(--muted);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.results{border:1px solid var(--line);background:rgba(11,21,31,.78)}.group-label{padding:10px 14px 7px;background:rgba(255,255,255,.025);border-bottom:1px solid var(--line);font-size:10px;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;display:flex;justify-content:space-between}
+.row{display:grid;grid-template-columns:38px minmax(0,1fr) auto 38px;align-items:center;gap:12px;padding:11px 12px;border-bottom:1px solid rgba(154,184,205,.1);min-height:68px;transition:background .15s}.row:last-child{border-bottom:0}.row:hover,.row.selected{background:rgba(243,170,85,.075)}.type-mark{height:34px;width:34px;border:1px solid rgba(154,184,205,.22);display:grid;place-items:center;color:#acc0c5;font-size:14px}.row[data-kind=bunker] .type-mark{color:var(--accent2);border-color:rgba(243,170,85,.4)}.row-main{min-width:0;width:100%;display:block;background:transparent;border:0;padding:0;text-align:left;color:var(--ink)}.row-name{display:block;font-size:18px;line-height:1.05;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row-sub{display:block;margin-top:4px;color:var(--muted);font-size:12px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.row-type{color:#a2b2b7;font-size:11px;text-align:right;letter-spacing:.08em;text-transform:uppercase;max-width:140px}.select-row{width:34px;height:34px;border:1px solid transparent;background:transparent;color:#71848b;font-size:18px}.select-row:hover,.select-row[aria-pressed=true]{color:var(--accent2);border-color:rgba(243,170,85,.4)}
+.more{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.025);padding:13px;margin-top:9px;color:var(--accent2);text-transform:uppercase;font-size:12px;letter-spacing:.18em}.empty{padding:36px 20px;text-align:center;color:var(--muted)}
+.detail{position:sticky;top:16px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(15,27,37,.96),rgba(8,17,25,.98));box-shadow:var(--shadow);overflow:hidden}.detail-head{padding:17px 18px 14px;display:flex;justify-content:space-between;align-items:start}.detail-kicker{color:var(--accent);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.detail-place{font-size:27px;line-height:1;margin:6px 0 4px;text-transform:uppercase;letter-spacing:.06em}.detail-meta{font-size:13px;color:var(--muted)}.star-detail{width:34px;height:34px;border:1px solid var(--line);background:transparent;color:var(--accent2);font-size:18px}
+.photo{height:165px;position:relative;overflow:hidden;background:#111c25}.photo img{height:100%;width:100%;object-fit:cover;object-position:center 58%;display:block;filter:saturate(.85)}.photo:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(180deg,transparent,rgba(5,12,18,.9))}
+.photo-label{position:absolute;z-index:1;left:15px;bottom:11px;color:#dce7e6;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.clockblock{padding:18px 18px 14px;border-bottom:1px solid var(--line)}.clock-label{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;letter-spacing:.18em;text-transform:uppercase}.clock-label .local-dot{color:var(--green)}.clock-time{font:600 clamp(28px,3vw,36px) var(--num);letter-spacing:.03em;margin:8px 0 3px;color:var(--accent2);white-space:nowrap}.phase-line{display:flex;justify-content:space-between;align-items:center;color:#c1ccce;font-size:13px}.phase-pill{border:1px solid rgba(243,170,85,.35);color:var(--accent2);padding:3px 7px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.events{display:grid;grid-template-columns:1fr 1fr}.event{padding:13px 16px;border-right:1px solid var(--line)}.event:last-child{border:0}.event span{display:block;color:var(--muted);font-size:10px;letter-spacing:.15em;text-transform:uppercase}.event strong{display:block;margin-top:5px;font:500 14px var(--num);color:#dce7e5}.event small{color:#758991;font-size:11px}.coordinates{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);padding:13px 17px;gap:12px}.datum span{display:block;color:var(--muted);font-size:9px;letter-spacing:.16em;text-transform:uppercase}.datum strong{display:block;color:#dbe6e5;font:500 13px var(--num);margin-top:4px}
+.disclaimer{padding:10px 17px 14px;color:#70838b;font-size:10px;line-height:1.4;border-top:1px solid rgba(154,184,205,.08)}
+.mobile-detail{display:none}
+footer{display:flex;justify-content:space-between;gap:12px;color:#61757e;font-size:11px;padding:18px 0 0;letter-spacing:.06em}.footer-right{text-align:right}
+@media(max-width:1000px){.shell{padding:0 18px 28px}.layout{grid-template-columns:minmax(0,1fr) 320px;gap:14px}.filters{grid-template-columns:1fr 1fr}.filter:last-child{grid-column:span 2}.row-type{max-width:105px;font-size:10px}}
+@media(max-width:760px){.shell{padding:0 14px 24px}header{height:65px}.brand-name{font-size:13px}.brand-sub{font-size:9px}.crest{width:32px;height:32px}.top-right{gap:8px}.data-status{display:none}.nav button{padding:7px 9px;font-size:10px}.nav button[data-tab=clock]{display:inline-block}
+main{padding-top:24px}.intro{align-items:start;margin-bottom:17px}.intro h1{font-size:34px;max-width:340px}.intro p{font-size:15px}.catalog-total{padding-top:17px}.catalog-total strong{font-size:20px}.catalog-total span{font-size:9px}
+.layout{display:block}.detail{display:none;position:relative;top:0;margin-top:14px}.filters{grid-template-columns:1fr 1fr}.filter:last-child{grid-column:span 2}
+.row{grid-template-columns:34px minmax(0,1fr) 32px;gap:9px;padding:10px 9px}.row-type{display:none}.row-name{font-size:17px}.row-sub{font-size:11px}.type-mark{width:30px;height:30px}
+body.mobile-clock .directory{display:none}body.mobile-clock .detail{display:block}.mobile-detail{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.mobile-detail button{background:transparent;border:1px solid var(--line);padding:8px 10px;color:var(--accent2);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+#clockTab{display:inline-block}
+footer{display:block;font-size:10px}.footer-right{text-align:left;margin-top:7px}
+}
+@media(min-width:761px){.nav button[data-tab=clock]{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body data-phase="night">
+<div class="shell">
+<header>
+ <div class="brand"><div class="crest" aria-hidden="true">◈</div><div><div class="brand-name">VERSE CLOCK</div><span class="brand-sub">Directorio táctico de ubicaciones</span></div></div>
+ <div class="top-right">
+  <span class="data-status">Catálogo cargado</span>
+  <nav class="nav" aria-label="Vistas"><button class="active" id="exploreTab" data-tab="explore">Explorar</button><button id="clockTab" data-tab="clock">Reloj</button></nav>
+ </div>
+</header>
+<main>
+ <div class="intro">
+  <div><div class="eyebrow">Navegación · Stanton / Pyro</div><h1>Encuentra tu destino.</h1><p>Busca bunkers, puestos, asentamientos o filtra por sistema, planeta y tipo de lugar.</p></div>
+  <div class="catalog-total"><strong id="catalogTotal">—</strong><span>ubicaciones de superficie</span></div>
+ </div>
+ <div class="mobile-detail"><span class="label">Ubicación seleccionada</span><button id="backToExplore">← Volver al directorio</button></div>
+ <div class="layout">
+  <section class="directory" aria-label="Explorador del catálogo">
+   <div class="searchbox"><span class="searchicon" aria-hidden="true">⌕</span><input id="query" type="search" autocomplete="off" placeholder="Buscar bunker, base, planeta, luna o sistema…" aria-label="Buscar en nombre, tipo, cuerpo o sistema"><span class="keyhint">⌘ K</span></div>
+   <div class="filter-head"><span class="label">Filtrar catálogo</span><button id="clearFilters" class="clear">Limpiar filtros</button></div>
+   <div class="filters">
+    <div class="filter"><label for="systemFilter">Sistema</label><select id="systemFilter"><option value="">Todos los sistemas</option></select></div>
+    <div class="filter"><label for="bodyFilter">Planeta / luna</label><select id="bodyFilter"><option value="">Todos los cuerpos</option></select></div>
+    <div class="filter"><label for="typeFilter">Tipo de lugar</label><select id="typeFilter"><option value="">Todos los tipos</option></select></div>
+   </div>
+   <div class="quick" id="quickTypes" aria-label="Tipos frecuentes"></div>
+   <div class="listbar"><div class="resultcount" id="resultCount">Cargando catálogo…</div><button class="sort" id="sortButton" aria-label="Cambiar orden">SISTEMA / CUERPO · A–Z</button></div>
+   <div class="results" id="results" role="list" aria-live="polite"></div>
+   <button class="more" id="loadMore" hidden>Mostrar más ubicaciones</button>
+  </section>
+  <aside class="detail" id="detail" aria-label="Reloj de la ubicación seleccionada">
+   <div class="detail-head"><div><div class="detail-kicker">Ubicación seleccionada</div><h2 class="detail-place" id="detailName">—</h2><div class="detail-meta" id="detailMeta">—</div></div><button id="detailStar" class="star-detail" aria-label="Fijar ubicación" aria-pressed="false">☆</button></div>
+   <div class="photo"><picture><source id="photoTall" media="(max-width:760px)" srcset=""><img id="photoWide" src="" alt="Paisaje artístico del cuerpo celeste"></picture><span class="photo-label">Visualización artística · <span id="photoBody">—</span></span></div>
+   <div class="clockblock"><div class="clock-label"><span>Hora local calculada</span><span class="local-dot">● EN VIVO</span></div><div class="clock-time" id="gameTime">--:--:--</div><div class="phase-line"><span id="madridTime">Madrid · --:--:--</span><span class="phase-pill" id="phase">—</span></div></div>
+   <div class="events"><div class="event"><span>Próximo amanecer</span><strong id="nextRise">—</strong><small id="riseMadrid"></small></div><div class="event"><span>Próximo anochecer</span><strong id="nextSet">—</strong><small id="setMadrid"></small></div></div>
+   <div class="coordinates"><div class="datum"><span>Latitud</span><strong id="latitude">—</strong></div><div class="datum"><span>Altitud</span><strong id="elevation">—</strong></div><div class="datum"><span>Planeta / luna</span><strong id="detailBody">—</strong></div><div class="datum"><span>Sistema</span><strong id="detailSystem">—</strong></div></div>
+   <div class="disclaimer">Predicción calculada con el modelo VerseTime y el reloj UTC del dispositivo. No es telemetría del servidor LIVE de Star Citizen.</div>
+  </aside>
+ </div>
+</main>
+<footer><span>VERSECLOCK · DIRECTORIO DE SUPERFICIE</span><span class="footer-right">La lista incluye ubicaciones de superficie; las instalaciones orbitales no forman parte de este catálogo.</span></footer>
+</div>
+<script type="module">
+import {compute} from '../src/engine.js';
+import {sunState} from '../src/scene.js';
+const $=id=>document.getElementById(id);
+const PHASE={day:'Día',night:'Noche',sunrise:'Amanecer',sunset:'Atardecer',polar:'Ciclo polar'};
+const LABELS={'Underground bunker':'Bunker subterráneo','Outpost':'Puesto avanzado','Settlement':'Asentamiento','Forward operating base':'Base operativa avanzada','Emergency shelter':'Refugio de emergencia','Distribution center':'Centro de distribución','Planetary alignment facility':'Instalación de alineación planetaria','Orbital laser platform':'Plataforma láser orbital','Landing zone':'Zona de aterrizaje','City':'Ciudad','Scrapyard':'Desguace','Racetrack':'Circuito','Ruins':'Ruinas','Cave':'Cueva','Shipwreck':'Nave siniestrada','Prison':'Prisión','Landmark':'Punto de interés','Depot':'Depósito'};
+const norm=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const tzMadrid=new Intl.DateTimeFormat('es-ES',{timeZone:'Europe/Madrid',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
+const timeMadrid=new Intl.DateTimeFormat('es-ES',{timeZone:'Europe/Madrid',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+let catalog=[],selected=null,limit=45,ascending=true,favorites=store.get('vc-favs',[]);
+let typeSelection='';
+const labelType=t=>LABELS[t]||t||'Otro';
+const fmtDuration=s=>{if(s==null||!Number.isFinite(s))return 'Sin evento';s=Math.max(0,Math.round(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h? h+' h '+String(m).padStart(2,'0')+' min':m+' min '+String(s%60).padStart(2,'0')+' s'};
+function typeCounts(items){const o={};items.forEach(x=>o[x.type]=(o[x.type]||0)+1);return o}
+function byFilter(){
+ const q=norm($('query').value),sys=$('systemFilter').value,body=$('bodyFilter').value,type=$('typeFilter').value||typeSelection;
+ return catalog.filter(x=>{const hay=norm([x.name,x.type,labelType(x.type),x.body,x.system].join(' '));return(!q||hay.includes(q))&&(!sys||x.system===sys)&&(!body||x.body===body)&&(!type||x.type===type)});
+}
+function fillSelects(){
+ const systems=[...new Set(catalog.map(x=>x.system))].sort(),bodies=[...new Set(catalog.filter(x=>!$('systemFilter').value||x.system===$('systemFilter').value).map(x=>x.body))].sort(),types=Object.keys(typeCounts(catalog)).sort((a,b)=>labelType(a).localeCompare(labelType(b),'es'));
+ const currentBody=$('bodyFilter').value, currentType=$('typeFilter').value;
+ $('systemFilter').innerHTML='<option value="">Todos los sistemas</option>'+systems.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('');
+ $('bodyFilter').innerHTML='<option value="">Todos los cuerpos</option>'+bodies.map(x=>'<option value="'+esc(x)+'">'+esc(x)+'</option>').join('');
+ $('typeFilter').innerHTML='<option value="">Todos los tipos</option>'+types.map(x=>'<option value="'+esc(x)+'">'+esc(labelType(x))+' · '+typeCounts(catalog)[x]+'</option>').join('');
+ if(systems.includes($('systemFilter').dataset.value))$('systemFilter').value=$('systemFilter').dataset.value;
+ if(bodies.includes(currentBody))$('bodyFilter').value=currentBody;
+ if(types.includes(currentType))$('typeFilter').value=currentType;
+ $('catalogTotal').textContent=catalog.length;
+ const quick=[['Todos',null],['Bunkers','Underground bunker'],['Puestos','Outpost'],['Bases avanzadas','Forward operating base'],['Asentamientos','Settlement']];
+ const counts=typeCounts(catalog);
+ $('quickTypes').innerHTML=quick.map(([name,type])=>'<button class="chip'+((type||'')===typeSelection?' active':'')+'" data-type="'+esc(type||'')+'">'+esc(name)+'<b>'+((type?counts[type]:catalog.length)||0)+'</b></button>').join('');
+}
+function render(){
+ fillSelects();const items=byFilter();items.sort((a,b)=>{const n=(a.system+a.body+a.name).localeCompare(b.system+b.body+b.name,'es');return ascending?n:-n});
+ $('resultCount').innerHTML='<strong>'+items.length+'</strong> resultados · mostrando '+Math.min(limit,items.length);
+ const shown=items.slice(0,limit);let html='',last='';
+ shown.forEach((x,i)=>{const group=x.system+' / '+x.body;if(group!==last){html+='<div class="group-label"><span>'+esc(group)+'</span><span>'+esc(x.system)+'</span></div>';last=group}
+ const isOn=selected&&selected.name===x.name&&selected.body===x.body;
+ const fav=favorites.includes(x.name+'|'+x.body);
+ const kind=x.type==='Underground bunker'?'bunker':'other';
+ const symbol=x.type==='Underground bunker'?'⌖':x.type==='Outpost'?'⌂':x.type==='City'?'▦':'◇';
+ html+='<div class="row'+(isOn?' selected':'')+'" role="listitem" data-name="'+esc(x.name)+'" data-body="'+esc(x.body)+'" data-kind="'+kind+'"><span class="type-mark" aria-hidden="true">'+symbol+'</span><button class="row-main select-location" data-name="'+esc(x.name)+'" data-body="'+esc(x.body)+'" aria-label="Abrir '+esc(x.name)+'"><span class="row-name">'+esc(x.name)+'</span><span class="row-sub">'+esc(labelType(x.type))+' · '+esc(x.body)+' · '+esc(x.system)+'</span></button><span class="row-type">'+esc(labelType(x.type))+'</span><button class="select-row favorite" data-name="'+esc(x.name)+'" data-body="'+esc(x.body)+'" aria-pressed="'+fav+'" aria-label="'+(fav?'Quitar favorito':'Añadir favorito')+'">'+(fav?'★':'☆')+'</button></div>'});
+ $('results').innerHTML=html||'<div class="empty">Sin coincidencias. Prueba otro nombre o limpia los filtros.</div>';
+ $('loadMore').hidden=items.length<=limit;
+}
+function selectLocation(x,openMobile=true){
+ selected=x;$('detailName').textContent=x.name;$('detailMeta').textContent=labelType(x.type)+' · '+x.body+' · '+x.system;$('detailBody').textContent=x.body;$('detailSystem').textContent=x.system;
+ $('latitude').textContent=x.latitude.toFixed(2)+'°';$('elevation').textContent=(x.elevationKm<0?0:x.elevationKm).toFixed(2)+' km';$('photoBody').textContent=x.body;
+ render();updateClock();if(openMobile&&innerWidth<=760)document.body.classList.add('mobile-clock');
+}
+function updateClock(){
+ if(!selected)return;
+ const now=Date.now(),r=compute(selected,now),s=sunState(selected,r),phase=s.phase==='polar'?'night':s.phase;
+ document.body.dataset.phase=s.phase;
+ $('gameTime').textContent=r.localTime;
+ $('madridTime').textContent='Madrid · '+tzMadrid.format(now);
+ $('phase').textContent=PHASE[s.phase]||'—';
+ $('nextRise').textContent=r.polar?'Sin evento':fmtDuration(r.nextStarriseInSeconds);
+ $('nextSet').textContent=r.polar?'Sin evento':fmtDuration(r.nextStarsetInSeconds);
+ $('riseMadrid').textContent=r.nextStarriseUtc?timeMadrid.format(Date.parse(r.nextStarriseUtc))+' Madrid':'Ciclo polar';
+ $('setMadrid').textContent=r.nextStarsetUtc?timeMadrid.format(Date.parse(r.nextStarsetUtc))+' Madrid':'Ciclo polar';
+ $('photoWide').src='../img/bg/'+phase+'-wide.webp';
+ $('photoTall').srcset='../img/bg/'+phase+'-tall.webp';
+ $('detailStar').setAttribute('aria-pressed',String(favorites.includes(selected.name+'|'+selected.body)));
+ $('detailStar').textContent=favorites.includes(selected.name+'|'+selected.body)?'★':'☆';
+}
+$('query').addEventListener('input',()=>{limit=45;render()});
+$('systemFilter').addEventListener('change',e=>{$('systemFilter').dataset.value=e.target.value;$('bodyFilter').value='';limit=45;render()});
+$('bodyFilter').addEventListener('change',()=>{limit=45;render()});
+$('typeFilter').addEventListener('change',()=>{typeSelection='';limit=45;render()});
+$('quickTypes').addEventListener('click',e=>{const b=e.target.closest('[data-type]');if(!b)return;typeSelection=b.dataset.type;$('typeFilter').value='';limit=45;render()});
+$('results').addEventListener('click',e=>{
+ const fav=e.target.closest('.favorite');
+ if(fav){const key=fav.dataset.name+'|'+fav.dataset.body;favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];store.set('vc-favs',favorites);render();updateClock();return}
+ const b=e.target.closest('.select-location');if(!b)return;const x=catalog.find(z=>z.name===b.dataset.name&&z.body===b.dataset.body);if(x)selectLocation(x)
+});
+$('detailStar').addEventListener('click',()=>{if(!selected)return;const key=selected.name+'|'+selected.body;favorites=favorites.includes(key)?favorites.filter(x=>x!==key):[...favorites,key];store.set('vc-favs',favorites);render();updateClock()});
+$('clearFilters').addEventListener('click',()=>{$('query').value='';$('systemFilter').value='';$('systemFilter').dataset.value='';$('bodyFilter').value='';$('typeFilter').value='';typeSelection='';limit=45;render()});
+$('loadMore').addEventListener('click',()=>{limit+=45;render()});
+$('sortButton').addEventListener('click',()=>{ascending=!ascending;$('sortButton').innerHTML=ascending?'SISTEMA / CUERPO · A–Z':'Z–A&nbsp; ↑';render()});
+$('exploreTab').addEventListener('click',()=>{document.body.classList.remove('mobile-clock');$('exploreTab').classList.add('active');$('clockTab').classList.remove('active')});
+$('clockTab').addEventListener('click',()=>{document.body.classList.add('mobile-clock');$('clockTab').classList.add('active');$('exploreTab').classList.remove('active')});
+$('backToExplore').addEventListener('click',()=>{document.body.classList.remove('mobile-clock');$('exploreTab').classList.add('active');$('clockTab').classList.remove('active')});
+document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('query').focus()}if(e.key==='Escape'&&innerWidth<=760)document.body.classList.remove('mobile-clock')});
+fetch('./catalog.json').then(r=>{if(!r.ok)throw Error('catalog');return r.json()}).then(d=>{
+ catalog=d.locations;const saved=store.get('vc-last','Lorville');selected=catalog.find(x=>x.name===saved)||catalog.find(x=>x.name==='Lorville')||catalog[0];render();selectLocation(selected,false);setInterval(updateClock,1000)
+}).catch(()=>{$('resultCount').textContent='No se pudo cargar el catálogo';$('results').innerHTML='<div class="empty">Recarga la vista para volver a intentar.</div>'});
+</script>
+</body>
+</html>
