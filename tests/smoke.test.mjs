@@ -5,7 +5,7 @@ const manifest=JSON.parse(readFileSync(new URL('../manifest.webmanifest',import.
 const sw=readFileSync(new URL('../sw.js',import.meta.url),'utf8');
 test('PWA standalone',()=>assert.equal(manifest.display,'standalone'));
 test('horas de eventos en Europe/Madrid',()=>assert.ok(app.includes("tz('Europe/Madrid')")));
-test('motor, escena, app y catálogo en caché offline',()=>{for(const f of ['./src/engine.js','./src/scene.js','./src/app.js','./src/environment.js','./data/locations.json'])assert.ok(sw.includes(f),f)});
+test('motor, escena, app y catálogo en caché offline',()=>{for(const f of ['./src/engine.js','./src/scene.js','./src/app.js','./src/environment.js','./src/nav.js','./data/locations.json'])assert.ok(sw.includes(f),f)});
 test('aviso honesto: no es telemetría del servidor y paisaje artístico',()=>{assert.ok(html.includes('No es una lectura del servidor'));assert.ok(html.includes('visualización artística'))});
 test('sin datos inventados (temperatura/clima)',()=>assert.ok(!/°C|temperatura|clima/i.test(html+app)));
 
@@ -15,3 +15,8 @@ test('entorno: gravedad en niveles y sin decimales en pantalla',async()=>{const 
  assert.equal(m.envFor({body:'Daymar'}).gravity.key,'low');assert.equal(m.envFor({body:'Hurston'}).gravity.key,'normal');
  assert.equal(m.envFor({body:'Pyro IV'}).gravity.key,'mid');assert.equal(m.envFor({body:'ArcCorp'}).gravity.key,'unknown');
  assert.ok(m.envFor({body:'Pyro I'}).tags.some(t=>t.key==='radiation'))});
+
+test('navegación: rumbo y distancia coherentes',async()=>{const n=await import('../src/nav.js');
+ const r=n.route({latitude:0,longitude360:0},{latitude:0,longitude360:90},100);assert.ok(Math.abs(r.km-157.08)<0.1);assert.ok(Math.abs(r.bearing-90)<1e-6);
+ const s=n.route({latitude:0,longitude360:0},{latitude:10,longitude360:0},100);assert.ok(Math.abs(s.bearing)<1e-6);
+ assert.equal(n.compass(225),'SO')});

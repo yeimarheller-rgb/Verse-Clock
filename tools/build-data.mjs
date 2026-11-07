@@ -13,7 +13,10 @@ for (const l of csv('locations.csv')) {
   if (SURFACE_SKIP.test(l.type)) continue;
   const p = prepareLocation({ name: l.name, x: +l.coordinateX, y: +l.coordinateY, z: +l.coordinateZ }, body(b), star(l.parentStar));
   if (p.elevationKm > 50) continue; // en órbita, no superficie
-  p.type = l.type; out.push(p);
+  p.type = l.type;
+  p.x = +l.coordinateX; p.y = +l.coordinateY; p.z = +l.coordinateZ; p.bodyRadiusKm = body(b).radius;
+  p.quantum = l.quantum === '1' ? true : l.quantum === '0' ? false : null; // marcador cuántico: sí / no / sin dato
+  out.push(p);
 }
 out.sort((a, b) => (a.system + a.body + a.name).localeCompare(b.system + b.body + b.name));
 mkdirSync(new URL('../data/', import.meta.url), { recursive: true });

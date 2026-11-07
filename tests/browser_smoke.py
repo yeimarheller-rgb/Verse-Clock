@@ -34,6 +34,8 @@ with sync_playwright() as p:
         # buscador predictivo
         pg.fill('#q', 'jumpt'); pg.wait_for_timeout(200)
         if 'Jumptown' not in pg.inner_text('#suggestions'): fails.append(f'{name}: el buscador no sugiere')
+        pg.fill('#q', 'hathor'); pg.wait_for_timeout(200)
+        if pg.locator('#suggestions button').count() < 12: fails.append(f'{name}: «hathor» no muestra las instalaciones Hathor')
         if pg.evaluate('document.documentElement.scrollWidth') > vp['width'] + 1: fails.append(f'{name}: desborde horizontal')
         pg.close()
     b.close()

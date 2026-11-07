@@ -61,6 +61,8 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 .info dd{margin:2px 0 0;font:700 17px/1.2 var(--hud)}.info dt{margin:0}
 .info .env{grid-column:1/-1}.info .env small{font:500 13px var(--hud);color:var(--mute)}.info .src small{font-size:11px}
 #envMini:empty{display:none}#envMini{color:var(--acc2)}
+.mini{font:700 11px var(--hud);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line);padding:3px 8px;margin-left:6px;cursor:pointer;vertical-align:middle}
+.mini:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
 #grav[data-g=low]{color:#7fe0ff}#grav[data-g=mid]{color:#ffd27a}
 .chip{display:inline-block;margin:4px 6px 0 0;padding:3px 8px;border:1px solid var(--line);font:600 13px var(--hud);letter-spacing:.04em;background:rgba(255,255,255,.04)}
 .chip[data-k=radiation],.chip[data-k=toxic]{border-color:#ff7a5a;color:#ffb39f}
@@ -141,12 +143,12 @@ footer a{color:var(--mute)}
  </section>
 
  <dl class="panel info">
-  <div><dt class="cap">Latitud</dt><dd id="lat">—</dd></div>
   <div><dt class="cap">Duración del día</dt><dd id="dayLen">—</dd></div>
-  <div><dt class="cap">Altitud</dt><dd id="alt">—</dd></div>
   <div><dt class="cap">Tipo</dt><dd id="kind">—</dd></div>
   <div class="env"><dt class="cap">Gravedad</dt><dd><span id="grav">—</span> <small id="gravHint"></small></dd></div>
   <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
+  <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
+  <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
   <div class="env src"><small id="envSrc"></small></div>
  </dl>
 

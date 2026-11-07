@@ -1,7 +1,8 @@
-// VERSE CLOCK 1.0 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
+// VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
 import { envFor, SOURCE } from './environment.js';
+import { coords, fmtCoords, nearestQT, compass } from './nav.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -40,9 +41,7 @@ function select(l) {
   $('q').value = '';
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
-  $('lat').textContent = `${l.latitude.toFixed(1)}°`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
-  $('alt').textContent = `${Math.max(0, l.elevationKm).toFixed(2)} km`;
   $('kind').textContent = l.type || '—';
   const env = envFor(l);
   $('grav').textContent = env.gravity.label; $('grav').dataset.g = env.gravity.key; $('gravHint').textContent = env.gravity.hint;
@@ -50,6 +49,12 @@ function select(l) {
   $('haz').innerHTML = env.tags.map(t => `<span class="chip" data-k="${t.key}">${t.label}</span>`).join('');
   $('envMini').textContent = [env.gravity.key === 'low' ? 'Gravedad baja' : env.gravity.key === 'mid' ? 'Gravedad media' : '', ...env.tags.map(t => t.label.split(' ')[0])].filter(Boolean).join(' · ');
   $('envSrc').textContent = `Entorno según la comunidad (gravedad: ${SOURCE.gravity}; peligros: ${SOURCE.hazards}). Puede cambiar con cada parche.`;
+  const c = coords(l), kmFmt = v => v.toFixed(1).replace('.', ',');
+  $('coord').textContent = `${fmtCoords(c)} · ${c.altKm.toFixed(2).replace('.', ',')} km`;
+  $('coordXYZ').textContent = `x ${c.x.toFixed(3)} · y ${c.y.toFixed(3)} · z ${c.z.toFixed(3)} km (respecto a ${l.body})`;
+  $('qt').textContent = l.quantum === true ? 'Sí, se puede saltar directo' : l.quantum === false ? 'No tiene' : 'Sin dato';
+  const nav = l.quantum === true ? null : nearestQT(l, locs);
+  $('qtRoute').textContent = nav ? `Desde ${nav.from.name}: ${kmFmt(nav.km)} km por superficie, rumbo ${nav.bearing.toFixed(0)}° (${compass(nav.bearing)})` : '';
   $('rate').textContent = `1 s real = ${(1 / l.lengthOfDayDays).toFixed(1).replace('.', ',')} s de juego`;
   history.replaceState(null, '', '#' + encodeURIComponent(l.name.replace(/ /g, '_')));
   store.set('vc-last', l.name);
@@ -70,7 +75,7 @@ function renderFavs() {
 }
 
 let lastScenePaint = 0;
-const SCENE_EVERY_MS = 15000; // el paisaje cambia despacio: repintado cada 15 s; el reloj, cada segundo
+const SCENE_EVERY_MS = 15000; // el paisaje cambia despacio: repintado cada 15 s; el reloj, en cada fotograma
 function tick() {
   const now = nowMs();
   $('mad').textContent = MAD.format(now);
@@ -148,6 +153,9 @@ Promise.all([...$('photo').querySelectorAll('img')].map(img => img.decode ? img.
 
 const input = $('q'), menu = $('suggestions');
 let suggestions = [], cursor = -1;
+// Búsqueda también por tipo y por apodos usados en el juego (p. ej. «Hathor» para las plataformas láser).
+const ALIASES = { 'Orbital laser platform': 'hathor olp plataforma laser orbital', 'Planetary alignment facility': 'hathor paf alineacion planetaria' };
+const searchTags = l => `${l.type || ''} ${ALIASES[l.type] || ''}`;
 const normalize = v => String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 function hideMenu() {
   menu.hidden = true; menu.replaceChildren(); suggestions = []; cursor = -1;
@@ -158,10 +166,10 @@ function updateMenu() {
   const q = normalize(input.value);
   if (!q || !locs.length) { hideMenu(); return; }
   suggestions = locs.map(l => {
-    const n = normalize(l.name), b = normalize(l.body), sys = normalize(l.system);
-    const score = n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : b.startsWith(q) ? 3 : b.includes(q) ? 4 : sys.includes(q) ? 5 : 99;
+    const n = normalize(l.name), b = normalize(l.body), sys = normalize(l.system), tags = normalize(searchTags(l));
+    const score = n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : b.startsWith(q) ? 3 : b.includes(q) ? 4 : sys.includes(q) ? 5 : tags.includes(q) ? 6 : 99;
     return {l,score};
-  }).filter(x => x.score < 99).sort((a,b) => a.score - b.score || a.l.name.localeCompare(b.l.name,'es')).slice(0,9).map(x => x.l);
+  }).filter(x => x.score < 99).sort((a,b) => a.score - b.score || a.l.name.localeCompare(b.l.name,'es')).slice(0,16).map(x => x.l);
   menu.replaceChildren(); cursor = -1;
   if (!suggestions.length) {
     const empty = document.createElement('div'); empty.className='empty'; empty.textContent='Sin coincidencias'; menu.append(empty);
@@ -193,6 +201,12 @@ input.addEventListener('keydown',e=>{
   }
 });
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))hideMenu();});
+$('copyCoord').addEventListener('click', async () => {
+  if (!cur) return; const c = coords(cur);
+  const txt = `${cur.name} (${cur.body}) — ${fmtCoords(c)} · alt ${c.altKm.toFixed(2)} km · x ${c.x.toFixed(3)} y ${c.y.toFixed(3)} z ${c.z.toFixed(3)} km`;
+  try { await navigator.clipboard.writeText(txt); $('copyCoord').textContent = 'Copiado'; } catch { $('copyCoord').textContent = 'No se pudo'; }
+  setTimeout(() => { $('copyCoord').textContent = 'Copiar'; }, 1500);
+});
 $('fav').addEventListener('click', () => { if (!cur) return; favs = favs.includes(cur.name) ? favs.filter(n => n !== cur.name) : [...favs, cur.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
 $('cards').addEventListener('click', e => { const b = e.target.closest('.card'); if (b) select(byName(b.dataset.name)); });
 window.addEventListener('hashchange', () => { const l = fromHash(); if (l && l !== cur) select(l); });
