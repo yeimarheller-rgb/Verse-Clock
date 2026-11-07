@@ -67,7 +67,13 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 .ct{font:700 17px/1.2 var(--num);font-variant-numeric:tabular-nums;text-align:right}
 .cb,.cp{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}.cp{text-align:right}
 .card[data-phase=day] .cp,.card[data-phase=sunset] .cp{color:#ffc070}.card[data-phase=night] .cp{color:#9cc2ff}.card[data-phase=sunrise] .cp{color:#ffaab8}
-.search{grid-area:search;display:flex;gap:10px}
+.search{grid-area:search;display:flex;gap:10px;position:relative;z-index:8}
+.suggest{position:absolute;left:0;right:65px;bottom:calc(100% + 5px);max-height:min(45vh,360px);overflow-y:auto;background:rgba(5,13,23,.97);border:1px solid var(--acc);box-shadow:0 16px 40px rgba(0,0,0,.7);backdrop-filter:blur(18px)}
+.suggest[hidden]{display:none}
+.suggest button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:11px 13px;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:600 16px var(--hud);cursor:pointer}
+.suggest button:last-child{border-bottom:0}.suggest button:hover,.suggest button[aria-selected=true]{background:rgba(255,163,71,.18)}
+.suggest small{color:var(--mute);font:500 12px var(--hud);text-align:right}.suggest .empty{padding:12px;color:var(--mute)}
+@media(max-width:559px){.suggest{right:52px}}
 #q{flex:1;min-width:0;font:600 17px var(--hud);letter-spacing:.04em;color:var(--ink);background:var(--glass);border:1px solid var(--line);padding:13px 14px;border-radius:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 #q::placeholder{color:var(--mute)}
 #fav{font:700 13px var(--hud);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--acc);padding:0 14px;cursor:pointer}
@@ -138,8 +144,7 @@ footer a{color:var(--mute)}
  <div id="cards" aria-label="Ubicaciones fijadas"></div>
 
  <div class="search">
-  <input id="q" list="places" autocomplete="off" spellcheck="false" placeholder="Buscar ubicación…" aria-label="Buscar ubicación">
-  <datalist id="places"></datalist>
+  <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar ubicación…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">\n  <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
   <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
  </div>
 
