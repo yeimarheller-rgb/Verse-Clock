@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "patch": "4.10.3",
+  "lastReviewed": "2026-11-16",
+  "records": [
+    {
+      "id": "nyx-intersec-shattered-blade-raid",
+      "name": "Shattered Blade Raid",
+      "system": "Nyx",
+      "type": "Contrato FPS · estación auxiliar",
+      "patch": "4.10.3",
+      "contractor": "InterSec Defense Solutions",
+      "rank": "Rank 1",
+      "enemies": [
+        "Shattered Blade"
+      ],
+      "dynamicEncounter": true,
+      "loot": {
+        "level": "reported",
+        "item": "LBCO Skarnov Rifle blueprint"
+      },
+      "evidence": {
+        "grade": "community",
+        "url": "https://starcitizen.tools/Update:Star_Citizen_Alpha_4.10.3"
+      },
+      "notes": "Recompensa de plano confirmada a nivel de línea de misiones; asignación exacta a este contrato basada en guía de PTU, pendiente de corroboración LIVE."
+    },
+    {
+      "id": "nyx-intersec-three-way",
+      "name": "Stop Vanduul and Shattered Blade Hostilities",
+      "system": "Nyx",
+      "type": "Contrato de combate espacial",
+      "patch": "4.10.3",
+      "contractor": "InterSec Defense Solutions",
+      "rank": "Veteran–Elite",
+      "enemies": [
+        "Vanduul",
+        "Shattered Blade"
+      ],
+      "dynamicEncounter": true,
+      "loot": {
+        "level": "confirmed",
+        "item": "Plano aleatorio del conjunto Palatino Backpack/Core/Helmet Raider Camo"
+      },
+      "evidence": {
+        "grade": "game-data",
+        "url": "https://verse-base.com/missionen/stop-vanduul-and-shattered-blade-hostilities.html"
+      },
+      "notes": "Conjunto de 3 planos; 100% para el pool según datos extraídos, no los 3 objetos por contrato."
+    },
+    {
+      "id": "nyx-intersec-fleet",
+      "name": "Intercept Vanduul Fleet",
+      "system": "Nyx",
+      "type": "Contrato de combate espacial",
+      "patch": "4.10.3",
+      "contractor": "InterSec Defense Solutions",
+      "rank": "Veteran–Elite",
+      "enemies": [
+        "Vanduul"
+      ],
+      "dynamicEncounter": true,
+      "loot": {
+        "level": "confirmed",
+        "item": "Plano aleatorio Corbel Core/Helmet Raider Camo"
+      },
+      "evidence": {
+        "grade": "game-data",
+        "url": "https://verse-base.com/missionen/intercept-vanduul-fleet.html"
+      },
+      "notes": "Pool de 2 planos; la recompensa concreta es aleatoria."
+    },
+    {
+      "id": "nyx-intersec-neutralize",
+      "name": "Neutralize Vanduul Target",
+      "system": "Nyx",
+      "type": "Contrato mercenario",
+      "patch": "4.10.3-LIVE.13165946",
+      "contractor": "InterSec Defense Solutions",
+      "rank": "No verificado",
+      "enemies": [
+        "Vanduul"
+      ],
+      "dynamicEncounter": true,
+      "loot": {
+        "level": "confirmed",
+        "item": "Plano aleatorio R97 Shotgun o piezas Monde"
+      },
+      "evidence": {
+        "grade": "game-data",
+        "url": "https://api.star-citizen.wiki/missions/neutralize-vanduul-target"
+      },
+      "notes": "Pool de 10 planos, 100% de probabilidad de un plano del conjunto; requiere misión previa Vanduul-Tech Smugglers Investigation según datos de misión."
+    }
+  ]
+}

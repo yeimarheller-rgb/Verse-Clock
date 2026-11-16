@@ -1,0 +1,29 @@
+name: Test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dydrmr/VerseTime
+          ref: 6092b98125d1db6077ba999c2d9bc5ccc3b2ff99
+          path: _versetime
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/build-data.mjs _versetime/data
+      - run: sh tools/fetch-fonts.sh
+      - run: pip install --quiet pillow && python3 tools/build-images.py
+      - run: node --test tests/*.test.mjs
+      - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
+        run: |
+          pip install --quiet playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+          python3 -m http.server 8000 >/dev/null 2>&1 &
+          sleep 1
+          python3 tests/browser_smoke.py http://localhost:8000/

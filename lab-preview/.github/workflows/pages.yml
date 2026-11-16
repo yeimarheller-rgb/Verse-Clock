@@ -1,0 +1,50 @@
+name: Deploy GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+env:
+  VERSETIME_SHA: 6092b98125d1db6077ba999c2d9bc5ccc3b2ff99
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: dydrmr/VerseTime
+          ref: ${{ env.VERSETIME_SHA }}
+          path: _versetime
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/build-data.mjs _versetime/data
+      - run: sh tools/fetch-fonts.sh
+      - run: pip install --quiet pillow && python3 tools/build-images.py
+      - run: node --test tests/*.test.mjs
+      - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
+        run: |
+          pip install --quiet playwright==1.56.0
+          python3 -m playwright install --with-deps chromium
+          python3 -m http.server 8000 >/dev/null 2>&1 &
+          sleep 1
+          python3 tests/browser_smoke.py http://localhost:8000/
+      - run: mkdir -p chatgpt && cp data/locations.json chatgpt/locations.json && rm -rf _versetime
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

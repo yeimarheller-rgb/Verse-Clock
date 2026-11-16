@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es" data-phase="night"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05080f"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Verse Clock">
+<link rel="preload" href="./fonts/orbitron-700.woff2" as="font" type="font/woff2" crossorigin>
+<title>Verse Clock</title>
+<style>
+@font-face{font-family:Orbitron;font-weight:700;font-display:swap;src:url(./fonts/orbitron-700.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:500;font-display:swap;src:url(./fonts/rajdhani-500.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:600;font-display:swap;src:url(./fonts/rajdhani-600.woff2) format("woff2")}
+@font-face{font-family:Rajdhani;font-weight:700;font-display:swap;src:url(./fonts/rajdhani-700.woff2) format("woff2")}
+:root{--ink:#e6edf6;--mute:#8fa3bd;--line:rgba(160,190,225,.22);--glass:rgba(6,10,20,.55);--acc:#ff8a3c;--acc2:#ffc070;
+ --night:#1b2a4a;--dawn:#ff9aa0;--day:#ffc95a;--dusk:#ff6a2a;
+ --hud:"Rajdhani","Bahnschrift","DIN Alternate","Arial Narrow",system-ui,sans-serif;--num:"Orbitron","Rajdhani",ui-monospace,monospace;color-scheme:dark}
+[data-phase=night],[data-phase=polar]{--acc:#7fb4ff;--acc2:#b8d4ff}
+[data-phase=sunrise]{--acc:#ff8aa0;--acc2:#ffc0b0}
+[data-phase=day]{--acc:#ffb347;--acc2:#ffe0a0}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#05080f;color:var(--ink);font:500 16px/1.4 var(--hud)}
+#scene{position:fixed;inset:0 0 auto;width:100%;height:74vh;z-index:0}
+@media (min-width:960px){#scene{height:100%}}
+#photo{position:fixed;inset:0;z-index:0;overflow:hidden;opacity:0;transition:opacity .8s}
+#photo.ready{opacity:1}
+#photo picture{position:absolute;inset:0;opacity:0;transition:opacity 1.2s linear}
+#photo img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;animation:none}
+@keyframes drift{from{transform:scale(1.02) translateX(0)}to{transform:scale(1.08) translateX(-1.2%)}}
+.shade{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,6,12,.55),rgba(3,6,12,0) 30%,rgba(3,6,12,0) 55%,rgba(3,6,12,.8))}
+main{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));display:grid;gap:14px;
+ grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "hero" "view" "solar" "tl" "cards" "search" "intel" "info" "foot"}
+.view{grid-area:view;height:28vh}
+.cap{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--mute)}
+header{grid-area:top;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px;flex:none}
+.brand b{display:block;font:700 clamp(15px,4.4vw,20px)/1 var(--num);letter-spacing:.24em;white-space:nowrap}
+.net{display:flex;align-items:center;gap:8px}.net::before{content:"";width:7px;height:7px;border-radius:50%;background:#58d68d;box-shadow:0 0 8px #58d68d}
+.panel{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px)}
+.hero{grid-area:hero;text-align:center;padding:18px 12px 16px;position:relative;container-type:inline-size}
+.hero::before,.hero::after{content:"";position:absolute;left:50%;width:46px;height:2px;background:var(--acc);transform:translateX(-50%)}
+.hero::before{top:0}.hero::after{bottom:0}
+#place{font:700 clamp(18px,4.6vw,26px)/1.1 var(--hud);letter-spacing:.34em;text-transform:uppercase;color:var(--acc);margin:0 0 6px}
+#clock{display:block;width:100%;font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1;font:700 clamp(40px,13.5cqi,124px)/1 var(--num);white-space:nowrap;letter-spacing:.02em;font-variant-numeric:tabular-nums;text-shadow:0 0 28px rgba(0,0,0,.6)}
+.sub{min-height:2.5em;margin-top:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px}
+.solar{grid-area:solar;padding:16px 18px;display:grid;gap:14px;min-height:210px;align-content:start}
+.ph{min-height:20px;display:flex;justify-content:space-between;align-items:baseline}
+#phase{font:700 24px/1 var(--hud);letter-spacing:.12em;text-transform:uppercase}
+.meter{height:5px;background:rgba(255,255,255,.12);margin-top:8px}#bar{height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width 1s linear}
+.ev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;min-height:90px}.ev>div{min-width:0}
+.ev div{border-left:2px solid var(--line);padding-left:12px}
+.ev strong{display:block;min-height:1.5em;font-feature-settings:'tnum' 1;font:700 19px/1.2 var(--num);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ev .cap{color:var(--acc2)}
+.solar.polar strong{font-size:16px}
+.tlw{grid-area:tl;padding:16px 18px 12px}
+.tl{position:relative;height:6px;border-radius:3px;margin:22px 0 10px}
+.mk{position:absolute;top:-5px;width:2px;height:16px;background:var(--ink);transform:translateX(-1px);opacity:.7}
+#tlNow{position:absolute;top:-17px;transform:translateX(-50%);color:var(--acc);font-size:14px;line-height:1}
+#tlNow::after{content:"";display:block;width:2px;height:24px;background:var(--acc);margin:2px auto 0;box-shadow:0 0 10px var(--acc)}
+.tll{display:flex;justify-content:space-between}
+.info{grid-area:info;padding:14px 18px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 16px}
+.info dd{margin:2px 0 0;font:700 17px/1.2 var(--hud)}.info dt{margin:0}
+.info .env{grid-column:1/-1}.info .env small{font:500 13px var(--hud);color:var(--mute)}.info .src small{font-size:11px}
+#envMini:empty{display:none}#envMini{color:var(--acc2)}
+.mini{font:700 11px var(--hud);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line);padding:3px 8px;margin-left:6px;cursor:pointer;vertical-align:middle}
+.mini:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+#lootStatus[data-level=confirmed]{color:#67e5a2}#lootStatus[data-level=reported]{color:#ffd27a}#lootStatus[data-level=unknown]{color:var(--mute)}
+#lootNote{font:500 13px var(--hud);color:var(--mute)}
+#securityThreat[data-risk=high]{color:#ff827a}#securityThreat[data-risk=conditional]{color:#ffd27a}#securityThreat[data-risk=unknown]{color:var(--mute)}
+#securityNote,#securityEvidence{font:500 13px var(--hud);color:var(--mute)}#securityEvidence a{color:var(--acc2)}
+#grav[data-g=low]{color:#7fe0ff}#grav[data-g=mid]{color:#ffd27a}
+.chip{display:inline-block;margin:4px 6px 0 0;padding:3px 8px;border:1px solid var(--line);font:600 13px var(--hud);letter-spacing:.04em;background:rgba(255,255,255,.04)}
+.chip[data-k=radiation],.chip[data-k=toxic]{border-color:#ff7a5a;color:#ffb39f}
+#cards[hidden]{display:none}#cards{grid-area:cards;display:grid;grid-auto-flow:column;grid-auto-columns:min(78%,260px);scroll-snap-type:x mandatory;gap:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.card{all:unset;scroll-snap-align:start;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:14px 16px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.card.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.card:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+.cn{font:700 15px/1.2 var(--hud);letter-spacing:.14em;text-transform:uppercase;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ct{font:700 17px/1.2 var(--num);font-variant-numeric:tabular-nums;text-align:right}
+.cb,.cp{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}.cp{text-align:right}
+.card[data-phase=day] .cp,.card[data-phase=sunset] .cp{color:#ffc070}.card[data-phase=night] .cp{color:#9cc2ff}.card[data-phase=sunrise] .cp{color:#ffaab8}
+.search{grid-area:search;display:flex;gap:10px;position:relative;z-index:8}
+.suggest{position:absolute;left:0;right:65px;bottom:calc(100% + 5px);max-height:min(45vh,360px);overflow-y:auto;background:rgba(5,13,23,.97);border:1px solid var(--acc);box-shadow:0 16px 40px rgba(0,0,0,.7);backdrop-filter:blur(18px)}
+.suggest[hidden]{display:none}
+.suggest button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:11px 13px;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:600 16px var(--hud);cursor:pointer}
+.suggest button:last-child{border-bottom:0}.suggest button:hover,.suggest button[aria-selected=true]{background:rgba(255,163,71,.18)}
+.suggest small{color:var(--mute);font:500 12px var(--hud);text-align:right}.suggest .empty{padding:12px;color:var(--mute)}
+@media(max-width:559px){.suggest{right:52px}}
+#q{flex:1;min-width:0;font:600 17px var(--hud);letter-spacing:.04em;color:var(--ink);background:var(--glass);border:1px solid var(--line);padding:13px 14px;border-radius:0;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#q::placeholder{color:var(--mute)}
+#fav{font:700 13px var(--hud);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--acc);padding:0 14px;cursor:pointer}
+#fav[aria-pressed=true]{background:var(--acc);color:#0a0a0a}
+#fav .ico{font-size:18px;letter-spacing:0}#fav .txt{display:none}
+@media (min-width:560px){#fav .txt{display:inline;margin-left:6px}}
+#q:focus-visible,#fav:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+footer{grid-area:foot;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--mute);padding:4px 2px}
+footer a{color:var(--mute)}
+@media (min-width:960px){
+ main{min-height:100vh;grid-template-columns:280px minmax(0,1fr) 340px;grid-template-rows:auto auto 1fr auto auto auto;
+  grid-template-areas:"top top top" "info hero solar" "view view view" "tl tl tl" "cards cards cards" "search search foot" "intel intel intel" }
+ .view{height:auto;min-height:120px}
+ .hero{align-self:start;padding:26px 20px 22px}
+ .info{grid-template-columns:1fr;align-self:start}
+ .solar{align-self:start}
+ #cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible}
+ footer{align-self:center;justify-content:flex-end}
+}
+.dg{display:inline-block;width:.86em;text-align:center}.cl{display:inline-block;width:.34em;text-align:center}
+@media (prefers-reduced-motion:reduce){#bar,#photo picture{transition:none}#photo img{animation:none}}
+.intel-explorer{grid-area:intel;padding:16px 18px;display:grid;gap:10px}.intel-explorer h2{font:700 19px var(--hud);letter-spacing:.12em;margin:0}.intel-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.intel-query{width:100%;padding:10px 12px;background:rgba(6,10,20,.75);border:1px solid var(--line);color:var(--ink);font:600 16px var(--hud)}.intel-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:10px}.intel-card{border:1px solid var(--line);padding:12px;background:rgba(7,14,27,.7);min-width:0}.intel-card h3{font:700 16px var(--hud);margin:0 0 6px}.intel-card p{margin:4px 0;font-size:14px}.intel-card small{color:var(--mute)}.intel-card a{color:var(--acc2)}.intel-grade{color:#ffd27a}.intel-grade[data-level=confirmed]{color:#67e5a2}.intel-empty{color:var(--mute);font-size:14px}
+</style></head>
+<body>
+<svg id="scene" aria-hidden="true"></svg>
+<div id="photo" aria-hidden="true">
+ <picture data-k="night"><source media="(orientation: portrait)" srcset="./img/bg/night-tall.webp"><img src="./img/bg/night-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="sunrise"><source media="(orientation: portrait)" srcset="./img/bg/sunrise-tall.webp"><img src="./img/bg/sunrise-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="day"><source media="(orientation: portrait)" srcset="./img/bg/day-tall.webp"><img src="./img/bg/day-wide.webp" alt="" decoding="async"></picture>
+ <picture data-k="sunset"><source media="(orientation: portrait)" srcset="./img/bg/sunset-tall.webp"><img src="./img/bg/sunset-wide.webp" alt="" decoding="async"></picture>
+</div>
+<div class="shade"></div>
+<main>
+ <header>
+  <div class="brand">
+   <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 20 20 37 3 20Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="6.5" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M20 9v4M20 27v4M9 20h4M27 20h4" stroke="currentColor" stroke-width="1.6"/></svg>
+   <div><b>VERSE CLOCK</b><span class="cap">Hora y ciclo de luz</span></div>
+  </div>
+  <span class="cap net" id="net">En línea</span>
+ </header>
+
+ <section class="panel hero" aria-live="off">
+  <h1 id="place">—</h1>
+  <time id="clock">--:--:--</time>
+  <div class="sub cap"><span id="where">Cargando catálogo…</span><span>Madrid <span id="mad">--:--:--</span></span><span id="date"></span><span id="rate"></span><span id="envMini"></span></div>
+ </section>
+ <div class="view" aria-hidden="true"></div>
+
+ <section class="panel solar" id="solar">
+  <div><div class="ph"><span class="cap">Ciclo solar</span><span class="cap" id="pct"></span></div>
+   <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
+  <div class="ev">
+   <div><span class="cap">Amanecer</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
+   <div><span class="cap">Anochecer</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
+  </div>
+ </section>
+
+ <section class="panel tlw" aria-label="Día local de la ubicación">
+  <div class="tl" id="tl"><span class="mk" id="tlRise"></span><span class="mk" id="tlSet"></span><span id="tlNow">▼</span></div>
+  <div class="tll cap"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+ </section>
+
+ <dl class="panel info">
+  <div><dt class="cap">Duración del día</dt><dd id="dayLen">—</dd></div>
+  <div><dt class="cap">Tipo</dt><dd id="kind">—</dd></div>
+  <div class="env"><dt class="cap">Gravedad</dt><dd><span id="grav">—</span> <small id="gravHint"></small></dd></div>
+  <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
+  <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
+  <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
+  <div class="env"><dt class="cap">Seguridad y facciones · Intel 4.10.2</dt><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
+  <div class="env src"><small id="envSrc"></small></div>
+ </dl>
+
+ <div id="cards" aria-label="Ubicaciones fijadas"></div>
+
+ <div class="search">
+  <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar ubicación…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+  <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
+  <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
+ </div>
+
+ <section class="panel intel-explorer" aria-label="Atlas de contratos y planos"><div class="intel-head"><h2>ATLAS · CONTRATOS Y PLANOS</h2><span class="cap">Datos documentados · no LIVE</span></div><input id="intelQuery" class="intel-query" type="search" placeholder="Buscar plano, misión, facción o sistema…" aria-label="Buscar planos y misiones"><div id="intelResults" class="intel-results" aria-live="polite"><span class="intel-empty">Cargando catálogo de contratos…</span></div></section>
+ <footer><span id="count"></span><span>Paisaje: visualización artística, no imagen del juego</span><span>Cálculo: modelo <a href="https://github.com/dydrmr/VerseTime">VerseTime</a> (GPL-3.0). No es una lectura del servidor de Star Citizen.</span></footer>
+</main>
+<script type="module" src="./src/app.js"></script>
+</body></html>
