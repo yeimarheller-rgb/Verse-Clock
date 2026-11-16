@@ -63,6 +63,8 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 #envMini:empty{display:none}#envMini{color:var(--acc2)}
 .mini{font:700 11px var(--hud);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--line);padding:3px 8px;margin-left:6px;cursor:pointer;vertical-align:middle}
 .mini:focus-visible{outline:2px solid var(--acc2);outline-offset:2px}
+#lootStatus[data-level=confirmed]{color:#67e5a2}#lootStatus[data-level=reported]{color:#ffd27a}#lootStatus[data-level=unknown]{color:var(--mute)}
+#lootNote{font:500 13px var(--hud);color:var(--mute)}
 #securityThreat[data-risk=high]{color:#ff827a}#securityThreat[data-risk=conditional]{color:#ffd27a}#securityThreat[data-risk=unknown]{color:var(--mute)}
 #securityNote,#securityEvidence{font:500 13px var(--hud);color:var(--mute)}#securityEvidence a{color:var(--acc2)}
 #grav[data-g=low]{color:#7fe0ff}#grav[data-g=mid]{color:#ffd27a}
@@ -152,6 +154,7 @@ footer a{color:var(--mute)}
   <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
   <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
   <div class="env"><dt class="cap">Seguridad y facciones · Intel 4.10.2</dt><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
   <div class="env src"><small id="envSrc"></small></div>
  </dl>
 

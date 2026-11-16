@@ -4,6 +4,7 @@ import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
 import { envFor, SOURCE } from './environment.js';
 import { coords, fmtCoords, nearestQT, compass } from './nav.js';
 import { securityFor } from './security.js';
+import { lootFor } from './loot.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -44,6 +45,10 @@ function select(l) {
   $('where').textContent = `${l.body} · ${l.system}`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
   $('kind').textContent = l.type || '—';
+  const loot = lootFor(l);
+  $('lootStatus').textContent = loot.label;
+  $('lootStatus').dataset.level = loot.level;
+  $('lootNote').textContent = loot.summary;
   const sec = securityFor(l);
   $('securityThreat').textContent = sec.threat;
   $('securityThreat').dataset.risk = sec.threat === 'Alto' ? 'high' : sec.threat === 'Desconocido' ? 'unknown' : 'conditional';
