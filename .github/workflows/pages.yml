@@ -31,6 +31,12 @@ jobs:
       - run: node tools/build-data.mjs _versetime/data
       - run: sh tools/fetch-fonts.sh
       - run: pip install --quiet pillow && python3 tools/build-images.py
+      - name: Preparar preview aislada de VERSE CLOCK LAB
+        run: |
+          mkdir -p lab-preview/data lab-preview/img lab-preview/fonts
+          cp data/locations.json lab-preview/data/locations.json
+          cp -R img/. lab-preview/img/
+          cp -R fonts/. lab-preview/fonts/
       - run: node --test tests/*.test.mjs
       - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
         run: |
