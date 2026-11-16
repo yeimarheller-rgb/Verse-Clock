@@ -5,6 +5,7 @@ import { envFor, SOURCE } from './environment.js';
 import { coords, fmtCoords, nearestQT, compass } from './nav.js';
 import { securityFor } from './security.js';
 import { lootFor } from './loot.js';
+import { validateIntelRecord, lootBadge } from './intel-schema.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -234,3 +235,25 @@ fetch('./data/locations.json').then(r => r.json()).then(d => {
 }).catch(() => { $('where').textContent = 'No se pudo cargar el catálogo. Comprueba la conexión y recarga.'; });
 setInterval(tick, 1000); tick();
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(() => {});
+
+// Atlas de contratos: panel complementario, no altera la búsqueda de ubicaciones ni el reloj.
+const intelInput=$('intelQuery'),intelResults=$('intelResults');
+let intelRecords=[];
+function intelRender(){
+ const query=intelInput.value.trim().toLocaleLowerCase('es');
+ const found=intelRecords.filter(r=>[r.name,r.system,r.contractor,r.rank,...(r.enemies||[]),r.loot?.item,r.notes].join(' ').toLocaleLowerCase('es').includes(query));
+ intelResults.replaceChildren();
+ if(!found.length){const p=document.createElement('p');p.className='intel-empty';p.textContent=query?'No hay contratos documentados que coincidan.':'No hay contratos disponibles.';intelResults.append(p);return;}
+ for(const r of found){
+  const card=document.createElement('article');card.className='intel-card';
+  const title=document.createElement('h3');title.textContent=r.name;
+  const meta=document.createElement('small');meta.textContent=[r.system,r.contractor,r.rank].filter(Boolean).join(' · ');
+  const loot=document.createElement('p');loot.className='intel-grade';loot.dataset.level=r.loot.level;
+  loot.textContent=lootBadge(r).label+': '+(r.loot.item||'No especificado');
+  const details=document.createElement('p');details.textContent=r.notes||'';
+  const source=document.createElement('a');source.href=r.evidence.url;source.target='_blank';source.rel='noopener noreferrer';source.textContent='Consultar fuente ('+r.evidence.grade+')';
+  card.append(title,meta,loot,details,source);intelResults.append(card);
+ }
+}
+intelInput.addEventListener('input',intelRender);
+fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{intelRecords=(d.records||[]).filter(r=>validateIntelRecord(r).valid);intelRender()}).catch(()=>{intelResults.textContent='Catálogo no disponible. Comprueba la conexión.'});
