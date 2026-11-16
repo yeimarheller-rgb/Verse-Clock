@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-16",
+  "scope": "curated-source-listed; not a complete import",
+  "locations": [
+    {
+      "id": "pyro-orbituary",
+      "name": "Orbituary",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "Bloom",
+      "operator": "Rough & Ready",
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro",
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-checkmate-station",
+      "name": "Checkmate Station",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR2 L4",
+      "operator": "Rough & Ready",
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro",
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-ruin-station",
+      "name": "Ruin Station",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "Terminus",
+      "operator": "XenoThreat",
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro",
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-patch-city",
+      "name": "Patch City",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR3 L3",
+      "operator": "Rough & Ready",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-gaslight",
+      "name": "Gaslight",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR5 L2",
+      "operator": "Rough & Ready",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-rat-s-nest",
+      "name": "Rat's Nest",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR5 L5",
+      "operator": "Rough & Ready",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-endgame",
+      "name": "Endgame",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR6 L3",
+      "operator": "Rough & Ready",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-megumi-refueling",
+      "name": "Megumi Refueling",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR6 L5",
+      "operator": "Rough & Ready",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-starlight-service-station",
+      "name": "Starlight Service Station",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR3 L1",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-rod-s-fuel-n-supplies",
+      "name": "Rod's Fuel 'N Supplies",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR5 L4",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-dudley-daughters",
+      "name": "Dudley & Daughters",
+      "system": "Pyro",
+      "type": "station",
+      "parent": "PYR6 L4",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-arc-l1",
+      "name": "ARC-L1",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "ArcCorp L1",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-arc-l2",
+      "name": "ARC-L2",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "ArcCorp L2",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-arc-l4",
+      "name": "ARC-L4",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "ArcCorp L4",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-cru-l1",
+      "name": "CRU-L1",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "Crusader L1",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-hur-l1",
+      "name": "HUR-L1",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "Hurston L1",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-hur-l2",
+      "name": "HUR-L2",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "Hurston L2",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-mic-l1",
+      "name": "MIC-L1",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "microTech L1",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-mic-l2",
+      "name": "MIC-L2",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "microTech L2",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-mic-l5",
+      "name": "MIC-L5",
+      "system": "Stanton",
+      "type": "refinery",
+      "parent": "microTech L5",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "nyx-levski",
+      "name": "Levski",
+      "system": "Nyx",
+      "type": "landing-zone",
+      "parent": "Delamar",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-nyx-gateway",
+      "name": "Nyx Gateway",
+      "system": "Pyro",
+      "type": "gateway",
+      "parent": "Pyro–Nyx",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "nyx-pyro-gateway",
+      "name": "Pyro Gateway",
+      "system": "Nyx",
+      "type": "gateway",
+      "parent": "Nyx–Pyro",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "nyx-stanton-gateway",
+      "name": "Stanton Gateway",
+      "system": "Nyx",
+      "type": "gateway",
+      "parent": "Nyx–Stanton",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-pyro-gateway",
+      "name": "Pyro Gateway",
+      "system": "Stanton",
+      "type": "gateway",
+      "parent": "Stanton–Pyro",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-stanton-gateway",
+      "name": "Stanton Gateway",
+      "system": "Pyro",
+      "type": "gateway",
+      "parent": "Pyro–Stanton",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-nyx-gateway",
+      "name": "Nyx Gateway",
+      "system": "Stanton",
+      "type": "gateway",
+      "parent": "Stanton–Nyx",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-terra-gateway",
+      "name": "Terra Gateway",
+      "system": "Stanton",
+      "type": "gateway",
+      "parent": "Stanton–Terra",
+      "operator": null,
+      "services": {
+        "refinery": "reported"
+      },
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-brio-s-breaker-yard",
+      "name": "Brio's Breaker Yard",
+      "system": "Stanton",
+      "type": "salvage-yard",
+      "parent": "Daymar",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-dupree-industrial-manufacturing-facility",
+      "name": "Dupree Industrial Manufacturing Facility",
+      "system": "Stanton",
+      "type": "distribution-centre",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-covalex-distribution-centre-s1dc06",
+      "name": "Covalex Distribution Centre S1DC06",
+      "system": "Stanton",
+      "type": "distribution-centre",
+      "parent": "Hurston",
+      "operator": "Covalex Shipping",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-covalex-distribution-centre-s4dc05",
+      "name": "Covalex Distribution Centre S4DC05",
+      "system": "Stanton",
+      "type": "distribution-centre",
+      "parent": "microTech",
+      "operator": "Covalex Shipping",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-bueno-ravine",
+      "name": "Bueno Ravine",
+      "system": "Pyro",
+      "type": "mining-site",
+      "parent": "Bloom",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-carver-s-ridge",
+      "name": "Carver's Ridge",
+      "system": "Pyro",
+      "type": "mining-site",
+      "parent": "Bloom",
+      "operator": "Headhunters",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-bullock-s-reach",
+      "name": "Bullock's Reach",
+      "system": "Pyro",
+      "type": "farm",
+      "parent": "Terminus",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "pyro-chawla-s-beach",
+      "name": "Chawla's Beach",
+      "system": "Pyro",
+      "type": "salvage-yard",
+      "parent": "Pyro IV",
+      "operator": "Citizens for Prosperity",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-buckets",
+      "name": "Buckets",
+      "system": "Stanton",
+      "type": "drug-lab",
+      "parent": "Lyria",
+      "operator": "Nine Tails",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-connor-s",
+      "name": "Connor's",
+      "system": "Stanton",
+      "type": "drug-lab",
+      "parent": "Yela",
+      "operator": "Nine Tails",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-baijini-point",
+      "name": "Baijini Point",
+      "system": "Stanton",
+      "type": "orbital-station",
+      "parent": "ArcCorp",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Space_stations"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-everus-harbor",
+      "name": "Everus Harbor",
+      "system": "Stanton",
+      "type": "orbital-station",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Space_stations"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    },
+    {
+      "id": "stanton-grim-hex",
+      "name": "Grim HEX",
+      "system": "Stanton",
+      "type": "station",
+      "parent": "Yela",
+      "operator": "Green Imperial",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Space_stations"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3"
+    }
+  ]
+}
