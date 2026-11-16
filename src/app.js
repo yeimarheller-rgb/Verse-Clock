@@ -3,6 +3,7 @@ import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
 import { envFor, SOURCE } from './environment.js';
 import { coords, fmtCoords, nearestQT, compass } from './nav.js';
+import { securityFor } from './security.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -43,6 +44,15 @@ function select(l) {
   $('where').textContent = `${l.body} · ${l.system}`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
   $('kind').textContent = l.type || '—';
+  const sec = securityFor(l);
+  $('securityThreat').textContent = sec.threat;
+  $('securityThreat').dataset.risk = sec.threat === 'Alto' ? 'high' : sec.threat === 'Desconocido' ? 'unknown' : 'conditional';
+  $('securityFaction').textContent = sec.faction;
+  $('securityAccess').textContent = sec.access;
+  $('securityNote').textContent = sec.notes;
+  $('securityEvidence').replaceChildren();
+  if (sec.source) { const a = document.createElement('a'); a.href = sec.source.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = sec.source.grade + ' · ' + sec.source.build; $('securityEvidence').append(a); }
+  else $('securityEvidence').textContent = 'Sin evidencia específica';
   const env = envFor(l);
   $('grav').textContent = env.gravity.label; $('grav').dataset.g = env.gravity.key; $('gravHint').textContent = env.gravity.hint;
   $('hazWrap').hidden = !env.tags.length;
