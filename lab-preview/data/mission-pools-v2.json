@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "patch": "4.10.3-LIVE.13165946",
+  "source": "https://sc-datahub.com/tools/missions/a-swift-reprisal",
+  "missions": [
+    {
+      "id": "a-swift-reprisal",
+      "name": "A Swift Reprisal",
+      "contractor": "Headhunters",
+      "faction": "Headhunters",
+      "systems": [
+        "Pyro",
+        "Nyx"
+      ],
+      "locationsNote": "Los marcadores de localización se rellenan al instanciar el contrato; la fuente también lista Stanton y Pyro en el apartado Locations, dato contradictorio que requiere comprobación.",
+      "missionType": "Combat",
+      "templateType": "Eliminate All",
+      "minStanding": "Neutral",
+      "minStandingXP": 0,
+      "reputationReward": 50,
+      "estimatedDurationMinutes": 12,
+      "blueprintReward": {
+        "guaranteedPoolRoll": true,
+        "selectionModel": "uniform-assumed",
+        "runtimeModifiersPossible": true,
+        "items": [
+          {
+            "name": "Atzkav \"Igniter\" Sniper Rifle",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Atzkav \"Mirage\" Sniper Rifle",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Atzkav Sniper Rifle",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Atzkav Sniper Rifle Battery (8 cap)",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Calico Arms Tactical",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Calico Core Tactical",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Calico Helmet Tactical",
+            "nominalChancePercent": 12.5
+          },
+          {
+            "name": "Calico Legs Tactical",
+            "nominalChancePercent": 12.5
+          }
+        ]
+      },
+      "sourcePatch": "4.10.3",
+      "sourceReviewed": "2026-11-16",
+      "notes": "El 12,5 % es una distribución uniforme supuesta por la fuente, no una probabilidad empírica garantizada."
+    }
+  ]
+}

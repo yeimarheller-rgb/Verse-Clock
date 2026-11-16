@@ -257,3 +257,25 @@ function intelRender(){
 }
 intelInput.addEventListener('input',intelRender);
 fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{intelRecords=(d.records||[]).filter(r=>validateIntelRecord(r).valid);intelRender()}).catch(()=>{intelResults.textContent='Catálogo no disponible. Comprueba la conexión.'});
+
+// Índice de estaciones y puestos, separado del buscador solar y de contratos.
+const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService'),poiResults=$('poiResults');
+let poiData=[];
+function renderPoi(){
+ const q=poiQuery.value.trim().toLocaleLowerCase('es');
+ const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||p.services?.[poiService.value]==='reported'||p.services?.[poiService.value]==='confirmed')&&[p.name,p.system,p.parent,p.operator,p.type].filter(Boolean).join(' ').toLocaleLowerCase('es').includes(q));
+ $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
+ poiResults.replaceChildren();
+ if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
+ for(const p of matches.slice(0,100)){
+ const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.textContent=p.name;
+ const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type].filter(Boolean).join(' · ');
+ const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
+ const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
+ card.append(h,meta,org,svc);
+ if(p.sourceUrls?.length){const a=document.createElement('a');a.href=p.sourceUrls[0];a.rel='noopener noreferrer';a.target='_blank';a.textContent='Consultar fuente';card.append(a)}
+ poiResults.append(card);
+ }
+}
+for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
+fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{poiData=d.locations||[];renderPoi()}).catch(()=>{$('poiCount').textContent='No se pudo cargar el atlas de ubicaciones.'});
