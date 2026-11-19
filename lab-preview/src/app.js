@@ -79,6 +79,8 @@ function select(l) {
   history.replaceState(null, '', '#' + encodeURIComponent(l.name.replace(/ /g, '_')));
   store.set('vc-last', l.name);
   renderFavs(); tick();
+  const poi=poiData.find(p=>p.system===l.system&&p.name.toLocaleLowerCase('es')===l.name.toLocaleLowerCase('es'));
+  if(poi)applyPoiToMain(poi);
 }
 
 function renderFavs() {
@@ -265,6 +267,22 @@ fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '
 // Índice de estaciones y puestos, separado del buscador solar y de contratos.
 const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService'),poiResults=$('poiResults');
 let poiData=[];
+function applyPoiToMain(p){
+ const sec=destinationSecurity(p),loot=destinationLoot(p);
+ $('securityThreat').textContent=sec.threat||'Desconocido';
+ $('securityThreat').dataset.risk=sec.threat==='Alto'?'high':'unknown';
+ $('securityFaction').textContent=p.operator||p.affiliation||sec.faction||'Sin verificar';
+ $('securityAccess').textContent=sec.access||'Sin verificar';
+ $('securityNote').textContent=[p.name+' · '+[p.system,p.parent,p.type].filter(Boolean).join(' · '),sec.notes].filter(Boolean).join(' — ');
+ $('pvpRisk').textContent=sec.pvp||'Sin datos verificados';
+ $('pveRisk').textContent='PvE: '+(sec.pve||'Sin datos verificados');
+ $('lootStatus').textContent=loot.label||'Botín sin verificar';
+ $('lootStatus').dataset.level=loot.level||'unknown';
+ $('lootNote').textContent=loot.summary||'Sin datos verificados';
+ $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
+ $('mainIntelLocation').textContent='INTEL DEL DESTINO: '+p.name+' · '+(p.system||'');
+ $('mainIntelLocation').hidden=false;
+}
 function showPoiDestination(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('destinationName').textContent=p.name;
@@ -287,8 +305,9 @@ function showPoiDestination(p){
  $('destinationEvidence').textContent=[sec.source?.grade,sec.source?.build,p.patch].filter(Boolean).join(' · ')||'Sin validación específica por parche';
  $('destinationNotes').textContent=sec.notes||'No hay evaluación específica para este destino.';
  const source=$('destinationSource');const url=sec.source?.url||loot.source||p.sourceUrls?.[0];source.hidden=!url;if(url)source.href=url;
- $('destinationIntel').hidden=false;
- $('destinationIntel').scrollIntoView({block:'start',behavior:'smooth'});
+ applyPoiToMain(p);
+ $('destinationIntel').hidden=true;
+ $('mainIntelLocation').scrollIntoView({block:'center',behavior:'smooth'});
 }
 $('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
 function renderPoi(){
@@ -324,6 +343,7 @@ async function loadAtlas(){
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ if(cur){const match=poiData.find(p=>p.system===cur.system&&p.name.toLocaleLowerCase('es')===cur.name.toLocaleLowerCase('es'));if(match)applyPoiToMain(match)}
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
 }
