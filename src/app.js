@@ -263,7 +263,7 @@ const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService')
 let poiData=[];
 function renderPoi(){
  const q=poiQuery.value.trim().toLocaleLowerCase('es');
- const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||p.services?.[poiService.value]==='reported'||p.services?.[poiService.value]==='confirmed')&&[p.name,p.system,p.parent,p.operator,p.type].filter(Boolean).join(' ').toLocaleLowerCase('es').includes(q));
+ const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&[p.name,p.system,p.parent,p.operator,p.type].filter(Boolean).join(' ').toLocaleLowerCase('es').includes(q));
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
