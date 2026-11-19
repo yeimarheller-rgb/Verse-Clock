@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-16",
+  "reviewedAt": "2026-11-19",
   "scope": "curated-source-listed; not a complete import",
   "locations": [
     {
@@ -619,6 +619,246 @@
       ],
       "verification": "source-listed",
       "patch": "4.10.3"
+    },
+    {
+      "id": "hathor-attritus-olp",
+      "name": "Attritus OLP",
+      "system": "Stanton",
+      "type": "orbital-laser-platform",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-attritus-paf-i",
+      "name": "Attritus PAF-I",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-attritus-paf-ii",
+      "name": "Attritus PAF-II",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-attritus-paf-iii",
+      "name": "Attritus PAF-III",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-lamina-olp",
+      "name": "Lamina OLP",
+      "system": "Stanton",
+      "type": "orbital-laser-platform",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-lamina-paf-i",
+      "name": "Lamina PAF-I",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-lamina-paf-ii",
+      "name": "Lamina PAF-II",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-lamina-paf-iii",
+      "name": "Lamina PAF-III",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Daymar",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-ruptura-olp",
+      "name": "Ruptura OLP",
+      "system": "Stanton",
+      "type": "orbital-laser-platform",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-ruptura-paf-i",
+      "name": "Ruptura PAF-I",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-ruptura-paf-ii",
+      "name": "Ruptura PAF-II",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-ruptura-paf-iii",
+      "name": "Ruptura PAF-III",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-vivere-olp",
+      "name": "Vivere OLP",
+      "system": "Stanton",
+      "type": "orbital-laser-platform",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-vivere-paf-i",
+      "name": "Vivere PAF-I",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-vivere-paf-ii",
+      "name": "Vivere PAF-II",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
+    },
+    {
+      "id": "hathor-vivere-paf-iii",
+      "name": "Vivere PAF-III",
+      "system": "Stanton",
+      "type": "planetary-alignment-facility",
+      "parent": "Aberdeen",
+      "operator": "Hathor Group (antiguo; instalaciones abandonadas)",
+      "services": {},
+      "sourceUrls": [
+        "https://www.citadelsc.com/es/guides/hathor",
+        "https://starcitizen.tools/Align_%26_Mine"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10 · verificar persistencia"
     }
   ]
 }
