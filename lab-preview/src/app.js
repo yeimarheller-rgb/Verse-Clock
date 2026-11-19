@@ -183,29 +183,39 @@ function hideMenu() {
   menu.hidden = true; menu.replaceChildren(); suggestions = []; cursor = -1;
   input.setAttribute('aria-expanded','false'); input.removeAttribute('aria-activedescendant');
 }
-function pick(i) { if (!suggestions[i]) return; select(suggestions[i]); hideMenu(); input.blur(); }
-function updateMenu() {
-  const q = normalize(input.value);
-  if (!q || !locs.length) { hideMenu(); return; }
-  suggestions = locs.map(l => {
-    const n = normalize(l.name), b = normalize(l.body), sys = normalize(l.system), tags = normalize(searchTags(l));
-    const score = n === q ? 0 : n.startsWith(q) ? 1 : n.includes(q) ? 2 : b.startsWith(q) ? 3 : b.includes(q) ? 4 : sys.includes(q) ? 5 : tags.includes(q) ? 6 : 99;
-    return {l,score};
-  }).filter(x => x.score < 99).sort((a,b) => a.score - b.score || a.l.name.localeCompare(b.l.name,'es')).slice(0,16).map(x => x.l);
-  menu.replaceChildren(); cursor = -1;
-  if (!suggestions.length) {
-    const empty = document.createElement('div'); empty.className='empty'; empty.textContent='Sin coincidencias'; menu.append(empty);
+function chooseSearchResult(item){
+ if(!item)return;
+ if(item.kind==='poi'){
+  const p=item.value;
+  const solar=locs.find(l=>normalize(l.name)===normalize(p.name)&&l.system===p.system);
+  if(solar)select(solar);
+  else{
+   const parent=locs.find(l=>l.system===p.system&&(normalize(l.body)===normalize(p.parent)||normalize(l.name)===normalize(p.parent)));
+   if(parent){select(parent);$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Reloj solar de referencia: '+parent.body].filter(Boolean).join(' · ')}
+   else{$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Sin reloj solar local verificado'].filter(Boolean).join(' · ');cur=null;}
   }
-  suggestions.forEach((l,i) => {
-    const btn=document.createElement('button'); btn.type='button'; btn.id='suggestion-'+i;
-    btn.setAttribute('role','option'); btn.setAttribute('aria-selected','false');
-    const name=document.createElement('span'); name.textContent=l.name;
-    const meta=document.createElement('small'); meta.textContent=[l.body,l.system].filter(Boolean).join(' · ');
-    btn.append(name,meta);
-    btn.addEventListener('pointerdown',e=>e.preventDefault());
-    btn.addEventListener('click',()=>pick(i)); menu.append(btn);
-  });
-  menu.hidden=false; input.setAttribute('aria-expanded','true');
+  applyPoiToMain(p);
+  $('mainIntelLocation').scrollIntoView({block:'center',behavior:'smooth'});
+ }else select(item.value);
+ hideMenu();input.blur();
+}
+function pick(i){chooseSearchResult(suggestions[i])}
+function updateMenu(){
+ const q=normalize(input.value);
+ if(!q){hideMenu();return}
+ const solar=locs.map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
+ const pois=poiData.map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[p.type,p.operator,p.affiliation,/paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''].filter(Boolean).join(' ')}));
+ const unique=new Map();
+ for(const item of [...pois,...solar]){const key=[normalize(item.system),normalize(item.name)].join('|');if(!unique.has(key))unique.set(key,item)}
+ suggestions=[...unique.values()].map(item=>{
+  const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
+  const score=n===q?0:n.startsWith(q)?1:n.includes(q)?2:parent.startsWith(q)?3:parent.includes(q)?4:tags.includes(q)?5:sys.includes(q)?6:99;
+  return{item,score};
+ }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||a.item.name.localeCompare(b.item.name,'es')).slice(0,16).map(x=>x.item);
+ menu.replaceChildren();cursor=-1;
+ if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
+ suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
+ menu.hidden=false;input.setAttribute('aria-expanded','true');
 }
 input.addEventListener('input',updateMenu);
 input.addEventListener('focus',updateMenu);
@@ -218,8 +228,8 @@ input.addEventListener('keydown',e=>{
     menu.querySelectorAll('button')[cursor]?.scrollIntoView({block:'nearest'});
   }
   if(e.key==='Enter'){
-    const l=suggestions[cursor<0?0:cursor]||find(input.value);
-    if(l){e.preventDefault();pick(suggestions.indexOf(l));if(cur!==l)select(l);}
+    const item=suggestions[cursor<0?0:cursor];
+    if(item){e.preventDefault();chooseSearchResult(item)}
   }
 });
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))hideMenu();});
@@ -352,6 +362,7 @@ async function loadAtlas(){
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ if(input.value.trim())updateMenu();
  if(cur){const match=poiData.find(p=>p.system===cur.system&&p.name.toLocaleLowerCase('es')===cur.name.toLocaleLowerCase('es'));if(match)applyPoiToMain(match)}
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
