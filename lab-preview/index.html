@@ -123,6 +123,60 @@ footer a{color:var(--mute)}
 .dg{width:.86em;min-width:.86em;flex:none}
 .cl{width:.34em;min-width:.34em}
 .search{scroll-margin-top:12px}
+
+/* VERSE COMMAND DECK — LAB ONLY. Sin dependencias, sin animaciones de layout. */
+:root{--glass:rgba(4,13,27,.84);--line:rgba(57,204,239,.29);--mute:#a1b9ce;--ink:#e9f8ff;--deck-cyan:#55e8ff;--deck-green:#65edb0;--deck-amber:#ffcb78}
+body{background:#030b15}
+body::before{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 35px,rgba(66,190,231,.035) 36px),repeating-linear-gradient(90deg,transparent 0 35px,rgba(66,190,231,.025) 36px)}
+main{gap:12px}
+header{padding:10px 12px;border-top:2px solid var(--deck-cyan);border-bottom:1px solid var(--line);background:linear-gradient(100deg,rgba(7,31,50,.93),rgba(3,10,24,.65))}
+.brand svg{width:44px;height:44px;filter:drop-shadow(0 0 8px rgba(80,227,255,.4))}
+.brand b{color:#e7faff;text-shadow:0 0 14px rgba(84,220,255,.38)}
+.brand .cap{color:var(--deck-cyan);letter-spacing:.2em}
+.net{font-weight:700;color:var(--deck-green)}
+.panel{border-color:var(--line);background:linear-gradient(140deg,rgba(7,23,42,.92),rgba(4,12,27,.83));box-shadow:inset 0 1px rgba(135,231,255,.09),0 8px 28px rgba(0,0,0,.22)}
+.hero{border-top:2px solid var(--acc);background:linear-gradient(180deg,rgba(7,28,48,.93),rgba(3,12,26,.83))}
+.hero::before,.hero::after{width:72px;box-shadow:0 0 14px var(--acc)}
+#place{letter-spacing:.18em;text-shadow:0 0 18px rgba(78,220,255,.24);overflow-wrap:anywhere}
+#clock{color:#f1fcff;text-shadow:0 0 24px rgba(80,212,255,.35);min-height:1em}
+.solar{border-left:3px solid var(--deck-cyan)}
+.tlw{border-left:3px solid var(--deck-amber)}
+.info{border-top:2px solid var(--deck-cyan);gap:0 14px}
+.info>div{padding:12px 4px;border-bottom:1px solid rgba(99,185,213,.18);min-width:0}
+.info>div:last-child{border-bottom:0}
+.info dt.cap{color:var(--deck-cyan);font-weight:700;letter-spacing:.14em;display:flex;align-items:center;gap:8px}
+.info dt.cap::before{content:"";display:inline-block;width:8px;height:8px;flex:none;border:1px solid var(--deck-cyan);transform:rotate(45deg);box-shadow:0 0 7px rgba(84,232,255,.45)}
+.info dd{color:#f2fcff;font-size:18px;overflow-wrap:anywhere}
+#securityThreat,#lootStatus{font-family:var(--num);font-size:15px;line-height:1.5}
+#mainIntelLocation{display:block;margin-top:8px;color:var(--deck-amber);font-weight:700;letter-spacing:.06em}
+#mainIntelLocation[hidden]{display:none}
+#mainIntelApi{white-space:pre-line;line-height:1.65;color:#bde9f2;background:rgba(20,73,95,.17);border-left:2px solid var(--deck-cyan);padding:10px 12px;margin:9px 0;overflow-wrap:anywhere}
+#mainIntelApi[hidden]{display:none}
+#securityNote,#securityEvidence,#lootNote{line-height:1.55;overflow-wrap:anywhere}
+#pvpRisk{font-weight:700}
+#q{border:1px solid rgba(89,227,250,.55);border-left:3px solid var(--deck-cyan);background:rgba(3,15,31,.96);box-shadow:inset 0 0 16px rgba(30,122,161,.12);min-height:49px}
+#q:focus{border-color:var(--deck-cyan);box-shadow:0 0 0 2px rgba(85,232,255,.12)}
+#fav{border-color:var(--deck-amber);color:var(--deck-amber);background:rgba(8,22,38,.9)}
+.suggest{top:calc(100% + 6px)!important;bottom:auto!important;right:0!important;border-color:var(--deck-cyan);background:rgba(3,14,28,.99);box-shadow:0 16px 45px rgba(0,0,0,.8),0 0 0 1px rgba(80,230,255,.1)}
+.suggest button{border-bottom-color:rgba(83,192,222,.19)}
+.suggest button:hover,.suggest button[aria-selected=true]{background:rgba(47,155,195,.25)}
+.suggest small{color:#95cfe1}
+.card{border-left:3px solid rgba(85,232,255,.5);background:rgba(5,19,35,.89)}
+.card.on{border-color:var(--deck-green)}
+.atlas-hub{display:none!important}
+@media(max-width:559px){
+ main{padding-left:10px;padding-right:10px;gap:10px}
+ header{padding:9px 8px}.brand{gap:8px}.brand svg{width:36px;height:36px}
+ .brand b{font-size:14px;letter-spacing:.12em}
+ .net{font-size:10px;letter-spacing:.04em}
+ .info{padding:10px 12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .info .env{grid-column:1/-1}
+ #q{font-size:16px;padding:11px 10px}
+ #fav{padding:0 10px}
+ .suggest{max-height:48vh}
+}
+@media(prefers-reduced-motion:reduce){.panel,.hero,.card{animation:none!important}}
+
 </style></head>
 <body>
 <svg id="scene" aria-hidden="true"></svg>
@@ -137,7 +191,7 @@ footer a{color:var(--mute)}
  <header>
   <div class="brand">
    <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 20 20 37 3 20Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="6.5" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M20 9v4M20 27v4M9 20h4M27 20h4" stroke="currentColor" stroke-width="1.6"/></svg>
-   <div><b>VERSE CLOCK</b><span class="cap">Hora y ciclo de luz</span></div>
+   <div><b>VERSE CLOCK</b><span class="cap">ATLAS UNIVERSAL · COMMAND DECK</span></div>
   </div>
   <span class="cap net" id="net">En línea</span>
  </header>
@@ -150,11 +204,11 @@ footer a{color:var(--mute)}
  <div class="view" aria-hidden="true"></div>
 
  <section class="panel solar" id="solar">
-  <div><div class="ph"><span class="cap">Ciclo solar</span><span class="cap" id="pct"></span></div>
+  <div><div class="ph"><span class="cap">◈ CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
    <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
   <div class="ev">
-   <div><span class="cap">Amanecer</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
-   <div><span class="cap">Anochecer</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
+   <div><span class="cap">☀ AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
+   <div><span class="cap">◐ ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
   </div>
  </section>
 
@@ -171,9 +225,9 @@ footer a{color:var(--mute)}
   <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
   <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
   <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
-  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><small id="mainIntelLocation" hidden></small><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
-  <div class="env"><dt class="cap">Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
-  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
+  <div class="env"><dt class="cap">◈ Seguridad y facciones · Intel</dt><small id="mainIntelLocation" hidden></small><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">⚠ Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
+  <div class="env"><dt class="cap">◇ Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
   <div class="env src"><small id="envSrc"></small></div>
  </dl>
 
