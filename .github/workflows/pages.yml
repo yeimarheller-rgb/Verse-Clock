@@ -38,6 +38,9 @@ jobs:
           if [ -s data/wiki-atlas.json ]; then cp data/wiki-atlas.json lab-preview/data/wiki-atlas.json; fi
           cp -R img/. lab-preview/img/
           cp -R fonts/. lab-preview/fonts/
+      - name: Validar sintaxis JavaScript de producción y LAB
+        run: |
+          find src lab-preview/src -type f -name '*.js' -print0 | xargs -0 -n1 node --check
       - run: node --test tests/*.test.mjs
       - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
         run: |
