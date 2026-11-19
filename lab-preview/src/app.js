@@ -53,6 +53,8 @@ function select(l) {
   const sec = securityFor(l);
   $('securityThreat').textContent = sec.threat;
   $('securityThreat').dataset.risk = sec.threat === 'Alto' ? 'high' : sec.threat === 'Desconocido' ? 'unknown' : 'conditional';
+  $('pvpRisk').textContent = sec.pvp || 'Sin datos';
+  $('pveRisk').textContent = 'PvE: '+(sec.pve || 'Sin datos');
   $('securityFaction').textContent = sec.faction;
   $('securityAccess').textContent = sec.access;
   $('securityNote').textContent = sec.notes;
