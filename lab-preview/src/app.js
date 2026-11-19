@@ -269,6 +269,11 @@ function showPoiDestination(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('destinationName').textContent=p.name;
  $('destinationMeta').textContent=[p.system,p.parent,p.type,p.operator].filter(Boolean).join(' · ');
+ const parentLoc=locs.find(l=>l.name?.toLowerCase()===String(p.parent||'').toLowerCase()||l.body?.toLowerCase()===String(p.parent||'').toLowerCase());
+ const environment=parentLoc?envFor(parentLoc):null;
+ const climate=environment?.tags?.map(t=>t.label).join(' · ');
+ $('destinationClimate').textContent=climate||'Sin datos específicos verificados';
+ $('destinationTemperature').textContent='Temperatura exacta sin verificar';
  $('destinationPvp').textContent=sec.pvp||'Sin datos';
  $('destinationPve').textContent=sec.pve||'Sin datos';
  $('destinationFaction').textContent=sec.faction||p.operator||'Sin verificar';
