@@ -245,11 +245,20 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').ca
 // Atlas de contratos: panel complementario, no altera la búsqueda de ubicaciones ni el reloj.
 const intelInput=$('intelQuery'),intelResults=$('intelResults');
 let intelRecords=[];
+const intelNorm=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
+const intelText=r=>[r.name,r.system,r.type,r.contractor,r.rank,...(r.enemies||[]),r.loot?.item,r.notes].filter(Boolean).join(' ');
+const intelAliases={arma:['rifle','shotgun','escopeta','pistola','weapon'],armas:['rifle','shotgun','escopeta','pistola','weapon'],escopeta:['shotgun'],rifle:['rifle'],mochila:['backpack'],casco:['helmet'],pechera:['core'],armadura:['core','helmet','backpack']};
 function intelRender(){
- const query=intelInput.value.trim().toLocaleLowerCase('es');
- const found=intelRecords.filter(r=>[r.name,r.system,r.contractor,r.rank,...(r.enemies||[]),r.loot?.item,r.notes].join(' ').toLocaleLowerCase('es').includes(query));
+ const query=intelNorm(intelInput.value.trim());
+ const terms=query.split(/\\s+/).filter(Boolean);
+ const found=intelRecords.filter(r=>{const t=intelNorm(intelText(r));return terms.every(q=>t.includes(q)||(intelAliases[q]||[]).some(a=>t.includes(a)))});
  intelResults.replaceChildren();
- if(!found.length){const p=document.createElement('p');p.className='intel-empty';p.textContent=query?'No hay contratos documentados que coincidan.':'No hay contratos disponibles.';intelResults.append(p);return;}
+ const hint=$('intelSuggestions');hint.replaceChildren();
+ if(query){const termsFound=[...new Set(intelRecords.flatMap(r=>[r.loot?.item,r.name]).filter(Boolean))].filter(v=>intelNorm(v).includes(query)||terms.some(t=>(intelAliases[t]||[]).some(a=>intelNorm(v).includes(a)))).slice(0,7);
+ for(const v of termsFound){const b=document.createElement('button');b.type='button';b.className='intel-suggest';b.textContent=v;b.addEventListener('click',()=>{intelInput.value=v;intelRender()});hint.append(b)}
+ }
+ $('intelCoverage').textContent=intelRecords.length+' contratos documentados · No es un catálogo completo de armas, escudos o planos';
+ if(!found.length){const p=document.createElement('p');p.className='intel-empty';p.textContent=query?'No hay coincidencias en los '+intelRecords.length+' contratos documentados. No significa que ese plano o componente no exista.':'No hay contratos disponibles.';intelResults.append(p);return;}
  for(const r of found){
   const card=document.createElement('article');card.className='intel-card';
   const title=document.createElement('h3');title.textContent=r.name;
