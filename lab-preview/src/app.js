@@ -160,7 +160,12 @@ function fast(now = nowMs()) {
   $('tlNow').style.left = (r.localTimeSeconds / 864) + '%';
   for (const el of $('cards').children) { const l = byName(el.dataset.name); if (l) mono(el.querySelector('[data-t]'), compute(l, now).localTime); }
 }
-function frame() { fast(); requestAnimationFrame(frame); }
+// Limitar repintados del reloj: evita cálculos DOM en cada frame (60/120 Hz) en iPhone.
+let lastClockFrame=0;
+function frame(timestamp) {
+  if(document.visibilityState==='visible' && timestamp-lastClockFrame>=100){lastClockFrame=timestamp;fast()}
+  requestAnimationFrame(frame);
+}
 requestAnimationFrame(frame);
 const clampPct = v => Math.min(100, Math.max(0, v));
 

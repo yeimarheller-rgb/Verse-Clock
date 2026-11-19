@@ -117,6 +117,12 @@ footer a{color:var(--mute)}
 .search{z-index:30;isolation:isolate}
 .suggest{top:calc(100% + 6px)!important;bottom:auto!important;left:0;right:0!important;max-height:min(55vh,440px);overflow-y:auto;overscroll-behavior:contain;border-radius:0 0 10px 10px;box-shadow:0 18px 35px rgba(0,0,0,.75)}
 @media(max-width:559px){.suggest{right:0!important}.suggest button{align-items:flex-start;flex-direction:column;gap:2px}.suggest small{text-align:left}}
+/* Evita saltos de anchura/altura del reloj y reflujo por cambios de cifras. */
+#clock,.dg,.cl{font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1}
+#clock{min-height:1em;contain:layout}
+.dg{width:.86em;min-width:.86em;flex:none}
+.cl{width:.34em;min-width:.34em}
+.search{scroll-margin-top:12px}
 </style></head>
 <body>
 <svg id="scene" aria-hidden="true"></svg>
