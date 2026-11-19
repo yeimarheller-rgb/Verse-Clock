@@ -1,5 +1,9 @@
 name: Sincronizar Atlas API
 on:
+  push:
+    paths:
+      - 'tools/sync-wiki-atlas.mjs'
+      - '.github/workflows/atlas-sync.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 4 * * 2,5'
