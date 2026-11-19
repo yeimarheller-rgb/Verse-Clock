@@ -6,6 +6,8 @@ import { coords, fmtCoords, nearestQT, compass } from './nav.js';
 import { securityFor } from './security.js';
 import { lootFor } from './loot.js';
 import { validateIntelRecord, lootBadge } from './intel-schema.js';
+import { securityFor as destinationSecurity } from './security.js';
+import { lootFor as destinationLoot } from './loot.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -263,6 +265,19 @@ fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '
 // Índice de estaciones y puestos, separado del buscador solar y de contratos.
 const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService'),poiResults=$('poiResults');
 let poiData=[];
+function showPoiDestination(p){
+ const sec=destinationSecurity(p),loot=destinationLoot(p);
+ $('destinationName').textContent=p.name;
+ $('destinationMeta').textContent=[p.system,p.parent,p.type,p.operator].filter(Boolean).join(' · ');
+ $('destinationPvp').textContent=sec.pvp||'Sin datos';
+ $('destinationPve').textContent=sec.pve||'Sin datos';
+ $('destinationLoot').textContent='BOTÍN · '+loot.summary;
+ $('destinationNotes').textContent=sec.notes||'No hay evaluación específica para este destino.';
+ const source=$('destinationSource');const url=sec.source?.url||loot.source||p.sourceUrls?.[0];source.hidden=!url;if(url)source.href=url;
+ $('destinationIntel').hidden=false;
+ $('destinationIntel').scrollIntoView({block:'start',behavior:'smooth'});
+}
+$('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
 function renderPoi(){
  const q=poiQuery.value.trim().toLocaleLowerCase('es');
  const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&[p.name,p.system,p.parent,p.operator,p.type].filter(Boolean).join(' ').toLocaleLowerCase('es').includes(q));
@@ -275,6 +290,9 @@ function renderPoi(){
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
  card.append(h,meta,org,svc);
+ card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
+ card.addEventListener('click',()=>showPoiDestination(p));
+ card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showPoiDestination(p)}});
  if(p.sourceUrls?.length){const a=document.createElement('a');a.href=p.sourceUrls[0];a.rel='noopener noreferrer';a.target='_blank';a.textContent='Consultar fuente';card.append(a)}
  poiResults.append(card);
  }
