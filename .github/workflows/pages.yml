@@ -35,6 +35,7 @@ jobs:
         run: |
           mkdir -p lab-preview/data lab-preview/img lab-preview/fonts
           cp data/locations.json lab-preview/data/locations.json
+          if [ -s data/wiki-atlas.json ]; then cp data/wiki-atlas.json lab-preview/data/wiki-atlas.json; fi
           cp -R img/. lab-preview/img/
           cp -R fonts/. lab-preview/fonts/
       - run: node --test tests/*.test.mjs
