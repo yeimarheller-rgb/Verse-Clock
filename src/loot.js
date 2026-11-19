@@ -2,7 +2,7 @@
 // No confundir la existencia de botín con una garantía de aparición en cada sesión.
 export const LOOT_STATES = Object.freeze({verified:'confirmed',reported:'reported',unknown:'unknown'});
 const RECORDS = [
-  {match:/hathor|orbital laser platform|planetary alignment facility/i,level:'reported',summary:'Instalaciones asociadas a actividades de alto interés; el botín específico y su disponibilidad necesitan verificación por ubicación y parche.',source:null}
+  {match:/hathor|orbital laser platform|planetary alignment facility|\\b(?:attritus|lamina|ruptura|vivere)\\b|\\b(?:olp|paf)[- _]/i,level:'reported',summary:'Botín reportado: componentes militares/furtivos (escudos, plantas, refrigeradores, motores cuánticos), armaduras Antium/Morozov y armas especiales. PAF y OLP no comparten necesariamente los mismos contenedores. Ningún drop está garantizado.',source:'https://starcitizen.tools/Planetary_alignment_facilities'}
 ];
 export function lootFor(location) {
   const name=String(location?.name||'');
