@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {securityFor} from '../src/security.js';import {lootFor} from '../src/loot.js';
+for(const name of ['Lazarus Phoenix Research Lab','Lazarus Tithonus Research Lab','Storm Breaker'])test('Phoenix/Storm Breaker: '+name,()=>{const s=securityFor({name});assert.equal(s.threat,'Alto');assert.match(s.pvp,/Alto/);assert.match(lootFor({name}).summary,/perlas irradiadas/)});
+for(const name of ['Checkmate','Orbituary','Ruin Station'])test('Contested Zone: '+name,()=>{assert.match(securityFor({name}).pvp,/Alto/);assert.match(lootFor({name}).summary,/componentes de grado A/)});
