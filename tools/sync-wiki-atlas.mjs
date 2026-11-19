@@ -46,7 +46,7 @@ async function main(){
  const unique=[...new Map(all.map(x=>[x.id,x])).values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(!unique.length)throw Error('Empty atlas: refusing overwrite');
  const artifact={schemaVersion:1,source:'https://api.star-citizen.wiki/api/locations',version,generatedAt:new Date().toISOString(),systems,counts,locations:unique};
- await mkdir(output,{recursive:true});await writeFile(output+'/wiki-atlas.json',JSON.stringify(artifact,null,2)+'\\n');
- process.stdout.write(JSON.stringify({version,counts,total:unique.length})+'\\n');
+ await mkdir(output,{recursive:true});await writeFile(output+'/wiki-atlas.json',JSON.stringify(artifact,null,2)+'\n');
+ process.stdout.write(JSON.stringify({version,counts,total:unique.length})+'\n');
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)main().catch(e=>{console.error(e);process.exitCode=1});
