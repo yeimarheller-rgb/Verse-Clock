@@ -279,3 +279,9 @@ function renderPoi(){
 }
 for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
 fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{poiData=d.locations||[];renderPoi()}).catch(()=>{$('poiCount').textContent='No se pudo cargar el atlas de ubicaciones.'});
+
+// Un explorador, dos vistas: evita paneles interminables y preserva búsquedas existentes.
+const atlasTabs=[[$('atlasTabPoi'),$('atlasPanePoi')],[$('atlasTabIntel'),$('atlasPaneIntel')]];
+function activateAtlas(index,focus=false){atlasTabs.forEach(([tab,pane],i)=>{const active=i===index;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;pane.hidden=!active});if(focus)atlasTabs[index][0].focus()}
+for(let i=0;i<atlasTabs.length;i++){const [tab]=atlasTabs[i];tab.addEventListener('click',()=>activateAtlas(i));tab.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();activateAtlas((i+(e.key==='ArrowRight'?1:atlasTabs.length-1))%atlasTabs.length,true)}})}
+activateAtlas(0);
