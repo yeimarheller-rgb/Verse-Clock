@@ -44,6 +44,7 @@ function select(l) {
   if (!l) return; cur = l;
   lastScenePaint = 0;
   $('q').value = '';
+  $('mainIntelLocation').hidden=true;
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
@@ -192,10 +193,10 @@ function chooseSearchResult(item){
   else{
    const parent=locs.find(l=>l.system===p.system&&(normalize(l.body)===normalize(p.parent)||normalize(l.name)===normalize(p.parent)));
    if(parent){select(parent);$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Reloj solar de referencia: '+parent.body].filter(Boolean).join(' · ')}
-   else{$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Sin reloj solar local verificado'].filter(Boolean).join(' · ');cur=null;}
+   else{$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Sin reloj solar local verificado'].filter(Boolean).join(' · ');cur=null;$('kind').textContent=p.type||'Instalación';$('dayLen').textContent='Sin datos';$('coord').textContent='Sin coordenadas verificadas';$('coordXYZ').textContent='';$('qt').textContent='Sin dato';$('qtRoute').textContent='';}
   }
   applyPoiToMain(p);
-  $('mainIntelLocation').scrollIntoView({block:'center',behavior:'smooth'});
+
  }else select(item.value);
  hideMenu();input.blur();
 }
@@ -290,9 +291,9 @@ function applyPoiToMain(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('securityThreat').textContent=sec.threat||'Desconocido';
  $('securityThreat').dataset.risk=sec.threat==='Alto'?'high':'unknown';
- $('securityFaction').textContent=p.operator||p.affiliation||sec.faction||'Sin verificar';
+ $('securityFaction').textContent=(p.operator&&/antiguo|abandonad/i.test(p.operator)?p.operator+' (histórico)':p.operator)||p.affiliation||sec.faction||'Sin verificar';
  $('securityAccess').textContent=sec.access||'Sin verificar';
- $('securityNote').textContent=[p.name+' · '+[p.system,p.parent,p.type].filter(Boolean).join(' · '),sec.notes].filter(Boolean).join(' — ');
+ $('securityNote').textContent=[p.name+' · '+[p.system,p.parent,p.type].filter(Boolean).join(' · '),sec.notes,p.verification==='api-catalog'?'Catálogo geográfico API: PvP, NPC y botín no certificados por la API.':''].filter(Boolean).join(' — ');
  $('pvpRisk').textContent=sec.pvp||'Sin datos verificados';
  $('pveRisk').textContent='PvE: '+(sec.pve||'Sin datos verificados');
  $('lootStatus').textContent=loot.label||'Botín sin verificar';
@@ -326,7 +327,6 @@ function showPoiDestination(p){
  const source=$('destinationSource');const url=sec.source?.url||loot.source||p.sourceUrls?.[0];source.hidden=!url;if(url)source.href=url;
  applyPoiToMain(p);
  $('destinationIntel').hidden=true;
- $('mainIntelLocation').scrollIntoView({block:'center',behavior:'smooth'});
 }
 $('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
 function renderPoi(){
@@ -342,8 +342,8 @@ function renderPoi(){
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
  card.append(h,meta,org,svc);
  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
- card.addEventListener('click',()=>showPoiDestination(p));
- card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showPoiDestination(p)}});
+ card.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:p}));
+ card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseSearchResult({kind:'poi',value:p})}});
  if(p.sourceUrls?.length){const a=document.createElement('a');a.href=p.sourceUrls[0];a.rel='noopener noreferrer';a.target='_blank';a.textContent='Consultar fuente';card.append(a)}
  poiResults.append(card);
  }
