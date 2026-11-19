@@ -45,6 +45,7 @@ function select(l) {
   lastScenePaint = 0;
   $('q').value = '';
   $('mainIntelLocation').hidden=true;
+  $('mainIntelApi').hidden=true;
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
@@ -302,6 +303,12 @@ function applyPoiToMain(p){
  $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
  $('mainIntelLocation').textContent='INTEL DEL DESTINO: '+p.name+' · '+(p.system||'');
  $('mainIntelLocation').hidden=false;
+ const rows=[['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
+ const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
+ summary.push('Temperatura del lugar: sin medición específica verificada');
+ summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
+ $('mainIntelApi').textContent=summary.join('\n');
+ $('mainIntelApi').hidden=false;
 }
 function showPoiDestination(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);

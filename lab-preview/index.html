@@ -113,7 +113,7 @@ footer a{color:var(--mute)}
 .destination-intel{background:linear-gradient(145deg,rgba(7,25,43,.97),rgba(5,13,25,.94));box-shadow:inset 0 0 0 1px rgba(80,210,238,.12),0 12px 45px rgba(0,0,0,.3)}.destination-intel .destination-head{border-bottom:1px solid rgba(104,204,229,.2);padding-bottom:9px}.destination-intel .destination-stats strong{font-size:clamp(12px,1.8vw,16px);line-height:1.35}.destination-brief{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0}.destination-brief>div{background:rgba(15,42,62,.68);border:1px solid rgba(92,176,211,.2);border-top:2px solid var(--acc);padding:12px;border-radius:5px}.destination-brief p{line-height:1.4;margin:6px 0 0}.destination-intel #destinationEvidence{display:block;color:var(--mute);margin:8px 0}@media(max-width:700px){.destination-brief{grid-template-columns:1fr}.destination-stats-extra{grid-template-columns:1fr 1fr}}
 .destination-climate{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.destination-climate>div{background:rgba(14,39,59,.7);border:1px solid rgba(102,183,209,.25);padding:10px}.destination-climate strong{display:block;font-size:13px;line-height:1.4;margin-top:5px;color:var(--ink)}@media(max-width:600px){.destination-climate{grid-template-columns:1fr}}
 .intel-suggestions{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.intel-suggest{font:inherit;color:#d7e7ff;background:#162439;border:1px solid #52617d;border-radius:8px;padding:7px 10px;cursor:pointer}.intel-suggest:focus-visible{outline:2px solid #93c5fd}
-</style></head>
+#mainIntelApi{font:500 14px var(--hud);line-height:1.65;color:var(--mute);white-space:pre-line;margin:10px 0} </style></head>
 <body>
 <svg id="scene" aria-hidden="true"></svg>
 <div id="photo" aria-hidden="true">
@@ -161,7 +161,7 @@ footer a{color:var(--mute)}
   <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
   <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
   <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
-  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><small id="mainIntelLocation" hidden></small><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><small id="mainIntelLocation" hidden></small><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
   <div class="env"><dt class="cap">Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
   <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
   <div class="env src"><small id="envSrc"></small></div>
