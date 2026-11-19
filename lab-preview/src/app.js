@@ -194,6 +194,7 @@ function chooseSearchResult(item){
  if(!item)return;
  if(item.kind==='poi'){
   const p=item.value;
+  selectedPoiKey=[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
   const solar=locs.find(l=>normalize(l.name)===normalize(p.name)&&l.system===p.system);
   if(solar)select(solar);
   else{
@@ -203,7 +204,7 @@ function chooseSearchResult(item){
   }
   applyPoiToMain(p);
 
- }else select(item.value);
+ }else {selectedPoiKey=null;select(item.value)}
  hideMenu();input.blur();
 }
 function pick(i){chooseSearchResult(suggestions[i])}
@@ -293,6 +294,7 @@ fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '
 // Índice de estaciones y puestos, separado del buscador solar y de contratos.
 const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService'),poiResults=$('poiResults');
 let poiData=[];
+let selectedPoiKey=null;
 function applyPoiToMain(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('securityThreat').textContent=sec.threat||'Desconocido';
@@ -308,9 +310,11 @@ function applyPoiToMain(p){
  $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
  $('mainIntelLocation').textContent='INTEL DEL DESTINO: '+p.name+' · '+(p.system||'');
  $('mainIntelLocation').hidden=false;
- const rows=[['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
+ const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
- summary.push('Temperatura del lugar: sin medición específica verificada');
+ const parentBody=locs.find(l=>l.system===p.system&&(String(l.name).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')||String(l.body).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')));
+ if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
+ summary.push('Temperatura exacta de la instalación: sin verificar');
  summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
  $('mainIntelApi').textContent=summary.join('\n');
  $('mainIntelApi').hidden=false;
@@ -375,7 +379,7 @@ async function loadAtlas(){
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(input.value.trim())updateMenu();
- if(cur){const match=poiData.find(p=>p.system===cur.system&&p.name.toLocaleLowerCase('es')===cur.name.toLocaleLowerCase('es'));if(match)applyPoiToMain(match)}
+ if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
 }
