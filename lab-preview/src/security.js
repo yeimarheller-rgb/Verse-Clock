@@ -12,12 +12,17 @@ const EVIDENCE = Object.freeze({
   siege: {source:'Notas de Alpha 4.10 — Siege of Orison',url:'https://starcitizen.tools/4.10',build:'4.10.0',grade:'Documentado'},
   dc: {source:'Guía de centros de distribución Alpha 4.10',url:'https://scanz.space/news/guides/distribution-centres-a-practical-field-guide',build:'4.10',grade:'Guía comunitaria'},
   reports: {source:'Reportes de jugadores (octubre 2026)',url:'https://www.reddit.com/r/starcitizen/comments/1xfylgz/distribution_center_missions/',build:'4.10',grade:'Reporte comunitario'},
+  jumptown: {source:'Jumptown: instalación y condiciones de acceso',url:'https://starcitizen.tools/Jumptown',build:'4.10.3 · instalación; evento no confirmado',grade:'Wiki de ubicación'},
+  microbunker: {source:'Defend Occupants · microTech',url:'https://starcitizen.tools/Defend_Occupants',build:'4.10.3 · ejemplo de contrato',grade:'Ficha de misión'},
+  hurstonbunker: {source:'Evict Illegal Occupants · Hurston',url:'https://starcitizen.tools/Evict_Illegal_Occupants',build:'4.10.3 · ejemplo de contrato',grade:'Ficha de misión'},
   lazarus: {source:'Lazarus Phoenix / Storm Breaker · guía comunitaria',url:'https://www.citadelsc.com/en/guides/storm-breaker',build:'4.2+ · persistencia reportada 4.10',grade:'Guía comunitaria'},
   contested: {source:'Contested Zones · guía de actividades',url:'https://obsidiansquad.org/guides',build:'4.10.1 (snapshot)',grade:'Guía comunitaria'},
   hathor: {source:'Hathor OLP/PAF: guías, botín y reportes PvP',url:'https://starcitizen.tools/Planetary_alignment_facilities',build:'4.10 (fuente comunitaria)',grade:'Documentado / reportado'},
   pyro: {source:'Contrato Citizens for Prosperity 4.10.2',url:'https://api.star-citizen.wiki/missions/protect-location-from-xenothreat-attack',build:'4.10.2',grade:'Datos de misión'}
 });
 const entries = [
+  {match:/^jumptown$/i,access:'Sin armisticio · jurisdicción Crusader',threat:'Alto',pvp:'Alto potencial · punto de interés histórico',pve:'No verificado; depende de misión/evento',faction:'Sin control NPC permanente confirmado',status:'Wiki / evento histórico',notes:'Daymar: frío extremo, laboratorio de drogas, sin reparación/repostaje y sin plataforma de aterrizaje. El evento dinámico Jumptown NO se presume activo. Prever jugadores y extracción de carga.',evidence:'jumptown'},
+  {match:/^(?:raven.s roost|paradise cove|echo isl(?:e|and))$/i,access:'Laboratorio de drogas · comprobar evento',threat:'Alto',pvp:'Alto potencial · sitio de loot',pve:'No verificado para esta sesión',faction:'Sin control NPC confirmado',status:'Reporte comunitario',notes:'Ubicación asociada a Jumptown y saqueo de accesorios, armas y armaduras. No asumir evento dinámico activo ni presencia fija de enemigos.',evidence:'jumptown'},
   {match:/lazarus|phoenix research lab|tithonus research lab|storm breaker/i,access:'Acceso mediante tarjetas y lanzadera',threat:'Alto',pvp:'Alto potencial · actividad disputada',pve:'Guardias, radiación, tormenta EM y Valakkar Apex',faction:'ASD / jugadores',status:'Guías comunitarias',notes:'Storm Breaker: cadena Farro (Pyro IV) → Lazarus (Pyro I), tarjetas, huevo, invocación de Apex. Botín: colmillos y perlas irradiadas, armería y equipo especial. Grupos y saqueadores pueden coincidir; no implica PvP constante ni presencia en vivo.',evidence:'lazarus'},
   {match:/^(checkmate|orbituary|ruin station)(?: station)?$/i,access:'Zonas disputadas PvPvE',threat:'Alto',pvp:'Alto · zonas disputadas',pve:'NPC hostiles en Contested Zones',faction:'Facciones de Pyro / jugadores',status:'Guía comunitaria',notes:'Las Contested Zones de estas estaciones concentran PvPvE por tableros, armas y componentes valiosos. No confundir toda la estación con su zona disputada.',evidence:'contested'},
   {match:/hathor|orbital laser platform|planetary alignment facility|\\b(?:attritus|lamina|ruptura|vivere)\\b|\\b(?:olp|paf)[- _]/i,access:'Actividad abierta / zonas restringidas',threat:'Alto',pvp:'Alto · zona disputada',pve:'Mercenarios y Valakkar según fase',faction:'Bandas locales / jugadores',status:'Guías y reportes',notes:'OLP y PAF de Hathor: botín militar y furtivo, armaduras y armas especiales; actividad PvP de grupos y solitarios reportada. Riesgo potencial, NO jugadores detectados en tiempo real. PAF: Daymar/Aberdeen.',evidence:'hathor'},
@@ -34,6 +39,12 @@ export function securityFor(location, mission = null) {
   const type = String(location?.type || '').toLowerCase();
   const e = entries.find(x=>x.match.test(name));
   const base = e ? {...e} : {access:'Sin verificar',threat:'Desconocido',status:'Sin datos',notes:/bunker|underground|distribution|outpost|centro de distribuci/i.test(type)?'Instalación potencialmente sujeta a permisos, NPC o contratos. No hay clasificación fiable por nombre.':'No existe evidencia específica de hostilidad para esta ubicación.'};
+  if(!e && /bunker|underground facility|security post|outpost/i.test(type)){
+    const sys=String(location?.system||'').toLowerCase();const body=String(location?.body||location?.parent||'').toLowerCase();
+    if(/microtech|calliope|clio|euterpe/.test(body)){base.faction='MT Protection Services (guardias según contrato)';base.pve='Nine Tails en contratos Defend Occupants';base.notes='No asumir que todos los NPC son enemigos. En Defend Occupants los guardias MT Protection Services son aliados y los Nine Tails son hostiles. Torretas y permisos dependen del contrato.';base.evidence='microbunker'}
+    else if(/hurston|arial|aberdeen|magda|ita/.test(body)){base.faction='Hurston Security (guardias según contrato)';base.pve='Nine Tails en contratos de limpieza';base.notes='Defensa y limpieza son escenarios distintos. Evict Illegal Occupants puede tener torretas hostiles; Assist in Defending Site incluye guardias aliados. Verificar contrato antes de abrir fuego.';base.evidence='hurstonbunker'}
+    else if(sys==='stanton'){base.notes='Búnker de Stanton: la afiliación de guardias y enemigos cambia con la misión. No hay evidencia suficiente para clasificar esta instalación como hostil de forma permanente.'}
+  }
   delete base.match;
   const ev = base.evidence ? EVIDENCE[base.evidence] : null;
   delete base.evidence;
