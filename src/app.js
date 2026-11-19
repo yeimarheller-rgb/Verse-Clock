@@ -271,7 +271,14 @@ function showPoiDestination(p){
  $('destinationMeta').textContent=[p.system,p.parent,p.type,p.operator].filter(Boolean).join(' · ');
  $('destinationPvp').textContent=sec.pvp||'Sin datos';
  $('destinationPve').textContent=sec.pve||'Sin datos';
- $('destinationLoot').textContent='BOTÍN · '+loot.summary;
+ $('destinationFaction').textContent=sec.faction||p.operator||'Sin verificar';
+ $('destinationAccess').textContent=sec.access||'Sin verificar';
+ $('destinationLoot').textContent=loot.summary;
+ const n=p.name.toLowerCase();
+ const hazard=/lazarus|phoenix research lab|storm breaker/.test(n)?'Radiación y tormentas electromagnéticas: riesgo de daño por distorsión e inutilización de la nave (fuente comunitaria).':/jumptown/.test(n)?'Frío extremo en Daymar; no hay armisticio (fuente comunitaria).':'No se ha documentado un peligro ambiental específico para esta instalación.';
+ $('destinationHazards').textContent=hazard;
+ $('destinationPrep').textContent=/lazarus|phoenix research lab|storm breaker/.test(n)?'Planificar aproximación ante interferencias, protección radiológica y requisitos de acceso.':/jumptown/.test(n)?'Planificar extracción y combustible: sin servicios locales; el evento dinámico no se presupone activo.':/checkmate|orbituary|ruin station/.test(n)?'Distinguir zona pública de Contested Zone; prever combate PvPvE.':'Confirmar permisos, contrato y hostilidad antes de abrir fuego; no hay detección de jugadores en vivo.';
+ $('destinationEvidence').textContent=[sec.source?.grade,sec.source?.build,p.patch].filter(Boolean).join(' · ')||'Sin validación específica por parche';
  $('destinationNotes').textContent=sec.notes||'No hay evaluación específica para este destino.';
  const source=$('destinationSource');const url=sec.source?.url||loot.source||p.sourceUrls?.[0];source.hidden=!url;if(url)source.href=url;
  $('destinationIntel').hidden=false;
