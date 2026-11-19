@@ -305,7 +305,23 @@ function renderPoi(){
  }
 }
 for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
-fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(d=>{poiData=d.locations||[];renderPoi()}).catch(()=>{$('poiCount').textContent='No se pudo cargar el atlas de ubicaciones.'});
+async function loadAtlas(){
+ const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
+ const byKey=new Map();const key=p=>[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
+ for(const p of base.locations||[])byKey.set(key(p),p);
+ let apiCount=0,version='';
+ try{
+  const r=await fetch('./data/wiki-atlas.json',{cache:'no-cache'});
+  if(r.ok){const d=await r.json();if(d.schemaVersion!==1||!Array.isArray(d.locations)||!d.locations.length)throw Error('Invalid API catalog');
+   version=d.version||'';
+   for(const p of d.locations){if(!p.name||!p.system)continue;const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
+  }
+ }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
+ poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ renderPoi();
+ $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
+}
+loadAtlas().catch(e=>{$('poiCount').textContent='No se pudo cargar el atlas: '+e.message});
 
 // Un explorador, dos vistas: evita paneles interminables y preserva búsquedas existentes.
 const atlasTabs=[[$('atlasTabPoi'),$('atlasPanePoi')],[$('atlasTabIntel'),$('atlasPaneIntel')]];
