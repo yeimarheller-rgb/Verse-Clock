@@ -95,7 +95,7 @@ header{grid-area:top;display:flex;align-items:center;justify-content:space-betwe
 footer{grid-area:foot;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--mute);padding:4px 2px}
 footer a{color:var(--mute)}
 @media (min-width:960px){
- main{min-height:100vh;grid-template-columns:280px minmax(0,1fr) 340px;grid-template-rows:auto auto 1fr auto auto auto;
+ main{min-height:100vh;grid-template-columns:280px minmax(0,1fr) 340px;grid-template-rows:none;align-content:start;align-items:start;
   grid-template-areas:"top top top" "search search search" "hero hero solar" "destination destination destination" "tl tl tl" "info info info" "view view view" "cards cards cards" "explore explore explore" "foot foot foot" }
  .view{height:auto;min-height:120px}
  .hero{align-self:start;padding:26px 20px 22px}
@@ -185,7 +185,7 @@ main>.atlas-search-stack>.search>#fav{box-sizing:border-box!important;flex:0 0 5
 main>.atlas-search-stack>.atlas-progress{grid-area:auto!important;display:grid!important;visibility:visible!important;opacity:1!important;position:relative!important;inset:auto!important;transform:none!important;flex:0 0 auto!important;align-self:stretch!important;height:auto!important;min-height:104px!important;max-height:none!important;overflow:visible!important;margin:0!important;z-index:1!important}
 main>.atlas-search-stack>.atlas-progress .atlas-progress-track{display:block!important;width:100%!important;min-height:12px!important}
 @media(max-width:600px){main>.atlas-search-stack>.search{height:50px!important;min-height:50px!important;max-height:50px!important;flex-basis:50px!important}main>.atlas-search-stack>.search>#q,main>.atlas-search-stack>.search>#fav{height:50px!important;min-height:50px!important;max-height:50px!important}main>.atlas-search-stack>.search>#fav{flex-basis:50px!important;width:50px!important}main>.atlas-search-stack>.atlas-progress{min-height:112px!important}}
-</style></head>
+main{align-content:start!important}main>.atlas-search-stack{align-self:start!important}main>.atlas-search-stack>.search{align-self:start!important}main>.atlas-search-stack>.atlas-progress{align-self:start!important} </style></head>
 <body>
 <svg id="scene" aria-hidden="true"></svg>
 <div id="photo" aria-hidden="true">
