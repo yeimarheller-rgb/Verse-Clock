@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:38:28.027Z",
+  "generatedAt": "2026-11-20T15:06:54.845Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1275,
+  "enrichedCount": 1300,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -21301,6 +21301,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T14:38:27.847Z"
+    },
+    {
+      "id": "4d02b242-bdf2-4a23-b180-749b0901aa07",
+      "name": "Cluster CAJ-445",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4d02b242-bdf2-4a23-b180-749b0901aa07",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:39.770Z"
+    },
+    {
+      "id": "0fbfb15a-44cc-48eb-9043-edc68930fec0",
+      "name": "Cluster DLO-486",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0fbfb15a-44cc-48eb-9043-edc68930fec0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:40.462Z"
+    },
+    {
+      "id": "163b1f81-2147-4e8b-b3f8-30193418b1f3",
+      "name": "Cluster EMM-567",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "163b1f81-2147-4e8b-b3f8-30193418b1f3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:41.111Z"
+    },
+    {
+      "id": "3454b2c5-786a-4dbb-9d90-87a4e1e4cfdc",
+      "name": "Cluster FSN-704",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3454b2c5-786a-4dbb-9d90-87a4e1e4cfdc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:42.212Z"
+    },
+    {
+      "id": "e48d6157-f89f-4c6f-9600-27bf9fd65fa2",
+      "name": "Cluster GRP-839",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e48d6157-f89f-4c6f-9600-27bf9fd65fa2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:43.227Z"
+    },
+    {
+      "id": "b6628ada-d636-46a7-a01c-eba5bc8ce746",
+      "name": "Cluster HJS-232",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b6628ada-d636-46a7-a01c-eba5bc8ce746",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:43.756Z"
+    },
+    {
+      "id": "0fce1b55-8fe7-44a9-b806-7e0d40b789fa",
+      "name": "Cluster JWY-925",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0fce1b55-8fe7-44a9-b806-7e0d40b789fa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:44.327Z"
+    },
+    {
+      "id": "59bbebf0-f68c-4c9f-a8b2-815b6fa770c5",
+      "name": "Cluster KKE-717",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "59bbebf0-f68c-4c9f-a8b2-815b6fa770c5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:44.928Z"
+    },
+    {
+      "id": "b8bee188-f8da-4bc8-8b2a-e25fb6ca6a57",
+      "name": "Cluster LHB-976",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b8bee188-f8da-4bc8-8b2a-e25fb6ca6a57",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:45.479Z"
+    },
+    {
+      "id": "f0f2f24f-65af-466c-9f81-eef7b085322f",
+      "name": "Cluster MNK-833",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f0f2f24f-65af-466c-9f81-eef7b085322f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:46.171Z"
+    },
+    {
+      "id": "80236691-0376-442a-8d18-7e2499b86bea",
+      "name": "Cluster NBD-102",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "80236691-0376-442a-8d18-7e2499b86bea",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:46.822Z"
+    },
+    {
+      "id": "43ec6b5d-5323-41e0-b8a9-bf318595965d",
+      "name": "Cluster PQE-291",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "43ec6b5d-5323-41e0-b8a9-bf318595965d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:47.356Z"
+    },
+    {
+      "id": "ce6e4620-0c47-4d27-b433-6cdcaf6fb1ac",
+      "name": "Cluster RSC-340",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ce6e4620-0c47-4d27-b433-6cdcaf6fb1ac",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:47.992Z"
+    },
+    {
+      "id": "255010e6-bb5e-48da-b366-bcefe406017f",
+      "name": "Cluster SGL-693",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "255010e6-bb5e-48da-b366-bcefe406017f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:49.065Z"
+    },
+    {
+      "id": "67597e79-afc7-4600-a1e9-d9ac9cf4f97f",
+      "name": "Cluster SZA-178",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "67597e79-afc7-4600-a1e9-d9ac9cf4f97f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:49.716Z"
+    },
+    {
+      "id": "8aa2039b-3ab5-4eb7-89af-ad04b7058b65",
+      "name": "Cluster TYS-098",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8aa2039b-3ab5-4eb7-89af-ad04b7058b65",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:50.157Z"
+    },
+    {
+      "id": "98164159-3b8f-4186-9284-1a6177083588",
+      "name": "Cluster VUP-613",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "98164159-3b8f-4186-9284-1a6177083588",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:50.703Z"
+    },
+    {
+      "id": "1f4e3282-5f06-436c-930a-6f5b0311ee5b",
+      "name": "Cluster WDH-387",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1f4e3282-5f06-436c-930a-6f5b0311ee5b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:51.255Z"
+    },
+    {
+      "id": "a8a209f7-8dce-4c15-af84-fadfa4352306",
+      "name": "Cluster YKA-011",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a8a209f7-8dce-4c15-af84-fadfa4352306",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:51.920Z"
+    },
+    {
+      "id": "bd938343-c1bf-4397-9f6d-2a1b15f34db0",
+      "name": "Comm Array ST1-02",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bd938343-c1bf-4397-9f6d-2a1b15f34db0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:52.424Z"
+    },
+    {
+      "id": "8161aada-e08d-464a-95ac-974d13e1fb59",
+      "name": "Comm Array ST1-13",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8161aada-e08d-464a-95ac-974d13e1fb59",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:52.882Z"
+    },
+    {
+      "id": "d7acf24e-0466-4ed1-8357-cdac58c7399b",
+      "name": "Comm Array ST1-48",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d7acf24e-0466-4ed1-8357-cdac58c7399b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:53.324Z"
+    },
+    {
+      "id": "7db4570e-3ea3-4352-982f-d3d34df92632",
+      "name": "Comm Array ST1-61",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7db4570e-3ea3-4352-982f-d3d34df92632",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:53.781Z"
+    },
+    {
+      "id": "245d683e-45eb-49b2-9de4-576bab3ce03e",
+      "name": "Comm Array ST1-92",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "245d683e-45eb-49b2-9de4-576bab3ce03e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:54.221Z"
+    },
+    {
+      "id": "279c6997-be8b-4a98-8921-cf4ac5f9095d",
+      "name": "Comm Array ST2-28",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "279c6997-be8b-4a98-8921-cf4ac5f9095d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:54.664Z"
     }
   ]
 }
