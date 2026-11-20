@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T19:19:29.632Z",
-  "commodityGeneratedAt": "2026-11-20T19:19:32.541Z",
+  "generatedAt": "2026-11-20T20:16:26.045Z",
+  "commodityGeneratedAt": "2026-11-20T20:16:28.597Z",
   "commodityCoverage": {
     "commoditiesScanned": 206,
     "resourceCommodities": 72,
@@ -10,7 +10,7 @@
     "resourceLinks": 2580,
     "unmatchedLocationLinks": 0
   },
-  "enrichedGeneratedAt": "2026-11-20T19:19:29.632Z",
+  "enrichedGeneratedAt": "2026-11-20T20:16:26.045Z",
   "catalogTotal": 2017,
   "enrichedCount": 2017,
   "coverage": {
@@ -61,11 +61,12 @@
     "stations": 473,
     "withoutPvp": 1390
   },
+  "seedOnlyResearchTotal": 12,
   "seedOnlyCounts": {
     "total": 12,
     "withTacticalIntel": 1,
     "withLoot": 0,
     "withServices": 10
   },
-  "qualityGeneratedAt": "2026-11-20T19:19:32.642Z"
+  "qualityGeneratedAt": "2026-11-20T20:16:28.713Z"
 }

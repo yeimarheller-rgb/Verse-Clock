@@ -26247,6 +26247,240 @@
       "existingEvidence": {}
     }
   ],
+  "seedOnlyResearchQueue": [
+    {
+      "id": "pyro-checkmate-station",
+      "name": "Checkmate Station",
+      "system": "Pyro",
+      "sourceUrls": [
+        "https://starcitizen.tools/Pyro",
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 77,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-connor-s",
+      "name": "Connor's",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards",
+        "services"
+      ],
+      "score": 58,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-arc-l1",
+      "name": "ARC-L1",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-arc-l2",
+      "name": "ARC-L2",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-arc-l4",
+      "name": "ARC-L4",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-cru-l1",
+      "name": "CRU-L1",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-hur-l1",
+      "name": "HUR-L1",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-hur-l2",
+      "name": "HUR-L2",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-mic-l1",
+      "name": "MIC-L1",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-mic-l2",
+      "name": "MIC-L2",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "stanton-mic-l5",
+      "name": "MIC-L5",
+      "system": "Stanton",
+      "sourceUrls": [
+        "https://uexcorp.space/mining/refineries"
+      ],
+      "missingDomains": [
+        "missions",
+        "pve",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "hazards"
+      ],
+      "score": 57,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    },
+    {
+      "id": "curated-lazarus-pyro-i",
+      "name": "Lazarus Complex · Valakkar",
+      "system": "Pyro",
+      "sourceUrls": [
+        "https://starcitizen.tools/Lazarus_Tithonus_Research_Lab",
+        "https://starcitizen.tools/4.10",
+        "https://scanz.space/news/guides/complete-guide-to-storm-breaker-apex-valakkar",
+        "https://www.citadelsc.com/en/map/pyro-i"
+      ],
+      "missingDomains": [
+        "missions",
+        "pvp",
+        "loot",
+        "weapons",
+        "trade",
+        "services"
+      ],
+      "score": 56,
+      "reason": "curated-only: no exact API catalog match; preserve separately and investigate identity"
+    }
+  ],
   "evidenceCoverage": {
     "traced": 260,
     "untraced": 0
@@ -26321,7 +26555,7 @@
   ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T19:19:32.642Z",
+  "generatedAt": "2026-11-20T20:16:28.713Z",
   "definition": "Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.",
   "counts": {
     "resourceAssociationsOnly": 228,
