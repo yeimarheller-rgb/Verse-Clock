@@ -17,4 +17,16 @@ for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.
 const seedOnlyCounts={total:seedOnly.length,withTacticalIntel:seedOnly.filter(p=>!!p.tacticalIntel).length,withLoot:seedOnly.filter(p=>!!p.lootIntel).length,withServices:seedOnly.filter(p=>Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))).length};
 const report={seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable = at least one of missions, resources, services, PvE, PvP or loot. GeographicOnly = none. A field is not proof of in-game availability.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
 await writeFile('lab-preview/data/atlas-quality.json',JSON.stringify(report,null,2)+'\n');
+// Lightweight manifest for the browser: the full per-location audit remains available for offline inspection.
+const meta={
+ schemaVersion:1,version:catalog.version,
+ generatedAt:enriched.generatedAt||report.generatedAt,
+ enrichedGeneratedAt:enriched.generatedAt||null,
+ catalogTotal:report.counts.total,
+ enrichedCount:enriched.version===catalog.version?enriched.locations.length:0,
+ coverage:enriched.version===catalog.version?(enriched.coverage||{}):{},
+ counts:report.counts,seedOnlyCounts:report.seedOnlyCounts,
+ qualityGeneratedAt:report.generatedAt
+};
+await writeFile('lab-preview/data/atlas-meta.json',JSON.stringify(meta,null,2)+'\n');
 console.log(JSON.stringify({version:report.version,counts,systems},null,2));
