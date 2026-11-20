@@ -708,6 +708,39 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Hathor Align & Mine · OLP",
+        "steps": [
+          "Completar las tres PAF asociadas y transportar tres baterías GP-XP a la OLP.",
+          "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
+          "Activar el primado y obtener la Laser Activation Keycard.",
+          "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+        ],
+        "resources": [
+          "Carinite",
+          "Saldynium (mena)",
+          "Jaclium (mena)",
+          "Aphorite",
+          "Dolivine",
+          "Hadanite",
+          "Janalite",
+          "Carinite pura"
+        ],
+        "threats": [
+          "Valakkar juveniles dentro de la cueva",
+          "Colapso de cueva tras 2 horas"
+        ],
+        "requirements": [
+          "3 baterías GP-XP procedentes de las PAF",
+          "Laser Activation Keycard",
+          "Herramientas de minería y extracción"
+        ],
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "sources": [
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
       }
     },
     {
@@ -768,10 +801,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -832,10 +879,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -896,10 +957,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -929,6 +1004,39 @@
         "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "Hathor Align & Mine · OLP",
+        "steps": [
+          "Completar las tres PAF asociadas y transportar tres baterías GP-XP a la OLP.",
+          "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
+          "Activar el primado y obtener la Laser Activation Keycard.",
+          "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+        ],
+        "resources": [
+          "Carinite",
+          "Saldynium (mena)",
+          "Jaclium (mena)",
+          "Aphorite",
+          "Dolivine",
+          "Hadanite",
+          "Janalite",
+          "Carinite pura"
+        ],
+        "threats": [
+          "Valakkar juveniles dentro de la cueva",
+          "Colapso de cueva tras 2 horas"
+        ],
+        "requirements": [
+          "3 baterías GP-XP procedentes de las PAF",
+          "Laser Activation Keycard",
+          "Herramientas de minería y extracción"
+        ],
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
         ]
       }
@@ -991,10 +1099,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1055,10 +1177,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1119,10 +1255,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1152,6 +1302,39 @@
         "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "Hathor Align & Mine · OLP",
+        "steps": [
+          "Completar las tres PAF asociadas y transportar tres baterías GP-XP a la OLP.",
+          "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
+          "Activar el primado y obtener la Laser Activation Keycard.",
+          "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+        ],
+        "resources": [
+          "Carinite",
+          "Saldynium (mena)",
+          "Jaclium (mena)",
+          "Aphorite",
+          "Dolivine",
+          "Hadanite",
+          "Janalite",
+          "Carinite pura"
+        ],
+        "threats": [
+          "Valakkar juveniles dentro de la cueva",
+          "Colapso de cueva tras 2 horas"
+        ],
+        "requirements": [
+          "3 baterías GP-XP procedentes de las PAF",
+          "Laser Activation Keycard",
+          "Herramientas de minería y extracción"
+        ],
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
         ]
       }
@@ -1214,10 +1397,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1278,10 +1475,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1342,10 +1553,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1375,6 +1600,39 @@
         "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "Hathor Align & Mine · OLP",
+        "steps": [
+          "Completar las tres PAF asociadas y transportar tres baterías GP-XP a la OLP.",
+          "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
+          "Activar el primado y obtener la Laser Activation Keycard.",
+          "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+        ],
+        "resources": [
+          "Carinite",
+          "Saldynium (mena)",
+          "Jaclium (mena)",
+          "Aphorite",
+          "Dolivine",
+          "Hadanite",
+          "Janalite",
+          "Carinite pura"
+        ],
+        "threats": [
+          "Valakkar juveniles dentro de la cueva",
+          "Colapso de cueva tras 2 horas"
+        ],
+        "requirements": [
+          "3 baterías GP-XP procedentes de las PAF",
+          "Laser Activation Keycard",
+          "Herramientas de minería y extracción"
+        ],
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
         ]
       }
@@ -1437,10 +1695,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1501,10 +1773,24 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
       }
     },
     {
@@ -1565,10 +1851,73 @@
           "Arctic S2"
         ],
         "sources": [
-          "https://starcitizen.tools/Planetary_alignment_facilities",
-          "https://dumpers-repo.com/loot-finder/"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Planetary_alignment_facilities"
         ],
-        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "steps": [
+          "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
+          "Abrir salas de seguridad y obtener tres Alignment Blades.",
+          "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+        ],
+        "threats": [
+          "Mercenarios o enemigos FPS según estado de actividad",
+          "Valakkar juveniles al mover antenas"
+        ],
+        "requirements": [
+          "Armas FPS y munición",
+          "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      }
+    },
+    {
+      "id": "curated-lazarus-pyro-i",
+      "name": "Lazarus Complex · Valakkar",
+      "system": "Pyro",
+      "parent": "Pyro I",
+      "type": "research-facility",
+      "operator": "Associated Sciences & Development (ASD)",
+      "patch": "4.10",
+      "verification": "community-guide-and-patch-notes",
+      "sourceUrls": [
+        "https://starcitizen.tools/Lazarus_Tithonus_Research_Lab",
+        "https://starcitizen.tools/4.10",
+        "https://scanz.space/news/guides/complete-guide-to-storm-breaker-apex-valakkar",
+        "https://www.citadelsc.com/en/map/pyro-i"
+      ],
+      "tacticalIntel": {
+        "title": "Lazarus · Storm Breaker / Valakkar irradiado",
+        "steps": [
+          "Pyro IV: conseguir la tarjeta de acceso de espécimen en un Farro Data Center (secuencia descrita en guía comunitaria).",
+          "Pyro I: llegar a un complejo Lazarus y usar el transporte lanzadera hasta la zona de investigación.",
+          "Con protección contra radiación, acceder a la cámara y recuperar el huevo de Valakkar irradiado.",
+          "Llevar el huevo a la torre de llamada para provocar la aparición del Apex Valakkar.",
+          "Combatir al Apex y extraer perlas y colmillos mediante herramientas adecuadas."
+        ],
+        "threats": [
+          "Tormenta electromagnética y radiación; posible daño de distorsión a naves",
+          "Valakkar irradiados juveniles, adultos y Apex",
+          "Combate FPS en la ruta según instancia/actividad"
+        ],
+        "resources": [
+          "Colmillo de Valakkar irradiado (juvenil/adulto/Apex)",
+          "Perla de Valakkar irradiado (AA/AAA, según extracción)",
+          "Huevo de Valakkar irradiado (objetivo de misión)"
+        ],
+        "requirements": [
+          "Protección contra radiación",
+          "Arma FPS y munición abundante",
+          "Multiherramienta y tractor para extracción",
+          "Tarjeta de espécimen para secuencia Apex"
+        ],
+        "caveat": "El complejo y el procedimiento están documentados; los spawns, drops y accesos dependen del servidor y contrato. Los pasos detallados provienen de guía comunitaria, no son garantía de funcionamiento en la versión actual.",
+        "sources": [
+          "https://starcitizen.tools/Lazarus_Tithonus_Research_Lab",
+          "https://starcitizen.tools/4.10",
+          "https://scanz.space/news/guides/complete-guide-to-storm-breaker-apex-valakkar",
+          "https://www.citadelsc.com/en/map/pyro-i"
+        ]
       }
     }
   ]
