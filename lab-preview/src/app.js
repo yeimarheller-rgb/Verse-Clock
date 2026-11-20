@@ -370,7 +370,7 @@ function renderTacticalCards(p,sec,loot){
  if(!root||!readiness||!sources)return;
  root.replaceChildren();sources.replaceChildren();readiness.replaceChildren();
  const intel=p.lootIntel,missions=p.missions||[],resources=p.resources||[],amenities=p.amenities||[];
- const hasPve=Boolean(p.tacticalIntel?.threats?.length||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
+ const hasPve=Boolean(p.tacticalIntel?.threats?.some(x=>!/(?:sin (?:medici[oó]n|datos|confirmaci[oó]n)|no (?:hay|se dispone|existe)|desconocid)/i.test(x))||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
  const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
  const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
  const hasMissions=Boolean(missions.length||p.activities?.length);
@@ -401,7 +401,7 @@ function renderTacticalCards(p,sec,loot){
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
- const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
+ const value=document.createElement('strong');value.textContent=covered+'/'+cards.length+' TARJETAS';
  header.append(label,value);
  const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
  const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
