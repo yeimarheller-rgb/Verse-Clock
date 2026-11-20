@@ -486,6 +486,38 @@ async function mergeFreshIntel(d){
  renderPoi();
 }
 
+let lastCommodityFingerprint='';
+function mergeFreshResources(data){
+ if(!Array.isArray(data.locations)||!poiData?.length)return;
+ const resourcesById=new Map(data.locations.filter(e=>e.id&&Array.isArray(e.resources)).map(e=>[e.id,e.resources]));
+ if(!resourcesById.size)return;
+ let changed=false;
+ poiData=poiData.map(p=>{
+  const extra=resourcesById.get(p.source?.uuid||p.id);if(!extra?.length)return p;
+  const unique=new Map();
+  for(const resource of [...(Array.isArray(p.resources)?p.resources:[]),...extra]){
+   if(resource&&typeof resource.name==='string')unique.set(normalize(resource.name),resource);
+  }
+  if(unique.size===(p.resources||[]).length)return p;
+  changed=true;
+  return {...p,resources:[...unique.values()],resourceIndexCheckedAt:data.generatedAt,resourceIndexVersion:data.version};
+ });
+ if(changed){
+  if(selectedPoiKey){const p=poiData.find(x=>[x.system||'',x.name||''].join('|').toLocaleLowerCase('es')===selectedPoiKey);if(p)applyPoiToMain(p)}
+  if(input.value.trim())updateMenu();
+  renderPoi();
+ }
+}
+async function refreshResourceIndex(version){
+ try{
+  const r=await fetch('./data/atlas-commodities.json',{cache:'no-cache'});
+  if(!r.ok)return;
+  const d=await r.json();
+  if(d.schemaVersion!==1||d.version!==version||!Array.isArray(d.locations))return;
+  mergeFreshResources(d);
+  lastCommodityFingerprint=d.generatedAt||'';
+ }catch(e){console.warn('Catalogued resources unavailable',e)}
+}
 let lastEnrichmentFingerprint='';
 let atlasRefreshBusy=false;
 // Poll a tiny status manifest, not the full 1MB atlas every 15 seconds.
@@ -507,6 +539,9 @@ async function refreshAtlasProgress(){
    if(d.version!==meta.version)throw Error('Atlas metadata and detail versions differ');
    await mergeFreshIntel(d);
    lastEnrichmentFingerprint=fingerprint;
+  }
+  if(meta.commodityGeneratedAt&&meta.commodityGeneratedAt!==lastCommodityFingerprint){
+   await refreshResourceIndex(meta.version);
   }
  }catch(e){
   if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Progreso no disponible';$('atlasProgressUpdated').textContent='Sin datos publicados'}
@@ -547,6 +582,7 @@ async function loadAtlas(){
  if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Datos de progreso no disponibles';$('atlasProgressUpdated').textContent='Sin snapshot de enriquecimiento';}
 
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ await refreshResourceIndex(version);
  if(input.value.trim())updateMenu();
  if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
  renderPoi();
