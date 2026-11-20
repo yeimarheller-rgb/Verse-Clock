@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:08:29.711Z",
+  "generatedAt": "2026-11-20T15:08:42.220Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1450,
+  "enrichedCount": 1475,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -26364,6 +26364,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T15:08:29.530Z"
+    },
+    {
+      "id": "1b219169-a6a9-48cc-baaf-696f1311fa36",
+      "name": "Mining Claim #1A0-R16",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1b219169-a6a9-48cc-baaf-696f1311fa36",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:31.692Z"
+    },
+    {
+      "id": "c139e87a-5bd2-437b-a690-9c755a3d31c1",
+      "name": "Mining Claim #1OD-G13",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c139e87a-5bd2-437b-a690-9c755a3d31c1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:32.146Z"
+    },
+    {
+      "id": "7b2c459e-d33c-4661-8a67-52487c2249a0",
+      "name": "Mining Claim #1P2-O6W",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7b2c459e-d33c-4661-8a67-52487c2249a0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:32.616Z"
+    },
+    {
+      "id": "7ed072c1-4c7f-4cd2-952c-9c1f6daf061d",
+      "name": "Mining Claim #1TM-U9Z",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7ed072c1-4c7f-4cd2-952c-9c1f6daf061d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:33.044Z"
+    },
+    {
+      "id": "98fd90eb-d262-4d3c-89d8-5228215885f9",
+      "name": "Mining Claim #1WF-8Q2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "98fd90eb-d262-4d3c-89d8-5228215885f9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:33.449Z"
+    },
+    {
+      "id": "ea75323c-9d9e-4c11-b924-b2357fb1e579",
+      "name": "Mining Claim #233-0BG",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ea75323c-9d9e-4c11-b924-b2357fb1e579",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:33.903Z"
+    },
+    {
+      "id": "fb143d40-0599-4232-a541-08b398f414cd",
+      "name": "Mining Claim #252-RDC",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fb143d40-0599-4232-a541-08b398f414cd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:34.355Z"
+    },
+    {
+      "id": "4daa175e-9eab-4d85-a181-200c1b9f9f3e",
+      "name": "Mining Claim #260-K0V",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4daa175e-9eab-4d85-a181-200c1b9f9f3e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:34.739Z"
+    },
+    {
+      "id": "a2d76baf-454b-48e1-b1f1-a38fc139f93b",
+      "name": "Mining Claim #26X-9QI",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a2d76baf-454b-48e1-b1f1-a38fc139f93b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:35.137Z"
+    },
+    {
+      "id": "5e4c5903-80a8-468e-8a19-2ee69656d619",
+      "name": "Mining Claim #286-T23",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5e4c5903-80a8-468e-8a19-2ee69656d619",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:35.546Z"
+    },
+    {
+      "id": "0a6ab177-89f2-463b-9dd2-eca243383230",
+      "name": "Mining Claim #287-UMO",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0a6ab177-89f2-463b-9dd2-eca243383230",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:35.979Z"
+    },
+    {
+      "id": "648244d9-0fc2-436a-b71b-9d1401d0b50f",
+      "name": "Mining Claim #29N-704",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "648244d9-0fc2-436a-b71b-9d1401d0b50f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:36.396Z"
+    },
+    {
+      "id": "516f9042-c274-4ef2-aaee-5cc9c8f5b07f",
+      "name": "Mining Claim #2A5-7XY",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "516f9042-c274-4ef2-aaee-5cc9c8f5b07f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:36.899Z"
+    },
+    {
+      "id": "301d04fe-2d90-4b4e-9e34-42f6c0d545c9",
+      "name": "Mining Claim #2AO-YXA",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "301d04fe-2d90-4b4e-9e34-42f6c0d545c9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:37.313Z"
+    },
+    {
+      "id": "c3145e2c-8fc3-4899-89d0-b588648a2b83",
+      "name": "Mining Claim #2FC-DQ3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c3145e2c-8fc3-4899-89d0-b588648a2b83",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:37.839Z"
+    },
+    {
+      "id": "c02a3a9d-3db5-476a-9cc9-2b09abf56017",
+      "name": "Mining Claim #2JR-IH4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c02a3a9d-3db5-476a-9cc9-2b09abf56017",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:38.250Z"
+    },
+    {
+      "id": "8a896ee1-259e-4720-89c9-c3a2562d9bb5",
+      "name": "Mining Claim #2JR-IH4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8a896ee1-259e-4720-89c9-c3a2562d9bb5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:38.654Z"
+    },
+    {
+      "id": "5ba14b7a-71e8-491b-a67e-693f81d59f48",
+      "name": "Mining Claim #2NB-SH5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5ba14b7a-71e8-491b-a67e-693f81d59f48",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:39.067Z"
+    },
+    {
+      "id": "613484bb-1267-4370-be25-91b86e5fadfc",
+      "name": "Mining Claim #2R5-806",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "613484bb-1267-4370-be25-91b86e5fadfc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:39.506Z"
+    },
+    {
+      "id": "827df242-c96a-420e-bc1b-eda53d9f24c0",
+      "name": "Mining Claim #2ZK-92P",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "827df242-c96a-420e-bc1b-eda53d9f24c0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:39.915Z"
+    },
+    {
+      "id": "361ce540-aa05-4f43-b67b-885e4b9c32ab",
+      "name": "Mining Claim #35F-7IY",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "361ce540-aa05-4f43-b67b-885e4b9c32ab",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:40.328Z"
+    },
+    {
+      "id": "fb713000-9a15-48f4-ae6b-bfaa8dc07151",
+      "name": "Mining Claim #36Y-F4E",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fb713000-9a15-48f4-ae6b-bfaa8dc07151",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:40.752Z"
+    },
+    {
+      "id": "0d381ec9-215c-4199-bc23-632c50e5e032",
+      "name": "Mining Claim #36Z-097",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0d381ec9-215c-4199-bc23-632c50e5e032",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:41.187Z"
+    },
+    {
+      "id": "e99fce1e-1333-45c6-bb98-615a5e59ef6b",
+      "name": "Mining Claim #38L-OJB",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e99fce1e-1333-45c6-bb98-615a5e59ef6b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:41.611Z"
+    },
+    {
+      "id": "32b606ef-930a-4dc8-86f7-700b0d0909e8",
+      "name": "Mining Claim #3EH-MR5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "32b606ef-930a-4dc8-86f7-700b0d0909e8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:08:42.039Z"
     }
   ]
 }
