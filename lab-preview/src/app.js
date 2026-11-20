@@ -489,7 +489,7 @@ async function loadAtlasQuality(){
 }
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
- const byKey=new Map();const key=p=>[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
+ const byKey=new Map();const key=p=>[String(p.system||'').replace(/\s+system$/i,'').trim(),p.name||''].join('|').toLocaleLowerCase('es');
  for(const p of base.locations||[])byKey.set(key(p),p);
  let apiCount=0,version='';
  try{
