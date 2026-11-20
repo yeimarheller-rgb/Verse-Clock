@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T05:11:02.618Z",
+  "generatedAt": "2026-11-20T14:36:26.831Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1025,
+  "enrichedCount": 1050,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -16197,6 +16197,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T05:11:02.439Z"
+    },
+    {
+      "id": "fb2e7153-9ca4-4318-923d-9899f68aaf73",
+      "name": "Rayari Anvik Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fb2e7153-9ca4-4318-923d-9899f68aaf73",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:15.551Z"
+    },
+    {
+      "id": "6a115f9c-6160-4b2c-97cf-542af3052364",
+      "name": "Rayari Cantwell Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6a115f9c-6160-4b2c-97cf-542af3052364",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:16.197Z"
+    },
+    {
+      "id": "5a4e54f1-4f15-4a71-987b-e2c0baf4282f",
+      "name": "Rayari Deltana Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5a4e54f1-4f15-4a71-987b-e2c0baf4282f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:16.666Z"
+    },
+    {
+      "id": "b4f2fdb2-3614-4402-bea2-f2a112819684",
+      "name": "Rayari Kaltag Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b4f2fdb2-3614-4402-bea2-f2a112819684",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:17.102Z"
+    },
+    {
+      "id": "9d750a06-8d64-41d4-8265-c2d8591c62a4",
+      "name": "Rayari McGrath Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9d750a06-8d64-41d4-8265-c2d8591c62a4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:17.530Z"
+    },
+    {
+      "id": "a0e7c619-4120-409a-9b54-5cc7310457d1",
+      "name": "Reclamation & Disposal Orinth",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a0e7c619-4120-409a-9b54-5cc7310457d1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:17.988Z"
+    },
+    {
+      "id": "2a93560b-5549-49aa-9f3c-3555d7cea851",
+      "name": "Regiment Downs",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2a93560b-5549-49aa-9f3c-3555d7cea851",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:18.442Z"
+    },
+    {
+      "id": "69b59df3-3f41-4dbd-b457-b1f8d6feb942",
+      "name": "Reyes Mining Compound-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "69b59df3-3f41-4dbd-b457-b1f8d6feb942",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:18.909Z"
+    },
+    {
+      "id": "4b14562a-4447-493c-a730-07161267f08b",
+      "name": "Reyes Mining Compound-B",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4b14562a-4447-493c-a730-07161267f08b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:19.367Z"
+    },
+    {
+      "id": "05c12718-d668-4718-ba17-44f6916586a4",
+      "name": "Reyes Mining Compound-C",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "05c12718-d668-4718-ba17-44f6916586a4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:19.827Z"
+    },
+    {
+      "id": "fd3387e1-fd7c-4154-90f3-c64d8d275f65",
+      "name": "Reyes Mining Compound-D",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fd3387e1-fd7c-4154-90f3-c64d8d275f65",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:20.336Z"
+    },
+    {
+      "id": "8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
+      "name": "Rico's Remains",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:20.813Z"
+    },
+    {
+      "id": "0c5e44b1-2ef3-4e62-98c9-37bb4e49f43d",
+      "name": "Rock Bottom",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0c5e44b1-2ef3-4e62-98c9-37bb4e49f43d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:21.269Z"
+    },
+    {
+      "id": "88505906-4318-4fee-9ecd-748b8db3483c",
+      "name": "Rod's Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "88505906-4318-4fee-9ecd-748b8db3483c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:21.809Z"
+    },
+    {
+      "id": "443703c2-9701-4e7d-b3f6-7aaf3132ed39",
+      "name": "Rolo's Crater",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "443703c2-9701-4e7d-b3f6-7aaf3132ed39",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:22.215Z"
+    },
+    {
+      "id": "aa347865-7054-4578-b96b-7e0108259909",
+      "name": "Rough Landing",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "aa347865-7054-4578-b96b-7e0108259909",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:22.596Z"
+    },
+    {
+      "id": "85ef0977-d65e-4481-85a4-b4bfae906865",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "85ef0977-d65e-4481-85a4-b4bfae906865",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:23.001Z"
+    },
+    {
+      "id": "4f42ced7-7ecc-4acc-b8c5-fbdd337ea052",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4f42ced7-7ecc-4acc-b8c5-fbdd337ea052",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:23.433Z"
+    },
+    {
+      "id": "6eebbc56-f730-40e3-96a2-af7ee448dcbb",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6eebbc56-f730-40e3-96a2-af7ee448dcbb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:23.860Z"
+    },
+    {
+      "id": "2c3a5644-3f2e-465d-8f13-3de08b776e60",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2c3a5644-3f2e-465d-8f13-3de08b776e60",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:24.314Z"
+    },
+    {
+      "id": "78c6d5fe-899d-4da1-8d9f-8793d8e65766",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "78c6d5fe-899d-4da1-8d9f-8793d8e65766",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:24.715Z"
+    },
+    {
+      "id": "c77c3bfb-2bc3-4cd0-b5b1-571f7927fb7e",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c77c3bfb-2bc3-4cd0-b5b1-571f7927fb7e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:25.242Z"
+    },
+    {
+      "id": "d6af9afe-6ab2-4cd7-92ca-c6fae1ae713f",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d6af9afe-6ab2-4cd7-92ca-c6fae1ae713f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:25.703Z"
+    },
+    {
+      "id": "876c8a56-fdb0-4fcf-9e84-0387e0655611",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "876c8a56-fdb0-4fcf-9e84-0387e0655611",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:26.132Z"
+    },
+    {
+      "id": "3f7f974e-cbf4-422c-a856-e6efde9e7512",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3f7f974e-cbf4-422c-a856-e6efde9e7512",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:26.650Z"
     }
   ]
 }
