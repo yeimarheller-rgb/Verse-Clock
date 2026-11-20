@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T05:10:48.258Z",
+  "generatedAt": "2026-11-20T05:11:02.618Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1000,
+  "enrichedCount": 1025,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -15822,6 +15822,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T05:10:48.078Z"
+    },
+    {
+      "id": "56e43288-fbc3-400a-ab66-9b4bbef6d7ad",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "56e43288-fbc3-400a-ab66-9b4bbef6d7ad",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:50.221Z"
+    },
+    {
+      "id": "810af42f-3d2a-4526-953d-afbb034119f9",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "810af42f-3d2a-4526-953d-afbb034119f9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:50.738Z"
+    },
+    {
+      "id": "48c1b4f5-0bb9-4bda-8d8e-bc88710926cc",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "48c1b4f5-0bb9-4bda-8d8e-bc88710926cc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:51.241Z"
+    },
+    {
+      "id": "7e5a8daa-dd17-432b-8c1c-b310d9cff195",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7e5a8daa-dd17-432b-8c1c-b310d9cff195",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:51.835Z"
+    },
+    {
+      "id": "44620d32-0042-418a-ae9f-163ac0d19025",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "44620d32-0042-418a-ae9f-163ac0d19025",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:52.310Z"
+    },
+    {
+      "id": "05dfb206-5cb6-4965-9841-a3375fc372dc",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "05dfb206-5cb6-4965-9841-a3375fc372dc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:52.767Z"
+    },
+    {
+      "id": "883a0d41-f29a-4147-a3bb-7485f532dbaf",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "883a0d41-f29a-4147-a3bb-7485f532dbaf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:53.345Z"
+    },
+    {
+      "id": "08d13bfc-2e2b-4b37-b851-6cf5d85be521",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "08d13bfc-2e2b-4b37-b851-6cf5d85be521",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:53.854Z"
+    },
+    {
+      "id": "a37789ac-d905-40e9-90e6-84a0bb663bcc",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a37789ac-d905-40e9-90e6-84a0bb663bcc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:54.357Z"
+    },
+    {
+      "id": "fc325012-3b92-4a26-84a8-42d5b12d2850",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fc325012-3b92-4a26-84a8-42d5b12d2850",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:54.803Z"
+    },
+    {
+      "id": "72a65e90-470c-45ef-a05e-0056ce5e102c",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "72a65e90-470c-45ef-a05e-0056ce5e102c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:55.314Z"
+    },
+    {
+      "id": "b9860c1d-2fe9-44d4-8894-a02884fddd11",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b9860c1d-2fe9-44d4-8894-a02884fddd11",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:55.879Z"
+    },
+    {
+      "id": "789ce3fa-a38c-4a54-854e-b09e10f5e449",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "789ce3fa-a38c-4a54-854e-b09e10f5e449",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:56.290Z"
+    },
+    {
+      "id": "051d95a2-d457-4e2d-bb8a-9804ac24431a",
+      "name": "R R P1 L2 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "051d95a2-d457-4e2d-bb8a-9804ac24431a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:56.744Z"
+    },
+    {
+      "id": "f8d974f5-0a65-4452-be7c-1828e34cdfbb",
+      "name": "R R P1 L3 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f8d974f5-0a65-4452-be7c-1828e34cdfbb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:57.189Z"
+    },
+    {
+      "id": "d6a10dbc-77ae-4cd7-bafb-eba7e707eb93",
+      "name": "R R P1 L5 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d6a10dbc-77ae-4cd7-bafb-eba7e707eb93",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:57.611Z"
+    },
+    {
+      "id": "50280c46-358d-4c22-a24f-5b258b4967a2",
+      "name": "R R P2 L E O C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "50280c46-358d-4c22-a24f-5b258b4967a2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:58.056Z"
+    },
+    {
+      "id": "b52e0642-ae06-4670-b6dc-0e0fd425b05b",
+      "name": "R R P2 L3 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b52e0642-ae06-4670-b6dc-0e0fd425b05b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:58.696Z"
+    },
+    {
+      "id": "e58cd622-ee1f-4688-9743-e8baf6ea66d8",
+      "name": "R R P3 L2 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e58cd622-ee1f-4688-9743-e8baf6ea66d8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:59.196Z"
+    },
+    {
+      "id": "e328af56-dc4f-4d73-ba99-6f5d86d3c996",
+      "name": "R R P3 L5 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e328af56-dc4f-4d73-ba99-6f5d86d3c996",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:59.798Z"
+    },
+    {
+      "id": "690d91ef-a007-4c4c-b859-fdd7b1d80bc1",
+      "name": "R R P5 L1 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "690d91ef-a007-4c4c-b859-fdd7b1d80bc1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:11:00.372Z"
+    },
+    {
+      "id": "c4c836a1-542b-4f7c-bdf5-333c0e0d8fbf",
+      "name": "R R P6 L2 C L I N I C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c4c836a1-542b-4f7c-bdf5-333c0e0d8fbf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:11:00.971Z"
+    },
+    {
+      "id": "dc44d171-0090-4d5b-87ed-637b4a43fce1",
+      "name": "Rappel",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dc44d171-0090-4d5b-87ed-637b4a43fce1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:11:01.448Z"
+    },
+    {
+      "id": "cc97bf2d-ad8b-487e-bca5-10a224858f53",
+      "name": "Rat's Nest Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cc97bf2d-ad8b-487e-bca5-10a224858f53",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:11:01.945Z"
+    },
+    {
+      "id": "f37cc82a-47de-48a7-82d2-b99a407382fb",
+      "name": "Raven's Roost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f37cc82a-47de-48a7-82d2-b99a407382fb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:11:02.439Z"
     }
   ]
 }
