@@ -263,12 +263,12 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').ca
 // Atlas de contratos: panel complementario, no altera la búsqueda de ubicaciones ni el reloj.
 const intelInput=$('intelQuery'),intelResults=$('intelResults');
 let intelRecords=[];
-const intelNorm=v=>String(v||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
+const intelNorm=v=>String(v||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('es');
 const intelText=r=>[r.name,r.system,r.type,r.contractor,r.rank,...(r.enemies||[]),r.loot?.item,r.notes].filter(Boolean).join(' ');
 const intelAliases={arma:['rifle','shotgun','escopeta','pistola','weapon'],armas:['rifle','shotgun','escopeta','pistola','weapon'],escopeta:['shotgun'],rifle:['rifle'],mochila:['backpack'],casco:['helmet'],pechera:['core'],armadura:['core','helmet','backpack']};
 function intelRender(){
  const query=intelNorm(intelInput.value.trim());
- const terms=query.split(/\\s+/).filter(Boolean);
+ const terms=query.split(/\s+/).filter(Boolean);
  const found=intelRecords.filter(r=>{const t=intelNorm(intelText(r));return terms.every(q=>t.includes(q)||(intelAliases[q]||[]).some(a=>t.includes(a)))});
  intelResults.replaceChildren();
  const hint=$('intelSuggestions');hint.replaceChildren();
