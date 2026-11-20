@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-19",
+  "reviewedAt": "2026-11-20",
   "scope": "curated-source-listed; not a complete import",
   "locations": [
     {
@@ -18,7 +18,14 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Contested Zone en Orbituary",
+        "sources": [
+          "https://starcitizen.tools/4.10"
+        ],
+        "caveat": "Notas de 4.10 documentan la zona disputada y una sala de recompensas. Sin garantía de botín ni jugadores presentes."
+      }
     },
     {
       "id": "pyro-checkmate-station",
@@ -733,6 +740,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -765,6 +804,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -797,6 +868,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -860,6 +963,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -892,6 +1027,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -924,6 +1091,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -987,6 +1186,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -1019,6 +1250,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -1051,6 +1314,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -1114,6 +1409,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -1146,6 +1473,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     },
     {
@@ -1178,6 +1537,38 @@
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "tacticalIntel": {
+        "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
+        "weapons": [
+          "S71 Justified Rifle",
+          "C54 Luckbringer SMG",
+          "C54 Justified SMG",
+          "Karna Rager Rifle",
+          "Custodian Executive Edition SMG",
+          "Killshot Rifle",
+          "Pulverizer LMG"
+        ],
+        "armor": [
+          "Antium",
+          "Morozov",
+          "Novikov",
+          "Overlord",
+          "Pembroke"
+        ],
+        "components": [
+          "Forcewall S1",
+          "Allstop S1",
+          "Veil S1",
+          "Regulus S1",
+          "Beacon S1",
+          "Arctic S2"
+        ],
+        "sources": [
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://dumpers-repo.com/loot-finder/"
+        ],
+        "caveat": "Tabla de botín PAF, no inventario garantizado en esta instalación."
       }
     }
   ]

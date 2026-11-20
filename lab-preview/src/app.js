@@ -338,7 +338,7 @@ function renderTacticalCards(p,sec,loot){
  const cards=[
   ['⚔','PVE / NPC',sec.pve||'Sin datos específicos','warning'],
   ['◎','PVP / JUGADORES',sec.pvp||'Sin datos específicos','warning'],
-  ['◈','BOTÍN / EQUIPO',intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',intel?.categories?.length?'known':'unknown'],
+  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles (pool PAF)':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',intel?.categories?.length?'known':'unknown'],
   ['◆','MISIONES',missionCount?missionCount+' contratos identificados':Number.isInteger(p.missionCount)?p.missionCount+' asociadas · sin títulos':'Sin contratos identificados',missionCount?'known':'unknown'],
   ['⬡','RECURSOS',resources?resources+' recursos identificados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',resources||intel?.mining?'known':'unknown'],
   ['✚','SERVICIOS',amenities?amenities+' servicios catalogados':'Sin servicios específicos registrados',amenities?'known':'unknown']
@@ -372,6 +372,7 @@ function applyPoiToMain(p){
  if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
  if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
  if(p.tacticalTips?.length){summary.push('━━ INFORMACIÓN ÚTIL ANTES DE IR ━━');for(const tip of p.tacticalTips)summary.push('▸ '+tip)}
+ if(p.tacticalIntel){const t=p.tacticalIntel;summary.push('━━ DOSSIER TÁCTICO DOCUMENTADO ━━');summary.push(t.title);if(t.weapons)summary.push('ARMAS POSIBLES: '+t.weapons.join(' · '));if(t.armor)summary.push('ARMADURAS POSIBLES: '+t.armor.join(' · '));if(t.components)summary.push('COMPONENTES POSIBLES: '+t.components.join(' · '));summary.push('LIMITACIÓN: '+t.caveat);for(const url of t.sources)summary.push('FUENTE: '+url)}
  if(p.lootIntel){const li=p.lootIntel;summary.push('━━ BOTÍN ESPECÍFICO · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
  summary.push('Temperatura exacta de la instalación: sin verificar');
  summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
