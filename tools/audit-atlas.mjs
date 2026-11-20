@@ -46,9 +46,21 @@ const researchSummary={total:researchQueue.length,hathor:researchQueue.filter(p=
 
 // Report curated records absent from the API as separate records; never silently discard them.
 const seedOnlyCounts={total:seedOnly.length,withTacticalIntel:seedOnly.filter(p=>!!p.tacticalIntel).length,withLoot:seedOnly.filter(p=>!!p.lootIntel).length,withServices:seedOnly.filter(p=>Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))).length};
+const seedOnlyResearchQueue=seedOnly.map(p=>{
+ const domains={
+  missions:!!p.missions?.length,pve:!!p.tacticalIntel?.threats?.length||!!p.security?.pve,
+  pvp:!!p.security?.pvp||!!p.pvp,loot:!!p.lootIntel?.categories?.length||!!p.tacticalIntel?.weapons?.length,
+  weapons:!!p.tacticalIntel?.weapons?.length,trade:!!p.commodities?.length||!!p.shops?.length,
+  hazards:!!p.tacticalIntel?.threats?.length||!!p.hazards?.length,
+  services:Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))
+ };
+ const missingDomains=Object.entries(domains).filter(([,v])=>!v).map(([k])=>k);
+ return {id:p.id||null,name:p.name,system:p.system,sourceUrls:(p.sourceUrls||[]).filter(u=>typeof u==='string'&&u.startsWith('https://')),missingDomains,score:(/hathor/i.test(p.name)?100:/station|gateway|port/i.test(p.name)?70:50)+missingDomains.length,reason:'curated-only: no exact API catalog match; preserve separately and investigate identity'};
+}).sort((x,y)=>y.score-x.score||x.name.localeCompare(y.name));
+
 if(counts.total!==catalog.locations.length||counts.actionable+counts.geographicOnly!==counts.total)throw Error('Inconsistent atlas audit totals');
 const evidenceCoverage={traced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.some(r=>r.kind!=='untraced'))).length,untraced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.every(r=>r.kind==='untraced'))).length};
-const report={researchSummary,researchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
+const report={researchSummary,researchQueue,seedOnlyResearchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
 await writeFile('lab-preview/data/atlas-quality.json',JSON.stringify(report,null,2)+'\n');
 // Lightweight manifest for the browser: the full per-location audit remains available for offline inspection.
 const meta={
@@ -60,7 +72,7 @@ const meta={
  catalogTotal:report.counts.total,
  enrichedCount:enriched.version===catalog.version?enriched.locations.length:0,
  coverage:enriched.version===catalog.version?(enriched.coverage||{}):{},
- counts:report.counts,systems:report.systems,researchSummary:report.researchSummary,seedOnlyCounts:report.seedOnlyCounts,
+ counts:report.counts,systems:report.systems,researchSummary:report.researchSummary,seedOnlyResearchTotal:report.seedOnlyResearchQueue.length,seedOnlyCounts:report.seedOnlyCounts,
  qualityGeneratedAt:report.generatedAt
 };
 await writeFile('lab-preview/data/atlas-meta.json',JSON.stringify(meta,null,2)+'\n');
