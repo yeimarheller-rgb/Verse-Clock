@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:19:03.129Z",
+  "generatedAt": "2026-11-20T01:19:16.346Z",
   "catalogTotal": 2017,
-  "enrichedCount": 450,
+  "enrichedCount": 475,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -7545,6 +7545,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:19:02.948Z"
+    },
+    {
+      "id": "8db480d0-7b21-4865-80ea-8537588a3976",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8db480d0-7b21-4865-80ea-8537588a3976",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:04.998Z"
+    },
+    {
+      "id": "53b8d22c-62bb-4c4e-98dc-4bb99706b45d",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "53b8d22c-62bb-4c4e-98dc-4bb99706b45d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:05.545Z"
+    },
+    {
+      "id": "0751fdb9-c6da-40c8-b924-f217c2c0c68f",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:05.963Z"
+    },
+    {
+      "id": "9f914432-1ade-4200-a0a0-21f6e42a5f80",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9f914432-1ade-4200-a0a0-21f6e42a5f80",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:06.422Z"
+    },
+    {
+      "id": "aaba55af-fde6-4b29-9708-235652524d44",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "aaba55af-fde6-4b29-9708-235652524d44",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:06.905Z"
+    },
+    {
+      "id": "7eb8d974-4e12-4e93-b09d-2f2de5bb1bac",
+      "name": "MT SecurityCenter 4HJ-LVE-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7eb8d974-4e12-4e93-b09d-2f2de5bb1bac",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:07.397Z"
+    },
+    {
+      "id": "4ca26557-f86b-4798-9a4b-e11a4c178575",
+      "name": "MT SecurityCenter 6EE-GVH-9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4ca26557-f86b-4798-9a4b-e11a4c178575",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:07.908Z"
+    },
+    {
+      "id": "dce9f60c-3c6c-4b7d-91ae-98101ea9f232",
+      "name": "MT SecurityCenter 9PL-Q42-K",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dce9f60c-3c6c-4b7d-91ae-98101ea9f232",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:08.351Z"
+    },
+    {
+      "id": "dca1e253-10ec-458a-8370-7d8535f02193",
+      "name": "MT SecurityCenter 9WB-HV7-P",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dca1e253-10ec-458a-8370-7d8535f02193",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:08.798Z"
+    },
+    {
+      "id": "fb9a1dbf-1715-487c-8774-462deedd3251",
+      "name": "MT SecurityCenter BH5-KEH-6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fb9a1dbf-1715-487c-8774-462deedd3251",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:09.297Z"
+    },
+    {
+      "id": "d1320aa2-6044-450c-b2b5-c14880a50d4e",
+      "name": "MT SecurityCenter CTB-B3U-1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d1320aa2-6044-450c-b2b5-c14880a50d4e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:09.977Z"
+    },
+    {
+      "id": "f16914d4-b852-454e-ad7a-b6163f64fdb9",
+      "name": "MT SecurityCenter D66-CRW-F",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f16914d4-b852-454e-ad7a-b6163f64fdb9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:10.387Z"
+    },
+    {
+      "id": "8c3a9977-1321-4dc2-b7b5-406d16af9aa3",
+      "name": "MT SecurityCenter DRC-F2S-6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8c3a9977-1321-4dc2-b7b5-406d16af9aa3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:10.806Z"
+    },
+    {
+      "id": "5438c7ed-29a1-47e4-83bb-877f818e5abd",
+      "name": "MT SecurityCenter DXC-25G-L",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5438c7ed-29a1-47e4-83bb-877f818e5abd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:11.247Z"
+    },
+    {
+      "id": "f58f266f-6a6b-4776-9285-409974d2c961",
+      "name": "MT SecurityCenter E6C-BRT-M",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f58f266f-6a6b-4776-9285-409974d2c961",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:11.664Z"
+    },
+    {
+      "id": "20ed2b0d-912e-4049-9a5f-dccfaf676f69",
+      "name": "MT SecurityCenter FQ5-URX-8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "20ed2b0d-912e-4049-9a5f-dccfaf676f69",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:12.113Z"
+    },
+    {
+      "id": "7a1799c1-e354-4feb-840c-5d5249bec9ca",
+      "name": "MT SecurityCenter GSW-NM3-E",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7a1799c1-e354-4feb-840c-5d5249bec9ca",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:12.607Z"
+    },
+    {
+      "id": "67a9a7a0-1207-45ce-84c9-c9186e13197d",
+      "name": "MT SecurityCenter H36-YBG-R",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "67a9a7a0-1207-45ce-84c9-c9186e13197d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:13.063Z"
+    },
+    {
+      "id": "b225feca-6cf3-427f-b054-932edb24deb7",
+      "name": "MT SecurityCenter JWB-D9L-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b225feca-6cf3-427f-b054-932edb24deb7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:13.496Z"
+    },
+    {
+      "id": "759fbf52-a10b-4e88-89c4-e73f9a9259c0",
+      "name": "MT SecurityCenter KWS-GPZ-5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "759fbf52-a10b-4e88-89c4-e73f9a9259c0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:13.938Z"
+    },
+    {
+      "id": "5de6b519-5cbd-479c-b458-6cdabd84dbde",
+      "name": "MT SecurityCenter OEE-5RG-5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5de6b519-5cbd-479c-b458-6cdabd84dbde",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:14.344Z"
+    },
+    {
+      "id": "4041bb5e-6cf4-407e-adda-b4d6aba171e0",
+      "name": "MT SecurityCenter PLM-9YW-Q",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4041bb5e-6cf4-407e-adda-b4d6aba171e0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:14.802Z"
+    },
+    {
+      "id": "560bb0b7-1376-4794-8098-21a794909560",
+      "name": "MT SecurityCenter SLP-VC3-W",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "560bb0b7-1376-4794-8098-21a794909560",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:15.258Z"
+    },
+    {
+      "id": "26313e39-d8a9-4f58-b9a9-7f34218db0b9",
+      "name": "MT SecurityCenter UDB-Z4W-2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "26313e39-d8a9-4f58-b9a9-7f34218db0b9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:15.716Z"
+    },
+    {
+      "id": "f125a6ab-751e-4396-b675-00d35487d795",
+      "name": "MT SecurityCenter VD9-87R-P",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f125a6ab-751e-4396-b675-00d35487d795",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:16.166Z"
     }
   ]
 }
