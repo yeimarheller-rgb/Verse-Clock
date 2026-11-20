@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:24:59.827Z",
+  "generatedAt": "2026-11-20T01:25:19.235Z",
   "catalogTotal": 2017,
-  "enrichedCount": 650,
+  "enrichedCount": 675,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -10572,6 +10572,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:24:59.646Z"
+    },
+    {
+      "id": "8d17a89a-0633-4df0-bbe4-992e56f4d769",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8d17a89a-0633-4df0-bbe4-992e56f4d769",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:02.229Z"
+    },
+    {
+      "id": "8d962d6c-4af2-490c-b1fa-d7fa24225969",
+      "name": "QV Breaker Station BRK-127",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8d962d6c-4af2-490c-b1fa-d7fa24225969",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:02.946Z"
+    },
+    {
+      "id": "1382530f-2283-4559-897f-770e571e1763",
+      "name": "QV Breaker Station BRK-184",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1382530f-2283-4559-897f-770e571e1763",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:03.757Z"
+    },
+    {
+      "id": "35c28367-2337-4b95-bccb-b7a0bbc07272",
+      "name": "QV Breaker Station BRK-204",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "35c28367-2337-4b95-bccb-b7a0bbc07272",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:04.356Z"
+    },
+    {
+      "id": "8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1",
+      "name": "QV Breaker Station BRK-204",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:04.873Z"
+    },
+    {
+      "id": "70847df0-156c-407c-bc2d-40ccf7ce87f0",
+      "name": "QV Breaker Station BRK-235",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "70847df0-156c-407c-bc2d-40ccf7ce87f0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:05.595Z"
+    },
+    {
+      "id": "cc4d7f56-6c51-4677-94d3-1f3da9f8a6eb",
+      "name": "QV Breaker Station BRK-267",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cc4d7f56-6c51-4677-94d3-1f3da9f8a6eb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:06.139Z"
+    },
+    {
+      "id": "ddf5f3f7-8072-44cb-acba-10d47996f19b",
+      "name": "QV Breaker Station BRK-284",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ddf5f3f7-8072-44cb-acba-10d47996f19b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:06.975Z"
+    },
+    {
+      "id": "490d662c-ea17-4789-9742-9a20a2a5f56c",
+      "name": "QV Breaker Station BRK-304",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "490d662c-ea17-4789-9742-9a20a2a5f56c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:07.541Z"
+    },
+    {
+      "id": "fac812bf-ea31-48b6-81b1-9b54cf4442b9",
+      "name": "QV Breaker Station BRK-320",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fac812bf-ea31-48b6-81b1-9b54cf4442b9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:08.135Z"
+    },
+    {
+      "id": "0e7ad495-0fef-4141-b074-9c9210baa156",
+      "name": "QV Breaker Station BRK-425",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0e7ad495-0fef-4141-b074-9c9210baa156",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:08.665Z"
+    },
+    {
+      "id": "9b262cb0-aa5b-4442-bc7e-fc30bfa960af",
+      "name": "QV Breaker Station BRK-437",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9b262cb0-aa5b-4442-bc7e-fc30bfa960af",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:10.390Z"
+    },
+    {
+      "id": "7711e485-0854-4528-b1ea-6307dd89ade5",
+      "name": "QV Breaker Station BRK-521",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7711e485-0854-4528-b1ea-6307dd89ade5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:11.128Z"
+    },
+    {
+      "id": "09b32bf9-49b7-47e2-ac29-18b37ec8e3c8",
+      "name": "QV Breaker Station BRK-542",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "09b32bf9-49b7-47e2-ac29-18b37ec8e3c8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:11.702Z"
+    },
+    {
+      "id": "9dadcb6f-d551-4b56-adbd-63099bb82ce0",
+      "name": "QV Breaker Station BRK-546",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9dadcb6f-d551-4b56-adbd-63099bb82ce0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:12.254Z"
+    },
+    {
+      "id": "28744466-c098-49e0-8daa-aa764216ea52",
+      "name": "QV Breaker Station BRK-563",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "28744466-c098-49e0-8daa-aa764216ea52",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:12.770Z"
+    },
+    {
+      "id": "541c9236-96ec-4358-8b54-a1bdf18bc076",
+      "name": "QV Breaker Station BRK-608",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "541c9236-96ec-4358-8b54-a1bdf18bc076",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:14.262Z"
+    },
+    {
+      "id": "a1fb8d93-71d9-40c1-b139-71affbb28fc6",
+      "name": "QV Breaker Station BRK-711",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a1fb8d93-71d9-40c1-b139-71affbb28fc6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:14.798Z"
+    },
+    {
+      "id": "d36f137a-f241-4c2f-849c-cbb8c8ad3d54",
+      "name": "QV Breaker Station BRK-782",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d36f137a-f241-4c2f-849c-cbb8c8ad3d54",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:15.331Z"
+    },
+    {
+      "id": "9dd578cf-68ad-422f-9167-c1d8a5562de5",
+      "name": "QV Breaker Station BRK-879",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9dd578cf-68ad-422f-9167-c1d8a5562de5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:15.863Z"
+    },
+    {
+      "id": "31064d76-21ed-4629-a4c2-c95b1a9afc58",
+      "name": "QV Breaker Station BRK-970",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "31064d76-21ed-4629-a4c2-c95b1a9afc58",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:16.505Z"
+    },
+    {
+      "id": "83236763-7004-4620-bd98-f75a695e4a1a",
+      "name": "QV Breaker Station BRK-985",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "83236763-7004-4620-bd98-f75a695e4a1a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:17.018Z"
+    },
+    {
+      "id": "f254123a-7aef-4b72-b822-162d527160fc",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f254123a-7aef-4b72-b822-162d527160fc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:17.512Z"
+    },
+    {
+      "id": "a0b95e05-2a98-4338-8af4-1a24e2cdd7d2",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a0b95e05-2a98-4338-8af4-1a24e2cdd7d2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:18.195Z"
+    },
+    {
+      "id": "835975c9-6112-4e6a-852f-a14663456ca5",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "835975c9-6112-4e6a-852f-a14663456ca5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:19.055Z"
     }
   ]
 }
