@@ -74,7 +74,17 @@ with sync_playwright() as p:
             pg.wait_for_timeout(200)
             dossier=pg.locator('#mainIntelApi').inner_text()
             if 'Valakkar' not in dossier or 'PASO 1' not in dossier:fails.append(f'{name}: dossier Lazarus incompleto')
-        pg.fill('#poiQuery','Valakkar') if pg.locator('#poiQuery').count() else None
+        # El explorador inferior está oculto por diseño: probar el buscador principal.
+        pg.fill('#q', 'Valakkar')
+        pg.wait_for_timeout(350)
+        if 'Lazarus' not in pg.locator('#suggestions').inner_text():
+            fails.append(f'{name}: la búsqueda táctica Valakkar no encuentra los complejos Lazarus')
+        else:
+            pg.locator('#suggestions button').filter(has_text='Lazarus').first.click()
+            if 'Valakkar' not in pg.locator('#mainIntelApi').inner_text():
+                fails.append(f'{name}: la búsqueda Valakkar no abre su dossier táctico en el panel principal')
+        if pg.locator('#poiQuery').is_visible():
+            fails.append(f'{name}: sigue visible el buscador inferior duplicado')
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()
