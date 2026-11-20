@@ -63,6 +63,8 @@ with sync_playwright() as p:
             if 'BOTÍN' not in labels or 'PVE' not in labels or 'PVP' not in labels:fails.append(f'{name}: categorías tácticas ausentes')
             if 'Lamina' not in pg.locator('#mainIntelLocation').inner_text():fails.append(f'{name}: selección no actualiza inteligencia')
         else:fails.append(f'{name}: Lamina PAF-I no aparece en búsqueda')
+        if pg.locator('#intelReadiness').count()!=1:fails.append(f'{name}: panel de cobertura documental ausente')
+        if pg.locator('#intelReadiness .intel-readiness-meter span').count()!=1:fails.append(f'{name}: medidor de evidencia ausente')
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()

@@ -333,17 +333,42 @@ function universalIntel(p){
 }
 
 function renderTacticalCards(p,sec,loot){
- const root=$('intelTacticalCards');if(!root)return;root.replaceChildren();
- const intel=p.lootIntel,missionCount=(p.missions||[]).length,resources=(p.resources||[]).length,amenities=(p.amenities||[]).length;
+ const root=$('intelTacticalCards'),readiness=$('intelReadiness'),sources=$('intelSourceLinks');
+ if(!root||!readiness||!sources)return;
+ root.replaceChildren();sources.replaceChildren();readiness.replaceChildren();
+ const intel=p.lootIntel,missions=p.missions||[],resources=p.resources||[],amenities=p.amenities||[];
+ const hasPve=Boolean(sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
+ const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
+ const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
+ const hasMissions=Boolean(missions.length||p.activities?.length);
+ const hasResources=Boolean(resources.length||intel?.mining);
+ const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
-  ['⚔','PVE / NPC',sec.pve||'Sin datos específicos','warning'],
-  ['◎','PVP / JUGADORES',sec.pvp||'Sin datos específicos','warning'],
-  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles (pool PAF)':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',intel?.categories?.length?'known':'unknown'],
-  ['◆','MISIONES',missionCount?missionCount+' contratos identificados':Number.isInteger(p.missionCount)?p.missionCount+' asociadas · sin títulos':'Sin contratos identificados',missionCount?'known':'unknown'],
-  ['⬡','RECURSOS',resources?resources+' recursos identificados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',resources||intel?.mining?'known':'unknown'],
-  ['✚','SERVICIOS',amenities?amenities+' servicios catalogados':'Sin servicios específicos registrados',amenities?'known':'unknown']
+  ['⚔','PVE / NPC',hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
+  ['◎','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
+  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
+  ['◆','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['⬡','RECURSOS',resources.length?resources.length+' recursos identificados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
+  ['✚','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
- for(const [symbol,title,value,kind] of cards){const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=kind;const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;card.append(t,v);root.append(card)}
+ const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
+ const header=document.createElement('div');header.className='intel-readiness-head';
+ const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
+ const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
+ header.append(label,value);
+ const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
+ const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
+ readiness.append(header,meter,caption);
+ for(const [symbol,title,value,known,evidence] of cards){
+  const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
+  const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;
+  const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
+  const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
+  card.append(t,v,e);root.append(card)
+ }
+ const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[])].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
+ const seen=new Set();
+ for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
 }
 
 function applyPoiToMain(p){
