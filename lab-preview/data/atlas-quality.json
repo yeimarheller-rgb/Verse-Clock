@@ -69,14 +69,14 @@
   ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T16:15:48.404Z",
+  "generatedAt": "2026-11-20T16:43:12.035Z",
   "definition": "Actionable = at least one of missions, resources, services, PvE, PvP, loot, weapons, trade or hazards. GeographicOnly = none. A field is not proof of in-game availability.",
   "counts": {
     "total": 2017,
     "consulted": 2017,
     "curated": 46,
     "withMissions": 6,
-    "withResources": 4,
+    "withResources": 233,
     "withNearby": 247,
     "withServices": 10,
     "withPve": 16,
@@ -86,24 +86,24 @@
     "withWeapons": 12,
     "withTrade": 0,
     "withHazards": 16,
-    "actionable": 32,
-    "geographicOnly": 1985
+    "actionable": 260,
+    "geographicOnly": 1757
   },
   "systems": {
     "Nyx System": {
       "total": 482,
-      "actionable": 9,
-      "geographicOnly": 473
+      "actionable": 11,
+      "geographicOnly": 471
     },
     "Pyro System": {
       "total": 586,
-      "actionable": 4,
-      "geographicOnly": 582
+      "actionable": 136,
+      "geographicOnly": 450
     },
     "Stanton System": {
       "total": 949,
-      "actionable": 19,
-      "geographicOnly": 930
+      "actionable": 113,
+      "geographicOnly": 836
     }
   },
   "topGaps": [
@@ -3891,7 +3891,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -3902,7 +3902,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "71a74381-0078-493a-84bb-03eb82e88a12",
@@ -3960,7 +3960,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -3971,7 +3971,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d9fed388-6aaa-40a5-837f-51a54fd9f0d3",
@@ -14747,7 +14747,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -14758,7 +14758,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5658fbae-e6d2-493d-bfa5-6f23c230f12e",
@@ -14770,7 +14770,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -14781,7 +14781,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0e9953a5-1106-4032-b27c-da83ff91b511",
@@ -14816,7 +14816,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -14827,7 +14827,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7486d798-dc20-4577-ab74-267ecc1ba91d",
@@ -15276,7 +15276,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -15287,7 +15287,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "399b5e2a-603b-4c4e-a1f8-c86f8e00713a",
@@ -16012,7 +16012,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -16023,7 +16023,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0af37acd-99ab-476c-a383-44e5638de224",
@@ -16058,7 +16058,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -16069,7 +16069,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "67b26f30-bc36-4c3f-b143-d5beda464d7e",
@@ -16771,7 +16771,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -16782,7 +16782,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ffab0e7d-7874-412b-8894-7b310880af1b",
@@ -16794,7 +16794,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -16805,7 +16805,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f3f28c8d-9891-44f2-8c4f-502039645dde",
@@ -17093,7 +17093,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -17104,7 +17104,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "beaadc7f-9f3c-4a2d-8dd6-f56d57de1c60",
@@ -17300,7 +17300,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -17311,7 +17311,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "57a9e4e4-477a-40c8-971c-5b4129f6b73b",
@@ -17461,7 +17461,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -17472,7 +17472,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9eabd9ac-5e54-4683-aa08-3490b29a56ce",
@@ -17806,7 +17806,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -17817,7 +17817,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e386e0b4-58a0-4141-b112-f99bf801a430",
@@ -18841,7 +18841,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -18852,7 +18852,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8665efee-08d9-4e61-8f0d-d67ea3c69478",
@@ -19048,7 +19048,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -19059,7 +19059,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6c539a08-93da-491c-937b-7012758ce340",
@@ -19255,7 +19255,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -19266,7 +19266,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "32dbe4b0-2451-4958-b8a0-04355c02bd43",
@@ -19462,7 +19462,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -19473,7 +19473,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d829a9d9-9da0-48dc-9a59-d65a4a9e85f2",
@@ -19669,7 +19669,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -19680,7 +19680,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f5817986-7048-4401-b0c4-1f2691c981ad",
@@ -19876,7 +19876,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -19887,7 +19887,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a0d60267-a620-4822-b7a9-77117bb06aa1",
@@ -20083,7 +20083,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -20094,7 +20094,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7774628e-8c62-4152-8299-1e40783a3631",
@@ -20290,7 +20290,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -20301,7 +20301,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "55e11f50-907f-4b45-bcba-40eaffa77d04",
@@ -20497,7 +20497,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -20508,7 +20508,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5de0e069-a8a9-4781-915b-c4b5432676fb",
@@ -20704,7 +20704,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -20715,7 +20715,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f560c8e6-ff1f-44e5-ad38-dc9c4ae74810",
@@ -20911,7 +20911,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -20922,7 +20922,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5aa2428f-df6f-4174-a44d-3d979655723b",
@@ -21118,7 +21118,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -21129,7 +21129,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "519e9cc7-5a9c-4981-ad3a-3532d36f5b7c",
@@ -21325,7 +21325,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -21336,7 +21336,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8b90cd81-79af-4de2-8caa-88e5f45368fc",
@@ -21532,7 +21532,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -21543,7 +21543,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b305dad2-7386-4220-8846-e8cf113cfaa8",
@@ -21739,7 +21739,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -21750,7 +21750,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8713247a-7d32-49e0-abc5-2b46df2ac505",
@@ -21946,7 +21946,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -21957,7 +21957,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "3326b4eb-7db6-4346-813b-cda0fa726aeb",
@@ -22153,7 +22153,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -22164,7 +22164,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "37e6583b-17c5-4584-b5e1-2289958cf7ee",
@@ -22360,7 +22360,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -22371,7 +22371,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a9dcab55-cf6c-4e21-ab8a-1ad208b1889e",
@@ -22567,7 +22567,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -22578,7 +22578,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2c3e9baf-9254-4a71-840c-71271d234c54",
@@ -22774,7 +22774,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -22785,7 +22785,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9c6663a4-a0d6-4813-a2cc-dfb9b8cefd1c",
@@ -22981,7 +22981,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -22992,7 +22992,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "aa9ea787-a25b-456f-a1eb-71785eac87a6",
@@ -23188,7 +23188,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -23199,7 +23199,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0ed86b98-b997-4913-89a5-ddc17d51aedd",
@@ -23395,7 +23395,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -23406,7 +23406,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9428ad10-c0f8-49f2-bde6-762c06a15193",
@@ -23602,7 +23602,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -23613,7 +23613,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "670f5774-8c16-44fe-a7f5-bc8bd5c04e14",
@@ -23809,7 +23809,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -23820,7 +23820,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c5dc28fe-a152-421f-9b7f-8b0374c478a1",
@@ -24154,7 +24154,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -24165,7 +24165,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ac826dfb-7142-4a15-bcdd-8e15d337ad1f",
@@ -24177,7 +24177,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -24188,7 +24188,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "286cb603-b4ae-4279-80a1-d4505fee1916",
@@ -25511,7 +25511,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25522,7 +25522,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "decaadd5-40d1-4913-b00c-18a089e6e72f",
@@ -25534,7 +25534,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25545,7 +25545,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0b6475b2-9b52-46ea-954a-133a11dadd8e",
@@ -25557,7 +25557,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25568,7 +25568,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "029ab865-e8ac-4cec-9a61-5e39125126b3",
@@ -25580,7 +25580,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25591,7 +25591,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f190a18c-c7ec-4d7f-8c61-5ebd26b6503d",
@@ -25603,7 +25603,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25614,7 +25614,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "61653585-3522-41b6-aa7a-a63c82073919",
@@ -25626,7 +25626,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25637,7 +25637,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7b88cdb4-6ca9-4560-b650-34bbae8804a2",
@@ -25649,7 +25649,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25660,7 +25660,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2d47ba75-ab09-4e73-865c-e3537bef3428",
@@ -25672,7 +25672,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25683,7 +25683,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "489db56c-b334-4813-b6c7-f96b521edeae",
@@ -25695,7 +25695,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25706,7 +25706,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "09f726f5-435e-4d0c-be31-c44bc39b39ef",
@@ -25718,7 +25718,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25729,7 +25729,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "dff79d0e-f318-4ed3-9401-ece3e58f4626",
@@ -25741,7 +25741,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25752,7 +25752,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7f4c85f5-d508-42c8-9262-2e46c6105cb9",
@@ -25764,7 +25764,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25775,7 +25775,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "da4c4e6b-e8ca-4369-acf2-6ba850fcfd20",
@@ -25787,7 +25787,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25798,7 +25798,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8296d7bc-e332-4397-9310-891bd0045e2d",
@@ -25810,7 +25810,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25821,7 +25821,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9f015be6-8431-4d91-b243-994785764219",
@@ -25833,7 +25833,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25844,7 +25844,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "17b2f39c-7453-4932-81ba-519f49fed814",
@@ -25856,7 +25856,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25867,7 +25867,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "3ad48109-15e7-4575-9589-af7f46a92b5e",
@@ -25879,7 +25879,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25890,7 +25890,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4a7c8e13-301c-4bc9-a271-cea1bcd25c98",
@@ -25902,7 +25902,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25913,7 +25913,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "39c77283-98ec-449e-9563-f2bd4e0fb1b0",
@@ -25925,7 +25925,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25936,7 +25936,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c9c1e8bd-3f4b-4aa5-a331-7a0acf932531",
@@ -25948,7 +25948,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25959,7 +25959,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "dea4fe9c-4e48-475d-ad6d-6da6a5ddc70e",
@@ -25971,7 +25971,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -25982,7 +25982,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ef6569a7-8d42-42be-90e2-0f5ec7c02416",
@@ -25994,7 +25994,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26005,7 +26005,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4029be96-9188-47ba-a6de-457a974ea9e4",
@@ -26017,7 +26017,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26028,7 +26028,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e148b772-b232-46b7-b81d-8e5484bfa314",
@@ -26040,7 +26040,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26051,7 +26051,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "fd92ecc2-dd24-4d48-b3ce-12be05f81a4d",
@@ -26063,7 +26063,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26074,7 +26074,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "febade8a-1c94-4c42-9c98-f0270dcd6249",
@@ -26086,7 +26086,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26097,7 +26097,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5166bda3-7234-4769-8d2d-b86710ced303",
@@ -26109,7 +26109,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26120,7 +26120,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5d1103d6-cfb9-4319-b4c4-4bcd64bce44b",
@@ -26132,7 +26132,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26143,7 +26143,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5c62bd57-d630-472c-8193-cdd41c6c8a26",
@@ -26155,7 +26155,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26166,7 +26166,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2d89d887-f5c6-40e4-9ec1-5eeaed4856c0",
@@ -26178,7 +26178,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26189,7 +26189,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2c507fae-95ea-4dfa-ac40-54757f346cc5",
@@ -26201,7 +26201,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26212,7 +26212,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4931d790-a832-4dea-87db-3007a81537c5",
@@ -26224,7 +26224,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26235,7 +26235,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5bc69585-fae1-4eec-9e1a-dce7860f8d35",
@@ -26247,7 +26247,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26258,7 +26258,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6a1e4f4e-94cb-4a6f-864c-927fd171ada9",
@@ -26270,7 +26270,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26281,7 +26281,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "06a818cb-c7f4-4872-93e4-0a17eb6401c5",
@@ -26293,7 +26293,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26304,7 +26304,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4aee5dfc-620b-4f27-a3fc-ae7d0a4292c1",
@@ -26316,7 +26316,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26327,7 +26327,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9e276de1-2d66-4fa0-ac4e-e4e01f8f0548",
@@ -26339,7 +26339,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26350,7 +26350,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2655bae3-416d-4d5d-a4e3-35cd690c8025",
@@ -26362,7 +26362,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26373,7 +26373,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0d7529a4-a510-4a4b-b51f-e73a53e092bb",
@@ -26385,7 +26385,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26396,7 +26396,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a2d889c3-d473-4095-8631-08d7f868cf2c",
@@ -26408,7 +26408,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26419,7 +26419,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a284aff3-7d64-48b5-990d-36ee6b456984",
@@ -26431,7 +26431,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26442,7 +26442,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "31ac933d-8f27-436a-82aa-4acbd58ecf8f",
@@ -26454,7 +26454,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26465,7 +26465,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ecd9cd60-785f-4fc3-a488-ffbf20b686c6",
@@ -26477,7 +26477,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26488,7 +26488,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9f54da9c-e241-4909-8366-b56c7cda6c5c",
@@ -26500,7 +26500,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26511,7 +26511,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "1b7407d0-b501-4434-9785-f2afaec329b5",
@@ -26523,7 +26523,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26534,7 +26534,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0d2966ab-86c4-4f30-ac3d-76c5fee95d15",
@@ -26546,7 +26546,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26557,7 +26557,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "984d71ca-901b-482b-bb0d-f387acf79b5f",
@@ -26569,7 +26569,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26580,7 +26580,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4bc8a77d-3454-4be8-81b9-4e676bd18746",
@@ -26592,7 +26592,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26603,7 +26603,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4f03be5d-618e-4683-9a4c-6584304f485d",
@@ -26615,7 +26615,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26626,7 +26626,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "839a1f49-bf24-4e0b-8376-10b7b205e8b0",
@@ -26638,7 +26638,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26649,7 +26649,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f0dda51d-3ea1-46ee-b996-fb9b6d642ff0",
@@ -26661,7 +26661,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26672,7 +26672,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e45d12e7-e3c0-4559-bc4c-37bab55811ae",
@@ -26684,7 +26684,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26695,7 +26695,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9bc2b01b-2888-4590-b805-152092afcde7",
@@ -26707,7 +26707,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26718,7 +26718,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2ffb5ea3-8355-4654-813e-15ae75be0beb",
@@ -26730,7 +26730,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26741,7 +26741,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "14038458-3a68-462f-a2cd-93280c01a68f",
@@ -26753,7 +26753,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26764,7 +26764,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a7e5d714-b107-4fc7-bd1e-eb1aad45b2a3",
@@ -26776,7 +26776,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26787,7 +26787,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "37f2fe41-c155-42fe-a954-e813c1b5af59",
@@ -26799,7 +26799,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26810,7 +26810,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5a667570-ed92-4e28-b998-dfd88e0d0750",
@@ -26822,7 +26822,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26833,7 +26833,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7359d9fb-0c8f-42cd-b765-815bfbda2d55",
@@ -26845,7 +26845,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26856,7 +26856,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9a5f95cf-f593-4cf7-8200-e8df245ad58c",
@@ -26868,7 +26868,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26879,7 +26879,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "14d4f78e-e303-40c1-a85b-21d101cee95e",
@@ -26891,7 +26891,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26902,7 +26902,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "fd8d1d9c-ab33-4f74-ac77-6aa945a158b0",
@@ -26914,7 +26914,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26925,7 +26925,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "544034db-6fde-44b4-aba8-c2ea35421ccd",
@@ -26937,7 +26937,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26948,7 +26948,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eb581731-fa19-4e10-bace-4f5d3897856a",
@@ -26960,7 +26960,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26971,7 +26971,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "76129194-af6f-4a50-b458-5ef0b5a2e614",
@@ -26983,7 +26983,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -26994,7 +26994,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "bc93b494-5403-4820-aae5-29f5ab21f86f",
@@ -27006,7 +27006,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27017,7 +27017,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4f6a3169-12b6-4298-b7b7-14480584c0d5",
@@ -27029,7 +27029,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27040,7 +27040,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ca1393b1-8297-4788-b819-5884ea70954c",
@@ -27052,7 +27052,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27063,7 +27063,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ae672fab-8cf4-49ce-ae7a-fd2f1258f143",
@@ -27075,7 +27075,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27086,7 +27086,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "887ef7d1-7599-4676-8580-25ac351a727d",
@@ -27098,7 +27098,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27109,7 +27109,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "371b4fb1-840f-4368-834c-dd8096ae8c26",
@@ -27121,7 +27121,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27132,7 +27132,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d8ee1258-941e-411c-9e05-9e3d0059f56d",
@@ -27144,7 +27144,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27155,7 +27155,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d8793e3d-f5ba-48b6-825a-068ff7abbaed",
@@ -27167,7 +27167,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27178,7 +27178,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "99e8858e-2d0e-46a7-8419-16e7cb3a5d2f",
@@ -27190,7 +27190,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27201,7 +27201,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eb730bdd-59b2-4f24-b979-4613289a85e8",
@@ -27213,7 +27213,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27224,7 +27224,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a1490619-926c-4190-a828-47d68169998c",
@@ -27236,7 +27236,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27247,7 +27247,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "33bec8b7-b646-471f-a4b4-3548465af1f4",
@@ -27259,7 +27259,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27270,7 +27270,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "cf04c060-21c2-49c7-affb-9dc0393d5273",
@@ -27282,7 +27282,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27293,7 +27293,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "de4ed01e-dcf6-4e84-87cc-4f188d0d8c34",
@@ -27305,7 +27305,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27316,7 +27316,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7961a1d3-1e77-49a1-8027-1bf3c8a030ea",
@@ -27328,7 +27328,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27339,7 +27339,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f4cb5b02-bff8-460e-9415-073adc5dcc0a",
@@ -27351,7 +27351,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27362,7 +27362,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9104328b-9128-4e91-a1b5-20559c40c1f3",
@@ -27374,7 +27374,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27385,7 +27385,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "95b26839-a3d6-4803-aa9c-45d7f99111d4",
@@ -27397,7 +27397,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27408,7 +27408,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "27d5ffbc-46c9-41f6-90bd-eb0b7dc1b752",
@@ -27420,7 +27420,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27431,7 +27431,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "493e6aa2-fb57-4589-8b21-d767e5963c4e",
@@ -27443,7 +27443,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27454,7 +27454,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "55fd5203-5587-4115-997a-566e939b42df",
@@ -27466,7 +27466,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27477,7 +27477,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "88505906-4318-4fee-9ecd-748b8db3483c",
@@ -27673,7 +27673,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27684,7 +27684,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "407847a6-4aae-4c3c-9a36-b80108d776f0",
@@ -27788,7 +27788,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27799,7 +27799,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a1b8a311-6465-45dc-873d-e8d06d4372df",
@@ -27903,7 +27903,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27914,7 +27914,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eb90b0a5-98fa-4ccf-acb8-bee1b69e40a8",
@@ -27949,7 +27949,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -27960,7 +27960,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0d636f4c-c113-4622-9848-b824f5270eb7",
@@ -27972,7 +27972,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -27983,7 +27983,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "72533bf5-9ceb-4317-8dc9-5577496fe997",
@@ -28018,7 +28018,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28029,7 +28029,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b5240b3a-ee0e-4c3f-b93c-f7aaadc81b2e",
@@ -28041,7 +28041,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28052,7 +28052,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a3d38eff-a061-45c6-a9d6-e9d9f5ce166f",
@@ -28777,7 +28777,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28788,7 +28788,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "51aeeae8-6146-48ab-9fe3-89ce30879d9a",
@@ -28800,7 +28800,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -28811,7 +28811,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6f9547a6-341a-4c2e-ac3f-fda96a0bb81b",
@@ -28892,7 +28892,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28903,7 +28903,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a8750e45-537e-481d-8a53-a24f8b42fa08",
@@ -28938,7 +28938,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28949,7 +28949,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c8307d0e-20c7-46ac-b2b9-f145d8d86bb5",
@@ -28984,7 +28984,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -28995,7 +28995,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "1820b8fc-e7c1-49f0-9020-5c8c5f7aae4c",
@@ -29030,7 +29030,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -29041,7 +29041,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "94fb0b94-8604-4302-8897-45fed6087b4b",
@@ -29076,7 +29076,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -29087,7 +29087,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "63bf3acd-7678-47b5-92cb-450f6cb73c4f",
@@ -30203,7 +30203,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -30214,7 +30214,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "665c50b2-8aaa-431a-a6ef-efbd1362b0bf",
@@ -30939,7 +30939,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -30950,7 +30950,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b41a1bc9-5bca-489b-8273-de90f18ec60d",
@@ -30962,7 +30962,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -30973,7 +30973,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eac957f8-1d11-4419-8d53-2e92646f2902",
@@ -31008,7 +31008,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31019,7 +31019,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b128be65-aaca-438c-ab34-0ea4a383fefb",
@@ -31537,7 +31537,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31548,7 +31548,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e5a875d5-d68f-4a50-b4ca-674a42c273b7",
@@ -31583,7 +31583,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31594,7 +31594,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7",
@@ -31675,7 +31675,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31686,7 +31686,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "19eb5151-0d25-40f8-be5c-56c5bb68223b",
@@ -31721,7 +31721,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31732,7 +31732,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8e371ce2-17ec-4508-8493-02463ea47960",
@@ -31767,7 +31767,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -31778,7 +31778,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9c2490b6-b31d-47cb-9f97-9a8825578bdf",
@@ -32066,7 +32066,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -32077,7 +32077,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "67c94c08-4e5a-4566-bc8b-bf54ef61939a",
@@ -32250,7 +32250,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -32261,7 +32261,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "71bc11e5-1302-4f88-b7f9-e6d980331a8f",
@@ -32434,7 +32434,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -32445,7 +32445,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ab29f65e-c792-4b1f-b23d-5810cb0ef416",
@@ -32641,7 +32641,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -32652,7 +32652,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "266c318b-0303-43b8-a6e8-e6256b419ce2",
@@ -33032,7 +33032,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -33043,7 +33043,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0f33f4d6-b7b9-4771-a91c-0e1821c813d1",
@@ -33147,7 +33147,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -33158,7 +33158,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "904c526a-8d09-407b-a215-c880170252d7",
@@ -34274,7 +34274,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34285,7 +34285,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "bf8b7b1e-467d-4382-8cea-d65ef06a9f5e",
@@ -34320,7 +34320,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34331,7 +34331,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "650f9d25-807d-4441-8ac7-1f982f08d0b1",
@@ -34366,7 +34366,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34377,7 +34377,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c54d8f3d-165a-41d4-a778-8f51ba7162c7",
@@ -34412,7 +34412,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34423,7 +34423,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "0bb52ea3-d7b2-4b32-9d5f-6ecd7676a36f",
@@ -34458,7 +34458,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34469,7 +34469,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "3e3b751e-0515-4bc8-9b59-229ed654f685",
@@ -34734,7 +34734,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34745,7 +34745,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7343225d-25a4-45f8-8f93-c8f19c9bcde4",
@@ -34826,7 +34826,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -34837,7 +34837,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8d3c0c0b-c241-420b-9403-3d188401b667",
@@ -34872,7 +34872,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -34883,7 +34883,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "af056a9f-0357-4240-a285-f943de173b3a",
@@ -35240,7 +35240,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -35251,7 +35251,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "452de0e6-e31d-4e2c-b249-1c4244cb713b",
@@ -35263,7 +35263,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35274,7 +35274,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6f22b292-38d6-4429-b504-99b39514a2f8",
@@ -35286,7 +35286,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35297,7 +35297,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9eb50da4-db00-43fd-919e-3781937bc6b2",
@@ -35401,7 +35401,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35412,7 +35412,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d3b67f92-4f51-4643-8f45-8edac6ac0cf1",
@@ -35470,7 +35470,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35481,7 +35481,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "46a84972-5b6f-4202-88bf-2628ee6aa6f0",
@@ -35562,7 +35562,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35573,7 +35573,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "63911c27-0274-471d-ae51-273dde3fa737",
@@ -35608,7 +35608,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35619,7 +35619,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "604eea8b-24e4-4425-806d-922a277ff308",
@@ -35654,7 +35654,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35665,7 +35665,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "4f8d892a-da82-4062-9b3a-aef9e191060b",
@@ -35953,7 +35953,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -35964,7 +35964,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "98b37bbf-63c2-4b6f-9e5e-bfd6635598da",
@@ -36045,7 +36045,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36056,7 +36056,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b76cb376-ee74-43ca-8549-9759945daaf4",
@@ -36068,7 +36068,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36079,7 +36079,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e0d7434a-c364-40a5-b3d7-8e7f1a47ae63",
@@ -36114,7 +36114,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36125,7 +36125,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5f51ae32-f37d-487a-b911-da96502c8690",
@@ -36137,7 +36137,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36148,7 +36148,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f74ea008-4932-4eb0-93ed-419d983e8c52",
@@ -36160,7 +36160,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36171,7 +36171,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "10727ca9-f721-42d3-b6f6-e5b8a812429a",
@@ -36183,7 +36183,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36194,7 +36194,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "79396580-c492-4909-bcd1-8ecaa4358967",
@@ -36206,7 +36206,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36217,7 +36217,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "15dc0d54-fc71-4ce3-94e7-e2767125141e",
@@ -36229,7 +36229,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36240,7 +36240,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1",
@@ -36252,7 +36252,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36263,7 +36263,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5b810fef-6ca8-4314-b09c-ce2c91adcfb3",
@@ -36344,7 +36344,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36355,7 +36355,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2ce5281e-ae41-474d-ade8-c804cce21c9b",
@@ -36367,7 +36367,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36378,7 +36378,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "10bb340b-9ab3-4fa6-b3d4-ddea1e92682c",
@@ -36390,7 +36390,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36401,7 +36401,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "786bd06a-cdd1-41c6-9a70-b2dd79c18618",
@@ -36413,7 +36413,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36424,7 +36424,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ad4088ea-00a6-42b6-b72f-1addc41da91f",
@@ -36459,7 +36459,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36470,7 +36470,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f9ca9d2e-63a4-46d5-a79d-cfc440e93ad1",
@@ -36482,7 +36482,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36493,7 +36493,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "66c55cc0-38df-43eb-b9e5-dc07073ad378",
@@ -36528,7 +36528,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36539,7 +36539,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "09a558dd-d040-48ed-bfd4-070083fcb84c",
@@ -36551,7 +36551,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36562,7 +36562,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7e7ba348-c8ed-47da-8e5f-f0114beae392",
@@ -36574,7 +36574,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36585,7 +36585,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eb5af0fe-54ac-437f-9dcd-2c80477ca3f6",
@@ -36597,7 +36597,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36608,7 +36608,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "411da23b-ac58-4a83-b546-08971bd40b9e",
@@ -36620,7 +36620,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36631,7 +36631,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8473177a-f9df-4c82-a5fd-4e82cef87684",
@@ -36666,7 +36666,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36677,7 +36677,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d838c2c4-b88d-42df-8c61-4549cce2690e",
@@ -36689,7 +36689,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36700,7 +36700,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f9c62e6d-52c7-4cad-a6ae-20ad9bd8fc87",
@@ -36735,7 +36735,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36746,7 +36746,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "1e3bf65a-a643-4f22-a5af-09eff5ea4917",
@@ -36758,7 +36758,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36769,7 +36769,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "04e690e8-aca8-421d-97f6-e7e766995ac9",
@@ -36781,7 +36781,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36792,7 +36792,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "ea489dfa-fdba-4408-ba42-0dfd5d21f918",
@@ -36804,7 +36804,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36815,7 +36815,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2e684c05-ee96-4d04-94f5-ffad800db7b7",
@@ -36827,7 +36827,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36838,7 +36838,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9",
@@ -36850,7 +36850,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36861,7 +36861,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "8670ad9c-e5e4-422f-a005-228e3793e066",
@@ -36873,7 +36873,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36884,7 +36884,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c0bc4aa9-4e45-4281-a513-3248d0b8a03f",
@@ -36896,7 +36896,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36907,7 +36907,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a0e51eb6-4b19-4302-994d-68b4f6209bd0",
@@ -36919,7 +36919,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36930,7 +36930,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "e0159330-3e09-45cc-a602-7e12cb6199f8",
@@ -36965,7 +36965,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36976,7 +36976,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "032fa15d-33a1-42a9-afb9-744811d1335d",
@@ -36988,7 +36988,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -36999,7 +36999,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c29799ed-fe83-4f8b-b564-7729f251fbc8",
@@ -37011,7 +37011,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37022,7 +37022,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "25d9cb75-4887-41f2-86f1-c61164d2430e",
@@ -37034,7 +37034,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37045,7 +37045,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "600c66af-2cb4-475d-b938-861a408c348f",
@@ -37057,7 +37057,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37068,7 +37068,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "eaa1600c-144d-49d1-a364-ae74670ef652",
@@ -37080,7 +37080,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37091,7 +37091,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "372fdcaf-6a55-42bc-8321-758424e87ceb",
@@ -37103,7 +37103,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37114,7 +37114,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "dfaa2695-9769-4cd8-bc56-7f80430325c5",
@@ -37126,7 +37126,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37137,7 +37137,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2850373c-0f1c-41f5-a1b4-da58670e2ea6",
@@ -37149,7 +37149,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37160,7 +37160,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "d8622532-337c-457c-b15f-0db8540b8e06",
@@ -37195,7 +37195,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37206,7 +37206,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c953aee5-b192-4496-886c-c8e30f0d5f05",
@@ -37218,7 +37218,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37229,7 +37229,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c422d8b9-dbfc-4e9e-9d66-da57c4da25a0",
@@ -37241,7 +37241,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37252,7 +37252,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "456abfb7-4fa0-4251-a6a9-1ccc44170b57",
@@ -37264,7 +37264,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37275,7 +37275,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "cd95c910-36ab-4d2b-9e8f-64c9edc44fa4",
@@ -37287,7 +37287,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37298,7 +37298,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "44ef9c98-adf2-46e8-8dd2-2799c78cee2b",
@@ -37310,7 +37310,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37321,7 +37321,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "c06a92a1-e350-4b73-bce4-636b98476ae5",
@@ -37333,7 +37333,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37344,7 +37344,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "076add9c-feea-4261-876c-e05de2e21a1c",
@@ -37356,7 +37356,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37367,7 +37367,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "26d6c0e3-165d-43b8-a686-568c27c3336e",
@@ -37402,7 +37402,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37413,7 +37413,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "bb96d72b-cfa1-403d-92a4-9cd66afaeaac",
@@ -37425,7 +37425,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -37436,7 +37436,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "6714ac90-c0dd-408f-b350-7abde1ee488e",
@@ -43428,7 +43428,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -43439,7 +43439,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "46d55bbd-8850-4722-af08-2a7713875c26",
@@ -45337,7 +45337,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": false,
@@ -45348,7 +45348,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b15c830d-2be3-4df7-a721-0b28a86f64bf",
@@ -48856,7 +48856,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -48867,7 +48867,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "1aacc387-4c9a-41d4-bba3-8a728eae07c6",
@@ -49615,7 +49615,7 @@
         "consulted": true,
         "curated": true,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
         "pve": true,
@@ -49626,7 +49626,7 @@
         "hazards": true,
         "sources": true
       },
-      "actionableDomains": 4
+      "actionableDomains": 5
     },
     {
       "id": "965357d4-3448-475e-974d-7d7fd154de91",
@@ -49684,7 +49684,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -49695,7 +49695,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "77ea2d54-6a6e-4168-a6db-12ccda26043a",
@@ -49914,7 +49914,7 @@
         "consulted": true,
         "curated": false,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": true,
         "services": false,
         "pve": false,
@@ -49925,7 +49925,7 @@
         "hazards": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "2f26aee5-8a5f-48cd-8226-3fbdea6df3b6",
