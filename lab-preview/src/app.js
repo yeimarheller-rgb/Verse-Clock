@@ -345,6 +345,26 @@ function universalIntel(p){
  return out;
 }
 
+// Monochrome vector HUD pictograms. No platform-dependent emoji glyphs.
+const tacticalIconPaths={
+ 'PVE':'M12 2v4m0 12v4M2 12h4m12 0h4M12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 3v4m-2-2h4',
+ 'PVP':'M3 7l9-4 9 4v5c0 5-4 8-9 10-5-2-9-5-9-10V7zm5 5h8m-4-4v8',
+ 'BOTÍN':'M4 8l8-5 8 5v9l-8 5-8-5V8zm0 0 8 5 8-5m-8 5v9',
+ 'ARMAS':'M4 6h16v5H4zm3 5v7h5v-7m-5 7-2 3m7-3 2 3M17 6V3',
+ 'MISIONES':'M7 3h10l3 3v15H4V3h3zm2 7h7m-7 4h7m-7 4h5',
+ 'COMERCIO':'M3 7h18v13H3V7zm0 4h18M7 4h10M7 16h4',
+ 'PELIGROS':'M12 2 2 21h20L12 2zm0 7v5m0 3v1',
+ 'RECURSOS':'M3 20 20 3m-7 0 8 8M5 8l6 6m-8-2 9 9'
+};
+function tacticalHudIcon(title){
+ const key=Object.keys(tacticalIconPaths).find(k=>title.includes(k))||'RECURSOS';
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+ svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('width','22');svg.setAttribute('height','22');
+ svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.5');
+ svg.setAttribute('stroke-linecap','square');svg.setAttribute('stroke-linejoin','miter');svg.setAttribute('aria-hidden','true');
+ const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+ path.setAttribute('d',tacticalIconPaths[key]);svg.append(path);return svg;
+}
 function renderTacticalCards(p,sec,loot){
  const root=$('intelTacticalCards'),readiness=$('intelReadiness'),sources=$('intelSourceLinks');
  if(!root||!readiness||!sources)return;
@@ -388,7 +408,7 @@ function renderTacticalCards(p,sec,loot){
  readiness.append(header,meter,caption);
  for(const [symbol,title,value,known,evidence] of cards){
   const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
-  const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;
+  const t=document.createElement('div');t.className='intel-tactical-title';t.append(tacticalHudIcon(title),document.createTextNode(title));
   const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
