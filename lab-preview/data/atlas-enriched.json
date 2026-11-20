@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:24:45.432Z",
+  "generatedAt": "2026-11-20T01:24:59.827Z",
   "catalogTotal": 2017,
-  "enrichedCount": 625,
+  "enrichedCount": 650,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -10197,6 +10197,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:24:45.251Z"
+    },
+    {
+      "id": "7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
+      "name": "Pyro Gateway Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:47.539Z"
+    },
+    {
+      "id": "19e07c17-4301-4b84-93f6-7c3cfbc57dda",
+      "name": "Pyro1 Outpost Col M Mng Otlw 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "19e07c17-4301-4b84-93f6-7c3cfbc57dda",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:48.040Z"
+    },
+    {
+      "id": "9573db8c-6c35-4510-b94d-e1c38c2e81de",
+      "name": "Pyro2 M Scrpyrd 01",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9573db8c-6c35-4510-b94d-e1c38c2e81de",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:48.510Z"
+    },
+    {
+      "id": "f9ad5a00-74ed-45bf-933a-00b86445bb7a",
+      "name": "Pyro2 M Trdp 01",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f9ad5a00-74ed-45bf-933a-00b86445bb7a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:49.048Z"
+    },
+    {
+      "id": "b04f3839-5dbb-46e7-8b31-009dee6445bf",
+      "name": "Pyro2 Outpost Col M Mng Otlw 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b04f3839-5dbb-46e7-8b31-009dee6445bf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:49.531Z"
+    },
+    {
+      "id": "1cc72e48-1645-4c32-8db1-a2c5555b954f",
+      "name": "Pyro3 M Hmstd 01",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1cc72e48-1645-4c32-8db1-a2c5555b954f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:49.989Z"
+    },
+    {
+      "id": "1464330b-77f0-465d-b3a3-6ff44dcd54bf",
+      "name": "Pyro3 Outpost Col M Mng Otlw 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1464330b-77f0-465d-b3a3-6ff44dcd54bf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:50.606Z"
+    },
+    {
+      "id": "be8ed35b-74da-49ac-816c-028c4c833669",
+      "name": "Pyro3 Outpost Col M Scrp Indy 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "be8ed35b-74da-49ac-816c-028c4c833669",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:51.238Z"
+    },
+    {
+      "id": "c19a4cb9-0d72-4202-9fef-cd8be1df4326",
+      "name": "Pyro3 Outpost Col M Scrp Otlw 005",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c19a4cb9-0d72-4202-9fef-cd8be1df4326",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:51.691Z"
+    },
+    {
+      "id": "cb3c0ff6-5c25-46a0-a3bd-01ff89f047cf",
+      "name": "Pyro3 Outpost Col M Trdpst Indy 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cb3c0ff6-5c25-46a0-a3bd-01ff89f047cf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:52.215Z"
+    },
+    {
+      "id": "e30aad66-b1f8-4805-b85b-04d4f665cb1c",
+      "name": "Pyro3 Outpost Col S Frm Otlw 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e30aad66-b1f8-4805-b85b-04d4f665cb1c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:52.686Z"
+    },
+    {
+      "id": "b2c5fef1-80e8-4e1b-8bb1-592a906298e9",
+      "name": "Pyro4 Outpost Col Mcr Test Indy 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b2c5fef1-80e8-4e1b-8bb1-592a906298e9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:53.125Z"
+    },
+    {
+      "id": "67f1d2b2-821d-449d-a4b5-f5c97f29fa38",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "67f1d2b2-821d-449d-a4b5-f5c97f29fa38",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:53.631Z"
+    },
+    {
+      "id": "680a5cf0-dc84-4de1-8582-966befa8abda",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "680a5cf0-dc84-4de1-8582-966befa8abda",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:54.149Z"
+    },
+    {
+      "id": "859feef1-32af-4864-8870-57c662a15aca",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "859feef1-32af-4864-8870-57c662a15aca",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:54.606Z"
+    },
+    {
+      "id": "5541f051-fa2f-4b4e-9a84-46c93408b801",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5541f051-fa2f-4b4e-9a84-46c93408b801",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:55.077Z"
+    },
+    {
+      "id": "a8fbfd71-faca-4b96-97ba-71c53d0a290f",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a8fbfd71-faca-4b96-97ba-71c53d0a290f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:55.508Z"
+    },
+    {
+      "id": "f6880b7f-770f-48ef-99de-540179f51f50",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f6880b7f-770f-48ef-99de-540179f51f50",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:55.976Z"
+    },
+    {
+      "id": "324a5ea1-f580-4ac0-877f-d279a4c221d4",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "324a5ea1-f580-4ac0-877f-d279a4c221d4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:56.510Z"
+    },
+    {
+      "id": "36a9e3b4-cb53-4dab-8cf3-d630e1dc089f",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "36a9e3b4-cb53-4dab-8cf3-d630e1dc089f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:57.007Z"
+    },
+    {
+      "id": "9da55651-df7d-49be-ba05-548b744b7ddf",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9da55651-df7d-49be-ba05-548b744b7ddf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:57.546Z"
+    },
+    {
+      "id": "2336b147-35e2-4e3e-897d-5a5ad718ecce",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2336b147-35e2-4e3e-897d-5a5ad718ecce",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:57.994Z"
+    },
+    {
+      "id": "52d28464-6a08-43d3-abc9-18ca8b15cb38",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "52d28464-6a08-43d3-abc9-18ca8b15cb38",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:58.490Z"
+    },
+    {
+      "id": "8c2ce601-f0a2-4ad2-8a3f-05f13d9e30cc",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8c2ce601-f0a2-4ad2-8a3f-05f13d9e30cc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:59.146Z"
+    },
+    {
+      "id": "d899d7c3-8c0c-442c-9def-c4c37815659d",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d899d7c3-8c0c-442c-9def-c4c37815659d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:59.646Z"
     }
   ]
 }
