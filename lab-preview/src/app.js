@@ -476,6 +476,17 @@ async function refreshAtlasProgress(){
 }
 setInterval(()=>{if(!document.hidden)refreshAtlasProgress()},15000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAtlasProgress()});
+async function loadAtlasQuality(){
+ const el=$('atlasQuality');if(!el)return;
+ try{const r=await fetch('./data/atlas-quality.json',{cache:'no-cache'});if(!r.ok)throw Error('HTTP '+r.status);
+ const d=await r.json(),c=d.counts;if(!c||!c.total)throw Error('Sin recuento');
+ const pct=Math.round(100*c.actionable/c.total);
+ el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
+ const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas solo geográficas · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín';
+ const note=document.createElement('small');note.textContent='Una ficha con datos no implica dossier completo. Auditoría: '+(d.generatedAt||'fecha desconocida');
+ el.append(title,desc,note);
+ }catch(e){el.textContent='Auditoría global pendiente de publicación; no se presume cobertura completa.'}
+}
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=p=>[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
@@ -490,6 +501,7 @@ async function loadAtlas(){
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();updateAtlasProgress(ed);if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
  if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Datos de progreso no disponibles';$('atlasProgressUpdated').textContent='Sin snapshot de enriquecimiento';}
+ loadAtlasQuality();
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(input.value.trim())updateMenu();
  if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
