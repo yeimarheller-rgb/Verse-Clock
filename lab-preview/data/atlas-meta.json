@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "version": "4.10.3-LIVE.13165946",
+  "generatedAt": "2026-11-20T15:33:03.926Z",
+  "enrichedGeneratedAt": "2026-11-20T15:33:03.926Z",
+  "catalogTotal": 2017,
+  "enrichedCount": 2017,
+  "coverage": {
+    "missions": 6,
+    "resources": 0,
+    "nearby": 247
+  },
+  "counts": {
+    "total": 2017,
+    "consulted": 2017,
+    "curated": 46,
+    "withMissions": 6,
+    "withResources": 4,
+    "withNearby": 247,
+    "withServices": 10,
+    "withPve": 16,
+    "withPvp": 0,
+    "withLoot": 16,
+    "withSources": 2017,
+    "actionable": 32,
+    "geographicOnly": 1985
+  },
+  "seedOnlyCounts": {
+    "total": 12,
+    "withTacticalIntel": 1,
+    "withLoot": 0,
+    "withServices": 10
+  },
+  "qualityGeneratedAt": "2026-11-20T15:33:05.716Z"
+}

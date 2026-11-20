@@ -69,7 +69,7 @@
   ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:32:32.687Z",
+  "generatedAt": "2026-11-20T15:33:05.716Z",
   "definition": "Actionable = at least one of missions, resources, services, PvE, PvP or loot. GeographicOnly = none. A field is not proof of in-game availability.",
   "counts": {
     "total": 2017,
