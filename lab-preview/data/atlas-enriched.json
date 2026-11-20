@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:18:49.777Z",
+  "generatedAt": "2026-11-20T01:19:03.129Z",
   "catalogTotal": 2017,
-  "enrichedCount": 425,
+  "enrichedCount": 450,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 28
+    "nearby": 30
   },
   "locations": [
     {
@@ -7158,6 +7158,393 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:18:49.598Z"
+    },
+    {
+      "id": "317b7505-e562-4caf-9691-1516ab639bbf",
+      "name": "MIC-L4 Red Crossroads Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "MIC-L4 Red Crossroads Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "317b7505-e562-4caf-9691-1516ab639bbf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:51.595Z"
+    },
+    {
+      "id": "57f1b283-1d39-4b7d-9623-4738c8708fe5",
+      "name": "MIC-L5 Modern Icarus Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "57f1b283-1d39-4b7d-9623-4738c8708fe5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:52.020Z"
+    },
+    {
+      "id": "54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5",
+      "name": "MIC-L5 Modern Icarus Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "MIC-L5 Modern Icarus Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:52.540Z"
+    },
+    {
+      "id": "98b37bbf-63c2-4b6f-9e5e-bfd6635598da",
+      "name": "microTech Logistics Depot S4LD01",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "98b37bbf-63c2-4b6f-9e5e-bfd6635598da",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:53.028Z"
+    },
+    {
+      "id": "faef6f7f-3e19-4e22-8089-e4a26b8f832e",
+      "name": "microTech Logistics Depot S4LD13",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "faef6f7f-3e19-4e22-8089-e4a26b8f832e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:53.478Z"
+    },
+    {
+      "id": "7df76d40-6f7d-4b30-a605-7191ee231032",
+      "name": "Miner's Lament",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7df76d40-6f7d-4b30-a605-7191ee231032",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:53.938Z"
+    },
+    {
+      "id": "1f07228d-f360-4a42-9b4f-415d22c92fe7",
+      "name": "Minlo Spire",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1f07228d-f360-4a42-9b4f-415d22c92fe7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:54.380Z"
+    },
+    {
+      "id": "97fd7ec3-9f8a-42f0-b5ed-78001465c81e",
+      "name": "Mogote Aid Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "97fd7ec3-9f8a-42f0-b5ed-78001465c81e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:54.844Z"
+    },
+    {
+      "id": "76705233-8eb7-45f4-8711-75ac9c3b592b",
+      "name": "MT DataCenter 2UB-RB9-5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "76705233-8eb7-45f4-8711-75ac9c3b592b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:55.394Z"
+    },
+    {
+      "id": "d63a6fbb-bbd6-4cb5-80b0-93c9b881111f",
+      "name": "MT DataCenter 4HJ-LVE-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d63a6fbb-bbd6-4cb5-80b0-93c9b881111f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:55.859Z"
+    },
+    {
+      "id": "07141a55-2d6a-4a44-af30-149143e9872d",
+      "name": "MT DataCenter 5WQ-R2V-C",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "07141a55-2d6a-4a44-af30-149143e9872d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:56.330Z"
+    },
+    {
+      "id": "6dabb89c-fb65-4e74-83de-c3b1a6081e99",
+      "name": "MT DataCenter 8FK-Q2X-K",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6dabb89c-fb65-4e74-83de-c3b1a6081e99",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:56.775Z"
+    },
+    {
+      "id": "a242fe2a-aada-415d-b199-7dc60dfbd68f",
+      "name": "MT DataCenter D79-ECG-R",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a242fe2a-aada-415d-b199-7dc60dfbd68f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:57.230Z"
+    },
+    {
+      "id": "85be3f25-e66c-428d-b406-d6edac3b06d6",
+      "name": "MT DataCenter E2Q-NSG-Y",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "85be3f25-e66c-428d-b406-d6edac3b06d6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:57.647Z"
+    },
+    {
+      "id": "de02452d-94cb-441b-b8d7-5c97f37e12c4",
+      "name": "MT DataCenter KH3-AAE-L",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "de02452d-94cb-441b-b8d7-5c97f37e12c4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:58.077Z"
+    },
+    {
+      "id": "e780daf2-fb61-4d18-8814-e8a75ac031a1",
+      "name": "MT DataCenter L8P-JUC-8 (Offline)",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e780daf2-fb61-4d18-8814-e8a75ac031a1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:58.552Z"
+    },
+    {
+      "id": "e756edd6-4b0e-48c6-816f-a7329af031f8",
+      "name": "MT DataCenter QVX-J88-J",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e756edd6-4b0e-48c6-816f-a7329af031f8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:59.050Z"
+    },
+    {
+      "id": "a1e753bb-d9f2-4d68-a649-4d3d000d95cd",
+      "name": "MT DataCenter TMG-XEV-2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a1e753bb-d9f2-4d68-a649-4d3d000d95cd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:59.492Z"
+    },
+    {
+      "id": "bea9756e-0232-4a48-a8c3-d87b717b03e6",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bea9756e-0232-4a48-a8c3-d87b717b03e6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:59.922Z"
+    },
+    {
+      "id": "a3caead2-e304-43a1-90aa-4f28c2f95391",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a3caead2-e304-43a1-90aa-4f28c2f95391",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:00.368Z"
+    },
+    {
+      "id": "1a18fc98-56c2-480b-bcf3-5fa0bb2f130a",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1a18fc98-56c2-480b-bcf3-5fa0bb2f130a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:00.870Z"
+    },
+    {
+      "id": "430b44df-7510-4ed7-a444-7d23a46840c7",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "430b44df-7510-4ed7-a444-7d23a46840c7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:01.351Z"
+    },
+    {
+      "id": "86a655fa-85c7-49e5-85ff-ed51fe4c06f5",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "86a655fa-85c7-49e5-85ff-ed51fe4c06f5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:01.799Z"
+    },
+    {
+      "id": "8349be8c-6d99-4739-9be1-983625f9b4a3",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8349be8c-6d99-4739-9be1-983625f9b4a3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:02.322Z"
+    },
+    {
+      "id": "25a4c763-e75c-4167-89b1-5b653e872cb7",
+      "name": "MT OpCenter TLI-4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "25a4c763-e75c-4167-89b1-5b653e872cb7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:19:02.948Z"
     }
   ]
 }
