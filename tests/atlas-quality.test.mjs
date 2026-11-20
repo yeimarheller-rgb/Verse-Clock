@@ -7,4 +7,6 @@ assert.ok(c.resourceAssociationsOnly>=0&&c.resourceAssociationsOnly<=c.actionabl
 assert.ok(c.verifiedOperationalExcludingCommodityAssociations>=0&&c.verifiedOperationalExcludingCommodityAssociations<=c.actionable);
 assert.equal(c.verifiedOperationalExcludingCommodityAssociations+c.resourceAssociationsOnly,c.actionable);
 
+for(const rec of a.records){assert.ok(rec.evidence&&typeof rec.evidence==='object','missing evidence map');for(const [domain,refs] of Object.entries(rec.evidence)){assert.equal(rec.flags[domain],true,'evidence without flag: '+domain);assert.ok(Array.isArray(refs)&&refs.length,'empty evidence: '+domain);for(const ref of refs){assert.ok(['location-api','commodity-api','curated','untraced'].includes(ref.kind),'unknown evidence kind');if(ref.kind==='location-api')assert.ok(ref.url.includes(encodeURIComponent(rec.id)),'location source mismatch');}}}
+assert.ok(a.evidenceCoverage.traced<=c.actionable);
 console.log('Atlas quality audit validated:',c.total,'locations,',c.actionable,'with operational evidence');
