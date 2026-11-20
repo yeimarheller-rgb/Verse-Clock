@@ -324,6 +324,7 @@ function universalIntel(p){
  add('MISIONES DOCUMENTADAS',p.missions);
  add('BOTÍN POR INSTALACIÓN',p.lootItems);
  add('RECURSOS Y MINERÍA',p.resources);
+ add('INSTALACIONES VINCULADAS',p.nearbyLocations);
  add('COMERCIO Y PRODUCTOS',p.commodities);
  add('SERVICIOS Y TIENDAS',p.shops);
  add('NPC Y AMENAZAS DOCUMENTADAS',p.npcs);
@@ -420,6 +421,7 @@ async function loadAtlas(){
    for(const p of d.locations){if(!p.name||!p.system)continue;const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
+ try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();if(ed.version===version&&Array.isArray(ed.locations)){for(const e of ed.locations){const current=[...byKey.values()].find(p=>p.id===e.id||p.source?.uuid===e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(input.value.trim())updateMenu();
  if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
