@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:18:23.226Z",
+  "generatedAt": "2026-11-20T01:18:36.606Z",
   "catalogTotal": 2017,
-  "enrichedCount": 375,
+  "enrichedCount": 400,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 23
+    "nearby": 24
   },
   "locations": [
     {
@@ -6378,6 +6378,387 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:18:23.046Z"
+    },
+    {
+      "id": "5473bccb-0f0a-4ace-acdb-79f0ffdc5c93",
+      "name": "HUR-L5 High Course Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5473bccb-0f0a-4ace-acdb-79f0ffdc5c93",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:25.089Z"
+    },
+    {
+      "id": "8e83f4da-c85d-4f00-b98d-bc734a07c5d4",
+      "name": "HUR-L5 High Course Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "HUR-L5 High Course Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8e83f4da-c85d-4f00-b98d-bc734a07c5d4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:25.602Z"
+    },
+    {
+      "id": "57a9e4e4-477a-40c8-971c-5b4129f6b73b",
+      "name": "Jackson's Swap",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "57a9e4e4-477a-40c8-971c-5b4129f6b73b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:26.128Z"
+    },
+    {
+      "id": "8d3c0c0b-c241-420b-9403-3d188401b667",
+      "name": "Julep Ravine Aid Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8d3c0c0b-c241-420b-9403-3d188401b667",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:26.566Z"
+    },
+    {
+      "id": "c1405795-f6f7-4c5a-bec5-8cba4595712c",
+      "name": "Jumptown",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c1405795-f6f7-4c5a-bec5-8cba4595712c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:27.123Z"
+    },
+    {
+      "id": "887e6fe8-34f2-40f4-b59b-c1863c1621fd",
+      "name": "Kabir's Post",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "887e6fe8-34f2-40f4-b59b-c1863c1621fd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:27.596Z"
+    },
+    {
+      "id": "af056a9f-0357-4240-a285-f943de173b3a",
+      "name": "Kant's Peak",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "af056a9f-0357-4240-a285-f943de173b3a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:28.058Z"
+    },
+    {
+      "id": "d2e3bd79-0e6b-4877-9bb9-10480a5a6c56",
+      "name": "Kel-To Rx Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d2e3bd79-0e6b-4877-9bb9-10480a5a6c56",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:28.501Z"
+    },
+    {
+      "id": "1c6caaa0-54e6-402b-9a14-d64d1a42948b",
+      "name": "Kelo Bottom",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1c6caaa0-54e6-402b-9a14-d64d1a42948b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:28.976Z"
+    },
+    {
+      "id": "7a6a0f08-83bf-4e2b-be93-a0fd5fd705f1",
+      "name": "Kinder Plots",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7a6a0f08-83bf-4e2b-be93-a0fd5fd705f1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:29.423Z"
+    },
+    {
+      "id": "b9b1a547-c415-44cb-826b-6c28cbd0c0bb",
+      "name": "Klescher Rehabilitation Facility",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b9b1a547-c415-44cb-826b-6c28cbd0c0bb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:29.878Z"
+    },
+    {
+      "id": "1daeb233-1878-4ad4-880c-f31285962454",
+      "name": "Kosso Basin Aid Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1daeb233-1878-4ad4-880c-f31285962454",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:30.423Z"
+    },
+    {
+      "id": "255ed755-f835-4522-8679-9a8b0501ba03",
+      "name": "Kudre Ore",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "255ed755-f835-4522-8679-9a8b0501ba03",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:30.924Z"
+    },
+    {
+      "id": "e797f9ca-8ddc-450f-8290-2275a1fbd912",
+      "name": "Lamina OLP",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e797f9ca-8ddc-450f-8290-2275a1fbd912",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:31.404Z"
+    },
+    {
+      "id": "245620ae-9574-4f40-8597-0e0230f930a3",
+      "name": "Lamina PAF-I",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "245620ae-9574-4f40-8597-0e0230f930a3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:31.837Z"
+    },
+    {
+      "id": "4fd0094a-7c05-481e-bb39-8ed17d7bbfac",
+      "name": "Lamina PAF-II",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4fd0094a-7c05-481e-bb39-8ed17d7bbfac",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:32.277Z"
+    },
+    {
+      "id": "def703e1-d494-4870-b3e3-7b4409693ae4",
+      "name": "Lamina PAF-III",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "def703e1-d494-4870-b3e3-7b4409693ae4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:32.709Z"
+    },
+    {
+      "id": "bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
+      "name": "Last Day",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:33.185Z"
+    },
+    {
+      "id": "bba0b5ec-d057-4cfe-b136-11ac408c22e1",
+      "name": "Last Ditch",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bba0b5ec-d057-4cfe-b136-11ac408c22e1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:33.682Z"
+    },
+    {
+      "id": "256e7587-7c08-41de-8786-2338e51be039",
+      "name": "Last Landings",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "256e7587-7c08-41de-8786-2338e51be039",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:34.235Z"
+    },
+    {
+      "id": "7ce6da52-9d81-4d4b-bc5e-9f60a37fb660",
+      "name": "Launch Pad",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7ce6da52-9d81-4d4b-bc5e-9f60a37fb660",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:34.664Z"
+    },
+    {
+      "id": "9eabd9ac-5e54-4683-aa08-3490b29a56ce",
+      "name": "Lazarus Complex Phoenix-I",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9eabd9ac-5e54-4683-aa08-3490b29a56ce",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:35.113Z"
+    },
+    {
+      "id": "5c1b2f4f-6876-4c5e-8b6d-a58160aca027",
+      "name": "Lazarus Complex Phoenix-II",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5c1b2f4f-6876-4c5e-8b6d-a58160aca027",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:35.532Z"
+    },
+    {
+      "id": "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c",
+      "name": "Lazarus Complex Phoenix-III",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:35.972Z"
+    },
+    {
+      "id": "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929",
+      "name": "Lazarus Complex Tithonus-I",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:36.426Z"
     }
   ]
 }
