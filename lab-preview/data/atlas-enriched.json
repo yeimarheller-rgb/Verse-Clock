@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:37:33.002Z",
+  "generatedAt": "2026-11-20T14:37:45.935Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1175,
+  "enrichedCount": 1200,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 34
+    "nearby": 35
   },
   "locations": [
     {
@@ -18464,6 +18464,387 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T14:37:32.821Z"
+    },
+    {
+      "id": "3d72936b-d142-40b5-871d-49e0219c7b5e",
+      "name": "Smokestack",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3d72936b-d142-40b5-871d-49e0219c7b5e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:34.776Z"
+    },
+    {
+      "id": "d78536c3-c88f-4e06-8e1c-617d0747c7c6",
+      "name": "Solanki",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d78536c3-c88f-4e06-8e1c-617d0747c7c6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:35.629Z"
+    },
+    {
+      "id": "7c76625d-956c-4028-9649-bc29f037ac72",
+      "name": "Stag's Rut",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7c76625d-956c-4028-9649-bc29f037ac72",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:36.121Z"
+    },
+    {
+      "id": "e365b479-6927-493a-bf85-a855b563e889",
+      "name": "Stanton4 U G F Industrial Greycat",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e365b479-6927-493a-bf85-a855b563e889",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:36.616Z"
+    },
+    {
+      "id": "a037da4f-e3f3-4d66-98fb-b4c70b97f5c8",
+      "name": "Starlight Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a037da4f-e3f3-4d66-98fb-b4c70b97f5c8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:37.194Z"
+    },
+    {
+      "id": "a8b1ec44-6287-4687-9a56-476663db591a",
+      "name": "Starlight Service Station",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Starlight Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a8b1ec44-6287-4687-9a56-476663db591a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:37.865Z"
+    },
+    {
+      "id": "24d980d2-e3f3-4d1d-84cc-92ae982ecf60",
+      "name": "Stone's Throw",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "24d980d2-e3f3-4d1d-84cc-92ae982ecf60",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:38.243Z"
+    },
+    {
+      "id": "a02e0cb7-4a76-4481-b74a-0c3a0972bca9",
+      "name": "Stonetree",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a02e0cb7-4a76-4481-b74a-0c3a0972bca9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:38.723Z"
+    },
+    {
+      "id": "15f00205-1b3a-49ec-9b21-d74b60cf2b86",
+      "name": "Sunset Mesa",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "15f00205-1b3a-49ec-9b21-d74b60cf2b86",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:39.195Z"
+    },
+    {
+      "id": "eb90b0a5-98fa-4ccf-acb8-bee1b69e40a8",
+      "name": "Supply Gap",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "eb90b0a5-98fa-4ccf-acb8-bee1b69e40a8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:39.673Z"
+    },
+    {
+      "id": "de442ff0-a10d-4117-8a0b-b67ceeaf1a7e",
+      "name": "Talarine Divide Aid Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "de442ff0-a10d-4117-8a0b-b67ceeaf1a7e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:40.108Z"
+    },
+    {
+      "id": "3a718df9-ed75-475d-829f-0e7d903cf8c1",
+      "name": "Tamdon Plains Aid Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3a718df9-ed75-475d-829f-0e7d903cf8c1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:40.518Z"
+    },
+    {
+      "id": "19302f93-3cd6-43a8-947b-c2d7af6de80b",
+      "name": "Teddy's Playhouse",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "19302f93-3cd6-43a8-947b-c2d7af6de80b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:40.950Z"
+    },
+    {
+      "id": "3e9ec8c5-10fb-41f2-afdf-bc1e146dd2d6",
+      "name": "Terra Gateway Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3e9ec8c5-10fb-41f2-afdf-bc1e146dd2d6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:41.359Z"
+    },
+    {
+      "id": "9cb81910-1567-45e0-8ed1-d8b5a4ca5dba",
+      "name": "Terra Gateway Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9cb81910-1567-45e0-8ed1-d8b5a4ca5dba",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:41.757Z"
+    },
+    {
+      "id": "20dcd70b-1478-409b-830c-281354c04480",
+      "name": "Terra Gateway Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "20dcd70b-1478-409b-830c-281354c04480",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:42.192Z"
+    },
+    {
+      "id": "5b1f9ab0-296c-4000-916a-89d1fd431a14",
+      "name": "Terra Mills HydroFarm",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5b1f9ab0-296c-4000-916a-89d1fd431a14",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:42.576Z"
+    },
+    {
+      "id": "4a91aa41-b322-4676-9bc9-b0cd2c01261d",
+      "name": "The Barrens",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4a91aa41-b322-4676-9bc9-b0cd2c01261d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:42.990Z"
+    },
+    {
+      "id": "a10ae56b-ddcb-4fdb-97b5-fd583a1bcdd0",
+      "name": "The Dregs",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a10ae56b-ddcb-4fdb-97b5-fd583a1bcdd0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:43.372Z"
+    },
+    {
+      "id": "0d636f4c-c113-4622-9848-b824f5270eb7",
+      "name": "The Golden Riviera",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0d636f4c-c113-4622-9848-b824f5270eb7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:43.788Z"
+    },
+    {
+      "id": "037e30d1-dc2d-495f-bb6b-7349f21ee204",
+      "name": "The Grove",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "037e30d1-dc2d-495f-bb6b-7349f21ee204",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:44.186Z"
+    },
+    {
+      "id": "17f63167-aff9-4cfd-88b0-4f7637baf16a",
+      "name": "The Hollows",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "17f63167-aff9-4cfd-88b0-4f7637baf16a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:44.558Z"
+    },
+    {
+      "id": "d8232da4-a5ed-4fe6-9a76-d786fab72cef",
+      "name": "The Necropolis",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d8232da4-a5ed-4fe6-9a76-d786fab72cef",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:44.953Z"
+    },
+    {
+      "id": "e8ab01d7-97eb-4728-8bdf-454816586fdc",
+      "name": "The Orphanage",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e8ab01d7-97eb-4728-8bdf-454816586fdc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:45.354Z"
+    },
+    {
+      "id": "d73aeaa1-d846-48c1-9f9c-c15ca23577d5",
+      "name": "The Shades",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d73aeaa1-d846-48c1-9f9c-c15ca23577d5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:45.754Z"
     }
   ]
 }
