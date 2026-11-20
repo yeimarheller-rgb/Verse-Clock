@@ -42,7 +42,11 @@ with sync_playwright() as p:
     for name, vp in (('iphone', {'width': 390, 'height': 844}), ('desktop', {'width': 1440, 'height': 900})):
         pg=b.new_page(viewport=vp);pg.goto(BASE+'lab-preview/?visual-test=1')
         pg.wait_for_selector('#atlasProgressBar')
-        pg.wait_for_timeout(1200)
+        try:
+            pg.wait_for_function("document.getElementById('atlasQuality')?.dataset.loaded === 'true'", timeout=10000)
+        except Exception:
+            fails.append(f'{name}: el resumen compacto de cobertura no se ha cargado')
+        pg.wait_for_timeout(300)
         box=pg.evaluate("""() => {const ids=['q','fav','atlasProgressBar'];const r=id=>{const x=document.getElementById(id).getBoundingClientRect();return {top:x.top,bottom:x.bottom,height:x.height,width:x.width}};const s=document.querySelector('.search').getBoundingClientRect(),p=document.querySelector('.atlas-progress').getBoundingClientRect();return {q:r('q'),fav:r('fav'),bar:r('atlasProgressBar'),search:{top:s.top,bottom:s.bottom,height:s.height},progress:{top:p.top,bottom:p.bottom,height:p.height},scrollWidth:document.documentElement.scrollWidth}}""")
         if not 44<=box['q']['height']<=60:fails.append(f"{name}: buscador alto {box['q']['height']}px")
         if not 44<=box['fav']['height']<=60:fails.append(f"{name}: favorito alto {box['fav']['height']}px")
