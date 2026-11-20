@@ -759,10 +759,46 @@
       "operator": null,
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Outposts"
+        "https://starcitizen.tools/Outposts",
+        "https://starcitizen.tools/Brio%27s_Breaker_Yard",
+        "https://starcitizen.tools/Recycled_Material_Composite",
+        "https://starcitizen.tools/WiDoW"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Brio's Breaker Yard · guía operativa contrastada",
+        "steps": [
+          "Daymar (Crusader): patio de recuperación y punto de venta con consola de comercio y terminal Covalex.",
+          "Sin zona de armisticio: el riesgo de ataque de jugadores durante descarga y venta es estructural, no una frecuencia medida.",
+          "Fuente comunitaria 4.10.3 (17 nov 2026): venta de RMC listada a 5.500 aUEC por unidad comercial del directorio; no asumir precio, stock ni demanda garantizados.",
+          "La wiki lista Brio's para misiones de entrega de mercancía prohibida; confirmar contrato activo en mobiGlas."
+        ],
+        "threats": [
+          "Frío extremo en Daymar según ficha de ubicación.",
+          "Sin reparación, rearmado ni repostaje; prever combustible y salida antes de aterrizar.",
+          "Sin armisticio: no dejar nave y cargamento sin vigilancia."
+        ],
+        "caveat": "Fuentes comunitarias; comprobar disponibilidad y precios en el parche LIVE y terminal antes de operar.",
+        "sources": [
+          "https://starcitizen.tools/Brio%27s_Breaker_Yard",
+          "https://starcitizen.tools/Recycled_Material_Composite",
+          "https://starcitizen.tools/WiDoW"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "RMC: precio listado 5.500 (17-11-2026, 4.10.3), sujeto a actualización; comercio de mercancía prohibida documentado",
+        "missions": "Punto posible de entrega de mercancías prohibidas; no contrato garantizado",
+        "pvp": "Sin zona de armisticio; frecuencia de ataques no medida",
+        "loot": "Sin botín PvE confirmado",
+        "weapons": "Sin tienda de armas ni rearmado confirmado",
+        "sources": [
+          "https://starcitizen.tools/Brio%27s_Breaker_Yard",
+          "https://starcitizen.tools/Recycled_Material_Composite",
+          "https://starcitizen.tools/WiDoW"
+        ],
+        "verifiedAsOf": "2026-11-20"
+      }
     },
     {
       "id": "stanton-dupree-industrial-manufacturing-facility",
@@ -979,10 +1015,45 @@
       "operator": "Green Imperial",
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Space_stations"
+        "https://starcitizen.tools/Space_stations",
+        "https://starcitizen.tools/Grim_HEX",
+        "https://starcitizen.tools/Green_Imperial_Medical",
+        "https://starcitizen.tools/WiDoW"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Grim HEX · guía operativa contrastada",
+        "steps": [
+          "Estación integrada en un asteroide en el cinturón de Yela; vinculada a Nine Tails.",
+          "Servicios documentados: clínica T2, comercio, terminal de entregas, generación de naves, reparación, rearmado y repostaje.",
+          "Tiendas documentadas: Dumper's Depot, Green Imperial Medical, KC Trending, Old '38, Skutters y Technotic.",
+          "Fuente comunitaria 4.10.3 (15 nov 2026): terminal Admin de GrimHEX listado como comprador de WiDoW a 7.100; precio dinámico no garantizado."
+        ],
+        "threats": [
+          "Presencia criminal descrita por la fuente histórica; no equivale a una probabilidad PvP cuantificada.",
+          "No se dispone de inventario LIVE verificable de armas, componentes o misiles para cada tienda."
+        ],
+        "caveat": "Fuentes comunitarias; comprobar disponibilidad y precios en el parche LIVE y terminal antes de operar.",
+        "sources": [
+          "https://starcitizen.tools/Grim_HEX",
+          "https://starcitizen.tools/Green_Imperial_Medical",
+          "https://starcitizen.tools/WiDoW"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Comercio disponible; WiDoW listado a 7.100 (15-11-2026, 4.10.3), sujeto a variación",
+        "pve": "Afiliación histórica Nine Tails; no oleadas NPC verificadas dentro de estación",
+        "pvp": "Entorno criminal; sin tasa de ataques confirmada",
+        "weapons": "Dumper's Depot y Technotic documentadas; inventario exacto no verificado",
+        "loot": "Sin tabla de botín local contrastada",
+        "sources": [
+          "https://starcitizen.tools/Grim_HEX",
+          "https://starcitizen.tools/Green_Imperial_Medical",
+          "https://starcitizen.tools/WiDoW"
+        ],
+        "verifiedAsOf": "2026-11-20"
+      }
     },
     {
       "id": "hathor-attritus-olp",
