@@ -417,6 +417,12 @@ function updateAtlasProgress(d){
  $('atlasProgressUpdated').textContent=d.generatedAt?'Actualizado: '+new Date(d.generatedAt).toLocaleString('es-ES'):'Fecha desconocida';
  const c=d.coverage;if(c)$('atlasProgressQuality').textContent='Con misiones: '+(c.missions||0)+' · Con recursos: '+(c.resources||0)+' · Con lugares vinculados: '+(c.nearby||0)+' · Consultado ≠ información completa';
 }
+async function refreshAtlasProgress(){
+ try{const r=await fetch('./data/atlas-enriched.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();updateAtlasProgress(d)}
+ catch(e){if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Progreso no disponible';$('atlasProgressUpdated').textContent='Sin datos publicados'}} 
+}
+setInterval(()=>{if(!document.hidden)refreshAtlasProgress()},30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAtlasProgress()});
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=p=>[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
@@ -437,6 +443,7 @@ async function loadAtlas(){
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
 }
+refreshAtlasProgress();
 loadAtlas().catch(e=>{$('poiCount').textContent='No se pudo cargar el atlas: '+e.message});
 
 // Un explorador, dos vistas: evita paneles interminables y preserva búsquedas existentes.
