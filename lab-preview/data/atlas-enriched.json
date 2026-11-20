@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T05:10:34.845Z",
+  "generatedAt": "2026-11-20T05:10:48.258Z",
   "catalogTotal": 2017,
-  "enrichedCount": 975,
+  "enrichedCount": 1000,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -15447,6 +15447,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T05:10:34.664Z"
+    },
+    {
+      "id": "4664105b-3907-4dab-922c-42127798aca2",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4664105b-3907-4dab-922c-42127798aca2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:36.573Z"
+    },
+    {
+      "id": "3c1e7cce-1584-46f6-90f4-4b2ab9add368",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3c1e7cce-1584-46f6-90f4-4b2ab9add368",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:37.108Z"
+    },
+    {
+      "id": "0ff3e83d-ede4-45c0-bd63-8a20873de1f7",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0ff3e83d-ede4-45c0-bd63-8a20873de1f7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:37.608Z"
+    },
+    {
+      "id": "9fc71de4-a52d-43fa-8670-1c01d909b871",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9fc71de4-a52d-43fa-8670-1c01d909b871",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:38.056Z"
+    },
+    {
+      "id": "35455bc3-dbbb-4e5b-bf0d-b4aa23325e07",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "35455bc3-dbbb-4e5b-bf0d-b4aa23325e07",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:38.436Z"
+    },
+    {
+      "id": "815e312b-b6f9-4fd8-a930-1a68091cfa18",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "815e312b-b6f9-4fd8-a930-1a68091cfa18",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:39.197Z"
+    },
+    {
+      "id": "7323bb0a-a2b2-409c-b77e-49078a100687",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7323bb0a-a2b2-409c-b77e-49078a100687",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:39.589Z"
+    },
+    {
+      "id": "76996699-8bc4-4ea5-8ddb-6ae11a433d79",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "76996699-8bc4-4ea5-8ddb-6ae11a433d79",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:40.060Z"
+    },
+    {
+      "id": "90e0db64-0248-42a4-a589-d841a6044f44",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "90e0db64-0248-42a4-a589-d841a6044f44",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:40.635Z"
+    },
+    {
+      "id": "567ea54d-a6b7-4cc8-b8a3-4bc7af3ce05d",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "567ea54d-a6b7-4cc8-b8a3-4bc7af3ce05d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:41.115Z"
+    },
+    {
+      "id": "9e7e14b3-c18c-4047-ad69-dabf21739768",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9e7e14b3-c18c-4047-ad69-dabf21739768",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:41.534Z"
+    },
+    {
+      "id": "4121f580-0a28-48ad-82be-26e58ff86553",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4121f580-0a28-48ad-82be-26e58ff86553",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:41.939Z"
+    },
+    {
+      "id": "af0a1bde-7cc7-451c-b562-892a06c6ca35",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "af0a1bde-7cc7-451c-b562-892a06c6ca35",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:42.317Z"
+    },
+    {
+      "id": "6d8de35e-5895-4cd4-87cd-264a8a59450b",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6d8de35e-5895-4cd4-87cd-264a8a59450b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:42.941Z"
+    },
+    {
+      "id": "89e029f4-34a5-41fd-81f8-34e06331963a",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "89e029f4-34a5-41fd-81f8-34e06331963a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:43.356Z"
+    },
+    {
+      "id": "128a6d47-443a-4dcf-b2d6-f0ae7987cecf",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "128a6d47-443a-4dcf-b2d6-f0ae7987cecf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:43.800Z"
+    },
+    {
+      "id": "0fd6a610-bcca-4aa4-8ed3-8586e9111d60",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0fd6a610-bcca-4aa4-8ed3-8586e9111d60",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:44.248Z"
+    },
+    {
+      "id": "4b65ae15-791a-4858-af2f-693014e3bb05",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4b65ae15-791a-4858-af2f-693014e3bb05",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:44.791Z"
+    },
+    {
+      "id": "d7ccd5e3-ae86-431a-9402-8a814f3f1c8e",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d7ccd5e3-ae86-431a-9402-8a814f3f1c8e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:45.347Z"
+    },
+    {
+      "id": "de0e5f94-6123-4b5c-ac49-a103e6f3d69c",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "de0e5f94-6123-4b5c-ac49-a103e6f3d69c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:45.771Z"
+    },
+    {
+      "id": "b6e91e39-6fee-4ee1-bca3-fcce4e7bbc48",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b6e91e39-6fee-4ee1-bca3-fcce4e7bbc48",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:46.155Z"
+    },
+    {
+      "id": "e7de392b-0d76-479f-a63d-8f37220b63cf",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e7de392b-0d76-479f-a63d-8f37220b63cf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:46.719Z"
+    },
+    {
+      "id": "65cf2187-69aa-4586-9824-f18e2311228e",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "65cf2187-69aa-4586-9824-f18e2311228e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:47.164Z"
+    },
+    {
+      "id": "ee13fdee-b016-46ac-a031-2797ceed77f6",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ee13fdee-b016-46ac-a031-2797ceed77f6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:47.709Z"
+    },
+    {
+      "id": "5ba735f7-570c-4c76-8856-7ab7719f1bde",
+      "name": "QV Logistics Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5ba735f7-570c-4c76-8856-7ab7719f1bde",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T05:10:48.078Z"
     }
   ]
 }
