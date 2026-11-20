@@ -540,15 +540,67 @@
       "id": "pyro-chawla-s-beach",
       "name": "Chawla's Beach",
       "system": "Pyro",
-      "type": "salvage-yard",
+      "type": "outpost",
       "parent": "Pyro IV",
       "operator": "Citizens for Prosperity",
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Outposts"
+        "https://starcitizen.tools/Outposts",
+        "https://api.star-citizen.wiki/locations/chawlas-beach",
+        "https://www.citadelsc.com/es/map/chawla-s-beach",
+        "https://uexcorp.space/terminals/info/name/commodity-chawlas-beach/",
+        "https://starvein.app/en/locations/pyro/chawlas-beach",
+        "https://verse.mintmotive.com.au/missions/43daf820-4836-49a8-b1fb-afbef2f410c2"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "jurisdiction": "Citizens For Prosperity",
+      "amenities": [
+        "Comercio de mercancías",
+        "Venta de armas y armaduras",
+        "Componentes de nave",
+        "Venta de vehículos",
+        "Plataforma de aterrizaje L",
+        "Servicios de nave (repostaje y reparación; comprobar terminal)"
+      ],
+      "activities": [
+        {
+          "name": "Comercio de mercancías",
+          "detail": "Terminal de compra/venta de mercancías; disponibilidad y precios variables.",
+          "confidence": "catalogado"
+        },
+        {
+          "name": "Compras y equipamiento",
+          "detail": "Armas, armaduras, componentes de nave, vehículos y multiherramienta según catálogos de tiendas.",
+          "confidence": "catalogado"
+        },
+        {
+          "name": "Servicios de nave",
+          "detail": "Plataforma L y servicios de vehículo; comprobar operatividad en juego.",
+          "confidence": "catalogado"
+        },
+        {
+          "name": "Contratos de recuperación y entregas",
+          "detail": "Los catálogos históricos incluyen recuperar suministros, entregas y asaltos vinculados a Citizens for Prosperity. No implica que estén disponibles ahora.",
+          "confidence": "histórico"
+        },
+        {
+          "name": "Salvamento: limpiar chatarra",
+          "detail": "Contrato documentado 'Clear Chawla’s Beach of Salvage': recuperar RMC; comprobar oferta actual en mobiGlas.",
+          "confidence": "histórico"
+        },
+        {
+          "name": "Exploración y minería de Pyro IV",
+          "detail": "El cuerpo Pyro IV tiene registros de hadanita, dolivina y aforita FPS, y feynmalina ROC. No son depósitos garantizados dentro del puesto.",
+          "confidence": "zona"
+        }
+      ],
+      "tacticalTips": [
+        "Puesto fuera de zona de armisticio: vigilar accesos y naves de otros jugadores; no es detección PvP en vivo.",
+        "No se documenta clínica ni punto de reaparición en este puesto.",
+        "Contratos y existencias rotan: verificar en mobiGlas y terminales antes de viajar."
+      ],
+      "intelVersion": "4.10.3 / fuentes históricas etiquetadas"
     },
     {
       "id": "stanton-buckets",

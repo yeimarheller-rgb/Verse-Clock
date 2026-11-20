@@ -314,6 +314,8 @@ function applyPoiToMain(p){
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
  const parentBody=locs.find(l=>l.system===p.system&&(String(l.name).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')||String(l.body).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')));
  if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
+ if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
+ if(p.tacticalTips?.length){summary.push('━━ INFORMACIÓN ÚTIL ANTES DE IR ━━');for(const tip of p.tacticalTips)summary.push('▸ '+tip)}
  summary.push('Temperatura exacta de la instalación: sin verificar');
  summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
  $('mainIntelApi').textContent=summary.join('\n');
