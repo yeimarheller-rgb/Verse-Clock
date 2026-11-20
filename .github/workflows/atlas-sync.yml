@@ -40,8 +40,12 @@ jobs:
             git add -f lab-preview/data/atlas-enriched.json
             if git diff --cached --quiet; then echo 'Sin datos nuevos'; break; fi
             git commit -m "data: atlas enrichment batch $i"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" -eq 5 ]; then echo 'No se pudo publicar tras 5 reintentos'; exit 1; fi
+              sleep $((attempt * 2))
+            done
             echo "Lote $i publicado"
           done
       - name: Verificar snapshot
