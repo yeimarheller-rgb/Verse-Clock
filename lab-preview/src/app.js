@@ -487,22 +487,43 @@ async function mergeFreshIntel(d){
 }
 
 let lastEnrichmentFingerprint='';
+let atlasRefreshBusy=false;
+// Poll a tiny status manifest, not the full 1MB atlas every 15 seconds.
 async function refreshAtlasProgress(){
- try{let r=await fetch('https://raw.githubusercontent.com/yeimarheller-rgb/Verse-Clock/main/lab-preview/data/atlas-enriched.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)r=await fetch('./data/atlas-enriched.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();updateAtlasProgress(d);const fingerprint=[d.version,d.enrichedCount,d.generatedAt].join('|');if(fingerprint!==lastEnrichmentFingerprint){lastEnrichmentFingerprint=fingerprint;await mergeFreshIntel(d)}}
- catch(e){if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Progreso no disponible';$('atlasProgressUpdated').textContent='Sin datos publicados'}} 
+ if(atlasRefreshBusy||document.hidden)return;
+ atlasRefreshBusy=true;
+ try{
+  const response=await fetch('./data/atlas-meta.json',{cache:'no-store'});
+  if(!response.ok)throw Error('Atlas metadata HTTP '+response.status);
+  const meta=await response.json();
+  if(meta.schemaVersion!==1||!meta.catalogTotal)throw Error('Invalid atlas metadata');
+  updateAtlasProgress(meta);
+  updateAtlasQuality(meta);
+  const fingerprint=[meta.version,meta.enrichedCount,meta.enrichedGeneratedAt].join('|');
+  if(fingerprint!==lastEnrichmentFingerprint){
+   const detail=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});
+   if(!detail.ok)throw Error('Atlas detail HTTP '+detail.status);
+   const d=await detail.json();
+   if(d.version!==meta.version)throw Error('Atlas metadata and detail versions differ');
+   await mergeFreshIntel(d);
+   lastEnrichmentFingerprint=fingerprint;
+  }
+ }catch(e){
+  if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Progreso no disponible';$('atlasProgressUpdated').textContent='Sin datos publicados'}
+  if(!$('atlasQuality').dataset.loaded)$('atlasQuality').textContent='Auditoría global pendiente de publicación; no se presume cobertura completa.';
+  console.warn('Atlas metadata refresh unavailable',e);
+ }finally{atlasRefreshBusy=false}
 }
-setInterval(()=>{if(!document.hidden)refreshAtlasProgress()},15000);
+setInterval(()=>{if(!document.hidden)refreshAtlasProgress()},60000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshAtlasProgress()});
-async function loadAtlasQuality(){
+function updateAtlasQuality(d){
  const el=$('atlasQuality');if(!el)return;
- try{const r=await fetch('./data/atlas-quality.json',{cache:'no-cache'});if(!r.ok)throw Error('HTTP '+r.status);
- const d=await r.json(),c=d.counts;if(!c||!c.total)throw Error('Sin recuento');
+ const c=d.counts;if(!c||!c.total)return;
  const pct=Math.round(100*c.actionable/c.total);
  el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
  const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas API solo geográficas · '+(d.seedOnlyCounts?.total||0)+' fichas curadas fuera del catálogo API · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín';
- const note=document.createElement('small');note.textContent='Fichas curadas coincidentes: '+c.curated+' · fichas curadas fuera del catálogo API: '+(d.seedOnly?.length||0)+'. Una ficha con datos no implica dossier completo. Auditoría: '+(d.generatedAt||'fecha desconocida');
- el.append(title,desc,note);
- }catch(e){el.textContent='Auditoría global pendiente de publicación; no se presume cobertura completa.'}
+ const note=document.createElement('small');note.textContent='Fichas curadas coincidentes: '+c.curated+' · fichas curadas fuera del catálogo API: '+(d.seedOnlyCounts?.total||0)+'. Una ficha con datos no implica dossier completo. Auditoría: '+(d.qualityGeneratedAt||'fecha desconocida');
+ el.append(title,desc,note);el.dataset.loaded='true';
 }
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
@@ -516,17 +537,16 @@ async function loadAtlas(){
    for(const p of d.locations){if(!p.name||!p.system)continue;const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
- try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();updateAtlasProgress(ed);if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
+ try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();updateAtlasProgress(ed);lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
  if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Datos de progreso no disponibles';$('atlasProgressUpdated').textContent='Sin snapshot de enriquecimiento';}
- loadAtlasQuality();
+
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(input.value.trim())updateMenu();
  if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
 }
-refreshAtlasProgress();
-loadAtlas().catch(e=>{$('poiCount').textContent='No se pudo cargar el atlas: '+e.message});
+loadAtlas().then(refreshAtlasProgress).catch(e=>{$('poiCount').textContent='No se pudo cargar el atlas: '+e.message});
 
 // Un explorador, dos vistas: evita paneles interminables y preserva búsquedas existentes.
 const atlasTabs=[[$('atlasTabPoi'),$('atlasPanePoi')],[$('atlasTabIntel'),$('atlasPaneIntel')]];
