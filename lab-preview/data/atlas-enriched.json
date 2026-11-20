@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:18:36.606Z",
+  "generatedAt": "2026-11-20T01:18:49.777Z",
   "catalogTotal": 2017,
-  "enrichedCount": 400,
+  "enrichedCount": 425,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 24
+    "nearby": 28
   },
   "locations": [
     {
@@ -6759,6 +6759,405 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:18:36.426Z"
+    },
+    {
+      "id": "26afa18b-af55-44a5-8a19-ceb06c3f69ba",
+      "name": "Lazarus Complex Tithonus-II",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "26afa18b-af55-44a5-8a19-ceb06c3f69ba",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:38.512Z"
+    },
+    {
+      "id": "5b6422d9-4f8b-42ff-b892-1a6ac17439ad",
+      "name": "Lazarus Complex Tithonus-III",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5b6422d9-4f8b-42ff-b892-1a6ac17439ad",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:38.948Z"
+    },
+    {
+      "id": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79",
+      "name": "Lazarus Transport Hub Phoenix-I",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:39.398Z"
+    },
+    {
+      "id": "675489ae-e83c-4e5d-9601-61dce33f7f75",
+      "name": "Lazarus Transport Hub Phoenix-II",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "675489ae-e83c-4e5d-9601-61dce33f7f75",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:39.866Z"
+    },
+    {
+      "id": "0b615583-ceb4-4763-9e3e-2a7f1aa1c78c",
+      "name": "Lazarus Transport Hub Phoenix-III",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0b615583-ceb4-4763-9e3e-2a7f1aa1c78c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:40.306Z"
+    },
+    {
+      "id": "958a1221-eb53-4a8b-b08d-4207405e84aa",
+      "name": "Lazarus Transport Hub Tithonus-I",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:40.751Z"
+    },
+    {
+      "id": "d0864e96-643f-4c55-984e-a130611fcc56",
+      "name": "Lazarus Transport Hub Tithonus-II",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d0864e96-643f-4c55-984e-a130611fcc56",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:41.221Z"
+    },
+    {
+      "id": "fe52faa3-9528-45cf-a30d-b354b7a47116",
+      "name": "Lazarus Transport Hub Tithonus-III",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fe52faa3-9528-45cf-a30d-b354b7a47116",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:41.688Z"
+    },
+    {
+      "id": "f1759f46-e3c0-4dc1-94bc-c94488b58913",
+      "name": "Lorville",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Maria Pure of Heart",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f1759f46-e3c0-4dc1-94bc-c94488b58913",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:42.163Z"
+    },
+    {
+      "id": "38dc12d7-304d-49e8-9d87-9bf60212cfaa",
+      "name": "Lost and Found",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "38dc12d7-304d-49e8-9d87-9bf60212cfaa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:42.605Z"
+    },
+    {
+      "id": "d5b6d2ac-d6dc-464c-a5da-7404e982dd03",
+      "name": "Loveridge Mineral Reserve",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d5b6d2ac-d6dc-464c-a5da-7404e982dd03",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:43.038Z"
+    },
+    {
+      "id": "bbc0de76-2793-4b4d-9d94-7512ce6278a8",
+      "name": "Lowdown",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bbc0de76-2793-4b4d-9d94-7512ce6278a8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:43.472Z"
+    },
+    {
+      "id": "3fbe0a2a-c042-4f96-a941-286268504576",
+      "name": "Ludlow",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3fbe0a2a-c042-4f96-a941-286268504576",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:43.975Z"
+    },
+    {
+      "id": "9eb50da4-db00-43fd-919e-3781937bc6b2",
+      "name": "Magnus Gateway Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9eb50da4-db00-43fd-919e-3781937bc6b2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:44.412Z"
+    },
+    {
+      "id": "19fc539b-3bd1-4a61-b7ac-925ab4a98b0e",
+      "name": "Mainline",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "19fc539b-3bd1-4a61-b7ac-925ab4a98b0e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:44.880Z"
+    },
+    {
+      "id": "0c026684-1360-48d4-8cac-00e2f2a3fc1b",
+      "name": "Maker's Point",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0c026684-1360-48d4-8cac-00e2f2a3fc1b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:45.304Z"
+    },
+    {
+      "id": "4a4a8455-02d4-4c4a-bb97-a47f0e006c13",
+      "name": "Maria Pure of Heart",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4a4a8455-02d4-4c4a-bb97-a47f0e006c13",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:45.726Z"
+    },
+    {
+      "id": "80c0c3b4-e3da-410f-a394-e9a5ebbb421c",
+      "name": "Megumi Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "80c0c3b4-e3da-410f-a394-e9a5ebbb421c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:46.192Z"
+    },
+    {
+      "id": "e7f2a424-66ec-41d0-8626-3d64eba09b9b",
+      "name": "MIC-L1 Shallow Frontier Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e7f2a424-66ec-41d0-8626-3d64eba09b9b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:46.617Z"
+    },
+    {
+      "id": "f4b118f8-3102-4a5c-b8ca-ff013c2f674a",
+      "name": "MIC-L1 Shallow Frontier Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "MIC-L1 Shallow Frontier Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f4b118f8-3102-4a5c-b8ca-ff013c2f674a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:47.075Z"
+    },
+    {
+      "id": "b89b1905-66fb-4612-bc82-5468e314e6b8",
+      "name": "MIC-L2 Long Forest Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b89b1905-66fb-4612-bc82-5468e314e6b8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:47.556Z"
+    },
+    {
+      "id": "f602528f-acf3-4564-960c-fc344269a7a9",
+      "name": "MIC-L2 Long Forest Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "MIC-L2 Long Forest Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f602528f-acf3-4564-960c-fc344269a7a9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:48.235Z"
+    },
+    {
+      "id": "e30b4352-7cfc-4e14-aea4-199d11576be5",
+      "name": "MIC-L3 Endless Odyssey Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e30b4352-7cfc-4e14-aea4-199d11576be5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:48.682Z"
+    },
+    {
+      "id": "2800c56f-0123-4c31-95d6-bfcf73ba8485",
+      "name": "MIC-L3 Endless Odyssey Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "MIC-L3 Endless Odyssey Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2800c56f-0123-4c31-95d6-bfcf73ba8485",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:49.111Z"
+    },
+    {
+      "id": "e21f2806-e5d0-4f8d-a711-cbd55cfb2ea0",
+      "name": "MIC-L4 Red Crossroads Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e21f2806-e5d0-4f8d-a711-cbd55cfb2ea0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:49.598Z"
     }
   ]
 }
