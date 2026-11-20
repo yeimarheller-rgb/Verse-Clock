@@ -1,38 +1,100 @@
 {
+  "seedOnly": [
+    {
+      "name": "Checkmate Station",
+      "system": "Pyro",
+      "id": "pyro-checkmate-station"
+    },
+    {
+      "name": "ARC-L1",
+      "system": "Stanton",
+      "id": "stanton-arc-l1"
+    },
+    {
+      "name": "ARC-L2",
+      "system": "Stanton",
+      "id": "stanton-arc-l2"
+    },
+    {
+      "name": "ARC-L4",
+      "system": "Stanton",
+      "id": "stanton-arc-l4"
+    },
+    {
+      "name": "CRU-L1",
+      "system": "Stanton",
+      "id": "stanton-cru-l1"
+    },
+    {
+      "name": "HUR-L1",
+      "system": "Stanton",
+      "id": "stanton-hur-l1"
+    },
+    {
+      "name": "HUR-L2",
+      "system": "Stanton",
+      "id": "stanton-hur-l2"
+    },
+    {
+      "name": "MIC-L1",
+      "system": "Stanton",
+      "id": "stanton-mic-l1"
+    },
+    {
+      "name": "MIC-L2",
+      "system": "Stanton",
+      "id": "stanton-mic-l2"
+    },
+    {
+      "name": "MIC-L5",
+      "system": "Stanton",
+      "id": "stanton-mic-l5"
+    },
+    {
+      "name": "Connor's",
+      "system": "Stanton",
+      "id": "stanton-connor-s"
+    },
+    {
+      "name": "Lazarus Complex · Valakkar",
+      "system": "Pyro",
+      "id": "curated-lazarus-pyro-i"
+    }
+  ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:38:29.581Z",
+  "generatedAt": "2026-11-20T15:09:12.307Z",
   "definition": "Actionable = at least one of missions, resources, services, PvE, PvP or loot. GeographicOnly = none. A field is not proof of in-game availability.",
   "counts": {
     "total": 2017,
-    "consulted": 1275,
-    "curated": 0,
+    "consulted": 1525,
+    "curated": 46,
     "withMissions": 6,
-    "withResources": 0,
-    "withNearby": 51,
-    "withServices": 0,
-    "withPve": 0,
+    "withResources": 4,
+    "withNearby": 89,
+    "withServices": 10,
+    "withPve": 16,
     "withPvp": 0,
-    "withLoot": 0,
+    "withLoot": 16,
     "withSources": 2017,
-    "actionable": 6,
-    "geographicOnly": 2011
+    "actionable": 32,
+    "geographicOnly": 1985
   },
   "systems": {
     "Nyx System": {
       "total": 482,
-      "actionable": 6,
-      "geographicOnly": 476
+      "actionable": 9,
+      "geographicOnly": 473
     },
     "Pyro System": {
       "total": 586,
-      "actionable": 0,
-      "geographicOnly": 586
+      "actionable": 4,
+      "geographicOnly": 582
     },
     "Stanton System": {
       "total": 949,
-      "actionable": 0,
-      "geographicOnly": 949
+      "actionable": 19,
+      "geographicOnly": 930
     }
   },
   "topGaps": [
@@ -3446,17 +3508,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": true,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "5d1a53cc-fcea-4571-8416-482295f79571",
@@ -4086,17 +4148,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": true,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "f1017b15-7cca-4f7d-bf33-16178571aa72",
@@ -12566,17 +12628,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "3e9ec8c5-10fb-41f2-afdf-bc1e146dd2d6",
@@ -13246,7 +13308,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -13266,7 +13328,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -13306,7 +13368,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -13326,7 +13388,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -13405,7 +13467,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13425,7 +13487,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13445,7 +13507,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13465,7 +13527,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13485,7 +13547,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13505,7 +13567,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13525,7 +13587,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13545,7 +13607,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13565,7 +13627,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13585,7 +13647,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13605,7 +13667,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13625,7 +13687,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13645,7 +13707,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13665,7 +13727,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13685,7 +13747,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13705,7 +13767,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13725,7 +13787,7 @@
       "parent": "Pyro",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13745,7 +13807,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -13765,7 +13827,7 @@
       "parent": "Pyro V",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -14445,11 +14507,11 @@
       "parent": "Pyro",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -14485,11 +14547,11 @@
       "parent": "Pyro",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -14525,11 +14587,11 @@
       "parent": "Pyro V",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -14805,11 +14867,11 @@
       "parent": "Pyro V",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -14825,11 +14887,11 @@
       "parent": "Pyro",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -14985,11 +15047,11 @@
       "parent": "Pyro V",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -15025,7 +15087,7 @@
       "parent": "Pyro",
       "type": "Anomaly",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -15405,11 +15467,11 @@
       "parent": "Pyro",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -15466,17 +15528,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "9e80238d-7dc5-46eb-a486-1f6bc3e7d2ed",
@@ -15506,17 +15568,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "75674e67-2bc0-4b90-a51f-dff7ecceaf3e",
@@ -15606,7 +15668,7 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -22086,7 +22148,7 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -23866,7 +23928,7 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -23926,17 +23988,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": true,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8",
@@ -24126,17 +24188,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "a037da4f-e3f3-4d66-98fb-b4c70b97f5c8",
@@ -24166,7 +24228,7 @@
       "type": "Manmade",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": true,
@@ -26386,17 +26448,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 3
     },
     {
       "id": "a6e6d91f-e36a-4fae-a0e9-f422d4388a77",
@@ -26406,17 +26468,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "487c2c31-9525-45f0-a7d5-4e994caed45b",
@@ -26426,17 +26488,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "da9bd4ad-80eb-4553-a14a-3a94ba0768fd",
@@ -26446,17 +26508,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "07b47705-a5b7-4bb2-b339-3dad7d590a0f",
@@ -26486,7 +26548,7 @@
       "type": "Manmade",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": true,
@@ -26706,7 +26768,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -26766,7 +26828,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -26945,7 +27007,7 @@
       "parent": "Ita",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -26965,7 +27027,7 @@
       "parent": "Arial",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -26985,7 +27047,7 @@
       "parent": "Magda",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27005,7 +27067,7 @@
       "parent": "Hurston",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27025,7 +27087,7 @@
       "parent": "Aberdeen",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27045,7 +27107,7 @@
       "parent": "Cellin",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27065,7 +27127,7 @@
       "parent": "Daymar",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27085,7 +27147,7 @@
       "parent": "Crusader",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27105,7 +27167,7 @@
       "parent": "Yela",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27125,7 +27187,7 @@
       "parent": "Lyria",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27145,7 +27207,7 @@
       "parent": "Wala",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27165,7 +27227,7 @@
       "parent": "ArcCorp",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27185,7 +27247,7 @@
       "parent": "microTech",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27205,7 +27267,7 @@
       "parent": "Calliope",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27225,7 +27287,7 @@
       "parent": "Clio",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27245,7 +27307,7 @@
       "parent": "Euterpe",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27286,7 +27348,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -27306,7 +27368,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -27325,7 +27387,7 @@
       "parent": "Daymar",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27365,11 +27427,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27385,7 +27447,7 @@
       "parent": "CRU L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27405,11 +27467,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27425,11 +27487,11 @@
       "parent": "CRU L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27445,11 +27507,11 @@
       "parent": "CRU L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27465,11 +27527,11 @@
       "parent": "CRU L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27485,11 +27547,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27505,7 +27567,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27525,11 +27587,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27545,7 +27607,7 @@
       "parent": "CRU L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27565,11 +27627,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27585,7 +27647,7 @@
       "parent": "CRU L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27725,11 +27787,11 @@
       "parent": "Stanton",
       "type": "Planet",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27785,7 +27847,7 @@
       "parent": "Crusader",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27825,11 +27887,11 @@
       "parent": "Crusader",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -27865,7 +27927,7 @@
       "parent": "ArcCorp",
       "type": "<= UNINITIALIZED =>",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27905,7 +27967,7 @@
       "parent": "MIC L1",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -27925,7 +27987,7 @@
       "parent": "Hurston",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -28026,7 +28088,7 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
@@ -28145,11 +28207,11 @@
       "parent": "microTech",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -28165,11 +28227,11 @@
       "parent": "Hurston",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -28365,7 +28427,7 @@
       "parent": "Stanton",
       "type": "Planet",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -28445,11 +28507,11 @@
       "parent": "Yela",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
-        "curated": false,
+        "consulted": true,
+        "curated": true,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29745,11 +29807,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29765,7 +29827,7 @@
       "parent": "HUR L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -29785,11 +29847,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29805,7 +29867,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -29825,11 +29887,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29845,7 +29907,7 @@
       "parent": "HUR L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -29865,11 +29927,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29885,7 +29947,7 @@
       "parent": "HUR L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -29905,11 +29967,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -29925,7 +29987,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30145,11 +30207,11 @@
       "parent": "Stanton",
       "type": "Planet",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30165,7 +30227,7 @@
       "parent": "Crusader",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30185,7 +30247,7 @@
       "parent": "Stanton-Pyro Jump Point",
       "type": "Anomaly",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30205,7 +30267,7 @@
       "parent": "MIC L1",
       "type": "Manmade",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30225,11 +30287,11 @@
       "parent": "Hurston",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30386,17 +30448,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 3
     },
     {
       "id": "245620ae-9574-4f40-8597-0e0230f930a3",
@@ -30406,17 +30468,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "4fd0094a-7c05-481e-bb39-8ed17d7bbfac",
@@ -30426,17 +30488,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "def703e1-d494-4870-b3e3-7b4409693ae4",
@@ -30446,17 +30508,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
@@ -30605,11 +30667,11 @@
       "parent": "ArcCorp",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30625,11 +30687,11 @@
       "parent": "Hurston",
       "type": "Moon",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30725,11 +30787,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30745,7 +30807,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30765,7 +30827,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30785,11 +30847,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30805,11 +30867,11 @@
       "parent": "MIC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30825,11 +30887,11 @@
       "parent": "MIC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30845,11 +30907,11 @@
       "parent": "MIC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30865,11 +30927,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30885,7 +30947,7 @@
       "parent": "MIC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30905,11 +30967,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30925,7 +30987,7 @@
       "parent": "MIC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30945,11 +31007,11 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -30965,7 +31027,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -30985,7 +31047,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31205,11 +31267,11 @@
       "parent": "Stanton",
       "type": "Planet",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
-        "nearby": false,
+        "nearby": true,
         "services": false,
         "pve": false,
         "pvp": false,
@@ -31285,7 +31347,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31305,7 +31367,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31325,7 +31387,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31345,7 +31407,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31365,7 +31427,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31385,7 +31447,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31405,7 +31467,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31425,7 +31487,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31445,7 +31507,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31465,7 +31527,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31485,7 +31547,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31505,7 +31567,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31525,7 +31587,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31545,7 +31607,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31565,7 +31627,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31585,7 +31647,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31605,7 +31667,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31625,7 +31687,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31645,7 +31707,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31665,7 +31727,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31685,7 +31747,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31705,7 +31767,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31725,7 +31787,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31745,7 +31807,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31765,7 +31827,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31785,7 +31847,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31805,7 +31867,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31825,7 +31887,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31845,7 +31907,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31865,7 +31927,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31885,7 +31947,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31905,7 +31967,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31925,7 +31987,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31945,7 +32007,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31965,7 +32027,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -31985,7 +32047,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32005,7 +32067,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32025,7 +32087,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32045,7 +32107,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32065,7 +32127,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32085,7 +32147,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32105,7 +32167,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32125,7 +32187,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32145,7 +32207,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32165,7 +32227,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32185,7 +32247,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32205,7 +32267,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32225,7 +32287,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32245,7 +32307,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32265,7 +32327,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32285,7 +32347,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32305,7 +32367,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32325,7 +32387,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32345,7 +32407,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32365,7 +32427,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32385,7 +32447,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32405,7 +32467,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32425,7 +32487,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32445,7 +32507,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32465,7 +32527,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32485,7 +32547,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32505,7 +32567,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32525,7 +32587,7 @@
       "parent": "Stanton",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32545,7 +32607,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32565,7 +32627,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32585,7 +32647,7 @@
       "parent": "MIC L2-A",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32605,7 +32667,7 @@
       "parent": "ARC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32625,7 +32687,7 @@
       "parent": "ARC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32645,7 +32707,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32665,7 +32727,7 @@
       "parent": "ARC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32685,7 +32747,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32705,7 +32767,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32725,7 +32787,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32745,7 +32807,7 @@
       "parent": "CRU L2-C",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32765,7 +32827,7 @@
       "parent": "CRU L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32785,7 +32847,7 @@
       "parent": "MIC L2-B",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32805,7 +32867,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32825,7 +32887,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32845,7 +32907,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32865,7 +32927,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32885,7 +32947,7 @@
       "parent": "ARC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32905,7 +32967,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32925,7 +32987,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32945,7 +33007,7 @@
       "parent": "HUR L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32965,7 +33027,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -32985,7 +33047,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33005,7 +33067,7 @@
       "parent": "HUR L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33025,7 +33087,7 @@
       "parent": "ARC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33045,7 +33107,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33065,7 +33127,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33085,7 +33147,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33105,7 +33167,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33125,7 +33187,7 @@
       "parent": "CRU L2-C",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33145,7 +33207,7 @@
       "parent": "CRU L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33165,7 +33227,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33185,7 +33247,7 @@
       "parent": "MIC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33205,7 +33267,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33225,7 +33287,7 @@
       "parent": "CRU L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33245,7 +33307,7 @@
       "parent": "CRU L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33265,7 +33327,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33285,7 +33347,7 @@
       "parent": "MIC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33305,7 +33367,7 @@
       "parent": "HUR L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33325,7 +33387,7 @@
       "parent": "CRU L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33345,7 +33407,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33365,7 +33427,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33385,7 +33447,7 @@
       "parent": "ARC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33405,7 +33467,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33425,7 +33487,7 @@
       "parent": "HUR L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33445,7 +33507,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33465,7 +33527,7 @@
       "parent": "CRU L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33485,7 +33547,7 @@
       "parent": "MIC L2-A",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33505,7 +33567,7 @@
       "parent": "ARC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33525,7 +33587,7 @@
       "parent": "HUR L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33545,7 +33607,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33565,7 +33627,7 @@
       "parent": "ARC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33585,7 +33647,7 @@
       "parent": "HUR L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33605,7 +33667,7 @@
       "parent": "MIC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33625,7 +33687,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33645,7 +33707,7 @@
       "parent": "HUR L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33665,7 +33727,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33685,7 +33747,7 @@
       "parent": "HUR L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33705,7 +33767,7 @@
       "parent": "MIC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33725,7 +33787,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33745,7 +33807,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33765,7 +33827,7 @@
       "parent": "MIC L2-B",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33785,7 +33847,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33805,7 +33867,7 @@
       "parent": "MIC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33825,7 +33887,7 @@
       "parent": "ARC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33845,7 +33907,7 @@
       "parent": "ARC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33865,7 +33927,7 @@
       "parent": "CRU L2-C",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33885,7 +33947,7 @@
       "parent": "CRU L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33905,7 +33967,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33925,7 +33987,7 @@
       "parent": "CRU L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33945,7 +34007,7 @@
       "parent": "ARC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33965,7 +34027,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -33985,7 +34047,7 @@
       "parent": "HUR L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34005,7 +34067,7 @@
       "parent": "HUR L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34025,7 +34087,7 @@
       "parent": "ARC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34045,7 +34107,7 @@
       "parent": "ARC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34065,7 +34127,7 @@
       "parent": "MIC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34085,7 +34147,7 @@
       "parent": "ARC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34105,7 +34167,7 @@
       "parent": "MIC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34125,7 +34187,7 @@
       "parent": "ARC L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34145,7 +34207,7 @@
       "parent": "ARC L2",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34165,7 +34227,7 @@
       "parent": "HUR L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34185,7 +34247,7 @@
       "parent": "ARC L1",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34205,7 +34267,7 @@
       "parent": "ARC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34225,7 +34287,7 @@
       "parent": "CRU L5",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34245,7 +34307,7 @@
       "parent": "CRU L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34265,7 +34327,7 @@
       "parent": "CRU L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34285,7 +34347,7 @@
       "parent": "ARC L4",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -34305,7 +34367,7 @@
       "parent": "MIC L3",
       "type": "Asteroid",
       "flags": {
-        "consulted": false,
+        "consulted": true,
         "curated": false,
         "missions": false,
         "resources": false,
@@ -36786,17 +36848,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7f49298c-f12e-4a18-b747-875848d6c112",
@@ -39526,17 +39588,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
@@ -41146,17 +41208,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 3
     },
     {
       "id": "8f72468e-c228-41aa-85ce-c21ff2549081",
@@ -41166,17 +41228,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "1f0b749c-6cd7-4939-bede-e95f2b4b821f",
@@ -41186,17 +41248,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "b82aecbe-cae0-4424-8305-abada59c44cd",
@@ -41206,17 +41268,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "fa4360b9-23e1-4138-816f-9462f795b05f",
@@ -42646,17 +42708,17 @@
       "type": "Manmade",
       "flags": {
         "consulted": false,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
-        "services": false,
+        "services": true,
         "pve": false,
         "pvp": false,
         "loot": false,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 1
     },
     {
       "id": "20dcd70b-1478-409b-830c-281354c04480",
@@ -43046,17 +43108,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
-        "resources": false,
+        "resources": true,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 3
     },
     {
       "id": "3356ba92-8759-4ac9-ae21-03a4a99daa94",
@@ -43066,17 +43128,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "8bf7e3b7-680e-4bff-9161-3d5c74241db3",
@@ -43086,17 +43148,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "965357d4-3448-475e-974d-7d7fd154de91",
@@ -43106,17 +43168,17 @@
       "type": "Outpost",
       "flags": {
         "consulted": true,
-        "curated": false,
+        "curated": true,
         "missions": false,
         "resources": false,
         "nearby": false,
         "services": false,
-        "pve": false,
+        "pve": true,
         "pvp": false,
-        "loot": false,
+        "loot": true,
         "sources": true
       },
-      "actionableDomains": 0
+      "actionableDomains": 2
     },
     {
       "id": "afbc6373-662c-4fdb-8f9b-d811c20357f7",
