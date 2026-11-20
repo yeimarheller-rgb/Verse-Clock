@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: '22'
       - run: node tools/build-data.mjs _versetime/data
+      - name: Auditar atlas y generar metadatos para las pruebas de navegador
+        run: node tools/audit-atlas.mjs
       - run: sh tools/fetch-fonts.sh
       - run: pip install --quiet pillow && python3 tools/build-images.py
       - run: node --test tests/*.test.mjs
