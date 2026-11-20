@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:37:07.712Z",
+  "generatedAt": "2026-11-20T14:37:20.712Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1125,
+  "enrichedCount": 1150,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 33
+    "nearby": 34
   },
   "locations": [
     {
@@ -17708,6 +17708,387 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T14:37:07.531Z"
+    },
+    {
+      "id": "4c706cdf-c566-4d03-b26d-a5cf22abac68",
+      "name": "Security Post Klipra",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4c706cdf-c566-4d03-b26d-a5cf22abac68",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:09.557Z"
+    },
+    {
+      "id": "bca2ac15-772e-43fc-8bdd-d04a4f2415fe",
+      "name": "Security Post Kota",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bca2ac15-772e-43fc-8bdd-d04a4f2415fe",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:09.953Z"
+    },
+    {
+      "id": "3094bd5d-4bf9-4fdd-bb60-d217ef6a7700",
+      "name": "Security Post Menian",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3094bd5d-4bf9-4fdd-bb60-d217ef6a7700",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:10.375Z"
+    },
+    {
+      "id": "5108fa60-15a9-4d7d-8346-c0a01291258c",
+      "name": "Security Post Moka",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5108fa60-15a9-4d7d-8346-c0a01291258c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:10.874Z"
+    },
+    {
+      "id": "09c63067-830f-419b-b2ff-60d40bf6c841",
+      "name": "Security Post Opal",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "09c63067-830f-419b-b2ff-60d40bf6c841",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:11.286Z"
+    },
+    {
+      "id": "fa9dcbb5-416c-468d-b136-e2f5fca5dc44",
+      "name": "Security Post Pakote",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fa9dcbb5-416c-468d-b136-e2f5fca5dc44",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:11.706Z"
+    },
+    {
+      "id": "5cd42cca-6af3-40cf-806a-d146e43f62d2",
+      "name": "Security Post Peska",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5cd42cca-6af3-40cf-806a-d146e43f62d2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:12.135Z"
+    },
+    {
+      "id": "33ed7f33-b52a-4291-9759-8f82a2cc4827",
+      "name": "Security Post Reawick",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "33ed7f33-b52a-4291-9759-8f82a2cc4827",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:12.541Z"
+    },
+    {
+      "id": "d98c18df-acf8-46e6-a251-7bd853e7241a",
+      "name": "Security Post Saktigar",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d98c18df-acf8-46e6-a251-7bd853e7241a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:12.938Z"
+    },
+    {
+      "id": "57d0e762-253e-4f0a-acff-94f951a57c6e",
+      "name": "Security Post Sharga",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "57d0e762-253e-4f0a-acff-94f951a57c6e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:13.361Z"
+    },
+    {
+      "id": "0ecbf0f0-69fc-4301-9eeb-d7ee23a4f8e8",
+      "name": "Security Post Tavan",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0ecbf0f0-69fc-4301-9eeb-d7ee23a4f8e8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:14.041Z"
+    },
+    {
+      "id": "121e78be-6901-4383-bc70-44bb8a82ec64",
+      "name": "Security Post Triolet",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "121e78be-6901-4383-bc70-44bb8a82ec64",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:14.410Z"
+    },
+    {
+      "id": "ca519d1f-e931-48a2-9298-c5826a0b6915",
+      "name": "Security Post Ulaga",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ca519d1f-e931-48a2-9298-c5826a0b6915",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:14.873Z"
+    },
+    {
+      "id": "86e976d1-35e7-496f-9501-58770a86026c",
+      "name": "Security Post Walvis",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "86e976d1-35e7-496f-9501-58770a86026c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:15.319Z"
+    },
+    {
+      "id": "48b376bb-1ba6-4266-8def-bcc7c1582ef3",
+      "name": "Security Post Wan",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "48b376bb-1ba6-4266-8def-bcc7c1582ef3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:15.740Z"
+    },
+    {
+      "id": "985b80ff-504a-4604-8e88-7e832f8e4e1f",
+      "name": "Security Post Yafa",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "985b80ff-504a-4604-8e88-7e832f8e4e1f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:16.184Z"
+    },
+    {
+      "id": "4a971e19-7390-4075-bd16-3ef71ad9394e",
+      "name": "Seer's Canyon",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4a971e19-7390-4075-bd16-3ef71ad9394e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:16.725Z"
+    },
+    {
+      "id": "348d9b9d-8e33-4e39-855c-f6eb06a3a5a8",
+      "name": "Seraphim Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "348d9b9d-8e33-4e39-855c-f6eb06a3a5a8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:17.414Z"
+    },
+    {
+      "id": "45d2d370-9fab-4e6b-b84b-e9c913bc316a",
+      "name": "Seraphim Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Seraphim Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "45d2d370-9fab-4e6b-b84b-e9c913bc316a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:17.892Z"
+    },
+    {
+      "id": "407847a6-4aae-4c3c-9a36-b80108d776f0",
+      "name": "Shadowfall",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "407847a6-4aae-4c3c-9a36-b80108d776f0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:18.322Z"
+    },
+    {
+      "id": "f6ebebaf-073b-402b-9cda-99d7f5764398",
+      "name": "Shady Glen Farms",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f6ebebaf-073b-402b-9cda-99d7f5764398",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:18.872Z"
+    },
+    {
+      "id": "10ef4b7f-de6d-4612-a1f2-da06e2063060",
+      "name": "Shanks",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "10ef4b7f-de6d-4612-a1f2-da06e2063060",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:19.242Z"
+    },
+    {
+      "id": "d4086e66-2a16-4b58-be48-2bde84620f2e",
+      "name": "Shepherd's Rest",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d4086e66-2a16-4b58-be48-2bde84620f2e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:19.687Z"
+    },
+    {
+      "id": "9f0f215c-2352-4819-9c28-29446b499bd2",
+      "name": "Shubin Mining Facility SAL-2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9f0f215c-2352-4819-9c28-29446b499bd2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:20.122Z"
+    },
+    {
+      "id": "df3c3dc7-1d2d-4ff1-ac27-ed47a3fc808e",
+      "name": "Shubin Mining Facility SAL-5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "df3c3dc7-1d2d-4ff1-ac27-ed47a3fc808e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:20.532Z"
     }
   ]
 }
