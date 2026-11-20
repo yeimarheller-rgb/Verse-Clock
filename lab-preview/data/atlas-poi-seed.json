@@ -42,7 +42,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Checkmate Station · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Pyro. Referencia de ubicación: PYR2 L4.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://starcitizen.tools/Pyro",
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://starcitizen.tools/Pyro",
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "pyro-ruin-station",
@@ -59,7 +88,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Ruin Station · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Pyro. Referencia de ubicación: Terminus.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://starcitizen.tools/Pyro",
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://starcitizen.tools/Pyro",
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "pyro-patch-city",
@@ -143,7 +201,34 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Starlight Service Station · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Pyro. Referencia de ubicación: PYR3 L1.",
+          "Sin refinería confirmada en esta ficha; no planificar refinado basándose en el nombre de la estación.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://starcitizen.tools/Pyro"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Servicios no comprobados",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://starcitizen.tools/Pyro"
+        ]
+      }
     },
     {
       "id": "pyro-rod-s-fuel-n-supplies",
@@ -347,7 +432,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Nyx Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Pyro. Referencia de ubicación: Pyro–Nyx.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "nyx-pyro-gateway",
@@ -363,7 +475,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Pyro Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Nyx. Referencia de ubicación: Nyx–Pyro.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "nyx-stanton-gateway",
@@ -379,7 +518,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Stanton Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Nyx. Referencia de ubicación: Nyx–Stanton.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-pyro-gateway",
@@ -395,7 +561,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Pyro Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Stanton. Referencia de ubicación: Stanton–Pyro.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "pyro-stanton-gateway",
@@ -411,7 +604,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Stanton Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Pyro. Referencia de ubicación: Pyro–Stanton.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-nyx-gateway",
@@ -427,7 +647,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Nyx Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Stanton. Referencia de ubicación: Stanton–Nyx.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-terra-gateway",
@@ -443,7 +690,34 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Terra Gateway · servicios y riesgos de planificación",
+        "steps": [
+          "Sistema registrado: Stanton. Referencia de ubicación: Stanton–Terra.",
+          "Refinería reportada por directorio comunitario; comprobar terminal, servicios y capacidad antes de transportar mineral.",
+          "No se dispone de inventario verificable de armas, misiles, componentes o comercio para esta estación: consultar terminal y versión LIVE antes de viajar."
+        ],
+        "threats": [
+          "Sin medición verificable de frecuencia PvP específica de esta estación; la ausencia de registro no significa zona segura.",
+          "Riesgo logístico: servicios comunitarios y disponibilidad real de terminales pueden diferir entre parches o servidores."
+        ],
+        "caveat": "Información de planificación, no constatación en tiempo real. No se afirman enemigos NPC, botín, misiones ni existencias de armas no documentadas.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "services": "Refinería: reportada, no comprobada en servidor LIVE",
+        "pvp": "Sin datos de encuentros PvP medidos en esta estación",
+        "missions": "No hay misión específica contrastada para esta ficha",
+        "loot": "No existe tabla de botín local contrastada",
+        "weapons": "No existe inventario de armas o misiles confirmado para esta estación",
+        "trade": "Sin precios ni stock actual verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-brio-s-breaker-yard",
