@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:37:20.712Z",
+  "generatedAt": "2026-11-20T14:37:33.002Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1150,
+  "enrichedCount": 1175,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -18089,6 +18089,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T14:37:20.532Z"
+    },
+    {
+      "id": "dc34b5af-e417-48d2-b47b-98b56eedf0a7",
+      "name": "Shubin Mining Facility SCD-1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dc34b5af-e417-48d2-b47b-98b56eedf0a7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:22.584Z"
+    },
+    {
+      "id": "203f7169-b964-418e-ba8f-d4360eef5a1c",
+      "name": "Shubin Mining Facility SM0-10",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "203f7169-b964-418e-ba8f-d4360eef5a1c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:22.994Z"
+    },
+    {
+      "id": "7e14f027-f4a2-4d21-8f31-736552d2e318",
+      "name": "Shubin Mining Facility SM0-13",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7e14f027-f4a2-4d21-8f31-736552d2e318",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:23.394Z"
+    },
+    {
+      "id": "851985f0-06fb-4136-8636-6e35996360ca",
+      "name": "Shubin Mining Facility SM0-18",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "851985f0-06fb-4136-8636-6e35996360ca",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:23.833Z"
+    },
+    {
+      "id": "2c99093d-a429-41df-800e-476b14f34235",
+      "name": "Shubin Mining Facility SM0-22",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2c99093d-a429-41df-800e-476b14f34235",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:24.326Z"
+    },
+    {
+      "id": "65636d7f-5580-4efe-92a8-737eceee61fa",
+      "name": "Shubin Mining Facility SMCa-6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "65636d7f-5580-4efe-92a8-737eceee61fa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:24.723Z"
+    },
+    {
+      "id": "5d6e76c2-6ea7-48c9-b7a3-109f15016836",
+      "name": "Shubin Mining Facility SMCa-8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5d6e76c2-6ea7-48c9-b7a3-109f15016836",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:25.141Z"
+    },
+    {
+      "id": "f560789f-0de6-42fe-87a3-649f7b718a7d",
+      "name": "Shubin Processing Facility SPAL-12",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f560789f-0de6-42fe-87a3-649f7b718a7d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:25.576Z"
+    },
+    {
+      "id": "c452b538-cc39-45fb-a0d8-a65d6d8ad7b1",
+      "name": "Shubin Processing Facility SPAL-16",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c452b538-cc39-45fb-a0d8-a65d6d8ad7b1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:26.007Z"
+    },
+    {
+      "id": "bf6f34eb-3509-4f09-82cb-07ee5b2f48fd",
+      "name": "Shubin Processing Facility SPAL-21",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bf6f34eb-3509-4f09-82cb-07ee5b2f48fd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:26.459Z"
+    },
+    {
+      "id": "20314166-d4e3-4a0d-8fef-ac1c0e2e9e97",
+      "name": "Shubin Processing Facility SPAL-3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "20314166-d4e3-4a0d-8fef-ac1c0e2e9e97",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:26.878Z"
+    },
+    {
+      "id": "2ef6101d-aa7e-46eb-beef-c7a8b85b27d6",
+      "name": "Shubin Processing Facility SPAL-7",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2ef6101d-aa7e-46eb-beef-c7a8b85b27d6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:27.300Z"
+    },
+    {
+      "id": "960aa900-6f22-4af2-83c2-c018374cdb14",
+      "name": "Shubin Processing Facility SPAL-9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "960aa900-6f22-4af2-83c2-c018374cdb14",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:27.707Z"
+    },
+    {
+      "id": "297e55a7-2a4c-46d2-96f6-014b00541494",
+      "name": "Shubin Processing Facility SPMC-1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "297e55a7-2a4c-46d2-96f6-014b00541494",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:28.142Z"
+    },
+    {
+      "id": "0aac290a-5be3-459c-91cf-343b9d8e2903",
+      "name": "Shubin Processing Facility SPMC-10",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0aac290a-5be3-459c-91cf-343b9d8e2903",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:28.528Z"
+    },
+    {
+      "id": "d732397e-7444-431b-bbea-adb6efb80965",
+      "name": "Shubin Processing Facility SPMC-11",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d732397e-7444-431b-bbea-adb6efb80965",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:28.932Z"
+    },
+    {
+      "id": "12719cdd-ca07-427a-955d-d5c2b6a60589",
+      "name": "Shubin Processing Facility SPMC-14",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "12719cdd-ca07-427a-955d-d5c2b6a60589",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:29.305Z"
+    },
+    {
+      "id": "ef16965b-48c1-4043-8576-cc0bdc36f7df",
+      "name": "Shubin Processing Facility SPMC-3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ef16965b-48c1-4043-8576-cc0bdc36f7df",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:29.769Z"
+    },
+    {
+      "id": "7c2ff2ec-626d-47b4-bde2-062bfdbf51ad",
+      "name": "Shubin Processing Facility SPMC-5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7c2ff2ec-626d-47b4-bde2-062bfdbf51ad",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:30.295Z"
+    },
+    {
+      "id": "1f0b9df7-2dd3-47da-9a18-f1bb8182e8ec",
+      "name": "Sloane Mining Compound-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1f0b9df7-2dd3-47da-9a18-f1bb8182e8ec",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:30.684Z"
+    },
+    {
+      "id": "c3a82f82-0027-4152-920e-63895009b7e0",
+      "name": "Sloane Mining Compound-B",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c3a82f82-0027-4152-920e-63895009b7e0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:31.094Z"
+    },
+    {
+      "id": "c497baa1-b10c-4fc9-8a26-da1189775316",
+      "name": "Sloane Mining Compound-C",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c497baa1-b10c-4fc9-8a26-da1189775316",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:31.573Z"
+    },
+    {
+      "id": "8617e09b-a658-4a30-8d06-22fcfc445209",
+      "name": "Sloane Mining Compound-D",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8617e09b-a658-4a30-8d06-22fcfc445209",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:31.984Z"
+    },
+    {
+      "id": "51d4fdfb-421d-49d9-b75a-2f1d531b7720",
+      "name": "Slowburn Depot",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "51d4fdfb-421d-49d9-b75a-2f1d531b7720",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:32.375Z"
+    },
+    {
+      "id": "a0bd0531-d9ff-4828-acfc-416b7f57fbe6",
+      "name": "Slowburn Depot",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a0bd0531-d9ff-4828-acfc-416b7f57fbe6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:32.821Z"
     }
   ]
 }
