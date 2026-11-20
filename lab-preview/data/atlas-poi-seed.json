@@ -990,7 +990,35 @@
         "https://starcitizen.tools/Space_stations"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Baijini Point · estación orbital de Stanton",
+        "steps": [
+          "Estación orbital asociada a ArcCorp; usarla como referencia de aproximación y navegación orbital.",
+          "La ficha no dispone de inventario comprobado de terminales, armas, misiles, componentes ni precios. No asumir disponibilidad por proximidad a ArcCorp.",
+          "Consultar en el juego servicios y contratos disponibles antes de planificar reparación, abastecimiento o comercio."
+        ],
+        "threats": [
+          "No hay frecuencia PvP específica verificada para esta estación.",
+          "No se ha documentado una misión PvE concreta dentro de esta ficha."
+        ],
+        "caveat": "La fuente general de estaciones confirma su clasificación; no certifica los servicios ni inventarios en el servidor LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Space_stations"
+        ]
+      },
+      "operationalNotes": {
+        "pve": "Sin encuentros PvE específicos verificados",
+        "pvp": "Sin mediciones PvP locales",
+        "missions": "Sin contratos concretos contrastados",
+        "loot": "Sin botín específico documentado",
+        "weapons": "Sin inventario de armas o misiles contrastado",
+        "trade": "Sin stock ni precios contrastados",
+        "hazards": "No hay peligro local específico confirmado; comprobar avisos de juego",
+        "sources": [
+          "https://starcitizen.tools/Space_stations"
+        ]
+      }
     },
     {
       "id": "stanton-everus-harbor",
@@ -1004,7 +1032,35 @@
         "https://starcitizen.tools/Space_stations"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Everus Harbor · estación orbital de Stanton",
+        "steps": [
+          "Estación orbital asociada a Hurston; usarla como referencia de aproximación y navegación orbital.",
+          "La ficha no dispone de inventario comprobado de terminales, armas, misiles, componentes ni precios. No asumir disponibilidad por proximidad a Hurston.",
+          "Consultar en el juego servicios y contratos disponibles antes de planificar reparación, abastecimiento o comercio."
+        ],
+        "threats": [
+          "No hay frecuencia PvP específica verificada para esta estación.",
+          "No se ha documentado una misión PvE concreta dentro de esta ficha."
+        ],
+        "caveat": "La fuente general de estaciones confirma su clasificación; no certifica los servicios ni inventarios en el servidor LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Space_stations"
+        ]
+      },
+      "operationalNotes": {
+        "pve": "Sin encuentros PvE específicos verificados",
+        "pvp": "Sin mediciones PvP locales",
+        "missions": "Sin contratos concretos contrastados",
+        "loot": "Sin botín específico documentado",
+        "weapons": "Sin inventario de armas o misiles contrastado",
+        "trade": "Sin stock ni precios contrastados",
+        "hazards": "No hay peligro local específico confirmado; comprobar avisos de juego",
+        "sources": [
+          "https://starcitizen.tools/Space_stations"
+        ]
+      }
     },
     {
       "id": "stanton-grim-hex",
