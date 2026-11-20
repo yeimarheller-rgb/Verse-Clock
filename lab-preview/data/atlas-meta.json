@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:33:03.926Z",
-  "enrichedGeneratedAt": "2026-11-20T15:33:03.926Z",
+  "generatedAt": "2026-11-20T16:15:46.937Z",
+  "enrichedGeneratedAt": "2026-11-20T16:15:46.937Z",
   "catalogTotal": 2017,
   "enrichedCount": 2017,
   "coverage": {
@@ -22,8 +22,28 @@
     "withPvp": 0,
     "withLoot": 16,
     "withSources": 2017,
+    "withWeapons": 12,
+    "withTrade": 0,
+    "withHazards": 16,
     "actionable": 32,
     "geographicOnly": 1985
+  },
+  "systems": {
+    "Nyx System": {
+      "total": 482,
+      "actionable": 9,
+      "geographicOnly": 473
+    },
+    "Pyro System": {
+      "total": 586,
+      "actionable": 4,
+      "geographicOnly": 582
+    },
+    "Stanton System": {
+      "total": 949,
+      "actionable": 19,
+      "geographicOnly": 930
+    }
   },
   "seedOnlyCounts": {
     "total": 12,
@@ -31,5 +51,5 @@
     "withLoot": 0,
     "withServices": 10
   },
-  "qualityGeneratedAt": "2026-11-20T15:33:05.716Z"
+  "qualityGeneratedAt": "2026-11-20T16:15:48.404Z"
 }
