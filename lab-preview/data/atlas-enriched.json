@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:22:22.522Z",
+  "generatedAt": "2026-11-20T15:29:40.489Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1775,
+  "enrichedCount": 1800,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 181
+    "nearby": 195
   },
   "locations": [
     {
@@ -32156,6 +32156,530 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T15:22:22.341Z"
+    },
+    {
+      "id": "0e520002-a14d-45a2-bed9-352d0056c189",
+      "name": "PYR5 L1-B Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0e520002-a14d-45a2-bed9-352d0056c189",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:25.795Z"
+    },
+    {
+      "id": "0712a332-ce5c-4a78-a4e8-eae12435ca46",
+      "name": "PYR5 L1-C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L1-C Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0712a332-ce5c-4a78-a4e8-eae12435ca46",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:26.550Z"
+    },
+    {
+      "id": "0068669d-d715-41e7-8a4a-f44b6049ecf3",
+      "name": "PYR5 L1-C Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0068669d-d715-41e7-8a4a-f44b6049ecf3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:27.045Z"
+    },
+    {
+      "id": "dd6ef84d-7601-4c53-a55a-653789169250",
+      "name": "PYR5 L1-D",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L1-D Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dd6ef84d-7601-4c53-a55a-653789169250",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:27.643Z"
+    },
+    {
+      "id": "112e5b79-cace-40a8-99bd-99186d264257",
+      "name": "PYR5 L1-D Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "112e5b79-cace-40a8-99bd-99186d264257",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:28.173Z"
+    },
+    {
+      "id": "4e0a8e98-61b9-4fd3-8552-f43cad1c38c9",
+      "name": "PYR5 L2",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L2-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L2-B",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L2-C",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L2-D",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4e0a8e98-61b9-4fd3-8552-f43cad1c38c9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:29.028Z"
+    },
+    {
+      "id": "37e6583b-17c5-4584-b5e1-2289958cf7ee",
+      "name": "PYR5 L2-A",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L2-A Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "37e6583b-17c5-4584-b5e1-2289958cf7ee",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:29.523Z"
+    },
+    {
+      "id": "1ffca91c-17f2-4961-88e6-9ee0306b8362",
+      "name": "PYR5 L2-A Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1ffca91c-17f2-4961-88e6-9ee0306b8362",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:30.088Z"
+    },
+    {
+      "id": "d89e9d41-3313-4a47-bac8-3db037572d14",
+      "name": "PYR5 L2-B",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L2-B Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d89e9d41-3313-4a47-bac8-3db037572d14",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:30.725Z"
+    },
+    {
+      "id": "1c87a26f-a925-4293-b17d-68b71a005baa",
+      "name": "PYR5 L2-B Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1c87a26f-a925-4293-b17d-68b71a005baa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:31.301Z"
+    },
+    {
+      "id": "9348bd13-88c7-4df3-a929-1115d96bad49",
+      "name": "PYR5 L2-C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L2-C Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9348bd13-88c7-4df3-a929-1115d96bad49",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:31.905Z"
+    },
+    {
+      "id": "c5ddf4dc-6a5c-4d3f-a0b7-7330f229b9a7",
+      "name": "PYR5 L2-C Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c5ddf4dc-6a5c-4d3f-a0b7-7330f229b9a7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:32.465Z"
+    },
+    {
+      "id": "f448cc45-e602-41b2-a0ac-e7c70fb6f174",
+      "name": "PYR5 L2-D",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L2-D Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f448cc45-e602-41b2-a0ac-e7c70fb6f174",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:33.088Z"
+    },
+    {
+      "id": "c8cd0f56-a0d8-4e50-b133-9b4a078409e9",
+      "name": "PYR5 L2-D Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c8cd0f56-a0d8-4e50-b133-9b4a078409e9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:33.884Z"
+    },
+    {
+      "id": "4871fbe5-4330-46e0-8648-cd561d8c09f4",
+      "name": "PYR5 L3",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Private Mining Point Pyro5 L3 001",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Private Mining Point Pyro5 L3 002",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L3-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L3-B",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L3-C",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L3-D",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4871fbe5-4330-46e0-8648-cd561d8c09f4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:34.652Z"
+    },
+    {
+      "id": "a9dcab55-cf6c-4e21-ab8a-1ad208b1889e",
+      "name": "PYR5 L3-A",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L3-A Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a9dcab55-cf6c-4e21-ab8a-1ad208b1889e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:35.237Z"
+    },
+    {
+      "id": "7d1d0fd5-7bc4-4abe-b79c-2b878a20f07f",
+      "name": "PYR5 L3-A Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7d1d0fd5-7bc4-4abe-b79c-2b878a20f07f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:35.714Z"
+    },
+    {
+      "id": "0e7d6bf4-7307-414a-82f4-a8b6e7739a62",
+      "name": "PYR5 L3-B",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L3-B Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0e7d6bf4-7307-414a-82f4-a8b6e7739a62",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:36.247Z"
+    },
+    {
+      "id": "59dea495-d6a9-4743-ae54-5ebbc305a8c9",
+      "name": "PYR5 L3-B Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "59dea495-d6a9-4743-ae54-5ebbc305a8c9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:36.830Z"
+    },
+    {
+      "id": "426da010-5438-4c9f-893d-c27331ff6db1",
+      "name": "PYR5 L3-C",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L3-C Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "426da010-5438-4c9f-893d-c27331ff6db1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:37.341Z"
+    },
+    {
+      "id": "eb657d13-7642-4c95-bcae-34a5bf607725",
+      "name": "PYR5 L3-C Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "eb657d13-7642-4c95-bcae-34a5bf607725",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:38.067Z"
+    },
+    {
+      "id": "d5da19c8-3cd5-4b8d-9b70-611a3195e488",
+      "name": "PYR5 L3-D",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L3-D Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d5da19c8-3cd5-4b8d-9b70-611a3195e488",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:38.591Z"
+    },
+    {
+      "id": "f3273795-3c2f-438e-b75c-7e94893b53b0",
+      "name": "PYR5 L3-D Entrance",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f3273795-3c2f-438e-b75c-7e94893b53b0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:39.078Z"
+    },
+    {
+      "id": "0abc4180-a91a-4052-8517-e83ae2689410",
+      "name": "PYR5 L4",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Private Mining Point Pyro5 L4 001",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Private Mining Point Pyro5 L4 002",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L4-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L4-B",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L4-C",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "PYR5 L4-D",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0abc4180-a91a-4052-8517-e83ae2689410",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:39.683Z"
+    },
+    {
+      "id": "2c3e9baf-9254-4a71-840c-71271d234c54",
+      "name": "PYR5 L4-A",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PYR5 L4-A Entrance",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2c3e9baf-9254-4a71-840c-71271d234c54",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:29:40.308Z"
     }
   ]
 }
