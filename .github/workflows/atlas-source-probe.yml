@@ -21,7 +21,7 @@ jobs:
           const catalog=JSON.parse((await import('node:fs')).readFileSync('data/wiki-atlas.json','utf8'));
           const base='https://api.star-citizen.wiki';
           for(const url of [
-            '/api/commodities?page%5Bsize%5D=2&version='+encodeURIComponent(catalog.version),
+            '/api/commodities?page%5Bsize%5D=200&version='+encodeURIComponent(catalog.version),
             '/api/missions?page%5Bsize%5D=2&version='+encodeURIComponent(catalog.version),
             '/api/locations/'+encodeURIComponent(catalog.locations.find(l=>l.id)?.id||'')+'/commodities?page%5Bsize%5D=2&version='+encodeURIComponent(catalog.version)
           ]){
@@ -30,7 +30,7 @@ jobs:
               let r;try{r=await fetch(base+url,{signal:c.signal,headers:{Accept:'application/json'}})}finally{clearTimeout(timer)}
               const result=await r.json();
               console.log('PROBE',url.split('?')[0],'status',r.status,'meta',JSON.stringify(result.meta||{}).slice(0,250));
-              console.log('DATA',JSON.stringify((result.data||[]).slice?.(0,2)||result.data||{}).slice(0,4200));
+              console.log('DATA',JSON.stringify(Array.isArray(result.data)?(result.data.filter(x=>x.locations?.length).slice(0,3).length?result.data.filter(x=>x.locations?.length).slice(0,3):result.data.slice(0,2)):result.data||{}).slice(0,7000));
             }catch(e){console.warn('PROBE ERROR',url.split('?')[0],String(e))}
           }
           JS
