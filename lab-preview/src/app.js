@@ -522,6 +522,12 @@ function updateAtlasQuality(d){
  const pct=Math.round(100*c.actionable/c.total);
  el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
  const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas API solo geográficas · '+(d.seedOnlyCounts?.total||0)+' fichas curadas fuera del catálogo API · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín · '+(c.withWeapons||0)+' con armas · '+(c.withTrade||0)+' con comercio · '+(c.withHazards||0)+' con peligros';
+ const perSystem=document.createElement('div');perSystem.className='atlas-quality-systems';
+ for(const [name,stats] of Object.entries(d.systems||{})){
+  const line=document.createElement('div');
+  line.textContent=name+': '+(stats.actionable||0)+' / '+(stats.total||0)+' fichas con algún dato operativo';
+  perSystem.append(line);
+ }
  const note=document.createElement('small');note.textContent='Fichas curadas coincidentes: '+c.curated+' · fichas curadas fuera del catálogo API: '+(d.seedOnlyCounts?.total||0)+'. Una ficha con datos no implica dossier completo. Auditoría: '+(d.qualityGeneratedAt||'fecha desconocida');
  el.append(title,desc,perSystem,note);el.dataset.loaded='true';
 }
