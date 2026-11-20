@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T16:43:41.912Z",
-  "commodityGeneratedAt": "2026-11-20T16:43:44.350Z",
+  "generatedAt": "2026-11-20T17:14:25.836Z",
+  "commodityGeneratedAt": "2026-11-20T17:14:28.056Z",
   "commodityCoverage": {
     "commoditiesScanned": 206,
     "resourceCommodities": 72,
@@ -10,7 +10,7 @@
     "resourceLinks": 2580,
     "unmatchedLocationLinks": 0
   },
-  "enrichedGeneratedAt": "2026-11-20T16:43:41.912Z",
+  "enrichedGeneratedAt": "2026-11-20T17:14:25.836Z",
   "catalogTotal": 2017,
   "enrichedCount": 2017,
   "coverage": {
@@ -19,6 +19,8 @@
     "nearby": 247
   },
   "counts": {
+    "resourceAssociationsOnly": 228,
+    "verifiedOperationalExcludingCommodityAssociations": 32,
     "total": 2017,
     "consulted": 2017,
     "curated": 46,
@@ -59,5 +61,5 @@
     "withLoot": 0,
     "withServices": 10
   },
-  "qualityGeneratedAt": "2026-11-20T16:43:44.465Z"
+  "qualityGeneratedAt": "2026-11-20T17:14:28.147Z"
 }

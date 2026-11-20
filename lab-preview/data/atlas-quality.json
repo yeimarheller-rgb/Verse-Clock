@@ -69,9 +69,11 @@
   ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T16:43:44.465Z",
-  "definition": "Actionable = at least one of missions, resources, services, PvE, PvP, loot, weapons, trade or hazards. GeographicOnly = none. A field is not proof of in-game availability.",
+  "generatedAt": "2026-11-20T17:14:28.147Z",
+  "definition": "Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.",
   "counts": {
+    "resourceAssociationsOnly": 228,
+    "verifiedOperationalExcludingCommodityAssociations": 32,
     "total": 2017,
     "consulted": 2017,
     "curated": 46,
