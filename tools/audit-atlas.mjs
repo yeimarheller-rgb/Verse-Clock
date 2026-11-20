@@ -30,11 +30,25 @@ for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.
  evidence[domain]=refs.length?refs:[{kind:'untraced',claim:'domain flagged but no evidence path'}];
  }
  records.push({id:p.id,name:p.name,system:p.system,parent:p.parent||null,type:p.type||null,flags,actionableDomains:actionable,evidence})}
+// Reproducible research queue, not gameplay claims: prioritise missing tactical domains at named installations.
+const priorityPattern=/hathor|station|distribution|facility|outpost|bunker|settlement|depot|laboratory|lab|mining|mine|refinery|port|gateway/i;
+const priorityScore=p=>{
+ const name=(p.name+' '+(p.type||'')).toLowerCase();
+ const focus=/hathor/i.test(name)?100:/station|gateway|port|refinery/i.test(name)?70:/distribution|facility|outpost|bunker|settlement|depot|lab/i.test(name)?55:/mine|mining/i.test(name)?35:0;
+ const missing=['missions','pve','pvp','loot','weapons','trade','hazards','services'].filter(d=>!p.flags[d]);
+ return {score:focus+missing.length,missing};
+};
+const researchQueue=records.filter(p=>priorityPattern.test(p.name+' '+(p.type||''))).map(p=>{
+ const q=priorityScore(p);
+ return {id:p.id,name:p.name,system:p.system,type:p.type,score:q.score,missingDomains:q.missing,existingEvidence:p.evidence};
+}).sort((a,b)=>b.score-a.score||a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+const researchSummary={total:researchQueue.length,hathor:researchQueue.filter(p=>/hathor/i.test(p.name)).length,stations:researchQueue.filter(p=>/station|gateway|port/i.test(p.name+' '+p.type)).length,withoutPvp:researchQueue.filter(p=>p.missingDomains.includes('pvp')).length};
+
 // Report curated records absent from the API as separate records; never silently discard them.
 const seedOnlyCounts={total:seedOnly.length,withTacticalIntel:seedOnly.filter(p=>!!p.tacticalIntel).length,withLoot:seedOnly.filter(p=>!!p.lootIntel).length,withServices:seedOnly.filter(p=>Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))).length};
 if(counts.total!==catalog.locations.length||counts.actionable+counts.geographicOnly!==counts.total)throw Error('Inconsistent atlas audit totals');
 const evidenceCoverage={traced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.some(r=>r.kind!=='untraced'))).length,untraced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.every(r=>r.kind==='untraced'))).length};
-const report={evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
+const report={researchSummary,researchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
 await writeFile('lab-preview/data/atlas-quality.json',JSON.stringify(report,null,2)+'\n');
 // Lightweight manifest for the browser: the full per-location audit remains available for offline inspection.
 const meta={
@@ -46,7 +60,7 @@ const meta={
  catalogTotal:report.counts.total,
  enrichedCount:enriched.version===catalog.version?enriched.locations.length:0,
  coverage:enriched.version===catalog.version?(enriched.coverage||{}):{},
- counts:report.counts,systems:report.systems,seedOnlyCounts:report.seedOnlyCounts,
+ counts:report.counts,systems:report.systems,researchSummary:report.researchSummary,seedOnlyCounts:report.seedOnlyCounts,
  qualityGeneratedAt:report.generatedAt
 };
 await writeFile('lab-preview/data/atlas-meta.json',JSON.stringify(meta,null,2)+'\n');

@@ -9,4 +9,12 @@ assert.equal(c.verifiedOperationalExcludingCommodityAssociations+c.resourceAssoc
 
 for(const rec of a.records){assert.ok(rec.evidence&&typeof rec.evidence==='object','missing evidence map');for(const [domain,refs] of Object.entries(rec.evidence)){assert.equal(rec.flags[domain],true,'evidence without flag: '+domain);assert.ok(Array.isArray(refs)&&refs.length,'empty evidence: '+domain);for(const ref of refs){assert.ok(['location-api','commodity-api','curated','untraced'].includes(ref.kind),'unknown evidence kind');if(ref.kind==='location-api')assert.ok(ref.url.includes(encodeURIComponent(rec.id)),'location source mismatch');}}}
 assert.ok(a.evidenceCoverage.traced<=c.actionable);
+assert.equal(a.researchQueue.length,a.researchSummary.total);
+assert.equal(new Set(a.researchQueue.map(x=>x.id)).size,a.researchQueue.length);
+for(const item of a.researchQueue){
+ assert.ok(a.records.some(r=>r.id===item.id),'unknown research target');
+ assert.ok(item.missingDomains.every(d=>a.records.find(r=>r.id===item.id).flags[d]===false),'incorrect missing domain');
+ assert.ok(Number.isFinite(item.score),'missing priority score');
+}
+assert.ok(a.researchQueue.every((x,i,arr)=>i===0||arr[i-1].score>=x.score),'research queue not sorted');
 console.log('Atlas quality audit validated:',c.total,'locations,',c.actionable,'with operational evidence');
