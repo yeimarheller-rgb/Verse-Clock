@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:24:31.048Z",
+  "generatedAt": "2026-11-20T01:24:45.432Z",
   "catalogTotal": 2017,
-  "enrichedCount": 600,
+  "enrichedCount": 625,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 31
+    "nearby": 32
   },
   "locations": [
     {
@@ -9811,6 +9811,392 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:24:30.868Z"
+    },
+    {
+      "id": "d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c",
+      "name": "Onyx Facility S4C5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:33.348Z"
+    },
+    {
+      "id": "e2e3c600-166e-4106-bd7c-22b10a6974c5",
+      "name": "Onyx Facility S4C6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e2e3c600-166e-4106-bd7c-22b10a6974c5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:33.836Z"
+    },
+    {
+      "id": "4348d7fd-2988-451e-870b-3a096e489515",
+      "name": "Onyx Facility S4C7",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4348d7fd-2988-451e-870b-3a096e489515",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:34.345Z"
+    },
+    {
+      "id": "5bd716d5-a185-43d5-a1b8-abc16ba8064f",
+      "name": "Onyx Facility S4C8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5bd716d5-a185-43d5-a1b8-abc16ba8064f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:34.801Z"
+    },
+    {
+      "id": "69a5933c-083e-4ab4-a38d-eb8858c6cb8c",
+      "name": "Onyx Facility S4C9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "69a5933c-083e-4ab4-a38d-eb8858c6cb8c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:35.275Z"
+    },
+    {
+      "id": "c1e86db7-ee74-45fe-8ae7-d7d01fe6b91a",
+      "name": "Operations Depot Lyria-1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c1e86db7-ee74-45fe-8ae7-d7d01fe6b91a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:35.734Z"
+    },
+    {
+      "id": "75674e67-2bc0-4b90-a51f-dff7ecceaf3e",
+      "name": "Orbituary Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "75674e67-2bc0-4b90-a51f-dff7ecceaf3e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:36.282Z"
+    },
+    {
+      "id": "567f92d7-d34c-42fa-b57b-f1939d4c5f5b",
+      "name": "Orison",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Orison General",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Vision Center",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "567f92d7-d34c-42fa-b57b-f1939d4c5f5b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:36.763Z"
+    },
+    {
+      "id": "1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+      "name": "Orison General",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:37.191Z"
+    },
+    {
+      "id": "bcc76508-8eb4-4813-8368-4d7abfb89ec7",
+      "name": "Ostler's Claim",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bcc76508-8eb4-4813-8368-4d7abfb89ec7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:37.676Z"
+    },
+    {
+      "id": "5d70de1f-9aa2-422a-a1d8-371c29480148",
+      "name": "Outpost 54",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5d70de1f-9aa2-422a-a1d8-371c29480148",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:38.117Z"
+    },
+    {
+      "id": "af133812-bbf1-4d3f-adfa-90d5aec5ea50",
+      "name": "Outpost 54",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "af133812-bbf1-4d3f-adfa-90d5aec5ea50",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:38.618Z"
+    },
+    {
+      "id": "fbf318bb-ebb9-4037-ba4b-2f1213979e2f",
+      "name": "Outpost 54",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fbf318bb-ebb9-4037-ba4b-2f1213979e2f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:39.195Z"
+    },
+    {
+      "id": "d213b013-c8fe-4ad3-9ec6-5c00a7a37aef",
+      "name": "Outpost 54",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d213b013-c8fe-4ad3-9ec6-5c00a7a37aef",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:39.657Z"
+    },
+    {
+      "id": "8ed083df-11ff-41e2-97fd-36f2ecdbd23b",
+      "name": "P6 L1_Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8ed083df-11ff-41e2-97fd-36f2ecdbd23b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:40.094Z"
+    },
+    {
+      "id": "32c39b0d-2fc3-48a4-8aac-7109c6e491bd",
+      "name": "Paradise Cove",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "32c39b0d-2fc3-48a4-8aac-7109c6e491bd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:40.727Z"
+    },
+    {
+      "id": "56f0ddd4-3db5-4b10-9e52-a314eb01611e",
+      "name": "Patch City Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "56f0ddd4-3db5-4b10-9e52-a314eb01611e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:41.300Z"
+    },
+    {
+      "id": "b15c830d-2be3-4df7-a721-0b28a86f64bf",
+      "name": "Picker's Field",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b15c830d-2be3-4df7-a721-0b28a86f64bf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:41.807Z"
+    },
+    {
+      "id": "45b64473-b7fb-424f-ab55-993560b0a991",
+      "name": "Point Wain Emergency Shelter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "45b64473-b7fb-424f-ab55-993560b0a991",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:42.259Z"
+    },
+    {
+      "id": "c000ea75-90f8-49ab-9225-a5e938273dd1",
+      "name": "Port Tressler Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c000ea75-90f8-49ab-9225-a5e938273dd1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:42.752Z"
+    },
+    {
+      "id": "c6987a08-91bf-4fda-93be-62d03b344a8d",
+      "name": "PRIVATE PROPERTY",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c6987a08-91bf-4fda-93be-62d03b344a8d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:43.310Z"
+    },
+    {
+      "id": "8233ce04-4baa-424a-a1c5-9a4ee2898a7e",
+      "name": "Prophet's Peak",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8233ce04-4baa-424a-a1c5-9a4ee2898a7e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:43.794Z"
+    },
+    {
+      "id": "c5d50aca-fea4-41f5-a094-9785bc55e39c",
+      "name": "Prospect Depot",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c5d50aca-fea4-41f5-a094-9785bc55e39c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:44.303Z"
+    },
+    {
+      "id": "8a55463e-e472-4871-833b-dc0747af7b7d",
+      "name": "Prospect Point",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8a55463e-e472-4871-833b-dc0747af7b7d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:44.803Z"
+    },
+    {
+      "id": "f903ba70-e567-4b71-9062-26c8f58dcd99",
+      "name": "Prospect Point",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f903ba70-e567-4b71-9062-26c8f58dcd99",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:45.251Z"
     }
   ]
 }
