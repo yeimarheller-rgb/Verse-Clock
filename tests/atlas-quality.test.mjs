@@ -9,6 +9,13 @@ assert.equal(c.verifiedOperationalExcludingCommodityAssociations+c.resourceAssoc
 
 for(const rec of a.records){assert.ok(rec.evidence&&typeof rec.evidence==='object','missing evidence map');for(const [domain,refs] of Object.entries(rec.evidence)){assert.equal(rec.flags[domain],true,'evidence without flag: '+domain);assert.ok(Array.isArray(refs)&&refs.length,'empty evidence: '+domain);for(const ref of refs){assert.ok(['location-api','commodity-api','curated','curated-unverified','untraced'].includes(ref.kind),'unknown evidence kind');if(ref.kind==='curated-unverified')assert.ok(!ref.sourceUrls?.length,'unverified record has source URLs');if(ref.kind==='curated')assert.ok(ref.sourceUrls?.length,'curated record lacks source URLs');if(ref.kind==='location-api')assert.ok(ref.url.includes(encodeURIComponent(rec.id)),'location source mismatch');}}}
 assert.ok(a.evidenceCoverage.traced<=c.actionable);
+assert.ok(a.tacticalCoverageAny>=0&&a.tacticalCoverageAny<=c.total);
+for(const domain of ['missions','pve','pvp','loot','weapons','trade','hazards']){
+ const d=a.tacticalCoverage[domain];assert.ok(d,'missing tactical coverage: '+domain);
+ assert.ok(d.apiLinked<=d.sourceLinked&&d.sourceLinked<=d.reported&&d.reported<=c.total,'invalid domain coverage: '+domain);
+ assert.equal(d.reported,a.records.filter(p=>p.flags[domain]).length,'domain mismatch: '+domain);
+}
+
 assert.equal(a.researchQueue.length,a.researchSummary.total);
 assert.equal(a.seedOnlyResearchQueue.length,a.seedOnlyCounts.total);
 for(const item of a.seedOnlyResearchQueue){assert.ok(item.name&&item.system);assert.ok(item.missingDomains.every(d=>['missions','pve','pvp','loot','weapons','trade','hazards','services'].includes(d)));assert.ok(item.reason.includes('no exact API catalog match'));}
