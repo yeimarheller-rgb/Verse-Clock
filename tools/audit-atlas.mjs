@@ -59,8 +59,16 @@ const seedOnlyResearchQueue=seedOnly.map(p=>{
 }).sort((x,y)=>y.score-x.score||x.name.localeCompare(y.name));
 
 if(counts.total!==catalog.locations.length||counts.actionable+counts.geographicOnly!==counts.total)throw Error('Inconsistent atlas audit totals');
+// A fetched location detail is NOT equivalent to tactical coverage. Count each domain separately.
+const tacticalDomains=['missions','pve','pvp','loot','weapons','trade','hazards'];
+const tacticalCoverage=Object.fromEntries(tacticalDomains.map(domain=>[domain,{
+  reported:records.filter(p=>p.flags[domain]).length,
+  sourceLinked:records.filter(p=>(p.evidence[domain]||[]).some(e=>e.kind==='location-api'||(e.kind==='curated'&&e.sourceUrls?.length))).length,
+  apiLinked:records.filter(p=>(p.evidence[domain]||[]).some(e=>e.kind==='location-api')).length
+}]));
+const tacticalCoverageAny=records.filter(p=>tacticalDomains.some(domain=>(p.evidence[domain]||[]).some(e=>e.kind==='location-api'||(e.kind==='curated'&&e.sourceUrls?.length)))).length;
 const evidenceCoverage={traced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.some(r=>!['untraced','curated-unverified'].includes(r.kind)))).length,untraced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.every(r=>['untraced','curated-unverified'].includes(r.kind)))).length};
-const report={researchSummary,researchQueue,seedOnlyResearchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
+const report={tacticalCoverage,tacticalCoverageAny,researchSummary,researchQueue,seedOnlyResearchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
 await writeFile('lab-preview/data/atlas-quality.json',JSON.stringify(report,null,2)+'\n');
 // Lightweight manifest for the browser: the full per-location audit remains available for offline inspection.
 const meta={
@@ -72,7 +80,7 @@ const meta={
  catalogTotal:report.counts.total,
  enrichedCount:enriched.version===catalog.version?enriched.locations.length:0,
  coverage:enriched.version===catalog.version?(enriched.coverage||{}):{},
- counts:report.counts,systems:report.systems,researchSummary:report.researchSummary,seedOnlyResearchTotal:report.seedOnlyResearchQueue.length,seedOnlyCounts:report.seedOnlyCounts,
+ counts:report.counts,tacticalCoverage:report.tacticalCoverage,tacticalCoverageAny:report.tacticalCoverageAny,systems:report.systems,researchSummary:report.researchSummary,seedOnlyResearchTotal:report.seedOnlyResearchQueue.length,seedOnlyCounts:report.seedOnlyCounts,
  qualityGeneratedAt:report.generatedAt
 };
 await writeFile('lab-preview/data/atlas-meta.json',JSON.stringify(meta,null,2)+'\n');
