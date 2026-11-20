@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:24:01.012Z",
+  "generatedAt": "2026-11-20T01:24:15.892Z",
   "catalogTotal": 2017,
-  "enrichedCount": 550,
+  "enrichedCount": 575,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -9061,6 +9061,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:24:00.831Z"
+    },
+    {
+      "id": "b904a57b-e9f1-4ab7-bb72-dcd579134ec8",
+      "name": "Onyx Facility S2C5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b904a57b-e9f1-4ab7-bb72-dcd579134ec8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:03.501Z"
+    },
+    {
+      "id": "8e1ea4a8-f5a8-492d-a286-db6c1f593cd3",
+      "name": "Onyx Facility S2C6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8e1ea4a8-f5a8-492d-a286-db6c1f593cd3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:03.968Z"
+    },
+    {
+      "id": "4055face-6586-4451-bb25-d52748c973b3",
+      "name": "Onyx Facility S2C7",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4055face-6586-4451-bb25-d52748c973b3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:04.502Z"
+    },
+    {
+      "id": "9eae6f2b-a463-4c84-9d9e-ff9abf0c459d",
+      "name": "Onyx Facility S2C8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9eae6f2b-a463-4c84-9d9e-ff9abf0c459d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:04.958Z"
+    },
+    {
+      "id": "2254bf96-3ccc-49e7-b45e-9d9baf2830dc",
+      "name": "Onyx Facility S2C9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2254bf96-3ccc-49e7-b45e-9d9baf2830dc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:05.592Z"
+    },
+    {
+      "id": "516eccdb-df66-4329-9771-9acb3232e52a",
+      "name": "Onyx Facility S3A1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "516eccdb-df66-4329-9771-9acb3232e52a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:06.131Z"
+    },
+    {
+      "id": "c7e23987-5b0e-4492-ad11-dd35c90012f6",
+      "name": "Onyx Facility S3A10",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c7e23987-5b0e-4492-ad11-dd35c90012f6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:06.617Z"
+    },
+    {
+      "id": "5e302473-4f46-47ac-8876-65aacda327bc",
+      "name": "Onyx Facility S3A2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5e302473-4f46-47ac-8876-65aacda327bc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:07.098Z"
+    },
+    {
+      "id": "766e0cbc-3006-4657-bae5-1a0698afdbaf",
+      "name": "Onyx Facility S3A3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "766e0cbc-3006-4657-bae5-1a0698afdbaf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:07.641Z"
+    },
+    {
+      "id": "bff3e50b-e199-4e1a-b8ab-bbba98d8466e",
+      "name": "Onyx Facility S3A4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bff3e50b-e199-4e1a-b8ab-bbba98d8466e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:08.249Z"
+    },
+    {
+      "id": "ed1533da-4c93-43ff-a63c-5ef53569f061",
+      "name": "Onyx Facility S3A5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ed1533da-4c93-43ff-a63c-5ef53569f061",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:08.811Z"
+    },
+    {
+      "id": "7a16cc9f-91f7-46fc-9067-3204ca436e3d",
+      "name": "Onyx Facility S3A6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7a16cc9f-91f7-46fc-9067-3204ca436e3d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:09.315Z"
+    },
+    {
+      "id": "3a69951d-e53b-40f7-8d84-fda9b9cee8d2",
+      "name": "Onyx Facility S3A7",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3a69951d-e53b-40f7-8d84-fda9b9cee8d2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:09.921Z"
+    },
+    {
+      "id": "97b3d622-96d9-4281-be82-07b6fa61a112",
+      "name": "Onyx Facility S3A8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "97b3d622-96d9-4281-be82-07b6fa61a112",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:10.448Z"
+    },
+    {
+      "id": "3e9349f8-7c92-4ac1-9541-b818bfa1894e",
+      "name": "Onyx Facility S3A9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3e9349f8-7c92-4ac1-9541-b818bfa1894e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:10.946Z"
+    },
+    {
+      "id": "418bb171-3bd7-4482-ac13-d0b51bc50392",
+      "name": "Onyx Facility S3B1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "418bb171-3bd7-4482-ac13-d0b51bc50392",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:11.418Z"
+    },
+    {
+      "id": "96a83d7c-d3ab-4bcd-8d4c-80cf4bfe3190",
+      "name": "Onyx Facility S3B10",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "96a83d7c-d3ab-4bcd-8d4c-80cf4bfe3190",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:11.897Z"
+    },
+    {
+      "id": "c1bf2ebc-1eaf-4ee8-9d4f-eec040e2dd90",
+      "name": "Onyx Facility S3B2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c1bf2ebc-1eaf-4ee8-9d4f-eec040e2dd90",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:12.375Z"
+    },
+    {
+      "id": "4ea3e912-e04e-40cb-83e9-d992dc571aa5",
+      "name": "Onyx Facility S3B3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4ea3e912-e04e-40cb-83e9-d992dc571aa5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:12.836Z"
+    },
+    {
+      "id": "9990ac77-c300-47ab-80ba-89f2d32a4fa1",
+      "name": "Onyx Facility S3B4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9990ac77-c300-47ab-80ba-89f2d32a4fa1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:13.299Z"
+    },
+    {
+      "id": "294e4d2e-1e5d-4255-96a6-b35daad96613",
+      "name": "Onyx Facility S3B5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "294e4d2e-1e5d-4255-96a6-b35daad96613",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:13.796Z"
+    },
+    {
+      "id": "00e7f077-e8c8-4775-afeb-e4921c4da7c0",
+      "name": "Onyx Facility S3B6",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "00e7f077-e8c8-4775-afeb-e4921c4da7c0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:14.266Z"
+    },
+    {
+      "id": "070dbfd6-da9a-42f0-9900-1b04e4899bd9",
+      "name": "Onyx Facility S3B7",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "070dbfd6-da9a-42f0-9900-1b04e4899bd9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:14.751Z"
+    },
+    {
+      "id": "4b8a930f-719d-49eb-b134-356b2ff70040",
+      "name": "Onyx Facility S3B8",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4b8a930f-719d-49eb-b134-356b2ff70040",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:15.219Z"
+    },
+    {
+      "id": "c2c4f9cf-e4bd-42f2-8998-a349fda30973",
+      "name": "Onyx Facility S3B9",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c2c4f9cf-e4bd-42f2-8998-a349fda30973",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:24:15.712Z"
     }
   ]
 }
