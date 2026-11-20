@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:25:19.235Z",
+  "generatedAt": "2026-11-20T01:25:34.550Z",
   "catalogTotal": 2017,
-  "enrichedCount": 675,
+  "enrichedCount": 700,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -10947,6 +10947,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:25:19.055Z"
+    },
+    {
+      "id": "05ea1954-aa2f-4138-b5f1-b8788723dad2",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "05ea1954-aa2f-4138-b5f1-b8788723dad2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:21.586Z"
+    },
+    {
+      "id": "9ff4affc-0e88-4e1d-82ea-22a9b4b33de4",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9ff4affc-0e88-4e1d-82ea-22a9b4b33de4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:22.119Z"
+    },
+    {
+      "id": "7e06e50e-516c-4b0c-8f18-d99fa205ac30",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7e06e50e-516c-4b0c-8f18-d99fa205ac30",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:22.665Z"
+    },
+    {
+      "id": "52618fbf-e992-42fc-996b-a16bc7f7734d",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "52618fbf-e992-42fc-996b-a16bc7f7734d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:23.266Z"
+    },
+    {
+      "id": "ff10b6b7-7434-451c-bf69-22de89892c26",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ff10b6b7-7434-451c-bf69-22de89892c26",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:23.853Z"
+    },
+    {
+      "id": "e4b95984-e845-45c3-94b9-a5fdc3d8dba6",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e4b95984-e845-45c3-94b9-a5fdc3d8dba6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:24.306Z"
+    },
+    {
+      "id": "4eba1c40-2896-4718-a6b6-37ac5b3a855c",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4eba1c40-2896-4718-a6b6-37ac5b3a855c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:24.886Z"
+    },
+    {
+      "id": "ae248b5c-da78-49c3-a032-bce260d99a41",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ae248b5c-da78-49c3-a032-bce260d99a41",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:25.345Z"
+    },
+    {
+      "id": "93680154-37a6-47b2-b063-f0df3bdb6303",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "93680154-37a6-47b2-b063-f0df3bdb6303",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:25.802Z"
+    },
+    {
+      "id": "424fefd2-e76b-4cd5-a932-b1b945da495e",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "424fefd2-e76b-4cd5-a932-b1b945da495e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:26.508Z"
+    },
+    {
+      "id": "c1f64882-9f73-4c43-b475-94ce96d94187",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c1f64882-9f73-4c43-b475-94ce96d94187",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:27.146Z"
+    },
+    {
+      "id": "fee07eba-b396-4524-aadd-35f2f3fa0c73",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fee07eba-b396-4524-aadd-35f2f3fa0c73",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:27.617Z"
+    },
+    {
+      "id": "827206a3-a815-4b44-8fe4-5bb44a6bf259",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "827206a3-a815-4b44-8fe4-5bb44a6bf259",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:28.178Z"
+    },
+    {
+      "id": "25468056-1a2c-488f-a8b5-b1fe760eeca9",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "25468056-1a2c-488f-a8b5-b1fe760eeca9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:28.625Z"
+    },
+    {
+      "id": "e4d12b71-aa56-4fe6-a5fe-7ecb4d2721dd",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e4d12b71-aa56-4fe6-a5fe-7ecb4d2721dd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:29.329Z"
+    },
+    {
+      "id": "e53ac009-4faa-4c5f-b205-25243505c305",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e53ac009-4faa-4c5f-b205-25243505c305",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:29.926Z"
+    },
+    {
+      "id": "8d777695-b177-4818-8625-060749392e11",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8d777695-b177-4818-8625-060749392e11",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:30.414Z"
+    },
+    {
+      "id": "28a944a4-a72b-4407-abd1-786224f1c333",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "28a944a4-a72b-4407-abd1-786224f1c333",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:30.915Z"
+    },
+    {
+      "id": "c82edfb2-3491-46fb-a76f-1e364739855f",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c82edfb2-3491-46fb-a76f-1e364739855f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:31.444Z"
+    },
+    {
+      "id": "5635024e-d98e-4c57-bc63-6f476f92ac8a",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5635024e-d98e-4c57-bc63-6f476f92ac8a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:31.930Z"
+    },
+    {
+      "id": "f19dd3c8-31f8-476a-b951-971852d508e4",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f19dd3c8-31f8-476a-b951-971852d508e4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:32.436Z"
+    },
+    {
+      "id": "22ddc448-c35e-4b94-bee2-8db2e98eea40",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "22ddc448-c35e-4b94-bee2-8db2e98eea40",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:32.917Z"
+    },
+    {
+      "id": "bd26c883-04e9-4d45-81f6-296ab1e039eb",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bd26c883-04e9-4d45-81f6-296ab1e039eb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:33.405Z"
+    },
+    {
+      "id": "a6257eeb-62ed-4c63-886b-29d8258ddc34",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a6257eeb-62ed-4c63-886b-29d8258ddc34",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:33.924Z"
+    },
+    {
+      "id": "ef986934-6dfe-4473-8c9a-f6d97096e22f",
+      "name": "QV Extraction Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ef986934-6dfe-4473-8c9a-f6d97096e22f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:25:34.370Z"
     }
   ]
 }
