@@ -29,3 +29,23 @@ test('reject unlinked commodity, unknown UUID and inventory-like commodity',()=>
 test('reject malformed or versionless catalog',()=>{
  assert.throws(()=>buildCommodityIndex({locations:[]},[]));
 });
+
+test('published resource index references only exact catalog UUIDs on the same patch',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const [catalog,linked]=await Promise.all([
+  readFile('lab-preview/data/wiki-atlas.json','utf8').then(JSON.parse),
+  readFile('lab-preview/data/atlas-commodities.json','utf8').then(JSON.parse)
+ ]);
+ const ids=new Set(catalog.locations.map(l=>l.id));
+ assert.equal(linked.version,catalog.version);
+ assert.equal(linked.counts.linkedLocations,linked.locations.length);
+ assert.ok(linked.locations.length>0,'Nonempty verified resource index');
+ for(const location of linked.locations){
+  assert.ok(ids.has(location.id),'Commodity cannot attach to unknown location '+location.id);
+  for(const resource of location.resources){
+   assert.equal(resource.source.locationUuid,location.id);
+   assert.equal(resource.source.version,catalog.version);
+   assert.ok(resource.name);
+  }
+ }
+});
