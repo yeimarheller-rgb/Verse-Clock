@@ -685,7 +685,23 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Plataforma orbital OLP",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Exploración de salas orbitales; acceso y actividad dependen del estado del evento.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Contenedores y salas de almacenamiento de la plataforma; equipo y componentes variables.",
+          "El láser orbital habilita acceso a minería especial del evento, no botín garantizado dentro de la OLP."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-attritus-paf-i",
@@ -700,7 +716,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-attritus-paf-ii",
@@ -715,7 +748,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-attritus-paf-iii",
@@ -730,7 +780,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-lamina-olp",
@@ -745,7 +812,23 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Plataforma orbital OLP",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Exploración de salas orbitales; acceso y actividad dependen del estado del evento.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Contenedores y salas de almacenamiento de la plataforma; equipo y componentes variables.",
+          "El láser orbital habilita acceso a minería especial del evento, no botín garantizado dentro de la OLP."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-lamina-paf-i",
@@ -760,7 +843,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-lamina-paf-ii",
@@ -775,7 +875,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-lamina-paf-iii",
@@ -790,7 +907,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-ruptura-olp",
@@ -805,7 +939,23 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Plataforma orbital OLP",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Exploración de salas orbitales; acceso y actividad dependen del estado del evento.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Contenedores y salas de almacenamiento de la plataforma; equipo y componentes variables.",
+          "El láser orbital habilita acceso a minería especial del evento, no botín garantizado dentro de la OLP."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-ruptura-paf-i",
@@ -820,7 +970,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-ruptura-paf-ii",
@@ -835,7 +1002,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-ruptura-paf-iii",
@@ -850,7 +1034,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-vivere-olp",
@@ -865,7 +1066,23 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Plataforma orbital OLP",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Exploración de salas orbitales; acceso y actividad dependen del estado del evento.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Contenedores y salas de almacenamiento de la plataforma; equipo y componentes variables.",
+          "El láser orbital habilita acceso a minería especial del evento, no botín garantizado dentro de la OLP."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-vivere-paf-i",
@@ -880,7 +1097,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-vivere-paf-ii",
@@ -895,7 +1129,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     },
     {
       "id": "hathor-vivere-paf-iii",
@@ -910,7 +1161,24 @@
         "https://starcitizen.tools/Align_%26_Mine"
       ],
       "verification": "source-listed",
-      "patch": "4.10 · verificar persistencia"
+      "patch": "4.10 · verificar persistencia",
+      "lootIntel": {
+        "scope": "Instalación PAF de superficie",
+        "status": "Fuentes comunitarias; botín aleatorio, sin tasa de aparición ni confirmación de stock LIVE",
+        "solo": "Registro de contenedores y salas de PAF; acceso condicionado por misión, tarjeta y presencia hostil.",
+        "org": "Coordinar tres PAF, plataforma orbital y apertura de cueva con láser; extracción de minerales especiales.",
+        "categories": [
+          "Armas especiales documentadas en guías: Custodian Executive Edition, C54 Luckbringer / Justified, Karna Rager, S71 Justified, Pulverizer LMG, Killshot.",
+          "Armaduras reportadas: Antium, Morningstar, Aztalan, Morozov, Pembroke, Novikov, Overlord, Deadhead.",
+          "Componentes reportados: Forcewall, Allstop, Veil, Regulus, FierrelCascade, Dynaflux, Arctic."
+        ],
+        "mining": "Cueva asociada al evento: Carinite, Jaclium y Saldynium; también se documentan minerales FPS comunes. Requiere completar alineación y activación del láser; no atribuir a la PAF.",
+        "caveat": "Listas procedentes de guías del evento; sin confirmación de aparición individual en 4.10.3.",
+        "sources": [
+          "https://www.citadelsc.com/es/guides/hathor",
+          "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      }
     }
   ]
 }
