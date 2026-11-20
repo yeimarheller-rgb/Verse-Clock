@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:20:39.746Z",
+  "generatedAt": "2026-11-20T15:20:55.636Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1600,
+  "enrichedCount": 1625,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 92
+    "nearby": 95
   },
   "locations": [
     {
@@ -28732,6 +28732,409 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T15:20:39.565Z"
+    },
+    {
+      "id": "28e220ba-ba74-42eb-bae5-382475eba65d",
+      "name": "Orbituary",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Contested Zone",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Contested Zone",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Orbituary Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "28e220ba-ba74-42eb-bae5-382475eba65d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:42.184Z"
+    },
+    {
+      "id": "f494ba12-1f8d-4512-a92a-e9dd8985d6d2",
+      "name": "P6 L1_Habs",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f494ba12-1f8d-4512-a92a-e9dd8985d6d2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:43.258Z"
+    },
+    {
+      "id": "430316d5-f330-4e6c-93b8-823a062689db",
+      "name": "Patch City",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Patch City Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "430316d5-f330-4e6c-93b8-823a062689db",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:43.914Z"
+    },
+    {
+      "id": "233238ee-adeb-4405-8045-49fa07370f37",
+      "name": "Port Tressler",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Port Tressler Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "233238ee-adeb-4405-8045-49fa07370f37",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:44.334Z"
+    },
+    {
+      "id": "8cf0fd37-1de3-49af-a176-17e1067cff08",
+      "name": "Private Mining Point Pyro",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8cf0fd37-1de3-49af-a176-17e1067cff08",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:44.762Z"
+    },
+    {
+      "id": "e67e189a-ee06-469b-9b0c-9364ff19677d",
+      "name": "Private Mining Point Pyro1 L4 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e67e189a-ee06-469b-9b0c-9364ff19677d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:45.240Z"
+    },
+    {
+      "id": "2c55a32a-daeb-4c29-a846-f75c176ee799",
+      "name": "Private Mining Point Pyro1 L5 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2c55a32a-daeb-4c29-a846-f75c176ee799",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:45.916Z"
+    },
+    {
+      "id": "12c8c9bd-0a2e-4eb9-af22-ffe824b2837c",
+      "name": "Private Mining Point Pyro1 L5 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "12c8c9bd-0a2e-4eb9-af22-ffe824b2837c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:46.553Z"
+    },
+    {
+      "id": "e8d52708-11c3-4d2c-b888-c41405d01d36",
+      "name": "Private Mining Point Pyro5 L3 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e8d52708-11c3-4d2c-b888-c41405d01d36",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:47.140Z"
+    },
+    {
+      "id": "82178125-b82a-43d2-b35c-402158e6ea48",
+      "name": "Private Mining Point Pyro5 L3 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "82178125-b82a-43d2-b35c-402158e6ea48",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:47.804Z"
+    },
+    {
+      "id": "954f9eae-b077-437d-aa09-5703850af486",
+      "name": "Private Mining Point Pyro5 L4 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "954f9eae-b077-437d-aa09-5703850af486",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:48.331Z"
+    },
+    {
+      "id": "44b89435-a0cc-4ddd-97c4-55a5c3c7ef3e",
+      "name": "Private Mining Point Pyro5 L4 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "44b89435-a0cc-4ddd-97c4-55a5c3c7ef3e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:48.852Z"
+    },
+    {
+      "id": "82478f0b-8a67-4a29-9e7e-793ccd0b5697",
+      "name": "Private Mining Point Pyro5 L5 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "82478f0b-8a67-4a29-9e7e-793ccd0b5697",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:49.279Z"
+    },
+    {
+      "id": "3370dbcc-f8bc-40b9-a385-296612116eb3",
+      "name": "Private Mining Point Pyro5 L5 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3370dbcc-f8bc-40b9-a385-296612116eb3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:49.949Z"
+    },
+    {
+      "id": "474e04c2-43a8-4035-9c9c-b4e56e4f4580",
+      "name": "Private Mining Point Pyro6 L1 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "474e04c2-43a8-4035-9c9c-b4e56e4f4580",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:50.471Z"
+    },
+    {
+      "id": "dd7643a7-1280-4120-9fe1-3013dd1ec192",
+      "name": "Private Mining Point Pyro6 L1 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dd7643a7-1280-4120-9fe1-3013dd1ec192",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:50.925Z"
+    },
+    {
+      "id": "7395117d-e618-47dc-a007-8d2bdbbe78e9",
+      "name": "Private Mining Point Pyro6 L2 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7395117d-e618-47dc-a007-8d2bdbbe78e9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:51.356Z"
+    },
+    {
+      "id": "0b8adf09-445a-4699-b2fd-579754f516ac",
+      "name": "Private Mining Point Pyro6 L2 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0b8adf09-445a-4699-b2fd-579754f516ac",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:51.875Z"
+    },
+    {
+      "id": "d83689ad-d961-44ef-bbd8-922c3ac2acf2",
+      "name": "Private Mining Point Pyro6 L3 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d83689ad-d961-44ef-bbd8-922c3ac2acf2",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:52.538Z"
+    },
+    {
+      "id": "ed954e60-d6b8-4cc1-9522-fca1b6edee72",
+      "name": "Private Mining Point Pyro6 L3 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ed954e60-d6b8-4cc1-9522-fca1b6edee72",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:53.168Z"
+    },
+    {
+      "id": "13ec8bbe-f600-45c8-a4b8-2df2600709fa",
+      "name": "Private Mining Point Pyro6 L4 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "13ec8bbe-f600-45c8-a4b8-2df2600709fa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:53.655Z"
+    },
+    {
+      "id": "34b4b062-efea-464c-bfd5-4b3db4f6d588",
+      "name": "Private Mining Point Pyro6 L4 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "34b4b062-efea-464c-bfd5-4b3db4f6d588",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:54.049Z"
+    },
+    {
+      "id": "ee1a279b-20dc-45f3-88e8-5acb2e67c848",
+      "name": "Private Mining Point Pyro6 L5 001",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ee1a279b-20dc-45f3-88e8-5acb2e67c848",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:54.452Z"
+    },
+    {
+      "id": "903c48b3-446b-4ed7-9650-2bf53796e81b",
+      "name": "Private Mining Point Pyro6 L5 002",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "903c48b3-446b-4ed7-9650-2bf53796e81b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:54.936Z"
+    },
+    {
+      "id": "5110de08-be14-4fe5-830d-c0c748e8e045",
+      "name": "PYAM-EXHANG-0-1",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5110de08-be14-4fe5-830d-c0c748e8e045",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:20:55.455Z"
     }
   ]
 }
