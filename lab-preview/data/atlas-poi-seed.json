@@ -689,7 +689,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -740,6 +744,24 @@
         "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -753,7 +775,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -818,6 +844,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -831,7 +875,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -896,6 +944,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -909,7 +975,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -974,6 +1044,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -987,7 +1075,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1038,6 +1130,24 @@
         "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1051,7 +1161,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1116,6 +1230,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1129,7 +1261,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1194,6 +1330,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1207,7 +1361,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1272,6 +1430,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1285,7 +1461,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1336,6 +1516,24 @@
         "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1349,7 +1547,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1414,6 +1616,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1427,7 +1647,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1492,6 +1716,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1505,7 +1747,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1571,6 +1817,24 @@
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
         ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
+        ]
       }
     },
     {
@@ -1583,7 +1847,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1635,6 +1903,24 @@
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine"
         ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
+        ]
       }
     },
     {
@@ -1647,7 +1933,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1712,6 +2002,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1725,7 +2033,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1790,6 +2102,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
@@ -1803,7 +2133,11 @@
       "services": {},
       "sourceUrls": [
         "https://www.citadelsc.com/es/guides/hathor",
-        "https://starcitizen.tools/Align_%26_Mine"
+        "https://starcitizen.tools/Align_%26_Mine",
+        "https://starcitizen.tools/Hathor_Group",
+        "https://starcitizen.tools/Planetary_alignment_facilities",
+        "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+        "https://www.sc-advisory.space/"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1868,6 +2202,24 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
+        ]
+      },
+      "operationalNotes": {
+        "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
+        "activity": "Align & Mine: las tres PAF de un conjunto habilitan su OLP; las baterías se trasladan a la plataforma para activar el láser.",
+        "missionContext": "Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas.",
+        "failureRisks": [
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
+        ],
+        "pvp": "Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado.",
+        "loot": "La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
+        "sources": [
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       }
     },
