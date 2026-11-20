@@ -15,7 +15,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-24.04
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,10 +25,25 @@ jobs:
           node-version: '22'
       - name: Importar ubicaciones de Star Citizen Wiki API
         run: node tools/sync-wiki-atlas.mjs data
-      - name: Enriquecer ubicaciones por API de detalle (lote incremental)
+      - name: Publicar catálogo actualizado
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f data/wiki-atlas.json lab-preview/data/wiki-atlas.json
+          if ! git diff --cached --quiet; then git commit -m 'data: refresh atlas catalog'; git pull --rebase origin main; git push origin HEAD:main; fi
+      - name: Enriquecer y publicar progreso en 10 lotes de 25
         env:
-          ATLAS_BATCH: '250'
-        run: node tools/enrich-atlas.mjs
+          ATLAS_BATCH: '25'
+        run: |
+          for i in $(seq 1 10); do
+            node tools/enrich-atlas.mjs
+            git add -f lab-preview/data/atlas-enriched.json
+            if git diff --cached --quiet; then echo 'Sin datos nuevos'; break; fi
+            git commit -m "data: atlas enrichment batch $i"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo "Lote $i publicado"
+          done
       - name: Verificar snapshot
         run: |
           node --input-type=module -e "import fs from 'node:fs'; const d=JSON.parse(fs.readFileSync('data/wiki-atlas.json')); if(d.locations.length<100 || !d.version)process.exit(1); console.log(d.version,d.locations.length,d.counts)"
