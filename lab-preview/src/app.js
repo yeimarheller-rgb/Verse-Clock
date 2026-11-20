@@ -409,6 +409,14 @@ function renderPoi(){
  }
 }
 for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
+function updateAtlasProgress(d){
+ const total=Number(d.catalogTotal)||2017,count=Math.max(0,Math.min(total,Number(d.enrichedCount)||0)),percent=total?100*count/total:0;
+ $('atlasProgressBar').dataset.loaded='true';$('atlasProgressBar').setAttribute('aria-valuemax',String(total));$('atlasProgressBar').setAttribute('aria-valuenow',String(count));
+ $('atlasProgressFill').style.width=percent.toFixed(2)+'%';$('atlasProgressPercent').textContent=percent.toFixed(1)+'%';
+ $('atlasProgressCount').textContent=count.toLocaleString('es-ES')+' / '+total.toLocaleString('es-ES')+' ubicaciones consultadas';
+ $('atlasProgressUpdated').textContent=d.generatedAt?'Actualizado: '+new Date(d.generatedAt).toLocaleString('es-ES'):'Fecha desconocida';
+ const c=d.coverage;if(c)$('atlasProgressQuality').textContent='Con misiones: '+(c.missions||0)+' · Con recursos: '+(c.resources||0)+' · Con lugares vinculados: '+(c.nearby||0)+' · Consultado ≠ información completa';
+}
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=p=>[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
@@ -421,7 +429,8 @@ async function loadAtlas(){
    for(const p of d.locations){if(!p.name||!p.system)continue;const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
- try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();if(ed.version===version&&Array.isArray(ed.locations)){for(const e of ed.locations){const current=[...byKey.values()].find(p=>p.id===e.id||p.source?.uuid===e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
+ try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();updateAtlasProgress(ed);if(ed.version===version&&Array.isArray(ed.locations)){for(const e of ed.locations){const current=[...byKey.values()].find(p=>p.id===e.id||p.source?.uuid===e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
+ if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Datos de progreso no disponibles';$('atlasProgressUpdated').textContent='Sin snapshot de enriquecimiento';}
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  if(input.value.trim())updateMenu();
  if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
