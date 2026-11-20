@@ -332,7 +332,7 @@ function derivedLocationIntel(p){
 
 
 function universalIntel(p){
- const out=[];const add=(heading,items)=>{if(!Array.isArray(items)||!items.length)return;out.push('━━ '+heading+' ━━');for(const item of items){if(typeof item==='string'){out.push('◇ '+item);continue}if(!item||typeof item!=='object')continue;const label=item.name||item.label||item.title||'Dato';const detail=item.detail||item.description||item.location||'';const evidence=[item.confidence||item.status,item.patch,item.source?.provider||item.source].filter(x=>typeof x==='string'&&x).join(' · ');out.push('◇ '+label+(evidence?' ['+evidence+']':'')+(detail?': '+detail:''))}};
+ const out=[];const add=(heading,items)=>{if(!Array.isArray(items)||!items.length)return;out.push('━━ '+heading+' ━━');for(const item of items){if(typeof item==='string'){out.push('◇ '+item);continue}if(!item||typeof item!=='object')continue;const label=item.name||item.label||item.title||'Dato';const detail=item.detail||item.description||item.location||'';const evidence=[item.confidence||item.status,item.patch||item.source?.version,item.checkedAt?('revisado '+String(item.checkedAt).slice(0,10)):null,item.source?.provider||item.source].filter(x=>typeof x==='string'&&x).join(' · ');out.push('◇ '+label+(evidence?' ['+evidence+']':'')+(detail?': '+detail:''))}};
  add('ACTIVIDADES Y CONTRATOS',p.activities);
  add('MISIONES DOCUMENTADAS',p.missions);
  add('BOTÍN POR INSTALACIÓN',p.lootItems);
