@@ -432,7 +432,9 @@ function showPoiDestination(p){
 $('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
 function renderPoi(){
  const q=poiQuery.value.trim().toLocaleLowerCase('es');
- const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&[p.name,p.system,p.parent,p.operator,p.type].filter(Boolean).join(' ').toLocaleLowerCase('es').includes(q));
+ const normalize=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
+ const queryTerms=normalize(q).split(/\\s+/).filter(Boolean);
+ const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term)));
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
@@ -440,8 +442,9 @@ function renderPoi(){
  const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.textContent=p.name;
  const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type].filter(Boolean).join(' · ');
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
+ const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
- card.append(h,meta,org,svc);
+ card.append(h,meta,org,intel,svc);
  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
  card.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:p}));
  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseSearchResult({kind:'poi',value:p})}});
@@ -483,7 +486,7 @@ async function loadAtlasQuality(){
  const d=await r.json(),c=d.counts;if(!c||!c.total)throw Error('Sin recuento');
  const pct=Math.round(100*c.actionable/c.total);
  el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
- const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas solo geográficas · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín';
+ const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas API solo geográficas · '+(d.seedOnlyCounts?.total||0)+' fichas curadas fuera del catálogo API · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín';
  const note=document.createElement('small');note.textContent='Fichas curadas coincidentes: '+c.curated+' · fichas curadas fuera del catálogo API: '+(d.seedOnly?.length||0)+'. Una ficha con datos no implica dossier completo. Auditoría: '+(d.generatedAt||'fecha desconocida');
  el.append(title,desc,note);
  }catch(e){el.textContent='Auditoría global pendiente de publicación; no se presume cobertura completa.'}

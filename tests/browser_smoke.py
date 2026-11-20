@@ -74,6 +74,7 @@ with sync_playwright() as p:
             pg.wait_for_timeout(200)
             dossier=pg.locator('#mainIntelApi').inner_text()
             if 'Valakkar' not in dossier or 'PASO 1' not in dossier:fails.append(f'{name}: dossier Lazarus incompleto')
+        pg.fill('#poiQuery','Valakkar') if pg.locator('#poiQuery').count() else None
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()
