@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T14:36:52.476Z",
+  "generatedAt": "2026-11-20T14:37:07.712Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1100,
+  "enrichedCount": 1125,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 32
+    "nearby": 33
   },
   "locations": [
     {
@@ -17322,6 +17322,392 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T14:36:52.296Z"
+    },
+    {
+      "id": "87355510-d265-4438-8f8e-f24e94ddb872",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "87355510-d265-4438-8f8e-f24e94ddb872",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:54.692Z"
+    },
+    {
+      "id": "04ed3779-3103-44e7-9cd2-e546b86980f3",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "04ed3779-3103-44e7-9cd2-e546b86980f3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:55.135Z"
+    },
+    {
+      "id": "bdbc57f9-0aa8-445e-81fc-a4dd54f96396",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bdbc57f9-0aa8-445e-81fc-a4dd54f96396",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:55.584Z"
+    },
+    {
+      "id": "ba7fc12c-60ad-4149-990f-2d31d61bdfdb",
+      "name": "RSI Event Platform",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ba7fc12c-60ad-4149-990f-2d31d61bdfdb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:55.996Z"
+    },
+    {
+      "id": "81b83bac-9131-40dc-93fa-e0dbef20bf20",
+      "name": "Ruin Clinic",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "81b83bac-9131-40dc-93fa-e0dbef20bf20",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:56.520Z"
+    },
+    {
+      "id": "1c585a2e-73c4-4bc5-8922-e0b434b8c8ea",
+      "name": "Ruin Station",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Ghost Arena",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Ruin Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1c585a2e-73c4-4bc5-8922-e0b434b8c8ea",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:57.068Z"
+    },
+    {
+      "id": "503140df-5c78-4c7b-881d-6579cebebf48",
+      "name": "Ruptura OLP",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "503140df-5c78-4c7b-881d-6579cebebf48",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:57.456Z"
+    },
+    {
+      "id": "8f72468e-c228-41aa-85ce-c21ff2549081",
+      "name": "Ruptura PAF-I",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8f72468e-c228-41aa-85ce-c21ff2549081",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:57.853Z"
+    },
+    {
+      "id": "1f0b749c-6cd7-4939-bede-e95f2b4b821f",
+      "name": "Ruptura PAF-II",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1f0b749c-6cd7-4939-bede-e95f2b4b821f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:58.317Z"
+    },
+    {
+      "id": "b82aecbe-cae0-4424-8305-abada59c44cd",
+      "name": "Ruptura PAF-III",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b82aecbe-cae0-4424-8305-abada59c44cd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:58.736Z"
+    },
+    {
+      "id": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8",
+      "name": "Rustville",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:59.185Z"
+    },
+    {
+      "id": "310f1f19-11f7-45b1-b897-0685b01ab570",
+      "name": "Sacren's Plot",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "310f1f19-11f7-45b1-b897-0685b01ab570",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:36:59.798Z"
+    },
+    {
+      "id": "fa4360b9-23e1-4138-816f-9462f795b05f",
+      "name": "Sakura Sun Goldenrod Workcenter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fa4360b9-23e1-4138-816f-9462f795b05f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:00.233Z"
+    },
+    {
+      "id": "f4b081d7-1c8d-44ec-bd5e-98b19d377c4e",
+      "name": "Sakura Sun Magnolia Workcenter",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f4b081d7-1c8d-44ec-bd5e-98b19d377c4e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:00.679Z"
+    },
+    {
+      "id": "de9ef24d-c292-4ed7-89e5-ee8c3cbed68e",
+      "name": "Samson & Son's Salvage Center",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "de9ef24d-c292-4ed7-89e5-ee8c3cbed68e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:01.117Z"
+    },
+    {
+      "id": "d8c6513e-dcab-4a96-8a80-6ca4098acd71",
+      "name": "Scarper's Turn",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d8c6513e-dcab-4a96-8a80-6ca4098acd71",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:01.602Z"
+    },
+    {
+      "id": "18463c18-1721-4ccc-a8a2-1e89aeac6bdc",
+      "name": "Scuttle",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "18463c18-1721-4ccc-a8a2-1e89aeac6bdc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:02.067Z"
+    },
+    {
+      "id": "d3efa1e0-51bc-4722-9908-8f1c2569fa03",
+      "name": "Security Post Awala",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d3efa1e0-51bc-4722-9908-8f1c2569fa03",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:02.548Z"
+    },
+    {
+      "id": "9087bd72-c37f-4b97-8672-972497d13336",
+      "name": "Security Post Birbari",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9087bd72-c37f-4b97-8672-972497d13336",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:02.956Z"
+    },
+    {
+      "id": "33f746f2-7220-4409-b0a4-54fac0212148",
+      "name": "Security Post Chilad",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "33f746f2-7220-4409-b0a4-54fac0212148",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:05.274Z"
+    },
+    {
+      "id": "7ddb6441-0a15-42ef-8e0b-82b04b03340a",
+      "name": "Security Post Dawu",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7ddb6441-0a15-42ef-8e0b-82b04b03340a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:05.715Z"
+    },
+    {
+      "id": "51957e6d-3ade-44ba-b5d7-65edcf866333",
+      "name": "Security Post Erden",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "51957e6d-3ade-44ba-b5d7-65edcf866333",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:06.163Z"
+    },
+    {
+      "id": "38366e0d-acf6-47f1-b4ea-b5b68214dfe1",
+      "name": "Security Post Gandan",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "38366e0d-acf6-47f1-b4ea-b5b68214dfe1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:06.607Z"
+    },
+    {
+      "id": "18b355f3-d4ec-48fd-9be0-e1c653108e33",
+      "name": "Security Post Hasik",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "18b355f3-d4ec-48fd-9be0-e1c653108e33",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:07.007Z"
+    },
+    {
+      "id": "df104c35-41af-45ff-8e14-aa08904a219f",
+      "name": "Security Post Iteke",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "df104c35-41af-45ff-8e14-aa08904a219f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T14:37:07.531Z"
     }
   ]
 }
