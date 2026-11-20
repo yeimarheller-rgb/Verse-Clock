@@ -461,10 +461,11 @@ function updateAtlasProgress(d){
 async function mergeFreshIntel(d){
  if(!Array.isArray(d.locations)||!poiData?.length)return;
  const byUuid=new Map(d.locations.map(x=>[x.id,x]));
+ const selectedKey=p=>[String(p.system||'').replace(/\s+system$/i,'').trim(),p.name||''].join('|').toLocaleLowerCase('es');
  let changed=false;
  poiData=poiData.map(p=>{const e=byUuid.get(p.source?.uuid||p.id);if(!e)return p;changed=true;return {...p,missions:e.missions||p.missions||[],resources:e.resources||p.resources||[],nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt}});
  if(!changed)return;
- if(selectedPoiKey){const p=poiData.find(x=>[x.system||'',x.name||''].join('|').toLocaleLowerCase('es')===selectedPoiKey);if(p)applyPoiToMain(p)}
+ if(selectedPoiKey){const p=poiData.find(x=>selectedKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
  if(input.value.trim())updateMenu();
  renderPoi();
 }
@@ -483,7 +484,7 @@ async function loadAtlasQuality(){
  const pct=Math.round(100*c.actionable/c.total);
  el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
  const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas solo geográficas · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín';
- const note=document.createElement('small');note.textContent='Una ficha con datos no implica dossier completo. Auditoría: '+(d.generatedAt||'fecha desconocida');
+ const note=document.createElement('small');note.textContent='Fichas curadas coincidentes: '+c.curated+' · fichas curadas fuera del catálogo API: '+(d.seedOnly?.length||0)+'. Una ficha con datos no implica dossier completo. Auditoría: '+(d.generatedAt||'fecha desconocida');
  el.append(title,desc,note);
  }catch(e){el.textContent='Auditoría global pendiente de publicación; no se presume cobertura completa.'}
 }
