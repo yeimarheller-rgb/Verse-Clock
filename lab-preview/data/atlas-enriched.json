@@ -1,0 +1,2149 @@
+{
+  "schemaVersion": 1,
+  "version": "4.10.3-LIVE.13165946",
+  "generatedAt": "2026-11-20T00:57:26.089Z",
+  "catalogTotal": 2017,
+  "enrichedCount": 100,
+  "locations": [
+    {
+      "id": "f867c263-f34c-4064-84f6-49e5a9f99e71",
+      "name": "<= UNINITIALIZED =>",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f867c263-f34c-4064-84f6-49e5a9f99e71",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:34.264Z"
+    },
+    {
+      "id": "f6cb8264-90b6-467e-93ba-a4eb6f5d5adf",
+      "name": "Asteroid Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f6cb8264-90b6-467e-93ba-a4eb6f5d5adf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:34.791Z"
+    },
+    {
+      "id": "f0551966-135c-41bd-a1b2-b79d30503c95",
+      "name": "Asteroid Cluster",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f0551966-135c-41bd-a1b2-b79d30503c95",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:35.319Z"
+    },
+    {
+      "id": "0a5d7fba-89e8-4558-9ea7-09497b3046ea",
+      "name": "Asteroid Cluster",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0a5d7fba-89e8-4558-9ea7-09497b3046ea",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:35.842Z"
+    },
+    {
+      "id": "944737c5-fdfb-45ef-8514-5565c8da5240",
+      "name": "Asteroid Cluster Base Nyx Social",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "944737c5-fdfb-45ef-8514-5565c8da5240",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:36.464Z"
+    },
+    {
+      "id": "51ebd535-3053-4790-99e6-093433ff3119",
+      "name": "Asteroid Cluster Base Nyx Social G 001",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Mercy Hospital",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "51ebd535-3053-4790-99e6-093433ff3119",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:36.993Z"
+    },
+    {
+      "id": "4a92b0e1-be94-401e-b549-7e1ac00a657d",
+      "name": "Asteroid Cluster Delamar 100Km",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4a92b0e1-be94-401e-b549-7e1ac00a657d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:37.571Z"
+    },
+    {
+      "id": "fb69b343-181c-4f49-8bdf-44582aa7246d",
+      "name": "Asteroid Cluster Delamar 150Km",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fb69b343-181c-4f49-8bdf-44582aa7246d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:38.467Z"
+    },
+    {
+      "id": "636dc325-fe33-4955-8c4e-ee81600b9b28",
+      "name": "Asteroid Cluster Delamar 55Km",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "636dc325-fe33-4955-8c4e-ee81600b9b28",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:38.954Z"
+    },
+    {
+      "id": "7ee7edbf-1b77-4fb5-9fa3-d2b86ba99052",
+      "name": "Asteroid Mining Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7ee7edbf-1b77-4fb5-9fa3-d2b86ba99052",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:39.457Z"
+    },
+    {
+      "id": "efdaa0b6-1f7f-4b30-a3fa-b2d50248957e",
+      "name": "Asteroid Mining Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "efdaa0b6-1f7f-4b30-a3fa-b2d50248957e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:39.965Z"
+    },
+    {
+      "id": "6b14c5fc-68e9-4bc6-ae12-1a27eb036b81",
+      "name": "Asteroid Mining Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6b14c5fc-68e9-4bc6-ae12-1a27eb036b81",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:40.454Z"
+    },
+    {
+      "id": "0c39de63-bb45-496e-8029-0ed91580c84a",
+      "name": "Delamar",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Asteroid Cluster Delamar 100Km",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster Delamar 150Km",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster Delamar 55Km",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #8PB-H2A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #A2J-2LQ",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #JK7-L0L",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #N0S-4R2",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #N4I-FN8",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #R2D-C3P",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #TWU-19T",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #Y55-06R",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0c39de63-bb45-496e-8029-0ed91580c84a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:40.969Z"
+    },
+    {
+      "id": "eb8fbb27-d630-4a9f-9791-fe99caabf9f1",
+      "name": "Glaciem 001",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "eb8fbb27-d630-4a9f-9791-fe99caabf9f1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:41.531Z"
+    },
+    {
+      "id": "15be8bc1-cb5b-4a94-ba1c-742baf7c1f0b",
+      "name": "Glaciem Ring",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "15be8bc1-cb5b-4a94-ba1c-742baf7c1f0b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:42.107Z"
+    },
+    {
+      "id": "71a74381-0078-493a-84bb-03eb82e88a12",
+      "name": "Glaciem Ring Mission Location",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "71a74381-0078-493a-84bb-03eb82e88a12",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:42.589Z"
+    },
+    {
+      "id": "0bbad0b9-54f6-4f05-9feb-11a5791e049f",
+      "name": "Keeger 001",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0bbad0b9-54f6-4f05-9feb-11a5791e049f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:43.058Z"
+    },
+    {
+      "id": "db2883b7-5d6e-4eb2-9e00-4f86e8e49447",
+      "name": "Keeger Belt",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "db2883b7-5d6e-4eb2-9e00-4f86e8e49447",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:43.564Z"
+    },
+    {
+      "id": "d9fed388-6aaa-40a5-837f-51a54fd9f0d3",
+      "name": "Keeger Belt Cluster",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d9fed388-6aaa-40a5-837f-51a54fd9f0d3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:44.125Z"
+    },
+    {
+      "id": "57cbf576-4f78-401b-881d-7ff52f2666a8",
+      "name": "Keeger Belt Mission Location",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "57cbf576-4f78-401b-881d-7ff52f2666a8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:44.628Z"
+    },
+    {
+      "id": "468d4102-a210-47b5-8bc3-084f791a173c",
+      "name": "Levski",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Mercy Hospital",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "468d4102-a210-47b5-8bc3-084f791a173c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:45.152Z"
+    },
+    {
+      "id": "5d1a53cc-fcea-4571-8416-482295f79571",
+      "name": "Mercy Hospital",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5d1a53cc-fcea-4571-8416-482295f79571",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:45.696Z"
+    },
+    {
+      "id": "720b9776-5b37-4671-9fbb-f7d79a05847a",
+      "name": "Mercy Hospital",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "720b9776-5b37-4671-9fbb-f7d79a05847a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:46.210Z"
+    },
+    {
+      "id": "983c868c-dca1-48be-a5da-a22d95cc6541",
+      "name": "Mining Claim #8PB-H2A",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "983c868c-dca1-48be-a5da-a22d95cc6541",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:46.709Z"
+    },
+    {
+      "id": "fd62f17a-c46a-4ac0-9352-28f46bd7bef4",
+      "name": "Mining Claim #A2J-2LQ",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fd62f17a-c46a-4ac0-9352-28f46bd7bef4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:47.363Z"
+    },
+    {
+      "id": "7c663520-7b01-4b17-ab30-03dde80eefa9",
+      "name": "Mining Claim #JK7-L0L",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7c663520-7b01-4b17-ab30-03dde80eefa9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:47.838Z"
+    },
+    {
+      "id": "a82b87a6-d0d3-44c9-9509-d49128c4f941",
+      "name": "Mining Claim #N0S-4R2",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a82b87a6-d0d3-44c9-9509-d49128c4f941",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:48.354Z"
+    },
+    {
+      "id": "865120e3-bda7-408f-928c-ef3afabc19c1",
+      "name": "Mining Claim #N4I-FN8",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "865120e3-bda7-408f-928c-ef3afabc19c1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:48.873Z"
+    },
+    {
+      "id": "aaa1e82a-1017-4133-8856-40043ffea5ba",
+      "name": "Mining Claim #R2D-C3P",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "aaa1e82a-1017-4133-8856-40043ffea5ba",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:49.356Z"
+    },
+    {
+      "id": "548bc567-f28b-4749-ad17-93ef6df67b71",
+      "name": "Mining Claim #TWU-19T",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "548bc567-f28b-4749-ad17-93ef6df67b71",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:49.879Z"
+    },
+    {
+      "id": "5ea6a7e4-0b55-4d49-bb8b-00fe7c730684",
+      "name": "Mining Claim #Y55-06R",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5ea6a7e4-0b55-4d49-bb8b-00fe7c730684",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:50.351Z"
+    },
+    {
+      "id": "1140b5a3-48a9-4028-ae85-1d50bc400a18",
+      "name": "Moraine Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1140b5a3-48a9-4028-ae85-1d50bc400a18",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:50.831Z"
+    },
+    {
+      "id": "a08b21df-0fe9-4342-a1e6-b408bf56d803",
+      "name": "Moraine Base",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a08b21df-0fe9-4342-a1e6-b408bf56d803",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:51.322Z"
+    },
+    {
+      "id": "77ed5653-bd14-4952-b904-afd79faeef60",
+      "name": "Nyx",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Asteroid Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster Base Nyx Social",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Cluster Base Nyx Social G 001",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Mining Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Mining Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Asteroid Mining Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Delamar",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Glaciem 001",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Glaciem Ring",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Glaciem Ring Mission Location",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Keeger 001",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Keeger Belt",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Keeger Belt Cluster",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Keeger Belt Mission Location",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Levski",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Moraine Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Moraine Base",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx - Bremen Jump Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx I",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx II",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx III",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx - Odin Jump Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx - Tohil Jump Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Nyx - Virgil Jump Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "People's Service Station Alpha",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "People's Service Station Delta",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "People's Service Station Lambda",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "People's Service Station Theta",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Pyro Gateway",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-127",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-184",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-204",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-204",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-235",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-267",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-284",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "QV Breaker Station BRK-304",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "77ed5653-bd14-4952-b904-afd79faeef60",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:52.075Z"
+    },
+    {
+      "id": "55d962ba-2cb4-4894-a8cd-24fb76dd8f5c",
+      "name": "Nyx - Bremen Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "55d962ba-2cb4-4894-a8cd-24fb76dd8f5c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:52.566Z"
+    },
+    {
+      "id": "9328b87c-7722-4924-a7ab-ac314488dd5d",
+      "name": "Nyx - Castra Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9328b87c-7722-4924-a7ab-ac314488dd5d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:53.041Z"
+    },
+    {
+      "id": "eda164e7-44be-47b5-937f-8e8a12e3a96a",
+      "name": "Nyx - Odin Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "eda164e7-44be-47b5-937f-8e8a12e3a96a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:53.533Z"
+    },
+    {
+      "id": "63105afc-38df-48cc-b570-8eba703a57d7",
+      "name": "Nyx - Pyro Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "63105afc-38df-48cc-b570-8eba703a57d7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:54.008Z"
+    },
+    {
+      "id": "9c8bc8f8-f869-4017-bc82-228f2bbfc102",
+      "name": "Nyx - Tohil Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9c8bc8f8-f869-4017-bc82-228f2bbfc102",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:54.493Z"
+    },
+    {
+      "id": "53300788-13cd-41cd-93bd-eb92d36d28ff",
+      "name": "Nyx - Virgil Jump Point",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "53300788-13cd-41cd-93bd-eb92d36d28ff",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:55.088Z"
+    },
+    {
+      "id": "2a8a3554-b2f2-489d-a50c-5adff46cbf1b",
+      "name": "Nyx I",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2a8a3554-b2f2-489d-a50c-5adff46cbf1b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:55.690Z"
+    },
+    {
+      "id": "d957a643-a90d-489a-b762-63367ab21249",
+      "name": "Nyx II",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d957a643-a90d-489a-b762-63367ab21249",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:56.327Z"
+    },
+    {
+      "id": "4142e7b3-c868-49c8-bb64-be7a45054bf3",
+      "name": "Nyx III",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4142e7b3-c868-49c8-bb64-be7a45054bf3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:56.975Z"
+    },
+    {
+      "id": "17092f34-d9c8-4d50-89f6-a92940b9cd52",
+      "name": "Nyx System",
+      "system": "Nyx System",
+      "missions": [
+        {
+          "name": "Contrato sin título",
+          "detail": "",
+          "confidence": "API / misión asociada"
+        }
+      ],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "17092f34-d9c8-4d50-89f6-a92940b9cd52",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:57.573Z"
+    },
+    {
+      "id": "8ef8417d-2d3c-4172-8030-63f63b95eed4",
+      "name": "People's Service Station Alpha",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PSS Alpha Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8ef8417d-2d3c-4172-8030-63f63b95eed4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:58.073Z"
+    },
+    {
+      "id": "4939d2da-c098-4d4c-9272-ead91cbb5fa4",
+      "name": "People's Service Station Delta",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PSS Delta Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4939d2da-c098-4d4c-9272-ead91cbb5fa4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:58.571Z"
+    },
+    {
+      "id": "6eb6d82c-637d-4dd6-bf74-d2282983f676",
+      "name": "People's Service Station Lambda",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PSS Lambda Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6eb6d82c-637d-4dd6-bf74-d2282983f676",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:59.038Z"
+    },
+    {
+      "id": "1af3f93e-3ef9-442d-9cb6-a633463a24e5",
+      "name": "People's Service Station Theta",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "PSS Theta Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1af3f93e-3ef9-442d-9cb6-a633463a24e5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:56:59.550Z"
+    },
+    {
+      "id": "77d29b58-d764-41ca-84ee-ffe13af889ba",
+      "name": "PSS Alpha Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "77d29b58-d764-41ca-84ee-ffe13af889ba",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:00.035Z"
+    },
+    {
+      "id": "a1702d0c-bf12-46e6-894b-be39a2292d62",
+      "name": "PSS Delta Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a1702d0c-bf12-46e6-894b-be39a2292d62",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:00.505Z"
+    },
+    {
+      "id": "ee1dbdfc-7dae-4b14-b140-734169b1db08",
+      "name": "PSS Lambda Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ee1dbdfc-7dae-4b14-b140-734169b1db08",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:01.012Z"
+    },
+    {
+      "id": "78d77cdf-3db7-49ec-a147-49d9b4b0150c",
+      "name": "PSS Theta Clinic",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "78d77cdf-3db7-49ec-a147-49d9b4b0150c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:01.574Z"
+    },
+    {
+      "id": "a66119fa-6d93-4e56-bcd1-c9bd2c50beb7",
+      "name": "Pyro Gateway",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Nyx - Pyro Jump Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Terra Gateway Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a66119fa-6d93-4e56-bcd1-c9bd2c50beb7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:02.163Z"
+    },
+    {
+      "id": "f1017b15-7cca-4f7d-bf33-16178571aa72",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f1017b15-7cca-4f7d-bf33-16178571aa72",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:02.732Z"
+    },
+    {
+      "id": "dea7dbcf-cc94-48f4-bdac-f2eb955c2d0d",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dea7dbcf-cc94-48f4-bdac-f2eb955c2d0d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:03.343Z"
+    },
+    {
+      "id": "b6f5c396-3712-4435-8e1c-bf5fa3b1cd41",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b6f5c396-3712-4435-8e1c-bf5fa3b1cd41",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:03.857Z"
+    },
+    {
+      "id": "fa63870c-cbb3-4a7e-8967-9830b0c2bcf3",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fa63870c-cbb3-4a7e-8967-9830b0c2bcf3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:04.356Z"
+    },
+    {
+      "id": "b2c07b4d-2df7-4b86-ba45-c15d9b7a0290",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b2c07b4d-2df7-4b86-ba45-c15d9b7a0290",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:04.889Z"
+    },
+    {
+      "id": "1985c407-b02e-4044-a88e-e6e8474bd126",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1985c407-b02e-4044-a88e-e6e8474bd126",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:05.466Z"
+    },
+    {
+      "id": "1662aba5-c68d-4b28-ab39-045bb0748c8d",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1662aba5-c68d-4b28-ab39-045bb0748c8d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:05.977Z"
+    },
+    {
+      "id": "9e3bee94-dd4d-42aa-b345-c9ae453fef7d",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9e3bee94-dd4d-42aa-b345-c9ae453fef7d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:06.472Z"
+    },
+    {
+      "id": "7d215223-5688-4414-aabe-ff3724b9badd",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7d215223-5688-4414-aabe-ff3724b9badd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:06.991Z"
+    },
+    {
+      "id": "5ea8816e-5215-418f-a312-e9261b053c12",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5ea8816e-5215-418f-a312-e9261b053c12",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:07.475Z"
+    },
+    {
+      "id": "c1f3b0be-1cd3-434f-a68d-27560416718f",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c1f3b0be-1cd3-434f-a68d-27560416718f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:07.958Z"
+    },
+    {
+      "id": "d7a48e5e-3648-4e7c-a28c-ff11a1405753",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d7a48e5e-3648-4e7c-a28c-ff11a1405753",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:08.487Z"
+    },
+    {
+      "id": "33210fa5-559c-43c8-b3ad-2ec41fc31d52",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "33210fa5-559c-43c8-b3ad-2ec41fc31d52",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:08.953Z"
+    },
+    {
+      "id": "af01f884-3261-4d8d-b4e8-988b87a914cc",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "af01f884-3261-4d8d-b4e8-988b87a914cc",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:09.486Z"
+    },
+    {
+      "id": "a90af2b5-2b54-4acd-bcb8-ac6c9cbff188",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a90af2b5-2b54-4acd-bcb8-ac6c9cbff188",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:09.993Z"
+    },
+    {
+      "id": "d31686bd-a3fe-4f12-bb16-f3c2c0366bfb",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "d31686bd-a3fe-4f12-bb16-f3c2c0366bfb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:10.482Z"
+    },
+    {
+      "id": "f27576fa-efaa-49aa-8e74-b22b7dc50ea4",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f27576fa-efaa-49aa-8e74-b22b7dc50ea4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:10.965Z"
+    },
+    {
+      "id": "ad396091-b2d0-4c8e-82b6-1fcbe7429a6a",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ad396091-b2d0-4c8e-82b6-1fcbe7429a6a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:11.865Z"
+    },
+    {
+      "id": "9bc6e1e3-1faf-4bb0-a273-797e918d7231",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9bc6e1e3-1faf-4bb0-a273-797e918d7231",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:12.318Z"
+    },
+    {
+      "id": "4643a0bf-1e85-46ca-817b-eb07b0116249",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4643a0bf-1e85-46ca-817b-eb07b0116249",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:12.812Z"
+    },
+    {
+      "id": "cb5bf63b-cf5b-48e0-8327-1063d1970754",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cb5bf63b-cf5b-48e0-8327-1063d1970754",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:13.270Z"
+    },
+    {
+      "id": "9ad3e571-bc7d-4423-987e-8d09838f0c5f",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9ad3e571-bc7d-4423-987e-8d09838f0c5f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:13.806Z"
+    },
+    {
+      "id": "a60ba194-d4ce-4e6c-9849-0c3992b6738b",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a60ba194-d4ce-4e6c-9849-0c3992b6738b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:14.283Z"
+    },
+    {
+      "id": "f81abeac-6cf9-4e69-b3c5-c31fa06ba5d3",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f81abeac-6cf9-4e69-b3c5-c31fa06ba5d3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:14.809Z"
+    },
+    {
+      "id": "85ec7c84-9ff7-4400-bd35-5e8b20727aea",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "85ec7c84-9ff7-4400-bd35-5e8b20727aea",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:15.307Z"
+    },
+    {
+      "id": "524d14d7-5752-4c07-9ddc-c3fe6b70c141",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "524d14d7-5752-4c07-9ddc-c3fe6b70c141",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:15.813Z"
+    },
+    {
+      "id": "0d963aaa-7a1f-4b12-87fe-2c4ae48ded26",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0d963aaa-7a1f-4b12-87fe-2c4ae48ded26",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:16.273Z"
+    },
+    {
+      "id": "30d324ec-6352-48a5-83a3-b6090e693b39",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "30d324ec-6352-48a5-83a3-b6090e693b39",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:16.777Z"
+    },
+    {
+      "id": "7f5437b5-b69d-4cb0-ae00-7d4c9e2471c0",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7f5437b5-b69d-4cb0-ae00-7d4c9e2471c0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:17.250Z"
+    },
+    {
+      "id": "cd21a10b-9f77-4afb-a8cd-4f27bddec128",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cd21a10b-9f77-4afb-a8cd-4f27bddec128",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:17.711Z"
+    },
+    {
+      "id": "42f77630-6ab2-403b-8443-0dc2c35c8d61",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "42f77630-6ab2-403b-8443-0dc2c35c8d61",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:18.187Z"
+    },
+    {
+      "id": "9474a0ca-26fe-4c7e-8fb0-7cb673d520d9",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9474a0ca-26fe-4c7e-8fb0-7cb673d520d9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:18.671Z"
+    },
+    {
+      "id": "c4b6f8d8-5ca8-4e04-8a0b-434044026747",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c4b6f8d8-5ca8-4e04-8a0b-434044026747",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:19.163Z"
+    },
+    {
+      "id": "5b3fa22b-8614-4859-8b50-c099897ad111",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5b3fa22b-8614-4859-8b50-c099897ad111",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:19.647Z"
+    },
+    {
+      "id": "9f1ea9bd-7a54-40ec-966e-37b478963b78",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9f1ea9bd-7a54-40ec-966e-37b478963b78",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:20.148Z"
+    },
+    {
+      "id": "66afd75f-c41f-405d-ba4e-81706e2b73ff",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "66afd75f-c41f-405d-ba4e-81706e2b73ff",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:20.635Z"
+    },
+    {
+      "id": "a4c1a6e3-5c98-4971-8e7b-71e54def7dfa",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a4c1a6e3-5c98-4971-8e7b-71e54def7dfa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:21.081Z"
+    },
+    {
+      "id": "65628b9f-6eb4-4c4c-b0a3-5197e5c30126",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "65628b9f-6eb4-4c4c-b0a3-5197e5c30126",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:21.540Z"
+    },
+    {
+      "id": "f8c90940-bbc4-4356-9f75-c2a55339c43f",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f8c90940-bbc4-4356-9f75-c2a55339c43f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:22.016Z"
+    },
+    {
+      "id": "5a75f9de-f3ce-4310-a4cf-b6ce906ce0ab",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5a75f9de-f3ce-4310-a4cf-b6ce906ce0ab",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:22.491Z"
+    },
+    {
+      "id": "78f28dd0-5aa1-41f1-90af-b6e2a2250aef",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "78f28dd0-5aa1-41f1-90af-b6e2a2250aef",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:22.951Z"
+    },
+    {
+      "id": "0b7b5935-2d44-4a37-bb5d-c054a94cbe4e",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0b7b5935-2d44-4a37-bb5d-c054a94cbe4e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:23.439Z"
+    },
+    {
+      "id": "f2a8a7b6-1f34-441d-bc69-3cc638150d91",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f2a8a7b6-1f34-441d-bc69-3cc638150d91",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:23.944Z"
+    },
+    {
+      "id": "a7fa4925-176c-4afc-9fb0-0044998419fa",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a7fa4925-176c-4afc-9fb0-0044998419fa",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:24.418Z"
+    },
+    {
+      "id": "f0be1fe1-6072-4fa0-9029-4554ff07f8e4",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f0be1fe1-6072-4fa0-9029-4554ff07f8e4",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:24.961Z"
+    },
+    {
+      "id": "adcc3744-ad7e-4d8a-943e-f55653f0b40e",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "adcc3744-ad7e-4d8a-943e-f55653f0b40e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:25.425Z"
+    },
+    {
+      "id": "39d3eeff-454f-4730-8cde-fea19bb81ab9",
+      "name": "QV Breaker Station",
+      "system": "Nyx System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "39d3eeff-454f-4730-8cde-fea19bb81ab9",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T00:57:25.909Z"
+    }
+  ]
+}
