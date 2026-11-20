@@ -4,6 +4,8 @@ on:
     paths:
       - 'tools/sync-wiki-atlas.mjs'
       - 'tools/audit-atlas.mjs'
+      - 'tools/sync-atlas-commodities.mjs'
+      - 'tools/atlas-commodities-core.mjs'
       - '.github/workflows/atlas-sync.yml'
   workflow_dispatch:
   schedule:
@@ -49,6 +51,8 @@ jobs:
             done
             echo "Lote $i publicado"
           done
+      - name: Importar recursos asociados por UUID a partir del catálogo de mercancías
+        run: node tools/sync-atlas-commodities.mjs
       - name: Auditar calidad de las 2.017 ubicaciones
         run: node tools/audit-atlas.mjs
       - name: Comprobar integridad de auditoría y dominios tácticos
@@ -60,6 +64,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f data/wiki-atlas.json lab-preview/data/wiki-atlas.json lab-preview/data/atlas-enriched.json lab-preview/data/atlas-quality.json lab-preview/data/atlas-meta.json
+          git add -f data/wiki-atlas.json lab-preview/data/wiki-atlas.json lab-preview/data/atlas-enriched.json lab-preview/data/atlas-quality.json lab-preview/data/atlas-commodities.json lab-preview/data/atlas-meta.json
           if git diff --cached --quiet; then echo 'Sin cambios'; else git commit -m 'data: sync Star Citizen Wiki atlas API snapshot'; git pull --rebase origin main
           git push origin HEAD:main; fi
