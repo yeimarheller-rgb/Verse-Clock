@@ -357,13 +357,27 @@ function renderTacticalCards(p,sec,loot){
  const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
  const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
-  ['⚔','PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
-  ['◎','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
-  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['◆','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
-  ['⬡','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
-  ['✚','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
+  ['⚔️','COMBATE PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
+  ['🎯','COMBATE PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
+  ['🎒','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
+  ['📜','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['⛏️','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
+  ['🛠️','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
+ // Las notas operativas curadas deben aparecer en la interfaz, no quedarse ocultas en JSON.
+ const notes=p.operationalNotes||{};
+ const domains=[
+  ['⚔️','PVE / NPC','pve'],['🎯','PVP / JUGADORES','pvp'],
+  ['🎒','BOTÍN','loot'],['🔫','ARMAS','weapons'],
+  ['📜','MISIONES','missions'],['💰','COMERCIO','trade'],
+  ['⚠️','PELIGROS','hazards']
+ ];
+ for(const [symbol,title,key] of domains){
+  const value=notes[key];
+  if(typeof value!=='string'||!value.trim())continue;
+  const unknown=/^(sin |no hay |no existe |no se |servicios no)/i.test(value.trim());
+  cards.push([symbol,title,value,!unknown,'Nota operativa curada · comprobar fuentes y parche']);
+ }
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
