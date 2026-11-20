@@ -317,6 +317,20 @@ function derivedLocationIntel(p){
  return entries;
 }
 
+
+function universalIntel(p){
+ const out=[];const add=(heading,items)=>{if(!Array.isArray(items)||!items.length)return;out.push('━━ '+heading+' ━━');for(const item of items){if(typeof item==='string'){out.push('◇ '+item);continue}if(!item||typeof item!=='object')continue;const label=item.name||item.label||item.title||'Dato';const detail=item.detail||item.description||item.location||'';const evidence=[item.confidence||item.status,item.patch,item.source?.provider||item.source].filter(x=>typeof x==='string'&&x).join(' · ');out.push('◇ '+label+(evidence?' ['+evidence+']':'')+(detail?': '+detail:''))}};
+ add('ACTIVIDADES Y CONTRATOS',p.activities);
+ add('MISIONES DOCUMENTADAS',p.missions);
+ add('BOTÍN POR INSTALACIÓN',p.lootItems);
+ add('RECURSOS Y MINERÍA',p.resources);
+ add('COMERCIO Y PRODUCTOS',p.commodities);
+ add('SERVICIOS Y TIENDAS',p.shops);
+ add('NPC Y AMENAZAS DOCUMENTADAS',p.npcs);
+ add('CONSEJOS TÁCTICOS',p.tacticalTips);
+ return out;
+}
+
 function applyPoiToMain(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('securityThreat').textContent=sec.threat||'Desconocido';
@@ -334,13 +348,15 @@ function applyPoiToMain(p){
  $('mainIntelLocation').hidden=false;
  const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
+ const universal=universalIntel(p);
+ if(universal.length)summary.push(...universal);
  const derived=derivedLocationIntel(p);
  if(derived.length){summary.push('━━ ACTIVIDADES Y DATOS DOCUMENTADOS ━━');summary.push(...derived)}
  const parentBody=locs.find(l=>l.system===p.system&&(String(l.name).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')||String(l.body).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')));
  if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
  if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
  if(p.tacticalTips?.length){summary.push('━━ INFORMACIÓN ÚTIL ANTES DE IR ━━');for(const tip of p.tacticalTips)summary.push('▸ '+tip)}
- if(p.lootIntel){const li=p.lootIntel;summary.push('━━ BOTÍN HATHOR · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
+ if(p.lootIntel){const li=p.lootIntel;summary.push('━━ BOTÍN ESPECÍFICO · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
  summary.push('Temperatura exacta de la instalación: sin verificar');
  summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
  $('mainIntelApi').textContent=summary.join('\n');
