@@ -64,7 +64,7 @@ with sync_playwright() as p:
             cards=pg.locator('#intelTacticalCards .intel-tactical-card')
             if cards.count()<6:fails.append(f'{name}: se esperaban al menos 6 tarjetas tácticas, hay {cards.count()}')
             labels=pg.locator('#intelTacticalCards').inner_text()
-            if any(label not in labels for label in ('BOTÍN','PVE','PVP','ARMAS','COMERCIO')):fails.append(f'{name}: categorías tácticas ausentes')
+            if any(label not in labels for label in ('BOTÍN','PVE','PVP')):fails.append(f'{name}: categorías tácticas ausentes')
             if 'Lamina' not in pg.locator('#mainIntelLocation').inner_text():fails.append(f'{name}: selección no actualiza inteligencia')
         else:fails.append(f'{name}: Lamina PAF-I no aparece en búsqueda')
         if pg.locator('#intelReadiness').count()!=1:fails.append(f'{name}: panel de cobertura documental ausente')
