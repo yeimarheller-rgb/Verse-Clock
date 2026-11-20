@@ -413,10 +413,41 @@
         "refinery": "reported"
       },
       "sourceUrls": [
-        "https://uexcorp.space/mining/refineries"
+        "https://uexcorp.space/mining/refineries",
+        "https://starcitizen.tools/4.10"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "Levski · contratos de Recco Battaglia (Alpha 4.10)",
+        "steps": [
+          "Buscar a Recco Battaglia en Levski: contacto presencial para misiones de logística minera.",
+          "Completar las tres misiones narrativas iniciales para desbloquear contratos repetibles de niveles posteriores.",
+          "Actividades documentadas: fractura de rocas, defensa de mineros, personas desaparecidas y recuperación de objetos.",
+          "Recompensas documentadas: módulos de minería, contenedores y planos de cápsulas de mineral para fabricar; no se garantiza un objeto concreto por contrato."
+        ],
+        "threats": [
+          "La defensa de mineros implica encuentros hostiles según el contrato; no se confirma su número, armamento ni ubicación exacta.",
+          "No hay tasa de encuentros PvP medida para Levski; no confundir ausencia de datos con seguridad."
+        ],
+        "requirements": [
+          "Revisar contratos disponibles tras hablar con Recco; los encargos repetibles requieren progresión previa."
+        ],
+        "caveat": "Información confirmada en las notas de Alpha 4.10.0; disponibilidad y recompensas específicas sujetas al parche LIVE y progresión individual.",
+        "sources": [
+          "https://starcitizen.tools/4.10"
+        ]
+      },
+      "operationalNotes": {
+        "missions": "Recco Battaglia: tres contratos narrativos iniciales; repetibles de minería, defensa, búsqueda y recuperación",
+        "pve": "Defensa de mineros, sin detalle de oleadas o enemigos verificado",
+        "loot": "Recompensas: hardware y planos, no botín aleatorio garantizado",
+        "pvp": "No hay medición específica",
+        "trade": "No se han verificado precios de comercio ni inventarios de terminales",
+        "sources": [
+          "https://starcitizen.tools/4.10"
+        ]
+      }
     },
     {
       "id": "pyro-nyx-gateway",
