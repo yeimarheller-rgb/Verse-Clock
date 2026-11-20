@@ -87,6 +87,18 @@ with sync_playwright() as p:
             pg.locator('#suggestions button').filter(has_text='Lazarus').first.click()
             if 'Valakkar' not in pg.locator('#mainIntelApi').inner_text():
                 fails.append(f'{name}: la búsqueda Valakkar no abre su dossier táctico en el panel principal')
+        # Validar recurso real de la API asociado por UUID, en el panel principal.
+        pg.fill('#q', 'Jumptown')
+        pg.wait_for_timeout(300)
+        candidates=pg.locator('#suggestions button')
+        if not candidates.count():
+            fails.append(f'{name}: Jumptown no se puede seleccionar desde el buscador único')
+        else:
+            candidates.first.click()
+            try:
+                pg.wait_for_function("document.getElementById('mainIntelApi').textContent.includes('Amioshi Plague')", timeout=8000)
+            except Exception:
+                fails.append(f'{name}: no aparece Amioshi Plague, recurso API ligado a Jumptown por UUID')
         if pg.locator('#poiQuery').is_visible():
             fails.append(f'{name}: sigue visible el buscador inferior duplicado')
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
