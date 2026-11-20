@@ -51,6 +51,8 @@ jobs:
           done
       - name: Auditar calidad de las 2.017 ubicaciones
         run: node tools/audit-atlas.mjs
+      - name: Comprobar integridad de auditoría y dominios tácticos
+        run: node tests/atlas-quality.test.mjs
       - name: Verificar snapshot
         run: |
           node --input-type=module -e "import fs from 'node:fs'; const d=JSON.parse(fs.readFileSync('data/wiki-atlas.json')); if(d.locations.length<100 || !d.version)process.exit(1); console.log(d.version,d.locations.length,d.counts)"
