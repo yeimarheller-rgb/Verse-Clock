@@ -47,6 +47,8 @@ async function main(){
  if(unique.length<100 || systems.some(s=>counts[s]<10))throw Error('Insufficient coverage: refusing overwrite '+JSON.stringify(counts));
  const artifact={schemaVersion:1,source:'https://api.star-citizen.wiki/api/locations',version,generatedAt:new Date().toISOString(),systems,counts,locations:unique};
  await mkdir(output,{recursive:true});await writeFile(output+'/wiki-atlas.json',JSON.stringify(artifact,null,2)+'\n');
+ // Mantener la copia consumida por LAB sincronizada; no modificar la producción raíz.
+ await mkdir('lab-preview/data',{recursive:true});await writeFile('lab-preview/data/wiki-atlas.json',JSON.stringify(artifact,null,2)+'\n');
  process.stdout.write(JSON.stringify({version,counts,total:unique.length})+'\n');
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)main().catch(e=>{console.error(e);process.exitCode=1});

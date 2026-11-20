@@ -295,6 +295,28 @@ fetch('./data/intel-missions-4.10.3.json').then(r=>{if(!r.ok)throw Error('HTTP '
 const poiQuery=$('poiQuery'),poiSystem=$('poiSystem'),poiService=$('poiService'),poiResults=$('poiResults');
 let poiData=[];
 let selectedPoiKey=null;
+
+// Interpretación transversal de metadatos reales del catálogo, sin atribuir misiones ni botín no verificados.
+function derivedLocationIntel(p){
+ const entries=[];const services=Array.isArray(p.amenities)?p.amenities.filter(x=>typeof x==='string'&&x.trim()):[];
+ const groups=[
+  [/refiner|refinería|refining/i,'Refinería','Servicios de refinado registrados; comprobar disponibilidad, costes y tiempos en terminal.'],
+  [/repair|refuel|restock|rearm|repar|repost|reabast/i,'Servicios de nave','Servicios de nave catalogados; comprobar operatividad antes de desplazarse.'],
+  [/trade|commodity|shop|store|market|comerc|tienda|venta/i,'Comercio','Actividad comercial catalogada; inventario y precios no confirmados en tiempo real.'],
+  [/medical|clinic|hospital|medic|clínica/i,'Asistencia médica','Servicio sanitario catalogado; no presupone punto de regeneración.'],
+  [/cargo|freight|hauling|carga|almacén/i,'Logística y carga','Instalación logística catalogada; los contratos disponibles varían.'],
+  [/vehicle|ship dealer|rental|vehículo|alquiler/i,'Vehículos y naves','Servicio relacionado con vehículos catalogado; modelos disponibles sin verificar.'],
+  [/weapon|armor|armour|munition|arma|armadura/i,'Equipamiento','Punto de equipamiento catalogado; comprobar stock.']
+ ];
+ const found=new Set();
+ for(const service of services){let classified=false;for(const [pattern,label,description] of groups){if(pattern.test(service)){if(!found.has(label)){entries.push('◈ '+label+' [API / servicio]: '+description);found.add(label)}classified=true;break}}if(!classified)entries.push('◈ Servicio registrado [API]: '+service)}
+ if(Number.isInteger(p.missionCount)&&p.missionCount>0)entries.push('◈ Contratos asociados [API]: '+p.missionCount+' referencias en catálogo; no implica disponibilidad actual ni revela tipo de misión.');
+ if(Number.isInteger(p.childCount)&&p.childCount>0)entries.push('◈ Lugares dependientes [API]: '+p.childCount+' ubicaciones vinculadas; explorar sus fichas para identificar instalaciones próximas.');
+ if(p.jurisdiction)entries.push('◈ Jurisdicción [API]: '+p.jurisdiction+'. Las normas y respuesta de seguridad no se deducen automáticamente de este dato.');
+ if(p.affiliation)entries.push('◈ Afiliación [API]: '+p.affiliation+'. No presupone presencia de NPC hostiles.');
+ return entries;
+}
+
 function applyPoiToMain(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
  $('securityThreat').textContent=sec.threat||'Desconocido';
@@ -312,6 +334,8 @@ function applyPoiToMain(p){
  $('mainIntelLocation').hidden=false;
  const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
+ const derived=derivedLocationIntel(p);
+ if(derived.length){summary.push('━━ ACTIVIDADES Y DATOS DOCUMENTADOS ━━');summary.push(...derived)}
  const parentBody=locs.find(l=>l.system===p.system&&(String(l.name).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')||String(l.body).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')));
  if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
  if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
