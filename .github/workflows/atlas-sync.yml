@@ -6,7 +6,7 @@ on:
       - '.github/workflows/atlas-sync.yml'
   workflow_dispatch:
   schedule:
-    - cron: '17 4 * * 2,5'
+    - cron: '17 4 * * *'
 permissions:
   contents: write
 concurrency:
@@ -27,7 +27,7 @@ jobs:
         run: node tools/sync-wiki-atlas.mjs data
       - name: Enriquecer ubicaciones por API de detalle (lote incremental)
         env:
-          ATLAS_BATCH: '100'
+          ATLAS_BATCH: '250'
         run: node tools/enrich-atlas.mjs
       - name: Verificar snapshot
         run: |
