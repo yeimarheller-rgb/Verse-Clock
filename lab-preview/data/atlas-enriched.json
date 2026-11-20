@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:31:40.186Z",
+  "generatedAt": "2026-11-20T15:31:58.767Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1950,
+  "enrichedCount": 1975,
   "coverage": {
     "missions": 6,
     "resources": 0,
@@ -36071,6 +36071,381 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T15:31:40.006Z"
+    },
+    {
+      "id": "1b7407d0-b501-4434-9785-f2afaec329b5",
+      "name": "RMB-MEFF",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "1b7407d0-b501-4434-9785-f2afaec329b5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:42.631Z"
+    },
+    {
+      "id": "0d2966ab-86c4-4f30-ac3d-76c5fee95d15",
+      "name": "RMB-MOSK",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0d2966ab-86c4-4f30-ac3d-76c5fee95d15",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:43.222Z"
+    },
+    {
+      "id": "984d71ca-901b-482b-bb0d-f387acf79b5f",
+      "name": "RMB-MUGG",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "984d71ca-901b-482b-bb0d-f387acf79b5f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:43.874Z"
+    },
+    {
+      "id": "4bc8a77d-3454-4be8-81b9-4e676bd18746",
+      "name": "RMB-MURK",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4bc8a77d-3454-4be8-81b9-4e676bd18746",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:44.563Z"
+    },
+    {
+      "id": "4f03be5d-618e-4683-9a4c-6584304f485d",
+      "name": "RMB-MYAL",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4f03be5d-618e-4683-9a4c-6584304f485d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:45.185Z"
+    },
+    {
+      "id": "839a1f49-bf24-4e0b-8376-10b7b205e8b0",
+      "name": "RMB-NAIN",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "839a1f49-bf24-4e0b-8376-10b7b205e8b0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:46.215Z"
+    },
+    {
+      "id": "f0dda51d-3ea1-46ee-b996-fb9b6d642ff0",
+      "name": "RMB-NARY",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f0dda51d-3ea1-46ee-b996-fb9b6d642ff0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:46.802Z"
+    },
+    {
+      "id": "e45d12e7-e3c0-4559-bc4c-37bab55811ae",
+      "name": "RMB-NENE",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e45d12e7-e3c0-4559-bc4c-37bab55811ae",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:47.406Z"
+    },
+    {
+      "id": "9bc2b01b-2888-4590-b805-152092afcde7",
+      "name": "RMB-NIGH",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9bc2b01b-2888-4590-b805-152092afcde7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:48.039Z"
+    },
+    {
+      "id": "2ffb5ea3-8355-4654-813e-15ae75be0beb",
+      "name": "RMB-NONG",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2ffb5ea3-8355-4654-813e-15ae75be0beb",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:48.677Z"
+    },
+    {
+      "id": "14038458-3a68-462f-a2cd-93280c01a68f",
+      "name": "RMB-OAKS",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "14038458-3a68-462f-a2cd-93280c01a68f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:49.314Z"
+    },
+    {
+      "id": "a7e5d714-b107-4fc7-bd1e-eb1aad45b2a3",
+      "name": "RMB-OLLA",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a7e5d714-b107-4fc7-bd1e-eb1aad45b2a3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:50.028Z"
+    },
+    {
+      "id": "37f2fe41-c155-42fe-a954-e813c1b5af59",
+      "name": "RMB-ONER",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "37f2fe41-c155-42fe-a954-e813c1b5af59",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:50.997Z"
+    },
+    {
+      "id": "5a667570-ed92-4e28-b998-dfd88e0d0750",
+      "name": "RMB-OXID",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5a667570-ed92-4e28-b998-dfd88e0d0750",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:51.568Z"
+    },
+    {
+      "id": "7359d9fb-0c8f-42cd-b765-815bfbda2d55",
+      "name": "RMB-PALL",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "7359d9fb-0c8f-42cd-b765-815bfbda2d55",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:52.304Z"
+    },
+    {
+      "id": "9a5f95cf-f593-4cf7-8200-e8df245ad58c",
+      "name": "RMB-PEKE",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9a5f95cf-f593-4cf7-8200-e8df245ad58c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:52.993Z"
+    },
+    {
+      "id": "14d4f78e-e303-40c1-a85b-21d101cee95e",
+      "name": "RMB-PIZE",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "14d4f78e-e303-40c1-a85b-21d101cee95e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:53.642Z"
+    },
+    {
+      "id": "fd8d1d9c-ab33-4f74-ac77-6aa945a158b0",
+      "name": "RMB-PLEX",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "fd8d1d9c-ab33-4f74-ac77-6aa945a158b0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:54.344Z"
+    },
+    {
+      "id": "544034db-6fde-44b4-aba8-c2ea35421ccd",
+      "name": "RMB-PURI",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "544034db-6fde-44b4-aba8-c2ea35421ccd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:54.903Z"
+    },
+    {
+      "id": "eb581731-fa19-4e10-bace-4f5d3897856a",
+      "name": "RMB-QINS",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "eb581731-fa19-4e10-bace-4f5d3897856a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:55.655Z"
+    },
+    {
+      "id": "76129194-af6f-4a50-b458-5ef0b5a2e614",
+      "name": "RMB-RAIK",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "76129194-af6f-4a50-b458-5ef0b5a2e614",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:56.286Z"
+    },
+    {
+      "id": "bc93b494-5403-4820-aae5-29f5ab21f86f",
+      "name": "RMB-RAWN",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "bc93b494-5403-4820-aae5-29f5ab21f86f",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:56.874Z"
+    },
+    {
+      "id": "4f6a3169-12b6-4298-b7b7-14480584c0d5",
+      "name": "RMB-RIGG",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4f6a3169-12b6-4298-b7b7-14480584c0d5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:57.424Z"
+    },
+    {
+      "id": "ca1393b1-8297-4788-b819-5884ea70954c",
+      "name": "RMB-RINE",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ca1393b1-8297-4788-b819-5884ea70954c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:58.030Z"
+    },
+    {
+      "id": "ae672fab-8cf4-49ce-ae7a-fd2f1258f143",
+      "name": "RMB-RODE",
+      "system": "Pyro System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ae672fab-8cf4-49ce-ae7a-fd2f1258f143",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:31:58.586Z"
     }
   ]
 }
