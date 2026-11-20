@@ -25,7 +25,7 @@ for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.
  if(domain==='resources'&&commodityResources.get(p.id)?.length)refs.push({kind:'commodity-api',version:catalog.version,claim:'commodity location association, not verified deposit'});
  if(domain==='services'&&p.amenities?.length)refs.push({kind:'location-api',url:'https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.id),version:catalog.version,claim:'catalog amenity, availability unverified'});
  if(s&&Object.keys(s).length&&((domain==='missions'&&s.missions?.length)||(domain==='resources'&&s.tacticalIntel?.resources?.length)||(domain==='services'&&Object.values(s.services||{}).some(x=>['reported','confirmed'].includes(x)))||(domain==='pve'&&(s.tacticalIntel?.threats?.length||s.security?.pve))||(domain==='pvp'&&(s.security?.pvp||s.pvp))||(domain==='loot'&&(s.lootIntel?.categories?.length||s.tacticalIntel?.weapons?.length))||(domain==='weapons'&&(s.tacticalIntel?.weapons?.length||s.tacticalIntel?.armor?.length))||(domain==='trade'&&(s.commodities?.length||s.shops?.length))||(domain==='hazards'&&(s.tacticalIntel?.threats?.length||s.hazards?.length)))){
- const urls=(s.sourceUrls||[]).filter(u=>typeof u==='string'&&/^https:\/\//.test(u));refs.push({kind:'curated',sourceUrls:urls,claim:'curated record; independently verify underlying evidence'});
+ const urls=(s.sourceUrls||[]).filter(u=>typeof u==='string'&&/^https:\/\//.test(u));refs.push({kind:urls.length?'curated':'curated-unverified',sourceUrls:urls,claim:urls.length?'curated record; independently verify underlying evidence':'curated claim without a source URL; NOT independently traced'});
  }
  evidence[domain]=refs.length?refs:[{kind:'untraced',claim:'domain flagged but no evidence path'}];
  }
@@ -59,7 +59,7 @@ const seedOnlyResearchQueue=seedOnly.map(p=>{
 }).sort((x,y)=>y.score-x.score||x.name.localeCompare(y.name));
 
 if(counts.total!==catalog.locations.length||counts.actionable+counts.geographicOnly!==counts.total)throw Error('Inconsistent atlas audit totals');
-const evidenceCoverage={traced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.some(r=>r.kind!=='untraced'))).length,untraced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.every(r=>r.kind==='untraced'))).length};
+const evidenceCoverage={traced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.some(r=>!['untraced','curated-unverified'].includes(r.kind)))).length,untraced:records.filter(p=>Object.values(p.evidence).some(refs=>refs.every(r=>['untraced','curated-unverified'].includes(r.kind)))).length};
 const report={researchSummary,researchQueue,seedOnlyResearchQueue, evidenceCoverage,seedOnlyCounts,seedOnly:seedOnly.map(p=>({name:p.name,system:p.system,id:p.id})),schemaVersion:1,version:catalog.version,generatedAt:new Date().toISOString(),definition:'Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.',counts,systems,topGaps:records.filter(x=>!x.actionableDomains&&/station|bunker|facility|outpost|cave|lab|mine|settlement|distribution|depot/i.test(x.type+' '+x.name)).slice(0,150),records};
 await writeFile('lab-preview/data/atlas-quality.json',JSON.stringify(report,null,2)+'\n');
 // Lightweight manifest for the browser: the full per-location audit remains available for offline inspection.
