@@ -212,7 +212,20 @@ function updateMenu(){
  const q=normalize(input.value);
  if(!q){hideMenu();return}
  const solar=locs.map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
- const pois=poiData.map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[p.type,p.operator,p.affiliation,/paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''].filter(Boolean).join(' ')}));
+ const pois=poiData.map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
+ p.type,p.operator,p.affiliation,p.jurisdiction,
+ ...(p.amenities||[]),
+ ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
+ ...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.armor||[]),
+ ...(p.tacticalIntel?.components||[]),...(p.tacticalIntel?.steps||[]),
+ ...(p.tacticalIntel?.requirements||[]),
+ ...(p.lootIntel?.categories||[]),
+ ...(p.missions||[]).map(x=>x.name),
+ ...(p.resources||[]).map(x=>x.name),
+ ...(p.activities||[]).map(x=>x.name),
+ ...(p.tacticalTips||[]),
+ /paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''
+ ].filter(Boolean).join(' ')}));
  const unique=new Map();
  for(const item of [...pois,...solar]){const key=[normalize(item.system),normalize(item.name)].join('|');if(!unique.has(key))unique.set(key,item)}
  suggestions=[...unique.values()].map(item=>{
