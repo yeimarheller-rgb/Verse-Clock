@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T15:06:54.845Z",
+  "generatedAt": "2026-11-20T15:07:10.043Z",
   "catalogTotal": 2017,
-  "enrichedCount": 1300,
+  "enrichedCount": 1325,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 51
+    "nearby": 60
   },
   "locations": [
     {
@@ -21676,6 +21676,695 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T15:06:54.664Z"
+    },
+    {
+      "id": "3e24e35f-2ac1-4c3a-85bc-c448222552ed",
+      "name": "Comm Array ST2-47",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3e24e35f-2ac1-4c3a-85bc-c448222552ed",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:56.902Z"
+    },
+    {
+      "id": "20e6f57a-5446-47c5-a23e-9df6bd7239d5",
+      "name": "Comm Array ST2-55",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "20e6f57a-5446-47c5-a23e-9df6bd7239d5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:57.337Z"
+    },
+    {
+      "id": "3797fd7c-5121-4cd1-9685-2a9c36a95060",
+      "name": "Comm Array ST2-76",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3797fd7c-5121-4cd1-9685-2a9c36a95060",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:57.772Z"
+    },
+    {
+      "id": "855e8dd2-23b1-4997-9de2-c0b17b542679",
+      "name": "Comm Array ST3-18",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "855e8dd2-23b1-4997-9de2-c0b17b542679",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:58.184Z"
+    },
+    {
+      "id": "6e2b3287-01dd-4ee7-a5cc-48405d90f45a",
+      "name": "Comm Array ST3-35",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6e2b3287-01dd-4ee7-a5cc-48405d90f45a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:58.642Z"
+    },
+    {
+      "id": "04eb557f-f248-47c9-be23-49ddb262beee",
+      "name": "Comm Array ST3-90",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "04eb557f-f248-47c9-be23-49ddb262beee",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:59.097Z"
+    },
+    {
+      "id": "58a0d924-9786-4dab-b6f8-328c0eb6f456",
+      "name": "Comm Array ST4-22",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "58a0d924-9786-4dab-b6f8-328c0eb6f456",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:06:59.530Z"
+    },
+    {
+      "id": "6228e342-9172-4012-be26-5e5f4c220c92",
+      "name": "Comm Array ST4-31",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6228e342-9172-4012-be26-5e5f4c220c92",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:00.061Z"
+    },
+    {
+      "id": "04a4c07f-dce3-4c7d-96fc-7d655ca674db",
+      "name": "Comm Array ST4-59",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "04a4c07f-dce3-4c7d-96fc-7d655ca674db",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:00.531Z"
+    },
+    {
+      "id": "521aa728-cf13-4ce1-85f1-ab9f2a26a924",
+      "name": "Comm Array ST4-64",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "521aa728-cf13-4ce1-85f1-ab9f2a26a924",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:01.349Z"
+    },
+    {
+      "id": "6dbbb484-2aca-419f-b5ef-8f1efde030e3",
+      "name": "Covalex Shipping Hub Gundo",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6dbbb484-2aca-419f-b5ef-8f1efde030e3",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:01.879Z"
+    },
+    {
+      "id": "cf2fd473-25c6-4ae5-83c7-9d3d479bc8cf",
+      "name": "CRU L1",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "CRU L1-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #187-EK3",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #2JR-IH4",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #6QU-VLF",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #LOW-9SW",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #M77-B9R",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #Q02-658",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #RDM-570",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #U3Z-O5M",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cf2fd473-25c6-4ae5-83c7-9d3d479bc8cf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:02.563Z"
+    },
+    {
+      "id": "e5a875d5-d68f-4a50-b4ca-674a42c273b7",
+      "name": "CRU L1-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e5a875d5-d68f-4a50-b4ca-674a42c273b7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:03.118Z"
+    },
+    {
+      "id": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0",
+      "name": "CRU L2",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "CRU L2-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "CRU L2-B",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "CRU L2-C",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:03.635Z"
+    },
+    {
+      "id": "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7",
+      "name": "CRU L2-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Mining Claim #LOW-9SW",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #M77-B9R",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:04.064Z"
+    },
+    {
+      "id": "9415f1bb-fbb5-44fd-a6a1-fa4ed012402a",
+      "name": "CRU L2-B",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Mining Claim #Q02-658",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #RDM-570",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #U3Z-O5M",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9415f1bb-fbb5-44fd-a6a1-fa4ed012402a",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:04.548Z"
+    },
+    {
+      "id": "5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1",
+      "name": "CRU L2-C",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "Mining Claim #187-EK3",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #2JR-IH4",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #6QU-VLF",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:05.079Z"
+    },
+    {
+      "id": "2083c403-4c40-4727-b392-49976c460028",
+      "name": "CRU L3",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "CRU L3-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #1WF-8Q2",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #233-0BG",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #2AO-YXA",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #5QZ-EVL",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #6VQ-R0L",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #7BH-6IB",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #B93-ECE",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #SNS-133",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2083c403-4c40-4727-b392-49976c460028",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:05.636Z"
+    },
+    {
+      "id": "19eb5151-0d25-40f8-be5c-56c5bb68223b",
+      "name": "CRU L3-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "19eb5151-0d25-40f8-be5c-56c5bb68223b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:06.107Z"
+    },
+    {
+      "id": "c67d1b8f-32ee-4fe1-8a66-bd1bfa04c5c0",
+      "name": "CRU L4",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "CRU L4-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #36Y-F4E",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #3S4-69I",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #4QI-L3K",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #BU8-982",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #IF4-44E",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #MJF-18Z",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #PWG-V76",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #YNV-4N2",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c67d1b8f-32ee-4fe1-8a66-bd1bfa04c5c0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:07.021Z"
+    },
+    {
+      "id": "8e371ce2-17ec-4508-8493-02463ea47960",
+      "name": "CRU L4-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8e371ce2-17ec-4508-8493-02463ea47960",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:07.447Z"
+    },
+    {
+      "id": "ae123dcc-6258-4429-9d16-e39dac5a565b",
+      "name": "CRU L5",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "CRU L5-A",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #35F-7IY",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #714-SK2",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #A83-1XB",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #J2P-9P8",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #J5B-CJZ",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #UU1-PPU",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #W70-48O",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Mining Claim #Z8V-6O0",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ae123dcc-6258-4429-9d16-e39dac5a565b",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:08.103Z"
+    },
+    {
+      "id": "9c2490b6-b31d-47cb-9f97-9a8825578bdf",
+      "name": "CRU L5-A",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "9c2490b6-b31d-47cb-9f97-9a8825578bdf",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:08.530Z"
+    },
+    {
+      "id": "c15033ab-2eb3-4d6d-b882-0cb336e67ed8",
+      "name": "Crusader",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "August Dunlow Exhibition Hall",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Cellin",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Cloudrest Retreat",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Comm Array ST2-55",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Cry-Astro Service 042",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Daymar",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Empyrean Park",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "ICC Probe 126",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Orison",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Prospect Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Prospect Point",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Seraphim Station",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "<= UNINITIALIZED =>",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        },
+        {
+          "name": "Yela",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "c15033ab-2eb3-4d6d-b882-0cb336e67ed8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:09.225Z"
+    },
+    {
+      "id": "34fa1d2d-fbbd-4467-b3cb-dfca167b293e",
+      "name": "Cry-Astro Service 042",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "34fa1d2d-fbbd-4467-b3cb-dfca167b293e",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T15:07:09.863Z"
     }
   ]
 }
