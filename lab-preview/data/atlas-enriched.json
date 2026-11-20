@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T01:10:40.797Z",
+  "generatedAt": "2026-11-20T01:18:23.226Z",
   "catalogTotal": 2017,
-  "enrichedCount": 350,
+  "enrichedCount": 375,
   "coverage": {
     "missions": 6,
     "resources": 0,
-    "nearby": 19
+    "nearby": 23
   },
   "locations": [
     {
@@ -5979,6 +5979,405 @@
         "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
       },
       "checkedAt": "2026-11-20T01:10:40.616Z"
+    },
+    {
+      "id": "b7c63d48-3596-4378-8a65-13686c71d84c",
+      "name": "HDSF-Colfax",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "b7c63d48-3596-4378-8a65-13686c71d84c",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:12.023Z"
+    },
+    {
+      "id": "db55791b-9270-4f0f-a8a1-40bd283a16b7",
+      "name": "HDSF-Damaris",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "db55791b-9270-4f0f-a8a1-40bd283a16b7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:12.553Z"
+    },
+    {
+      "id": "177f4eb1-b899-44d6-8743-4b526f56b203",
+      "name": "HDSF-Elbridge",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "177f4eb1-b899-44d6-8743-4b526f56b203",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:13.004Z"
+    },
+    {
+      "id": "51d2581f-443c-4c68-9a52-1bbf8eedf0f1",
+      "name": "HDSF-Hendricks",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "51d2581f-443c-4c68-9a52-1bbf8eedf0f1",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:13.447Z"
+    },
+    {
+      "id": "2cc9cf86-d39b-474d-b3eb-6d0c6d30b261",
+      "name": "HDSF-Hiram",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "2cc9cf86-d39b-474d-b3eb-6d0c6d30b261",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:13.882Z"
+    },
+    {
+      "id": "8fff58dd-5111-43ca-8c75-9f3d591c75e0",
+      "name": "HDSF-Hobart",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "8fff58dd-5111-43ca-8c75-9f3d591c75e0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:14.338Z"
+    },
+    {
+      "id": "e8b60cbd-7510-48e8-ac01-6e87d0c38740",
+      "name": "HDSF-Ishmael",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "e8b60cbd-7510-48e8-ac01-6e87d0c38740",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:14.764Z"
+    },
+    {
+      "id": "07d5295d-aa44-453b-87e6-261aedbe8466",
+      "name": "HDSF-Millerand",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "07d5295d-aa44-453b-87e6-261aedbe8466",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:15.201Z"
+    },
+    {
+      "id": "28b61839-2a27-4ab5-9633-430149a6a116",
+      "name": "HDSF-Rufus",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "28b61839-2a27-4ab5-9633-430149a6a116",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:15.656Z"
+    },
+    {
+      "id": "ed85a167-c2da-4b7e-a71a-e0aa7a6a7aa0",
+      "name": "HDSF-Sherman",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ed85a167-c2da-4b7e-a71a-e0aa7a6a7aa0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:16.135Z"
+    },
+    {
+      "id": "39f4e5b1-657b-4d91-aa09-46dedc54f536",
+      "name": "HDSF-Tamar",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "39f4e5b1-657b-4d91-aa09-46dedc54f536",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:16.591Z"
+    },
+    {
+      "id": "f92ed1a6-d451-4706-9da3-5e6449b941a5",
+      "name": "HDSF-Tompkins",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "f92ed1a6-d451-4706-9da3-5e6449b941a5",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:17.044Z"
+    },
+    {
+      "id": "a3d894f3-1660-463c-8244-571dd5daf8d6",
+      "name": "HDSF-Zacharias",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "a3d894f3-1660-463c-8244-571dd5daf8d6",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:17.509Z"
+    },
+    {
+      "id": "0b07f5ab-f4d6-471c-af52-8c3b13344a61",
+      "name": "Hela's Regret",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "0b07f5ab-f4d6-471c-af52-8c3b13344a61",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:17.953Z"
+    },
+    {
+      "id": "6646c7d4-8922-415e-a099-66bbc3baf4bd",
+      "name": "Hickes Research Outpost",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6646c7d4-8922-415e-a099-66bbc3baf4bd",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:18.431Z"
+    },
+    {
+      "id": "dce44638-7b10-423e-8fe3-1e81b26aa0d0",
+      "name": "Hospice",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "dce44638-7b10-423e-8fe3-1e81b26aa0d0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:18.866Z"
+    },
+    {
+      "id": "ce406a9d-5363-4ee7-99fd-d8a6fef4e250",
+      "name": "Humboldt Mines",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ce406a9d-5363-4ee7-99fd-d8a6fef4e250",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:19.319Z"
+    },
+    {
+      "id": "ac4203e9-77c5-470c-bd56-3c4743f52ad8",
+      "name": "HUR-L1 Green Glade Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "ac4203e9-77c5-470c-bd56-3c4743f52ad8",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:19.823Z"
+    },
+    {
+      "id": "689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7",
+      "name": "HUR-L1 Green Glade Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "HUR-L1 Green Glade Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:20.290Z"
+    },
+    {
+      "id": "4bb83d1e-3a21-481b-ae40-c52460d59932",
+      "name": "HUR-L2 Faithful Dream Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "4bb83d1e-3a21-481b-ae40-c52460d59932",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:20.791Z"
+    },
+    {
+      "id": "81e3150a-9c12-4715-85d4-afd6da69b8f0",
+      "name": "HUR-L2 Faithful Dream Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "HUR-L2 Faithful Dream Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "81e3150a-9c12-4715-85d4-afd6da69b8f0",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:21.230Z"
+    },
+    {
+      "id": "cc334726-44c2-4688-b4e3-cc4123032b86",
+      "name": "HUR-L3 Thundering Express Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "cc334726-44c2-4688-b4e3-cc4123032b86",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:21.700Z"
+    },
+    {
+      "id": "de5f2d1d-78e5-4273-8028-c06690c03685",
+      "name": "HUR-L3 Thundering Express Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "HUR-L3 Thundering Express Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "de5f2d1d-78e5-4273-8028-c06690c03685",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:22.146Z"
+    },
+    {
+      "id": "3e466e2a-9bc6-4d4f-848f-3c189a6b32e7",
+      "name": "HUR-L4 Melodic Fields Clinic",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "3e466e2a-9bc6-4d4f-848f-3c189a6b32e7",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:22.561Z"
+    },
+    {
+      "id": "6e99473c-8446-4c5a-81cb-039a53c1960d",
+      "name": "HUR-L4 Melodic Fields Station",
+      "system": "Stanton System",
+      "missions": [],
+      "resources": [],
+      "nearbyLocations": [
+        {
+          "name": "HUR-L4 Melodic Fields Clinic",
+          "detail": "Instalación dependiente registrada",
+          "confidence": "API / jerarquía"
+        }
+      ],
+      "source": {
+        "provider": "Star Citizen Wiki API",
+        "uuid": "6e99473c-8446-4c5a-81cb-039a53c1960d",
+        "version": "4.10.3-LIVE.13165946",
+        "endpoint": "/api/locations/{identifier}?include=children,resources,missions"
+      },
+      "checkedAt": "2026-11-20T01:18:23.046Z"
     }
   ]
 }
