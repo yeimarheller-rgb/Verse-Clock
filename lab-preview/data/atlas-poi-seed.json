@@ -720,7 +720,8 @@
           "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
           "Activar el primado y obtener la Laser Activation Keycard.",
           "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
-          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas.",
+          "Contrato contextual (no garantizado): Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor."
         ],
         "resources": [
           "Carinite",
@@ -734,16 +735,23 @@
         ],
         "threats": [
           "Valakkar juveniles dentro de la cueva",
-          "Colapso de cueva tras 2 horas"
+          "Colapso de cueva tras 2 horas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "3 baterías GP-XP procedentes de las PAF",
           "Laser Activation Keycard",
           "Herramientas de minería y extracción"
         ],
-        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
         "sources": [
-          "https://starcitizen.tools/Align_%26_Mine"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       },
       "operationalNotes": {
@@ -828,18 +836,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -928,18 +943,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1028,18 +1050,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1106,7 +1135,8 @@
           "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
           "Activar el primado y obtener la Laser Activation Keycard.",
           "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
-          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas.",
+          "Contrato contextual (no garantizado): Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor."
         ],
         "resources": [
           "Carinite",
@@ -1120,16 +1150,23 @@
         ],
         "threats": [
           "Valakkar juveniles dentro de la cueva",
-          "Colapso de cueva tras 2 horas"
+          "Colapso de cueva tras 2 horas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "3 baterías GP-XP procedentes de las PAF",
           "Laser Activation Keycard",
           "Herramientas de minería y extracción"
         ],
-        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
         "sources": [
-          "https://starcitizen.tools/Align_%26_Mine"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       },
       "operationalNotes": {
@@ -1214,18 +1251,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1314,18 +1358,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1414,18 +1465,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1492,7 +1550,8 @@
           "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
           "Activar el primado y obtener la Laser Activation Keycard.",
           "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
-          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas.",
+          "Contrato contextual (no garantizado): Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor."
         ],
         "resources": [
           "Carinite",
@@ -1506,16 +1565,23 @@
         ],
         "threats": [
           "Valakkar juveniles dentro de la cueva",
-          "Colapso de cueva tras 2 horas"
+          "Colapso de cueva tras 2 horas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "3 baterías GP-XP procedentes de las PAF",
           "Laser Activation Keycard",
           "Herramientas de minería y extracción"
         ],
-        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
         "sources": [
-          "https://starcitizen.tools/Align_%26_Mine"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       },
       "operationalNotes": {
@@ -1600,18 +1666,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1700,18 +1773,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1800,18 +1880,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -1878,7 +1965,8 @@
           "Instalar las baterías en los receptáculos junto a las plataformas de aterrizaje.",
           "Activar el primado y obtener la Laser Activation Keycard.",
           "Ir al búnker de activación, insertar la tarjeta y disparar el láser.",
-          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas."
+          "Entrar en la cueva cuando termine el disparo; la cueva colapsa a las dos horas.",
+          "Contrato contextual (no garantizado): Existe un contrato Red Level de transporte con entrega en OLP; no se confirma que esta plataforma sea el destino activo en el servidor."
         ],
         "resources": [
           "Carinite",
@@ -1892,16 +1980,23 @@
         ],
         "threats": [
           "Valakkar juveniles dentro de la cueva",
-          "Colapso de cueva tras 2 horas"
+          "Colapso de cueva tras 2 horas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "3 baterías GP-XP procedentes de las PAF",
           "Laser Activation Keycard",
           "Herramientas de minería y extracción"
         ],
-        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad.",
+        "caveat": "Recursos documentados para la cueva del evento; no garantizados en cada nodo ni fuera de la actividad. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. No atribuir a la OLP el botín específico de las PAF; la cueva minera es una recompensa de la actividad, no un almacén orbital.",
         "sources": [
-          "https://starcitizen.tools/Align_%26_Mine"
+          "https://starcitizen.tools/Align_%26_Mine",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ]
       },
       "operationalNotes": {
@@ -1986,18 +2081,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -2086,18 +2188,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
@@ -2186,18 +2295,25 @@
         ],
         "sources": [
           "https://starcitizen.tools/Align_%26_Mine",
-          "https://starcitizen.tools/Planetary_alignment_facilities"
+          "https://starcitizen.tools/Planetary_alignment_facilities",
+          "https://starcitizen.tools/Hathor_Group",
+          "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
+          "https://www.sc-advisory.space/",
+          "https://www.citadelsc.com/es/guides/hathor"
         ],
-        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor.",
+        "caveat": "Pool de armas por categoría PAF; no garantiza objeto ni enemigo en cada servidor. Sin evidencia de tasa de encuentros PvP específica de esta instalación; no asignar un nivel de peligro PvP cuantificado. La tabla de botín de Planetary Alignment Facilities es un conjunto de objetos posibles, no inventario garantizado de esta PAF.",
         "steps": [
           "Aterrizar en PAF: localizar las tarjetas de seguridad de los tres módulos.",
           "Abrir salas de seguridad y obtener tres Alignment Blades.",
           "Insertar las blades de una en una; esperar el movimiento de la antena. Aparecen Valakkar juveniles.",
-          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP."
+          "Tras alinear, retirar una batería industrial GP-XP del garaje y llevarla a la OLP.",
+          "Contrato contextual (no garantizado): Existe un contrato de transporte Red Level que menciona despejar PAF, recuperar carga y entregarla en OLP; la asignación a esta PAF y la disponibilidad LIVE no están verificadas."
         ],
         "threats": [
           "Mercenarios o enemigos FPS según estado de actividad",
-          "Valakkar juveniles al mover antenas"
+          "Valakkar juveniles al mover antenas",
+          "Posibles fallos de tarjetas, láminas de alineación o aparición de baterías reportados por la comunidad; comprobar el estado antes de comprometer carga.",
+          "La guía comunitaria documenta enemigos NPC y Valakkar en las PAF; la presencia efectiva depende del estado del servidor."
         ],
         "requirements": [
           "Armas FPS y munición",
