@@ -4,12 +4,12 @@ const app=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
 const manifest=JSON.parse(readFileSync(new URL('../manifest.webmanifest',import.meta.url),'utf8'));
 const sw=readFileSync(new URL('../sw.js',import.meta.url),'utf8');
 test('PWA standalone',()=>assert.equal(manifest.display,'standalone'));
-test('horas de eventos en Europe/Madrid',()=>assert.ok(app.includes("tz('Europe/Madrid')")));
+test('horas de eventos en Europe/Madrid',()=>assert.ok(app.includes("timeZone:'Europe/Madrid'")));
 test('motor, escena, app y catálogo en caché offline',()=>{for(const f of ['./src/engine.js','./src/scene.js','./src/app.js','./src/environment.js','./src/nav.js','./data/locations.json'])assert.ok(sw.includes(f),f)});
 test('aviso honesto: no es telemetría del servidor y paisaje artístico',()=>{assert.ok(html.includes('No es una lectura del servidor'));assert.ok(html.includes('visualización artística'))});
 test('sin datos inventados (temperatura/clima)',()=>{
   assert.doesNotMatch(html+app, /-?\d+(?:[.,]\d+)?\s*°\s*C/);
-  assert.match(app, /Temperatura exacta de la instalación: sin verificar/);
+  assert.doesNotMatch(html+app, /id="(?:mainIntelApi|intelTacticalCards|destinationIntel)"/);
 });
 
 test('fotos por fase declaradas y con respaldo procedural',()=>{for(const k of ['night','sunrise','day','sunset'])for(const v of ['wide','tall'])assert.ok(html.includes(`./img/bg/${k}-${v}.webp`),k+v);assert.ok(app.includes("$('photo').remove()"))});
