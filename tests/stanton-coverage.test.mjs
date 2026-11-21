@@ -127,3 +127,23 @@ test('the Hurston logistics batch keeps historical ASOP and uncertain ship suppo
   if(name==='Barton Flats Aid Shelter')assert.equal(result.counts.logistics,0);
  }
 });
+
+test('the FPS mining batch credits resources only from current, matching location UUIDs',()=>{
+ const index=read('atlas-commodities');
+ assert.equal(index.version,catalogue.version);
+ const byId=new Map(index.locations.map(row=>[row.id,row]));
+ for(const name of ['Gonzo','Ludlow','HDMS-Lathan',"Adair's Retreat",'Dunboro','Paradise Cove']){
+  const site=at(name);
+  const id=site.stantonIntel.uuid;
+  const claim=site.stantonIntel.claims.find(row=>row.field==='resources');
+  assert.equal(claim.patch,index.version);
+  for(const gem of claim.resourceNames){
+   const source=byId.get(id)?.resources.find(resource=>resource.name===gem&&resource.kind==='mineable')?.source;
+   assert.equal(source?.locationUuid,id,name+' '+gem);
+   assert.equal(source?.version,index.version);
+  }
+  const result=stantonCoverage(raw.filter(row=>row.id===id),[site]);
+  assert.equal(result.counts.resources,1,name);
+  assert.equal(result.counts.loot,0,name);
+ }
+});

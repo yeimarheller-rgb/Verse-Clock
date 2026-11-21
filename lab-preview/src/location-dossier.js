@@ -129,9 +129,13 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     add('missions',lootIntel.solo,{title:'En solitario',sources:lootIntel.sources});
     add('missions',lootIntel.org,{title:'En grupo',sources:lootIntel.sources});
   }
+  const describedResources=new Set((p.stantonIntel?.claims||[])
+    .filter(claim=>claim.field==='resources'&&claim.status!=='historical')
+    .flatMap(claim=>claim.resourceNames||[]).map(normalize));
+  const catalogResources=(p.resources||[]).filter(resource=>!describedResources.has(normalize(typeof resource==='string'?resource:resource?.name)));
   for(const [group,title,rows] of [
     ['missions','Actividades y contratos',[...(p.activities||[]),...(p.missions||[])]],
-    ['loot','Botín específico',p.lootItems],['loot','Recursos catalogados',p.resources],
+    ['loot','Botín específico',p.lootItems],['loot','Recursos catalogados',catalogResources],
     ['services','Mercancías',p.commodities],['services','Tiendas',p.shops],
     ['combat','Enemigos catalogados',p.npcs],['navigation','Instalaciones vinculadas',p.nearbyLocations],
     ['navigation','Consejos tácticos',p.tacticalTips],

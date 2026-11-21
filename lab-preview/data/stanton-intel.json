@@ -1655,9 +1655,26 @@
           ],
           "patch": "4.10.3 (consulta de ficha histórica)",
           "uncertainty": "Operatividad de generación terrestre y servicios en LIVE no probada; no se infiere ausencia de enemigos."
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
         }
       ],
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "uuid": "6c29dbcd-3acb-465d-ae29-400b9b2e3325"
     },
     {
       "name": "HDMS-Norgaard",
@@ -3551,6 +3568,126 @@
         }
       ],
       "uuid": "1c200c1c-61ee-42bc-8f64-7f839001789f",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Gonzo",
+      "body": "Magda",
+      "claims": [
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
+        }
+      ],
+      "uuid": "ce9115b2-dce7-4fe8-a9cd-4e5beeee436f",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Ludlow",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
+        }
+      ],
+      "uuid": "3fbe0a2a-c042-4f96-a941-286268504576",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Adair's Retreat",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
+        }
+      ],
+      "uuid": "51aeeae8-6146-48ab-9fe3-89ce30879d9a",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Dunboro",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
+        }
+      ],
+      "uuid": "43b2fb8b-1713-481f-8a90-db577cdd8d82",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Paradise Cove",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Minería a pie",
+          "text": "El índice del parche vincula Hadanite y Janalite a este puesto. Busca depósitos pequeños con una multiherramienta Greycat y accesorio OreBit. La asociación no confirma que haya un depósito disponible al llegar ni que el puesto compre los minerales.",
+          "sources": [
+            "https://api.star-citizen.wiki/commodities/hadanite",
+            "https://api.star-citizen.wiki/commodities/janalite",
+            "https://starcitizen.tools/OreBit_Mining_Attachment"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "resourceNames": [
+            "Hadanite",
+            "Janalite"
+          ]
+        }
+      ],
+      "uuid": "32c39b0d-2fc3-48a4-8aac-7109c6e491bd",
       "checkedAt": "2026-11-21"
     }
   ]

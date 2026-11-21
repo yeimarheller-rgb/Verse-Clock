@@ -72,12 +72,12 @@ const statusText={
  reported:'Reportado · funcionamiento LIVE sin prueba en partida',
 };
 export const stantonFields={
- pve:'PvE',pvp:'PvP',missions:'Misiones',loot:'Botín',weapons:'Armas',trade:'Comercio',
+ pve:'PvE',pvp:'PvP',missions:'Misiones',loot:'Botín',resources:'Recursos',weapons:'Armas',trade:'Comercio',
  repair:'Reparación',refuel:'Repostaje',rearm:'Rearme',hazards:'Peligros ambientales',
  logistics:'Clínica, hangar, refinería o carga',access:'Acceso y navegación',
 };
 const iconsByField={
- pve:'pve',pvp:'pvp',missions:'mission',loot:'loot',weapons:'weapons',trade:'trade',
+ pve:'pve',pvp:'pvp',missions:'mission',loot:'loot',resources:'loot',weapons:'weapons',trade:'trade',
  repair:'repair',refuel:'refuel',rearm:'rearm',hazards:'danger',logistics:'hangar',access:'landing',
 };
 const locationUuid=p=>p.source?.uuid||p.id;

@@ -237,6 +237,17 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-hurston-{place.split()[0].lower()}-{device}.png', full_page=True)
+        for place in ['Gonzo', 'Ludlow', 'HDMS-Lathan', "Adair's Retreat", 'Dunboro', 'Paradise Cove']:
+            query(place, place)
+            resources = dossier.locator('[data-domain="loot"]')
+            expect(resources).to_contain_text('Minería a pie')
+            expect(resources).to_contain_text('OreBit')
+            assert resources.inner_text().count('Hadanite') == 1
+            assert resources.inner_text().count('Janalite') == 1
+            verify_layout()
+            if place in ['Gonzo','Ludlow']:
+                page.evaluate('window.scrollTo(0,0)')
+                page.screenshot(path=f'/tmp/verse-lab-mineria-{place.lower()}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()
