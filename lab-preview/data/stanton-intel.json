@@ -1280,8 +1280,31 @@
           "sources": [
             "https://starcitizen.tools/Ghost_Hollow"
           ]
+        },
+        {
+          "field": "event-terminals",
+          "status": "historical",
+          "text": "Evento PvP de terminales CCB: diseño original requiere desactivar la matriz de comunicaciones de microTech y disputar terminales de créditos en el entorno del Reclaimer. La misión ilegal «money from nothing» de Ruto sigue figurando en datos extraídos de 4.10.2, con entrada de 999 aUEC; esto NO demuestra que los terminales paguen en LIVE 4.10.3. Jugadores notificaron fallos de funcionamiento en 4.9 y julio de 2026. No planifiques ingresos ni viajes basados en su funcionamiento sin comprobarlo en servidor.",
+          "sources": [
+            "https://robertsspaceindustries.com/en/comm-link/transmission/19222-Roadmap-Roundup-April-5-2023",
+            "https://api.star-citizen.wiki/missions/money-from-nothing",
+            "https://www.reddit.com/r/starcitizen/comments/1utyg6y/bring_it_back_money_for_nothing_mission_not/"
+          ],
+          "patch": "4.10.2 (datos de misión); 3.19 (diseño original); 4.10.3 sin prueba funcional",
+          "uncertainty": "Estado de activación y pagos en LIVE 4.10.3 desconocido; informes de fallos de jugadores no equivalen a confirmación oficial."
+        },
+        {
+          "field": "hazards",
+          "status": "documented",
+          "text": "MicroTech: entorno frío, sin zona de armisticio y con cobertura de comunicaciones según la ficha de Ghost Hollow. Riesgo de PvP potencial; lleva protección térmica y comprueba el estado de la matriz de comunicaciones antes de operar.",
+          "sources": [
+            "https://starcitizen.tools/Ghost_Hollow"
+          ],
+          "patch": "4.10.3 (consulta documental; datos del lugar históricos)",
+          "uncertainty": "La temperatura concreta, presencia de jugadores y estado del servidor no se han medido."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Greycat Stanton I Production Complex-B",
