@@ -380,6 +380,8 @@ function updateNewcomerFieldGuide(p){
   missions.length?'Hay '+missions.length+' contratos catalogados; comprueba requisitos y disponibilidad en el juego.':activities.length?'Hay '+activities.length+' actividades catalogadas; confirma su disponibilidad antes de viajar.':hasCategoryMission?'Existe documentación de misiones para esta categoría de instalación, pero no se ha confirmado su asignación aquí.':'No hay misiones específicas documentadas en esta ficha.',
   shipVerified?'Reparación de naves verificada para el parche '+ship.verifiedPatch+'; comprueba compatibilidad y servicio en el juego.':'Reparación de naves NO confirmada aquí: no dependas de este lugar para una emergencia.',
   p.lootIntel?.categories?.length?'Hay categorías de botín catalogadas; la aparición de objetos no está garantizada.':'No hay botín específico documentado para esta ficha.',
+  ...(Array.isArray(p.tacticalIntel?.requirements)&&p.tacticalIntel.requirements.length?['Preparación documentada: '+p.tacticalIntel.requirements.slice(0,3).join(' · ')+'.']:[]),
+  ...(Array.isArray(p.tacticalIntel?.steps)&&p.tacticalIntel.steps.length?['Primer paso de la actividad: '+p.tacticalIntel.steps[0]]:[]),
   'Consulta los riesgos PvE/PvP de abajo; no son detección de amenazas en vivo.'
  ];
  guide.replaceChildren();
