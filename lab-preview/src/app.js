@@ -492,7 +492,8 @@ function renderPoi(){
  const q=poiQuery.value.trim().toLocaleLowerCase('es');
  const normalize=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
  const queryTerms=normalize(q).split(/\\s+/).filter(Boolean);
- const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term)));
+ const repairQuery=/^(reparacion|reparar|repair|rpr)$/i.test(normalize(q));
+ const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&(repairQuery?['verified','source-listed'].includes(p.repairIntel?.ship?.status):queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term))));
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
@@ -502,7 +503,10 @@ function renderPoi(){
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
- card.append(h,meta,org,intel,svc);
+ const repair=document.createElement('p');repair.className='poi-meta';
+ const ship=p.repairIntel?.ship;
+ repair.textContent='REPARACIÓN NAVES: '+(ship?.status==='verified'&&ship.verifiedPatch&&ship.sources?.length?'VERIFICADA · '+ship.verifiedPatch:ship?.status==='source-listed'&&ship.sources?.length?'DOCUMENTADA EN FUENTE · sin prueba LIVE':'NO VERIFICADA')+(ship?.padSizes?' · plataforma '+ship.padSizes:'');
+ card.append(h,meta,org,intel,svc,repair);
  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
  card.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:p}));
  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseSearchResult({kind:'poi',value:p})}});
