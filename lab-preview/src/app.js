@@ -296,7 +296,7 @@ input.addEventListener('keydown',e=>{
     if(item){e.preventDefault();chooseSearchResult(item)}
   }
 });
-document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search, .tactical-toolbar'))hideMenu();});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.atlas-search-stack'))hideMenu();});
 $('fav').addEventListener('click', () => { if (!exactSolar) return; favs = favs.includes(exactSolar.name) ? favs.filter(n => n !== exactSolar.name) : [...favs, exactSolar.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
 $('cards').addEventListener('click', e => { const b = e.target.closest('.card'); if (b) select(byName(b.dataset.name)); });
 window.addEventListener('hashchange', () => { const l = fromHash(); if (l && l !== cur) select(l); });
