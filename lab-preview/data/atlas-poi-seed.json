@@ -3727,7 +3727,7 @@
       "repairIntel": {
         "ship": {
           "status": "source-listed",
-          "method": "landing-service",
+          "method": "request-on-landing",
           "padSizes": "medium-large",
           "vehicleClasses": [],
           "verifiedPatch": null,
@@ -3748,7 +3748,7 @@
           "verifiedPatch": null,
           "sources": []
         },
-        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "note": "Reparación, rearmado y repostaje documentados en Star Citizen Wiki. Plataformas M/L; sin prueba operativa LIVE. Generación de vehículos terrestres no demuestra reparación terrestre.",
         "sources": [
           "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
         ]
@@ -3857,7 +3857,7 @@
       "repairIntel": {
         "ship": {
           "status": "source-listed",
-          "method": "landing-service",
+          "method": "request-on-landing",
           "padSizes": "medium-large",
           "vehicleClasses": [],
           "verifiedPatch": null,
@@ -3878,7 +3878,7 @@
           "verifiedPatch": null,
           "sources": []
         },
-        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "note": "Reparación, rearmado y repostaje documentados en Star Citizen Wiki. Plataformas M/L; sin prueba operativa LIVE. Generación de vehículos terrestres no demuestra reparación terrestre.",
         "sources": [
           "https://starcitizen.tools/HDMS-Norgaard"
         ]
@@ -4420,17 +4420,21 @@
       "operator": null,
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Outposts"
+        "https://starcitizen.tools/Outposts",
+        "https://starcitizen.tools/Shubin_Mining_Facility_SM0-22"
       ],
       "verification": "source-listed",
       "patch": "unverified",
       "repairIntel": {
         "ship": {
-          "status": "unverified",
-          "method": "landing-service",
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
           "vehicleClasses": [],
           "verifiedPatch": null,
-          "sources": []
+          "sources": [
+            "https://starcitizen.tools/Shubin_Mining_Facility_SM0-22"
+          ]
         },
         "groundVehicle": {
           "status": "unverified",
@@ -4445,9 +4449,9 @@
           "verifiedPatch": null,
           "sources": []
         },
-        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "note": "Reparación, rearmado y repostaje documentados en Star Citizen Wiki. Plataformas M/L; sin prueba operativa LIVE. Generación de vehículos terrestres no demuestra reparación terrestre.",
         "sources": [
-          "https://starcitizen.tools/Outposts"
+          "https://starcitizen.tools/Shubin_Mining_Facility_SM0-22"
         ]
       }
     },
