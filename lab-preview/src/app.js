@@ -1,21 +1,15 @@
+import {dossierGroups,locationDossier} from './location-dossier.js';
 import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
-import { envFor, SOURCE } from './environment.js';
 import { coords, fmtCoords, nearestQT, compass } from './nav.js';
-import { securityFor } from './security.js';
-import { lootFor } from './loot.js';
 import { validateIntelRecord, lootBadge } from './intel-schema.js';
-import { securityFor as destinationSecurity } from './security.js';
-import { lootFor as destinationLoot } from './loot.js';
-import { atlasKey, atlasSystem, mergeTacticalAtlas, normalize, serviceNames, tacticalSections, tacticalTags } from './tactical-atlas.js';
+import { atlasKey, atlasSystem, mergeTacticalAtlas, normalize, tacticalSections, tacticalTags } from './tactical-atlas.js';
 
 const $ = id => document.getElementById(id);
-const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
-const MAD = tz('Europe/Madrid');
-const DATE = new Intl.DateTimeFormat('es-ES', { timeZone: 'Europe/Madrid', day: '2-digit', month: 'short', year: 'numeric' });
+const madridTime = new Intl.DateTimeFormat('es-ES',{timeZone:'Europe/Madrid',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'});
 const PHASE = { day: 'Día', night: 'Noche', sunrise: 'Amanecer', sunset: 'Atardecer', polar: 'Ciclo polar' };
 const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
 
@@ -41,63 +35,37 @@ function mono(el, text) {
   el.innerHTML = [...text].map(c => kind(c) === 'd' ? `<span class="dg" aria-hidden="true">${c}</span>` : kind(c) === 'c' ? '<span class="cl" aria-hidden="true">:</span>' : `<span aria-hidden="true">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
 }
 const byName = n => locs.find(l => l.name === n);
-const label = l => `${l.name} (${l.body})`;
 const dur = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min ${String(s % 60).padStart(2, '0')} s`; };
 
+let exactSolar=null;
+let activeLocation=null;
+function setClock(solar,reference=null){
+  exactSolar=solar||null;
+  cur=solar||reference;
+  lastScenePaint=0;
+  $('where').textContent=solar?'Hora local':reference?'Referencia solar · '+reference.name:'Hora local sin cálculo';
+  $('solarEvents').hidden=!cur;
+  if(!cur)mono($('clock'),'—');
+  $('fav').disabled=!exactSolar;
+  renderFavs();
+  tick();
+}
 function select(l) {
-  if (!l) return; cur = l;
-  lastScenePaint = 0;
-  $('q').value = '';
-  $('copyCoord').disabled=false;$('fav').disabled=false;
-  $('tacticalPanel').hidden=true;
-  $('mainIntelApi').hidden=true;
-  $('locationDossier').hidden=true;
-  for (const id of ['intelReadiness', 'intelTacticalCards', 'intelSourceLinks']) $(id).replaceChildren();
-  selectedPoiKey=null;
-  $('place').textContent = l.name;
-  $('where').textContent = `${l.body} · ${l.system}`;
-  $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
-  $('kind').textContent = l.type || '—';
-  const loot = lootFor(l);
-  $('lootStatus').textContent = loot.label;
-  $('lootStatus').dataset.level = loot.level;
-  $('lootNote').textContent = loot.summary;
-  const sec = securityFor(l);
-  $('securityThreat').textContent = sec.threat;
-  $('securityThreat').dataset.risk = sec.threat === 'Alto' ? 'high' : sec.threat === 'Desconocido' ? 'unknown' : 'conditional';
-  $('pvpRisk').textContent = sec.pvp || 'Sin datos';
-  $('pveRisk').textContent = 'PvE: '+(sec.pve || 'Sin datos');
-  $('securityFaction').textContent = sec.faction;
-  $('securityAccess').textContent = sec.access;
-  $('securityNote').textContent = sec.notes;
-  $('securityEvidence').replaceChildren();
-  if (sec.source) { const a = document.createElement('a'); a.href = sec.source.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.textContent = sec.source.grade + ' · ' + sec.source.build; $('securityEvidence').append(a); }
-  else $('securityEvidence').textContent = 'Sin evidencia específica';
-  const env = envFor(l);
-  $('grav').textContent = env.gravity.label; $('grav').dataset.g = env.gravity.key; $('gravHint').textContent = env.gravity.hint;
-  $('hazWrap').hidden = !env.tags.length;
-  $('haz').innerHTML = env.tags.map(t => `<span class="chip" data-k="${t.key}">${t.label}</span>`).join('');
-  $('envMini').textContent = [env.gravity.key === 'low' ? 'Gravedad baja' : env.gravity.key === 'mid' ? 'Gravedad media' : '', ...env.tags.map(t => t.label.split(' ')[0])].filter(Boolean).join(' · ');
-  $('envSrc').textContent = `Entorno según la comunidad (gravedad: ${SOURCE.gravity}; peligros: ${SOURCE.hazards}). Puede cambiar con cada parche.`;
-  const c = coords(l), kmFmt = v => v.toFixed(1).replace('.', ',');
-  $('coord').textContent = `${fmtCoords(c)} · ${c.altKm.toFixed(2).replace('.', ',')} km`;
-  $('coordXYZ').textContent = `x ${c.x.toFixed(3)} · y ${c.y.toFixed(3)} · z ${c.z.toFixed(3)} km (respecto a ${l.body})`;
-  $('qt').textContent = l.quantum === true ? 'Sí, se puede saltar directo' : l.quantum === false ? 'No tiene' : 'Sin dato';
-  const nav = l.quantum === true ? null : nearestQT(l, locs);
-  $('qtRoute').textContent = nav ? `Desde ${nav.from.name}: ${kmFmt(nav.km)} km por superficie, rumbo ${nav.bearing.toFixed(0)}° (${compass(nav.bearing)})` : '';
-  $('rate').textContent = `1 s real = ${(1 / l.lengthOfDayDays).toFixed(1).replace('.', ',')} s de juego`;
+  if(!l)return;
+  setClock(l);
+  input.value='';
   const url=new URL(location.href);
   url.searchParams.delete('dest');
-  url.hash=encodeURIComponent(l.name.replace(/ /g, '_'));
+  url.hash=encodeURIComponent(l.name.replace(/ /g,'_'));
   history.replaceState(null,'',url);
-  store.set('vc-last', l.name);
-  renderFavs(); tick();
-  const poi=poiData.find(p=>p.system===l.system&&p.name.toLocaleLowerCase('es')===l.name.toLocaleLowerCase('es'));
-  if(poi){selectedPoiKey=atlasKey(poi);applyPoiToMain(poi);}
+  store.set('vc-last',l.name);
+  const poi=poiData.find(p=>p.system===l.system&&normalize(p.name)===normalize(l.name));
+  selectedPoiKey=poi?atlasKey(poi):null;
+  applyPoiToMain(poi||l);
 }
 
 function renderFavs() {
-  const isFav = cur && favs.includes(cur.name);
+  const isFav = exactSolar && favs.includes(exactSolar.name);
   $('fav').setAttribute('aria-pressed', String(!!isFav));
   $('fav').innerHTML = `<span class="ico" aria-hidden="true">${isFav ? '★' : '☆'}</span><span class="txt">${isFav ? 'Fijada' : 'Fijar'}</span>`;
   $('fav').setAttribute('aria-label', isFav ? 'Quitar de fijadas' : 'Fijar ubicación');
@@ -113,8 +81,6 @@ let lastScenePaint = 0;
 const SCENE_EVERY_MS = 15000; // el paisaje cambia despacio: repintado cada 15 s; el reloj, en cada fotograma
 function tick() {
   const now = nowMs();
-  $('mad').textContent = MAD.format(now);
-  $('date').textContent = DATE.format(now);
   $('net').textContent = SIM ? 'Hora simulada' : navigator.onLine ? 'En línea' : 'Sin conexión · modo offline';
   if (!cur) return;
   const r = compute(cur, now), st = sunState(cur, r);
@@ -129,32 +95,12 @@ function tick() {
     if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
   }
 
-  const lodS = cur.lengthOfDayDays * 86400;
-  if (r.polar) {
-    $('solar').classList.add('polar');
-    mono($('riseIn'), 'Sin evento'); mono($('setIn'), 'Sin evento');
-    $('riseAt').textContent = $('setAt').textContent = 'Ciclo polar en el modelo';
-    $('bar').style.width = '0%'; $('pct').textContent = '—';
-    $('tl').style.background = 'var(--night)'; $('tlRise').hidden = $('tlSet').hidden = true;
-  } else {
-    $('solar').classList.remove('polar');
-    mono($('riseIn'), r.starriseNow ? 'Ahora' : dur(r.nextStarriseInSeconds));
-    mono($('setIn'), r.starsetNow ? 'Ahora' : dur(r.nextStarsetInSeconds));
-    $('riseAt').textContent = MAD.format(Date.parse(r.nextStarriseUtc)) + ' Madrid';
-    $('setAt').textContent = MAD.format(Date.parse(r.nextStarsetUtc)) + ' Madrid';
-    // progreso de la fase actual (día o noche) en tiempo real
-    const toSet = r.nextStarsetInSeconds, toRise = r.nextStarriseInSeconds;
-    const dayS = r.isDay ? lodS - (toRise - toSet) : toSet - toRise; // duración de la luz
-    const phaseLen = r.isDay ? dayS : lodS - dayS, left = r.isDay ? toSet : toRise;
-    const pct = clampPct(100 * (1 - left / Math.max(1, phaseLen)));
-    $('bar').style.width = pct + '%'; $('pct').textContent = `${pct.toFixed(0)} % de la ${r.isDay ? 'luz' : 'noche'}`;
-    // línea temporal del día local (00:00 → 24:00)
-    const riseL = (r.localTimeSeconds + toRise * 86400 / lodS) % 86400 / 864;
-    const setL = (r.localTimeSeconds + toSet * 86400 / lodS) % 86400 / 864;
-    $('tlRise').hidden = $('tlSet').hidden = false;
-    $('tlRise').style.left = riseL + '%'; $('tlSet').style.left = setL + '%';
-    $('tl').style.background = `linear-gradient(90deg, var(--night) 0%, var(--night) ${riseL - 4}%, var(--dawn) ${riseL}%, var(--day) ${riseL + 6}%, var(--day) ${setL - 6}%, var(--dusk) ${setL}%, var(--night) ${setL + 4}%, var(--night) 100%)`;
-  }
+  $('riseEvent').hidden=r.polar||(r.isDay&&!r.starriseNow);
+  $('setEvent').hidden=r.polar||(!r.isDay&&!r.starsetNow);
+  if(!$('riseEvent').hidden)mono($('riseIn'),r.starriseNow?'Ahora':dur(r.nextStarriseInSeconds));
+  if(!$('setEvent').hidden)mono($('setIn'),r.starsetNow?'Ahora':dur(r.nextStarsetInSeconds));
+  const schedule=$('solarSchedule');
+  if(schedule&&!r.polar)schedule.textContent='Hora de Madrid · amanecer '+madridTime.format(Date.parse(r.nextStarriseUtc))+' · atardecer '+madridTime.format(Date.parse(r.nextStarsetUtc));
   for (const el of $('cards').children) {
     const l = byName(el.dataset.name); if (!l) continue;
     const ph = sunState(l, compute(l, now)).phase;
@@ -168,7 +114,6 @@ function fast(now = nowMs()) {
   if (!cur) return;
   const r = compute(cur, now);
   mono($('clock'), r.localTime);
-  $('tlNow').style.left = (r.localTimeSeconds / 864) + '%';
   for (const el of $('cards').children) { const l = byName(el.dataset.name); if (l) mono(el.querySelector('[data-t]'), compute(l, now).localTime); }
 }
 // Limitar repintados del reloj: evita cálculos DOM en cada frame (60/120 Hz) en iPhone.
@@ -178,12 +123,6 @@ function frame(timestamp) {
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
-const clampPct = v => Math.min(100, Math.max(0, v));
-
-function find(v) {
-  v = v.trim().toLowerCase(); if (!v) return null;
-  return locs.find(x => label(x).toLowerCase() === v) || locs.find(x => x.name.toLowerCase() === v) || locs.find(x => x.name.toLowerCase().includes(v));
-}
 function fromHash() { const h = decodeURIComponent(location.hash.slice(1)).replace(/_/g, ' ').toLowerCase(); return h && locs.find(l => l.name.toLowerCase() === h); }
 
 buildScene($('scene'));
@@ -205,36 +144,21 @@ function chooseSearchResult(item){
  if(item.kind==='poi'){
   const p=item.value;
   const solar=locs.find(l=>normalize(l.name)===normalize(p.name)&&l.system===p.system);
-  if(solar)select(solar);
-  else{
-   const parent=locs.find(l=>l.system===p.system&&(normalize(l.body)===normalize(p.parent)||normalize(l.name)===normalize(p.parent)));
-   if(parent)select(parent);
-   else{
-    cur=null;
-    mono($('clock'),'—');mono($('riseIn'),'—');mono($('setIn'),'—');
-    for(const id of ['rate','phase','pct','riseAt','setAt','gravHint','envMini'])$(id).textContent='';
-    $('grav').textContent='Sin datos';$('hazWrap').hidden=true;
-    $('bar').style.width='0%';$('tl').style.background='var(--night)';$('tlRise').hidden=$('tlSet').hidden=true;
-    renderFavs();
-   }
-   $('place').textContent=p.name;
-   $('where').textContent=[p.parent,p.system,parent?'Reloj solar de referencia: '+parent.body:'Sin reloj solar local verificado'].filter(Boolean).join(' · ');
-   $('kind').textContent=p.type||'Instalación';
-   if(!parent)$('dayLen').textContent='Sin datos';
-   $('coord').textContent='Sin coordenadas verificadas';$('coordXYZ').textContent='';
-   $('qt').textContent='Sin dato';$('qtRoute').textContent='';
-   $('copyCoord').disabled=true;$('fav').disabled=true;
-  }
+  const referenceBody=stantonBody(p)||p.parent;
+  const surface=/outpost|bunker|underground|surface|facility|planetary-alignment|settlement|moon|planet/i.test(p.type||'')&&!/orbital|platform$/i.test(p.type||'');
+  const reference=surface&&locs.find(l=>l.system===p.system&&normalize(l.body)===normalize(referenceBody));
+  setClock(solar,reference||null);
+  if(solar)store.set('vc-last',solar.name);
   const url=new URL(location.href);
   url.searchParams.set('dest',atlasKey(p));
   url.hash='';
   history.replaceState(null,'',url);
   selectedPoiKey=atlasKey(p);
   applyPoiToMain(p);
-  if(!$('tacticalPanel').hidden)$('tacticalPanel').scrollIntoView({block:'start'});
+  window.scrollTo({top:0});
 
  }else {selectedPoiKey=null;select(item.value)}
- hideMenu();input.blur();
+ hideMenu();input.blur();setFilterOpen(false);
 }
 function pick(i){chooseSearchResult(suggestions[i])}
 const serviceIcons={repair:'repair',rearm:'rearm',refuel:'refuel',refinery:'refinery',clinic:'medic',cargo:'cargo'};
@@ -242,6 +166,14 @@ const evidenceState=value=>({confirmed:'confirmed',reported:'possible',possible:
 const dossierIcons=p=>new Set(tacticalSections(p).flatMap(section=>section.icons||[]));
 let activeFilter='';
 let operationsEnabled=false;
+function setFilterOpen(open){
+ $('searchFilters').hidden=!open;
+ $('filterToggle').setAttribute('aria-expanded',String(open));
+}
+$('filterToggle').addEventListener('click',()=>{
+ setFilterOpen($('searchFilters').hidden);
+ hideMenu();
+});
 let rawStantonCatalog=[];
 const stantonZone=$('stantonZone');
 const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
@@ -310,23 +242,8 @@ function renderStantonCoverage(){
 $('operationsToggle').addEventListener('click',()=>{
  operationsEnabled=!operationsEnabled;
  $('operationsToggle').setAttribute('aria-pressed',String(operationsEnabled));
- const selected=poiData.find(p=>atlasKey(p)===selectedPoiKey);
- if(selected)renderLocationDossier(selected);
- else if(operationsEnabled){
-  $('q').focus();
- }
+ if(activeLocation)applyPoiToMain(activeLocation);
 });
-function renderOperations(p){
- const panel=$('operationsPanel');panel.replaceChildren();panel.hidden=!operationsEnabled;
- if(!operationsEnabled)return;
- const title=document.createElement('h3');title.textContent='Operaciones · servicios de nave';
- const list=document.createElement('ul');list.className='service-icons';
- for(const key of ['repair','rearm','refuel']){
-  const state=evidenceState(p.services?.[key]);
-  const row=document.createElement('li');row.append(makeTacticalLabel(key,tacticalIcons[key][0]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
- }
- panel.append(title,list);
-}
 
 function updateMenu(){
  const q=normalize(input.value);
@@ -364,9 +281,6 @@ function updateMenu(){
  }btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
 }
-$('searchAgain').addEventListener('click',()=>{
- input.scrollIntoView({block:'center'});input.focus({preventScroll:true});
-});
 input.addEventListener('input',updateMenu);
 input.addEventListener('focus',updateMenu);
 input.addEventListener('keydown',e=>{
@@ -383,13 +297,7 @@ input.addEventListener('keydown',e=>{
   }
 });
 document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search, .tactical-toolbar'))hideMenu();});
-$('copyCoord').addEventListener('click', async () => {
-  if (!cur) return; const c = coords(cur);
-  const txt = `${cur.name} (${cur.body}) — ${fmtCoords(c)} · alt ${c.altKm.toFixed(2)} km · x ${c.x.toFixed(3)} y ${c.y.toFixed(3)} z ${c.z.toFixed(3)} km`;
-  try { await navigator.clipboard.writeText(txt); $('copyCoord').textContent = 'Copiado'; } catch { $('copyCoord').textContent = 'No se pudo'; }
-  setTimeout(() => { $('copyCoord').textContent = 'Copiar'; }, 1500);
-});
-$('fav').addEventListener('click', () => { if (!cur) return; favs = favs.includes(cur.name) ? favs.filter(n => n !== cur.name) : [...favs, cur.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
+$('fav').addEventListener('click', () => { if (!exactSolar) return; favs = favs.includes(exactSolar.name) ? favs.filter(n => n !== exactSolar.name) : [...favs, exactSolar.name].slice(-6); store.set('vc-favs', favs); renderFavs(); tick(); });
 $('cards').addEventListener('click', e => { const b = e.target.closest('.card'); if (b) select(byName(b.dataset.name)); });
 window.addEventListener('hashchange', () => { const l = fromHash(); if (l && l !== cur) select(l); });
 
@@ -439,224 +347,111 @@ let poiData=[];
 let selectedPoiKey=null;
 
 // Interpretación transversal de metadatos reales del catálogo, sin atribuir misiones ni botín no verificados.
-function derivedLocationIntel(p){
- const entries=[];const services=Array.isArray(p.amenities)?p.amenities.filter(x=>typeof x==='string'&&x.trim()):[];
- const groups=[
-  [/refiner|refinería|refining/i,'Refinería','Servicios de refinado registrados; comprobar disponibilidad, costes y tiempos en terminal.'],
-  [/repair|refuel|restock|rearm|repar|repost|reabast/i,'Servicios de nave','Servicios de nave catalogados; comprobar operatividad antes de desplazarse.'],
-  [/trade|commodity|shop|store|market|comerc|tienda|venta/i,'Comercio','Actividad comercial catalogada; inventario y precios no confirmados en tiempo real.'],
-  [/medical|clinic|hospital|medic|clínica/i,'Asistencia médica','Servicio sanitario catalogado; no presupone punto de regeneración.'],
-  [/cargo|freight|hauling|carga|almacén/i,'Logística y carga','Instalación logística catalogada; los contratos disponibles varían.'],
-  [/vehicle|ship dealer|rental|vehículo|alquiler/i,'Vehículos y naves','Servicio relacionado con vehículos catalogado; modelos disponibles sin verificar.'],
-  [/weapon|armor|armour|munition|arma|armadura/i,'Equipamiento','Punto de equipamiento catalogado; comprobar stock.']
- ];
- const found=new Set();
- for(const service of services){let classified=false;for(const [pattern,label,description] of groups){if(pattern.test(service)){if(!found.has(label)){entries.push('◈ '+label+' [API / servicio]: '+description);found.add(label)}classified=true;break}}if(!classified)entries.push('◈ Servicio registrado [API]: '+service)}
- if(Number.isInteger(p.missionCount)&&p.missionCount>0)entries.push('◈ Contratos asociados [API]: '+p.missionCount+' referencias en catálogo; no implica disponibilidad actual ni revela tipo de misión.');
- if(Number.isInteger(p.childCount)&&p.childCount>0)entries.push('◈ Lugares dependientes [API]: '+p.childCount+' ubicaciones vinculadas; explorar sus fichas para identificar instalaciones próximas.');
- if(p.jurisdiction)entries.push('◈ Jurisdicción [API]: '+p.jurisdiction+'. Las normas y respuesta de seguridad no se deducen automáticamente de este dato.');
- if(p.affiliation)entries.push('◈ Afiliación [API]: '+p.affiliation+'. No presupone presencia de NPC hostiles.');
- return entries;
-}
-
-
-function universalIntel(p){
- const out=[];const add=(heading,items)=>{if(!Array.isArray(items)||!items.length)return;out.push('━━ '+heading+' ━━');for(const item of items){if(typeof item==='string'){out.push('◇ '+item);continue}if(!item||typeof item!=='object')continue;const label=item.name||item.label||item.title||'Dato';const detail=item.detail||item.description||item.location||'';const evidence=[item.confidence||item.status,item.patch||item.source?.version,item.checkedAt?('revisado '+String(item.checkedAt).slice(0,10)):null,item.source?.provider||item.source].filter(x=>typeof x==='string'&&x).join(' · ');out.push('◇ '+label+(evidence?' ['+evidence+']':'')+(detail?': '+detail:''))}};
- add('ACTIVIDADES Y CONTRATOS',p.activities);
- add('MISIONES DOCUMENTADAS',p.missions);
- add('BOTÍN POR INSTALACIÓN',p.lootItems);
- add('RECURSOS Y MINERÍA',p.resources);
- add('INSTALACIONES VINCULADAS',p.nearbyLocations);
- add('COMERCIO Y PRODUCTOS',p.commodities);
- add('SERVICIOS Y TIENDAS',p.shops);
- add('NPC Y AMENAZAS DOCUMENTADAS',p.npcs);
- add('CONSEJOS TÁCTICOS',p.tacticalTips);
- return out;
-}
-
-function renderTacticalCards(p,sec,loot){
- const root=$('intelTacticalCards'),readiness=$('intelReadiness'),sources=$('intelSourceLinks');
- if(!root||!readiness||!sources)return;
- root.replaceChildren();sources.replaceChildren();readiness.replaceChildren();
- const intel=p.lootIntel,missions=p.missions||[],resources=p.resources||[],amenities=p.amenities||[];
- const hasPve=Boolean(p.tacticalIntel?.threats?.length||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
- const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
- const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
- const hasMissions=Boolean(p.hathor||missions.length||p.activities?.length);
- const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
- const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
- const cards=[
-  ['pve','PVE / NPC',p.hathor?sec.pve:p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
-  ['pvp','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
-  ['loot','BOTÍN / EQUIPO',p.hathor?p.hathor.sections[3].text:p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['mission','MISIONES',p.hathor?'Align & Mine · pedido de Shubin relacionado':missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
-  ['mining','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
-  ['repair','SERVICIOS',p.serviceIntel?.services.length?p.serviceIntel.services.map(s=>serviceNames[s]).join(' · '):amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
- ];
- const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
- const header=document.createElement('div');header.className='intel-readiness-head';
- const label=document.createElement('span');label.textContent='COBERTURA DE INTELIGENCIA';
- const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
- header.append(label,value);
- const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
- const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
- readiness.append(header,meter,caption);
- for(const [icon,title,value,known,evidence] of cards){
-  const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
-  const t=document.createElement('div');t.className='intel-tactical-title';t.append(tacticalIcon(icon,{size:24}),title);
-  const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
-  const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
-  card.append(t,v,e);root.append(card)
- }
- const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[])].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
- const seen=new Set();
- for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
-}
-
-function renderLocationDossier(p){
- const host=$('locationDossier');
- host.replaceChildren();
- const sections=sectionsFor(p);
- renderOperations(p);
- const body=p.stantonIntel?.environment?null:stantonBody(p);
- const environment=body&&poiData.find(row=>row.name===body&&row.system==='Stanton')?.stantonIntel?.environment;
- host.hidden=!sections.length&&!environment;
- $('tacticalPanel').hidden=host.hidden&&!operationsEnabled;
- if(environment){
-  const note=document.createElement('section');note.className='location-dossier-block';
-  const heading=document.createElement('h3');heading.append(tacticalIcon('danger',{size:24}),' Entorno del cuerpo · '+body);
-  const copy=document.createElement('p');copy.textContent=environment.text;
-  const source=document.createElement('a');source.href=environment.sources[0];source.textContent='Fuente del cuerpo';source.target='_blank';source.rel='noopener noreferrer';source.className='stanton-source';
-  note.append(heading,copy,source);host.append(note);
- }
- const nav=names=>{
-  const bar=document.createElement('div');bar.className='location-dossier-nav';
-  for(const name of names){
-   const dest=poiData.find(item=>atlasKey(item)===atlasKey({system:p.system,name}));
-   if(!dest)continue;
-   const button=document.createElement('button');button.type='button';button.textContent=name;
-   button.addEventListener('click',()=>{chooseSearchResult({kind:'poi',value:dest});});
-   bar.append(button);
-  }
-  return bar;
- };
- if(p.hathor)host.append(nav(p.hathor.linked));
- if(p.serviceIntel){
-  const note=document.createElement('small');note.textContent='UEX · consulta '+p.serviceIntel.checkedAt+' · LIVE '+p.serviceIntel.live+' en la fecha de consulta · servicios reportados';
-  host.append(note);
- }
- if(p.system==='Stanton'){
-  const known=new Set(p.stantonIntel?.claims.map(claim=>claim.field)||[]);
-  for(const key of ['repair','refuel','rearm'])if(['confirmed','reported'].includes(p.services?.[key]))known.add(key);
-  if(p.serviceIntel?.tradeTerminal||p.serviceIntel?.trade?.length)known.add('trade');
-  if(p.serviceIntel?.services.some(name=>['clinic','cargo','refinery'].includes(name)))known.add('logistics');
-  if(p.hathor){
-   for(const field of ['pve','pvp','missions','loot','access'])known.add(field);
-   if(!p.name.endsWith('OLP'))known.add('weapons');
-  }
-  const reviewed=new Set(p.stantonIntel?.reviewedWithoutEvidence||[]);
-  const pending=Object.entries(stantonFields).filter(([key])=>!known.has(key)&&!reviewed.has(key)).map(([,title])=>title);
-  if(pending.length){
-   const details=document.createElement('details');details.className='stanton-pending';
-   const title=document.createElement('summary');title.textContent='Campos pendientes de verificar';
-   const copy=document.createElement('p');copy.textContent=pending.join(' · ');
-   details.append(title,copy);host.append(details);
-   host.hidden=false;$('tacticalPanel').hidden=false;
-  }
- }
- for(const section of sections){
-  const block=document.createElement('section');block.className='location-dossier-block';
-  const title=document.createElement('h3');title.className='tactical-label';
-  for(const icon of section.icons||[])title.append(tacticalIcon(icon,{size:24}));
-  title.append(section.title);
-  const copy=document.createElement('p');copy.textContent=section.text;
-  const links=document.createElement('div');links.className='intel-source-links';
-  for(const item of section.sources){
-   const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=item.name;
-   links.append(link);
-  }
-  block.append(title,copy);
-  if(section.status){const status=document.createElement('small');status.textContent=section.status;block.append(status);}
-  if(section.icons?.length===0&&p.serviceIntel?.services.length){
-   const list=document.createElement('ul');list.className='service-icons';
-   for(const key of p.serviceIntel.services){
-    const icon=serviceIcons[key];if(!icon)continue;
-    const state=evidenceState(p.services?.[key]);
-    const row=document.createElement('li');
-    row.append(makeTacticalLabel(icon,serviceNames[key]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
-   }
-   block.append(list);
-  }
-  if(section.destinations)block.append(nav(section.destinations));
-  block.append(links);host.append(block);
- }
-}
-
 function applyPoiToMain(p){
- const sec=destinationSecurity(p),loot=destinationLoot(p);
- if(p.hathor){
-  const sections=p.hathor.sections;
-  Object.assign(sec,{threat:'Variable',pve:sections[1].text,pvp:sections[2].text,
-   access:'Align & Mine · actividad abierta',notes:'Serie '+p.hathor.group+' · '+p.hathor.moon,
-   faction:'Hathor Group (histórico)'});
+ const same=activeLocation&&atlasKey(activeLocation)===atlasKey(p);
+ activeLocation=p;
+ const host=$('locationDossier');
+ const previouslyOpen=new Set(same?Array.from(host.querySelectorAll('details[open]'),el=>el.dataset.domain):[]);
+ host.replaceChildren();
+ $('mainIntelLocation').textContent=p.name;
+ const body=stantonBody(p)||p.parent||p.body;
+ $('locationMeta').textContent=[body&&body!==p.name?body:null,p.system,p.type].filter(Boolean).join(' · ');
+ const environment=body&&poiData.find(row=>row.name===body&&row.system===p.system)?.stantonIntel?.environment;
+ const c=exactSolar&&coords(exactSolar);
+ const nav=c&&exactSolar.quantum!==true&&nearestQT(exactSolar,locs);
+ const solar=c&&[
+  fmtCoords(c)+' · '+c.altKm.toFixed(2)+' km',
+  exactSolar.quantum===true?'Salto cuántico directo':null,
+  nav?'Desde '+nav.from.name+': '+nav.km.toFixed(1)+' km por superficie, rumbo '+nav.bearing.toFixed(0)+'° ('+compass(nav.bearing)+')':null,
+ ].filter(Boolean).join(' · ');
+ const model=locationDossier(p,{environment,body,solar,operations:operationsEnabled});
+ const order=Object.keys(dossierGroups);
+ if(operationsEnabled){order.splice(order.indexOf('services'),1);order.unshift('services')}
+ const makeLink=(url,label)=>{
+  const a=document.createElement('a');a.href=url;a.textContent=label;
+  a.target='_blank';a.rel='noopener noreferrer';return a;
+ };
+ for(const domain of order){
+  const facts=model.groups.get(domain)||[];
+  if(!facts.length&&(domain!=='services'||!model.services.size))continue;
+  const [title,icon]=dossierGroups[domain];
+  const secondary=domain==='navigation';
+  const section=document.createElement(secondary?'details':'section');
+  section.className='location-dossier-block';section.dataset.domain=domain;
+  if(secondary)section.open=previouslyOpen.has(domain);
+  const heading=document.createElement(secondary?'summary':'h2');
+  heading.className='tactical-label';heading.append(tacticalIcon(icon,{size:20}),title);section.append(heading);
+  if(domain==='services'&&model.services.size){
+   const list=document.createElement('ul');list.className='service-icons';
+   for(const [key,item] of model.services){
+    const state=evidenceState(item.state);
+    const status=state==='confirmed'?'Documentado · LIVE pendiente':tacticalStates[state][0];
+    const row=document.createElement('li');
+    row.append(makeTacticalLabel(serviceIcons[key],item.label+' · '+status,20,state));list.append(row);
+   }
+   section.append(list);
+  }
+  for(const fact of facts){
+   const copy=document.createElement('p');copy.className='dossier-fact';
+   if(fact.title){const lead=document.createElement('strong');lead.textContent=fact.title;copy.append(lead,' · ')}
+   copy.append(fact.text);
+   if(fact.status){const status=document.createElement('small');status.textContent=' '+fact.status;copy.append(status)}
+   if(fact.sources.length){
+    const refs=document.createElement('span');refs.className='dossier-refs';
+    for(const i of fact.sources){
+     const a=document.createElement('a');a.href='#dossier-source-'+i;a.textContent='['+i+']';
+     a.addEventListener('click',e=>{
+      e.preventDefault();
+      $('locationSources').open=true;
+      $('dossier-source-'+i)?.focus();
+     });
+     a.setAttribute('aria-label','Ver fuente '+i);refs.append(a);
+    }
+    copy.append(refs);
+   }
+   section.append(copy);
+   if(fact.destinations?.length){
+    const links=document.createElement('div');links.className='location-dossier-nav';
+    for(const name of fact.destinations){
+     const dest=poiData.find(item=>atlasKey(item)===atlasKey({system:p.system,name}));
+     if(!dest)continue;
+     const button=document.createElement('button');button.type='button';button.textContent=name;
+     button.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:dest}));links.append(button);
+    }
+    if(links.childElementCount)section.append(links);
+   }
+  }
+  if(domain==='navigation'&&c){
+   const button=document.createElement('button');button.type='button';button.className='mini';button.textContent='Copiar coordenadas';
+   button.addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText(fmtCoords(c)+' · alt '+c.altKm.toFixed(2)+' km · x '+c.x.toFixed(3)+' y '+c.y.toFixed(3)+' z '+c.z.toFixed(3)+' km');button.textContent='Coordenadas copiadas'}
+    catch{button.textContent='No se pudieron copiar'}
+   });
+   section.append(button);
+   const r=compute(exactSolar,nowMs());
+   if(!r.polar){const schedule=document.createElement('p');schedule.id='solarSchedule';schedule.className='dossier-fact';section.append(schedule);schedule.textContent='Hora de Madrid · amanecer '+madridTime.format(Date.parse(r.nextStarriseUtc))+' · atardecer '+madridTime.format(Date.parse(r.nextStarsetUtc));}
+  }
+  host.append(section);
  }
- renderLocationDossier(p);
- renderTacticalCards(p,sec,loot);
- $('securityThreat').textContent=sec.threat||'Desconocido';
- $('securityThreat').dataset.risk=sec.threat==='Alto'?'high':'unknown';
- $('securityFaction').textContent=(p.operator&&/antiguo|abandonad/i.test(p.operator)?p.operator+' (histórico)':p.operator)||p.affiliation||sec.faction||'Sin verificar';
- $('securityAccess').textContent=sec.access||'Sin verificar';
- $('securityNote').textContent=[p.name+' · '+[p.system,p.parent,p.type].filter(Boolean).join(' · '),sec.notes,p.verification==='api-catalog'?'Catálogo geográfico API: PvP, NPC y botín no certificados por la API.':''].filter(Boolean).join(' — ');
- $('pvpRisk').textContent=sec.pvp||'Sin datos verificados';
- $('pveRisk').textContent='PvE: '+(sec.pve||'Sin datos verificados');
- $('lootStatus').textContent=loot.label||'Botín sin verificar';
- $('lootStatus').dataset.level=loot.level||'unknown';
- $('lootNote').textContent=loot.summary||'Sin datos verificados';
- $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
- $('mainIntelLocation').textContent=p.name+' · '+(p.system||'');
- const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
- const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
- const universal=universalIntel(p);
- if(universal.length)summary.push(...universal);
- const derived=derivedLocationIntel(p);
- if(derived.length){summary.push('━━ ACTIVIDADES Y DATOS DOCUMENTADOS ━━');summary.push(...derived)}
- const parentBody=locs.find(l=>l.system===p.system&&(String(l.name).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')||String(l.body).toLocaleLowerCase('es')===String(p.parent||'').toLocaleLowerCase('es')));
- if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
- if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
- if(p.tacticalTips?.length){summary.push('━━ INFORMACIÓN ÚTIL ANTES DE IR ━━');for(const tip of p.tacticalTips)summary.push('▸ '+tip)}
- if(p.tacticalIntel&&!p.hathor){const t=p.tacticalIntel;summary.push('━━ DOSSIER TÁCTICO DOCUMENTADO ━━');summary.push(t.title);if(t.weapons)summary.push('ARMAS POSIBLES: '+t.weapons.join(' · '));if(t.armor)summary.push('ARMADURAS POSIBLES: '+t.armor.join(' · '));if(t.components)summary.push('COMPONENTES POSIBLES: '+t.components.join(' · '));if(t.threats?.length)summary.push('AMENAZAS: '+t.threats.join(' · '));if(t.resources?.length)summary.push('RECURSOS / RECOMPENSAS: '+t.resources.join(' · '));if(t.requirements?.length)summary.push('PREPARACIÓN: '+t.requirements.join(' · '));for(const [i,step] of (t.steps||[]).entries())summary.push('PASO '+(i+1)+': '+step);summary.push('LIMITACIÓN: '+t.caveat);for(const url of t.sources)summary.push('FUENTE: '+url)}
- if(p.lootIntel&&!p.hathor){const li=p.lootIntel;summary.push('━━ BOTÍN ESPECÍFICO · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
- summary.push('Temperatura exacta de la instalación: sin verificar');
- summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
- $('mainIntelApi').textContent=summary.join('\n');
- $('mainIntelApi').hidden=false;
+ if(!host.childElementCount){
+  const note=document.createElement('p');note.textContent='Información operativa pendiente de verificar.';host.append(note);
+ }
+ if(model.sources.length||model.versionLabel){
+  const details=document.createElement('details');details.id='locationSources';details.dataset.domain='sources';
+  details.className='location-dossier-block';details.open=previouslyOpen.has('sources');
+  const heading=document.createElement('summary');heading.textContent='Fuentes y versión';details.append(heading);
+  if(model.versionLabel){const version=document.createElement('p');version.textContent=model.versionLabel;details.append(version)}
+  const list=document.createElement('ol');list.className='dossier-sources';
+  for(const source of model.sources){
+   const row=document.createElement('li');
+   const link=makeLink(source.url,source.label);link.id='dossier-source-'+source.index;
+   row.append(link);list.append(row);
+  }
+  if(list.childElementCount)details.append(list);
+  host.append(details);
+ }
 }
-function showPoiDestination(p){
- const sec=destinationSecurity(p),loot=destinationLoot(p);
- $('destinationName').textContent=p.name;
- $('destinationMeta').textContent=[p.system,p.parent,p.type,p.operator].filter(Boolean).join(' · ');
- const parentLoc=locs.find(l=>l.name?.toLowerCase()===String(p.parent||'').toLowerCase()||l.body?.toLowerCase()===String(p.parent||'').toLowerCase());
- const environment=parentLoc?envFor(parentLoc):null;
- const climate=environment?.tags?.map(t=>t.label).join(' · ');
- $('destinationClimate').textContent=climate||'Sin datos específicos verificados';
- $('destinationTemperature').textContent='Temperatura exacta sin verificar';
- $('destinationPvp').textContent=sec.pvp||'Sin datos';
- $('destinationPve').textContent=sec.pve||'Sin datos';
- $('destinationFaction').textContent=sec.faction||p.operator||'Sin verificar';
- $('destinationAccess').textContent=sec.access||'Sin verificar';
- $('destinationLoot').textContent=loot.summary;
- const n=p.name.toLowerCase();
- const isHathor=/hathor|attritus|lamina|ruptura|vivere|\bolp\b|\bpaf\b/.test(n);
- const hazard=isHathor?( /aberdeen|ruptura|vivere/.test(n+' '+(p.parent||'').toLowerCase())?'Calor extremo en Aberdeen; mercenarios hostiles y Valakkar juveniles en operaciones de alineación.':'Mercenarios hostiles y Valakkar juveniles en operaciones de alineación; comprobar condiciones locales.' ):/lazarus|phoenix research lab|storm breaker/.test(n)?'Radiación y tormentas electromagnéticas: riesgo de daño por distorsión e inutilización de la nave (fuente comunitaria).':/jumptown/.test(n)?'Frío extremo en Daymar; no hay armisticio (fuente comunitaria).':'No se ha documentado un peligro ambiental específico para esta instalación.';
- $('destinationHazards').textContent=hazard;
- $('destinationPrep').textContent=isHathor?'PvP elevado: prever emboscadas de jugadores/organizaciones. Llevar MaxLift, multiherramienta, fusibles, equipo de combate y apoyo médico; GEO/ROC para minería.':/lazarus|phoenix research lab|storm breaker/.test(n)?'Planificar aproximación ante interferencias, protección radiológica y requisitos de acceso.':/jumptown/.test(n)?'Planificar extracción y combustible: sin servicios locales; el evento dinámico no se presupone activo.':/checkmate|orbituary|ruin station/.test(n)?'Distinguir zona pública de Contested Zone; prever combate PvPvE.':'Confirmar permisos, contrato y hostilidad antes de abrir fuego; no hay detección de jugadores en vivo.';
- $('destinationEvidence').textContent=[sec.source?.grade,sec.source?.build,p.patch].filter(Boolean).join(' · ')||'Sin validación específica por parche';
- $('destinationNotes').textContent=sec.notes||'No hay evaluación específica para este destino.';
- const source=$('destinationSource');const url=sec.source?.url||loot.source||p.sourceUrls?.[0];source.hidden=!url;if(url)source.href=url;
- applyPoiToMain(p);
- $('destinationIntel').hidden=true;
-}
-$('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
+
 function renderPoi(){
  const queryTerms=normalize(poiQuery.value).split(/\s+/).filter(Boolean);
  const matches=poiData.filter(p=>{
@@ -689,7 +484,7 @@ for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',rend
 function updateAtlasProgress(d){
  const total=poiData.length;
  if(!total)return;
- const documented=poiData.filter(p=>tacticalSections(p).length);
+ const documented=poiData.filter(p=>sectionsFor(p).length);
  const count=documented.length,percent=100*count/total;
  $('atlasProgressBar').dataset.loaded='true';$('atlasProgressBar').setAttribute('aria-valuemax',String(total));$('atlasProgressBar').setAttribute('aria-valuenow',String(count));
  $('atlasProgressFill').style.width=percent.toFixed(2)+'%';$('atlasProgressPercent').textContent=percent.toFixed(1)+'%';
@@ -815,7 +610,7 @@ async function loadAtlas(){
  await refreshResourceIndex(version);
  if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
  const requested=byKey.get(initialDestination);
- if(requested&&!selectedPoiKey)chooseSearchResult({kind:'poi',value:requested});
+ if(requested&&(!selectedPoiKey||selectedPoiKey!==key(requested)))chooseSearchResult({kind:'poi',value:requested});
  else{
   const match=byKey.get(selectedPoiKey||(cur&&key(cur)));
   if(match)applyPoiToMain(match);
