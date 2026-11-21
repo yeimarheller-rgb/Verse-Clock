@@ -4584,17 +4584,21 @@
       "operator": null,
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Outposts"
+        "https://starcitizen.tools/Outposts",
+        "https://starcitizen.tools/Rayari_Kaltag_Research_Outpost"
       ],
       "verification": "source-listed",
       "patch": "unverified",
       "repairIntel": {
         "ship": {
-          "status": "unverified",
-          "method": "landing-service",
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
           "vehicleClasses": [],
           "verifiedPatch": null,
-          "sources": []
+          "sources": [
+            "https://starcitizen.tools/Rayari_Kaltag_Research_Outpost"
+          ]
         },
         "groundVehicle": {
           "status": "unverified",
@@ -4609,9 +4613,15 @@
           "verifiedPatch": null,
           "sources": []
         },
-        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "note": "Wiki: reparación/rearme/repostaje a petición en aterrizaje; pads medianos y grandes. Disponibilidad LIVE pendiente. Platinum Bay solo indica generación de vehículos, no reparación terrestre.",
         "sources": [
-          "https://starcitizen.tools/Outposts"
+          "https://starcitizen.tools/Rayari_Kaltag_Research_Outpost"
+        ]
+      },
+      "operationalNotes": {
+        "hazards": "Peligro ambiental: frío extremo según ficha de la wiki",
+        "sources": [
+          "https://starcitizen.tools/Rayari_Kaltag_Research_Outpost"
         ]
       }
     },
@@ -4624,17 +4634,21 @@
       "operator": null,
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Outposts"
+        "https://starcitizen.tools/Outposts",
+        "https://starcitizen.tools/Rayari_Cantwell_Research_Outpost"
       ],
       "verification": "source-listed",
       "patch": "unverified",
       "repairIntel": {
         "ship": {
-          "status": "unverified",
-          "method": "landing-service",
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
           "vehicleClasses": [],
           "verifiedPatch": null,
-          "sources": []
+          "sources": [
+            "https://starcitizen.tools/Rayari_Cantwell_Research_Outpost"
+          ]
         },
         "groundVehicle": {
           "status": "unverified",
@@ -4649,9 +4663,15 @@
           "verifiedPatch": null,
           "sources": []
         },
-        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "note": "Wiki: reparación/rearme/repostaje a petición en aterrizaje; pads medianos y grandes. Disponibilidad LIVE pendiente. Platinum Bay solo indica generación de vehículos, no reparación terrestre.",
         "sources": [
-          "https://starcitizen.tools/Outposts"
+          "https://starcitizen.tools/Rayari_Cantwell_Research_Outpost"
+        ]
+      },
+      "operationalNotes": {
+        "hazards": "Peligro ambiental: frío según ficha de la wiki",
+        "sources": [
+          "https://starcitizen.tools/Rayari_Cantwell_Research_Outpost"
         ]
       }
     },
@@ -4812,6 +4832,150 @@
         "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
         "sources": [
           "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-rayari-deltana-research-outpost",
+      "name": "Rayari Deltana Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "microTech",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Rayari_Deltana_Research_Outpost"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/Rayari_Deltana_Research_Outpost"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Wiki: reparación/rearme/repostaje a petición en aterrizaje; pads medianos y grandes. Disponibilidad LIVE pendiente. Platinum Bay solo indica generación de vehículos, no reparación terrestre.",
+        "sources": [
+          "https://starcitizen.tools/Rayari_Deltana_Research_Outpost"
+        ]
+      },
+      "operationalNotes": {
+        "hazards": "Peligro ambiental: frío extremo según ficha de la wiki",
+        "sources": [
+          "https://starcitizen.tools/Rayari_Deltana_Research_Outpost"
+        ]
+      }
+    },
+    {
+      "id": "repair-hdms-pinewood",
+      "name": "HDMS-Pinewood",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/HDMS-Pinewood"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/HDMS-Pinewood"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Wiki: reparación/rearme/repostaje a petición en aterrizaje; pads medianos y grandes. Disponibilidad LIVE pendiente. Platinum Bay solo indica generación de vehículos, no reparación terrestre.",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Pinewood"
+        ]
+      },
+      "operationalNotes": {
+        "hazards": "La ficha de la wiki no identifica peligro ambiental específico",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Pinewood"
+        ]
+      }
+    },
+    {
+      "id": "repair-deakins-research-outpost",
+      "name": "Deakins Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Yela",
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Deakins_Research_Outpost"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "request-on-landing",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/Deakins_Research_Outpost"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Wiki: reparación/rearme/repostaje a petición en aterrizaje; pads medianos y grandes. Disponibilidad LIVE pendiente. Platinum Bay solo indica generación de vehículos, no reparación terrestre.",
+        "sources": [
+          "https://starcitizen.tools/Deakins_Research_Outpost"
+        ]
+      },
+      "operationalNotes": {
+        "hazards": "Peligro ambiental: frío extremo según ficha de la wiki",
+        "sources": [
+          "https://starcitizen.tools/Deakins_Research_Outpost"
         ]
       }
     }
