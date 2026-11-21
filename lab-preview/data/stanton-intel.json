@@ -840,8 +840,21 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "reported",
+          "title": "Escala de apoyo en CRU-L1",
+          "text": "Estación situada en el punto de Lagrange CRU-L1, útil como referencia de escala para operaciones alrededor de Crusader. El rearme, repostaje y reparación deben consultarse por separado en Servicios de aterrizaje: la presencia de una estación no garantiza que los tres servicios estén disponibles. Comprueba hangar asignado y terminales antes de planificar una operación de organización.",
+          "sources": [
+            "https://starcitizen.tools/CRU-L1_Ambitious_Dream_Station",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          ],
+          "patch": "4.10.3 (guía documental, sin prueba LIVE)",
+          "uncertainty": "No se han verificado en sesión LIVE tamaño de hangar, reparación ni disponibilidad de terminales."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "CRU-L4 Shallow Fields Station",
@@ -2121,8 +2134,21 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "reported",
+          "title": "Punto de escala HUR-L2",
+          "text": "Estación de apoyo en HUR-L2. La ficha existente documenta rearme y repostaje, pero no permite confirmar reparación. Para una nave dañada, no dependas de HUR-L2 como único destino de emergencia sin comprobar antes el menú de Servicios de aterrizaje. No se confirma clínica ni capacidad para naves capitales.",
+          "sources": [
+            "https://starcitizen.tools/HUR-L2_Faithful_Dream_Station",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          ],
+          "patch": "4.10.3 (guía documental, sin prueba LIVE)",
+          "uncertainty": "Reparación, clínica y hangar capital no verificados; no deben mostrarse como servicios confirmados."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HUR-L3 Thundering Express Station",
