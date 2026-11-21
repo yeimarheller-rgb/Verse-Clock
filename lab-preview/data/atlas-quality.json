@@ -26555,7 +26555,7 @@
   ],
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-21T07:22:41.970Z",
+  "generatedAt": "2026-11-21T08:43:52.255Z",
   "definition": "Actionable includes resource associations from the commodity API, which are NOT confirmed mineable deposits or loot. verifiedOperationalExcludingCommodityAssociations excludes commodity-only evidence; it is not live server confirmation.",
   "counts": {
     "resourceAssociationsOnly": 228,
