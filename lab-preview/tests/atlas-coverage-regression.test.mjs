@@ -144,3 +144,11 @@ test('station and gateway records do not silently assert verified repair or live
   assert.ok(!p.services || !Object.values(p.services).includes('confirmed'),p.id+': unproven LIVE service');
  }
 });
+
+
+test('mission overview counts sourced PAF evidence and preserves its location caveat', () => {
+ const ui=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
+ assert.ok(ui.includes('p.operationalNotes?.missionEvidence4103?.source'));
+ assert.ok(ui.includes('asignación local no confirmada'));
+ assert.ok(ui.includes('seen.size>=8'));
+});
