@@ -373,14 +373,14 @@ function renderTacticalCards(p,sec,loot){
  const hasPve=Boolean(p.tacticalIntel?.threats?.some(x=>!/(?:sin (?:medici[oó]n|datos|confirmaci[oó]n)|no (?:hay|se dispone|existe)|desconocid)/i.test(x))||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
  const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
  const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
- const hasMissions=Boolean(missions.length||p.activities?.length);
+ const hasMissions=Boolean(missions.length||p.activities?.length||p.operationalNotes?.missionEvidence4103?.source);
  const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
  const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
   ['⚔️','COMBATE PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
   ['🎯','COMBATE PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
   ['🎒','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['📜','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['📜','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':p.operationalNotes?.missionEvidence4103?.source?'Contrato documentado por categoría PAF · asignación local no confirmada':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
   ['⛏️','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
   ['🛠️','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
