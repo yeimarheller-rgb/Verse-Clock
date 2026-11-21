@@ -3710,6 +3710,266 @@
           "https://www.citadelsc.com/en/map/pyro-i"
         ]
       }
+    },
+    {
+      "id": "repair-shubin-mining-facility-scd-1",
+      "name": "Shubin Mining Facility SCD-1",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Daymar",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "sources": [
+          "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Puesto de superficie con servicios reportados; inventario comercial y precios no contrastados",
+        "hazards": "No se ha contrastado el peligro local en LIVE",
+        "sources": [
+          "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "Shubin Mining Facility SCD-1 · reparación documentada en superficie",
+        "steps": [
+          "La wiki indica servicio de reparación, reabastecimiento y combustible solicitado desde el aterrizaje.",
+          "Comprobar que el tamaño de la nave cabe en la plataforma antes de desplazarse.",
+          "No asumir reparación de vehículos terrestres ni disponibilidad LIVE sin prueba."
+        ],
+        "threats": [
+          "No hay mediciones PvP de este puesto"
+        ],
+        "caveat": "Servicio documentado por wiki, pendiente de prueba en LIVE",
+        "sources": [
+          "https://starcitizen.tools/Shubin_Mining_Facility_SCD-1"
+        ]
+      }
+    },
+    {
+      "id": "repair-arccorp-mining-area-141",
+      "name": "ArcCorp Mining Area 141",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Daymar",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/ArcCorp_Mining_Area_141"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "padSizes": "medium",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/ArcCorp_Mining_Area_141"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "sources": [
+          "https://starcitizen.tools/ArcCorp_Mining_Area_141"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Puesto de superficie con servicios reportados; inventario comercial y precios no contrastados",
+        "hazards": "No se ha contrastado el peligro local en LIVE",
+        "sources": [
+          "https://starcitizen.tools/ArcCorp_Mining_Area_141"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "ArcCorp Mining Area 141 · reparación documentada en superficie",
+        "steps": [
+          "La wiki indica servicio de reparación, reabastecimiento y combustible solicitado desde el aterrizaje.",
+          "Comprobar que el tamaño de la nave cabe en la plataforma antes de desplazarse.",
+          "No asumir reparación de vehículos terrestres ni disponibilidad LIVE sin prueba."
+        ],
+        "threats": [
+          "No hay mediciones PvP de este puesto"
+        ],
+        "caveat": "Servicio documentado por wiki, pendiente de prueba en LIVE",
+        "sources": [
+          "https://starcitizen.tools/ArcCorp_Mining_Area_141"
+        ]
+      }
+    },
+    {
+      "id": "repair-hdms-norgaard",
+      "name": "HDMS-Norgaard",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Aberdeen",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/HDMS-Norgaard"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/HDMS-Norgaard"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Norgaard"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Puesto de superficie con servicios reportados; inventario comercial y precios no contrastados",
+        "hazards": "Calor extremo indicado en la ficha de ubicación; llevar protección adecuada",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Norgaard"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "HDMS-Norgaard · reparación documentada en superficie",
+        "steps": [
+          "La wiki indica servicio de reparación, reabastecimiento y combustible solicitado desde el aterrizaje.",
+          "Comprobar que el tamaño de la nave cabe en la plataforma antes de desplazarse.",
+          "No asumir reparación de vehículos terrestres ni disponibilidad LIVE sin prueba."
+        ],
+        "threats": [
+          "No hay mediciones PvP de este puesto"
+        ],
+        "caveat": "Servicio documentado por wiki, pendiente de prueba en LIVE",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Norgaard"
+        ]
+      }
+    },
+    {
+      "id": "repair-hdms-anderson",
+      "name": "HDMS-Anderson",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Aberdeen",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/HDMS-Anderson"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "padSizes": "medium-large",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://starcitizen.tools/HDMS-Anderson"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "La wiki documenta Repair, Rearm & Refuel en plataforma; no es comprobación LIVE. Tamaño de pad indicado por wiki. Vehículos terrestres no verificados.",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Anderson"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Puesto de superficie con servicios reportados; inventario comercial y precios no contrastados",
+        "hazards": "Calor extremo indicado en la ficha de ubicación; llevar protección adecuada",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Anderson"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "HDMS-Anderson · reparación documentada en superficie",
+        "steps": [
+          "La wiki indica servicio de reparación, reabastecimiento y combustible solicitado desde el aterrizaje.",
+          "Comprobar que el tamaño de la nave cabe en la plataforma antes de desplazarse.",
+          "No asumir reparación de vehículos terrestres ni disponibilidad LIVE sin prueba."
+        ],
+        "threats": [
+          "No hay mediciones PvP de este puesto"
+        ],
+        "caveat": "Servicio documentado por wiki, pendiente de prueba en LIVE",
+        "sources": [
+          "https://starcitizen.tools/HDMS-Anderson"
+        ]
+      }
     }
   ]
 }
