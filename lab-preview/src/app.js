@@ -1,3 +1,4 @@
+import {inStantonZone,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
@@ -241,7 +242,10 @@ const evidenceState=value=>({confirmed:'confirmed',reported:'possible',possible:
 const dossierIcons=p=>new Set(tacticalSections(p).flatMap(section=>section.icons||[]));
 let activeFilter='';
 let operationsEnabled=false;
-const filters=[['repair','Reparación'],['refuel','Repostaje'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
+let rawStantonCatalog=[];
+const stantonZone=$('stantonZone');
+const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
+const filters=[['repair','Reparación'],['refuel','Repostaje'],['rearm','Rearme'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
 function matchesFilter(p,filter){
  if(!filter)return true;
  if(serviceIcons[filter])return ['confirmed','possible'].includes(evidenceState(p.services?.[filter]));
@@ -275,6 +279,34 @@ for(const [id,title] of filters){
   updateMenu();
  });
 }
+for(const [planet,bodies] of Object.entries(stantonGroups)){
+ const group=document.createElement('optgroup');group.label=planet;
+ group.append(new Option(planet+' y lunas',planet));
+ group.append(new Option('Solo '+planet,'only:'+planet));
+ for(const moon of bodies.slice(1))group.append(new Option(moon,moon));
+ stantonZone.append(group);
+}
+stantonZone.addEventListener('change',()=>{updateMenu();renderStantonCoverage();});
+function renderStantonCoverage(){
+ const host=$('stantonCoverage');
+ if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
+ const c=stantonCoverage(rawStantonCatalog,poiData,stantonZone.value||'Stanton');
+ const summary=document.createElement('p');
+ summary.textContent=c.operational+' / '+c.total+' operativas · '+(c.total?(100*c.operational/c.total).toFixed(1):'0')+' % · objetivo 90 %';
+ const list=document.createElement('dl');list.className='stanton-metrics';
+ const metrics={'Geografía con identidad única':c.geographic,'Campos aplicables revisados':c.reviewedAll,
+  ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
+  'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
+ for(const [label,count] of Object.entries(metrics)){
+  const row=document.createElement('div'),name=document.createElement('dt'),result=document.createElement('dd');
+  name.textContent=label;
+  const bar=document.createElement('progress');bar.max=Math.max(1,c.total);bar.value=count;bar.setAttribute('aria-label',label);
+  result.append(bar,count+' / '+c.total);row.append(name,result);list.append(row);
+ }
+ const note=document.createElement('small');
+ note.textContent='Registros originales del catálogo API. Los nombres repetidos sin identidad resuelta siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
+ host.replaceChildren(summary,list,note);
+}
 $('operationsToggle').addEventListener('click',()=>{
  operationsEnabled=!operationsEnabled;
  $('operationsToggle').setAttribute('aria-pressed',String(operationsEnabled));
@@ -291,16 +323,16 @@ function renderOperations(p){
  const list=document.createElement('ul');list.className='service-icons';
  for(const key of ['repair','rearm','refuel']){
   const state=evidenceState(p.services?.[key]);
-  const row=document.createElement('li');row.append(makeTacticalLabel(key,tacticalIcons[key][0]+' · '+tacticalStates[state][0],24,state));list.append(row);
+  const row=document.createElement('li');row.append(makeTacticalLabel(key,tacticalIcons[key][0]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
  }
  panel.append(title,list);
 }
 
 function updateMenu(){
  const q=normalize(input.value);
- if(!q&&!activeFilter){hideMenu();return}
- const solar=(activeFilter?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
- const pois=poiData.filter(p=>matchesFilter(p,activeFilter)).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
+ if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
+ const solar=(activeFilter||stantonZone.value?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
+ const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&inStantonZone(p,stantonZone.value)).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
  p.type,p.operator,p.affiliation,p.jurisdiction,...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
@@ -311,7 +343,7 @@ function updateMenu(){
  ...(p.missions||[]).map(x=>x.name),
  ...(p.resources||[]).map(x=>x.name),
  ...(p.activities||[]).map(x=>x.name),
- ...(p.tacticalTips||[]),
+ ...(p.tacticalTips||[]),...stantonSections(p).map(section=>section.title+' '+section.text),
  /paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''
  ].filter(Boolean).join(' ')}));
  const unique=new Map();
@@ -327,7 +359,7 @@ function updateMenu(){
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
  suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');if(item.kind==='poi'){
   const icon=resultIcon(item.value);
-  const state=['repair','refuel'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
+  const state=['repair','refuel','rearm'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
   name.prepend(tacticalIcon(icon,{size:20,state}));name.className='tactical-label';
  }btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
@@ -484,10 +516,19 @@ function renderTacticalCards(p,sec,loot){
 function renderLocationDossier(p){
  const host=$('locationDossier');
  host.replaceChildren();
- const sections=tacticalSections(p);
+ const sections=sectionsFor(p);
  renderOperations(p);
- host.hidden=!sections.length;
- $('tacticalPanel').hidden=!sections.length&&!operationsEnabled;
+ const body=p.stantonIntel?.environment?null:stantonBody(p);
+ const environment=body&&poiData.find(row=>row.name===body&&row.system==='Stanton')?.stantonIntel?.environment;
+ host.hidden=!sections.length&&!environment;
+ $('tacticalPanel').hidden=host.hidden&&!operationsEnabled;
+ if(environment){
+  const note=document.createElement('section');note.className='location-dossier-block';
+  const heading=document.createElement('h3');heading.append(tacticalIcon('danger',{size:24}),' Entorno del cuerpo · '+body);
+  const copy=document.createElement('p');copy.textContent=environment.text;
+  const source=document.createElement('a');source.href=environment.sources[0];source.textContent='Fuente del cuerpo';source.target='_blank';source.rel='noopener noreferrer';source.className='stanton-source';
+  note.append(heading,copy,source);host.append(note);
+ }
  const nav=names=>{
   const bar=document.createElement('div');bar.className='location-dossier-nav';
   for(const name of names){
@@ -516,13 +557,14 @@ function renderLocationDossier(p){
    links.append(link);
   }
   block.append(title,copy);
+  if(section.status){const status=document.createElement('small');status.textContent=section.status;block.append(status);}
   if(section.icons?.length===0&&p.serviceIntel?.services.length){
    const list=document.createElement('ul');list.className='service-icons';
    for(const key of p.serviceIntel.services){
     const icon=serviceIcons[key];if(!icon)continue;
     const state=evidenceState(p.services?.[key]);
     const row=document.createElement('li');
-    row.append(makeTacticalLabel(icon,serviceNames[key]+' · '+tacticalStates[state][0],24,state));list.append(row);
+    row.append(makeTacticalLabel(icon,serviceNames[key]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
    }
    block.append(list);
   }
@@ -644,7 +686,7 @@ async function mergeFreshIntel(d){
  poiData=poiData.map(p=>{const e=byUuid.get(p.source?.uuid||p.id);if(!e)return p;changed=true;return {...p,missions:e.missions||p.missions||[],resources:e.resources||p.resources||[],nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt}});
  if(!changed)return;
  if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
- if(input.value.trim()||activeFilter)updateMenu();
+ if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
  renderPoi();
 }
 
@@ -666,7 +708,7 @@ function mergeFreshResources(data){
  });
  if(changed){
   if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
-  if(input.value.trim()||activeFilter)updateMenu();
+  if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
   renderPoi();
  }
 }
@@ -730,6 +772,7 @@ function updateAtlasQuality(d){
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=atlasKey;
+ const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
  const servicesRequest=fetch('./data/atlas-services.json').then(r=>{if(!r.ok)throw Error('Services HTTP '+r.status);return r.json()})
   .catch(error=>{console.warn('Tactical services unavailable',error);return null});
  for(const p of base.locations||[])byKey.set(key(p),p);
@@ -737,17 +780,19 @@ async function loadAtlas(){
  try{
   const r=await fetch('./data/wiki-atlas.json',{cache:'no-cache'});
   if(r.ok){const d=await r.json();if(d.schemaVersion!==1||!Array.isArray(d.locations)||!d.locations.length)throw Error('Invalid API catalog');
-   version=d.version||'';
+   version=d.version||'';rawStantonCatalog=traceStantonParents(d.locations.filter(p=>atlasSystem(p.system)==='Stanton'));
    for(const entry of d.locations){if(!entry.name||!entry.system)continue;const p={...entry,system:atlasSystem(entry.system)};const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
  const serviceSnapshot=await servicesRequest;
  mergeTacticalAtlas(byKey,serviceSnapshot,version);
- poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ mergeStanton(byKey,await stantonRequest);
+ poiData=traceStantonParents([...byKey.values()]).sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  updateAtlasProgress({generatedAt:serviceSnapshot?.checkedAt});
+ renderStantonCoverage();
  await refreshResourceIndex(version);
- if(input.value.trim()||activeFilter)updateMenu();
+ if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
  const requested=byKey.get(initialDestination);
  if(requested&&!selectedPoiKey)chooseSearchResult({kind:'poi',value:requested});
  else{
