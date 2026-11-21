@@ -55,3 +55,6 @@
 .stanton-metrics dd { margin:0;display:flex;gap:8px;align-items:center }
 .stanton-metrics progress { height:8px;flex:1;min-width:0;accent-color:#70daf1 }
 .stanton-source { color:#70daf1 }
+
+.stanton-pending { grid-column:1/-1;color:#b5d5e6;padding:8px 0 }
+.stanton-pending summary { cursor:pointer }
