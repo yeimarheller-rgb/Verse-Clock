@@ -173,3 +173,12 @@ test('newcomer location guide derives claims from evidence rather than assumptio
  assert.match(js,/no se ha confirmado su asignación aquí/);
  assert.match(js,/guide\.replaceChildren\(\)/);
 });
+
+
+test('beginner guide exposes curated activity preparation and first step', () => {
+ const js=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
+ assert.match(js,/Preparación documentada:/);
+ assert.match(js,/Primer paso de la actividad:/);
+ assert.match(js,/p\.tacticalIntel\?\.requirements/);
+ assert.match(js,/p\.tacticalIntel\?\.steps/);
+});
