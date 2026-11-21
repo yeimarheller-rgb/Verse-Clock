@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, mergeStanton, stantonBodies, stantonCoverage, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, mergeStanton, stantonBodies, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
 
 const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue=read('wiki-atlas');
@@ -43,6 +43,7 @@ test('Stanton keeps raw denominator and credits only located, sourced evidence',
  assert.deepEqual(stantonBodies.filter(body=>!at(body)?.stantonIntel?.environment),[]);
  assert.equal(stanton.locations.filter(row=>!at(row.name)).length,0);
  for(const row of stanton.locations)for(const claim of row.claims){
+  assert.ok(Object.hasOwn(stantonFields,claim.field),row.name+': categoría desconocida '+claim.field);
   assert.ok(claim.sources.length);
   for(const url of claim.sources)assert.equal(new URL(url).protocol,'https:');
  }
@@ -97,4 +98,14 @@ test('UUID binds the Hurston batch to the inventory and excludes historical and 
   assert.equal(stantonCoverage([indexed.get(p.stantonIntel.uuid)],[p]).counts.access,1,name);
   assert.equal(p.services?.repair,undefined,name);
  }
+});
+
+test('historical Ghost Hollow claims do not increase operational mission coverage',()=>{
+ const p=at('Ghost Hollow');
+ const claim=p.stantonIntel.claims.find(c=>c.title?.includes('créditos CCB'));
+ assert.equal(claim?.field,'missions');
+ assert.equal(claim?.status,'historical');
+ const eventOnly={...p,stantonIntel:{claims:[claim]}};
+ const inventory=raw.filter(row=>row.id===p.source.uuid);
+ assert.equal(stantonCoverage(inventory,[eventOnly]).counts.missions,0);
 });

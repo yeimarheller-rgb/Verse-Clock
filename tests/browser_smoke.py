@@ -205,6 +205,22 @@ with sync_playwright() as p:
             assert access.inner_text().count(access_rule) == 1
         page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=f'/tmp/verse-lab-cassillo-{device}.png', full_page=True)
+        for place, group, caption in [
+            ("Brio's Breaker Yard", 'services', 'No Questions Asked'),
+            ('Everus Harbor', 'services', 'Suministros y componentes'),
+            ('Baijini Point', 'services', 'punto de reaparición hospitalaria'),
+            ('Grim HEX', 'services', 'Recuperación médica'),
+            ('Port Tressler', 'services', 'Clínica Kel-To'),
+            ('Ghost Hollow', 'missions', 'Evento de créditos CCB'),
+            ('HUR-L2 Faithful Dream Station', 'services', 'Clínica y escala de apoyo'),
+        ]:
+            query(place, place)
+            expect(dossier.locator(f'[data-domain="{group}"]')).to_contain_text(caption)
+            assert all(caption not in text for text in dossier.locator('[data-domain="navigation"]').all_text_contents())
+        expect(dossier.locator('[data-domain="services"]')).not_to_contain_text('No se confirma clínica')
+        verify_layout()
+        page.evaluate('window.scrollTo(0,0)')
+        page.screenshot(path=f'/tmp/verse-lab-faithful-dream-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

@@ -741,16 +741,16 @@
           "uncertainty": "Tamaños y servicios documentados; disponibilidad y compatibilidad de nave en sesión LIVE no comprobadas."
         },
         {
-          "field": "medical",
+          "field": "logistics",
           "status": "documented",
           "title": "Clínica y regeneración",
-          "text": "Baijini Point Clinic es una instalación hija con punto de regeneración hospitalaria identificado en datos de 4.10.2. Para establecer el respawn, usa el terminal médico correspondiente y confirma el traslado de impronta antes de salir de la estación.",
+          "text": "Baijini Point Clinic figura como punto de reaparición hospitalaria en 4.10.3. Para trasladar la impronta, comprueba el terminal de regeneración y confirma el destino que muestra.",
           "sources": [
             "https://api.star-citizen.wiki/locations/baijini-point-clinic",
             "https://starcitizen.tools/Medical"
           ],
-          "patch": "4.10.2-LIVE.12881860",
-          "uncertainty": "Servicio identificado en datos de 4.10.2; operación del terminal en 4.10.3 no comprobada."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Interacción del terminal pendiente de prueba en partida."
         }
       ],
       "checkedAt": "2026-11-21"
@@ -816,14 +816,15 @@
           "uncertainty": "Servicios contrastados en directorios, sin verificación directa dentro del juego."
         },
         {
-          "field": "trade-terminal",
+          "field": "trade",
           "status": "documented",
           "text": "UEX registra el terminal Commodity Shop - Brio's Breaker Yard como punto de venta «No Questions Asked» en Daymar para 4.10.3. Verifica en el terminal el producto, demanda y precio antes de transportar mercancía; los precios varían y no están garantizados.",
           "sources": [
             "https://uexcorp.space/commodities/locations/name/brios-breaker-yard/"
           ],
           "patch": "4.10.3",
-          "uncertainty": "Datos comunitarios de mercado; no confirman stock ni operación exitosa en la sesión del jugador."
+          "uncertainty": "Datos comunitarios de mercado; no confirman stock ni operación exitosa en la sesión del jugador.",
+          "title": "Terminal de comercio de Brio’s"
         }
       ],
       "checkedAt": "2026-11-21"
@@ -1288,7 +1289,7 @@
           "uncertainty": "Servicios listados documentalmente; operación en LIVE y tamaño de hangar compatible no probados."
         },
         {
-          "field": "equipment",
+          "field": "trade",
           "status": "documented",
           "title": "Suministros y componentes",
           "text": "En Everus Harbor figuran Platinum Bay para componentes, tienda de armaduras y centro de carga con suministros y alquiler de naves. No se confirma disponibilidad de una pieza o vehículo concreto sin revisar el terminal. Los precios históricos de alquiler de 3.23 no deben presentarse como actuales.",
@@ -1370,16 +1371,16 @@
           ]
         },
         {
-          "field": "event-terminals",
+          "field": "missions",
           "status": "historical",
-          "text": "Evento PvP de terminales CCB: diseño original requiere desactivar la matriz de comunicaciones de microTech y disputar terminales de créditos en el entorno del Reclaimer. La misión ilegal «money from nothing» de Ruto sigue figurando en datos extraídos de 4.10.2, con entrada de 999 aUEC; esto NO demuestra que los terminales paguen en LIVE 4.10.3. Jugadores notificaron fallos de funcionamiento en 4.9 y julio de 2026. No planifiques ingresos ni viajes basados en su funcionamiento sin comprobarlo en servidor.",
+          "text": "El evento de 3.19 vinculaba la matriz de comunicaciones de microTech a los terminales de créditos del Reclaimer. El contrato ilegal Money from Nothing figura en la extracción de 4.10.3 con entrada de 999 aUEC. La activación del evento y los pagos siguen sin comprobarse en partida.",
           "sources": [
-            "https://robertsspaceindustries.com/en/comm-link/transmission/19222-Roadmap-Roundup-April-5-2023",
-            "https://api.star-citizen.wiki/missions/money-from-nothing",
-            "https://www.reddit.com/r/starcitizen/comments/1utyg6y/bring_it_back_money_for_nothing_mission_not/"
+            "https://starcitizen.tools/Star_Citizen_Alpha_3.19.0",
+            "https://api.star-citizen.wiki/missions/money-from-nothing"
           ],
-          "patch": "4.10.2 (datos de misión); 3.19 (diseño original); 4.10.3 sin prueba funcional",
-          "uncertainty": "Estado de activación y pagos en LIVE 4.10.3 desconocido; informes de fallos de jugadores no equivalen a confirmación oficial."
+          "patch": "3.19 (diseño) · 4.10.3-LIVE.13165946 (registro de misión)",
+          "uncertainty": "Estado de activación y pagos en LIVE 4.10.3 desconocido; informes de fallos de jugadores no equivalen a confirmación oficial.",
+          "title": "Evento de créditos CCB · referencia histórica"
         },
         {
           "field": "hazards",
@@ -1483,7 +1484,7 @@
           ]
         },
         {
-          "field": "medical",
+          "field": "logistics",
           "status": "documented",
           "title": "Recuperación médica",
           "text": "Green Imperial Medical ofrece atención sanitaria de nivel T2 dentro de Grim HEX. El lugar también cuenta con gestión de naves, reparación, rearme y repostaje; úsalo como escala de recuperación en la zona de Yela, verificando disponibilidad de cada servicio al llegar.",
@@ -2158,15 +2159,18 @@
         },
         {
           "field": "logistics",
-          "status": "reported",
-          "title": "Punto de escala HUR-L2",
-          "text": "Estación de apoyo en HUR-L2. La ficha existente documenta rearme y repostaje, pero no permite confirmar reparación. Para una nave dañada, no dependas de HUR-L2 como único destino de emergencia sin comprobar antes el menú de Servicios de aterrizaje. No se confirma clínica ni capacidad para naves capitales.",
+          "status": "documented",
+          "title": "Clínica y escala de apoyo",
+          "text": "El catálogo de 4.10.3 identifica Faithful Dream Clinic como punto de reaparición hospitalaria. Comprueba en el terminal la opción de regeneración. Para una nave dañada, verifica la disponibilidad de reparación y el tamaño de hangar antes de organizar la recuperación.",
           "sources": [
-            "https://starcitizen.tools/HUR-L2_Faithful_Dream_Station",
+            "https://api.star-citizen.wiki/locations/hur-l2-faithful-dream-station",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
           ],
-          "patch": "4.10.3 (guía documental, sin prueba LIVE)",
-          "uncertainty": "Reparación, clínica y hangar capital no verificados; no deben mostrarse como servicios confirmados."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Regeneración en partida, reparación y compatibilidad con naves capitales pendientes.",
+          "destinations": [
+            "HUR-L2 Faithful Dream Clinic"
+          ]
         }
       ],
       "checkedAt": "2026-11-21"
@@ -2654,7 +2658,7 @@
           "uncertainty": "Reparación y disponibilidad efectiva de servicios en servidor LIVE sin confirmar."
         },
         {
-          "field": "medical",
+          "field": "logistics",
           "status": "documented",
           "title": "Clínica Kel-To",
           "text": "Port Tressler dispone de Kel-To Medical Clinic. Para fijar regeneración, comprueba el terminal de regeneración y confirma la nueva impronta antes de salir; la presencia de la clínica no garantiza por sí sola que el cambio se haya registrado.",
