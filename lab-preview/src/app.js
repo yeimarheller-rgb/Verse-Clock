@@ -398,6 +398,16 @@ function renderTacticalCards(p,sec,loot){
   const unknown=/^(sin\b|no\s+(?:hay|existe|se|dispone)\b|servicios no\b)/i.test(value.trim()) || /\b(?:no (?:verificad[oa]s?|confirmad[oa]s?|contrastad[oa]s?|documentad[oa]s?)|sin (?:medici[oó]n|datos|confirmaci[oó]n|inventario|stock|precios|bot[ií]n))\b/i.test(value);
   cards.push([symbol,title,value,!unknown,'Nota operativa curada · comprobar fuentes y parche']);
  }
+ // La reparación de emergencia es un dato de seguridad: nunca inferirla por existir un pad.
+ if(p.repairIntel){
+  const ri=p.repairIntel;
+  for(const [label,entry] of [['REPARACIÓN NAVES',ri.ship],['REPARACIÓN VEHÍCULOS',ri.groundVehicle],['REPARACIÓN MANUAL',ri.field]]){
+   if(!entry)continue;
+   const confirmed=entry.status==='verified' && Boolean(entry.verifiedPatch) && Array.isArray(entry.sources) && entry.sources.length>0;
+   const detail=confirmed?'CONFIRMADO · '+(entry.method||'servicio')+' · parche '+entry.verifiedPatch:'NO VERIFICADO · no usar como punto de reparación de emergencia';
+   cards.push(['services',label,detail,confirmed,'Verificar servicio, vehículo admitido y parche antes de desplazarse']);
+  }
+ }
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
