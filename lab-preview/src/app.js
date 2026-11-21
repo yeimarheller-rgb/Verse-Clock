@@ -409,6 +409,20 @@ function renderTacticalCards(p,sec,loot){
    cards.push(['services',label,detail,confirmed,'Verificar servicio, vehículo admitido y parche antes de desplazarse']);
   }
  }
+ // Render newly sourced patch/service evidence; never promote directory listings to LIVE confirmation.
+ if(p.serviceDirectory4103){
+  const sd=p.serviceDirectory4103;
+  const names={vehicleServices:'servicios de nave',refinery:'refinería',clinic:'clínica',weaponsShop:'tienda de armas',shipItemsShop:'componentes de nave',commodityTrading:'comercio'};
+  const listed=(sd.services||[]).map(x=>names[x]||x).join(', ');
+  cards.push(['services','SERVICIOS · DIRECTORIO',listed+' · listado comunitario para '+(sd.patch||'parche no indicado')+'; reparación, stock y precios NO probados en LIVE',false,'Fuente comunitaria; verificar antes de una operación crítica']);
+ }
+ if(p.knownIssue4103){
+  const issue=p.knownIssue4103;
+  cards.push(['hazards','INCIDENCIA ASOP',issue.issue+' · Solución publicada: '+issue.workaround,false,'Aviso oficial de parche; no implica fallo activo en este servidor']);
+ }
+ if(p.patchNotes4103){
+  cards.push(['services','AVISO GENERAL DE SERVICIOS',p.patchNotes4103.issue+' · '+p.patchNotes4103.procedureSource+' · reparación local: NO VERIFICADA',false,'Incidencia general; no demuestra servicios de esta instalación']);
+ }
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
@@ -424,7 +438,7 @@ function renderTacticalCards(p,sec,loot){
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
  }
- const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[])].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
+ const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[]),p.serviceDirectory4103?.source,p.knownIssue4103?.source,p.patchNotes4103?.source].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
  const seen=new Set();
  for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
 }
