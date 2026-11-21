@@ -75,3 +75,23 @@ test('Hathor aliases remain discoverable even without literal Hathor names', () 
   assert.equal(meta.researchSummary.hathorCurated, aliases.length);
   assert.equal(meta.researchSummary.hathorCuratedMatched + meta.researchSummary.hathorCuratedUnmatched, aliases.length);
 });
+
+test('Hathor OLP and PAF cards preserve different mission and loot scopes', () => {
+ const seed = JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json', import.meta.url), 'utf8'));
+ const hathor = seed.locations.filter(p => /^hathor-(attritus|lamina|ruptura|vivere)-(olp|paf-(i|ii|iii))$/i.test(p.id));
+ assert.equal(hathor.length,16);
+ assert.equal(hathor.filter(p => /-olp$/.test(p.id)).length,4);
+ assert.equal(hathor.filter(p => /-paf-/.test(p.id)).length,12);
+ for(const p of hathor){
+  assert.ok(p.tacticalIntel?.steps?.length >= 4, p.id+' needs actionable activity steps');
+  assert.ok(p.operationalNotes?.missionContext, p.id+' needs mission scope');
+  assert.ok(p.operationalNotes?.failureRisks?.length, p.id+' needs documented failure risks');
+  assert.ok(p.lootIntel?.categories?.length, p.id+' needs loot scope');
+  assert.ok(p.lootIntel?.caveat, p.id+' needs loot caveat');
+  assert.ok(p.sourceUrls?.length, p.id+' needs sources');
+ }
+ const ui = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8');
+ for(const field of ['op.missionContext','op.failureRisks','p.lootIntel.categories','p.lootIntel.caveat']){
+  assert.ok(ui.includes(field),field+' must render in the UI');
+ }
+});
