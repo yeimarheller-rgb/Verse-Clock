@@ -131,3 +131,16 @@ test('Hathor PAF mission evidence is patch-scoped and rendered without guarantee
  const ui=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
  assert.ok(ui.includes('op.missionEvidence4103'));
 });
+
+
+test('station and gateway records do not silently assert verified repair or live stock', () => {
+ const seed=JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json',import.meta.url),'utf8'));
+ const stations=seed.locations.filter(p=>['station','orbital-station','gateway'].includes(p.type));
+ assert.ok(stations.length>=20,'station coverage unexpectedly reduced');
+ for(const p of stations){
+  assert.ok(p.sourceUrls?.length,p.id+': no location provenance');
+  assert.notEqual(p.repairIntel?.ship?.status,'confirmed',p.id+': unproven LIVE repair');
+  assert.notEqual(p.repairIntel?.groundVehicle?.status,'confirmed',p.id+': unproven LIVE vehicle repair');
+  assert.ok(!p.services || !Object.values(p.services).includes('confirmed'),p.id+': unproven LIVE service');
+ }
+});
