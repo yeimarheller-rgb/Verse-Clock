@@ -158,6 +158,6 @@ test('new player guide is discoverable and does not promise live data', () => {
  const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
  assert.match(html,/GUÍA DE CAMPO · ¿PRIMERA VEZ AQUÍ\?/);
  assert.match(html,/NO VERIFICADO/);
- assert.match(html,/no detecta amenazas en tiempo real/);
+ assert.match(html,/no consulta el servidor ni detecta amenazas en tiempo real/i);
  assert.match(html,/<details class="intel-newcomer-guide"/);
 });
