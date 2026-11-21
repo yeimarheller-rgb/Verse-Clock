@@ -1,7 +1,7 @@
 # Arranca la web en Chromium (tamaño iPhone y escritorio) y falla si no inicia de verdad.
 # Uso: python3 tests/browser_smoke.py http://localhost:8000/
 import re, sys
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8000/'
 fails = []
@@ -101,9 +101,125 @@ with sync_playwright() as p:
                 fails.append(f'{name}: no aparece Amioshi Plague, recurso API ligado a Jumptown por UUID')
         if pg.locator('#poiQuery').is_visible():
             fails.append(f'{name}: sigue visible el buscador inferior duplicado')
+        def open_tactical(query, result):
+            pg.locator('#q').fill(query)
+            options = pg.locator('#suggestions button').filter(has_text=result)
+            options.first.click(timeout=8000)
+            expect(pg.locator('#mainIntelLocation')).to_contain_text(result)
+
+        dossier = pg.locator('#locationDossier')
+        open_tactical('hathor aberdeen', 'Ruptura PAF-I')
+        expect(dossier).to_contain_text('S71 Justified')
+        expect(dossier).to_contain_text('XL Purchase Order')
+        assert int(pg.locator('#atlasProgressBar').get_attribute('aria-valuenow')) >= 100
+        assert 'dest=stanton' in pg.url
+        pg.reload()
+        expect(dossier).to_contain_text('XL Purchase Order')
+        expect(pg.locator('#mainIntelLocation')).to_contain_text('Ruptura PAF-I')
+        expect(dossier).to_contain_text('HDMS-Anderson')
+        expect(dossier).not_to_contain_text('Carinite')
+        assert pg.locator('#tacticalPanel').bounding_box()['width'] > vp['width'] * 0.8
+        pg.get_by_role('button', name='Buscar otra ubicación').click()
+        expect(pg.locator('#q')).to_be_focused()
+        pg.locator('#tacticalPanel').scroll_into_view_if_needed()
+        pg.screenshot(path=f'/tmp/verse-lab-hathor-{name}.png')
+        dossier.get_by_role('button', name='Ruptura OLP', exact=True).click()
+        expect(dossier).to_contain_text('Carinite')
+        expect(dossier.get_by_role('link', name='Citadel · minerales')).to_have_attribute('href', 'https://www.citadelsc.com/es/guides/hathor')
+        dossier.get_by_role('button', name='HDMS-Anderson', exact=True).click()
+        expect(dossier).to_contain_text('Reparación de nave')
+        expect(dossier).not_to_contain_text('Valakkar')
+        open_tactical('reparacion daymar', 'Shubin Mining Facility SCD-1')
+        expect(dossier).to_contain_text('Reparación de nave')
+        open_tactical('Seraphim', 'Seraphim Station')
+        expect(dossier).to_contain_text('Admin - Seraphim')
+        expect(dossier).to_contain_text('Reparación de nave')
+        pg.screenshot(path=f'/tmp/verse-lab-seraphim-{name}.png')
+        open_tactical('checkmate station', 'Checkmate')
+        expect(dossier).to_contain_text('Placas 1, 2 y 3')
+        expect(dossier).to_contain_text('Reparación de nave')
+        pg.screenshot(path=f'/tmp/verse-lab-checkmate-{name}.png')
+        open_tactical('Levski', 'Levski')
+        expect(dossier).to_contain_text('Reparación de nave')
+        open_tactical('Lazarus Complex', 'Lazarus Complex')
+        expect(dossier).to_be_hidden()
+        if pg.evaluate('document.documentElement.scrollWidth') > vp['width'] + 1:
+            fails.append(f'{name}: desborde horizontal al navegar por las fichas')
+        repair_filter = pg.locator('#tacticalFilters').get_by_role('button', name='Reparación')
+        expect(repair_filter.locator('svg[data-icon=repair]')).to_be_visible()
+        repair_filter.click()
+        expect(repair_filter).to_have_attribute('aria-pressed','true')
+        pg.locator('#q').fill('Seraphim')
+        expect(pg.locator('#suggestions svg[data-icon=repair]').first).to_be_visible()
+        pg.locator('#suggestions button').first.click()
+        expect(dossier.locator('svg[data-icon=repair][data-state=possible]')).to_be_visible()
+        pg.get_by_role('button',name='Modo Operaciones').click()
+        operations = pg.locator('#operationsPanel')
+        expect(operations).to_be_visible()
+        expect(operations).to_contain_text('Rearme · Desconocido')
+        expect(operations.locator('svg[data-icon=rearm][data-state=unknown]')).to_be_visible()
+        expect(operations.locator('svg[data-icon=refuel][data-state=possible]')).to_be_visible()
+        pg.locator('#tacticalPanel').scroll_into_view_if_needed()
+        pg.screenshot(path=f'/tmp/verse-lab-operaciones-{name}.png')
+        pg.get_by_role('button',name='Modo Operaciones').click()
+        expect(operations).to_be_hidden()
+        repair_filter.click()
+        expect(repair_filter).to_have_attribute('aria-pressed','false')
+        zone = pg.get_by_role('combobox', name='Zona logística')
+        zone.select_option('Daymar')
+        rearm_filter = pg.locator('#tacticalFilters').get_by_role('button', name='Rearme')
+        rearm_filter.click()
+        pg.locator('#q').fill('Shubin')
+        restricted = pg.locator('#suggestions button')
+        expect(restricted.first).to_contain_text('Shubin Mining Facility SCD-1')
+        expect(restricted.first.locator('svg[data-icon=rearm][data-state=confirmed]')).to_be_visible()
+        assert all('Daymar' in item for item in restricted.all_text_contents())
+        restricted.first.click()
+        expect(dossier).to_contain_text('Mantenimiento de nave')
+        expect(dossier).to_contain_text('Entorno del cuerpo')
+        expect(dossier).to_contain_text('funcionamiento LIVE sin prueba en partida')
+        pg.screenshot(path=f'/tmp/verse-lab-stanton-logistica-{name}.png')
+        pg.get_by_text('Cobertura de Stanton', exact=True).click()
+        expect(pg.locator('#stantonCoverage')).to_contain_text('objetivo 90 %')
+        expect(pg.locator('#stantonCoverage progress').first).to_be_visible()
+        pg.screenshot(path=f'/tmp/verse-lab-stanton-cobertura-{name}.png')
+        zone.select_option('')
+        rearm_filter.click()
+        pg.locator('#q').fill('MT OpCenter TLI-4')
+        variants = pg.locator('#suggestions button').filter(has_text='MT OpCenter TLI-4')
+        expect(variants.nth(1)).to_be_visible()
+        assert variants.nth(0).inner_text() != variants.nth(1).inner_text()
+        variants.nth(1).click()
+        assert pg.url.count('%7C') == 2
+        pg.reload()
+        expect(pg.locator('#mainIntelLocation')).to_contain_text('MT OpCenter TLI-4')
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()
+    for name, width, height in [('iphone',390,844),('desktop',1440,900)]:
+        page = b.new_page(viewport={'width': width, 'height': height})
+        page.goto(BASE + 'lab-preview/iconos.html')
+        tiles = page.locator('.icon-tile')
+        expect(tiles).to_have_count(29)
+        assert page.locator('.icon-tile svg').count() == 87
+        assert page.locator('.tactical-icon-state').count() == 4
+        assert page.evaluate('document.documentElement.scrollWidth') <= width
+        for tile in tiles.all():
+            assert [svg.bounding_box()['width'] for svg in tile.locator('svg').all()] == [20,24,32]
+        assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 29
+        page.screenshot(path=f'/tmp/verse-lab-iconografia-{name}.png',full_page=True)
+        page.close()
+    for device, width, height in [('iphone',390,844),('desktop',1440,900)]:
+        page = b.new_page(viewport={'width':width,'height':height})
+        page.goto(BASE + 'lab-preview/')
+        page.wait_for_function("document.getElementById('atlasProgressBar').getAttribute('aria-valuenow') > 0")
+        page.screenshot(path=f'/tmp/verse-lab-antes-inicio-{device}.png',full_page=True)
+        for q, label in [('Ruptura PAF-I','ruptura'),('Seraphim','seraphim'),('Lorville','lorville'),('Everus','everus'),('Ghost Hollow','ghost-hollow'),('Checkmate','checkmate')]:
+            page.locator('#q').fill(q)
+            page.locator('#suggestions button').first.click()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-antes-{label}-{device}.png',full_page=True)
+        page.close()
     b.close()
 print('\n'.join(fails) or 'OK: la web arranca en iPhone y escritorio')
 sys.exit(1 if fails else 0)

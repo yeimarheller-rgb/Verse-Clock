@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VERSE CLOCK LAB · Iconografía táctica</title>
+<link rel="stylesheet" href="./src/tactical-icons.css">
+<style>
+:root{color-scheme:dark;background:#07121c;color:#e4f2fa;font:16px system-ui,sans-serif}
+body{max-width:1160px;margin:auto;padding:24px}
+a{color:#70daf1}h1{font-size:clamp(24px,4vw,38px);letter-spacing:.04em;margin:12px 0}
+h2{font-size:20px;margin:28px 0 10px}h3{font-size:15px;margin:0}
+.samples,.icons{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px}
+.sample,.icon-tile{background:#0c1e2c;border:1px solid #38566a;border-left:2px solid #70daf1;padding:12px;min-width:0}
+.sample{display:flex;align-items:center;gap:10px}
+.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:10px}
+.size{display:grid;grid-template-rows:32px auto;justify-items:center;align-items:center;gap:4px;color:#a9c0d1;font-size:12px}
+@media(max-width:460px){body{padding:16px}.icons{grid-template-columns:repeat(auto-fit,minmax(min(100%,144px),1fr))}.icon-tile{padding:9px}.sizes{gap:4px}}
+</style>
+</head>
+<body>
+<a href="./">Volver a VERSE CLOCK LAB</a>
+<h1>Iconografía táctica</h1>
+<section aria-labelledby="state-title"><h2 id="state-title">Estados</h2><div class="samples" id="states"></div></section>
+<main id="library"></main>
+<script type="module">
+import {tacticalIcon,tacticalIcons,tacticalStates} from './src/tactical-icons.js';
+const states=document.getElementById('states');
+for(const [state,[label]] of Object.entries(tacticalStates)){
+  const sample=document.createElement('div');sample.className='sample';
+  sample.append(tacticalIcon('repair',{size:32,state}),label);states.append(sample);
+}
+const library=document.getElementById('library');
+const groups=new Map();
+for(const [id,[label,,group]] of Object.entries(tacticalIcons)){
+  if(!groups.has(group)){
+    const section=document.createElement('section');
+    const title=document.createElement('h2');title.textContent=group;
+    const grid=document.createElement('div');grid.className='icons';
+    section.append(title,grid);library.append(section);groups.set(group,grid);
+  }
+  const tile=document.createElement('article');tile.className='icon-tile';
+  const name=document.createElement('h3');name.textContent=label;
+  const sizes=document.createElement('div');sizes.className='sizes';
+  for(const size of [20,24,32]){
+    const cell=document.createElement('span');cell.className='size';
+    cell.append(tacticalIcon(id,{size}),size+' px');sizes.append(cell);
+  }
+  tile.append(name,sizes);groups.get(group).append(tile);
+}
+</script>
+</body>
+</html>

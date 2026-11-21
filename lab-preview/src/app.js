@@ -1,3 +1,5 @@
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
+import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
@@ -8,6 +10,7 @@ import { lootFor } from './loot.js';
 import { validateIntelRecord, lootBadge } from './intel-schema.js';
 import { securityFor as destinationSecurity } from './security.js';
 import { lootFor as destinationLoot } from './loot.js';
+import { atlasKey, atlasSystem, mergeTacticalAtlas, normalize, serviceNames, tacticalSections, tacticalTags } from './tactical-atlas.js';
 
 const $ = id => document.getElementById(id);
 const tz = z => new Intl.DateTimeFormat('es-ES', { timeZone: z, hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23' });
@@ -17,6 +20,7 @@ const PHASE = { day: 'Día', night: 'Noche', sunrise: 'Amanecer', sunset: 'Atard
 const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
 
 // ?t=2026-11-04T21:39:00Z simula otro instante (para revisar fases). Se avisa en pantalla.
+const initialDestination = new URLSearchParams(location.search).get('dest');
 const SIM = (() => { const t = Date.parse(new URLSearchParams(location.search).get('t')); return Number.isFinite(t) ? t - Date.now() : 0; })();
 const nowMs = () => Date.now() + SIM;
 let locs = [], cur = null, favs = store.get('vc-favs', []);
@@ -44,8 +48,12 @@ function select(l) {
   if (!l) return; cur = l;
   lastScenePaint = 0;
   $('q').value = '';
-  $('mainIntelLocation').hidden=true;
+  $('copyCoord').disabled=false;$('fav').disabled=false;
+  $('tacticalPanel').hidden=true;
   $('mainIntelApi').hidden=true;
+  $('locationDossier').hidden=true;
+  for (const id of ['intelReadiness', 'intelTacticalCards', 'intelSourceLinks']) $(id).replaceChildren();
+  selectedPoiKey=null;
   $('place').textContent = l.name;
   $('where').textContent = `${l.body} · ${l.system}`;
   $('dayLen').textContent = `${(l.lengthOfDayDays * 1440).toFixed(0)} min`;
@@ -78,11 +86,14 @@ function select(l) {
   const nav = l.quantum === true ? null : nearestQT(l, locs);
   $('qtRoute').textContent = nav ? `Desde ${nav.from.name}: ${kmFmt(nav.km)} km por superficie, rumbo ${nav.bearing.toFixed(0)}° (${compass(nav.bearing)})` : '';
   $('rate').textContent = `1 s real = ${(1 / l.lengthOfDayDays).toFixed(1).replace('.', ',')} s de juego`;
-  history.replaceState(null, '', '#' + encodeURIComponent(l.name.replace(/ /g, '_')));
+  const url=new URL(location.href);
+  url.searchParams.delete('dest');
+  url.hash=encodeURIComponent(l.name.replace(/ /g, '_'));
+  history.replaceState(null,'',url);
   store.set('vc-last', l.name);
   renderFavs(); tick();
   const poi=poiData.find(p=>p.system===l.system&&p.name.toLocaleLowerCase('es')===l.name.toLocaleLowerCase('es'));
-  if(poi)applyPoiToMain(poi);
+  if(poi){selectedPoiKey=atlasKey(poi);applyPoiToMain(poi);}
 }
 
 function renderFavs() {
@@ -185,7 +196,6 @@ let suggestions = [], cursor = -1;
 // Búsqueda también por tipo y por apodos usados en el juego (p. ej. «Hathor» para las plataformas láser).
 const ALIASES = { 'Orbital laser platform': 'hathor olp plataforma laser orbital', 'Planetary alignment facility': 'hathor paf alineacion planetaria' };
 const searchTags = l => `${l.type || ''} ${ALIASES[l.type] || ''}`;
-const normalize = v => String(v || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 function hideMenu() {
   menu.hidden = true; menu.replaceChildren(); suggestions = []; cursor = -1;
   input.setAttribute('aria-expanded','false'); input.removeAttribute('aria-activedescendant');
@@ -194,26 +204,136 @@ function chooseSearchResult(item){
  if(!item)return;
  if(item.kind==='poi'){
   const p=item.value;
-  selectedPoiKey=[p.system||'',p.name||''].join('|').toLocaleLowerCase('es');
   const solar=locs.find(l=>normalize(l.name)===normalize(p.name)&&l.system===p.system);
   if(solar)select(solar);
   else{
    const parent=locs.find(l=>l.system===p.system&&(normalize(l.body)===normalize(p.parent)||normalize(l.name)===normalize(p.parent)));
-   if(parent){select(parent);$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Reloj solar de referencia: '+parent.body].filter(Boolean).join(' · ')}
-   else{$('place').textContent=p.name;$('where').textContent=[p.parent,p.system,'Sin reloj solar local verificado'].filter(Boolean).join(' · ');cur=null;$('kind').textContent=p.type||'Instalación';$('dayLen').textContent='Sin datos';$('coord').textContent='Sin coordenadas verificadas';$('coordXYZ').textContent='';$('qt').textContent='Sin dato';$('qtRoute').textContent='';}
+   if(parent)select(parent);
+   else{
+    cur=null;
+    mono($('clock'),'—');mono($('riseIn'),'—');mono($('setIn'),'—');
+    for(const id of ['rate','phase','pct','riseAt','setAt','gravHint','envMini'])$(id).textContent='';
+    $('grav').textContent='Sin datos';$('hazWrap').hidden=true;
+    $('bar').style.width='0%';$('tl').style.background='var(--night)';$('tlRise').hidden=$('tlSet').hidden=true;
+    renderFavs();
+   }
+   $('place').textContent=p.name;
+   $('where').textContent=[p.parent,p.system,parent?'Reloj solar de referencia: '+parent.body:'Sin reloj solar local verificado'].filter(Boolean).join(' · ');
+   $('kind').textContent=p.type||'Instalación';
+   if(!parent)$('dayLen').textContent='Sin datos';
+   $('coord').textContent='Sin coordenadas verificadas';$('coordXYZ').textContent='';
+   $('qt').textContent='Sin dato';$('qtRoute').textContent='';
+   $('copyCoord').disabled=true;$('fav').disabled=true;
   }
+  const url=new URL(location.href);
+  url.searchParams.set('dest',atlasKey(p));
+  url.hash='';
+  history.replaceState(null,'',url);
+  selectedPoiKey=atlasKey(p);
   applyPoiToMain(p);
+  if(!$('tacticalPanel').hidden)$('tacticalPanel').scrollIntoView({block:'start'});
 
  }else {selectedPoiKey=null;select(item.value)}
  hideMenu();input.blur();
 }
 function pick(i){chooseSearchResult(suggestions[i])}
+const serviceIcons={repair:'repair',rearm:'rearm',refuel:'refuel',refinery:'refinery',clinic:'medic',cargo:'cargo'};
+const evidenceState=value=>({confirmed:'confirmed',reported:'possible',possible:'possible',unavailable:'unavailable'}[value]||'unknown');
+const dossierIcons=p=>new Set(tacticalSections(p).flatMap(section=>section.icons||[]));
+let activeFilter='';
+let operationsEnabled=false;
+let rawStantonCatalog=[];
+const stantonZone=$('stantonZone');
+const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
+const filters=[['repair','Reparación'],['refuel','Repostaje'],['rearm','Rearme'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
+function matchesFilter(p,filter){
+ if(!filter)return true;
+ if(serviceIcons[filter])return ['confirmed','possible'].includes(evidenceState(p.services?.[filter]));
+ if(filter==='loot'&&(p.lootIntel?.categories?.length||p.tacticalIntel?.weapons?.length))return true;
+ return dossierIcons(p).has(filter);
+}
+function makeTacticalLabel(icon,text,size=20,state){
+ const label=document.createElement('span');label.className='tactical-label';
+ label.append(tacticalIcon(icon,{size,state}),text);
+ return label;
+}
+function resultIcon(p){
+ if(activeFilter)return activeFilter;
+ const shape=normalize(p.name+' '+p.type);
+ if(/distribution (center|centre)|centro de distribucion/.test(shape))return 'distribution';
+ if(/bunker|security depot/.test(shape))return 'bunker';
+ if(/\bcave\b|cueva/.test(shape))return 'cave';
+ if(dossierIcons(p).has('contested'))return 'contested';
+ if(p.hathor)return /OLP$/.test(p.name)?'mining':'bunker';
+ if(matchesFilter(p,'repair'))return 'repair';
+ if(matchesFilter(p,'trade'))return 'commodity';
+ return 'intel';
+}
+for(const [id,title] of filters){
+ const button=document.createElement('button');button.type='button';
+ button.dataset.filter=id;button.setAttribute('aria-pressed','false');
+ button.append(makeTacticalLabel(id,title));$('tacticalFilters').append(button);
+ button.addEventListener('click',()=>{
+  activeFilter=activeFilter===id?'':id;
+  for(const filter of $('tacticalFilters').children)filter.setAttribute('aria-pressed',String(filter.dataset.filter===activeFilter));
+  updateMenu();
+ });
+}
+for(const [planet,bodies] of Object.entries(stantonGroups)){
+ const group=document.createElement('optgroup');group.label=planet;
+ group.append(new Option(planet+' y lunas',planet));
+ group.append(new Option('Solo '+planet,'only:'+planet));
+ for(const moon of bodies.slice(1))group.append(new Option(moon,moon));
+ stantonZone.append(group);
+}
+stantonZone.addEventListener('change',()=>{updateMenu();renderStantonCoverage();});
+function renderStantonCoverage(){
+ const host=$('stantonCoverage');
+ if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
+ const c=stantonCoverage(rawStantonCatalog,poiData,stantonZone.value||'Stanton');
+ const summary=document.createElement('p');
+ summary.textContent=c.operational+' / '+c.total+' operativas · '+(c.total?(100*c.operational/c.total).toFixed(1):'0')+' % · objetivo 90 %';
+ const list=document.createElement('dl');list.className='stanton-metrics';
+ const metrics={'Geografía con identidad única':c.geographic,'Campos aplicables revisados':c.reviewedAll,
+  ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
+  'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
+ for(const [label,count] of Object.entries(metrics)){
+  const row=document.createElement('div'),name=document.createElement('dt'),result=document.createElement('dd');
+  name.textContent=label;
+  const bar=document.createElement('progress');bar.max=Math.max(1,c.total);bar.value=count;bar.setAttribute('aria-label',label);
+  result.append(bar,count+' / '+c.total);row.append(name,result);list.append(row);
+ }
+ const note=document.createElement('small');
+ note.textContent='Registros originales del catálogo API. Los registros sin nombre de juego siguen en el denominador. Las variantes con el mismo nombre conservan su UUID. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
+ host.replaceChildren(summary,list,note);
+}
+$('operationsToggle').addEventListener('click',()=>{
+ operationsEnabled=!operationsEnabled;
+ $('operationsToggle').setAttribute('aria-pressed',String(operationsEnabled));
+ const selected=poiData.find(p=>atlasKey(p)===selectedPoiKey);
+ if(selected)renderLocationDossier(selected);
+ else if(operationsEnabled){
+  $('q').focus();
+ }
+});
+function renderOperations(p){
+ const panel=$('operationsPanel');panel.replaceChildren();panel.hidden=!operationsEnabled;
+ if(!operationsEnabled)return;
+ const title=document.createElement('h3');title.textContent='Operaciones · servicios de nave';
+ const list=document.createElement('ul');list.className='service-icons';
+ for(const key of ['repair','rearm','refuel']){
+  const state=evidenceState(p.services?.[key]);
+  const row=document.createElement('li');row.append(makeTacticalLabel(key,tacticalIcons[key][0]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
+ }
+ panel.append(title,list);
+}
+
 function updateMenu(){
  const q=normalize(input.value);
- if(!q){hideMenu();return}
- const solar=locs.map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
- const pois=poiData.map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
- p.type,p.operator,p.affiliation,p.jurisdiction,
+ if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
+ const solar=(activeFilter||stantonZone.value?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
+ const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&inStantonZone(p,stantonZone.value)).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
+ p.type,p.operator,p.affiliation,p.jurisdiction,...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
  ...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.armor||[]),
@@ -223,21 +343,30 @@ function updateMenu(){
  ...(p.missions||[]).map(x=>x.name),
  ...(p.resources||[]).map(x=>x.name),
  ...(p.activities||[]).map(x=>x.name),
- ...(p.tacticalTips||[]),
+ ...(p.tacticalTips||[]),...stantonSections(p).map(section=>section.title+' '+section.text),
  /paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''
  ].filter(Boolean).join(' ')}));
  const unique=new Map();
- for(const item of [...pois,...solar]){const key=[normalize(item.system),normalize(item.name)].join('|');if(!unique.has(key))unique.set(key,item)}
+ for(const item of [...pois,...solar]){const key=atlasKey(item.value);if(!unique.has(key))unique.set(key,item)}
  suggestions=[...unique.values()].map(item=>{
   const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
-  const score=n===q?0:n.startsWith(q)?1:n.includes(q)?2:parent.startsWith(q)?3:parent.includes(q)?4:tags.includes(q)?5:sys.includes(q)?6:99;
+  const text=[n,parent,sys,tags].join(' ');
+  const matches=q.split(/\s+/).every(term=>text.includes(term));
+  const score=n===q?0:n.startsWith(q)?1:n.includes(q)?2:tags.includes(q)?3:matches?4:99;
   return{item,score};
- }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||a.item.name.localeCompare(b.item.name,'es')).slice(0,16).map(x=>x.item);
+ }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||Number(Boolean(b.item.value.serviceIntel||b.item.value.hathor))-Number(Boolean(a.item.value.serviceIntel||a.item.value.hathor))||a.item.name.localeCompare(b.item.name,'es')).slice(0,activeFilter?100:16).map(x=>x.item);
  menu.replaceChildren();cursor=-1;
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
- suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
+ suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
+  const icon=resultIcon(item.value);
+  const state=['repair','refuel','rearm'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
+  name.prepend(tacticalIcon(icon,{size:20,state}));name.className='tactical-label';
+ }btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
 }
+$('searchAgain').addEventListener('click',()=>{
+ input.scrollIntoView({block:'center'});input.focus({preventScroll:true});
+});
 input.addEventListener('input',updateMenu);
 input.addEventListener('focus',updateMenu);
 input.addEventListener('keydown',e=>{
@@ -253,7 +382,7 @@ input.addEventListener('keydown',e=>{
     if(item){e.preventDefault();chooseSearchResult(item)}
   }
 });
-document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))hideMenu();});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search, .tactical-toolbar'))hideMenu();});
 $('copyCoord').addEventListener('click', async () => {
   if (!cur) return; const c = coords(cur);
   const txt = `${cur.name} (${cur.body}) — ${fmtCoords(c)} · alt ${c.altKm.toFixed(2)} km · x ${c.x.toFixed(3)} y ${c.y.toFixed(3)} z ${c.z.toFixed(3)} km`;
@@ -353,28 +482,28 @@ function renderTacticalCards(p,sec,loot){
  const hasPve=Boolean(p.tacticalIntel?.threats?.length||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
  const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
  const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
- const hasMissions=Boolean(missions.length||p.activities?.length);
+ const hasMissions=Boolean(p.hathor||missions.length||p.activities?.length);
  const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
  const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
-  ['⚔','PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
-  ['◎','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
-  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['◆','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
-  ['⬡','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
-  ['✚','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
+  ['pve','PVE / NPC',p.hathor?sec.pve:p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
+  ['pvp','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
+  ['loot','BOTÍN / EQUIPO',p.hathor?p.hathor.sections[3].text:p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
+  ['mission','MISIONES',p.hathor?'Align & Mine · pedido de Shubin relacionado':missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['mining','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
+  ['repair','SERVICIOS',p.serviceIntel?.services.length?p.serviceIntel.services.map(s=>serviceNames[s]).join(' · '):amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
- const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
+ const label=document.createElement('span');label.textContent='COBERTURA DE INTELIGENCIA';
  const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
  header.append(label,value);
  const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
  const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
  readiness.append(header,meter,caption);
- for(const [symbol,title,value,known,evidence] of cards){
+ for(const [icon,title,value,known,evidence] of cards){
   const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
-  const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;
+  const t=document.createElement('div');t.className='intel-tactical-title';t.append(tacticalIcon(icon,{size:24}),title);
   const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
@@ -384,8 +513,94 @@ function renderTacticalCards(p,sec,loot){
  for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
 }
 
+function renderLocationDossier(p){
+ const host=$('locationDossier');
+ host.replaceChildren();
+ const sections=sectionsFor(p);
+ renderOperations(p);
+ const body=p.stantonIntel?.environment?null:stantonBody(p);
+ const environment=body&&poiData.find(row=>row.name===body&&row.system==='Stanton')?.stantonIntel?.environment;
+ host.hidden=!sections.length&&!environment;
+ $('tacticalPanel').hidden=host.hidden&&!operationsEnabled;
+ if(environment){
+  const note=document.createElement('section');note.className='location-dossier-block';
+  const heading=document.createElement('h3');heading.append(tacticalIcon('danger',{size:24}),' Entorno del cuerpo · '+body);
+  const copy=document.createElement('p');copy.textContent=environment.text;
+  const source=document.createElement('a');source.href=environment.sources[0];source.textContent='Fuente del cuerpo';source.target='_blank';source.rel='noopener noreferrer';source.className='stanton-source';
+  note.append(heading,copy,source);host.append(note);
+ }
+ const nav=names=>{
+  const bar=document.createElement('div');bar.className='location-dossier-nav';
+  for(const name of names){
+   const dest=poiData.find(item=>atlasKey(item)===atlasKey({system:p.system,name}));
+   if(!dest)continue;
+   const button=document.createElement('button');button.type='button';button.textContent=name;
+   button.addEventListener('click',()=>{chooseSearchResult({kind:'poi',value:dest});});
+   bar.append(button);
+  }
+  return bar;
+ };
+ if(p.hathor)host.append(nav(p.hathor.linked));
+ if(p.serviceIntel){
+  const note=document.createElement('small');note.textContent='UEX · consulta '+p.serviceIntel.checkedAt+' · LIVE '+p.serviceIntel.live+' en la fecha de consulta · servicios reportados';
+  host.append(note);
+ }
+ if(p.system==='Stanton'){
+  const known=new Set(p.stantonIntel?.claims.map(claim=>claim.field)||[]);
+  for(const key of ['repair','refuel','rearm'])if(['confirmed','reported'].includes(p.services?.[key]))known.add(key);
+  if(p.serviceIntel?.tradeTerminal||p.serviceIntel?.trade?.length)known.add('trade');
+  if(p.serviceIntel?.services.some(name=>['clinic','cargo','refinery'].includes(name)))known.add('logistics');
+  if(p.hathor){
+   for(const field of ['pve','pvp','missions','loot','access'])known.add(field);
+   if(!p.name.endsWith('OLP'))known.add('weapons');
+  }
+  const reviewed=new Set(p.stantonIntel?.reviewedWithoutEvidence||[]);
+  const pending=Object.entries(stantonFields).filter(([key])=>!known.has(key)&&!reviewed.has(key)).map(([,title])=>title);
+  if(pending.length){
+   const details=document.createElement('details');details.className='stanton-pending';
+   const title=document.createElement('summary');title.textContent='Campos pendientes de verificar';
+   const copy=document.createElement('p');copy.textContent=pending.join(' · ');
+   details.append(title,copy);host.append(details);
+   host.hidden=false;$('tacticalPanel').hidden=false;
+  }
+ }
+ for(const section of sections){
+  const block=document.createElement('section');block.className='location-dossier-block';
+  const title=document.createElement('h3');title.className='tactical-label';
+  for(const icon of section.icons||[])title.append(tacticalIcon(icon,{size:24}));
+  title.append(section.title);
+  const copy=document.createElement('p');copy.textContent=section.text;
+  const links=document.createElement('div');links.className='intel-source-links';
+  for(const item of section.sources){
+   const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent=item.name;
+   links.append(link);
+  }
+  block.append(title,copy);
+  if(section.status){const status=document.createElement('small');status.textContent=section.status;block.append(status);}
+  if(section.icons?.length===0&&p.serviceIntel?.services.length){
+   const list=document.createElement('ul');list.className='service-icons';
+   for(const key of p.serviceIntel.services){
+    const icon=serviceIcons[key];if(!icon)continue;
+    const state=evidenceState(p.services?.[key]);
+    const row=document.createElement('li');
+    row.append(makeTacticalLabel(icon,serviceNames[key]+' · '+(state==='confirmed'&&p.stantonIntel?'Documentado · LIVE pendiente':tacticalStates[state][0]),24,state));list.append(row);
+   }
+   block.append(list);
+  }
+  if(section.destinations)block.append(nav(section.destinations));
+  block.append(links);host.append(block);
+ }
+}
+
 function applyPoiToMain(p){
  const sec=destinationSecurity(p),loot=destinationLoot(p);
+ if(p.hathor){
+  const sections=p.hathor.sections;
+  Object.assign(sec,{threat:'Variable',pve:sections[1].text,pvp:sections[2].text,
+   access:'Align & Mine · actividad abierta',notes:'Serie '+p.hathor.group+' · '+p.hathor.moon,
+   faction:'Hathor Group (histórico)'});
+ }
+ renderLocationDossier(p);
  renderTacticalCards(p,sec,loot);
  $('securityThreat').textContent=sec.threat||'Desconocido';
  $('securityThreat').dataset.risk=sec.threat==='Alto'?'high':'unknown';
@@ -398,8 +613,7 @@ function applyPoiToMain(p){
  $('lootStatus').dataset.level=loot.level||'unknown';
  $('lootNote').textContent=loot.summary||'Sin datos verificados';
  $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
- $('mainIntelLocation').textContent='INTEL DEL DESTINO: '+p.name+' · '+(p.system||'');
- $('mainIntelLocation').hidden=false;
+ $('mainIntelLocation').textContent=p.name+' · '+(p.system||'');
  const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
  const universal=universalIntel(p);
@@ -410,8 +624,8 @@ function applyPoiToMain(p){
  if(parentBody){const e=envFor(parentBody);if(e?.tags?.length)summary.push('Entorno del cuerpo '+parentBody.name+' (referencia, no medición de la base): '+e.tags.map(t=>t.label).join(', '));if(e?.gravity?.label)summary.push('Gravedad del cuerpo de referencia: '+e.gravity.label)}
  if(p.activities?.length){summary.push('━━ ACTIVIDADES Y OPORTUNIDADES ━━');for(const a of p.activities)summary.push('◈ '+a.name+' ['+a.confidence+']: '+a.detail)}
  if(p.tacticalTips?.length){summary.push('━━ INFORMACIÓN ÚTIL ANTES DE IR ━━');for(const tip of p.tacticalTips)summary.push('▸ '+tip)}
- if(p.tacticalIntel){const t=p.tacticalIntel;summary.push('━━ DOSSIER TÁCTICO DOCUMENTADO ━━');summary.push(t.title);if(t.weapons)summary.push('ARMAS POSIBLES: '+t.weapons.join(' · '));if(t.armor)summary.push('ARMADURAS POSIBLES: '+t.armor.join(' · '));if(t.components)summary.push('COMPONENTES POSIBLES: '+t.components.join(' · '));if(t.threats?.length)summary.push('AMENAZAS: '+t.threats.join(' · '));if(t.resources?.length)summary.push('RECURSOS / RECOMPENSAS: '+t.resources.join(' · '));if(t.requirements?.length)summary.push('PREPARACIÓN: '+t.requirements.join(' · '));for(const [i,step] of (t.steps||[]).entries())summary.push('PASO '+(i+1)+': '+step);summary.push('LIMITACIÓN: '+t.caveat);for(const url of t.sources)summary.push('FUENTE: '+url)}
- if(p.lootIntel){const li=p.lootIntel;summary.push('━━ BOTÍN ESPECÍFICO · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
+ if(p.tacticalIntel&&!p.hathor){const t=p.tacticalIntel;summary.push('━━ DOSSIER TÁCTICO DOCUMENTADO ━━');summary.push(t.title);if(t.weapons)summary.push('ARMAS POSIBLES: '+t.weapons.join(' · '));if(t.armor)summary.push('ARMADURAS POSIBLES: '+t.armor.join(' · '));if(t.components)summary.push('COMPONENTES POSIBLES: '+t.components.join(' · '));if(t.threats?.length)summary.push('AMENAZAS: '+t.threats.join(' · '));if(t.resources?.length)summary.push('RECURSOS / RECOMPENSAS: '+t.resources.join(' · '));if(t.requirements?.length)summary.push('PREPARACIÓN: '+t.requirements.join(' · '));for(const [i,step] of (t.steps||[]).entries())summary.push('PASO '+(i+1)+': '+step);summary.push('LIMITACIÓN: '+t.caveat);for(const url of t.sources)summary.push('FUENTE: '+url)}
+ if(p.lootIntel&&!p.hathor){const li=p.lootIntel;summary.push('━━ BOTÍN ESPECÍFICO · '+li.scope.toUpperCase()+' ━━');summary.push('Estado: '+li.status);summary.push('SOLO: '+li.solo);summary.push('ORGANIZACIÓN: '+li.org);for(const category of li.categories||[])summary.push('◇ '+category);summary.push('MINERÍA DEL EVENTO: '+li.mining);summary.push('PRECAUCIÓN: '+li.caveat);if(li.sources?.length)summary.push('FUENTES: '+li.sources.join(' · '))}
  summary.push('Temperatura exacta de la instalación: sin verificar');
  summary.push('Origen: '+(p.source?.provider||'Catálogo local')+' · '+(p.source?.version||p.patch||'versión sin verificar'));
  $('mainIntelApi').textContent=summary.join('\n');
@@ -444,15 +658,21 @@ function showPoiDestination(p){
 }
 $('destinationClose').addEventListener('click',()=>{$('destinationIntel').hidden=true});
 function renderPoi(){
- const q=poiQuery.value.trim().toLocaleLowerCase('es');
- const normalize=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
- const queryTerms=normalize(q).split(/\\s+/).filter(Boolean);
- const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term)));
+ const queryTerms=normalize(poiQuery.value).split(/\s+/).filter(Boolean);
+ const matches=poiData.filter(p=>{
+  if(poiSystem.value&&p.system!==poiSystem.value)return false;
+  if(poiService.value&&!['reported','confirmed'].includes(p.services?.[poiService.value]))return false;
+  const text=normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...tacticalTags(p),
+   ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),
+   ...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),
+   ...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].join(' '));
+  return queryTerms.every(term=>text.includes(term));
+ });
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
  for(const p of matches.slice(0,100)){
- const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.textContent=p.name;
+ const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.append(makeTacticalLabel(resultIcon(p),p.name));
  const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type].filter(Boolean).join(' · ');
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
@@ -467,22 +687,25 @@ function renderPoi(){
 }
 for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
 function updateAtlasProgress(d){
- const total=Number(d.catalogTotal)||2017,count=Math.max(0,Math.min(total,Number(d.enrichedCount)||0)),percent=total?100*count/total:0;
+ const total=poiData.length;
+ if(!total)return;
+ const documented=poiData.filter(p=>tacticalSections(p).length);
+ const count=documented.length,percent=100*count/total;
  $('atlasProgressBar').dataset.loaded='true';$('atlasProgressBar').setAttribute('aria-valuemax',String(total));$('atlasProgressBar').setAttribute('aria-valuenow',String(count));
  $('atlasProgressFill').style.width=percent.toFixed(2)+'%';$('atlasProgressPercent').textContent=percent.toFixed(1)+'%';
- $('atlasProgressCount').textContent=count.toLocaleString('es-ES')+' / '+total.toLocaleString('es-ES')+' ubicaciones consultadas';
+ $('atlasProgressCount').textContent=count.toLocaleString('es-ES')+' / '+total.toLocaleString('es-ES')+' con ficha táctica o de servicios con fuentes';
  $('atlasProgressUpdated').textContent=d.generatedAt?'Actualizado: '+new Date(d.generatedAt).toLocaleString('es-ES'):'Fecha desconocida';
- const c=d.coverage;if(c)$('atlasProgressQuality').textContent='Con misiones: '+(c.missions||0)+' · Con recursos: '+(c.resources||0)+' · Con lugares vinculados: '+(c.nearby||0)+' · Consultado ≠ información completa';
+ const repair=documented.filter(p=>p.serviceIntel?.services.includes('repair')).length;
+ $('atlasProgressQuality').textContent=repair+' fichas con reparación reportada · filtra con «reparación» y el nombre de la zona';
 }
 async function mergeFreshIntel(d){
  if(!Array.isArray(d.locations)||!poiData?.length)return;
  const byUuid=new Map(d.locations.map(x=>[x.id,x]));
- const selectedKey=p=>[String(p.system||'').replace(/\s+system$/i,'').trim(),p.name||''].join('|').toLocaleLowerCase('es');
  let changed=false;
  poiData=poiData.map(p=>{const e=byUuid.get(p.source?.uuid||p.id);if(!e)return p;changed=true;return {...p,missions:e.missions||p.missions||[],resources:e.resources||p.resources||[],nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt}});
  if(!changed)return;
- if(selectedPoiKey){const p=poiData.find(x=>selectedKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
- if(input.value.trim())updateMenu();
+ if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
+ if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
  renderPoi();
 }
 
@@ -503,8 +726,8 @@ function mergeFreshResources(data){
   return {...p,resources:[...unique.values()],resourceIndexCheckedAt:data.generatedAt,resourceIndexVersion:data.version};
  });
  if(changed){
-  if(selectedPoiKey){const p=poiData.find(x=>[x.system||'',x.name||''].join('|').toLocaleLowerCase('es')===selectedPoiKey);if(p)applyPoiToMain(p)}
-  if(input.value.trim())updateMenu();
+  if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
+  if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
   renderPoi();
  }
 }
@@ -529,7 +752,6 @@ async function refreshAtlasProgress(){
   if(!response.ok)throw Error('Atlas metadata HTTP '+response.status);
   const meta=await response.json();
   if(meta.schemaVersion!==1||!meta.catalogTotal)throw Error('Invalid atlas metadata');
-  updateAtlasProgress(meta);
   updateAtlasQuality(meta);
   const fingerprint=[meta.version,meta.enrichedCount,meta.enrichedGeneratedAt].join('|');
   if(fingerprint!==lastEnrichmentFingerprint){
@@ -555,7 +777,7 @@ function updateAtlasQuality(d){
  const el=$('atlasQuality');if(!el)return;
  const c=d.counts;if(!c||!c.total)return;
  const pct=Math.round(100*c.actionable/c.total);
- el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
+ el.replaceChildren();const title=document.createElement('strong');title.textContent='CATÁLOGO BASE (API) · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
  const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas API solo geográficas · '+(d.seedOnlyCounts?.total||0)+' fichas curadas fuera del catálogo API · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín · '+(c.withWeapons||0)+' con armas · '+(c.withTrade||0)+' con comercio · '+(c.withHazards||0)+' con peligros';
  const perSystem=document.createElement('div');perSystem.className='atlas-quality-systems';
  for(const [name,stats] of Object.entries(d.systems||{})){
@@ -568,23 +790,36 @@ function updateAtlasQuality(d){
 }
 async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
- const byKey=new Map();const key=p=>[String(p.system||'').replace(/\s+system$/i,'').trim(),p.name||''].join('|').toLocaleLowerCase('es');
+ const byKey=new Map();const key=atlasKey;
+ const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
+ const servicesRequest=fetch('./data/atlas-services.json').then(r=>{if(!r.ok)throw Error('Services HTTP '+r.status);return r.json()})
+  .catch(error=>{console.warn('Tactical services unavailable',error);return null});
  for(const p of base.locations||[])byKey.set(key(p),p);
  let apiCount=0,version='';
  try{
   const r=await fetch('./data/wiki-atlas.json',{cache:'no-cache'});
   if(r.ok){const d=await r.json();if(d.schemaVersion!==1||!Array.isArray(d.locations)||!d.locations.length)throw Error('Invalid API catalog');
    version=d.version||'';
-   for(const p of d.locations){if(!p.name||!p.system)continue;const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
+   const catalog=identifyStantonVariants(d.locations);
+   rawStantonCatalog=traceStantonParents(catalog.filter(p=>atlasSystem(p.system)==='Stanton'));
+   for(const entry of catalog){if(!entry.name||!entry.system||isStantonPlaceholder(entry))continue;const p={...entry,system:atlasSystem(entry.system)};const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
- try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();updateAtlasProgress(ed);lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
- if(!$('atlasProgressBar').dataset.loaded){$('atlasProgressCount').textContent='Datos de progreso no disponibles';$('atlasProgressUpdated').textContent='Sin snapshot de enriquecimiento';}
-
- poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
+ const serviceSnapshot=await servicesRequest;
+ mergeTacticalAtlas(byKey,serviceSnapshot,version);
+ mergeStanton(byKey,await stantonRequest);
+ poiData=traceStantonParents([...byKey.values()]).sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
+ updateAtlasProgress({generatedAt:serviceSnapshot?.checkedAt});
+ renderStantonCoverage();
  await refreshResourceIndex(version);
- if(input.value.trim())updateMenu();
- if(selectedPoiKey){const match=poiData.find(p=>key(p)===selectedPoiKey);if(match)applyPoiToMain(match)}
+ if(input.value.trim()||activeFilter||stantonZone.value)updateMenu();
+ const requested=byKey.get(initialDestination);
+ if(requested&&!selectedPoiKey)chooseSearchResult({kind:'poi',value:requested});
+ else{
+  const match=byKey.get(selectedPoiKey||(cur&&key(cur)));
+  if(match)applyPoiToMain(match);
+ }
  renderPoi();
  $('poiCount').textContent+=' · API: '+(apiCount?apiCount+' registros '+version:'sin snapshot; catálogo local');
 }

@@ -12,7 +12,7 @@ const TAGS = {
   microTech: ['cold'], Calliope: ['cold'], Clio: ['cold'], Euterpe: ['cold'], Lyria: ['cold'], Yela: ['cold'], Terminus: ['cold'],
   Cellin: ['volcanic'], Vatra: ['volcanic'], Fairo: ['volcanic'], Bloom: ['volcanic'],
 };
-export const TAG_LABEL = { heat: '🌡️ Calor extremo', cold: '❄️ Frío extremo', toxic: '☣️ Atmósfera tóxica', radiation: '☢️ Zonas irradiadas', storm: '⛈️ Tormentas', volcanic: '🌋 Volcánico' };
+export const TAG_LABEL = { heat: 'Calor extremo', cold: 'Frío extremo', toxic: 'Atmósfera tóxica', radiation: 'Zonas irradiadas', storm: 'Tormentas', volcanic: 'Volcánico' };
 
 // Gravedad en tres niveles, sin decimales: lo que importa al saltar o caer.
 export function gravityBand(g) {

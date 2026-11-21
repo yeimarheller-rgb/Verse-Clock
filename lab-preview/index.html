@@ -4,6 +4,7 @@
 <meta name="theme-color" content="#05080f"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Verse Clock">
 <link rel="preload" href="./fonts/orbitron-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./src/tactical-icons.css">
 <title>Verse Clock</title>
 <style>
 @font-face{font-family:Orbitron;font-weight:700;font-display:swap;src:url(./fonts/orbitron-700.woff2) format("woff2")}
@@ -27,7 +28,7 @@ html,body{margin:0;min-height:100%;background:#05080f;color:var(--ink);font:500 
 @keyframes drift{from{transform:scale(1.02) translateX(0)}to{transform:scale(1.08) translateX(-1.2%)}}
 .shade{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,6,12,.55),rgba(3,6,12,0) 30%,rgba(3,6,12,0) 55%,rgba(3,6,12,.8))}
 main{position:relative;z-index:2;max-width:1280px;margin:0 auto;padding:max(14px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));display:grid;gap:14px;
- grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "search" "hero" "solar" "destination" "tl" "info" "view" "cards" "explore" "foot"}
+ grid-template-columns:minmax(0,1fr);grid-template-areas:"top" "search" "dossier" "hero" "solar" "destination" "tl" "info" "view" "cards" "explore" "foot"}
 .view{grid-area:view;height:28vh}
 .cap{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--mute)}
 header{grid-area:top;display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -96,7 +97,7 @@ footer{grid-area:foot;display:flex;justify-content:space-between;flex-wrap:wrap;
 footer a{color:var(--mute)}
 @media (min-width:960px){
  main{min-height:100vh;grid-template-columns:280px minmax(0,1fr) 340px;grid-template-rows:none;align-content:start;align-items:start;
-  grid-template-areas:"top top top" "search search search" "hero hero solar" "destination destination destination" "tl tl tl" "info info info" "view view view" "cards cards cards" "explore explore explore" "foot foot foot" }
+  grid-template-areas:"top top top" "search search search" "dossier dossier dossier" "hero hero solar" "destination destination destination" "tl tl tl" "info info info" "view view view" "cards cards cards" "explore explore explore" "foot foot foot" }
  .view{height:auto;min-height:120px}
  .hero{align-self:start;padding:26px 20px 22px}
  .info{grid-template-columns:1fr;align-self:start}
@@ -185,7 +186,22 @@ main>.atlas-search-stack>.search>#fav{box-sizing:border-box!important;flex:0 0 5
 main>.atlas-search-stack>.atlas-progress{grid-area:auto!important;display:grid!important;visibility:visible!important;opacity:1!important;position:relative!important;inset:auto!important;transform:none!important;flex:0 0 auto!important;align-self:stretch!important;height:auto!important;min-height:104px!important;max-height:none!important;overflow:visible!important;margin:0!important;z-index:1!important}
 main>.atlas-search-stack>.atlas-progress .atlas-progress-track{display:block!important;width:100%!important;min-height:12px!important}
 @media(max-width:600px){main>.atlas-search-stack>.search{height:50px!important;min-height:50px!important;max-height:50px!important;flex-basis:50px!important}main>.atlas-search-stack>.search>#q,main>.atlas-search-stack>.search>#fav{height:50px!important;min-height:50px!important;max-height:50px!important}main>.atlas-search-stack>.search>#fav{flex-basis:50px!important;width:50px!important}main>.atlas-search-stack>.atlas-progress{min-height:112px!important}}
-main{align-content:start!important}main>.atlas-search-stack{align-self:start!important}main>.atlas-search-stack>.search{align-self:start!important}main>.atlas-search-stack>.atlas-progress{align-self:start!important} /* Keep LAB viewport exact on iPhone Safari and Chromium */html,body{max-width:100%;overflow-x:clip}main{box-sizing:border-box;width:100%;max-width:1280px;min-width:0}main>.atlas-search-stack{box-sizing:border-box;width:100%;min-width:0;max-width:100%}main>.atlas-search-stack>.search{box-sizing:border-box;min-width:0;max-width:100%}main>.atlas-search-stack>.atlas-progress{max-width:100%;min-width:0} .intel-tactical-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.intel-tactical-card{min-width:0;border:1px solid rgba(75,185,216,.4);border-left:3px solid var(--deck-cyan,#42d8f0);padding:10px 11px;background:rgba(5,22,39,.88);border-radius:4px}.intel-tactical-card[data-kind="warning"]{border-left-color:#ffb547}.intel-tactical-card[data-kind="unknown"]{border-left-color:#77889a}.intel-tactical-title{font:700 11px var(--hud);letter-spacing:.08em;color:#8ecddd;margin-bottom:6px}.intel-tactical-value{font:600 12px/1.45 var(--hud);color:#e0f8ff;overflow-wrap:anywhere}.intel-tactical-card[data-kind="unknown"] .intel-tactical-value{color:#9cabb8}@media(max-width:390px){.intel-tactical-cards{grid-template-columns:1fr}} .intel-readiness{margin:12px 0;padding:12px;border:1px solid #285c70;background:linear-gradient(110deg,rgba(6,30,49,.95),rgba(7,16,31,.92));border-radius:8px}.intel-readiness-head{display:flex;align-items:center;justify-content:space-between;gap:8px;font:700 11px var(--hud);letter-spacing:.08em;color:#8de6ff}.intel-readiness-meter{height:7px;margin:9px 0;background:#1d3444;border-radius:9px;overflow:hidden}.intel-readiness-meter>span{display:block;height:100%;background:linear-gradient(90deg,#35a8c8,#66edba);transition:width .25s}.intel-readiness-caption{font:11px/1.5 var(--hud);color:#b0c6d2}.intel-source-links{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.intel-source-links a{border:1px solid #396b7e;border-radius:5px;padding:7px 9px;background:#0d2638;color:#9ce7f4;font:700 11px var(--hud);text-decoration:none;overflow-wrap:anywhere}.intel-source-links a:focus-visible{outline:2px solid #fff}.intel-tactical-card{position:relative;overflow:hidden}.intel-tactical-card[data-kind="known"]{border-left-color:#55e5ad}.intel-tactical-card[data-kind="warning"]{border-left-color:#ffb547}.intel-tactical-card[data-kind="unknown"]{border-left-color:#758494}.intel-tactical-title{display:flex;align-items:center;gap:5px}.intel-tactical-card .intel-evidence{display:block;margin-top:6px;color:#88a6b6;font:10px var(--hud)} </style></head>
+main{align-content:start!important}main>.atlas-search-stack{align-self:start!important}main>.atlas-search-stack>.search{align-self:start!important}main>.atlas-search-stack>.atlas-progress{align-self:start!important} /* Keep LAB viewport exact on iPhone Safari and Chromium */html,body{max-width:100%;overflow-x:clip}main{box-sizing:border-box;width:100%;max-width:1280px;min-width:0}main>.atlas-search-stack{box-sizing:border-box;width:100%;min-width:0;max-width:100%}main>.atlas-search-stack>.search{box-sizing:border-box;min-width:0;max-width:100%}main>.atlas-search-stack>.atlas-progress{max-width:100%;min-width:0} .intel-tactical-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.intel-tactical-card{min-width:0;border:1px solid rgba(75,185,216,.4);border-left:3px solid var(--deck-cyan,#42d8f0);padding:10px 11px;background:rgba(5,22,39,.88);border-radius:4px}.intel-tactical-card[data-kind="warning"]{border-left-color:#ffb547}.intel-tactical-card[data-kind="unknown"]{border-left-color:#77889a}.intel-tactical-title{font:700 11px var(--hud);letter-spacing:.08em;color:#8ecddd;margin-bottom:6px}.intel-tactical-value{font:600 12px/1.45 var(--hud);color:#e0f8ff;overflow-wrap:anywhere}.intel-tactical-card[data-kind="unknown"] .intel-tactical-value{color:#9cabb8}@media(max-width:390px){.intel-tactical-cards{grid-template-columns:1fr}} .intel-readiness{margin:12px 0;padding:12px;border:1px solid #285c70;background:linear-gradient(110deg,rgba(6,30,49,.95),rgba(7,16,31,.92));border-radius:8px}.intel-readiness-head{display:flex;align-items:center;justify-content:space-between;gap:8px;font:700 11px var(--hud);letter-spacing:.08em;color:#8de6ff}.intel-readiness-meter{height:7px;margin:9px 0;background:#1d3444;border-radius:9px;overflow:hidden}.intel-readiness-meter>span{display:block;height:100%;background:linear-gradient(90deg,#35a8c8,#66edba);transition:width .25s}.intel-readiness-caption{font:11px/1.5 var(--hud);color:#b0c6d2}.intel-source-links{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.intel-source-links a{border:1px solid #396b7e;border-radius:5px;padding:7px 9px;background:#0d2638;color:#9ce7f4;font:700 11px var(--hud);text-decoration:none;overflow-wrap:anywhere}.intel-source-links a:focus-visible{outline:2px solid #fff}.intel-tactical-card{position:relative;overflow:hidden}.intel-tactical-card[data-kind="known"]{border-left-color:#55e5ad}.intel-tactical-card[data-kind="warning"]{border-left-color:#ffb547}.intel-tactical-card[data-kind="unknown"]{border-left-color:#758494}.intel-tactical-title{display:flex;align-items:center;gap:5px}.intel-tactical-card .intel-evidence{display:block;margin-top:6px;color:#88a6b6;font:10px var(--hud)} .location-dossier-panel{grid-area:dossier;padding:14px;min-width:0;scroll-margin-top:12px;border-top:2px solid var(--deck-cyan)}
+.location-dossier-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.location-dossier-header #mainIntelLocation{margin:0;font:700 19px var(--hud);text-transform:none}
+#searchAgain{font-size:12px;min-height:30px}
+#locationDossier:not([hidden]){display:grid;gap:10px;grid-template-columns:minmax(0,1fr)}
+#locationDossier>small,#locationDossier>.location-dossier-nav{grid-column:1/-1}
+@media(min-width:720px){#locationDossier:not([hidden]){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1120px){#locationDossier:has(>.location-dossier-block:nth-last-child(3)){grid-template-columns:repeat(3,minmax(0,1fr))}}
+.atlas-progress summary{width:fit-content;cursor:pointer;color:var(--mute);font-size:12px}
+.location-dossier-panel[hidden]{display:none}
+.location-dossier-block{border-left:3px solid #55d7f1;padding:10px 12px;background:#0a2334;color:#e0f8ff;overflow-wrap:anywhere}
+.location-dossier-block h3{margin:0 0 5px;font:700 15px var(--hud);color:#8ee8ff}
+.location-dossier-block p{margin:0;font:600 15px/1.45 var(--hud)}
+.location-dossier-nav{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.location-dossier-nav button{color:#c9f1fc;background:#0d2638;border:1px solid #4b8599;border-radius:4px;padding:8px;font:700 14px var(--hud);cursor:pointer}
+</style></head>
 <body>
 <svg id="scene" aria-hidden="true"></svg>
 <div id="photo" aria-hidden="true">
@@ -212,11 +228,11 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
  <div class="view" aria-hidden="true"></div>
 
  <section class="panel solar" id="solar">
-  <div><div class="ph"><span class="cap">◈ CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
+  <div><div class="ph"><span class="cap">CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
    <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
   <div class="ev">
-   <div><span class="cap">☀ AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
-   <div><span class="cap">◐ ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
+   <div><span class="cap">AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
+   <div><span class="cap">ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
   </div>
  </section>
 
@@ -233,25 +249,42 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
   <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
   <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
   <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
-  <div class="env"><dt class="cap">◈ Seguridad y facciones · Intel</dt><small id="mainIntelLocation" hidden></small><div id="atlasQuality" class="intel-readiness" aria-live="polite">Auditoría global de inteligencia: cargando…</div><div id="intelReadiness" class="intel-readiness" aria-live="polite"></div><div id="intelTacticalCards" class="intel-tactical-cards" aria-label="Resumen táctico de la ubicación"></div><div id="intelSourceLinks" class="intel-source-links" aria-label="Fuentes de inteligencia"></div><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
-  <div class="env"><dt class="cap">⚠ Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
-  <div class="env"><dt class="cap">◇ Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
+  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><div id="intelReadiness" class="intel-readiness" aria-live="polite"></div><div id="intelTacticalCards" class="intel-tactical-cards" aria-label="Resumen táctico de la ubicación"></div><div id="intelSourceLinks" class="intel-source-links" aria-label="Fuentes de inteligencia"></div><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
+  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
   <div class="env src"><small id="envSrc"></small></div>
  </dl>
 
+ <section id="tacticalPanel" class="panel location-dossier-panel" aria-labelledby="mainIntelLocation" hidden>
+  <div class="location-dossier-header"><h2 id="mainIntelLocation"></h2><button id="searchAgain" class="mini" type="button">Buscar otra ubicación</button></div>
+  <section id="operationsPanel" aria-label="Modo Operaciones" hidden></section>
+  <div id="locationDossier" hidden></div>
+ </section>
  <div id="cards" aria-label="Ubicaciones fijadas"></div>
 
  
-<div class="atlas-search-stack"><div class="search">
+<div class="atlas-search-stack"><div class="tactical-toolbar">
+ <label class="stanton-zone">Zona <select id="stantonZone" aria-label="Zona logística">
+  <option value="">Todas las zonas</option><option value="Stanton">Todo Stanton</option><option value="lagrange">Puntos Lagrange</option><option value="unassigned">Sin planeta o luna asignados</option>
+ </select></label>
+ <div id="tacticalFilters" class="tactical-filters" role="group" aria-label="Filtros tácticos"></div>
+ <div class="tactical-tools">
+  <button id="operationsToggle" class="mini" type="button" aria-pressed="false" aria-controls="operationsPanel">Modo Operaciones</button>
+  <a href="./iconos.html">Iconografía</a>
+ </div>
+</div>
+<div class="search">
   <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar PAF Lamina, Lazarus, Brio, Chawla…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
   <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
   <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
  </div>
 <section class="atlas-progress" aria-label="Progreso del enriquecimiento universal" aria-live="polite">
- <div class="atlas-progress-top"><strong>◈ ENRIQUECIMIENTO DEL ATLAS</strong><span id="atlasProgressPercent">—</span></div>
- <div class="atlas-progress-track" role="progressbar" id="atlasProgressBar" aria-label="Ubicaciones consultadas" aria-valuemin="0" aria-valuemax="2017" aria-valuenow="0"><span id="atlasProgressFill"></span></div>
+ <div class="atlas-progress-top"><strong>ENRIQUECIMIENTO DEL ATLAS</strong><span id="atlasProgressPercent">—</span></div>
+ <div class="atlas-progress-track" role="progressbar" id="atlasProgressBar" aria-label="Ubicaciones con ficha táctica o de servicios con fuentes" aria-valuemin="0" aria-valuemax="2017" aria-valuenow="0"><span id="atlasProgressFill"></span></div>
  <div class="atlas-progress-bottom"><span id="atlasProgressCount">Cargando cobertura…</span><span id="atlasProgressUpdated">Esperando sincronización</span></div>
- <small id="atlasProgressQuality">El progreso mide ubicaciones consultadas, no fichas con botín completo.</small>
+ <small id="atlasProgressQuality">Fichas con fuentes y contenido visible en el buscador.</small>
+ <details><summary>Cobertura de Stanton</summary><div id="stantonCoverage"></div></details>
+ <details><summary>Auditoría del catálogo base</summary><div id="atlasQuality" class="intel-readiness">Cargando catálogo base…</div></details>
 </section></div>
 
  <section class="panel atlas-hub" aria-label="Explorador universal" hidden aria-hidden="true"><div class="atlas-head"><div><span class="cap">VERSE INTELLIGENCE</span><h2>EXPLORADOR UNIVERSAL</h2></div><span class="cap">Stanton · Pyro · Nyx</span></div><div class="atlas-tabs" role="tablist" aria-label="Explorar el universo"><button type="button" role="tab" id="atlasTabPoi" aria-controls="atlasPanePoi" aria-selected="true">ESTACIONES Y PUESTOS</button><button type="button" role="tab" id="atlasTabIntel" aria-controls="atlasPaneIntel" aria-selected="false">MISIONES Y PLANOS</button></div><div id="atlasPanePoi" role="tabpanel" aria-labelledby="atlasTabPoi"> <section class="panel poi-atlas" aria-label="Atlas de estaciones y puestos"><h2>ATLAS · ESTACIONES Y PUESTOS</h2><div class="poi-controls"><input id="poiQuery" type="search" placeholder="Orbituary, Headhunters, refinería…" aria-label="Buscar estaciones, puestos y facciones"><select id="poiSystem" aria-label="Sistema"><option value="">Todos los sistemas</option><option>Stanton</option><option>Pyro</option><option>Nyx</option></select><select id="poiService" aria-label="Servicio"><option value="">Todos los servicios</option><option value="refinery">Refinería (indicada)</option></select></div><small id="poiCount" class="poi-meta">Cargando ubicaciones…</small><div id="poiResults" class="poi-results"></div></section>
