@@ -78,6 +78,22 @@ with sync_playwright() as p:
             pg.wait_for_timeout(200)
             dossier=pg.locator('#mainIntelApi').inner_text()
             if 'Valakkar' not in dossier or 'PASO 1' not in dossier:fails.append(f'{name}: dossier Lazarus incompleto')
+        # Hurston: verificar fichas nuevas en el navegador y en ambas resoluciones.
+        for location in ('HDMS-Edmond', 'HDSF-Adlai', 'HDMS-Pinewood'):
+            pg.fill('#q', location)
+            pg.wait_for_timeout(350)
+            matches=pg.locator('#suggestions button')
+            if not matches.count():
+                fails.append(f'{name}: Hurston {location} no aparece en el buscador')
+                continue
+            matches.first.click()
+            pg.wait_for_timeout(250)
+            title=pg.locator('#mainIntelLocation').inner_text()
+            if location not in title:
+                fails.append(f'{name}: Hurston {location} no abre la ficha correcta: {title}')
+            cards=pg.locator('#intelTacticalCards').inner_text()
+            if not cards.strip():
+                fails.append(f'{name}: Hurston {location} no muestra inteligencia operativa')
         # El explorador inferior está oculto por diseño: probar el buscador principal.
         pg.fill('#q', 'Valakkar')
         pg.wait_for_timeout(350)
