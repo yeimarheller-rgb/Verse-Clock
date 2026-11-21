@@ -4,6 +4,7 @@
 <meta name="theme-color" content="#05080f"><link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="./icon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Verse Clock">
 <link rel="preload" href="./fonts/orbitron-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./src/tactical-icons.css">
 <title>Verse Clock</title>
 <style>
 @font-face{font-family:Orbitron;font-weight:700;font-display:swap;src:url(./fonts/orbitron-700.woff2) format("woff2")}
@@ -227,11 +228,11 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
  <div class="view" aria-hidden="true"></div>
 
  <section class="panel solar" id="solar">
-  <div><div class="ph"><span class="cap">◈ CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
+  <div><div class="ph"><span class="cap">CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
    <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
   <div class="ev">
-   <div><span class="cap">☀ AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
-   <div><span class="cap">◐ ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
+   <div><span class="cap">AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
+   <div><span class="cap">ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
   </div>
  </section>
 
@@ -248,26 +249,34 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
   <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
   <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
   <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
-  <div class="env"><dt class="cap">◈ Seguridad y facciones · Intel</dt><div id="intelReadiness" class="intel-readiness" aria-live="polite"></div><div id="intelTacticalCards" class="intel-tactical-cards" aria-label="Resumen táctico de la ubicación"></div><div id="intelSourceLinks" class="intel-source-links" aria-label="Fuentes de inteligencia"></div><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
-  <div class="env"><dt class="cap">⚠ Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
-  <div class="env"><dt class="cap">◇ Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
+  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><div id="intelReadiness" class="intel-readiness" aria-live="polite"></div><div id="intelTacticalCards" class="intel-tactical-cards" aria-label="Resumen táctico de la ubicación"></div><div id="intelSourceLinks" class="intel-source-links" aria-label="Fuentes de inteligencia"></div><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
+  <div class="env"><dt class="cap">Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
+  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
   <div class="env src"><small id="envSrc"></small></div>
  </dl>
 
  <section id="tacticalPanel" class="panel location-dossier-panel" aria-labelledby="mainIntelLocation" hidden>
   <div class="location-dossier-header"><h2 id="mainIntelLocation"></h2><button id="searchAgain" class="mini" type="button">Buscar otra ubicación</button></div>
+  <section id="operationsPanel" aria-label="Modo Operaciones" hidden></section>
   <div id="locationDossier" hidden></div>
  </section>
  <div id="cards" aria-label="Ubicaciones fijadas"></div>
 
  
-<div class="atlas-search-stack"><div class="search">
+<div class="atlas-search-stack"><div class="tactical-toolbar">
+ <div id="tacticalFilters" class="tactical-filters" role="group" aria-label="Filtros tácticos"></div>
+ <div class="tactical-tools">
+  <button id="operationsToggle" class="mini" type="button" aria-pressed="false" aria-controls="operationsPanel">Modo Operaciones</button>
+  <a href="./iconos.html">Iconografía</a>
+ </div>
+</div>
+<div class="search">
   <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar PAF Lamina, Lazarus, Brio, Chawla…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
   <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
   <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
  </div>
 <section class="atlas-progress" aria-label="Progreso del enriquecimiento universal" aria-live="polite">
- <div class="atlas-progress-top"><strong>◈ ENRIQUECIMIENTO DEL ATLAS</strong><span id="atlasProgressPercent">—</span></div>
+ <div class="atlas-progress-top"><strong>ENRIQUECIMIENTO DEL ATLAS</strong><span id="atlasProgressPercent">—</span></div>
  <div class="atlas-progress-track" role="progressbar" id="atlasProgressBar" aria-label="Ubicaciones con ficha táctica o de servicios con fuentes" aria-valuemin="0" aria-valuemax="2017" aria-valuenow="0"><span id="atlasProgressFill"></span></div>
  <div class="atlas-progress-bottom"><span id="atlasProgressCount">Cargando cobertura…</span><span id="atlasProgressUpdated">Esperando sincronización</span></div>
  <small id="atlasProgressQuality">Fichas con fuentes y contenido visible en el buscador.</small>
