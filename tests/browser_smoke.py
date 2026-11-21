@@ -148,6 +148,19 @@ with sync_playwright() as p:
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()
+    for name, width, height in [('iphone',390,844),('desktop',1440,900)]:
+        page = b.new_page(viewport={'width': width, 'height': height})
+        page.goto(BASE + 'lab-preview/iconos.html')
+        tiles = page.locator('.icon-tile')
+        expect(tiles).to_have_count(29)
+        assert page.locator('.icon-tile svg').count() == 87
+        assert page.locator('.tactical-icon-state').count() == 4
+        assert page.evaluate('document.documentElement.scrollWidth') <= width
+        for tile in tiles.all():
+            assert [svg.bounding_box()['width'] for svg in tile.locator('svg').all()] == [20,24,32]
+        assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 29
+        page.screenshot(path=f'/tmp/verse-lab-iconografia-{name}.png',full_page=True)
+        page.close()
     b.close()
 print('\n'.join(fails) or 'OK: la web arranca en iPhone y escritorio')
 sys.exit(1 if fails else 0)
