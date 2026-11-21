@@ -307,6 +307,20 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-stanton-pharmacy-{name.split()[0]}-{device}.png', full_page=True)
+        for name, detail in [
+            ('Shubin Processing Facility SPAL-12', '13 puntos de botín'),
+            ('Shubin Processing Facility SPMC-14', 'P8-SC SMG'),
+            ('Onyx Facility S3A1', 'Corbel Smolder'),
+        ]:
+            query(name, name)
+            loot = dossier.locator('[data-domain="loot"]')
+            expect(loot).to_contain_text(detail)
+            expect(loot.locator('.dossier-fact').filter(has_text=detail)).to_have_count(1)
+            if name.endswith('SPMC-14'):
+                expect(dossier).to_contain_text('Remove Illegal Occupants')
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton-bunker-{name.split()[-1]}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

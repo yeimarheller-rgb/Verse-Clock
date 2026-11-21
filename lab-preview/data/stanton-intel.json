@@ -3533,16 +3533,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal12",
+            "https://api.star-citizen.wiki/api/locations/f560789f-0de6-42fe-87a3-649f7b718a7d",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-12"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal12",
+            "https://api.star-citizen.wiki/api/locations/f560789f-0de6-42fe-87a3-649f7b718a7d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal12",
+            "https://api.star-citizen.wiki/api/locations/f560789f-0de6-42fe-87a3-649f7b718a7d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "f560789f-0de6-42fe-87a3-649f7b718a7d",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Shubin Processing Facility SPAL-16",
@@ -3550,16 +3578,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal16",
+            "https://api.star-citizen.wiki/api/locations/c452b538-cc39-45fb-a0d8-a65d6d8ad7b1",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-16"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal16",
+            "https://api.star-citizen.wiki/api/locations/c452b538-cc39-45fb-a0d8-a65d6d8ad7b1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal16",
+            "https://api.star-citizen.wiki/api/locations/c452b538-cc39-45fb-a0d8-a65d6d8ad7b1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "c452b538-cc39-45fb-a0d8-a65d6d8ad7b1",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Shubin Processing Facility SPAL-21",
@@ -3567,16 +3623,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal21",
+            "https://api.star-citizen.wiki/api/locations/bf6f34eb-3509-4f09-82cb-07ee5b2f48fd",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-21"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal21",
+            "https://api.star-citizen.wiki/api/locations/bf6f34eb-3509-4f09-82cb-07ee5b2f48fd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal21",
+            "https://api.star-citizen.wiki/api/locations/bf6f34eb-3509-4f09-82cb-07ee5b2f48fd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "bf6f34eb-3509-4f09-82cb-07ee5b2f48fd",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Shubin Processing Facility SPAL-3",
@@ -3584,16 +3668,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal3",
+            "https://api.star-citizen.wiki/api/locations/20314166-d4e3-4a0d-8fef-ac1c0e2e9e97",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-3"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal3",
+            "https://api.star-citizen.wiki/api/locations/20314166-d4e3-4a0d-8fef-ac1c0e2e9e97"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal3",
+            "https://api.star-citizen.wiki/api/locations/20314166-d4e3-4a0d-8fef-ac1c0e2e9e97"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "20314166-d4e3-4a0d-8fef-ac1c0e2e9e97",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Shubin Processing Facility SPAL-7",
@@ -3601,16 +3713,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal7",
+            "https://api.star-citizen.wiki/api/locations/2ef6101d-aa7e-46eb-beef-c7a8b85b27d6",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-7"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal7",
+            "https://api.star-citizen.wiki/api/locations/2ef6101d-aa7e-46eb-beef-c7a8b85b27d6"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal7",
+            "https://api.star-citizen.wiki/api/locations/2ef6101d-aa7e-46eb-beef-c7a8b85b27d6"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "2ef6101d-aa7e-46eb-beef-c7a8b85b27d6",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Shubin Processing Facility SPAL-9",
@@ -3618,16 +3758,44 @@
       "claims": [
         {
           "field": "access",
-          "status": "reported",
-          "text": "La documentación del sitio advierte fuego de torretas contra naves sin autorización. Verifica destino y permisos antes de aproximarte por aire.",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
           "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal9",
+            "https://api.star-citizen.wiki/api/locations/960aa900-6f22-4af2-83c2-c018374cdb14",
             "https://starcitizen.tools/Shubin_Processing_Facility_SPAL-9"
           ],
-          "title": "Acceso restringido · torretas",
-          "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
-          "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal9",
+            "https://api.star-citizen.wiki/api/locations/960aa900-6f22-4af2-83c2-c018374cdb14"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-ugf-spal9",
+            "https://api.star-citizen.wiki/api/locations/960aa900-6f22-4af2-83c2-c018374cdb14"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
         }
-      ]
+      ],
+      "uuid": "960aa900-6f22-4af2-83c2-c018374cdb14",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Talarine Divide Aid Shelter",
@@ -6929,6 +7097,1632 @@
           ]
         }
       ]
+    },
+    {
+      "name": "ArcCorp Security Post 011",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost011",
+            "https://api.star-citizen.wiki/api/locations/d33756f0-ea94-4175-953c-284be13695d7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost011",
+            "https://api.star-citizen.wiki/api/locations/d33756f0-ea94-4175-953c-284be13695d7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost011",
+            "https://api.star-citizen.wiki/api/locations/d33756f0-ea94-4175-953c-284be13695d7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "d33756f0-ea94-4175-953c-284be13695d7",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 024",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost024",
+            "https://api.star-citizen.wiki/api/locations/1ee369c1-53e4-4e23-8e93-179a93cf4382"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo",
+          "text": "La extracción registra 11 puntos de botín. Entre las opciones de sus cajas figuran Pyro RYT Multi-Tool y XDL Monocular Rangefinder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost024",
+            "https://api.star-citizen.wiki/api/locations/1ee369c1-53e4-4e23-8e93-179a93cf4382"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Posibilidades del contenedor. El contenido depende de la tirada y del estado de la sesión."
+        }
+      ],
+      "uuid": "1ee369c1-53e4-4e23-8e93-179a93cf4382",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 029",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost029",
+            "https://api.star-citizen.wiki/api/locations/7987fd14-5a84-482e-b963-3fd8e49f33f2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 16 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost029",
+            "https://api.star-citizen.wiki/api/locations/7987fd14-5a84-482e-b963-3fd8e49f33f2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost029",
+            "https://api.star-citizen.wiki/api/locations/7987fd14-5a84-482e-b963-3fd8e49f33f2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "7987fd14-5a84-482e-b963-3fd8e49f33f2",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 033",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost033",
+            "https://api.star-citizen.wiki/api/locations/aeb0f0b0-02df-492f-94bf-0262ae32cb49"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost033",
+            "https://api.star-citizen.wiki/api/locations/aeb0f0b0-02df-492f-94bf-0262ae32cb49"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost033",
+            "https://api.star-citizen.wiki/api/locations/aeb0f0b0-02df-492f-94bf-0262ae32cb49"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "aeb0f0b0-02df-492f-94bf-0262ae32cb49",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 038",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost038",
+            "https://api.star-citizen.wiki/api/locations/377b002c-35d9-4284-8678-1f361a4abd8a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo",
+          "text": "La extracción registra 11 puntos de botín. Entre las opciones de sus cajas figuran Pyro RYT Multi-Tool y XDL Monocular Rangefinder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost038",
+            "https://api.star-citizen.wiki/api/locations/377b002c-35d9-4284-8678-1f361a4abd8a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Posibilidades del contenedor. El contenido depende de la tirada y del estado de la sesión."
+        }
+      ],
+      "uuid": "377b002c-35d9-4284-8678-1f361a4abd8a",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 042",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost042",
+            "https://api.star-citizen.wiki/api/locations/955f80d7-086a-4598-819f-fa4244c01b22"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo",
+          "text": "La extracción registra 11 puntos de botín. Entre las opciones de sus cajas figuran Pyro RYT Multi-Tool y XDL Monocular Rangefinder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost042",
+            "https://api.star-citizen.wiki/api/locations/955f80d7-086a-4598-819f-fa4244c01b22"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Posibilidades del contenedor. El contenido depende de la tirada y del estado de la sesión."
+        }
+      ],
+      "uuid": "955f80d7-086a-4598-819f-fa4244c01b22",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 045",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost045",
+            "https://api.star-citizen.wiki/api/locations/35449c82-e8eb-4953-ba0a-689ca7ca01d3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost045",
+            "https://api.star-citizen.wiki/api/locations/35449c82-e8eb-4953-ba0a-689ca7ca01d3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost045",
+            "https://api.star-citizen.wiki/api/locations/35449c82-e8eb-4953-ba0a-689ca7ca01d3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "35449c82-e8eb-4953-ba0a-689ca7ca01d3",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 052",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost052",
+            "https://api.star-citizen.wiki/api/locations/d686f845-4044-4dba-99e3-5a3922442219"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo",
+          "text": "La extracción registra 11 puntos de botín. Entre las opciones de sus cajas figuran Pyro RYT Multi-Tool y XDL Monocular Rangefinder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost052",
+            "https://api.star-citizen.wiki/api/locations/d686f845-4044-4dba-99e3-5a3922442219"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Posibilidades del contenedor. El contenido depende de la tirada y del estado de la sesión."
+        }
+      ],
+      "uuid": "d686f845-4044-4dba-99e3-5a3922442219",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 059",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost059",
+            "https://api.star-citizen.wiki/api/locations/3dafc5ff-7f06-4883-aa73-f438a0be79a7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost059",
+            "https://api.star-citizen.wiki/api/locations/3dafc5ff-7f06-4883-aa73-f438a0be79a7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost059",
+            "https://api.star-citizen.wiki/api/locations/3dafc5ff-7f06-4883-aa73-f438a0be79a7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "3dafc5ff-7f06-4883-aa73-f438a0be79a7",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 060",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción local señala zonas de intrusión. Comprueba permisos antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost060",
+            "https://api.star-citizen.wiki/api/locations/329e7f45-f80d-4804-8adc-a00b28a07152"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 16 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost060",
+            "https://api.star-citizen.wiki/api/locations/329e7f45-f80d-4804-8adc-a00b28a07152"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-arccorpsecuritypost060",
+            "https://api.star-citizen.wiki/api/locations/329e7f45-f80d-4804-8adc-a00b28a07152"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "329e7f45-f80d-4804-8adc-a00b28a07152",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A1",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/516eccdb-df66-4329-9771-9acb3232e52a",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/516eccdb-df66-4329-9771-9acb3232e52a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/516eccdb-df66-4329-9771-9acb3232e52a",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "516eccdb-df66-4329-9771-9acb3232e52a",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A10",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/c7e23987-5b0e-4492-ad11-dd35c90012f6",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/c7e23987-5b0e-4492-ad11-dd35c90012f6"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c7e23987-5b0e-4492-ad11-dd35c90012f6",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "c7e23987-5b0e-4492-ad11-dd35c90012f6",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A2",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/5e302473-4f46-47ac-8876-65aacda327bc",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/5e302473-4f46-47ac-8876-65aacda327bc"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5e302473-4f46-47ac-8876-65aacda327bc",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "5e302473-4f46-47ac-8876-65aacda327bc",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A3",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/766e0cbc-3006-4657-bae5-1a0698afdbaf",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/766e0cbc-3006-4657-bae5-1a0698afdbaf"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/766e0cbc-3006-4657-bae5-1a0698afdbaf",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "766e0cbc-3006-4657-bae5-1a0698afdbaf",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A4",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/bff3e50b-e199-4e1a-b8ab-bbba98d8466e",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/bff3e50b-e199-4e1a-b8ab-bbba98d8466e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bff3e50b-e199-4e1a-b8ab-bbba98d8466e",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "bff3e50b-e199-4e1a-b8ab-bbba98d8466e",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A5",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/ed1533da-4c93-43ff-a63c-5ef53569f061",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/ed1533da-4c93-43ff-a63c-5ef53569f061"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ed1533da-4c93-43ff-a63c-5ef53569f061",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "ed1533da-4c93-43ff-a63c-5ef53569f061",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A6",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/7a16cc9f-91f7-46fc-9067-3204ca436e3d",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/7a16cc9f-91f7-46fc-9067-3204ca436e3d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7a16cc9f-91f7-46fc-9067-3204ca436e3d",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "7a16cc9f-91f7-46fc-9067-3204ca436e3d",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A7",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/3a69951d-e53b-40f7-8d84-fda9b9cee8d2",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/3a69951d-e53b-40f7-8d84-fda9b9cee8d2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3a69951d-e53b-40f7-8d84-fda9b9cee8d2",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "3a69951d-e53b-40f7-8d84-fda9b9cee8d2",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A8",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/97b3d622-96d9-4281-be82-07b6fa61a112",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/97b3d622-96d9-4281-be82-07b6fa61a112"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/97b3d622-96d9-4281-be82-07b6fa61a112",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "97b3d622-96d9-4281-be82-07b6fa61a112",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S3A9",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/3e9349f8-7c92-4ac1-9541-b818bfa1894e",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/3e9349f8-7c92-4ac1-9541-b818bfa1894e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3e9349f8-7c92-4ac1-9541-b818bfa1894e",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "3e9349f8-7c92-4ac1-9541-b818bfa1894e",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A1",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/4f188a3d-ac10-45d4-a387-60559c2330cd",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/4f188a3d-ac10-45d4-a387-60559c2330cd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4f188a3d-ac10-45d4-a387-60559c2330cd",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "4f188a3d-ac10-45d4-a387-60559c2330cd",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A10",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/4f2c53bb-80f2-4921-91ea-44aa56941854",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/4f2c53bb-80f2-4921-91ea-44aa56941854"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4f2c53bb-80f2-4921-91ea-44aa56941854",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "4f2c53bb-80f2-4921-91ea-44aa56941854",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A2",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/18c4058a-d9f5-4975-9329-13c7297f41cb",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/18c4058a-d9f5-4975-9329-13c7297f41cb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/18c4058a-d9f5-4975-9329-13c7297f41cb",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "18c4058a-d9f5-4975-9329-13c7297f41cb",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A3",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/dc588854-f332-464d-bd39-7774c8af68e8",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/dc588854-f332-464d-bd39-7774c8af68e8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/dc588854-f332-464d-bd39-7774c8af68e8",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "dc588854-f332-464d-bd39-7774c8af68e8",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A4",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/aa281ef2-fb54-4f56-bd2e-2b09b8a38e50",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/aa281ef2-fb54-4f56-bd2e-2b09b8a38e50"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/aa281ef2-fb54-4f56-bd2e-2b09b8a38e50",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "aa281ef2-fb54-4f56-bd2e-2b09b8a38e50",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A5",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/0db72374-c285-4f75-86cb-e7acf6ce1eb6",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/0db72374-c285-4f75-86cb-e7acf6ce1eb6"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0db72374-c285-4f75-86cb-e7acf6ce1eb6",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "0db72374-c285-4f75-86cb-e7acf6ce1eb6",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A6",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/c47ef82c-689e-40f0-a459-06558e2e58af",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/c47ef82c-689e-40f0-a459-06558e2e58af"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c47ef82c-689e-40f0-a459-06558e2e58af",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "c47ef82c-689e-40f0-a459-06558e2e58af",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A7",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/fb66b5be-8316-4f9a-a9a7-b6e77a39719d",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/fb66b5be-8316-4f9a-a9a7-b6e77a39719d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fb66b5be-8316-4f9a-a9a7-b6e77a39719d",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "fb66b5be-8316-4f9a-a9a7-b6e77a39719d",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A8",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/f0f50cee-b916-4182-8a8e-ef409c6d00f3",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/f0f50cee-b916-4182-8a8e-ef409c6d00f3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f0f50cee-b916-4182-8a8e-ef409c6d00f3",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "f0f50cee-b916-4182-8a8e-ef409c6d00f3",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4A9",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "335 puntos de botín configurados, incluidas cajas con piezas Corbel Smolder.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/19af47d0-4c0d-469d-9ee6-a0a3f25b7be5",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los puntos son configuraciones del lugar. La aparición y el acceso efectivo quedan pendientes de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes de esta instalación incluyen Zenith Laser Sniper Rifle y Fresnel Energy LMG en los datos del juego.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/19af47d0-4c0d-469d-9ee6-a0a3f25b7be5"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La configuración del soporte no garantiza que el arma siga allí en tu sesión."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante contrato",
+          "text": "El catálogo marca la instalación como oculta en el mapa estelar y en el mundo. La guía documenta el marcador cuántico de misión como acceso directo; confirma el código de la instalación en mobiGlas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/19af47d0-4c0d-469d-9ee6-a0a3f25b7be5",
+            "https://starcitizen.tools/Onyx_Facility"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ubicación del marcador y la entrada efectiva dependen del contrato y de la sesión."
+        }
+      ],
+      "uuid": "19af47d0-4c0d-469d-9ee6-a0a3f25b7be5",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-10",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc10",
+            "https://api.star-citizen.wiki/api/locations/0aac290a-5be3-459c-91cf-343b9d8e2903"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 20 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc10",
+            "https://api.star-citizen.wiki/api/locations/0aac290a-5be3-459c-91cf-343b9d8e2903"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc10",
+            "https://api.star-citizen.wiki/api/locations/0aac290a-5be3-459c-91cf-343b9d8e2903"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Extermination Job en 4.10.2",
+          "text": "La guía de 4.10.2 lo registra como posible destino del encargo de Rough & Ready. El destino y el encuentro quedan por verificar en LIVE.",
+          "sources": [
+            "https://starcitizen.tools/Extermination_Job"
+          ],
+          "patch": "4.10.2-LIVE.12881860",
+          "uncertainty": "La versión indicada corresponde al texto de la misión en la fuente consultada. Falta corroborar la asignación en 4.10.3."
+        }
+      ],
+      "uuid": "0aac290a-5be3-459c-91cf-343b9d8e2903",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-11",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc11",
+            "https://api.star-citizen.wiki/api/locations/d732397e-7444-431b-bbea-adb6efb80965"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc11",
+            "https://api.star-citizen.wiki/api/locations/d732397e-7444-431b-bbea-adb6efb80965"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc11",
+            "https://api.star-citizen.wiki/api/locations/d732397e-7444-431b-bbea-adb6efb80965"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "d732397e-7444-431b-bbea-adb6efb80965",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-14",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc14",
+            "https://api.star-citizen.wiki/api/locations/12719cdd-ca07-427a-955d-d5c2b6a60589"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc14",
+            "https://api.star-citizen.wiki/api/locations/12719cdd-ca07-427a-955d-d5c2b6a60589"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc14",
+            "https://api.star-citizen.wiki/api/locations/12719cdd-ca07-427a-955d-d5c2b6a60589"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Remove Illegal Occupants",
+          "text": "Posible destino de Remove Illegal Occupants, de microTech Protection Services. El objetivo es limpiar a los ocupantes del recinto a pie. Comprueba el nombre del destino en mobiGlas.",
+          "sources": [
+            "https://starcitizen.tools/Remove_Illegal_Occupants",
+            "https://api.star-citizen.wiki/api/locations/12719cdd-ca07-427a-955d-d5c2b6a60589"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La fuente incluye este sitio como destino posible. La oferta, dificultad exacta y aparición de enemigos dependen del contrato y la sesión."
+        }
+      ],
+      "uuid": "12719cdd-ca07-427a-955d-d5c2b6a60589",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-3",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc3",
+            "https://api.star-citizen.wiki/api/locations/ef16965b-48c1-4043-8576-cc0bdc36f7df"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 13 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc3",
+            "https://api.star-citizen.wiki/api/locations/ef16965b-48c1-4043-8576-cc0bdc36f7df"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc3",
+            "https://api.star-citizen.wiki/api/locations/ef16965b-48c1-4043-8576-cc0bdc36f7df"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        }
+      ],
+      "uuid": "ef16965b-48c1-4043-8576-cc0bdc36f7df",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-5",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "La extracción marca zonas de intrusión en esta instalación. Comprueba el destino y los permisos del contrato antes de entrar.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc5",
+            "https://api.star-citizen.wiki/api/locations/7c2ff2ec-626d-47b4-bde2-062bfdbf51ad"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La zona está documentada por sus datos. Queda pendiente comprobar la respuesta de las torretas y de la seguridad en sesión."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín de contenedores",
+          "text": "La extracción identifica 19 puntos de botín configurados en la ficha local.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc5",
+            "https://api.star-citizen.wiki/api/locations/7c2ff2ec-626d-47b4-bde2-062bfdbf51ad"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye distintas clases de punto. Cada contenedor tiene su propia tirada."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas",
+          "text": "En las tablas de cajas figuran S-38 Pistol y P8-SC SMG.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4a-ugf-shubinprocessing-spmc5",
+            "https://api.star-citizen.wiki/api/locations/7c2ff2ec-626d-47b4-bde2-062bfdbf51ad"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible. Queda pendiente comprobar las cajas disponibles durante una sesión."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Remove Illegal Occupants",
+          "text": "Posible destino de Remove Illegal Occupants, de microTech Protection Services. El objetivo es limpiar a los ocupantes del recinto a pie. Comprueba el nombre del destino en mobiGlas.",
+          "sources": [
+            "https://starcitizen.tools/Remove_Illegal_Occupants",
+            "https://api.star-citizen.wiki/api/locations/7c2ff2ec-626d-47b4-bde2-062bfdbf51ad"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La fuente incluye este sitio como destino posible. La oferta, dificultad exacta y aparición de enemigos dependen del contrato y la sesión."
+        }
+      ],
+      "uuid": "7c2ff2ec-626d-47b4-bde2-062bfdbf51ad",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "The Orphanage",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas del escondite",
+          "text": "La extracción registra 6 puntos con cajas. En sus tablas figuran Aril Helmet (Modified) y Strata Arms.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3a-stash-theorphanage",
+            "https://api.star-citizen.wiki/api/locations/e8ab01d7-97eb-4728-8bdf-454816586fdc"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Posibilidades del contenedor. El contenido depende de la tirada y del estado de la sesión."
+        }
+      ],
+      "uuid": "e8ab01d7-97eb-4728-8bdf-454816586fdc",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "MT DataCenter 5WQ-R2V-C",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Remove Illegal Occupants",
+          "text": "Posible destino de Remove Illegal Occupants, de microTech Protection Services. El objetivo es limpiar a los ocupantes del recinto a pie. Comprueba el nombre del destino en mobiGlas.",
+          "sources": [
+            "https://starcitizen.tools/Remove_Illegal_Occupants",
+            "https://api.star-citizen.wiki/api/locations/07141a55-2d6a-4a44-af30-149143e9872d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La fuente incluye este sitio como destino posible. La oferta, dificultad exacta y aparición de enemigos dependen del contrato y la sesión."
+        }
+      ],
+      "uuid": "07141a55-2d6a-4a44-af30-149143e9872d",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "MT DataCenter D79-ECG-R",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Remove Illegal Occupants",
+          "text": "Posible destino de Remove Illegal Occupants, de microTech Protection Services. El objetivo es limpiar a los ocupantes del recinto a pie. Comprueba el nombre del destino en mobiGlas.",
+          "sources": [
+            "https://starcitizen.tools/Remove_Illegal_Occupants",
+            "https://api.star-citizen.wiki/api/locations/a242fe2a-aada-415d-b199-7dc60dfbd68f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La fuente incluye este sitio como destino posible. La oferta, dificultad exacta y aparición de enemigos dependen del contrato y la sesión."
+        }
+      ],
+      "uuid": "a242fe2a-aada-415d-b199-7dc60dfbd68f",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Shubin Processing Facility SPMC-1",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Extermination Job en 4.10.2",
+          "text": "La guía de 4.10.2 lo registra como posible destino del encargo de Rough & Ready. El destino y el encuentro quedan por verificar en LIVE.",
+          "sources": [
+            "https://starcitizen.tools/Extermination_Job"
+          ],
+          "patch": "4.10.2-LIVE.12881860",
+          "uncertainty": "La versión indicada corresponde al texto de la misión en la fuente consultada. Falta corroborar la asignación en 4.10.3."
+        }
+      ],
+      "uuid": "297e55a7-2a4c-46d2-96f6-014b00541494",
+      "checkedAt": "2026-11-22"
     }
   ]
 }

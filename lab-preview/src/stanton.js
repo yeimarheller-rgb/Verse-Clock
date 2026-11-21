@@ -82,7 +82,11 @@ const iconsByField={
 };
 const locationUuid=p=>p.source?.uuid||p.id;
 const httpsSource=value=>{
- try { const url=new URL(value);return url.protocol==='https:'&&Boolean(url.pathname.slice(1)); }
+ try {
+  const url=new URL(value);
+  const lootLocation=url.origin==='https://loot-verse.com'&&/^#place-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(url.hash);
+  return url.protocol==='https:'&&(Boolean(url.pathname.slice(1))||lootLocation);
+ }
  catch { return false; }
 };
 

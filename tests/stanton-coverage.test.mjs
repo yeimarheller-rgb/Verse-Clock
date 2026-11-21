@@ -220,3 +220,27 @@ test('documented pharmacy stock resolves to the clinic UUID without implying shi
  assert.match(pharmacy.text,/Nyx Gateway \(Stanton\)/);
  assert.deepEqual(pharmacy.destinations,['Nyx Gateway']);
 });
+
+test('Lyria and Calliope loot is tied to exact location links and its own build',()=>{
+ const sites=stanton.locations.filter(row=>row.claims.some(claim=>claim.field==='loot'&&claim.sources.some(url=>url.startsWith('https://loot-verse.com/#place-'))));
+ assert.equal(sites.length,42);
+ const links=new Set();
+ for(const row of sites){
+  const record=raw.find(location=>location.id===row.uuid);
+  const site=atId.get(row.uuid);
+  const loot=row.claims.find(claim=>claim.field==='loot');
+  assert.equal(record?.name,row.name);
+  assert.equal(record.parent,row.body,row.name);
+  assert.equal(loot.patch,catalogue.version,row.name);
+  assert.ok(loot.sources.includes('https://api.star-citizen.wiki/api/locations/'+row.uuid),row.name);
+  links.add(loot.sources.find(url=>url.startsWith('https://loot-verse.com/#place-')));
+  assert.equal(stantonCoverage([record],[site]).counts.loot,1,row.name);
+ }
+ assert.equal(links.size,sites.length);
+ const oldOnly=at('Shubin Processing Facility SPMC-1');
+ const record=raw.find(location=>location.id===oldOnly.stantonIntel.uuid);
+ assert.equal(stantonCoverage([record],[oldOnly]).operational,0);
+ const spmc14=at('Shubin Processing Facility SPMC-14');
+ const generic={...spmc14,stantonIntel:{claims:[{field:'loot',status:'documented',text:'Sin lugar específico',sources:['https://loot-verse.com/#places']}]}};
+ assert.equal(stantonCoverage(raw.filter(location=>location.id===spmc14.stantonIntel.uuid),[generic]).operational,0);
+});
