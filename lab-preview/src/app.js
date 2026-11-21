@@ -47,7 +47,7 @@ function select(l) {
   lastScenePaint = 0;
   $('q').value = '';
   $('copyCoord').disabled=false;$('fav').disabled=false;
-  $('mainIntelLocation').hidden=true;
+  $('tacticalPanel').hidden=true;
   $('mainIntelApi').hidden=true;
   $('locationDossier').hidden=true;
   for (const id of ['intelReadiness', 'intelTacticalCards', 'intelSourceLinks']) $(id).replaceChildren();
@@ -229,7 +229,7 @@ function chooseSearchResult(item){
   history.replaceState(null,'',url);
   selectedPoiKey=atlasKey(p);
   applyPoiToMain(p);
-  if(!$('locationDossier').hidden)$('mainIntelLocation').scrollIntoView({block:'start'});
+  if(!$('tacticalPanel').hidden)$('tacticalPanel').scrollIntoView({block:'start'});
 
  }else {selectedPoiKey=null;select(item.value)}
  hideMenu();input.blur();
@@ -267,6 +267,9 @@ function updateMenu(){
  suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
 }
+$('searchAgain').addEventListener('click',()=>{
+ input.scrollIntoView({block:'center'});input.focus({preventScroll:true});
+});
 input.addEventListener('input',updateMenu);
 input.addEventListener('focus',updateMenu);
 input.addEventListener('keydown',e=>{
@@ -418,6 +421,7 @@ function renderLocationDossier(p){
  host.replaceChildren();
  const sections=tacticalSections(p);
  host.hidden=!sections.length;
+ $('tacticalPanel').hidden=!sections.length;
  const nav=names=>{
   const bar=document.createElement('div');bar.className='location-dossier-nav';
   for(const name of names){
@@ -470,8 +474,7 @@ function applyPoiToMain(p){
  $('lootStatus').dataset.level=loot.level||'unknown';
  $('lootNote').textContent=loot.summary||'Sin datos verificados';
  $('securityEvidence').textContent=['Ficha: '+p.name,p.patch||p.source?.version||'',p.verification||'Sin verificar'].filter(Boolean).join(' · ');
- $('mainIntelLocation').textContent='INTEL DEL DESTINO: '+p.name+' · '+(p.system||'');
- $('mainIntelLocation').hidden=false;
+ $('mainIntelLocation').textContent=p.name+' · '+(p.system||'');
  const rows=[['Cuerpo / zona',p.parent],['Sistema',p.system],['Jurisdicción',p.jurisdiction],['Operador / afiliación',p.affiliation],['Tipo',p.type],['Servicios registrados',(p.amenities||[]).join(', ')],['Misiones asociadas',Number.isInteger(p.missionCount)?String(p.missionCount):null],['Instalaciones dependientes',Number.isInteger(p.childCount)?String(p.childCount):null]];
  const summary=rows.filter(([,v])=>v&&v!=='unknown').map(([k,v])=>k+': '+v);
  const universal=universalIntel(p);
@@ -635,7 +638,7 @@ function updateAtlasQuality(d){
  const el=$('atlasQuality');if(!el)return;
  const c=d.counts;if(!c||!c.total)return;
  const pct=Math.round(100*c.actionable/c.total);
- el.replaceChildren();const title=document.createElement('strong');title.textContent='AUDITORÍA GLOBAL · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
+ el.replaceChildren();const title=document.createElement('strong');title.textContent='CATÁLOGO BASE (API) · '+c.actionable.toLocaleString('es-ES')+'/'+c.total.toLocaleString('es-ES')+' con algún dato operativo ('+pct+'%)';
  const desc=document.createElement('div');desc.textContent=c.geographicOnly.toLocaleString('es-ES')+' fichas API solo geográficas · '+(d.seedOnlyCounts?.total||0)+' fichas curadas fuera del catálogo API · '+c.withMissions+' con misiones · '+c.withResources+' con recursos · '+c.withServices+' con servicios · '+c.withLoot+' con botín · '+(c.withWeapons||0)+' con armas · '+(c.withTrade||0)+' con comercio · '+(c.withHazards||0)+' con peligros';
  const perSystem=document.createElement('div');perSystem.className='atlas-quality-systems';
  for(const [name,stats] of Object.entries(d.systems||{})){
