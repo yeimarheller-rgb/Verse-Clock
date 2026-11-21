@@ -85,6 +85,7 @@ with sync_playwright() as p:
             if label in ['seraphim','everus','checkmate']:
                 expect(page.locator('#where')).to_have_text('Hora local sin cálculo')
                 expect(page.locator('#solarEvents')).to_be_hidden()
+                expect(page.locator('#solarProgress')).to_be_hidden()
             if label=='ruptura':
                 expect(dossier).to_contain_text('S71 Justified')
                 expect(dossier).to_contain_text('HDMS-Anderson')
@@ -143,6 +144,23 @@ with sync_playwright() as p:
         dossier.get_by_role('button',name="Cutter's Rig", exact=True).click()
         expect(page.locator('#mainIntelLocation')).to_have_text("Cutter's Rig")
         assert not errors, errors
+        for hour, direction in [('13', 'atardecer'), ('14', 'amanecer')]:
+            page.goto(BASE + f'lab-preview/?t=2026-11-21T{hour}:00:00Z#Lorville')
+            expect(page.locator('#mainIntelLocation')).to_have_text('Lorville')
+            expect(page.locator('#riseEvent')).to_be_visible()
+            expect(page.locator('#setEvent')).to_be_visible()
+            progress = page.locator('#solarProgress')
+            expect(progress).to_be_visible()
+            expect(progress).to_have_attribute('aria-label', f'Avance hasta el {direction}')
+            before = float(progress.get_attribute('value'))
+            assert 0 < before < 100
+            page.wait_for_function('(value) => document.getElementById("solarProgress").value > value', arg=before)
+            verify_layout()
+            expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia 34 °C.')
+            assert dossier.inner_text().count('34 °C') == 1
+            page.screenshot(path=f'/tmp/verse-lab-solar-{direction}-{device}.png')
+        query('Calliope', 'Calliope')
+        expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()
     for name, width, height in [('iphone',390,844),('desktop',1440,900)]:
         page = b.new_page(viewport={'width': width, 'height': height})

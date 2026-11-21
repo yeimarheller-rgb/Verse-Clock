@@ -36,14 +36,14 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(!sources.has(url))sources.set(url,{url,label:entry.name||new URL(url).hostname,index:sources.size+1});
     return [sources.get(url).index];
   });
-  const add=(group,text,{title,status,sources:refs,destinations}={})=>{
+  const add=(group,text,{title,status,sources:refs,destinations,temperature}={})=>{
     const indexes=[...new Set(addSources(refs))];
-    if(!text)return;
-    const key=normalize(text).replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+    if(!text&&!temperature)return;
+    const key=normalize([temperature,text].filter(Boolean).join(' ')).replace(/[^\p{L}\p{N}]+/gu,' ').trim();
     if(seen.has(key))return;
     seen.add(key);
     if(!groups.has(group))groups.set(group,[]);
-    groups.get(group).push({title,text,status,sources:indexes,destinations});
+    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature});
   };
   const geographicalSections=tacticalSections(p);
   const catalogTrade=geographicalSections.find(section=>section.title==='Comercio');
@@ -59,6 +59,16 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(meaningful(state)||operations&&key in shipServices)services.set(key,{label:serviceLabels[key],state:state||'unknown'});
   }
   const directTerminals=new Set(p.stantonIntel?.claims.map(claim=>claim.terminalId).filter(Boolean));
+  const knownEnvironment=p.stantonIntel?.environment||environment;
+  if(knownEnvironment){
+    const text=knownEnvironment.text;
+    const temperature=text.match(/Máxima (?:superficial )?de referencia [^.]+°C[^.]*\./)?.[0];
+    add('security',temperature?text.replace(temperature,'').replace(/ {2,}/g,' ').trim():text,{
+      title:'Entorno regional'+(body&&body!==p.name?' · '+body:''),sources:knownEnvironment.sources,temperature,
+    });
+  }
+  const visualEnv=envFor({body});
+  if(!knownEnvironment&&visualEnv.tags.length)add('security',visualEnv.tags.map(t=>t.label).join(' · '),{title:'Entorno regional',sources:['https://starcitizen.tools/']});
   for(const section of sections){
     if(section===catalogTrade&&serviceIntel?.trade?.length&&serviceIntel.trade.every(([id])=>directTerminals.has(id))){
       addSources(section.sources);
@@ -80,10 +90,6 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     }
     add(group,text,section);
   }
-  const knownEnvironment=p.stantonIntel?.environment||environment;
-  if(environment&&!p.stantonIntel?.environment)add('security',environment.text,{title:'Entorno del cuerpo · '+body,sources:environment.sources});
-  const visualEnv=envFor({body});
-  if(!knownEnvironment&&visualEnv.tags.length)add('security',visualEnv.tags.map(t=>t.label).join(' · '),{title:'Entorno regional',sources:['https://starcitizen.tools/']});
   if(meaningful(visualEnv.gravity.label)&&visualEnv.gravity.key!=='unknown'){
     add('navigation','Gravedad regional: '+visualEnv.gravity.label+'. '+visualEnv.gravity.hint,{status:SOURCE.gravity,sources:['https://scminer.rocks/data/ore-by-location']});
   }

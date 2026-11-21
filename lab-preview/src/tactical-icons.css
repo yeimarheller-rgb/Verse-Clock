@@ -70,9 +70,15 @@ main > .compact-clock { display:flex;align-items:center;justify-content:space-be
 .clock-reading { display:grid;gap:3px;min-width:0 }
 .compact-clock #clock { font-size:clamp(22px,4vw,38px);line-height:1.12;letter-spacing:.035em }
 .compact-clock #where { font-size:10px;letter-spacing:.08em;overflow-wrap:anywhere }
-#solarEvents { display:grid;gap:2px;text-align:right;color:#c1e7f4;font:600 15px var(--hud,system-ui) }
+#solarEvents { display:grid;gap:2px;min-width:140px;text-align:right;color:#b4cddd;font:600 14px/1.1 var(--hud,system-ui) }
 #solarEvents[hidden],#solarEvents [hidden] { display:none }
-#solarEvents #phase { font:700 16px var(--hud,system-ui);color:#ffc36d;margin:0 }
+#solarEvents #phase { font:700 15px var(--hud,system-ui);color:#ffc36d;margin:0 }
+.solar-next { color:#e1f6ff }
+#solarProgress { width:100%;height:6px;margin-top:3px;accent-color:#71daf1;color:#71daf1 }
+#solarProgress[data-phase="day"] { accent-color:#ffc36d;color:#ffc36d }
+#solarProgress::-webkit-progress-bar { background:#22394b }
+#solarProgress::-webkit-progress-value { background:currentColor }
+.environment-temperature { color:#ffc36d }
 main > #tacticalPanel { padding:12px;border-top:1px solid #70daf1 }
 .location-heading { display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;margin-bottom:10px }
 .location-heading #mainIntelLocation { margin:0;color:#ffc36d;font:700 clamp(19px,2.6vw,25px)/1.2 var(--hud,system-ui) }

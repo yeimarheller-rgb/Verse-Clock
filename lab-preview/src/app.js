@@ -95,10 +95,24 @@ function tick() {
     if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
   }
 
-  $('riseEvent').hidden=r.polar||(r.isDay&&!r.starriseNow);
-  $('setEvent').hidden=r.polar||(!r.isDay&&!r.starsetNow);
-  if(!$('riseEvent').hidden)mono($('riseIn'),r.starriseNow?'Ahora':dur(r.nextStarriseInSeconds));
-  if(!$('setEvent').hidden)mono($('setIn'),r.starsetNow?'Ahora':dur(r.nextStarsetInSeconds));
+  const progress=$('solarProgress');
+  $('riseEvent').hidden=r.polar;
+  $('setEvent').hidden=r.polar;
+  progress.hidden=r.polar;
+  if(!r.polar){
+    const cycle=r.dayLengthRealMinutes*60;
+    const rise=r.nextStarriseInSeconds, set=r.nextStarsetInSeconds;
+    const daylight=((set-rise)%cycle+cycle)%cycle;
+    const phaseLength=r.isDay?daylight:cycle-daylight;
+    const remaining=Math.max(0,r.isDay?set:rise);
+    mono($('riseIn'),rise<=0?'Ahora':dur(rise));
+    mono($('setIn'),set<=0?'Ahora':dur(set));
+    progress.value=phaseLength>0?Math.max(0,Math.min(100,100*(1-remaining/phaseLength))):0;
+    progress.dataset.phase=r.isDay?'day':'night';
+    progress.setAttribute('aria-label',r.isDay?'Avance hasta el atardecer':'Avance hasta el amanecer');
+    $('riseEvent').classList.toggle('solar-next',!r.isDay);
+    $('setEvent').classList.toggle('solar-next',r.isDay);
+  }
   const schedule=$('solarSchedule');
   if(schedule&&!r.polar)schedule.textContent='Hora de Madrid · amanecer '+madridTime.format(Date.parse(r.nextStarriseUtc))+' · atardecer '+madridTime.format(Date.parse(r.nextStarsetUtc));
   for (const el of $('cards').children) {
@@ -394,6 +408,11 @@ function applyPoiToMain(p){
   for(const fact of facts){
    const copy=document.createElement('p');copy.className='dossier-fact';
    if(fact.title){const lead=document.createElement('strong');lead.textContent=fact.title;copy.append(lead,' · ')}
+   if(fact.temperature){
+    const temp=document.createElement('strong');
+    temp.className='environment-temperature';temp.textContent=fact.temperature;
+    copy.append(temp,' ');
+   }
    copy.append(fact.text);
    if(fact.status){const status=document.createElement('small');status.textContent=' '+fact.status;copy.append(status)}
    if(fact.sources.length){
