@@ -447,13 +447,13 @@ function renderTacticalCards(p,sec,loot){
  if(p.patchNotes4103){
   cards.push(['services','AVISO GENERAL DE SERVICIOS',p.patchNotes4103.issue+' · '+p.patchNotes4103.procedureSource+' · reparación local: NO VERIFICADA',false,'Incidencia general; no demuestra servicios de esta instalación']);
  }
- const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
+ const covered=cards.filter(c=>c[3]).length,score=cards.length?Math.round(100*covered/cards.length):0;
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
  const value=document.createElement('strong');value.textContent=covered+'/'+cards.length+' TARJETAS';
  header.append(label,value);
  const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
- const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
+ const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura orientativa de tarjetas '+score+'% · las tarjetas con datos históricos o no confirmados no cuentan como verificadas; no mide seguridad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
  readiness.append(header,meter,caption);
  for(const [symbol,title,value,known,evidence] of cards){
   const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
@@ -462,9 +462,9 @@ function renderTacticalCards(p,sec,loot){
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
  }
- const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[]),p.serviceDirectory4103?.source,p.knownIssue4103?.source,p.patchNotes4103?.source].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
+ const urls=[p.operationalNotes?.missionEvidence4103?.source,...(p.operationalNotes?.sources||[]),...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[]),p.serviceDirectory4103?.source,p.knownIssue4103?.source,p.patchNotes4103?.source].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
  const seen=new Set();
- for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
+ for(const url of urls){if(seen.has(url)||seen.size>=8)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
 }
 
 function applyPoiToMain(p){
