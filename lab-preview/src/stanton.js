@@ -96,7 +96,7 @@ export function mergeStanton(byKey, data) {
 export function stantonSections(p) {
  const sections=(p.stantonIntel?.claims||[]).map(claim=>({
   title:claim.title||stantonFields[claim.field], icons:[iconsByField[claim.field]],
-  text:claim.text, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
+  text:claim.text, destinations:claim.destinations, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
   sources:claim.sources.map(url=>({url,name:new URL(url).hostname})),
  }));
  if(p.stantonIntel?.reviewNote)sections.push({title:p.stantonIntel.reviewedWithoutEvidence.length>1?'Servicios de nave':'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
