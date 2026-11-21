@@ -45,7 +45,9 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(!groups.has(group))groups.set(group,[]);
     groups.get(group).push({title,text,status,sources:indexes,destinations});
   };
-  const sections=[...tacticalSections(p),...stantonSections(p)];
+  const geographicalSections=tacticalSections(p);
+  const catalogTrade=geographicalSections.find(section=>section.title==='Comercio');
+  const sections=[...geographicalSections,...stantonSections(p)];
   const isHathor=Boolean(p.hathor);
   const isContested=sections.some(s=>s.icons?.includes('contested'));
   const tactical=p.tacticalIntel, lootIntel=p.lootIntel;
@@ -58,7 +60,7 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   }
   const directTerminals=new Set(p.stantonIntel?.claims.map(claim=>claim.terminalId).filter(Boolean));
   for(const section of sections){
-    if(section.title==='Comercio'&&serviceIntel?.trade?.length&&serviceIntel.trade.every(([id])=>directTerminals.has(id))){
+    if(section===catalogTrade&&serviceIntel?.trade?.length&&serviceIntel.trade.every(([id])=>directTerminals.has(id))){
       addSources(section.sources);
       continue;
     }
@@ -98,8 +100,8 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(!tactical?.weapons&&!tactical?.resources&&!lootIntel&&loot.source)add('loot',loot.summary,{sources:[loot.source]});
   }
   const faction=p.operator||p.affiliation;
-  if(faction)add('security',faction,{title:'Operador o afiliación'});
-  if(p.jurisdiction&&normalize(p.jurisdiction)!==normalize(faction))add('security',p.jurisdiction,{title:'Jurisdicción'});
+  if(faction&&!/^<=.*=>$/.test(faction))add('security',faction,{title:'Operador o afiliación'});
+  if(p.jurisdiction&&!/^<=.*=>$/.test(p.jurisdiction)&&normalize(p.jurisdiction)!==normalize(faction))add('security',p.jurisdiction,{title:'Jurisdicción'});
 
   const tacticalRefs=tactical?.sources||[];
   const list=(group,title,entries,refs)=>add(group,(entries||[]).map(textOf).filter(Boolean).join(' · '),{title,sources:refs});
