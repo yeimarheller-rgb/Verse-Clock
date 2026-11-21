@@ -17,7 +17,7 @@ const contract = 'https://api.star-citizen.wiki/missions/xl-purchase-order-hand-
 export const normalize = value => String(value || '').normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 export const atlasSystem = value => String(value || '').replace(/\s+system$/i, '').trim();
-export const atlasKey = p => normalize(atlasSystem(p.system)) + '|' + normalize(p.name);
+export const atlasKey = p => normalize(atlasSystem(p.system)) + '|' + normalize(p.name) + (p.catalogVariant?'|'+p.catalogVariant:'');
 export const serviceNames = {
   repair: 'Reparación de nave', refuel: 'Repostaje', refinery: 'Refinería',
   clinic: 'Clínica', cargo: 'Centro de carga',
