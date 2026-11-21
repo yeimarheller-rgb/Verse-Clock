@@ -62,9 +62,9 @@ with sync_playwright() as p:
             options.first.click()
             pg.wait_for_timeout(250)
             cards=pg.locator('#intelTacticalCards .intel-tactical-card')
-            if cards.count()!=6:fails.append(f'{name}: se esperaban 6 tarjetas tácticas, hay {cards.count()}')
+            if cards.count()<6:fails.append(f'{name}: se esperaban al menos 6 tarjetas tácticas, hay {cards.count()}')
             labels=pg.locator('#intelTacticalCards').inner_text()
-            if 'BOTÍN' not in labels or 'PVE' not in labels or 'PVP' not in labels:fails.append(f'{name}: categorías tácticas ausentes')
+            if any(label not in labels for label in ('BOTÍN','PVE','PVP')):fails.append(f'{name}: categorías tácticas ausentes')
             if 'Lamina' not in pg.locator('#mainIntelLocation').inner_text():fails.append(f'{name}: selección no actualiza inteligencia')
         else:fails.append(f'{name}: Lamina PAF-I no aparece en búsqueda')
         if pg.locator('#intelReadiness').count()!=1:fails.append(f'{name}: panel de cobertura documental ausente')
@@ -78,6 +78,22 @@ with sync_playwright() as p:
             pg.wait_for_timeout(200)
             dossier=pg.locator('#mainIntelApi').inner_text()
             if 'Valakkar' not in dossier or 'PASO 1' not in dossier:fails.append(f'{name}: dossier Lazarus incompleto')
+        # Hurston: verificar fichas nuevas en el navegador y en ambas resoluciones.
+        for location in ('HDMS-Edmond', 'HDSF-Adlai', 'HDMS-Pinewood'):
+            pg.fill('#q', location)
+            pg.wait_for_timeout(350)
+            matches=pg.locator('#suggestions button')
+            if not matches.count():
+                fails.append(f'{name}: Hurston {location} no aparece en el buscador')
+                continue
+            matches.first.click()
+            pg.wait_for_timeout(250)
+            title=pg.locator('#mainIntelLocation').inner_text()
+            if location not in title:
+                fails.append(f'{name}: Hurston {location} no abre la ficha correcta: {title}')
+            cards=pg.locator('#intelTacticalCards').inner_text()
+            if not cards.strip():
+                fails.append(f'{name}: Hurston {location} no muestra inteligencia operativa')
         # El explorador inferior está oculto por diseño: probar el buscador principal.
         pg.fill('#q', 'Valakkar')
         pg.wait_for_timeout(350)

@@ -1,7 +1,7 @@
 name: Test
 on:
   push:
-    branches: [main]
+    branches: [main, 'lab/**']
   pull_request:
 jobs:
   test:
@@ -21,7 +21,13 @@ jobs:
         run: node tools/audit-atlas.mjs
       - run: sh tools/fetch-fonts.sh
       - run: pip install --quiet pillow && python3 tools/build-images.py
+      - name: Validar sintaxis del importador Wiki (sin descargar datos)
+        run: python3 -m py_compile lab-preview/tools/import_wiki_locations.py
+      - name: Probar paginación y procedencia del importador Wiki sin red
+        run: python3 -m unittest discover -s lab-preview/tools -p 'test_import_wiki_locations.py' -v
       - run: node --test tests/*.test.mjs
+      - name: Comprobar integridad y brechas de cobertura del atlas LAB
+        run: node --test lab-preview/tests/atlas-coverage-regression.test.mjs
       - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
         run: |
           pip install --quiet playwright==1.56.0

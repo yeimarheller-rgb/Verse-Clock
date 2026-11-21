@@ -345,43 +345,149 @@ function universalIntel(p){
  return out;
 }
 
+// Monochrome vector HUD pictograms. No platform-dependent emoji glyphs.
+const tacticalIconPaths={
+ 'PVE':'M12 2v4m0 12v4M2 12h4m12 0h4M12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10zm0 3v4m-2-2h4',
+ 'PVP':'M3 7l9-4 9 4v5c0 5-4 8-9 10-5-2-9-5-9-10V7zm5 5h8m-4-4v8',
+ 'BOTÍN':'M4 8l8-5 8 5v9l-8 5-8-5V8zm0 0 8 5 8-5m-8 5v9',
+ 'ARMAS':'M4 6h16v5H4zm3 5v7h5v-7m-5 7-2 3m7-3 2 3M17 6V3',
+ 'MISIONES':'M7 3h10l3 3v15H4V3h3zm2 7h7m-7 4h7m-7 4h5',
+ 'COMERCIO':'M3 7h18v13H3V7zm0 4h18M7 4h10M7 16h4',
+ 'PELIGROS':'M12 2 2 21h20L12 2zm0 7v5m0 3v1',
+ 'RECURSOS':'M3 20 20 3m-7 0 8 8M5 8l6 6m-8-2 9 9'
+};
+function tacticalHudIcon(title){
+ const key=Object.keys(tacticalIconPaths).find(k=>title.includes(k))||'RECURSOS';
+ const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+ svg.setAttribute('viewBox','0 0 24 24');svg.setAttribute('width','22');svg.setAttribute('height','22');
+ svg.setAttribute('fill','none');svg.setAttribute('stroke','currentColor');svg.setAttribute('stroke-width','1.5');
+ svg.setAttribute('stroke-linecap','square');svg.setAttribute('stroke-linejoin','miter');svg.setAttribute('aria-hidden','true');
+ const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+ path.setAttribute('d',tacticalIconPaths[key]);svg.append(path);return svg;
+}
+function updateNewcomerFieldGuide(p){
+ const guide=document.getElementById('intelNewcomerLocation');
+ if(!guide)return;
+ const name=String(p.name||p.displayName||'esta ubicación');
+ const repair=p.repairIntel||{};
+ const ship=repair.ship;
+ const shipVerified=ship?.status==='verified'&&Boolean(ship.verifiedPatch)&&Array.isArray(ship.sources)&&ship.sources.length>0;
+ const missions=Array.isArray(p.missions)?p.missions:[];
+ const activities=Array.isArray(p.activities)?p.activities:[];
+ const hasCategoryMission=Boolean(p.operationalNotes?.missionEvidence4103?.source);
+ const bullets=[
+  'Ubicación seleccionada: '+name+'.',
+  missions.length?'Hay '+missions.length+' contratos catalogados; comprueba requisitos y disponibilidad en el juego.':activities.length?'Hay '+activities.length+' actividades catalogadas; confirma su disponibilidad antes de viajar.':hasCategoryMission?'Existe documentación de misiones para esta categoría de instalación, pero no se ha confirmado su asignación aquí.':'No hay misiones específicas documentadas en esta ficha.',
+  shipVerified?'Reparación de naves verificada para el parche '+ship.verifiedPatch+'; comprueba compatibilidad y servicio en el juego.':'Reparación de naves NO confirmada aquí: no dependas de este lugar para una emergencia.',
+  p.lootIntel?.categories?.length?'Hay categorías de botín catalogadas; la aparición de objetos no está garantizada.':'No hay botín específico documentado para esta ficha.',
+  ...(Array.isArray(p.tacticalIntel?.requirements)&&p.tacticalIntel.requirements.length?['Preparación documentada: '+p.tacticalIntel.requirements.slice(0,3).join(' · ')+'.']:[]),
+  ...(Array.isArray(p.tacticalIntel?.steps)&&p.tacticalIntel.steps.length?['Primer paso de la actividad: '+p.tacticalIntel.steps[0]]:[]),
+  'Consulta los riesgos PvE/PvP de abajo; no son detección de amenazas en vivo.'
+ ];
+ guide.replaceChildren();
+ for(const line of bullets){const li=document.createElement('li');li.textContent=line;guide.append(li)}
+}
 function renderTacticalCards(p,sec,loot){
  const root=$('intelTacticalCards'),readiness=$('intelReadiness'),sources=$('intelSourceLinks');
  if(!root||!readiness||!sources)return;
  root.replaceChildren();sources.replaceChildren();readiness.replaceChildren();
+ updateNewcomerFieldGuide(p);
  const intel=p.lootIntel,missions=p.missions||[],resources=p.resources||[],amenities=p.amenities||[];
- const hasPve=Boolean(p.tacticalIntel?.threats?.length||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
+ const hasPve=Boolean(p.tacticalIntel?.threats?.some(x=>!/(?:sin (?:medici[oó]n|datos|confirmaci[oó]n)|no (?:hay|se dispone|existe)|desconocid)/i.test(x))||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
  const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
  const hasLoot=Boolean(intel?.categories?.length||p.tacticalIntel?.weapons?.length);
- const hasMissions=Boolean(missions.length||p.activities?.length);
+ const hasMissions=Boolean(missions.length||p.activities?.length||p.operationalNotes?.missionEvidence4103?.source);
  const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
  const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
-  ['⚔','PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
-  ['◎','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
-  ['◈','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['◆','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
-  ['⬡','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
-  ['✚','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
+  ['⚔️','COMBATE PVE / NPC',p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
+  ['🎯','COMBATE PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
+  ['🎒','BOTÍN / EQUIPO',p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
+  ['📜','MISIONES',missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':p.operationalNotes?.missionEvidence4103?.source?'Contrato documentado por categoría PAF · asignación local no confirmada':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['⛏️','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
+  ['🛠️','SERVICIOS',amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
- const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
+ // Las notas operativas curadas deben aparecer en la interfaz, no quedarse ocultas en JSON.
+ const notes=p.operationalNotes||{};
+ const domains=[
+  ['⚔️','PVE / NPC','pve'],['🎯','PVP / JUGADORES','pvp'],
+  ['🎒','BOTÍN','loot'],['🔫','ARMAS','weapons'],
+  ['📜','MISIONES','missions'],['💰','COMERCIO','trade'],
+  ['⚠️','PELIGROS','hazards']
+ ];
+ for(const [symbol,title,key] of domains){
+  const value=notes[key];
+  if(typeof value!=='string'||!value.trim())continue;
+  const unknown=/^(sin\b|no\s+(?:hay|existe|se|dispone)\b|servicios no\b)/i.test(value.trim()) || /\b(?:no (?:verificad[oa]s?|confirmad[oa]s?|contrastad[oa]s?|documentad[oa]s?)|sin (?:medici[oó]n|datos|confirmaci[oó]n|inventario|stock|precios|bot[ií]n))\b/i.test(value);
+  cards.push([symbol,title,value,!unknown,'Nota operativa curada · comprobar fuentes y parche']);
+ }
+ // La reparación de emergencia es un dato de seguridad: nunca inferirla por existir un pad.
+ if(p.repairIntel){
+  const ri=p.repairIntel;
+  for(const [label,entry] of [['REPARACIÓN NAVES',ri.ship],['REPARACIÓN VEHÍCULOS',ri.groundVehicle],['REPARACIÓN MANUAL',ri.field]]){
+   if(!entry)continue;
+   const confirmed=entry.status==='verified' && Boolean(entry.verifiedPatch) && Array.isArray(entry.sources) && entry.sources.length>0;
+   const sourced=entry.status==='source-listed' && Array.isArray(entry.sources) && entry.sources.length>0;
+   const detail=confirmed?'CONFIRMADO EN PARCHE · '+entry.verifiedPatch:sourced?'DOCUMENTADO EN FUENTE · '+(entry.padSizes?'pads '+entry.padSizes+' · ':'')+'pendiente de prueba LIVE':'NO VERIFICADO · no usar como punto de reparación de emergencia';
+   cards.push(['services',label,detail,confirmed,'Verificar servicio, vehículo admitido y parche antes de desplazarse']);
+  }
+ }
+ // Render newly sourced patch/service evidence; never promote directory listings to LIVE confirmation.
+ // Surface all existing structured tactical intelligence, not only free-text notes.
+ const ti=p.tacticalIntel||{};
+ for(const [title,field] of [['PASOS DE ACTIVIDAD','steps'],['REQUISITOS','requirements'],['AMENAZAS DOCUMENTADAS','threats'],['RECURSOS','resources'],['ARMAS POSIBLES','weapons'],['ARMADURAS POSIBLES','armor'],['COMPONENTES POSIBLES','components']]){
+  const values=Array.isArray(ti[field])?ti[field].filter(x=>typeof x==='string'&&x.trim()):[];
+  if(!values.length)continue;
+  const isPossible=/POSIBLES/.test(title);
+  cards.push([isPossible?'loot':'intel',title,values.join(' · ')+(isPossible?' · Posibles según fuentes; no garantizados en esta ubicación ni servidor.':''),false,'Ficha curada; revisar procedencia, actividad y parche']);
+ }
+ if(p.lootIntel){
+  const li=p.lootIntel;
+  if(li.scope)cards.push(['loot','ÁMBITO DE BOTÍN',li.scope+(li.status?' · '+li.status:''),false,'No confirma aparición de objetos en esta instancia']);
+  if(li.mining)cards.push(['resources','MINERÍA DE ACTIVIDAD',li.mining,false,'Condiciones de acceso y aparición variables']);
+ }
+ // Hathor: distinguish the orbital laser platform from its three ground alignment facilities.
+ if(/^hathor-(attritus|lamina|ruptura|vivere)-(olp|paf-(?:i|ii|iii))$/i.test(p.id||'')){
+  const isOlp=/-olp$/i.test(p.id);
+  const op=p.operationalNotes||{};
+  cards.push(['intel','HATHOR · TIPO DE INSTALACIÓN',isOlp?'OLP: plataforma láser orbital. La actividad depende de alinear tres PAF del mismo conjunto.':'PAF: instalación planetaria de alineación. Completar las tres PAF del conjunto antes de operar la OLP.',false,'Guía de actividad, no estado LIVE del evento']);
+  if(op.missionContext)cards.push(['missions','CONTRATO · ALCANCE',op.missionContext,false,'No atribuir misión activa a esta instancia']);
+  if(!isOlp && op.missionEvidence4103){const m=op.missionEvidence4103;cards.push(['missions','MISIÓN 4.10.3 · FOXWELL',m.title+' · '+m.type+' · '+m.evidence+' · Recompensa posible: '+m.rewards,false,m.locationScope+' · Fuente: '+m.source]);}
+  if(op.failureRisks?.length)cards.push(['hazards','FALLOS Y RIESGOS REPORTADOS',op.failureRisks.join(' · '),false,'Incidencias comunitarias, sin frecuencia verificada']);
+  if(p.lootIntel?.categories?.length)cards.push(['loot','BOTÍN · POSIBLES CATEGORÍAS',p.lootIntel.categories.join(' · '),false,'Tabla de actividad, NO inventario garantizado']);
+  if(p.lootIntel?.caveat)cards.push(['loot','LÍMITE DE EVIDENCIA',p.lootIntel.caveat,false,'Sin prueba de aparición individual en 4.10.3 LIVE']);
+ }
+ if(p.serviceDirectory4103){
+  const sd=p.serviceDirectory4103;
+  const names={vehicleServices:'servicios de nave',refinery:'refinería',clinic:'clínica',weaponsShop:'tienda de armas',shipItemsShop:'componentes de nave',commodityTrading:'comercio'};
+  const listed=(sd.services||[]).map(x=>names[x]||x).join(', ');
+  cards.push(['services','SERVICIOS · DIRECTORIO',listed+' · listado comunitario para '+(sd.patch||'parche no indicado')+'; reparación, stock y precios NO probados en LIVE',false,'Fuente comunitaria; verificar antes de una operación crítica']);
+ }
+ if(p.knownIssue4103){
+  const issue=p.knownIssue4103;
+  cards.push(['hazards','INCIDENCIA ASOP',issue.issue+' · Solución publicada: '+issue.workaround,false,'Aviso oficial de parche; no implica fallo activo en este servidor']);
+ }
+ if(p.patchNotes4103){
+  cards.push(['services','AVISO GENERAL DE SERVICIOS',p.patchNotes4103.issue+' · '+p.patchNotes4103.procedureSource+' · reparación local: NO VERIFICADA',false,'Incidencia general; no demuestra servicios de esta instalación']);
+ }
+ const covered=cards.filter(c=>c[3]).length,score=cards.length?Math.round(100*covered/cards.length):0;
  const header=document.createElement('div');header.className='intel-readiness-head';
  const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
- const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
+ const value=document.createElement('strong');value.textContent=covered+'/'+cards.length+' TARJETAS';
  header.append(label,value);
  const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
- const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
+ const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura orientativa de tarjetas '+score+'% · las tarjetas con datos históricos o no confirmados no cuentan como verificadas; no mide seguridad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
  readiness.append(header,meter,caption);
  for(const [symbol,title,value,known,evidence] of cards){
   const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
-  const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;
+  const t=document.createElement('div');t.className='intel-tactical-title';t.append(tacticalHudIcon(title),document.createTextNode(title));
   const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
  }
- const urls=[...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[])].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
+ const urls=[p.operationalNotes?.missionEvidence4103?.source,...(p.operationalNotes?.sources||[]),...(p.tacticalIntel?.sources||[]),...(p.lootIntel?.sources||[]),...(p.sourceUrls||[]),p.serviceDirectory4103?.source,p.knownIssue4103?.source,p.patchNotes4103?.source].filter(x=>typeof x==='string'&&/^https:\/\//.test(x));
  const seen=new Set();
- for(const url of urls){if(seen.has(url)||seen.size>=4)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
+ for(const url of urls){if(seen.has(url)||seen.size>=8)continue;seen.add(url);const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='↗ '+new URL(url).hostname;link.setAttribute('aria-label','Abrir fuente: '+url);sources.append(link)}
 }
 
 function applyPoiToMain(p){
@@ -447,7 +553,8 @@ function renderPoi(){
  const q=poiQuery.value.trim().toLocaleLowerCase('es');
  const normalize=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toLocaleLowerCase('es');
  const queryTerms=normalize(q).split(/\\s+/).filter(Boolean);
- const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term)));
+ const repairQuery=/^(reparacion|reparar|repair|rpr)$/i.test(normalize(q));
+ const matches=poiData.filter(p=>(!poiSystem.value||p.system===poiSystem.value)&&(!poiService.value||['reported','confirmed'].includes(p.services?.[poiService.value]))&&(repairQuery?['verified','source-listed'].includes(p.repairIntel?.ship?.status):queryTerms.every(term=>normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].filter(Boolean).join(' ')).includes(term))));
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
@@ -457,7 +564,10 @@ function renderPoi(){
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
- card.append(h,meta,org,intel,svc);
+ const repair=document.createElement('p');repair.className='poi-meta';
+ const ship=p.repairIntel?.ship;
+ repair.textContent='REPARACIÓN NAVES: '+(ship?.status==='verified'&&ship.verifiedPatch&&ship.sources?.length?'VERIFICADA · '+ship.verifiedPatch:ship?.status==='source-listed'&&ship.sources?.length?'DOCUMENTADA EN FUENTE · sin prueba LIVE':'NO VERIFICADA')+(ship?.padSizes?' · plataforma '+ship.padSizes:'');
+ card.append(h,meta,org,intel,svc,repair);
  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
  card.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:p}));
  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseSearchResult({kind:'poi',value:p})}});
