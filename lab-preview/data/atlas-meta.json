@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "version": "4.10.3-LIVE.13165946",
-  "generatedAt": "2026-11-20T22:20:01.519Z",
-  "commodityGeneratedAt": "2026-11-20T22:20:03.973Z",
+  "generatedAt": "2026-11-21T05:00:46.104Z",
+  "commodityGeneratedAt": "2026-11-21T05:00:49.273Z",
   "commodityCoverage": {
     "commoditiesScanned": 206,
     "resourceCommodities": 72,
@@ -10,7 +10,7 @@
     "resourceLinks": 2580,
     "unmatchedLocationLinks": 0
   },
-  "enrichedGeneratedAt": "2026-11-20T22:20:01.519Z",
+  "enrichedGeneratedAt": "2026-11-21T05:00:46.104Z",
   "catalogTotal": 2017,
   "enrichedCount": 2017,
   "coverage": {
@@ -68,5 +68,5 @@
     "withLoot": 0,
     "withServices": 10
   },
-  "qualityGeneratedAt": "2026-11-20T22:20:04.098Z"
+  "qualityGeneratedAt": "2026-11-21T05:00:49.381Z"
 }
