@@ -42,3 +42,27 @@ test('curated tactical records retain traceable provenance and unique location k
     }
   }
 });
+
+test('tactical evidence coverage is separated from commodity associations', () => {
+  const quality = JSON.parse(readFileSync(new URL('../data/atlas-quality.json', import.meta.url), 'utf8'));
+  const domains = ['missions','pve','pvp','loot','weapons','trade','hazards'];
+  const records = quality.records;
+  assert.equal(records.length, c.total, 'quality report must cover the complete catalog');
+  for (const domain of domains) {
+    const reported = records.filter(p => p.flags[domain]).length;
+    const linked = records.filter(p => (p.evidence[domain] || []).some(e =>
+      e.kind === 'location-api' || (e.kind === 'curated' && e.sourceUrls?.length)
+    )).length;
+    assert.equal(quality.tacticalCoverage[domain].reported, reported, domain + ' reported count');
+    assert.equal(quality.tacticalCoverage[domain].sourceLinked, linked, domain + ' source-linked count');
+    assert.ok(linked <= reported, domain + ' source-linked exceeds reported');
+  }
+  const tacticalAny = records.filter(p => domains.some(domain =>
+    (p.evidence[domain] || []).some(e =>
+      e.kind === 'location-api' || (e.kind === 'curated' && e.sourceUrls?.length)
+    )
+  )).length;
+  assert.equal(quality.tacticalCoverageAny, tacticalAny);
+  assert.equal(c.resourceAssociationsOnly + c.verifiedOperationalExcludingCommodityAssociations <= c.actionable, true);
+  assert.equal(quality.counts.total, c.total);
+});
