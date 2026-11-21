@@ -39,7 +39,7 @@ test('Stanton keeps raw denominator and credits only located, sourced evidence',
  assert.ok(c.operational>baseline.operational);
  const euterpe=stantonCoverage(raw,visible,'Euterpe');
  assert.ok(euterpe.counts.hazards>=1);
- assert.equal(stantonCoverage(raw,visible,'only:microTech').counts.hazards,1);
+ assert.ok(stantonCoverage(raw,visible,'only:microTech').counts.hazards>=1, 'microTech retains sourced hazards as locations are enriched');
  assert.deepEqual(stantonBodies.filter(body=>!at(body)?.stantonIntel?.environment),[]);
  assert.equal(stanton.locations.filter(row=>!at(row.name)).length,0);
  for(const row of stanton.locations)for(const claim of row.claims){
