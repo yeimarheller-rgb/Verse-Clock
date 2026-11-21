@@ -161,3 +161,15 @@ test('new player guide is discoverable and does not promise live data', () => {
  assert.match(html,/no consulta el servidor ni detecta amenazas en tiempo real/i);
  assert.match(html,/<details class="intel-newcomer-guide"/);
 });
+
+
+test('newcomer location guide derives claims from evidence rather than assumptions', () => {
+ const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
+ const js=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
+ assert.match(html,/id="intelNewcomerLocation"/);
+ assert.match(js,/function updateNewcomerFieldGuide\(p\)/);
+ assert.match(js,/ship\?\.status==='verified'/);
+ assert.match(js,/Reparación de naves NO confirmada aquí/);
+ assert.match(js,/no se ha confirmado su asignación aquí/);
+ assert.match(js,/guide\.replaceChildren\(\)/);
+});
