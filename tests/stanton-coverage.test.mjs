@@ -184,3 +184,17 @@ test('Lagrange resource evidence stays on the regional UUID and never creates di
   for(const station of claim.destinations||[])assert.equal(at(station)?.type,'Manmade',station);
  }
 });
+
+test('medical destinations are matched to the site UUID and do not imply ship support',()=>{
+ const names=['ARC-L1 Wide Forest Clinic','MIC-L1 Shallow Frontier Clinic','CRU-L4 Shallow Fields Clinic','Green Imperial Medical'];
+ for(const name of names){
+  const site=at(name);
+  const claim=site.stantonIntel.claims.find(c=>c.title==='Hospital y regeneración');
+  assert.equal(claim.patch,catalogue.version);
+  assert.deepEqual(claim.destinations,[site.parent]);
+  const record=raw.find(row=>row.id===site.stantonIntel.uuid);
+  const result=stantonCoverage([record],[site]);
+  assert.equal(result.counts.logistics,1,name);
+  assert.equal(result.counts.repair+result.counts.refuel+result.counts.rearm,0,name);
+ }
+});

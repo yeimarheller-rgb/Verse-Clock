@@ -278,6 +278,21 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-lagrange-{name.replace(" ","-")}-{device}.png', full_page=True)
+        for name, section_name, caption in [
+            ('ARC-L1 Wide Forest Clinic','services','Hospital y regeneración'),
+            ('Devlin Scrap & Salvage','services','WiDoW'),
+            ('Cry-Astro Processing Plant 19-02','navigation','Acceso público restringido'),
+        ]:
+            query(name, name)
+            section = dossier.locator(f'[data-domain="{section_name}"]')
+            if section_name == 'navigation':
+                section.locator('summary').click()
+            expect(section).to_contain_text(caption)
+            if name.startswith('ARC-L1'):
+                expect(dossier).not_to_contain_text('Entorno regional')
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton-facilities-{name.split()[0]}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

@@ -720,6 +720,16 @@
       "body": "Yela",
       "claims": [
         {
+          "field": "access",
+          "status": "documented",
+          "title": "Refugio para emergencias",
+          "text": "El mapa de Yela muestra este refugio como destino visible. La descripción reserva su acceso para emergencias, como clima peligroso. Verifica el acceso al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/aston-ridge-aid-shelter"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
           "field": "pvp",
           "status": "historical",
           "text": "La ficha indica ausencia de armisticio en este refugio. Comprueba la protección del área en el HUD; la presencia de jugadores depende del servidor.",
@@ -735,7 +745,9 @@
         "rearm"
       ],
       "reviewNote": "En la ficha de este refugio constan sin servicio de reparación, repostaje y rearme. Oficina o plataforma de emergencia no equivale a mantenimiento de nave. LIVE pendiente.",
-      "reviewSource": "https://starcitizen.tools/Aston_Ridge_Aid_Shelter"
+      "reviewSource": "https://starcitizen.tools/Aston_Ridge_Aid_Shelter",
+      "uuid": "9534cf5f-16fc-44de-a48a-13619a8a2734",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Baijini Point",
@@ -1061,12 +1073,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía incluye este centro entre los puntos de acceso más sencillos para visitantes. Comprueba el aviso de intrusión y las instrucciones del contrato antes de entrar en áreas internas.",
+          "status": "documented",
+          "title": "Acceso público indicado",
+          "text": "La descripción del centro S4DC05 de microTech indica que está abierto al público. Comprueba los permisos de las zonas internas y que el contrato indique este centro.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/covalex-distribution-centre-s4dc05"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -1086,7 +1099,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "bbd375a3-fb46-4fbb-b3cf-9cac50bc29a4",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Crusader",
@@ -1116,12 +1131,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía identifica esta familia de centros entre las instalaciones con acceso condicionado. Acepta un encargo que indique el destino y comprueba los permisos al llegar.",
+          "status": "documented",
+          "title": "Acceso público restringido",
+          "text": "La descripción de la planta 19-02 indica que el recinto está cerrado al público. Verifica la asignación del contrato y el aviso de intrusión antes de entrar.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/cry-astro-processing-plant-19-02"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -1141,7 +1157,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "7ce9f0a0-8e11-4042-8774-63054eaba81e",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Cry-Astro Processing Plant 34-12",
@@ -1516,12 +1534,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía identifica esta familia de centros entre las instalaciones con acceso condicionado. Acepta un encargo que indique el destino y comprueba los permisos al llegar.",
+          "status": "documented",
+          "title": "Acceso para empleados y contratistas",
+          "text": "La descripción limita el acceso al complejo A de microTech al personal y los contratistas de Greycat. Antes de entrar, confirma el permiso del encargo y que corresponde al complejo A.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/greycat-stanton-iv-production-complex-a"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -1541,7 +1560,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "f67ba0d5-c50a-4230-abf3-10db52a32b21",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Grim HEX",
@@ -6137,6 +6158,269 @@
           ]
         }
       ]
+    },
+    {
+      "name": "ARC-L1 Wide Forest Clinic",
+      "body": "ARC-L1 Wide Forest Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de ARC-L1 Wide Forest Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/arc-l1-wide-forest-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "ARC-L1 Wide Forest Station"
+          ]
+        }
+      ],
+      "uuid": "d6961b07-6b08-4a44-b658-9610bb3bc49a",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "ARC-L2 Lively Pathway Clinic",
+      "body": "ARC-L2 Lively Pathway Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de ARC-L2 Lively Pathway Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/arc-l2-lively-pathway-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "ARC-L2 Lively Pathway Station"
+          ]
+        }
+      ],
+      "uuid": "62db4948-277a-4bc5-b6c9-d376eaf76c86",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "MIC-L1 Shallow Frontier Clinic",
+      "body": "MIC-L1 Shallow Frontier Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de MIC-L1 Shallow Frontier Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/mic-l1-shallow-frontier-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "MIC-L1 Shallow Frontier Station"
+          ]
+        }
+      ],
+      "uuid": "e7f2a424-66ec-41d0-8626-3d64eba09b9b",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "MIC-L2 Long Forest Clinic",
+      "body": "MIC-L2 Long Forest Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de MIC-L2 Long Forest Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/mic-l2-long-forest-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "MIC-L2 Long Forest Station"
+          ]
+        }
+      ],
+      "uuid": "b89b1905-66fb-4612-bc82-5468e314e6b8",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "MIC-L4 Red Crossroads Clinic",
+      "body": "MIC-L4 Red Crossroads Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de MIC-L4 Red Crossroads Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/mic-l4-red-crossroads-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "MIC-L4 Red Crossroads Station"
+          ]
+        }
+      ],
+      "uuid": "e21f2806-e5d0-4f8d-a711-cbd55cfb2ea0",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "MIC-L5 Modern Icarus Clinic",
+      "body": "MIC-L5 Modern Icarus Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de MIC-L5 Modern Icarus Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/mic-l5-modern-icarus-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "MIC-L5 Modern Icarus Station"
+          ]
+        }
+      ],
+      "uuid": "57f1b283-1d39-4b7d-9623-4738c8708fe5",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "CRU-L1 Ambitious Dream Clinic",
+      "body": "CRU-L1 Ambitious Dream Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de CRU-L1 Ambitious Dream Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/cru-l1-ambitious-dream-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "CRU-L1 Ambitious Dream Station"
+          ]
+        }
+      ],
+      "uuid": "0b839881-49a2-4974-9d59-5d37721dde6d",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "CRU-L4 Shallow Fields Clinic",
+      "body": "CRU-L4 Shallow Fields Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica esta clínica dentro de CRU-L4 Shallow Fields Station como punto de regeneración hospitalaria. Comprueba el terminal de regeneración y el destino de la impronta al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/cru-l4-shallow-fields-station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "CRU-L4 Shallow Fields Station"
+          ]
+        }
+      ],
+      "uuid": "78e502ef-98ee-4d72-8da1-5f1a150eee2d",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "Brentworth Care Center",
+      "body": "New Babbage",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo registra el hospital de New Babbage como punto de regeneración. Brentworth Pharmacy figura con ParaMed Medical Device y OxyPen en listados de 4.10.3. Comprueba el terminal y el stock al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/new-babbage",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Oxypen"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "New Babbage"
+          ]
+        }
+      ],
+      "uuid": "20049797-8919-4e2e-875b-e2d7b7b54dd8",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Empire Health Services Medstation",
+      "body": "Area18",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo identifica este centro de Area18 como punto de regeneración hospitalaria. Comprueba el destino de la impronta en el terminal.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/area18"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "Area18"
+          ]
+        }
+      ],
+      "uuid": "73cb1196-062e-42c9-99dc-cf66802807d7",
+      "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "Green Imperial Medical",
+      "body": "Grim HEX",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Hospital y regeneración",
+          "text": "El catálogo clasifica este centro de Grim HEX como punto de regeneración hospitalaria para criminales. Comprueba el terminal y la impronta antes de depender de ese punto.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/grim-hex"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "Grim HEX"
+          ]
+        }
+      ],
+      "uuid": "0b21cc36-fe5d-4b73-8a7d-8edd724094fe",
+      "checkedAt": "2026-11-21",
+      "orbital": true
+    },
+    {
+      "name": "Devlin Scrap & Salvage",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "reported",
+          "title": "Venta a Devlin Scrap & Salvage",
+          "text": "El terminal DEVLI de Euterpe registra ventas de chatarra (Scrap) y WiDoW en 4.10.3. Comprueba demanda y precio antes de llevar carga.",
+          "sources": [
+            "https://uexcorp.space/terminals/info/name/devlin-scrap--salvage/tab/sell/",
+            "https://starcitizen.tools/Scrap",
+            "https://starcitizen.tools/WDW"
+          ],
+          "patch": "4.10.3",
+          "terminalId": 24
+        }
+      ],
+      "uuid": "ac4eff81-cea3-4dc8-9a2f-a7a4ed665fb2",
+      "checkedAt": "2026-11-21"
     }
   ]
 }
