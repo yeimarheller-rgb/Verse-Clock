@@ -1,0 +1,23 @@
+.tactical-icon {
+  --icon-ink: #70daf1;
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+  color: var(--icon-ink);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.tactical-icon[data-tone="danger"] { --icon-ink: #ff747c; }
+.tactical-icon[data-tone="warning"] { --icon-ink: #ffc36d; }
+.tactical-icon[data-tone="service"] { --icon-ink: #75e1b1; }
+.tactical-icon[data-state="unknown"] { opacity: .75; }
+.tactical-icon[data-state="unavailable"] > path { opacity: .48; }
+.tactical-icon-state { color: #b4c4d3; }
+.tactical-icon-state rect { fill: #071521; }
+[data-state="confirmed"] .tactical-icon-state { color: #75e1b1; }
+[data-state="possible"] .tactical-icon-state { color: #ffc36d; }
+[data-state="unavailable"] .tactical-icon-state { color: #ff747c; }
