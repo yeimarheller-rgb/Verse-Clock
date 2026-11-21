@@ -5584,8 +5584,8 @@
       "parent": "Hurston",
       "operator": null,
       "services": {
-        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
-        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+        "vehicleServices": "reported",
+        "commodityTrading": "reported"
       },
       "sourceUrls": [
         "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
@@ -5620,7 +5620,8 @@
         "sources": [
           "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
           "https://starcitizen.tools/Hurston"
-        ]
+        ],
+        "serviceEvidence": "Servicio referido por catálogo 4.9; no validado en 4.10.3 LIVE."
       },
       "repairIntel": {
         "ship": {
@@ -5659,8 +5660,8 @@
       "parent": "Hurston",
       "operator": null,
       "services": {
-        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
-        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+        "vehicleServices": "reported",
+        "commodityTrading": "reported"
       },
       "sourceUrls": [
         "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
@@ -5695,7 +5696,8 @@
         "sources": [
           "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
           "https://starcitizen.tools/Hurston"
-        ]
+        ],
+        "serviceEvidence": "Servicio referido por catálogo 4.9; no validado en 4.10.3 LIVE."
       },
       "repairIntel": {
         "ship": {
@@ -5734,8 +5736,8 @@
       "parent": "Hurston",
       "operator": null,
       "services": {
-        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
-        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+        "vehicleServices": "reported",
+        "commodityTrading": "reported"
       },
       "sourceUrls": [
         "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
@@ -5770,7 +5772,8 @@
         "sources": [
           "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
           "https://starcitizen.tools/Hurston"
-        ]
+        ],
+        "serviceEvidence": "Servicio referido por catálogo 4.9; no validado en 4.10.3 LIVE."
       },
       "repairIntel": {
         "ship": {
