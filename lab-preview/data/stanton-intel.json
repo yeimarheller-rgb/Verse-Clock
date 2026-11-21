@@ -1236,8 +1236,33 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Centro de carga y recuperación",
+          "text": "Estación orbital de Hurston sobre Lorville. Dispone de centro de carga, entregas, comercio de mercancías, gestión de naves y servicios de reparación, rearme y repostaje. Es una escala logística para reponer una nave antes de operar sobre Hurston; solicita mantenimiento desde el puesto de piloto y confirma que el servicio responda.",
+          "sources": [
+            "https://starcitizen.tools/Everus_Harbor",
+            "https://starcitizen.tools/Cargo_Deck"
+          ],
+          "patch": "4.10.3 (consulta de fichas; parte de las descripciones son históricas)",
+          "uncertainty": "Servicios listados documentalmente; operación en LIVE y tamaño de hangar compatible no probados."
+        },
+        {
+          "field": "equipment",
+          "status": "documented",
+          "title": "Suministros y componentes",
+          "text": "En Everus Harbor figuran Platinum Bay para componentes, tienda de armaduras y centro de carga con suministros y alquiler de naves. No se confirma disponibilidad de una pieza o vehículo concreto sin revisar el terminal. Los precios históricos de alquiler de 3.23 no deben presentarse como actuales.",
+          "sources": [
+            "https://starcitizen.tools/Everus_Harbor",
+            "https://starcitizen.tools/Cargo_Deck"
+          ],
+          "patch": "4.10.3 (establecimientos); precios 3.23 obsoletos",
+          "uncertainty": "Inventario y precios en el parche actual pendientes."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Flanagan's Ravine Aid Shelter",
@@ -2531,8 +2556,33 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Centro de carga microTech",
+          "text": "Estación orbital sobre New Babbage con Cargo Deck, Administración, alojamientos EZ Hab, tiendas de componentes y armaduras, y servicios de repostaje y reabastecimiento descritos por la estación. No presupongas reparación: confirmar en Servicios de aterrizaje antes de planificar una recuperación de combate.",
+          "sources": [
+            "https://starcitizen.tools/Port_Tressler",
+            "https://starcitizen.tools/Cargo_Deck"
+          ],
+          "patch": "4.10.3 (consulta documental)",
+          "uncertainty": "Reparación y disponibilidad efectiva de servicios en servidor LIVE sin confirmar."
+        },
+        {
+          "field": "medical",
+          "status": "documented",
+          "title": "Clínica Kel-To",
+          "text": "Port Tressler dispone de Kel-To Medical Clinic. Para fijar regeneración, comprueba el terminal de regeneración y confirma la nueva impronta antes de salir; la presencia de la clínica no garantiza por sí sola que el cambio se haya registrado.",
+          "sources": [
+            "https://starcitizen.tools/Port_Tressler",
+            "https://starcitizen.tools/Medical"
+          ],
+          "patch": "4.10.3 (consulta documental)",
+          "uncertainty": "Interacción del terminal no probada en sesión LIVE."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Rappel",
