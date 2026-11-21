@@ -12,7 +12,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-BASE = "https://api.star-citizen.wiki/api"
+BASE = "https://api.star-citizen.wiki"
 OUT = pathlib.Path(__file__).resolve().parents[1] / "data" / "imports" / "wiki-locations-review.json"
 
 
