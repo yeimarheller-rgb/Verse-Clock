@@ -3689,6 +3689,1386 @@
       ],
       "uuid": "32c39b0d-2fc3-48a4-8aac-7109c6e491bd",
       "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "CRU L3",
+      "uuid": "2083c403-4c40-4727-b392-49976c460028",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2083c403-4c40-4727-b392-49976c460028"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2083c403-4c40-4727-b392-49976c460028",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #0YX-O7Z",
+      "uuid": "b76cb376-ee74-43ca-8549-9759945daaf4",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/b76cb376-ee74-43ca-8549-9759945daaf4"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/b76cb376-ee74-43ca-8549-9759945daaf4",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #365-YNZ",
+      "uuid": "5f51ae32-f37d-487a-b911-da96502c8690",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/5f51ae32-f37d-487a-b911-da96502c8690"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/5f51ae32-f37d-487a-b911-da96502c8690",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #4PI-3YY",
+      "uuid": "f74ea008-4932-4eb0-93ed-419d983e8c52",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/f74ea008-4932-4eb0-93ed-419d983e8c52"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/f74ea008-4932-4eb0-93ed-419d983e8c52",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #4R0-NVX",
+      "uuid": "10727ca9-f721-42d3-b6f6-e5b8a812429a",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/10727ca9-f721-42d3-b6f6-e5b8a812429a"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/10727ca9-f721-42d3-b6f6-e5b8a812429a",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #51F-OGH",
+      "uuid": "79396580-c492-4909-bcd1-8ecaa4358967",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/79396580-c492-4909-bcd1-8ecaa4358967"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/79396580-c492-4909-bcd1-8ecaa4358967",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #5U5-TLC",
+      "uuid": "15dc0d54-fc71-4ce3-94e7-e2767125141e",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/15dc0d54-fc71-4ce3-94e7-e2767125141e"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/15dc0d54-fc71-4ce3-94e7-e2767125141e",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #6IN-P02",
+      "uuid": "df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #74H-2DO",
+      "uuid": "e8306b2c-9a10-41e6-abb2-2033f40deff1",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/e8306b2c-9a10-41e6-abb2-2033f40deff1"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/e8306b2c-9a10-41e6-abb2-2033f40deff1",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #7IQ-29Q",
+      "uuid": "2ce5281e-ae41-474d-ade8-c804cce21c9b",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2ce5281e-ae41-474d-ade8-c804cce21c9b"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2ce5281e-ae41-474d-ade8-c804cce21c9b",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #7LI-0OA",
+      "uuid": "10bb340b-9ab3-4fa6-b3d4-ddea1e92682c",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/10bb340b-9ab3-4fa6-b3d4-ddea1e92682c"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/10bb340b-9ab3-4fa6-b3d4-ddea1e92682c",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #7YH-JX7",
+      "uuid": "786bd06a-cdd1-41c6-9a70-b2dd79c18618",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/786bd06a-cdd1-41c6-9a70-b2dd79c18618"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/786bd06a-cdd1-41c6-9a70-b2dd79c18618",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #8CG-OSA",
+      "uuid": "be313093-1d4a-4ca7-9fd2-855b045423fe",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/be313093-1d4a-4ca7-9fd2-855b045423fe"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/be313093-1d4a-4ca7-9fd2-855b045423fe",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #A73-HTJ",
+      "uuid": "b761b610-f9a9-4439-ae1b-eb3cb5e58ba1",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/b761b610-f9a9-4439-ae1b-eb3cb5e58ba1"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/b761b610-f9a9-4439-ae1b-eb3cb5e58ba1",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #AL5-XPD",
+      "uuid": "09a558dd-d040-48ed-bfd4-070083fcb84c",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/09a558dd-d040-48ed-bfd4-070083fcb84c"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/09a558dd-d040-48ed-bfd4-070083fcb84c",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #BBR-4JQ",
+      "uuid": "7e7ba348-c8ed-47da-8e5f-f0114beae392",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/7e7ba348-c8ed-47da-8e5f-f0114beae392"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/7e7ba348-c8ed-47da-8e5f-f0114beae392",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #BRE-582",
+      "uuid": "eb5af0fe-54ac-437f-9dcd-2c80477ca3f6",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/eb5af0fe-54ac-437f-9dcd-2c80477ca3f6"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/eb5af0fe-54ac-437f-9dcd-2c80477ca3f6",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #BSK-IJ5",
+      "uuid": "411da23b-ac58-4a83-b546-08971bd40b9e",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/411da23b-ac58-4a83-b546-08971bd40b9e"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/411da23b-ac58-4a83-b546-08971bd40b9e",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #CVF-T6H",
+      "uuid": "d3705180-7019-44ca-959a-e21c4b086d30",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/d3705180-7019-44ca-959a-e21c4b086d30"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/d3705180-7019-44ca-959a-e21c4b086d30",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #CZW-RRY",
+      "uuid": "d838c2c4-b88d-42df-8c61-4549cce2690e",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/d838c2c4-b88d-42df-8c61-4549cce2690e"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/d838c2c4-b88d-42df-8c61-4549cce2690e",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #E38-S5G",
+      "uuid": "29e69c79-5526-406f-a492-5049c5bcc9aa",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/29e69c79-5526-406f-a492-5049c5bcc9aa"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/29e69c79-5526-406f-a492-5049c5bcc9aa",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #GO4-CH0",
+      "uuid": "1e3bf65a-a643-4f22-a5af-09eff5ea4917",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/1e3bf65a-a643-4f22-a5af-09eff5ea4917"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/1e3bf65a-a643-4f22-a5af-09eff5ea4917",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #IGB-FXW",
+      "uuid": "04e690e8-aca8-421d-97f6-e7e766995ac9",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/04e690e8-aca8-421d-97f6-e7e766995ac9"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/04e690e8-aca8-421d-97f6-e7e766995ac9",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #IO3-H1F",
+      "uuid": "ea489dfa-fdba-4408-ba42-0dfd5d21f918",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/ea489dfa-fdba-4408-ba42-0dfd5d21f918"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/ea489dfa-fdba-4408-ba42-0dfd5d21f918",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #JUG-0KZ",
+      "uuid": "2e684c05-ee96-4d04-94f5-ffad800db7b7",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2e684c05-ee96-4d04-94f5-ffad800db7b7"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2e684c05-ee96-4d04-94f5-ffad800db7b7",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #LBP-UN5",
+      "uuid": "f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #N6J-XKH",
+      "uuid": "8670ad9c-e5e4-422f-a005-228e3793e066",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/8670ad9c-e5e4-422f-a005-228e3793e066"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/8670ad9c-e5e4-422f-a005-228e3793e066",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #ODD-E9B",
+      "uuid": "c0bc4aa9-4e45-4281-a513-3248d0b8a03f",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c0bc4aa9-4e45-4281-a513-3248d0b8a03f"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c0bc4aa9-4e45-4281-a513-3248d0b8a03f",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #OYV-JKE",
+      "uuid": "a0e51eb6-4b19-4302-994d-68b4f6209bd0",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/a0e51eb6-4b19-4302-994d-68b4f6209bd0"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/a0e51eb6-4b19-4302-994d-68b4f6209bd0",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #Q4U-I20",
+      "uuid": "6fdba030-3358-44ee-9736-aa0f155b758a",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/6fdba030-3358-44ee-9736-aa0f155b758a"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/6fdba030-3358-44ee-9736-aa0f155b758a",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #Q9Q-090",
+      "uuid": "032fa15d-33a1-42a9-afb9-744811d1335d",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/032fa15d-33a1-42a9-afb9-744811d1335d"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/032fa15d-33a1-42a9-afb9-744811d1335d",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #QXS-NBS",
+      "uuid": "c29799ed-fe83-4f8b-b564-7729f251fbc8",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c29799ed-fe83-4f8b-b564-7729f251fbc8"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c29799ed-fe83-4f8b-b564-7729f251fbc8",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #R08-Y3K",
+      "uuid": "25d9cb75-4887-41f2-86f1-c61164d2430e",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/25d9cb75-4887-41f2-86f1-c61164d2430e"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/25d9cb75-4887-41f2-86f1-c61164d2430e",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #R75-5PZ",
+      "uuid": "600c66af-2cb4-475d-b938-861a408c348f",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/600c66af-2cb4-475d-b938-861a408c348f"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/600c66af-2cb4-475d-b938-861a408c348f",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #R7J-WJ7",
+      "uuid": "eaa1600c-144d-49d1-a364-ae74670ef652",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/eaa1600c-144d-49d1-a364-ae74670ef652"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/eaa1600c-144d-49d1-a364-ae74670ef652",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #RCD-OB3",
+      "uuid": "372fdcaf-6a55-42bc-8321-758424e87ceb",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/372fdcaf-6a55-42bc-8321-758424e87ceb"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/372fdcaf-6a55-42bc-8321-758424e87ceb",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #RSV-8HL",
+      "uuid": "dfaa2695-9769-4cd8-bc56-7f80430325c5",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/dfaa2695-9769-4cd8-bc56-7f80430325c5"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/dfaa2695-9769-4cd8-bc56-7f80430325c5",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #SAG-2UN",
+      "uuid": "2850373c-0f1c-41f5-a1b4-da58670e2ea6",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2850373c-0f1c-41f5-a1b4-da58670e2ea6"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/2850373c-0f1c-41f5-a1b4-da58670e2ea6",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #U5X-NGQ",
+      "uuid": "71847f14-2295-4318-bc48-80ba3e444b3a",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/71847f14-2295-4318-bc48-80ba3e444b3a"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/71847f14-2295-4318-bc48-80ba3e444b3a",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #UDK-IJX",
+      "uuid": "c953aee5-b192-4496-886c-c8e30f0d5f05",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c953aee5-b192-4496-886c-c8e30f0d5f05"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c953aee5-b192-4496-886c-c8e30f0d5f05",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #URB-H3V",
+      "uuid": "c422d8b9-dbfc-4e9e-9d66-da57c4da25a0",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c422d8b9-dbfc-4e9e-9d66-da57c4da25a0"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c422d8b9-dbfc-4e9e-9d66-da57c4da25a0",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #UU6-1EI",
+      "uuid": "456abfb7-4fa0-4251-a6a9-1ccc44170b57",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/456abfb7-4fa0-4251-a6a9-1ccc44170b57"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/456abfb7-4fa0-4251-a6a9-1ccc44170b57",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #W79-2H7",
+      "uuid": "cd95c910-36ab-4d2b-9e8f-64c9edc44fa4",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/cd95c910-36ab-4d2b-9e8f-64c9edc44fa4"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/cd95c910-36ab-4d2b-9e8f-64c9edc44fa4",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #WUO-ZRU",
+      "uuid": "44ef9c98-adf2-46e8-8dd2-2799c78cee2b",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/44ef9c98-adf2-46e8-8dd2-2799c78cee2b"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/44ef9c98-adf2-46e8-8dd2-2799c78cee2b",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #XJZ-JR2",
+      "uuid": "076add9c-feea-4261-876c-e05de2e21a1c",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/076add9c-feea-4261-876c-e05de2e21a1c"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/076add9c-feea-4261-876c-e05de2e21a1c",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
+    },
+    {
+      "name": "Mining Base #YTO-GLQ",
+      "uuid": "7798b8d7-cb14-4741-be99-13dd0693c74b",
+      "orbital": true,
+      "checkedAt": "2026-11-21",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Destino en el mapa estelar",
+          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/7798b8d7-cb14-4741-be99-13dd0693c74b"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
+          "field": "resources",
+          "status": "reported",
+          "title": "Prospección con nave minera",
+          "text": "Los materiales de la lista están asociados a este destino. Al llegar, escanea los asteroides y comprueba composición y resistencia antes de fracturarlos. Aparición, cantidad y rendimiento quedan por verificar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/7798b8d7-cb14-4741-be99-13dd0693c74b",
+            "https://api.star-citizen.wiki/api/commodities",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        }
+      ]
     }
   ]
 }

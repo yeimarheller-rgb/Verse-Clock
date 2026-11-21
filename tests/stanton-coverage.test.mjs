@@ -27,6 +27,7 @@ const stanton=read('stanton-intel');
 mergeStanton(byKey,stanton);
 const visible=traceStantonParents([...byKey.values()]);
 const at=name=>byKey.get(atlasKey({system:'Stanton',name}));
+const atId=new Map(visible.filter(row=>row.source?.uuid).map(row=>[row.source.uuid,row]));
 
 test('Stanton keeps raw denominator and credits only located, sourced evidence',()=>{
  const c=stantonCoverage(raw,visible);
@@ -41,7 +42,7 @@ test('Stanton keeps raw denominator and credits only located, sourced evidence',
  assert.ok(euterpe.counts.hazards>=1);
  assert.ok(stantonCoverage(raw,visible,'only:microTech').counts.hazards>=1, 'microTech retains sourced hazards as locations are enriched');
  assert.deepEqual(stantonBodies.filter(body=>!at(body)?.stantonIntel?.environment),[]);
- assert.equal(stanton.locations.filter(row=>!at(row.name)).length,0);
+ assert.equal(stanton.locations.filter(row=>!(row.uuid?atId.get(row.uuid):at(row.name))).length,0);
  for(const row of stanton.locations)for(const claim of row.claims){
   assert.ok(Object.hasOwn(stantonFields,claim.field),row.name+': categoría desconocida '+claim.field);
   assert.ok(claim.sources.length);
@@ -74,7 +75,7 @@ test('UUID binds the Hurston batch to the inventory and excludes historical and 
  assert.equal(new Set(batch.map(row=>row.uuid)).size,batch.length);
  for(const row of batch){
   assert.equal(indexed.get(row.uuid)?.name,row.name);
-  assert.equal(at(row.name)?.stantonIntel.uuid,row.uuid);
+  assert.equal(atId.get(row.uuid)?.stantonIntel.uuid,row.uuid);
  }
  const clinic=at('HUR-L4 Melodic Fields Clinic');
  const c=stantonCoverage([indexed.get(clinic.id)],[clinic]);
@@ -146,4 +147,23 @@ test('the FPS mining batch credits resources only from current, matching locatio
   assert.equal(result.counts.resources,1,name);
   assert.equal(result.counts.loot,0,name);
  }
+});
+
+test('orbital mining links bind to distinct UUIDs and do not credit hidden markers',()=>{
+ const index=read('atlas-commodities');
+ const mineralsById=new Map(index.locations.map(site=>[site.id,site.resources]));
+ const orbitals=stanton.locations.filter(row=>row.claims.some(c=>c.title==='Prospección con nave minera'));
+ assert.ok(orbitals.length>=46);
+ const rawById=new Map(raw.map(site=>[site.id,site]));
+ for(const row of orbitals){
+  const site=rawById.get(row.uuid);
+  assert.equal(site?.type,'Asteroid',row.name);
+  assert.equal(mineralsById.get(row.uuid)?.[0]?.source.locationUuid,row.uuid);
+  assert.ok(row.claims.every(c=>c.patch===catalogue.version&&c.sources.includes('https://api.star-citizen.wiki/locations/'+row.uuid)));
+ }
+ const twins=raw.filter(site=>site.name==='Mining Base #XJZ-JR2');
+ assert.ok(twins.length>1);
+ assert.equal(twins.filter(site=>atId.get(site.id)?.stantonIntel?.claims.some(c=>c.field==='resources')).length,1);
+ const excluded=raw.find(site=>site.name==='CRU L1');
+ assert.equal(atId.get(excluded.id)?.stantonIntel?.claims.some(c=>c.field==='access')||false,false);
 });

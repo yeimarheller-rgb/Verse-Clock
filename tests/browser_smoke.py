@@ -250,6 +250,23 @@ with sync_playwright() as p:
             if place in ['Gonzo','Ludlow']:
                 page.evaluate('window.scrollTo(0,0)')
                 page.screenshot(path=f'/tmp/verse-lab-mineria-{place.lower()}-{device}.png', full_page=True)
+        for place, suffix in [('Mining Base #Q9Q-090', None), ('Mining Base #XJZ-JR2', '076add9c')]:
+            if suffix:
+                page.locator('#q').fill(place)
+                page.locator('#suggestions button').filter(has_text=suffix).first.click()
+                expect(page.locator('#mainIntelLocation')).to_have_text(place)
+            else:
+                query(place, place)
+            resources = dossier.locator('[data-domain="loot"]')
+            expect(resources).to_contain_text('Prospección con nave minera')
+            expect(resources).to_contain_text('Recursos catalogados por UUID')
+            nav = dossier.locator('[data-domain="navigation"]')
+            nav.locator('summary').click()
+            expect(nav).to_contain_text('Destino en el mapa estelar')
+            expect(dossier.locator('[data-domain="security"]')).to_have_count(0)
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-base-minera-{place.split("#")[-1]}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()
