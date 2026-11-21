@@ -395,7 +395,7 @@ function renderTacticalCards(p,sec,loot){
  for(const [symbol,title,key] of domains){
   const value=notes[key];
   if(typeof value!=='string'||!value.trim())continue;
-  const unknown=/^(sin |no hay |no existe |no se |servicios no)/i.test(value.trim());
+  const unknown=/^(sin\b|no\s+(?:hay|existe|se|dispone)\b|servicios no\b)/i.test(value.trim()) || /\b(?:no (?:verificad[oa]s?|confirmad[oa]s?|contrastad[oa]s?|documentad[oa]s?)|sin (?:medici[oó]n|datos|confirmaci[oó]n|inventario|stock|precios|bot[ií]n))\b/i.test(value);
   cards.push([symbol,title,value,!unknown,'Nota operativa curada · comprobar fuentes y parche']);
  }
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
