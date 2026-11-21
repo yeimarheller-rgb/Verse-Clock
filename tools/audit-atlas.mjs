@@ -46,7 +46,9 @@ const researchQueue=records.filter(p=>priorityPattern.test(p.name+' '+(p.type||'
  const q=priorityScore(p);
  return {id:p.id,name:p.name,system:p.system,type:p.type,score:q.score,missingDomains:q.missing,existingEvidence:p.evidence};
 }).sort((a,b)=>b.score-a.score||a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
-const researchSummary={total:researchQueue.length,hathor:researchQueue.filter(p=>/hathor/i.test(p.name)).length,stations:researchQueue.filter(p=>/station|gateway|port/i.test(p.name+' '+p.type)).length,withoutPvp:researchQueue.filter(p=>p.missingDomains.includes('pvp')).length};
+const isHathor=p=>/hathor|^(attritus|lamina|ruptura|vivere)\s+(olp|paf-(?:i|ii|iii))$/i.test(String(p.name||''));
+const hathorCurated=seed.locations.filter(isHathor);
+const researchSummary={total:researchQueue.length,hathor:researchQueue.filter(isHathor).length,hathorCurated:hathorCurated.length,hathorCuratedMatched:hathorCurated.filter(p=>catalogKeys.has(key(p))).length,hathorCuratedUnmatched:hathorCurated.filter(p=>!catalogKeys.has(key(p))).length,stations:researchQueue.filter(p=>/station|gateway|port/i.test(p.name+' '+p.type)).length,withoutPvp:researchQueue.filter(p=>p.missingDomains.includes('pvp')).length};
 
 // Report curated records absent from the API as separate records; never silently discard them.
 const seedOnlyCounts={total:seedOnly.length,withTacticalIntel:seedOnly.filter(p=>!!p.tacticalIntel).length,withLoot:seedOnly.filter(p=>!!p.lootIntel).length,withServices:seedOnly.filter(p=>Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))).length};
