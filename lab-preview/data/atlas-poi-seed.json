@@ -272,7 +272,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "ARC-L1 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en ArcCorp L1 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-arc-l2",
@@ -288,7 +317,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "ARC-L2 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en ArcCorp L2 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-arc-l4",
@@ -304,7 +362,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "ARC-L4 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en ArcCorp L4 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-cru-l1",
@@ -320,7 +407,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "CRU-L1 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en Crusader L1 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-hur-l1",
@@ -336,7 +452,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "HUR-L1 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en Hurston L1 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-hur-l2",
@@ -352,7 +497,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "HUR-L2 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en Hurston L2 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-mic-l1",
@@ -368,7 +542,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "MIC-L1 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en microTech L1 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-mic-l2",
@@ -384,7 +587,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "MIC-L2 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en microTech L2 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "stanton-mic-l5",
@@ -400,7 +632,36 @@
         "https://uexcorp.space/mining/refineries"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "tacticalIntel": {
+        "title": "MIC-L5 · punto de refinería",
+        "steps": [
+          "Ubicación catalogada en microTech L5 dentro de Stanton.",
+          "Servicio de refinería reportado por directorio comunitario UEX; disponibilidad no contrastada en el parche LIVE.",
+          "Antes de transportar mineral, comprobar en el terminal servicio, tasas, tiempos, métodos y destino de recogida.",
+          "No hay inventario de componentes, armas o misiles verificado para esta ubicación."
+        ],
+        "threats": [
+          "No hay medición de frecuencia PvP específica para esta estación.",
+          "No se ha confirmado una amenaza NPC concreta."
+        ],
+        "caveat": "Ficha logística basada en directorio de refinerías; no equivale a verificación de terminales LIVE.",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      },
+      "operationalNotes": {
+        "trade": "Refinería reportada; tarifas, demanda y tiempos no contrastados",
+        "pve": "Sin encuentros PvE específicos documentados",
+        "pvp": "Sin medición PvP local",
+        "missions": "Sin contratos específicos contrastados",
+        "loot": "Sin botín local verificado",
+        "weapons": "Sin inventario de armas y componentes contrastado",
+        "hazards": "Sin peligros de combate específicos verificados",
+        "sources": [
+          "https://uexcorp.space/mining/refineries"
+        ]
+      }
     },
     {
       "id": "nyx-levski",
