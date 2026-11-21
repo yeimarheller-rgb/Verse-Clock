@@ -1,4 +1,5 @@
 // Atlas-wide evidence audit. No synthetic gameplay intelligence.
+// Generic risk advisories do not establish PvE encounters; weapon references do not establish loot drops.
 import {readFile,writeFile} from 'node:fs/promises';
 const catalog=JSON.parse(await readFile('lab-preview/data/wiki-atlas.json','utf8'));
 const seed=JSON.parse(await readFile('lab-preview/data/atlas-poi-seed.json','utf8'));
@@ -17,7 +18,7 @@ const details=new Map((enriched.version===catalog.version?enriched.locations:[])
 const commodityResources=new Map((commodities.version===catalog.version?commodities.locations:[]).map(p=>[p.id,p.resources||[]]));
 const counts={resourceAssociationsOnly:0,verifiedOperationalExcludingCommodityAssociations:0,total:0,consulted:0,curated:0,withMissions:0,withResources:0,withNearby:0,withServices:0,withPve:0,withPvp:0,withLoot:0,withSources:0,withWeapons:0,withTrade:0,withHazards:0,actionable:0,geographicOnly:0};
 const systems={};const records=[];
-for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.id)||{};const flags={consulted:!!d.checkedAt,curated:!!s.id,missions:!!d.missions?.length||!!s.missions?.length,resources:!!d.resources?.length||!!s.tacticalIntel?.resources?.length||!!commodityResources.get(p.id)?.length,nearby:!!d.nearbyLocations?.length,services:!!p.amenities?.length||Object.values(s.services||{}).some(x=>['reported','confirmed'].includes(x)),pve:!!s.tacticalIntel?.threats?.length||!!s.security?.pve,pvp:!!s.security?.pvp||!!s.pvp,loot:!!s.lootIntel?.categories?.length||!!s.tacticalIntel?.weapons?.length,weapons:!!s.tacticalIntel?.weapons?.length||!!s.tacticalIntel?.armor?.length,trade:!!s.commodities?.length||!!s.shops?.length,hazards:!!s.tacticalIntel?.threats?.length||!!s.hazards?.length,sources:!!s.sourceUrls?.length||!!p.source?.uuid};const operationalFields=['missions','resources','services','pve','pvp','loot','weapons','trade','hazards'];const actionable=operationalFields.filter(k=>flags[k]).length;
+for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.id)||{};const flags={consulted:!!d.checkedAt,curated:!!s.id,missions:!!d.missions?.length||!!s.missions?.length,resources:!!d.resources?.length||!!s.tacticalIntel?.resources?.length||!!commodityResources.get(p.id)?.length,nearby:!!d.nearbyLocations?.length,services:!!p.amenities?.length||Object.values(s.services||{}).some(x=>['reported','confirmed'].includes(x)),pve:!!s.security?.pve,pvp:!!s.security?.pvp||!!s.pvp,loot:!!s.lootIntel?.categories?.length,weapons:!!s.tacticalIntel?.weapons?.length||!!s.tacticalIntel?.armor?.length,trade:!!s.commodities?.length||!!s.shops?.length,hazards:!!s.tacticalIntel?.threats?.length||!!s.hazards?.length,sources:!!s.sourceUrls?.length||!!p.source?.uuid};const operationalFields=['missions','resources','services','pve','pvp','loot','weapons','trade','hazards'];const actionable=operationalFields.filter(k=>flags[k]).length;
  const confirmedResource=!!d.resources?.length||!!s.tacticalIntel?.resources?.length;
  const operationalWithoutCommodity=operationalFields.some(k=>k==='resources'?confirmedResource:flags[k]);
  if(operationalWithoutCommodity)counts.verifiedOperationalExcludingCommodityAssociations++;
@@ -27,7 +28,7 @@ for(const p of catalog.locations){const s=seeds.get(key(p))||{},d=details.get(p.
  if(domain==='resources'&&d.resources?.length)refs.push({kind:'location-api',url:'https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.id),version:catalog.version,claim:'resource association, not verified deposit'});
  if(domain==='resources'&&commodityResources.get(p.id)?.length)refs.push({kind:'commodity-api',version:catalog.version,claim:'commodity location association, not verified deposit'});
  if(domain==='services'&&p.amenities?.length)refs.push({kind:'location-api',url:'https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.id),version:catalog.version,claim:'catalog amenity, availability unverified'});
- if(s&&Object.keys(s).length&&((domain==='missions'&&s.missions?.length)||(domain==='resources'&&s.tacticalIntel?.resources?.length)||(domain==='services'&&Object.values(s.services||{}).some(x=>['reported','confirmed'].includes(x)))||(domain==='pve'&&(s.tacticalIntel?.threats?.length||s.security?.pve))||(domain==='pvp'&&(s.security?.pvp||s.pvp))||(domain==='loot'&&(s.lootIntel?.categories?.length||s.tacticalIntel?.weapons?.length))||(domain==='weapons'&&(s.tacticalIntel?.weapons?.length||s.tacticalIntel?.armor?.length))||(domain==='trade'&&(s.commodities?.length||s.shops?.length))||(domain==='hazards'&&(s.tacticalIntel?.threats?.length||s.hazards?.length)))){
+ if(s&&Object.keys(s).length&&((domain==='missions'&&s.missions?.length)||(domain==='resources'&&s.tacticalIntel?.resources?.length)||(domain==='services'&&Object.values(s.services||{}).some(x=>['reported','confirmed'].includes(x)))||(domain==='pve'&&s.security?.pve)||(domain==='pvp'&&(s.security?.pvp||s.pvp))||(domain==='loot'&&s.lootIntel?.categories?.length)||(domain==='weapons'&&(s.tacticalIntel?.weapons?.length||s.tacticalIntel?.armor?.length))||(domain==='trade'&&(s.commodities?.length||s.shops?.length))||(domain==='hazards'&&(s.tacticalIntel?.threats?.length||s.hazards?.length)))){
  const urls=(s.sourceUrls||[]).filter(u=>typeof u==='string'&&/^https:\/\//.test(u));refs.push({kind:urls.length?'curated':'curated-unverified',sourceUrls:urls,claim:urls.length?'curated record; independently verify underlying evidence':'curated claim without a source URL; NOT independently traced'});
  }
  evidence[domain]=refs.length?refs:[{kind:'untraced',claim:'domain flagged but no evidence path'}];
@@ -51,8 +52,8 @@ const researchSummary={total:researchQueue.length,hathor:researchQueue.filter(p=
 const seedOnlyCounts={total:seedOnly.length,withTacticalIntel:seedOnly.filter(p=>!!p.tacticalIntel).length,withLoot:seedOnly.filter(p=>!!p.lootIntel).length,withServices:seedOnly.filter(p=>Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))).length};
 const seedOnlyResearchQueue=seedOnly.map(p=>{
  const domains={
-  missions:!!p.missions?.length,pve:!!p.tacticalIntel?.threats?.length||!!p.security?.pve,
-  pvp:!!p.security?.pvp||!!p.pvp,loot:!!p.lootIntel?.categories?.length||!!p.tacticalIntel?.weapons?.length,
+  missions:!!p.missions?.length,pve:!!p.security?.pve,
+  pvp:!!p.security?.pvp||!!p.pvp,loot:!!p.lootIntel?.categories?.length,
   weapons:!!p.tacticalIntel?.weapons?.length,trade:!!p.commodities?.length||!!p.shops?.length,
   hazards:!!p.tacticalIntel?.threats?.length||!!p.hazards?.length,
   services:Object.values(p.services||{}).some(x=>['reported','confirmed'].includes(x))
