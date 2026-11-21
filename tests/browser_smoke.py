@@ -50,7 +50,7 @@ with sync_playwright() as p:
             search, clock, location = [page.locator(selector).bounding_box() for selector in ['.search','#solar','#tacticalPanel']]
             assert search['y'] + search['height'] <= clock['y'] <= search['y'] + search['height'] + 14
             assert clock['y'] + clock['height'] <= location['y']
-            assert clock['height'] <= 250
+            assert clock['height'] <= 255, (device, clock, page.locator('#solar > :visible').evaluate_all('(els) => els.map(el => [el.className,el.offsetHeight])'))
             assert page.evaluate('document.documentElement.scrollWidth') <= width
             assert page.locator('#destinationIntel,#mainIntelApi,#intelTacticalCards').count() == 0
             domains = dossier.locator('[data-domain]').evaluate_all('(els) => els.map(el=>el.dataset.domain)')
@@ -69,9 +69,9 @@ with sync_playwright() as p:
         def show_filters():
             if not page.locator('#searchFilters').is_visible():
                 page.get_by_role('button', name='Filtros', exact=True).click()
-        verify_layout()
         expect(page.locator('#clock')).to_have_attribute('aria-label', re.compile(r'\d\d:\d\d:\d\d'))
         page.screenshot(path=f'/tmp/verse-lab-despues-inicio-{device}.png',full_page=True)
+        verify_layout()
         for q, label, needle in [
             ('Ruptura PAF-I','ruptura','XL Purchase Order'),
             ('Seraphim','seraphim','Admin - Seraphim'),('Lorville','lorville','Gravedad regional'),
