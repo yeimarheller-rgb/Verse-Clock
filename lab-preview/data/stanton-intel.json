@@ -2825,12 +2825,18 @@
         {
           "field": "trade",
           "status": "reported",
-          "text": "La ficha señala un terminal de mercancías de venta al terminal únicamente. Comprueba existencias, mercancía aceptada y precios en el lugar.",
+          "text": "Los registros de mercado de 4.10.3 del 17 de noviembre incluyen ventas de chatarra (Scrap) y WiDoW a Orinth. El terminal es de venta al puesto. Comprueba la demanda y el precio antes de llevar la carga.",
           "sources": [
-            "https://starcitizen.tools/Reclamation_%26_Disposal_Orinth"
-          ]
+            "https://starcitizen.tools/Reclamation_%26_Disposal_Orinth",
+            "https://starcitizen.tools/Scrap",
+            "https://starcitizen.tools/WDW"
+          ],
+          "title": "Venta al terminal",
+          "patch": "4.10.3"
         }
-      ]
+      ],
+      "uuid": "a0e7c619-4120-409a-9b54-5cc7310457d1",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Sakura Sun Goldenrod Workcenter",
@@ -2895,8 +2901,21 @@
             "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
           ],
           "patch": "4.10"
+        },
+        {
+          "field": "logistics",
+          "status": "reported",
+          "title": "Ascensor de carga y hangar sin corroborar",
+          "text": "Citadel lista ascensor de carga y marca sin hangar. El registro de esta instalación en 4.10.3 enumera hangar L y plataforma M. Comprueba primero la aproximación y el ascensor en el lugar. El tamaño de hangar y el mantenimiento de nave quedan pendientes de verificación.",
+          "sources": [
+            "https://www.citadelsc.com/en/map/sakura-sun-magnolia-workcenter",
+            "https://api.star-citizen.wiki/locations/sakura-sun-magnolia-workcenter"
+          ],
+          "patch": "4.10.3-LIVE.13165946 (catálogo) · Citadel sin versión indicada"
         }
-      ]
+      ],
+      "uuid": "f4b081d7-1c8d-44ec-bd5e-98b19d377c4e",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Security Post Hasik",
@@ -3502,6 +3521,37 @@
           "patch": "4.10"
         }
       ]
+    },
+    {
+      "name": "Barton Flats Aid Shelter",
+      "body": "Aberdeen",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Refugio para emergencias",
+          "text": "La descripción del juego en 4.10.3 reserva el acceso al refugio para emergencias o clima peligroso. Está en Aberdeen, cerca de Klescher. Las instalaciones efectivamente habilitadas se deben comprobar al llegar.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/barton-flats-aid-shelter"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "Klescher Rehabilitation Facility"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "historical",
+          "title": "Terminal ASOP · referencia histórica",
+          "text": "Una observación de 3.18 describió un ASOP para naves pequeñas compatibles con un hangar S1. La recuperación de naves mediante este terminal sigue pendiente de verificar en 4.10.3.",
+          "sources": [
+            "https://starcitizen.tools/Barton_Flats_Aid_Shelter"
+          ],
+          "patch": "3.18.0"
+        }
+      ],
+      "uuid": "1c200c1c-61ee-42bc-8f64-7f839001789f",
+      "checkedAt": "2026-11-21"
     }
   ]
 }

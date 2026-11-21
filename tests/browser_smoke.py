@@ -221,6 +221,20 @@ with sync_playwright() as p:
         verify_layout()
         page.evaluate('window.scrollTo(0,0)')
         page.screenshot(path=f'/tmp/verse-lab-faithful-dream-{device}.png', full_page=True)
+        for place, group, caption in [
+            ('Reclamation & Disposal Orinth', 'services', 'Venta al terminal'),
+            ('Sakura Sun Magnolia Workcenter', 'services', 'Ascensor de carga y hangar sin corroborar'),
+            ('Barton Flats Aid Shelter', 'navigation', 'Refugio para emergencias'),
+        ]:
+            query(place, place)
+            section = dossier.locator(f'[data-domain="{group}"]')
+            if group == 'navigation':
+                section.locator('summary').click()
+            expect(section).to_contain_text(caption)
+            assert dossier.inner_text().count(caption) == 1
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-hurston-{place.split()[0].lower()}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

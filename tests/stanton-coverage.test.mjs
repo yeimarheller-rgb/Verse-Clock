@@ -109,3 +109,21 @@ test('historical Ghost Hollow claims do not increase operational mission coverag
  const inventory=raw.filter(row=>row.id===p.source.uuid);
  assert.equal(stantonCoverage(inventory,[eventOnly]).counts.missions,0);
 });
+
+test('the Hurston logistics batch keeps historical ASOP and uncertain ship support out of current coverage',()=>{
+ const cases=[
+  ['Barton Flats Aid Shelter','access'],
+  ['Sakura Sun Magnolia Workcenter','logistics'],
+  ['Reclamation & Disposal Orinth','trade'],
+ ];
+ for(const [name,field] of cases){
+  const site=at(name);
+  const inventory=raw.filter(row=>row.id===site.stantonIntel.uuid);
+  const result=stantonCoverage(inventory,[site]);
+  assert.equal(result.counts[field],1,name);
+  assert.equal(result.counts.repair,0,name);
+  assert.equal(result.counts.refuel,0,name);
+  assert.equal(result.counts.rearm,0,name);
+  if(name==='Barton Flats Aid Shelter')assert.equal(result.counts.logistics,0);
+ }
+});
