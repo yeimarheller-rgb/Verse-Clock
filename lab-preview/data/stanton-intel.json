@@ -3716,7 +3716,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3746,7 +3753,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3776,7 +3790,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3806,7 +3827,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3836,7 +3864,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3866,7 +3901,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3896,7 +3938,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3926,7 +3975,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3956,7 +4012,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -3986,7 +4049,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4016,7 +4086,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4046,7 +4123,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4076,7 +4160,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4106,7 +4197,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4136,7 +4234,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4166,7 +4271,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4196,7 +4308,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4226,7 +4345,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4256,7 +4382,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4286,7 +4419,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4316,7 +4456,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4346,7 +4493,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4376,7 +4530,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4406,7 +4567,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4436,7 +4604,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4466,7 +4641,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4496,7 +4678,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4526,7 +4715,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4556,7 +4752,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4586,7 +4789,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4616,7 +4826,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4646,7 +4863,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4676,7 +4900,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4706,7 +4937,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4736,7 +4974,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4766,7 +5011,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4796,7 +5048,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4826,7 +5085,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4856,7 +5122,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4886,7 +5159,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4916,7 +5196,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4946,7 +5233,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -4976,7 +5270,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -5006,7 +5307,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -5036,7 +5344,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     },
@@ -5066,7 +5381,14 @@
             "https://api.star-citizen.wiki/api/commodities",
             "https://support.robertsspaceindustries.com/hc/en-us/articles/360007611573-Mining-Basics"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Los recursos están asociados al UUID en el índice de catálogo; no hay prueba de extracción ni escaneo en LIVE. Presencia, composición, concentración, rentabilidad y seguridad requieren comprobación en partida.",
+          "pendingFields": [
+            "minerales concretos mostrados al usuario",
+            "escaneo LIVE de composición",
+            "rendimiento y densidad",
+            "riesgos PvP/PvE"
+          ]
         }
       ]
     }
