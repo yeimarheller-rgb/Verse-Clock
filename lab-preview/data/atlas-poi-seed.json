@@ -3970,6 +3970,846 @@
           "https://starcitizen.tools/HDMS-Anderson"
         ]
       }
+    },
+    {
+      "id": "repair-candidate-arccorp-mining-area-045",
+      "name": "ArcCorp Mining Area 045",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Wala",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-arccorp-mining-area-048",
+      "name": "ArcCorp Mining Area 048",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Wala",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-arccorp-mining-area-056",
+      "name": "ArcCorp Mining Area 056",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Wala",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-arccorp-mining-area-061",
+      "name": "ArcCorp Mining Area 061",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Wala",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-arccorp-mining-area-157",
+      "name": "ArcCorp Mining Area 157",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Yela",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-benson-mining-outpost",
+      "name": "Benson Mining Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Yela",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sal-2",
+      "name": "Shubin Mining Facility SAL-2",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Lyria",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sal-5",
+      "name": "Shubin Mining Facility SAL-5",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Lyria",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sm0-10",
+      "name": "Shubin Mining Facility SM0-10",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "microTech",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sm0-13",
+      "name": "Shubin Mining Facility SM0-13",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "microTech",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sm0-18",
+      "name": "Shubin Mining Facility SM0-18",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "microTech",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-sm0-22",
+      "name": "Shubin Mining Facility SM0-22",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "microTech",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-smca-6",
+      "name": "Shubin Mining Facility SMCa-6",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Calliope",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-shubin-mining-facility-smca-8",
+      "name": "Shubin Mining Facility SMCa-8",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Calliope",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-rayari-anvik-research-outpost",
+      "name": "Rayari Anvik Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Calliope",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-rayari-kaltag-research-outpost",
+      "name": "Rayari Kaltag Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Calliope",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-rayari-cantwell-research-outpost",
+      "name": "Rayari Cantwell Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Clio",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-rayari-mcgrath-research-outpost",
+      "name": "Rayari McGrath Research Outpost",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Clio",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-hdms-stanhope",
+      "name": "HDMS-Stanhope",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-hdms-thedus",
+      "name": "HDMS-Thedus",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
+    },
+    {
+      "id": "repair-candidate-hdms-woodruff",
+      "name": "HDMS-Woodruff",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Ita",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://starcitizen.tools/Outposts"
+      ],
+      "verification": "source-listed",
+      "patch": "unverified",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      }
     }
   ]
 }
