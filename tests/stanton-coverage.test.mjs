@@ -25,6 +25,9 @@ test('Stanton keeps raw denominator and credits only located, sourced evidence',
  assert.equal(new Set(repeated.map(atlasKey)).size,repeated.length);
  assert.ok(repeated.every(row=>byKey.get(atlasKey(row))?.id===row.id));
  assert.ok(c.operational>baseline.operational);
+ const euterpe=stantonCoverage(raw,visible,'Euterpe');
+ assert.ok(euterpe.counts.hazards>=1);
+ assert.equal(stantonCoverage(raw,visible,'only:microTech').counts.hazards,1);
  assert.deepEqual(stantonBodies.filter(body=>!at(body)?.stantonIntel?.environment),[]);
  assert.equal(stanton.locations.filter(row=>!at(row.name)).length,0);
  for(const row of stanton.locations)for(const claim of row.claims){
