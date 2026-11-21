@@ -95,3 +95,23 @@ test('Hathor OLP and PAF cards preserve different mission and loot scopes', () =
   assert.ok(ui.includes(field),field+' must render in the UI');
  }
 });
+
+test('Hurston repair guidance never upgrades old API service listings to verified LIVE repairs', () => {
+  const seed = JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json', import.meta.url), 'utf8'));
+  const names = ['HDMS-Edmond', 'HDMS-Hadley', 'HDMS-Oparei'];
+  for (const name of names) {
+    const poi = seed.locations.find(p => p.system === 'Stanton' && p.parent === 'Hurston' && p.name === name);
+    assert.ok(poi, name + ': missing from curated atlas');
+    assert.equal(poi.verification, 'api-catalog-prior-patch', name);
+    assert.match(poi.patch, /4\\.9\\.0/, name + ': source patch missing');
+    assert.equal(poi.services.vehicleServices, 'reported', name);
+    assert.notEqual(poi.repairIntel.ship.status, 'confirmed', name + ': ship repair falsely confirmed');
+    assert.notEqual(poi.repairIntel.groundVehicle.status, 'confirmed', name + ': ground repair falsely confirmed');
+    assert.ok(poi.repairIntel.sources?.length, name + ': service source missing');
+    assert.match(poi.repairIntel.note, /4\\.10\\.3/, name + ': current-patch caveat missing');
+  }
+  for (const poi of seed.locations.filter(p => p.system === 'Stanton' && p.parent === 'Hurston' && /^HDSF-/.test(p.name))) {
+    assert.notEqual(poi.repairIntel?.ship?.status, 'confirmed', poi.name + ': undocumented repair');
+    assert.ok(poi.sourceUrls?.length, poi.name + ': missing identification provenance');
+  }
+});
