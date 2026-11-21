@@ -1,0 +1,24 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+const meta = JSON.parse(readFileSync(new URL('../data/atlas-meta.json', import.meta.url), 'utf8'));
+const c = meta.counts;
+const dimensions = ['withPve','withPvp','withMissions','withLoot','withWeapons','withTrade','withHazards','withServices'];
+
+test('atlas metadata reconciles geographic and actionable coverage', () => {
+  assert.equal(c.total, meta.catalogTotal);
+  assert.equal(c.total, c.actionable + c.geographicOnly);
+  assert.equal(c.total, Object.values(meta.systems).reduce((sum, s) => sum + s.total, 0));
+  assert.equal(c.actionable, Object.values(meta.systems).reduce((sum, s) => sum + s.actionable, 0));
+  for (const key of dimensions) {
+    assert.ok(Number.isInteger(c[key]) && c[key] >= 0 && c[key] <= c.total, key);
+  }
+});
+
+test('atlas gaps are explicitly reported rather than silently treated as verified', () => {
+  const gaps = Object.fromEntries(dimensions.filter(key => c[key] === 0).map(key => [key, 0]));
+  const hathor = meta.researchSummary?.hathor ?? null;
+  process.stdout.write(JSON.stringify({ catalogTotal: c.total, actionable: c.actionable, geographicOnly: c.geographicOnly, zeroCoverage: gaps, hathorResearch: hathor }) + '\n');
+  assert.ok(hathor === null || (Number.isInteger(hathor) && hathor >= 0));
+});
