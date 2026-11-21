@@ -118,6 +118,10 @@ with sync_playwright() as p:
         expect(pg.locator('#mainIntelLocation')).to_contain_text('Ruptura PAF-I')
         expect(dossier).to_contain_text('HDMS-Anderson')
         expect(dossier).not_to_contain_text('Carinite')
+        assert pg.locator('#tacticalPanel').bounding_box()['width'] > vp['width'] * 0.8
+        pg.get_by_role('button', name='Buscar otra ubicación').click()
+        expect(pg.locator('#q')).to_be_focused()
+        pg.locator('#tacticalPanel').scroll_into_view_if_needed()
         pg.screenshot(path=f'/tmp/verse-lab-hathor-{name}.png')
         dossier.get_by_role('button', name='Ruptura OLP', exact=True).click()
         expect(dossier).to_contain_text('Carinite')
