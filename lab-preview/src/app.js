@@ -163,7 +163,7 @@ function chooseSearchResult(item){
 function pick(i){chooseSearchResult(suggestions[i])}
 const serviceIcons={repair:'repair',rearm:'rearm',refuel:'refuel',refinery:'refinery',clinic:'medic',cargo:'cargo'};
 const evidenceState=value=>({confirmed:'confirmed',reported:'possible',possible:'possible',unavailable:'unavailable'}[value]||'unknown');
-const dossierIcons=p=>new Set(tacticalSections(p).flatMap(section=>section.icons||[]));
+const dossierIcons=p=>new Set(sectionsFor(p).flatMap(section=>section.icons||[]));
 let activeFilter='';
 let operationsEnabled=false;
 function setFilterOpen(open){
