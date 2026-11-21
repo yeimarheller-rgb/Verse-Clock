@@ -220,50 +220,14 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
   <span class="cap net" id="net">En línea</span>
  </header>
 
- <section class="panel hero" aria-live="off">
-  <h1 id="place">—</h1>
-  <time id="clock">--:--:--</time>
-  <div class="sub cap"><span id="where">Cargando catálogo…</span><span>Madrid <span id="mad">--:--:--</span></span><span id="date"></span><span id="rate"></span><span id="envMini"></span></div>
- </section>
- <div class="view" aria-hidden="true"></div>
-
- <section class="panel solar" id="solar">
-  <div><div class="ph"><span class="cap">CICLO SOLAR / TELEMETRÍA</span><span class="cap" id="pct"></span></div>
-   <div id="phase">—</div><div class="meter"><div id="bar"></div></div></div>
-  <div class="ev">
-   <div><span class="cap">AMANECER</span><strong id="riseIn">—</strong><span class="cap" id="riseAt"></span></div>
-   <div><span class="cap">ANOCHECER</span><strong id="setIn">—</strong><span class="cap" id="setAt"></span></div>
-  </div>
- </section>
-
- <section id="destinationIntel" class="panel destination-intel" hidden aria-live="polite"><div class="destination-head"><span class="cap">DESTINO SELECCIONADO · INTEL</span><button id="destinationClose" type="button" aria-label="Cerrar ficha de destino">✕</button></div><h2 id="destinationName">—</h2><p id="destinationMeta"></p><div class="destination-climate"><div><span class="cap">CLIMA / ENTORNO DEL CUERPO</span><strong id="destinationClimate">—</strong></div><div><span class="cap">TEMPERATURA EN EL DESTINO</span><strong id="destinationTemperature">—</strong></div></div><div class="destination-stats"><div><span class="cap">RIESGO PvP</span><strong id="destinationPvp">—</strong></div><div><span class="cap">RIESGO PvE</span><strong id="destinationPve">—</strong></div></div><div class="destination-stats destination-stats-extra"><div><span class="cap">CONTROL / FACCIÓN</span><strong id="destinationFaction">—</strong></div><div><span class="cap">ACCESO</span><strong id="destinationAccess">—</strong></div></div><div class="destination-brief"><div><span class="cap">AMENAZA / ENTORNO</span><p id="destinationHazards">Sin datos específicos verificados</p></div><div><span class="cap">PREPARACIÓN DEL PILOTO</span><p id="destinationPrep">Revisar contrato y condiciones antes de entrar</p></div><div><span class="cap">BOTÍN / RECURSOS</span><p id="destinationLoot"></p></div></div><small id="destinationEvidence"></small><p id="destinationNotes"></p><a id="destinationSource" target="_blank" rel="noopener noreferrer">Consultar fuente</a><small class="destination-disclaimer">Inteligencia documental, no radar de actividad en vivo. La hora solar corresponde al último lugar de superficie seleccionado.</small></section>
- <section class="panel tlw" aria-label="Día local de la ubicación">
-  <div class="tl" id="tl"><span class="mk" id="tlRise"></span><span class="mk" id="tlSet"></span><span id="tlNow">▼</span></div>
-  <div class="tll cap"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
- </section>
-
- <dl class="panel info">
-  <div><dt class="cap">Duración del día</dt><dd id="dayLen">—</dd></div>
-  <div><dt class="cap">Tipo</dt><dd id="kind">—</dd></div>
-  <div class="env"><dt class="cap">Gravedad</dt><dd><span id="grav">—</span> <small id="gravHint"></small></dd></div>
-  <div class="env" id="hazWrap" hidden><dt class="cap">Entorno</dt><dd id="haz"></dd></div>
-  <div class="env"><dt class="cap">Coordenadas</dt><dd><span id="coord">—</span> <button id="copyCoord" class="mini" type="button">Copiar</button><br><small id="coordXYZ"></small></dd></div>
-  <div class="env"><dt class="cap">Marcador cuántico</dt><dd><span id="qt">—</span><br><small id="qtRoute"></small></dd></div>
-  <div class="env"><dt class="cap">Seguridad y facciones · Intel</dt><div id="intelReadiness" class="intel-readiness" aria-live="polite"></div><div id="intelTacticalCards" class="intel-tactical-cards" aria-label="Resumen táctico de la ubicación"></div><div id="intelSourceLinks" class="intel-source-links" aria-label="Fuentes de inteligencia"></div><p id="mainIntelApi" class="intel-api" hidden></p><dd id="securityThreat">—</dd><small>Facción: <span id="securityFaction">—</span> · Acceso: <span id="securityAccess">—</span></small><p id="securityNote"></p><div id="securityEvidence"></div><small>La hostilidad depende de misión, reputación y zona. No es detección en vivo.</small></div>
-  <div class="env"><dt class="cap">Riesgo PvP · inteligencia</dt><dd id="pvpRisk">—</dd><small id="pveRisk"></small><br><small>Evaluación documental; no es radar de jugadores en vivo.</small></div>
-  <div class="env"><dt class="cap">Botín y recompensas</dt><dd id="lootStatus">—</dd><small id="lootNote"></small></div>
-  <div class="env src"><small id="envSrc"></small></div>
- </dl>
-
- <section id="tacticalPanel" class="panel location-dossier-panel" aria-labelledby="mainIntelLocation" hidden>
-  <div class="location-dossier-header"><h2 id="mainIntelLocation"></h2><button id="searchAgain" class="mini" type="button">Buscar otra ubicación</button></div>
-  <section id="operationsPanel" aria-label="Modo Operaciones" hidden></section>
-  <div id="locationDossier" hidden></div>
- </section>
- <div id="cards" aria-label="Ubicaciones fijadas"></div>
-
- 
-<div class="atlas-search-stack"><div class="tactical-toolbar">
+ <div class="atlas-search-stack"><div class="search">
+  <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar PAF Lamina, Lazarus, Brio, Chawla…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+  <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
+  <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
+   <button id="filterToggle" type="button" aria-expanded="false" aria-controls="searchFilters">Filtros</button>
+ </div>
+<div id="searchFilters" hidden>
+<div class="tactical-toolbar">
  <label class="stanton-zone">Zona <select id="stantonZone" aria-label="Zona logística">
   <option value="">Todas las zonas</option><option value="Stanton">Todo Stanton</option><option value="lagrange">Puntos Lagrange</option><option value="unassigned">Sin planeta o luna asignados</option>
  </select></label>
@@ -273,11 +237,28 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
   <a href="./iconos.html">Iconografía</a>
  </div>
 </div>
-<div class="search">
-  <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Buscar PAF Lamina, Lazarus, Brio, Chawla…" aria-label="Buscar ubicación" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
-  <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
-  <button id="fav" type="button" aria-pressed="false">Fijar ubicación</button>
+</div>
  </div>
+
+ <section class="panel compact-clock" id="solar" aria-label="Hora local">
+  <div class="clock-reading"><span class="cap" id="where">Hora local</span><time id="clock">—</time></div>
+  <div id="solarEvents" hidden>
+   <strong id="phase"></strong>
+   <span id="riseEvent" hidden>Amanecer en <b id="riseIn"></b></span>
+   <span id="setEvent" hidden>Atardecer en <b id="setIn"></b></span>
+  </div>
+ </section>
+
+ <section id="tacticalPanel" class="panel location-dossier-panel" aria-labelledby="mainIntelLocation">
+  <div class="location-heading">
+   <h1 id="mainIntelLocation">Buscando ubicación…</h1>
+   <p id="locationMeta"></p>
+  </div>
+  <div id="locationDossier"></div>
+ </section>
+
+ <div id="cards" aria-label="Ubicaciones fijadas"></div>
+ <details class="atlas-audit"><summary>Estado del atlas</summary>
 <section class="atlas-progress" aria-label="Progreso del enriquecimiento universal" aria-live="polite">
  <div class="atlas-progress-top"><strong>ENRIQUECIMIENTO DEL ATLAS</strong><span id="atlasProgressPercent">—</span></div>
  <div class="atlas-progress-track" role="progressbar" id="atlasProgressBar" aria-label="Ubicaciones con ficha táctica o de servicios con fuentes" aria-valuemin="0" aria-valuemax="2017" aria-valuenow="0"><span id="atlasProgressFill"></span></div>
@@ -285,7 +266,7 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
  <small id="atlasProgressQuality">Fichas con fuentes y contenido visible en el buscador.</small>
  <details><summary>Cobertura de Stanton</summary><div id="stantonCoverage"></div></details>
  <details><summary>Auditoría del catálogo base</summary><div id="atlasQuality" class="intel-readiness">Cargando catálogo base…</div></details>
-</section></div>
+</section></details>
 
  <section class="panel atlas-hub" aria-label="Explorador universal" hidden aria-hidden="true"><div class="atlas-head"><div><span class="cap">VERSE INTELLIGENCE</span><h2>EXPLORADOR UNIVERSAL</h2></div><span class="cap">Stanton · Pyro · Nyx</span></div><div class="atlas-tabs" role="tablist" aria-label="Explorar el universo"><button type="button" role="tab" id="atlasTabPoi" aria-controls="atlasPanePoi" aria-selected="true">ESTACIONES Y PUESTOS</button><button type="button" role="tab" id="atlasTabIntel" aria-controls="atlasPaneIntel" aria-selected="false">MISIONES Y PLANOS</button></div><div id="atlasPanePoi" role="tabpanel" aria-labelledby="atlasTabPoi"> <section class="panel poi-atlas" aria-label="Atlas de estaciones y puestos"><h2>ATLAS · ESTACIONES Y PUESTOS</h2><div class="poi-controls"><input id="poiQuery" type="search" placeholder="Orbituary, Headhunters, refinería…" aria-label="Buscar estaciones, puestos y facciones"><select id="poiSystem" aria-label="Sistema"><option value="">Todos los sistemas</option><option>Stanton</option><option>Pyro</option><option>Nyx</option></select><select id="poiService" aria-label="Servicio"><option value="">Todos los servicios</option><option value="refinery">Refinería (indicada)</option></select></div><small id="poiCount" class="poi-meta">Cargando ubicaciones…</small><div id="poiResults" class="poi-results"></div></section>
 </div><div id="atlasPaneIntel" role="tabpanel" aria-labelledby="atlasTabIntel" hidden> <section class="panel intel-explorer" aria-label="Atlas de contratos y planos"><div class="intel-head"><h2>ATLAS · CONTRATOS Y PLANOS</h2><span class="cap">Datos documentados · no LIVE</span></div><input id="intelQuery" class="intel-query" type="search" placeholder="Buscar plano, misión, facción o sistema…" aria-label="Buscar planos y misiones"><small id="intelCoverage" class="poi-meta">Cargando contratos…</small><div id="intelSuggestions" class="intel-suggestions" aria-label="Sugerencias de búsqueda"></div><div id="intelResults" class="intel-results" aria-live="polite"><span class="intel-empty">Cargando catálogo de contratos…</span></div></section>
