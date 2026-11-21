@@ -108,7 +108,7 @@ test('Hurston repair guidance never upgrades old API service listings to verifie
     assert.notEqual(poi.repairIntel.ship.status, 'confirmed', name + ': ship repair falsely confirmed');
     assert.notEqual(poi.repairIntel.groundVehicle.status, 'confirmed', name + ': ground repair falsely confirmed');
     assert.ok(poi.repairIntel.sources?.length, name + ': service source missing');
-    assert.match(poi.repairIntel.note, /4\\.10\\.3/, name + ': current-patch caveat missing');
+    assert.match(poi.repairIntel.note, /4\.10\.3/, name + ': current-patch caveat missing');
   }
   for (const poi of seed.locations.filter(p => p.system === 'Stanton' && p.parent === 'Hurston' && /^HDSF-/.test(p.name))) {
     assert.notEqual(poi.repairIntel?.ship?.status, 'confirmed', poi.name + ': undocumented repair');
