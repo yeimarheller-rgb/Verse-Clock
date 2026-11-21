@@ -66,7 +66,7 @@ main > .atlas-search-stack { gap:0!important }
  cursor:pointer;width:fit-content;font:700 13px var(--hud,system-ui);padding:5px 2px;
 }
 #searchFilters .tactical-toolbar { padding:8px 0 }
-main > .compact-clock { display:flex;align-items:center;justify-content:space-between;gap:10px 20px;min-height:66px;padding:9px 13px;border-left:3px solid #70daf1 }
+main > .compact-clock { display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px 20px;min-height:66px;padding:9px 13px;border-left:3px solid #70daf1 }
 .clock-reading { display:grid;gap:3px;min-width:0 }
 .compact-clock #clock { font-size:clamp(22px,4vw,38px);line-height:1.12;letter-spacing:.035em }
 .compact-clock #where { font-size:10px;letter-spacing:.08em;overflow-wrap:anywhere }
@@ -74,10 +74,13 @@ main > .compact-clock { display:flex;align-items:center;justify-content:space-be
 #solarEvents[hidden],#solarEvents [hidden] { display:none }
 #solarEvents #phase { font:700 15px var(--hud,system-ui);color:#ffc36d;margin:0 }
 .solar-next { color:#e1f6ff }
-#solarProgress { width:100%;height:6px;margin-top:3px;accent-color:#71daf1;color:#71daf1 }
-#solarProgress[data-phase="day"] { accent-color:#ffc36d;color:#ffc36d }
-#solarProgress::-webkit-progress-bar { background:#22394b }
-#solarProgress::-webkit-progress-value { background:currentColor }
+#solarTimeline { grid-column:1/-1;min-width:0 }
+#solarTimeline[hidden] { display:none }
+#tl { position:relative;height:7px;border-radius:3px;margin:3px 0 4px;background:#304255 }
+.solar-marker { position:absolute;top:-2px;width:2px;height:11px;background:#f4f7ff;transform:translateX(-50%);opacity:.8 }
+#tlNow { position:absolute;z-index:1;top:-6px;width:2px;height:17px;background:#f4f7ff;transform:translateX(-50%);box-shadow:0 0 8px #7fb4ff }
+#tlNow::before { content:"";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);border:4px solid transparent;border-top-color:#f4f7ff;border-bottom:0 }
+.solar-scale { display:flex;justify-content:space-between;color:#a9c4d4;font:600 11px/1 var(--hud,system-ui);font-variant-numeric:tabular-nums }
 .environment-temperature { color:#ffc36d }
 main > #tacticalPanel { padding:12px;border-top:1px solid #70daf1 }
 .location-heading { display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;margin-bottom:10px }

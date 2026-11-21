@@ -45,6 +45,7 @@ function setClock(solar,reference=null){
   lastScenePaint=0;
   $('where').textContent=solar?'Hora local':reference?'Referencia solar · '+reference.name:'Hora local sin cálculo';
   $('solarEvents').hidden=!cur;
+  $('solarTimeline').hidden=!cur;
   if(!cur)mono($('clock'),'—');
   $('fav').disabled=!exactSolar;
   renderFavs();
@@ -84,7 +85,7 @@ function tick() {
   $('net').textContent = SIM ? 'Hora simulada' : navigator.onLine ? 'En línea' : 'Sin conexión · modo offline';
   if (!cur) return;
   const r = compute(cur, now), st = sunState(cur, r);
-  fast(now);
+  fast(now,r);
   document.documentElement.dataset.phase = st.phase;
   $('phase').textContent = PHASE[st.phase];
   if (!lastScenePaint || now - lastScenePaint >= SCENE_EVERY_MS || now < lastScenePaint) {
@@ -95,23 +96,26 @@ function tick() {
     if (ph) for (const pic of ph.children) pic.style.opacity = (W[pic.dataset.k] || 0).toFixed(3);
   }
 
-  const progress=$('solarProgress');
   $('riseEvent').hidden=r.polar;
   $('setEvent').hidden=r.polar;
-  progress.hidden=r.polar;
-  if(!r.polar){
-    const cycle=r.dayLengthRealMinutes*60;
+  $('tlRise').hidden=$('tlSet').hidden=r.polar;
+  if(r.polar){
+    $('tl').style.removeProperty('background');
+  }else{
     const rise=r.nextStarriseInSeconds, set=r.nextStarsetInSeconds;
-    const daylight=((set-rise)%cycle+cycle)%cycle;
-    const phaseLength=r.isDay?daylight:cycle-daylight;
-    const remaining=Math.max(0,r.isDay?set:rise);
     mono($('riseIn'),rise<=0?'Ahora':dur(rise));
     mono($('setIn'),set<=0?'Ahora':dur(set));
-    progress.value=phaseLength>0?Math.max(0,Math.min(100,100*(1-remaining/phaseLength))):0;
-    progress.dataset.phase=r.isDay?'day':'night';
-    progress.setAttribute('aria-label',r.isDay?'Avance hasta el atardecer':'Avance hasta el amanecer');
     $('riseEvent').classList.toggle('solar-next',!r.isDay);
     $('setEvent').classList.toggle('solar-next',r.isDay);
+
+    const dawn=r.sunriseLocalFraction*100, dusk=100-dawn;
+    const twilight=Math.min(6,(dusk-dawn)/2);
+    $('tlRise').style.left=dawn+'%';
+    $('tlSet').style.left=dusk+'%';
+    $('tl').style.background=`linear-gradient(90deg,
+      var(--night) ${Math.max(0,dawn-4)}%, var(--dawn) ${dawn}%,
+      var(--day) ${dawn+twilight}%, var(--day) ${dusk-twilight}%,
+      var(--dusk) ${dusk}%, var(--night) ${Math.min(100,dusk+4)}%)`;
   }
   const schedule=$('solarSchedule');
   if(schedule&&!r.polar)schedule.textContent='Hora de Madrid · amanecer '+madridTime.format(Date.parse(r.nextStarriseUtc))+' · atardecer '+madridTime.format(Date.parse(r.nextStarsetUtc));
@@ -124,10 +128,10 @@ function tick() {
 // En el juego el día dura mucho menos que en la Tierra (Hurston: 1 s real ≈ 9,7 s de juego).
 // Si el reloj se pinta una vez por segundo, los segundos saltan de ~10 en ~10 y de forma irregular.
 // Por eso la hora local, la línea temporal y las tarjetas se pintan en cada fotograma.
-function fast(now = nowMs()) {
-  if (!cur) return;
-  const r = compute(cur, now);
+function fast(now = nowMs(), r = cur && compute(cur, now)) {
+  if (!r) return;
   mono($('clock'), r.localTime);
+  $('tlNow').style.left=(r.localTimeSeconds/864)+'%';
   for (const el of $('cards').children) { const l = byName(el.dataset.name); if (l) mono(el.querySelector('[data-t]'), compute(l, now).localTime); }
 }
 // Limitar repintados del reloj: evita cálculos DOM en cada frame (60/120 Hz) en iPhone.

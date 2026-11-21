@@ -50,7 +50,7 @@ with sync_playwright() as p:
             search, clock, location = [page.locator(selector).bounding_box() for selector in ['.search','#solar','#tacticalPanel']]
             assert search['y'] + search['height'] <= clock['y'] <= search['y'] + search['height'] + 14
             assert clock['y'] + clock['height'] <= location['y']
-            assert clock['height'] <= 105
+            assert clock['height'] <= 116
             assert page.evaluate('document.documentElement.scrollWidth') <= width
             assert page.locator('#destinationIntel,#mainIntelApi,#intelTacticalCards').count() == 0
             domains = dossier.locator('[data-domain]').evaluate_all('(els) => els.map(el=>el.dataset.domain)')
@@ -85,7 +85,7 @@ with sync_playwright() as p:
             if label in ['seraphim','everus','checkmate']:
                 expect(page.locator('#where')).to_have_text('Hora local sin cálculo')
                 expect(page.locator('#solarEvents')).to_be_hidden()
-                expect(page.locator('#solarProgress')).to_be_hidden()
+                expect(page.locator('#solarTimeline')).to_be_hidden()
             if label=='ruptura':
                 expect(dossier).to_contain_text('S71 Justified')
                 expect(dossier).to_contain_text('HDMS-Anderson')
@@ -149,16 +149,22 @@ with sync_playwright() as p:
             expect(page.locator('#mainIntelLocation')).to_have_text('Lorville')
             expect(page.locator('#riseEvent')).to_be_visible()
             expect(page.locator('#setEvent')).to_be_visible()
-            progress = page.locator('#solarProgress')
-            expect(progress).to_be_visible()
-            expect(progress).to_have_attribute('aria-label', f'Avance hasta el {direction}')
-            before = float(progress.get_attribute('value'))
-            assert 0 < before < 100
-            page.wait_for_function('(value) => document.getElementById("solarProgress").value > value', arg=before)
+            expect(page.locator('#solarTimeline')).to_be_visible()
+            expect(page.locator('.solar-scale span')).to_have_text(['00:00','06:00','12:00','18:00','24:00'])
+            track = page.locator('#tl')
+            assert track.evaluate("el => getComputedStyle(el).backgroundImage").count('rgb(27, 42, 74)') == 2
+            markers = page.locator('#tlRise,#tlSet').evaluate_all('els => els.map(el => parseFloat(el.style.left))')
+            assert 0 < markers[0] < 50 < markers[1] < 100
+            now = page.locator('#tlNow')
+            before = now.evaluate('el => parseFloat(el.style.left)')
+            h,m,s = map(int,page.locator('#clock').get_attribute('aria-label').split(':'))
+            assert abs(before - (h*3600+m*60+s)/864) < 0.15
+            page.wait_for_function('(value) => parseFloat(document.getElementById("tlNow").style.left) > value', arg=before)
+            assert now.bounding_box()['width'] > 0
             verify_layout()
             expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia 34 °C.')
             assert dossier.inner_text().count('34 °C') == 1
-            page.screenshot(path=f'/tmp/verse-lab-solar-{direction}-{device}.png')
+            page.screenshot(path=f'/tmp/verse-lab-ciclo-{direction}-{device}.png')
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

@@ -247,7 +247,14 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
    <strong id="phase"></strong>
    <span id="riseEvent" hidden>Amanecer en <b id="riseIn"></b></span>
    <span id="setEvent" hidden>Atardecer en <b id="setIn"></b></span>
-   <progress id="solarProgress" max="100" value="0" aria-label="Avance del ciclo solar" hidden></progress>
+  </div>
+  <div id="solarTimeline" role="group" aria-label="Ciclo solar de 24 horas locales" hidden>
+   <div id="tl" aria-hidden="true">
+    <span class="solar-marker" id="tlRise"></span>
+    <span class="solar-marker" id="tlSet"></span>
+    <span id="tlNow"></span>
+   </div>
+   <div class="solar-scale" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
   </div>
  </section>
 
