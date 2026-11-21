@@ -48,3 +48,10 @@
   .tactical-filters,.tactical-tools { gap: 6px; }
   .tactical-filters button,#operationsToggle { min-height: 44px; }
 }
+.stanton-zone { display:flex;align-items:center;gap:8px;font-weight:700;color:#d9f2ff }
+.stanton-zone select { min-height:44px;max-width:100%;background:#0c2031;color:#e4f2fa;border:1px solid #46728b;padding:5px 8px;border-radius:4px }
+.stanton-metrics { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:8px }
+.stanton-metrics div { border:1px solid #46728b;padding:7px }
+.stanton-metrics dd { margin:0;display:flex;gap:8px;align-items:center }
+.stanton-metrics progress { height:8px;flex:1;min-width:0;accent-color:#70daf1 }
+.stanton-source { color:#70daf1 }
