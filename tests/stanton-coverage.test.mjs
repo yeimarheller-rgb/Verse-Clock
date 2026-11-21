@@ -8,7 +8,19 @@ const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name
 const catalogue=read('wiki-atlas');
 const catalogueRows=identifyStantonVariants(catalogue.locations);
 const raw=traceStantonParents(catalogueRows.filter(row=>atlasSystem(row.system)==='Stanton'));
-const byKey=new Map([...catalogueRows.filter(row=>!isStantonPlaceholder(row)),...read('atlas-poi-seed').locations].map(row=>[atlasKey(row),{...row,system:atlasSystem(row.system)}]));
+const byKey=new Map(read('atlas-poi-seed').locations.map(row=>[atlasKey(row),row]));
+for(const row of catalogueRows.filter(row=>!isStantonPlaceholder(row))){
+ const key=atlasKey(row);
+ byKey.set(key,{...row,system:atlasSystem(row.system),...byKey.get(key),source:row.source});
+}
+const details=read('atlas-enriched');
+const enrichedByUuid=new Map(details.locations.map(row=>[row.id,row]));
+for(const p of byKey.values()){
+ const detail=enrichedByUuid.get(p.source?.uuid);
+ if(detail&&details.version===catalogue.version)Object.assign(p,{
+  missions:detail.missions,resources:detail.resources,nearbyLocations:detail.nearbyLocations,intelDetailSource:detail.source,
+ });
+}
 mergeTacticalAtlas(byKey,read('atlas-services'),catalogue.version);
 const baseline=stantonCoverage(raw,traceStantonParents([...byKey.values()]));
 const stanton=read('stanton-intel');
@@ -49,4 +61,31 @@ test('rearm coverage requires site evidence and does not infer from landing',()=
  assert.ok(!inStantonZone(at('Everus Harbor'),'Daymar'));
  assert.ok(inStantonZone(at('HUR-L1 Green Glade Station'),'Hurston'));
  assert.ok(inStantonZone(at('HUR-L1 Green Glade Station'),'lagrange'));
+});
+
+test('UUID binds the Hurston batch to the inventory and excludes historical and malformed facts',()=>{
+ const indexed=new Map(raw.map(row=>[row.id,row]));
+ assert.equal(indexed.size,raw.length);
+ assert.equal(enrichedByUuid.size,details.locations.length);
+ for(const row of raw)assert.equal(enrichedByUuid.get(row.id)?.source.uuid,row.id);
+ const batch=stanton.locations.filter(row=>row.uuid);
+ assert.ok(batch.length>=14);
+ assert.equal(new Set(batch.map(row=>row.uuid)).size,batch.length);
+ for(const row of batch){
+  assert.equal(indexed.get(row.uuid)?.name,row.name);
+  assert.equal(at(row.name)?.stantonIntel.uuid,row.uuid);
+ }
+ const clinic=at('HUR-L4 Melodic Fields Clinic');
+ const c=stantonCoverage([indexed.get(clinic.id)],[clinic]);
+ assert.equal(c.counts.trade,1);
+ assert.equal(c.counts.logistics,0);
+ assert.equal(c.counts.repair,0);
+ assert.equal(c.counts.hazards,0);
+ const mismatched={...clinic,id:'different',source:{uuid:'different'}};
+ assert.equal(stantonCoverage([indexed.get(clinic.id)],[mismatched]).operational,0);
+ const noEvidence={...clinic,stantonIntel:{claims:[
+  {field:'trade',status:'documented',text:'Sin fuente válida',sources:['https://starcitizen.tools/']},
+  {field:'missions',status:'historical',text:'Otra versión',sources:['https://starcitizen.tools/Evict_Illegal_Occupants']},
+ ]}};
+ assert.equal(stantonCoverage([indexed.get(clinic.id)],[noEvidence]).operational,0);
 });

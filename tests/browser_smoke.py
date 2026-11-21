@@ -177,6 +177,18 @@ with sync_playwright() as p:
             expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia 34 °C.')
             assert dossier.inner_text().count('34 °C') == 1
             page.screenshot(path=f'/tmp/verse-lab-reloj-original-{direction}-{device}.png')
+        for search_name, claim, patch in [
+            ('HDSF-Elbridge', 'Evict Illegal Occupants', '4.10.3'),
+            ('Klescher Rehabilitation Facility', 'Inmate Maintenance Opportunity', '4.10.3'),
+            ('Everus Harbor Clinic', 'ParaMed Medical Device', '4.10.3'),
+            ('HUR-L4 Melodic Fields Clinic', 'MedPen (Hemozal)', '4.10.3'),
+        ]:
+            query(search_name, search_name)
+            expect(dossier).to_contain_text(claim)
+            expect(dossier).to_contain_text(patch)
+            assert dossier.inner_text().count(claim) == 1
+            verify_layout()
+        page.screenshot(path=f'/tmp/verse-lab-clinica-hur-l4-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

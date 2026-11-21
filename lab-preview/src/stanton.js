@@ -80,17 +80,24 @@ const iconsByField={
  pve:'pve',pvp:'pvp',missions:'mission',loot:'loot',weapons:'weapons',trade:'trade',
  repair:'repair',refuel:'refuel',rearm:'rearm',hazards:'danger',logistics:'hangar',access:'landing',
 };
+const locationUuid=p=>p.source?.uuid||p.id;
+const httpsSource=value=>{
+ try { const url=new URL(value);return url.protocol==='https:'&&Boolean(url.pathname.slice(1)); }
+ catch { return false; }
+};
+
 export function mergeStanton(byKey, data) {
  if(data?.schemaVersion!==1)return;
+ const byUuid=new Map([...byKey].flatMap(([key,p])=>atlasSystem(p.system)==='Stanton'&&locationUuid(p)?[[locationUuid(p),key]]:[]));
  for(const row of data.locations){
-  const key=atlasKey({system:'Stanton',name:row.name});
+  const key=row.uuid?byUuid.get(row.uuid):atlasKey({system:'Stanton',name:row.name});
   const original=byKey.get(key);
   if(!original)continue;
   const services={...original.services};
   for(const claim of row.claims){
-   if(claim.status==='documented')for(const service of claim.services||[])services[service]='confirmed';
+   if(claim.status==='documented'&&claim.sources?.every(httpsSource)&&claim.sources.length)for(const service of claim.services||[])services[service]='confirmed';
   }
-  byKey.set(key,{...original,services,stantonIntel:{...row,checkedAt:data.checkedAt}});
+  byKey.set(key,{...original,services,stantonIntel:{...row,checkedAt:row.checkedAt||data.checkedAt}});
  }
 }
 export function stantonSections(p) {
@@ -106,18 +113,20 @@ export function stantonSections(p) {
 
 export function stantonCoverage(raw, visible, zone='Stanton'){
  const catalog=raw.filter(p=>inStantonZone(p,zone));
- const matches=new Map(visible.filter(p=>inStantonZone(p,zone)).map(p=>[atlasKey(p),p]));
+ const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
- let geographic=0,operational=0,reviewedAll=0;
+ let geographic=0,enriched=0,operational=0,reviewedAll=0;
  for(const row of catalog){
-  const key=atlasKey(row),p=matches.get(key);
+  const p=matches.get(locationUuid(row));
   if(!p||isStantonPlaceholder(row))continue;
   geographic++;
+  if(p.stantonIntel||p.serviceIntel||p.hathor||
+   (p.intelDetailSource?.uuid===locationUuid(row)&&[p.missions,p.resources,p.nearbyLocations].some(items=>items?.length)))enriched++;
   const facts=new Set();
   const grades=new Set();
   for(const claim of p.stantonIntel?.claims||[]){
-   if(!claim.sources.length)continue;
+   if(!(claim.field in stantonFields)||!(claim.status in statusText)||!claim.text?.trim()||!claim.sources?.length||!claim.sources.every(httpsSource))continue;
    grades.add(claim.status);
    if(claim.status!=='historical'){facts.add(claim.field);for(const service of claim.services||[])facts.add(service);}
   }
@@ -137,5 +146,5 @@ export function stantonCoverage(raw, visible, zone='Stanton'){
   for(const field of facts)counts[field]++;
   for(const grade of grades)sources[grade]++;
  }
- return {total:catalog.length,geographic,operational,reviewedAll,counts,sources};
+ return {total:catalog.length,geographic,enriched,operational,reviewedAll,counts,sources};
 }

@@ -244,7 +244,7 @@ function renderStantonCoverage(){
  const summary=document.createElement('p');
  summary.textContent=c.operational+' / '+c.total+' operativas · '+(c.total?(100*c.operational/c.total).toFixed(1):'0')+' % · objetivo 90 %';
  const list=document.createElement('dl');list.className='stanton-metrics';
- const metrics={'Geografía con identidad única':c.geographic,'Campos aplicables revisados':c.reviewedAll,
+ const metrics={'Geografía con identidad única':c.geographic,'Fichas con datos añadidos':c.enriched,'Campos aplicables revisados':c.reviewedAll,
   ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
   'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
  for(const [label,count] of Object.entries(metrics)){
