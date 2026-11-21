@@ -28,6 +28,19 @@ export function inStantonZone(p, zone) {
   zone==='only:'+body || zone===body || stantonGroups[zone]?.includes(body));
 }
 
+export const isStantonPlaceholder=p=>atlasSystem(p.system)==='Stanton'&&/^<=\s*(uninitialized|placeholder)\s*=>$/i.test(p.name);
+
+export function identifyStantonVariants(rows) {
+ const names=new Map();
+ for(const p of rows){
+  if(atlasSystem(p.system)!=='Stanton')continue;
+  const key=normalize(p.name);
+  names.set(key,(names.get(key)||0)+1);
+ }
+ return rows.map(p=>atlasSystem(p.system)==='Stanton'&&names.get(normalize(p.name))>1&&p.id
+  ? {...p,catalogVariant:p.id} : p);
+}
+
 export function traceStantonParents(rows) {
  const byName=new Map();
  for(const p of rows){
@@ -84,7 +97,7 @@ export function stantonSections(p) {
   text:claim.text, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
   sources:claim.sources.map(url=>({url,name:new URL(url).hostname})),
  }));
- if(p.stantonIntel?.reviewNote)sections.push({title:'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
+ if(p.stantonIntel?.reviewNote)sections.push({title:p.stantonIntel.reviewedWithoutEvidence.length>1?'Servicios de nave':'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
   status:'Investigado sin corroboración LIVE',sources:[{url:p.stantonIntel.reviewSource,name:'Star Citizen Wiki'}]});
  return sections;
 }
@@ -92,16 +105,12 @@ export function stantonSections(p) {
 export function stantonCoverage(raw, visible, zone='Stanton'){
  const catalog=raw.filter(p=>inStantonZone(p,zone));
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)).map(p=>[atlasKey(p),p]));
- const occurrences=new Map();
- for(const row of raw){const key=atlasKey(row);occurrences.set(key,(occurrences.get(key)||0)+1)}
- // Repeated names are retained in the input denominator. Until they have stable UI identities,
- // a dossier matched solely by name cannot be safely credited to any of those raw rows.
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
  let geographic=0,operational=0,reviewedAll=0;
  for(const row of catalog){
   const key=atlasKey(row),p=matches.get(key);
-  if(!p||occurrences.get(key)!==1)continue;
+  if(!p||isStantonPlaceholder(row))continue;
   geographic++;
   const facts=new Set();
   const grades=new Set();
