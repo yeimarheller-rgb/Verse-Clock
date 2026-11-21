@@ -26,8 +26,9 @@ def records(payload):
     if isinstance(payload, list):
         return payload
     if isinstance(payload, dict):
-        data = payload.get("data", [])
-        return data if isinstance(data, list) else []
+        if "data" not in payload or not isinstance(payload["data"], list):
+            raise ValueError("Expected paginated API response with data array")
+        return payload["data"]
     raise ValueError("Unexpected API response")
 
 
