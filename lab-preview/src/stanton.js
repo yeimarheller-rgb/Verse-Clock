@@ -13,7 +13,7 @@ export function stantonBody(p) {
  if(atlasSystem(p.system)!=='Stanton')return '';
  const namedBody=knownBodies.get(normalize(p.name));
  if(namedBody)return namedBody;
- for(const value of [p.stantonResolvedBody,p.stantonIntel?.body,p.serviceIntel?.body,p.parent,p.body]){
+ for(const value of [p.stantonResolvedBody,p.stantonIntel?.body,p.serviceIntel?.body,p.parent,p.body,p.name]){
   const key=normalize(value);
   if(knownBodies.has(key))return knownBodies.get(key);
   const orbital=/^(hur|cru|arc|mic)[ -]?l\d(?:$| )/.exec(key)?.[1];
