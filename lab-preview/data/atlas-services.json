@@ -1,4 +1,3 @@
-HEAD:lab-preview/data/atlas-services.json
 {"schemaVersion":1,"checkedAt":"2026-11-21","live":"4.10.3","locations":[
   {"id":2,"name":"Levski","system":"Nyx","body":"Delamar","type":"cities","services":["repair","refuel","refinery","clinic","cargo"],"tradeTerminal":true,"trade":[[778,"Levski","4.10.1"]]},
   {"id":59,"name":"People's Service Station Alpha","system":"Nyx","body":"People's Service Station Alpha","type":"space_stations","services":["repair","refuel","refinery","clinic"],"tradeTerminal":true,"trade":[[830,"Admin - People's Service Station Alpha","4.10.1"]]},
