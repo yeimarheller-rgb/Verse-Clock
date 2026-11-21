@@ -14,6 +14,7 @@ export const dossierGroups = {
 };
 export const shipServices = {repair:'Reparación de nave',refuel:'Repostaje',rearm:'Rearme'};
 const serviceLabels={...serviceNames,...shipServices};
+const indexedResourceLabels={mineable:'Minería',harvestable:'Recolección',salvage:'Salvamento',remains:'Restos'};
 const iconGroup={
   danger:'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
   mission:'missions', mining:'missions', loot:'loot', weapons:'loot', cave:'loot',
@@ -133,9 +134,24 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     .filter(claim=>claim.field==='resources'&&claim.status!=='historical')
     .flatMap(claim=>claim.resourceNames||[]).map(normalize));
   const catalogResources=(p.resources||[]).filter(resource=>!describedResources.has(normalize(typeof resource==='string'?resource:resource?.name)));
+  const indexedResources=new Map();
+  const remainingResources=catalogResources.filter(resource=>{
+    const label=indexedResourceLabels[resource?.kind];
+    if(!label||resource.source?.provider!=='Star Citizen Wiki API'||resource.source.endpoint!=='/api/commodities')return true;
+    if(!indexedResources.has(label))indexedResources.set(label,[]);
+    indexedResources.get(label).push(resource.name);
+    return false;
+  });
+  if(indexedResources.size){
+    const categories=[...indexedResources].map(([label,names])=>label+' — '+names.join(', '));
+    add('loot',categories.join(' · ')+'. Disponibilidad y cantidad por verificar.',{
+      title:'Recursos catalogados por UUID',status:p.resourceIndexVersion,
+      sources:['https://api.star-citizen.wiki/api/commodities'],
+    });
+  }
   for(const [group,title,rows] of [
     ['missions','Actividades y contratos',[...(p.activities||[]),...(p.missions||[])]],
-    ['loot','Botín específico',p.lootItems],['loot','Recursos catalogados',catalogResources],
+    ['loot','Botín específico',p.lootItems],['loot','Recursos catalogados',remainingResources],
     ['services','Mercancías',p.commodities],['services','Tiendas',p.shops],
     ['combat','Enemigos catalogados',p.npcs],['navigation','Instalaciones vinculadas',p.nearbyLocations],
     ['navigation','Consejos tácticos',p.tacticalTips],

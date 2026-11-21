@@ -244,6 +244,8 @@ with sync_playwright() as p:
             expect(resources).to_contain_text('OreBit')
             assert resources.inner_text().count('Hadanite') == 1
             assert resources.inner_text().count('Janalite') == 1
+            expect(resources).to_contain_text('Recursos catalogados por UUID')
+            assert 'no garantiza aparición ni cantidad' not in resources.inner_text()
             verify_layout()
             if place in ['Gonzo','Ludlow']:
                 page.evaluate('window.scrollTo(0,0)')
