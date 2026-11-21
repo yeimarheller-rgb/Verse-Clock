@@ -43,6 +43,27 @@
         "repair": "vehicle-services-listed; actual repair operation not individually tested",
         "inventory": "not verified",
         "pricing": "not verified"
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -97,6 +118,27 @@
         "workaround": "Restart game or use another location",
         "patch": "4.10.3",
         "scope": "location explicitly named by RSI Support"
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -143,6 +185,27 @@
           "https://starcitizen.tools/Pyro",
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -157,7 +220,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-gaslight",
@@ -171,7 +255,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-rat-s-nest",
@@ -201,6 +306,27 @@
         "repair": "vehicle-services-listed; actual repair operation not individually tested",
         "inventory": "not verified",
         "pricing": "not verified"
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -215,7 +341,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-megumi-refueling",
@@ -229,7 +376,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-starlight-service-station",
@@ -270,6 +438,27 @@
         "sources": [
           "https://starcitizen.tools/Pyro"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -284,7 +473,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-dudley-daughters",
@@ -298,7 +508,28 @@
         "https://starcitizen.tools/Pyro"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
+      }
     },
     {
       "id": "stanton-arc-l1",
@@ -990,6 +1221,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1033,6 +1285,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1076,6 +1349,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1119,6 +1413,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1162,6 +1477,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1205,6 +1541,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1248,6 +1605,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
@@ -1773,6 +2151,27 @@
           "https://starcitizen.tools/WiDoW"
         ],
         "verifiedAsOf": "2026-11-20"
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No hay verificación específica en LIVE de reparación, reabastecimiento o rearme para esta estación. No utilizar como punto de recuperación de emergencia sin comprobar servicios en la instancia.",
+        "sources": []
       }
     },
     {
