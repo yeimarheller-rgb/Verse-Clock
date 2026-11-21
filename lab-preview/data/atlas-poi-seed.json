@@ -1680,7 +1680,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1739,7 +1741,8 @@
           "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
-        ]
+        ],
+        "lootScopeWarning": "PAF loot table does not apply to the OLP; orbital platform and mining cave have separate activities"
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -1779,6 +1782,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -1795,7 +1806,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1814,7 +1827,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -1867,7 +1886,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -1907,6 +1931,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -1923,7 +1955,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -1942,7 +1976,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -1995,7 +2035,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2035,6 +2080,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2051,7 +2104,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2070,7 +2125,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2123,7 +2184,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2163,6 +2229,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2179,7 +2253,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2238,7 +2314,8 @@
           "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
-        ]
+        ],
+        "lootScopeWarning": "PAF loot table does not apply to the OLP; orbital platform and mining cave have separate activities"
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2278,6 +2355,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2294,7 +2379,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2313,7 +2400,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2366,7 +2459,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2406,6 +2504,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2422,7 +2528,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2441,7 +2549,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2494,7 +2608,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2534,6 +2653,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2550,7 +2677,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2569,7 +2698,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2622,7 +2757,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2662,6 +2802,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2678,7 +2826,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2737,7 +2887,8 @@
           "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
-        ]
+        ],
+        "lootScopeWarning": "PAF loot table does not apply to the OLP; orbital platform and mining cave have separate activities"
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2777,6 +2928,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2793,7 +2952,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2812,7 +2973,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2865,7 +3032,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -2905,6 +3077,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -2921,7 +3101,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -2940,7 +3122,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -2993,7 +3181,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3033,6 +3226,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -3049,7 +3250,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -3068,7 +3271,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -3121,7 +3330,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3161,6 +3375,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -3177,7 +3399,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -3236,7 +3460,8 @@
           "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
-        ]
+        ],
+        "lootScopeWarning": "PAF loot table does not apply to the OLP; orbital platform and mining cave have separate activities"
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3276,6 +3501,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -3292,7 +3525,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -3311,7 +3546,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -3364,7 +3605,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3404,6 +3650,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -3420,7 +3674,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -3439,7 +3695,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -3492,7 +3754,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3532,6 +3799,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
@@ -3548,7 +3823,9 @@
         "https://starcitizen.tools/Hathor_Group",
         "https://starcitizen.tools/Planetary_alignment_facilities",
         "https://api.star-citizen.wiki/missions/red-level-contract-clear-pafs-recover-cargo-and-deliver-to-olp?version=4.8.1-LIVE.11952564",
-        "https://www.sc-advisory.space/"
+        "https://www.sc-advisory.space/",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       ],
       "verification": "source-listed",
       "patch": "4.10 · verificar persistencia",
@@ -3567,7 +3844,13 @@
         "sources": [
           "https://www.citadelsc.com/es/guides/hathor",
           "https://starcitizen.tools/Align_%26_Mine"
-        ]
+        ],
+        "provenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "PAF category-wide possible loot, not per-location guaranteed drops",
+          "patchVerification": "not verified in 4.10.3 LIVE",
+          "checkedOn": "2026-11-21"
+        }
       },
       "tacticalIntel": {
         "title": "Botín PAF: tablas por tipo de instalación, no garantía individual",
@@ -3620,7 +3903,12 @@
         "requirements": [
           "Armas FPS y munición",
           "Herramienta tractora y transporte para batería GP-XP"
-        ]
+        ],
+        "pveProvenance": {
+          "source": "https://starcitizen.tools/Planetary_alignment_facilities",
+          "scope": "Align & Mine PAF activity; encounter not guaranteed in a given instance",
+          "patchVerification": "not verified in 4.10.3 LIVE"
+        }
       },
       "operationalNotes": {
         "sourceScope": "Hathor Align & Mine; referencias generales por tipo de instalación, no garantía de disponibilidad por instancia",
@@ -3660,6 +3948,14 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "patchNotes4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "checkedOn": "2026-11-21",
+        "scope": "Known issue affecting landing services generally; NOT confirmation of repair at this site",
+        "issue": "Repair/refuel/restock may be missing or delayed in mobiGlas; wait for hangar doors to close, then reopen Landing Services",
+        "localRepairAvailability": "unverified",
+        "procedureSource": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
       }
     },
     {
