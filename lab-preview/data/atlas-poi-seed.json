@@ -15,7 +15,8 @@
       },
       "sourceUrls": [
         "https://starcitizen.tools/Pyro",
-        "https://uexcorp.space/mining/refineries"
+        "https://uexcorp.space/mining/refineries",
+        "https://sc-datahub.com/tools/locations/rr-p3-leo"
       ],
       "verification": "source-listed",
       "patch": "4.10.3",
@@ -25,6 +26,23 @@
           "https://starcitizen.tools/4.10"
         ],
         "caveat": "Notas de 4.10 documentan la zona disputada y una sala de recompensas. Sin garantía de botín ni jugadores presentes."
+      },
+      "serviceDirectory4103": {
+        "source": "https://sc-datahub.com/tools/locations/rr-p3-leo",
+        "patch": "4.10.3",
+        "reviewedOn": "2026-11-21",
+        "status": "listed-in-community-directory",
+        "services": [
+          "vehicleServices",
+          "refinery",
+          "clinic",
+          "weaponsShop",
+          "shipItemsShop",
+          "commodityTrading"
+        ],
+        "repair": "vehicle-services-listed; actual repair operation not individually tested",
+        "inventory": "not verified",
+        "pricing": "not verified"
       }
     },
     {
@@ -39,7 +57,8 @@
       },
       "sourceUrls": [
         "https://starcitizen.tools/Pyro",
-        "https://uexcorp.space/mining/refineries"
+        "https://uexcorp.space/mining/refineries",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
       ],
       "verification": "source-listed",
       "patch": "4.10.3",
@@ -71,6 +90,13 @@
           "https://starcitizen.tools/Pyro",
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "knownIssue4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "issue": "ASOP terminals may not show Deliver option",
+        "workaround": "Restart game or use another location",
+        "patch": "4.10.3",
+        "scope": "location explicitly named by RSI Support"
       }
     },
     {
@@ -156,10 +182,26 @@
       "operator": "Rough & Ready",
       "services": {},
       "sourceUrls": [
-        "https://starcitizen.tools/Pyro"
+        "https://starcitizen.tools/Pyro",
+        "https://staging.sc-datahub.com/tools/locations/rr-p5-l5"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "serviceDirectory4103": {
+        "source": "https://staging.sc-datahub.com/tools/locations/rr-p5-l5",
+        "patch": "4.10.3",
+        "reviewedOn": "2026-11-21",
+        "status": "listed-in-community-directory",
+        "services": [
+          "vehicleServices",
+          "clinic",
+          "weaponsShop",
+          "commodityTrading"
+        ],
+        "repair": "vehicle-services-listed; actual repair operation not individually tested",
+        "inventory": "not verified",
+        "pricing": "not verified"
+      }
     },
     {
       "id": "pyro-endgame",
@@ -864,7 +906,8 @@
       },
       "sourceUrls": [
         "https://uexcorp.space/mining/refineries",
-        "https://starcitizen.tools/4.10"
+        "https://starcitizen.tools/4.10",
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
       ],
       "verification": "source-listed",
       "patch": "4.10.3",
@@ -897,6 +940,13 @@
         "sources": [
           "https://starcitizen.tools/4.10"
         ]
+      },
+      "knownIssue4103": {
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+        "issue": "ASOP terminals may not show Deliver option",
+        "workaround": "Restart game or use another location",
+        "patch": "4.10.3",
+        "scope": "location explicitly named by RSI Support"
       }
     },
     {
