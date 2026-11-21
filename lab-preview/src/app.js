@@ -1,4 +1,4 @@
-import {inStantonZone,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
@@ -304,7 +304,7 @@ function renderStantonCoverage(){
   result.append(bar,count+' / '+c.total);row.append(name,result);list.append(row);
  }
  const note=document.createElement('small');
- note.textContent='Registros originales del catálogo API. Los nombres repetidos sin identidad resuelta siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
+ note.textContent='Registros originales del catálogo API. Los registros sin nombre de juego siguen en el denominador. Las variantes con el mismo nombre conservan su UUID. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
  host.replaceChildren(summary,list,note);
 }
 $('operationsToggle').addEventListener('click',()=>{
@@ -347,17 +347,17 @@ function updateMenu(){
  /paf|olp|attritus|lamina|ruptura|vivere/i.test(p.name)?'hathor paf olp':''
  ].filter(Boolean).join(' ')}));
  const unique=new Map();
- for(const item of [...pois,...solar]){const key=[normalize(item.system),normalize(item.name)].join('|');if(!unique.has(key))unique.set(key,item)}
+ for(const item of [...pois,...solar]){const key=atlasKey(item.value);if(!unique.has(key))unique.set(key,item)}
  suggestions=[...unique.values()].map(item=>{
   const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
   const text=[n,parent,sys,tags].join(' ');
   const matches=q.split(/\s+/).every(term=>text.includes(term));
   const score=n===q?0:n.startsWith(q)?1:n.includes(q)?2:tags.includes(q)?3:matches?4:99;
   return{item,score};
- }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||Number(Boolean(b.item.value.serviceIntel||b.item.value.hathor))-Number(Boolean(a.item.value.serviceIntel||a.item.value.hathor))||a.item.name.localeCompare(b.item.name,'es')).slice(0,16).map(x=>x.item);
+ }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||Number(Boolean(b.item.value.serviceIntel||b.item.value.hathor))-Number(Boolean(a.item.value.serviceIntel||a.item.value.hathor))||a.item.name.localeCompare(b.item.name,'es')).slice(0,activeFilter?100:16).map(x=>x.item);
  menu.replaceChildren();cursor=-1;
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
- suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');if(item.kind==='poi'){
+ suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
   const icon=resultIcon(item.value);
   const state=['repair','refuel','rearm'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
   name.prepend(tacticalIcon(icon,{size:20,state}));name.className='tactical-label';
@@ -544,6 +544,25 @@ function renderLocationDossier(p){
  if(p.serviceIntel){
   const note=document.createElement('small');note.textContent='UEX · consulta '+p.serviceIntel.checkedAt+' · LIVE '+p.serviceIntel.live+' en la fecha de consulta · servicios reportados';
   host.append(note);
+ }
+ if(p.system==='Stanton'){
+  const known=new Set(p.stantonIntel?.claims.map(claim=>claim.field)||[]);
+  for(const key of ['repair','refuel','rearm'])if(['confirmed','reported'].includes(p.services?.[key]))known.add(key);
+  if(p.serviceIntel?.tradeTerminal||p.serviceIntel?.trade?.length)known.add('trade');
+  if(p.serviceIntel?.services.some(name=>['clinic','cargo','refinery'].includes(name)))known.add('logistics');
+  if(p.hathor){
+   for(const field of ['pve','pvp','missions','loot','access'])known.add(field);
+   if(!p.name.endsWith('OLP'))known.add('weapons');
+  }
+  const reviewed=new Set(p.stantonIntel?.reviewedWithoutEvidence||[]);
+  const pending=Object.entries(stantonFields).filter(([key])=>!known.has(key)&&!reviewed.has(key)).map(([,title])=>title);
+  if(pending.length){
+   const details=document.createElement('details');details.className='stanton-pending';
+   const title=document.createElement('summary');title.textContent='Campos pendientes de verificar';
+   const copy=document.createElement('p');copy.textContent=pending.join(' · ');
+   details.append(title,copy);host.append(details);
+   host.hidden=false;$('tacticalPanel').hidden=false;
+  }
  }
  for(const section of sections){
   const block=document.createElement('section');block.className='location-dossier-block';
@@ -780,8 +799,10 @@ async function loadAtlas(){
  try{
   const r=await fetch('./data/wiki-atlas.json',{cache:'no-cache'});
   if(r.ok){const d=await r.json();if(d.schemaVersion!==1||!Array.isArray(d.locations)||!d.locations.length)throw Error('Invalid API catalog');
-   version=d.version||'';rawStantonCatalog=traceStantonParents(d.locations.filter(p=>atlasSystem(p.system)==='Stanton'));
-   for(const entry of d.locations){if(!entry.name||!entry.system)continue;const p={...entry,system:atlasSystem(entry.system)};const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
+   version=d.version||'';
+   const catalog=identifyStantonVariants(d.locations);
+   rawStantonCatalog=traceStantonParents(catalog.filter(p=>atlasSystem(p.system)==='Stanton'));
+   for(const entry of catalog){if(!entry.name||!entry.system||isStantonPlaceholder(entry))continue;const p={...entry,system:atlasSystem(entry.system)};const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
  }catch(err){console.warn('Atlas API snapshot unavailable; curated catalog retained',err)}
  try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
