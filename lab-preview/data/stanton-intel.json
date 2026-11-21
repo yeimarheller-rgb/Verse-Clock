@@ -553,6 +553,23 @@
           ],
           "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
           "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+        },
+        {
+          "field": "access",
+          "status": "reported",
+          "title": "Acceso y terminales de instalación",
+          "text": "Plataforma mediana y aterrizaje en superficie; zona de armisticio y frío extremo. Consola comercial, terminal Covalex y servicio Platinum Bay de vehículos terrestres. La ficha documental enumera mantenimiento de nave al aterrizar. Datos documentales, no prueba de servicios en LIVE; no se garantiza compatibilidad con naves capitales ni funcionamiento actual del terminal.",
+          "sources": [
+            "https://starcitizen.tools/ArcCorp_Mining_Area_045"
+          ],
+          "patch": "Sin versión LIVE verificable en la fuente",
+          "uncertainty": "Verificar in situ en parche actual los servicios, acceso, tamaño de plataforma y estado de terminales.",
+          "pending": [
+            "NPC y hostilidad",
+            "misiones locales",
+            "botín y armas",
+            "validación LIVE de servicios"
+          ]
         }
       ]
     },
@@ -576,6 +593,23 @@
           ],
           "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
           "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+        },
+        {
+          "field": "access",
+          "status": "reported",
+          "title": "Acceso y terminales de instalación",
+          "text": "Plataforma mediana y aterrizaje en superficie; zona de armisticio y frío extremo. Consola comercial, terminal Covalex y Platinum Bay para vehículos terrestres. Mantenimiento de nave listado en la ficha documental. Datos documentales, no prueba de servicios en LIVE; no se garantiza compatibilidad con naves capitales ni funcionamiento actual del terminal.",
+          "sources": [
+            "https://starcitizen.tools/ArcCorp_Mining_Area_048"
+          ],
+          "patch": "Sin versión LIVE verificable en la fuente",
+          "uncertainty": "Verificar in situ en parche actual los servicios, acceso, tamaño de plataforma y estado de terminales.",
+          "pending": [
+            "NPC y hostilidad",
+            "misiones locales",
+            "botín y armas",
+            "validación LIVE de servicios"
+          ]
         }
       ]
     },
@@ -599,6 +633,23 @@
           ],
           "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
           "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+        },
+        {
+          "field": "access",
+          "status": "reported",
+          "title": "Acceso y terminales de instalación",
+          "text": "Plataforma mediana y aterrizaje en superficie; zona de armisticio y frío extremo. Consola comercial, terminal Covalex y Platinum Bay para vehículos terrestres. Mantenimiento de nave listado en la ficha documental. Datos documentales, no prueba de servicios en LIVE; no se garantiza compatibilidad con naves capitales ni funcionamiento actual del terminal.",
+          "sources": [
+            "https://starcitizen.tools/ArcCorp_Mining_Area_056"
+          ],
+          "patch": "Sin versión LIVE verificable en la fuente",
+          "uncertainty": "Verificar in situ en parche actual los servicios, acceso, tamaño de plataforma y estado de terminales.",
+          "pending": [
+            "NPC y hostilidad",
+            "misiones locales",
+            "botín y armas",
+            "validación LIVE de servicios"
+          ]
         }
       ]
     },
@@ -1833,6 +1884,23 @@
           ],
           "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
           "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+        },
+        {
+          "field": "access",
+          "status": "reported",
+          "title": "Acceso y terminales de instalación",
+          "text": "Plataformas medianas y grandes, aterrizaje en superficie, sin hangares. Consola de comercio y terminal de entregas Covalex; Platinum Bay para vehículos terrestres. Reparación, rearme y combustible figuran como servicios solicitables al aterrizar. Datos documentales, no prueba de servicios en LIVE; no se garantiza compatibilidad con naves capitales ni funcionamiento actual del terminal.",
+          "sources": [
+            "https://starcitizen.tools/HDMS-Oparei"
+          ],
+          "patch": "Sin versión LIVE verificable en la fuente",
+          "uncertainty": "Verificar in situ en parche actual los servicios, acceso, tamaño de plataforma y estado de terminales.",
+          "pending": [
+            "NPC y hostilidad",
+            "misiones locales",
+            "botín y armas",
+            "validación LIVE de servicios"
+          ]
         }
       ]
     },
