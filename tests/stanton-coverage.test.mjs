@@ -47,4 +47,6 @@ test('rearm coverage requires site evidence and does not infer from landing',()=
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Daymar'));
  assert.ok(!inStantonZone(at('Shubin Mining Facility SCD-1'),'only:Crusader'));
  assert.ok(!inStantonZone(at('Everus Harbor'),'Daymar'));
+ assert.ok(inStantonZone(at('HUR-L1 Green Glade Station'),'Hurston'));
+ assert.ok(inStantonZone(at('HUR-L1 Green Glade Station'),'lagrange'));
 });
