@@ -708,8 +708,33 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Escala logística ArcCorp",
+          "text": "Estación orbital sobre Area18 con hangar hasta tamaño L según la ficha de servicios. Tiene ascensores de carga, centro de carga, gestión de naves y reparación/rearme/repostaje solicitados al aterrizar. No ofrece refinería ni generación de vehículos terrestres. No presupongas hangar XL para naves capitales: confirma el atraque compatible antes de desplazar una nave grande.",
+          "sources": [
+            "https://starcitizen.tools/Baijini_Point",
+            "https://www.citadelsc.com/en/map/baijini-point"
+          ],
+          "patch": "4.10.3 (consulta de directorios)",
+          "uncertainty": "Tamaños y servicios documentados; disponibilidad y compatibilidad de nave en sesión LIVE no comprobadas."
+        },
+        {
+          "field": "medical",
+          "status": "documented",
+          "title": "Clínica y regeneración",
+          "text": "Baijini Point Clinic es una instalación hija con punto de regeneración hospitalaria identificado en datos de 4.10.2. Para establecer el respawn, usa el terminal médico correspondiente y confirma el traslado de impronta antes de salir de la estación.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/baijini-point-clinic",
+            "https://starcitizen.tools/Medical"
+          ],
+          "patch": "4.10.2-LIVE.12881860",
+          "uncertainty": "Servicio identificado en datos de 4.10.2; operación del terminal en 4.10.3 no comprobada."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Bountiful Harvest Hydroponics",
@@ -1390,8 +1415,32 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "medical",
+          "status": "documented",
+          "title": "Recuperación médica",
+          "text": "Green Imperial Medical ofrece atención sanitaria de nivel T2 dentro de Grim HEX. El lugar también cuenta con gestión de naves, reparación, rearme y repostaje; úsalo como escala de recuperación en la zona de Yela, verificando disponibilidad de cada servicio al llegar.",
+          "sources": [
+            "https://starcitizen.tools/Grim_HEX"
+          ],
+          "patch": "4.10.3 (consulta documental)",
+          "uncertainty": "No se ha probado el servicio en un servidor LIVE actual."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso y precauciones",
+          "text": "Grim HEX está integrada en un asteroide del cinturón de Yela, con hangares y plataformas de aterrizaje. Algunos corredores están despresurizados y sin gravedad según la ficha de la estación; conserva el traje y casco antes de explorar áreas no seguras. Es una base frecuentada por forajidos, pero no se infiere presencia PvP actual.",
+          "sources": [
+            "https://starcitizen.tools/Grim_HEX",
+            "https://starcitizen.tools/GrimHex"
+          ],
+          "patch": "4.10.3 (consulta documental)",
+          "uncertainty": "La distribución exacta de zonas despresurizadas puede haber cambiado; confirmar dentro del juego."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HDMS-Anderson",
