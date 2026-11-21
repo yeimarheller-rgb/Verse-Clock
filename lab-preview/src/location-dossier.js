@@ -56,7 +56,12 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     const state=p.services?.[key];
     if(meaningful(state)||operations&&key in shipServices)services.set(key,{label:serviceLabels[key],state:state||'unknown'});
   }
+  const directTerminals=new Set(p.stantonIntel?.claims.map(claim=>claim.terminalId).filter(Boolean));
   for(const section of sections){
+    if(section.title==='Comercio'&&serviceIntel?.trade?.length&&serviceIntel.trade.every(([id])=>directTerminals.has(id))){
+      addSources(section.sources);
+      continue;
+    }
     if(!section.icons?.length){
       const text=[serviceIntel?.padTypes&&'Plataformas registradas: '+serviceIntel.padTypes.replaceAll(',',', '),
         !hasMaintenance&&serviceIntel?.services.some(key=>key in shipServices)&&'Abre Servicios de aterrizaje desde el asiento de piloto tras aterrizar.'].filter(Boolean).join('. ');
