@@ -429,6 +429,7 @@ function renderTacticalCards(p,sec,loot){
   const op=p.operationalNotes||{};
   cards.push(['intel','HATHOR · TIPO DE INSTALACIÓN',isOlp?'OLP: plataforma láser orbital. La actividad depende de alinear tres PAF del mismo conjunto.':'PAF: instalación planetaria de alineación. Completar las tres PAF del conjunto antes de operar la OLP.',false,'Guía de actividad, no estado LIVE del evento']);
   if(op.missionContext)cards.push(['missions','CONTRATO · ALCANCE',op.missionContext,false,'No atribuir misión activa a esta instancia']);
+  if(!isOlp && op.missionEvidence4103){const m=op.missionEvidence4103;cards.push(['missions','MISIÓN 4.10.3 · FOXWELL',m.title+' · '+m.type+' · '+m.evidence+' · Recompensa posible: '+m.rewards,false,m.locationScope+' · Fuente: '+m.source]);}
   if(op.failureRisks?.length)cards.push(['hazards','FALLOS Y RIESGOS REPORTADOS',op.failureRisks.join(' · '),false,'Incidencias comunitarias, sin frecuencia verificada']);
   if(p.lootIntel?.categories?.length)cards.push(['loot','BOTÍN · POSIBLES CATEGORÍAS',p.lootIntel.categories.join(' · '),false,'Tabla de actividad, NO inventario garantizado']);
   if(p.lootIntel?.caveat)cards.push(['loot','LÍMITE DE EVIDENCIA',p.lootIntel.caveat,false,'Sin prueba de aparición individual en 4.10.3 LIVE']);
