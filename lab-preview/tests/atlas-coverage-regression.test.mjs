@@ -22,3 +22,23 @@ test('atlas gaps are explicitly reported rather than silently treated as verifie
   process.stdout.write(JSON.stringify({ catalogTotal: c.total, actionable: c.actionable, geographicOnly: c.geographicOnly, zeroCoverage: gaps, hathorResearch: hathor }) + '\n');
   assert.ok(hathor === null || (Number.isInteger(hathor) && hathor >= 0));
 });
+
+test('curated tactical records retain traceable provenance and unique location keys', () => {
+  const seed = JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json', import.meta.url), 'utf8'));
+  const seen = new Set();
+  for (const poi of seed.locations) {
+    const key = [poi.system, poi.name].map(x => String(x || '').trim().toLowerCase()).join('|');
+    assert.ok(poi.system && poi.name, 'location must have a system and name');
+    assert.ok(!seen.has(key), 'duplicate curated location: ' + key);
+    seen.add(key);
+    assert.ok(poi.patch && poi.verification, 'missing patch/verification: ' + key);
+    const sources = [...(poi.sourceUrls || []), ...(poi.tacticalIntel?.sources || [])];
+    assert.ok(sources.length > 0, 'missing evidence source: ' + key);
+    for (const url of sources) {
+      assert.match(url, /^https:\/\/[^\s/]+(?:\/[^\s]*)?$/, 'invalid evidence URL: ' + key);
+    }
+    for (const [service, status] of Object.entries(poi.services || {})) {
+      assert.ok(['reported', 'confirmed', 'unverified'].includes(status), 'unknown service evidence state: ' + key + ' / ' + service);
+    }
+  }
+});
