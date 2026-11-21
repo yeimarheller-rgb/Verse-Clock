@@ -467,12 +467,12 @@ function renderPoi(){
 }
 for(const el of [poiQuery,poiSystem,poiService])el.addEventListener('input',renderPoi);
 function updateAtlasProgress(d){
- const total=Number(d.catalogTotal)||2017,count=Math.max(0,Math.min(total,Number(d.enrichedCount)||0)),percent=total?100*count/total:0;
+ const total=Number(d.catalogTotal)||2017,count=Math.max(0,Math.min(total,Number(d.counts?.verifiedOperationalExcludingCommodityAssociations)||0)),percent=total?100*count/total:0;
  $('atlasProgressBar').dataset.loaded='true';$('atlasProgressBar').setAttribute('aria-valuemax',String(total));$('atlasProgressBar').setAttribute('aria-valuenow',String(count));
  $('atlasProgressFill').style.width=percent.toFixed(2)+'%';$('atlasProgressPercent').textContent=percent.toFixed(1)+'%';
- $('atlasProgressCount').textContent=count.toLocaleString('es-ES')+' / '+total.toLocaleString('es-ES')+' ubicaciones consultadas';
+ $('atlasProgressCount').textContent=count.toLocaleString('es-ES')+' / '+total.toLocaleString('es-ES')+' con información operativa documentada';
  $('atlasProgressUpdated').textContent=d.generatedAt?'Actualizado: '+new Date(d.generatedAt).toLocaleString('es-ES'):'Fecha desconocida';
- const c=d.coverage;if(c)$('atlasProgressQuality').textContent='Con misiones: '+(c.missions||0)+' · Con recursos: '+(c.resources||0)+' · Con lugares vinculados: '+(c.nearby||0)+' · Consultado ≠ información completa';
+ const c=d.counts;if(c)$('atlasProgressQuality').textContent='PvE: '+(c.withPve||0)+' · PvP: '+(c.withPvp||0)+' · Misiones: '+(c.withMissions||0)+' · Botín: '+(c.withLoot||0)+' · Armas: '+(c.withWeapons||0)+' · Comercio: '+(c.withTrade||0)+' · Recursos asociados sin prueba operativa: '+(c.resourceAssociationsOnly||0)+' · No equivale a fichas completas';
 }
 async function mergeFreshIntel(d){
  if(!Array.isArray(d.locations)||!poiData?.length)return;
