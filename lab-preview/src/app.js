@@ -365,10 +365,31 @@ function tacticalHudIcon(title){
  const path=document.createElementNS('http://www.w3.org/2000/svg','path');
  path.setAttribute('d',tacticalIconPaths[key]);svg.append(path);return svg;
 }
+function updateNewcomerFieldGuide(p){
+ const guide=document.getElementById('intelNewcomerLocation');
+ if(!guide)return;
+ const name=String(p.name||p.displayName||'esta ubicación');
+ const repair=p.repairIntel||{};
+ const ship=repair.ship;
+ const shipVerified=ship?.status==='verified'&&Boolean(ship.verifiedPatch)&&Array.isArray(ship.sources)&&ship.sources.length>0;
+ const missions=Array.isArray(p.missions)?p.missions:[];
+ const activities=Array.isArray(p.activities)?p.activities:[];
+ const hasCategoryMission=Boolean(p.operationalNotes?.missionEvidence4103?.source);
+ const bullets=[
+  'Ubicación seleccionada: '+name+'.',
+  missions.length?'Hay '+missions.length+' contratos catalogados; comprueba requisitos y disponibilidad en el juego.':activities.length?'Hay '+activities.length+' actividades catalogadas; confirma su disponibilidad antes de viajar.':hasCategoryMission?'Existe documentación de misiones para esta categoría de instalación, pero no se ha confirmado su asignación aquí.':'No hay misiones específicas documentadas en esta ficha.',
+  shipVerified?'Reparación de naves verificada para el parche '+ship.verifiedPatch+'; comprueba compatibilidad y servicio en el juego.':'Reparación de naves NO confirmada aquí: no dependas de este lugar para una emergencia.',
+  p.lootIntel?.categories?.length?'Hay categorías de botín catalogadas; la aparición de objetos no está garantizada.':'No hay botín específico documentado para esta ficha.',
+  'Consulta los riesgos PvE/PvP de abajo; no son detección de amenazas en vivo.'
+ ];
+ guide.replaceChildren();
+ for(const line of bullets){const li=document.createElement('li');li.textContent=line;guide.append(li)}
+}
 function renderTacticalCards(p,sec,loot){
  const root=$('intelTacticalCards'),readiness=$('intelReadiness'),sources=$('intelSourceLinks');
  if(!root||!readiness||!sources)return;
  root.replaceChildren();sources.replaceChildren();readiness.replaceChildren();
+ updateNewcomerFieldGuide(p);
  const intel=p.lootIntel,missions=p.missions||[],resources=p.resources||[],amenities=p.amenities||[];
  const hasPve=Boolean(p.tacticalIntel?.threats?.some(x=>!/(?:sin (?:medici[oó]n|datos|confirmaci[oó]n)|no (?:hay|se dispone|existe)|desconocid)/i.test(x))||sec.pve&&!/sin datos|sin verificar|desconocid/i.test(sec.pve));
  const hasPvp=Boolean(sec.pvp&&!/sin datos|sin verificar|desconocid/i.test(sec.pvp));
