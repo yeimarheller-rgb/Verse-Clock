@@ -50,7 +50,7 @@ with sync_playwright() as p:
             search, clock, location = [page.locator(selector).bounding_box() for selector in ['.search','#solar','#tacticalPanel']]
             assert search['y'] + search['height'] <= clock['y'] <= search['y'] + search['height'] + 14
             assert clock['y'] + clock['height'] <= location['y']
-            assert clock['height'] <= 116
+            assert clock['height'] <= 250
             assert page.evaluate('document.documentElement.scrollWidth') <= width
             assert page.locator('#destinationIntel,#mainIntelApi,#intelTacticalCards').count() == 0
             domains = dossier.locator('[data-domain]').evaluate_all('(els) => els.map(el=>el.dataset.domain)')
@@ -150,7 +150,7 @@ with sync_playwright() as p:
             expect(page.locator('#riseEvent')).to_be_visible()
             expect(page.locator('#setEvent')).to_be_visible()
             expect(page.locator('#solarTimeline')).to_be_visible()
-            expect(page.locator('.solar-scale span')).to_have_text(['00:00','06:00','12:00','18:00','24:00'])
+            expect(page.locator('.tll span')).to_have_text(['00:00','06:00','12:00','18:00','24:00'])
             track = page.locator('#tl')
             assert track.evaluate("el => getComputedStyle(el).backgroundImage").count('rgb(27, 42, 74)') == 2
             markers = page.locator('#tlRise,#tlSet').evaluate_all('els => els.map(el => parseFloat(el.style.left))')
@@ -161,10 +161,22 @@ with sync_playwright() as p:
             assert abs(before - (h*3600+m*60+s)/864) < 0.15
             page.wait_for_function('(value) => parseFloat(document.getElementById("tlNow").style.left) > value', arg=before)
             assert now.bounding_box()['width'] > 0
+            reading = page.locator('#clock')
+            assert reading.evaluate('el => parseFloat(getComputedStyle(el).fontSize)') >= (44 if device == 'iphone' else 75)
+            hero = page.locator('#solar .hero').bounding_box()
+            events = page.locator('#solarEvents').bounding_box()
+            timeline = page.locator('#solarTimeline').bounding_box()
+            assert timeline['y'] >= max(hero['y'] + hero['height'], events['y'] + events['height']) - 1
+            assert timeline['width'] >= hero['width']
+            if device == 'iphone':
+                assert events['y'] >= hero['y'] + hero['height'] - 1
+            else:
+                assert abs(events['y'] - hero['y']) <= 1
+                assert events['x'] >= hero['x'] + hero['width']
             verify_layout()
             expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia 34 °C.')
             assert dossier.inner_text().count('34 °C') == 1
-            page.screenshot(path=f'/tmp/verse-lab-ciclo-{direction}-{device}.png')
+            page.screenshot(path=f'/tmp/verse-lab-reloj-original-{direction}-{device}.png')
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

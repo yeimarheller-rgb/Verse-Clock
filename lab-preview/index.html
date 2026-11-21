@@ -241,20 +241,28 @@ main{align-content:start!important}main>.atlas-search-stack{align-self:start!imp
   <div id="suggestions" class="suggest" role="listbox" aria-label="Sugerencias de ubicaciones" hidden></div>
  </div>
 
- <section class="panel compact-clock" id="solar" aria-label="Hora local">
-  <div class="clock-reading"><span class="cap" id="where">Hora local</span><time id="clock">—</time></div>
-  <div id="solarEvents" hidden>
-   <strong id="phase"></strong>
-   <span id="riseEvent" hidden>Amanecer en <b id="riseIn"></b></span>
-   <span id="setEvent" hidden>Atardecer en <b id="setIn"></b></span>
+ <section class="solar-console" id="solar" aria-label="Reloj y ciclo solar">
+  <div class="panel hero">
+   <span class="cap" id="where">Hora local</span>
+   <time id="clock">—</time>
   </div>
-  <div id="solarTimeline" role="group" aria-label="Ciclo solar de 24 horas locales" hidden>
-   <div id="tl" aria-hidden="true">
-    <span class="solar-marker" id="tlRise"></span>
-    <span class="solar-marker" id="tlSet"></span>
+  <div class="panel solar" id="solarEvents" hidden>
+   <div class="ph">
+    <span class="cap">Ciclo solar</span>
+    <strong id="phase"></strong>
+   </div>
+   <div class="ev">
+    <div id="riseEvent" hidden><span class="cap">Amanecer en</span><strong id="riseIn"></strong></div>
+    <div id="setEvent" hidden><span class="cap">Anochecer en</span><strong id="setIn"></strong></div>
+   </div>
+  </div>
+  <div class="panel tlw" id="solarTimeline" role="group" aria-label="Ciclo solar de 24 horas locales" hidden>
+   <div class="tl" id="tl" aria-hidden="true">
+    <span class="mk" id="tlRise"></span>
+    <span class="mk" id="tlSet"></span>
     <span id="tlNow"></span>
    </div>
-   <div class="solar-scale" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+   <div class="tll cap" aria-hidden="true"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
   </div>
  </section>
 
