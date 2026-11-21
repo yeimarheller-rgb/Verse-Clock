@@ -111,6 +111,11 @@ with sync_playwright() as p:
         open_tactical('hathor aberdeen', 'Ruptura PAF-I')
         expect(dossier).to_contain_text('S71 Justified')
         expect(dossier).to_contain_text('XL Purchase Order')
+        assert int(pg.locator('#atlasProgressBar').get_attribute('aria-valuenow')) >= 100
+        assert 'dest=stanton' in pg.url
+        pg.reload()
+        expect(dossier).to_contain_text('XL Purchase Order')
+        expect(pg.locator('#mainIntelLocation')).to_contain_text('Ruptura PAF-I')
         expect(dossier).to_contain_text('HDMS-Anderson')
         expect(dossier).not_to_contain_text('Carinite')
         pg.screenshot(path=f'/tmp/verse-lab-hathor-{name}.png')
