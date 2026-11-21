@@ -404,7 +404,8 @@ function renderTacticalCards(p,sec,loot){
   for(const [label,entry] of [['REPARACIÓN NAVES',ri.ship],['REPARACIÓN VEHÍCULOS',ri.groundVehicle],['REPARACIÓN MANUAL',ri.field]]){
    if(!entry)continue;
    const confirmed=entry.status==='verified' && Boolean(entry.verifiedPatch) && Array.isArray(entry.sources) && entry.sources.length>0;
-   const detail=confirmed?'CONFIRMADO · '+(entry.method||'servicio')+' · parche '+entry.verifiedPatch:'NO VERIFICADO · no usar como punto de reparación de emergencia';
+   const sourced=entry.status==='source-listed' && Array.isArray(entry.sources) && entry.sources.length>0;
+   const detail=confirmed?'CONFIRMADO EN PARCHE · '+entry.verifiedPatch:sourced?'DOCUMENTADO EN FUENTE · '+(entry.padSizes?'pads '+entry.padSizes+' · ':'')+'pendiente de prueba LIVE':'NO VERIFICADO · no usar como punto de reparación de emergencia';
    cards.push(['services',label,detail,confirmed,'Verificar servicio, vehículo admitido y parche antes de desplazarse']);
   }
  }
