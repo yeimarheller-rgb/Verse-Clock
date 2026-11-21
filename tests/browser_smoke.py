@@ -1,7 +1,7 @@
 # Arranca la web en Chromium (tamaño iPhone y escritorio) y falla si no inicia de verdad.
 # Uso: python3 tests/browser_smoke.py http://localhost:8000/
 import re, sys
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import expect, sync_playwright
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:8000/'
 fails = []
@@ -101,6 +101,41 @@ with sync_playwright() as p:
                 fails.append(f'{name}: no aparece Amioshi Plague, recurso API ligado a Jumptown por UUID')
         if pg.locator('#poiQuery').is_visible():
             fails.append(f'{name}: sigue visible el buscador inferior duplicado')
+        def open_tactical(query, result):
+            pg.locator('#q').fill(query)
+            options = pg.locator('#suggestions button').filter(has_text=result)
+            options.first.click(timeout=8000)
+            expect(pg.locator('#mainIntelLocation')).to_contain_text(result)
+
+        dossier = pg.locator('#locationDossier')
+        open_tactical('hathor aberdeen', 'Ruptura PAF-I')
+        expect(dossier).to_contain_text('S71 Justified')
+        expect(dossier).to_contain_text('XL Purchase Order')
+        expect(dossier).to_contain_text('HDMS-Anderson')
+        expect(dossier).not_to_contain_text('Carinite')
+        pg.screenshot(path=f'/tmp/verse-lab-hathor-{name}.png')
+        dossier.get_by_role('button', name='Ruptura OLP', exact=True).click()
+        expect(dossier).to_contain_text('Carinite')
+        expect(dossier.get_by_role('link', name='Citadel · minerales')).to_have_attribute('href', 'https://www.citadelsc.com/es/guides/hathor')
+        dossier.get_by_role('button', name='HDMS-Anderson', exact=True).click()
+        expect(dossier).to_contain_text('Reparación de nave')
+        expect(dossier).not_to_contain_text('Valakkar')
+        open_tactical('reparacion daymar', 'Shubin Mining Facility SCD-1')
+        expect(dossier).to_contain_text('Reparación de nave')
+        open_tactical('Seraphim', 'Seraphim Station')
+        expect(dossier).to_contain_text('Admin - Seraphim')
+        expect(dossier).to_contain_text('Reparación de nave')
+        pg.screenshot(path=f'/tmp/verse-lab-seraphim-{name}.png')
+        open_tactical('checkmate station', 'Checkmate')
+        expect(dossier).to_contain_text('Placas 1, 2 y 3')
+        expect(dossier).to_contain_text('Reparación de nave')
+        pg.screenshot(path=f'/tmp/verse-lab-checkmate-{name}.png')
+        open_tactical('Levski', 'Levski')
+        expect(dossier).to_contain_text('Reparación de nave')
+        open_tactical('Lazarus Complex', 'Lazarus Complex')
+        expect(dossier).to_be_hidden()
+        if pg.evaluate('document.documentElement.scrollWidth') > vp['width'] + 1:
+            fails.append(f'{name}: desborde horizontal al navegar por las fichas')
         pg.screenshot(path=f'/tmp/verse-lab-{name}.png',full_page=True)
         print(f'LAB {name}: {box}')
         pg.close()
