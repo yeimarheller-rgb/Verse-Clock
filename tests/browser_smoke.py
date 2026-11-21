@@ -293,6 +293,20 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-stanton-facilities-{name.split()[0]}-{device}.png', full_page=True)
+        for name, terminal in [
+            ('ARC-L5 Yellow Core Clinic', 'Pharmacy - ARC-L5'),
+            ('MIC-L3 Endless Odyssey Clinic', 'Pharmacy - MIC-L3'),
+            ('Orison General', 'Pharmacy - Orison General Hospital'),
+        ]:
+            query(name, name)
+            pharmacy = dossier.locator('[data-domain="services"]')
+            expect(pharmacy).to_contain_text(terminal)
+            expect(pharmacy).to_contain_text('Pancea MedGel Canister')
+            expect(pharmacy.get_by_text('Farmacia y MedGel para naves', exact=True)).to_have_count(1)
+            expect(pharmacy).not_to_contain_text('Hospital y regeneración')
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton-pharmacy-{name.split()[0]}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

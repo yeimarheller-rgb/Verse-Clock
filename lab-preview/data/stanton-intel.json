@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-21",
+  "checkedAt": "2026-11-22",
   "live": "4.10.3-LIVE.13165946",
   "locations": [
     {
@@ -6243,10 +6243,26 @@
           "destinations": [
             "ARC-L1 Wide Forest Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - ARC-L1» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/d6961b07-6b08-4a44-b658-9610bb3bc49a",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "ARC-L1 Wide Forest Station"
+          ]
         }
       ],
       "uuid": "d6961b07-6b08-4a44-b658-9610bb3bc49a",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6265,10 +6281,26 @@
           "destinations": [
             "ARC-L2 Lively Pathway Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - ARC-L2» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/62db4948-277a-4bc5-b6c9-d376eaf76c86",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "ARC-L2 Lively Pathway Station"
+          ]
         }
       ],
       "uuid": "62db4948-277a-4bc5-b6c9-d376eaf76c86",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6287,10 +6319,26 @@
           "destinations": [
             "MIC-L1 Shallow Frontier Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - MIC-L1» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/e7f2a424-66ec-41d0-8626-3d64eba09b9b",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "MIC-L1 Shallow Frontier Station"
+          ]
         }
       ],
       "uuid": "e7f2a424-66ec-41d0-8626-3d64eba09b9b",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6309,10 +6357,26 @@
           "destinations": [
             "MIC-L2 Long Forest Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - MIC-L2» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/b89b1905-66fb-4612-bc82-5468e314e6b8",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "MIC-L2 Long Forest Station"
+          ]
         }
       ],
       "uuid": "b89b1905-66fb-4612-bc82-5468e314e6b8",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6331,10 +6395,26 @@
           "destinations": [
             "MIC-L4 Red Crossroads Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - MIC-L4» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/e21f2806-e5d0-4f8d-a711-cbd55cfb2ea0",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "MIC-L4 Red Crossroads Station"
+          ]
         }
       ],
       "uuid": "e21f2806-e5d0-4f8d-a711-cbd55cfb2ea0",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6353,10 +6433,26 @@
           "destinations": [
             "MIC-L5 Modern Icarus Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - MIC-L5» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/57f1b283-1d39-4b7d-9623-4738c8708fe5",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "MIC-L5 Modern Icarus Station"
+          ]
         }
       ],
       "uuid": "57f1b283-1d39-4b7d-9623-4738c8708fe5",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6375,10 +6471,26 @@
           "destinations": [
             "CRU-L1 Ambitious Dream Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - CRU-L1» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/0b839881-49a2-4974-9d59-5d37721dde6d",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "CRU-L1 Ambitious Dream Station"
+          ]
         }
       ],
       "uuid": "0b839881-49a2-4974-9d59-5d37721dde6d",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6397,10 +6509,26 @@
           "destinations": [
             "CRU-L4 Shallow Fields Station"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - CRU-L4» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/78e502ef-98ee-4d72-8da1-5f1a150eee2d",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "CRU-L4 Shallow Fields Station"
+          ]
         }
       ],
       "uuid": "78e502ef-98ee-4d72-8da1-5f1a150eee2d",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6411,20 +6539,35 @@
           "field": "logistics",
           "status": "documented",
           "title": "Hospital y regeneración",
-          "text": "El catálogo registra el hospital de New Babbage como punto de regeneración. Brentworth Pharmacy figura con ParaMed Medical Device y OxyPen en listados de 4.10.3. Comprueba el terminal y el stock al llegar.",
+          "text": "El catálogo registra el hospital de New Babbage como punto de regeneración. Comprueba el terminal y el destino de la impronta al llegar.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/new-babbage",
-            "https://starcitizen.tools/ParaMed_Medical_Device",
-            "https://starcitizen.tools/Oxypen"
+            "https://api.star-citizen.wiki/locations/new-babbage"
           ],
           "patch": "4.10.3-LIVE.13165946",
+          "destinations": [
+            "New Babbage"
+          ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Brentworth Pharmacy - New Babbage» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave. También figura OxyPen.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/20049797-8919-4e2e-875b-e2d7b7b54dd8",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister",
+            "https://starcitizen.tools/Oxypen"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
           "destinations": [
             "New Babbage"
           ]
         }
       ],
       "uuid": "20049797-8919-4e2e-875b-e2d7b7b54dd8",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Empire Health Services Medstation",
@@ -6442,10 +6585,26 @@
           "destinations": [
             "Area18"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Empire Hospital Pharmacy - Area 18» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/73cb1196-062e-42c9-99dc-cf66802807d7",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Area18"
+          ]
         }
       ],
       "uuid": "73cb1196-062e-42c9-99dc-cf66802807d7",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Green Imperial Medical",
@@ -6463,10 +6622,26 @@
           "destinations": [
             "Grim HEX"
           ]
+        },
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - GrimHEX» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/0b21cc36-fe5d-4b73-8a7d-8edd724094fe",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Grim HEX"
+          ]
         }
       ],
       "uuid": "0b21cc36-fe5d-4b73-8a7d-8edd724094fe",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "orbital": true
     },
     {
@@ -6489,6 +6664,271 @@
       ],
       "uuid": "ac4eff81-cea3-4dc8-9a2f-a7a4ed665fb2",
       "checkedAt": "2026-11-21"
+    },
+    {
+      "name": "ARC-L4 Faint Glen Clinic",
+      "uuid": "642fa3a6-f9c5-42f2-8685-1dcd01f475cc",
+      "checkedAt": "2026-11-22",
+      "body": "ARC-L4 Faint Glen Station",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - ARC-L4» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/642fa3a6-f9c5-42f2-8685-1dcd01f475cc",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "ARC-L4 Faint Glen Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ARC-L5 Yellow Core Clinic",
+      "uuid": "258dc922-4fd6-4f66-a822-abaf8db9f6c4",
+      "checkedAt": "2026-11-22",
+      "body": "ARC-L5 Yellow Core Station",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - ARC-L5» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/258dc922-4fd6-4f66-a822-abaf8db9f6c4",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "ARC-L5 Yellow Core Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baijini Point Clinic",
+      "uuid": "a5473302-e063-4c25-a932-b54c47042955",
+      "checkedAt": "2026-11-22",
+      "body": "Baijini Point",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Baijini Point» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/a5473302-e063-4c25-a932-b54c47042955",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Baijini Point"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CRU-L5 Beautiful Glen Clinic",
+      "uuid": "9926b1c9-a4de-497b-9c0e-eef252dbec4c",
+      "checkedAt": "2026-11-22",
+      "body": "CRU-L5 Beautiful Glen Station",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - CRU-L5» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/9926b1c9-a4de-497b-9c0e-eef252dbec4c",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "CRU-L5 Beautiful Glen Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MIC-L3 Endless Odyssey Clinic",
+      "uuid": "e30b4352-7cfc-4e14-aea4-199d11576be5",
+      "checkedAt": "2026-11-22",
+      "body": "MIC-L3 Endless Odyssey Station",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - MIC-L3» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/e30b4352-7cfc-4e14-aea4-199d11576be5",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "MIC-L3 Endless Odyssey Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Magnus Gateway Clinic",
+      "uuid": "9eb50da4-db00-43fd-919e-3781937bc6b2",
+      "checkedAt": "2026-11-22",
+      "body": "Nyx Gateway",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Nyx Gateway (Stanton)» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/9eb50da4-db00-43fd-919e-3781937bc6b2",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Nyx Gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Port Tressler Clinic",
+      "uuid": "c000ea75-90f8-49ab-9225-a5e938273dd1",
+      "checkedAt": "2026-11-22",
+      "body": "Port Tressler",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Port Tressler» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/c000ea75-90f8-49ab-9225-a5e938273dd1",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Port Tressler"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pyro Gateway Clinic",
+      "uuid": "7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
+      "checkedAt": "2026-11-22",
+      "body": "Pyro Gateway",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Pyro Gateway (Stanton)» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Pyro Gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Seraphim Clinic",
+      "uuid": "348d9b9d-8e33-4e39-855c-f6eb06a3a5a8",
+      "checkedAt": "2026-11-22",
+      "body": "Seraphim Station",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Seraphim» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/348d9b9d-8e33-4e39-855c-f6eb06a3a5a8",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Seraphim Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Terra Gateway Clinic",
+      "uuid": "20dcd70b-1478-409b-830c-281354c04480",
+      "checkedAt": "2026-11-22",
+      "body": "Terra Gateway",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "El terminal «Pharmacy - Terra Gateway (Stanton)» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/20dcd70b-1478-409b-830c-281354c04480",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Terra Gateway"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orison General",
+      "uuid": "1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+      "checkedAt": "2026-11-22",
+      "body": "Orison",
+      "claims": [
+        {
+          "field": "trade",
+          "status": "documented",
+          "title": "Farmacia y MedGel para naves",
+          "text": "En Cloudview Center, el terminal «Pharmacy - Orison General Hospital» lista ParaMed Medical Device y Pancea MedGel Canister para reponer el suministro de las camas médicas de nave.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+            "https://starcitizen.tools/ParaMed_Medical_Device",
+            "https://starcitizen.tools/Pancea_MedGel_Canister",
+            "https://starcitizen.tools/Orison_General"
+          ],
+          "patch": "4.10.3",
+          "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Orison"
+          ]
+        }
+      ]
     }
   ]
 }

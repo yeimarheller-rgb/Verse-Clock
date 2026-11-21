@@ -198,3 +198,25 @@ test('medical destinations are matched to the site UUID and do not imply ship su
   assert.equal(result.counts.repair+result.counts.refuel+result.counts.rearm,0,name);
  }
 });
+
+test('documented pharmacy stock resolves to the clinic UUID without implying ship maintenance',()=>{
+ const pharmacies=stanton.locations.filter(row=>row.claims.some(claim=>claim.title==='Farmacia y MedGel para naves'));
+ assert.ok(pharmacies.length>=22);
+ for(const row of pharmacies){
+  const site=atId.get(row.uuid);
+  const record=raw.find(location=>location.id===row.uuid);
+  const claim=row.claims.find(claim=>claim.title==='Farmacia y MedGel para naves');
+  assert.equal(site?.name,row.name);
+  assert.deepEqual(claim.destinations,[record.parent],row.name);
+  assert.ok(claim.sources.includes('https://api.star-citizen.wiki/locations/'+row.uuid),row.name);
+  assert.equal(claim.patch,'4.10.3',row.name);
+  assert.match(claim.text,/ParaMed Medical Device.*Pancea MedGel Canister/);
+  const result=stantonCoverage([record],[{...site,stantonIntel:{claims:[claim]}}]);
+  assert.equal(result.counts.trade,1,row.name);
+  for(const field of ['logistics','repair','refuel','rearm'])assert.equal(result.counts[field],0,row.name);
+ }
+ const gateway=at('Magnus Gateway Clinic');
+ const pharmacy=gateway.stantonIntel.claims.find(claim=>claim.field==='trade');
+ assert.match(pharmacy.text,/Nyx Gateway \(Stanton\)/);
+ assert.deepEqual(pharmacy.destinations,['Nyx Gateway']);
+});
