@@ -232,6 +232,8 @@ with sync_playwright() as p:
                 section.locator('summary').click()
             expect(section).to_contain_text(caption)
             assert dossier.inner_text().count(caption) == 1
+            if place == 'Barton Flats Aid Shelter':
+                expect(dossier).not_to_contain_text('Nine Tails')
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-hurston-{place.split()[0].lower()}-{device}.png', full_page=True)
