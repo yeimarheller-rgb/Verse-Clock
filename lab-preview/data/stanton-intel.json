@@ -753,7 +753,10 @@
           "uncertainty": "Interacción del terminal pendiente de prueba en partida."
         }
       ],
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (logistics). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
+      ]
     },
     {
       "name": "Bountiful Harvest Hydroponics",
@@ -827,7 +830,10 @@
           "title": "Terminal de comercio de Brio’s"
         }
       ],
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (trade). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
+      ]
     },
     {
       "name": "CRU-L1 Ambitious Dream Station",
@@ -1393,7 +1399,10 @@
           "uncertainty": "La temperatura concreta, presencia de jugadores y estado del servidor no se han medido."
         }
       ],
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (missions). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
+      ]
     },
     {
       "name": "Greycat Stanton I Production Complex-B",
@@ -1979,7 +1988,10 @@
         }
       ],
       "uuid": "db55791b-9270-4f0f-a8a1-40bd283a16b7",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (missions). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
+      ]
     },
     {
       "name": "HDSF-Hendricks",
@@ -2642,6 +2654,9 @@
           ],
           "patch": "4.10.1"
         }
+      ],
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (trade). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
       ]
     },
     {
@@ -2687,7 +2702,10 @@
           "uncertainty": "Interacción del terminal no probada en sesión LIVE."
         }
       ],
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-21",
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (logistics). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
+      ]
     },
     {
       "name": "Rappel",
@@ -2712,6 +2730,9 @@
           ],
           "patch": "4.10.2"
         }
+      ],
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (trade). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
       ]
     },
     {
@@ -3003,6 +3024,9 @@
           ],
           "title": "Acceso restringido · torretas"
         }
+      ],
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (access). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
       ]
     },
     {
@@ -3026,6 +3050,9 @@
           ],
           "title": "Acceso restringido · torretas"
         }
+      ],
+      "reviewNotes": [
+        "AUDITORÍA 2026-11-21: campos repetidos (access). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
       ]
     },
     {
