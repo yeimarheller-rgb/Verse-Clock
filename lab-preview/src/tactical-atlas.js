@@ -1,4 +1,3 @@
-HEAD:lab-preview/src/tactical-atlas.js
 const api = 'https://api.uexcorp.uk/2.0/';
 const citadel = 'https://www.citadelsc.com/es/guides/hathor';
 const wiki = 'https://starcitizen.tools/';
