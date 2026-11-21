@@ -133,7 +133,15 @@ with sync_playwright() as p:
         expect(page.locator('#mainIntelLocation')).to_contain_text('MT OpCenter TLI-4')
         page.get_by_text('Estado del atlas',exact=True).click()
         page.get_by_text('Cobertura de Stanton',exact=True).click()
-        expect(page.locator('#stantonCoverage')).to_contain_text('129 / 949')
+        expect(page.locator('#stantonCoverage')).to_contain_text(re.compile(r'\d+ / 949 operativas'))
+        query('Rappel')
+        expect(dossier).to_contain_text('RAPPE, ID 274')
+        expect(dossier).not_to_contain_text('UEX #274')
+        expect(dossier).to_contain_text('Otra versión')
+        query('Weeping Cove')
+        dossier.locator('details[data-domain=navigation] summary').click()
+        dossier.get_by_role('button',name="Cutter's Rig", exact=True).click()
+        expect(page.locator('#mainIntelLocation')).to_have_text("Cutter's Rig")
         assert not errors, errors
         page.close()
     for name, width, height in [('iphone',390,844),('desktop',1440,900)]:
