@@ -52,25 +52,25 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
     const isPlatform = site === 'OLP';
     const linked = isPlatform ? ['I', 'II', 'III'].map(n => group + ' PAF-' + n) : [group + ' OLP'];
     const sections = [
-      {title: 'Actividad · Align & Mine', text: isPlatform
+      {title: 'Actividad · Align & Mine', icons: ['mining'], text: isPlatform
         ? 'Trae una batería GP-XP de cada PAF del mismo conjunto. Alimenta la plataforma, consigue la tarjeta de activación y dispara desde el búnker de superficie.'
         : 'Busca tarjetas azules de mantenimiento. Úsalas en el garaje doble para imprimir las rojas, abre las salas de seguridad y lleva tres Alignment Blades a la consola. Transporta la batería GP-XP al OLP.',
       sources: [source('Citadel · guía de la actividad', citadel)]},
-      {title: 'PvE y peligros', text: isPlatform
+      {title: 'PvE y peligros', icons: ['pve','valakkar','danger'], text: isPlatform
         ? 'Tras abrir la cueva de superficie, hay Valakkar juveniles y riesgo de colapso. Organiza la extracción antes de entrar.'
         : 'La guía documenta mercenarios en tierra y Valakkar juveniles durante la alineación de la antena.',
       sources: [source('Citadel · fases y amenazas', citadel)]},
-      {title: 'PvP · riesgo de encuentro', text: 'Actividad abierta y compartida. La antena, el traslado de baterías y la extracción pueden coincidir con otros grupos. Presencia de jugadores y frecuencia sin verificar.',
+      {title: 'PvP · riesgo de encuentro', icons: ['pvp'], text: 'Actividad abierta y compartida. La antena, el traslado de baterías y la extracción pueden coincidir con otros grupos. Presencia de jugadores y frecuencia sin verificar.',
       sources: [source('Citadel · acceso y recorrido', citadel)]},
-      {title: isPlatform ? 'Botín · cueva de superficie' : 'Armas y botín · tabla PAF', text: isPlatform
+      {title: isPlatform ? 'Botín · cueva de superficie' : 'Armas y botín · tabla PAF', icons: isPlatform ? ['cave','loot'] : ['weapons','loot'], text: isPlatform
         ? 'Carinite, Jaclium y Saldynium se documentan en la cueva abierta por el láser. La extracción y los nodos dependen de la sesión.'
         : 'Posibles S71 Justified, C54 Luckbringer, Karna Rager y Pulverizer LMG. La tabla corresponde al tipo de instalación. Comprueba las cajas de las salas de seguridad.',
       sources: [isPlatform ? source('Citadel · minerales', citadel) : source('Star Citizen Wiki · tabla de botín PAF', wiki + 'Planetary_alignment_facilities')]},
-      {title: 'Contrato relacionado · Shubin', text: 'XL Purchase Order: Hand Mined Materials. El pedido menciona Hathor en Daymar y Aberdeen como origen de materiales. Consulta la oferta en el gestor de contratos.',
+      {title: 'Contrato relacionado · Shubin', icons: ['mission'], text: 'XL Purchase Order: Hand Mined Materials. El pedido menciona Hathor en Daymar y Aberdeen como origen de materiales. Consulta la oferta en el gestor de contratos.',
       sources: [source('Star Citizen Wiki API · contrato', contract)]},
     ];
     if (byKey.get(atlasKey({system: location.system, name: recovery}))?.serviceIntel?.services.includes('repair')) {
-      sections.push({title: 'Reparación en la misma luna', text: recovery + ' tiene reparación de nave registrada por UEX. Comprueba el tamaño de la plataforma y la disponibilidad al aterrizar.',
+      sections.push({title: 'Reparación en la misma luna', icons: ['repair'], text: recovery + ' tiene reparación de nave registrada por UEX. Comprueba el tamaño de la plataforma y la disponibilidad al aterrizar.',
         destinations: [recovery], sources: [source('Star Citizen Wiki · servicios del puesto', wiki + recovery.replaceAll(' ', '_'))]});
     }
     byKey.set(key, {...location, hathor: {moon, group, linked, sections}, patch: wikiVersion || location.patch});
@@ -83,9 +83,9 @@ export function tacticalSections(p) {
   const intel = p.serviceIntel;
   const contested = p.system === 'Pyro' ? contestedSites[p.name] : null;
   if (contested) {
-    sections.push({title: 'Zona disputada · PvPvE', text: 'Acceso de fuego libre en el recinto disputado. Puedes encontrar NPC hostiles y otros jugadores. En estaciones, localiza el acceso específico a la zona disputada desde la zona de servicios.',
+    sections.push({title: 'Zona disputada · PvPvE', icons: ['contested'], text: 'Acceso de fuego libre en el recinto disputado. Puedes encontrar NPC hostiles y otros jugadores. En estaciones, localiza el acceso específico a la zona disputada desde la zona de servicios.',
       sources: [source('Star Citizen Wiki · mecánica PvPvE', contestedWiki)]});
-    sections.push({title: 'Botín y acceso · Hangar ejecutivo', text: contested.join(' '),
+    sections.push({title: 'Botín y acceso · Hangar ejecutivo', icons: ['loot','hangar'], text: contested.join(' '),
       sources: [source('Citadel · mapa y tarjetas', contestedGuide), source('Star Citizen Wiki · recompensas', contestedWiki)]});
   }
   if (!intel) return sections;
@@ -95,12 +95,12 @@ export function tacticalSections(p) {
     const services = intel.services.map(key => serviceNames[key]).join(' · ');
     const pads = intel.padTypes ? ' Plataformas registradas: ' + intel.padTypes.replaceAll(',', ', ') + '.' : '';
     const how = hasLandingServices ? ' Aterriza y abre los servicios de aterrizaje desde el mobiGlas en el asiento de piloto.' : '';
-    sections.push({title: 'Servicios registrados', text: services + '.' + pads + how,
+    sections.push({title: 'Servicios registrados', icons: [], text: services + '.' + pads + how,
       sources: hasLandingServices ? [uex, source('RSI · servicios de mantenimiento', maintenance)] : [uex]});
   }
   if (intel.tradeTerminal || intel.trade?.length) {
     const named = (intel.trade || []).map(([id, name, version]) => name + ' (UEX #' + id + (version ? ', registro ' + version : '') + ')');
-    sections.push({title: 'Comercio', text: named.length
+    sections.push({title: 'Comercio', icons: ['trade','commodity'], text: named.length
       ? named.join(' · ') + '. Consulta existencias y precios en el terminal.'
       : 'Terminal de mercancías registrado. Consulta existencias y precios en el lugar.',
     sources: [named.length ? source('UEX · catálogo de terminales', api + 'terminals') : uex]});
