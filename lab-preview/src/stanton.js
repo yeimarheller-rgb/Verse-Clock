@@ -11,7 +11,9 @@ const knownBodies=new Map(stantonBodies.map(name=>[normalize(name),name]));
 
 export function stantonBody(p) {
  if(atlasSystem(p.system)!=='Stanton')return '';
- for(const value of [p.stantonResolvedBody,p.stantonIntel?.body,p.serviceIntel?.body,p.parent,p.body,p.name]){
+ const namedBody=knownBodies.get(normalize(p.name));
+ if(namedBody)return namedBody;
+ for(const value of [p.stantonResolvedBody,p.stantonIntel?.body,p.serviceIntel?.body,p.parent,p.body]){
   const key=normalize(value);
   if(knownBodies.has(key))return knownBodies.get(key);
   const orbital=/^(hur|cru|arc|mic)[ -]?l\d(?:$| )/.exec(key)?.[1];
