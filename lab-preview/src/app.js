@@ -423,6 +423,16 @@ function renderTacticalCards(p,sec,loot){
   if(li.scope)cards.push(['loot','ÁMBITO DE BOTÍN',li.scope+(li.status?' · '+li.status:''),false,'No confirma aparición de objetos en esta instancia']);
   if(li.mining)cards.push(['resources','MINERÍA DE ACTIVIDAD',li.mining,false,'Condiciones de acceso y aparición variables']);
  }
+ // Hathor: distinguish the orbital laser platform from its three ground alignment facilities.
+ if(/^hathor-(attritus|lamina|ruptura|vivere)-(olp|paf-(?:i|ii|iii))$/i.test(p.id||'')){
+  const isOlp=/-olp$/i.test(p.id);
+  const op=p.operationalNotes||{};
+  cards.push(['intel','HATHOR · TIPO DE INSTALACIÓN',isOlp?'OLP: plataforma láser orbital. La actividad depende de alinear tres PAF del mismo conjunto.':'PAF: instalación planetaria de alineación. Completar las tres PAF del conjunto antes de operar la OLP.',false,'Guía de actividad, no estado LIVE del evento']);
+  if(op.missionContext)cards.push(['missions','CONTRATO · ALCANCE',op.missionContext,false,'No atribuir misión activa a esta instancia']);
+  if(op.failureRisks?.length)cards.push(['hazards','FALLOS Y RIESGOS REPORTADOS',op.failureRisks.join(' · '),false,'Incidencias comunitarias, sin frecuencia verificada']);
+  if(p.lootIntel?.categories?.length)cards.push(['loot','BOTÍN · POSIBLES CATEGORÍAS',p.lootIntel.categories.join(' · '),false,'Tabla de actividad, NO inventario garantizado']);
+  if(p.lootIntel?.caveat)cards.push(['loot','LÍMITE DE EVIDENCIA',p.lootIntel.caveat,false,'Sin prueba de aparición individual en 4.10.3 LIVE']);
+ }
  if(p.serviceDirectory4103){
   const sd=p.serviceDirectory4103;
   const names={vehicleServices:'servicios de nave',refinery:'refinería',clinic:'clínica',weaponsShop:'tienda de armas',shipItemsShop:'componentes de nave',commodityTrading:'comercio'};
