@@ -301,6 +301,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -346,6 +367,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -391,6 +433,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -436,6 +499,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -481,6 +565,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -526,6 +631,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -571,6 +697,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -616,6 +763,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -661,6 +829,27 @@
         "sources": [
           "https://uexcorp.space/mining/refineries"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1073,7 +1262,28 @@
         "https://starcitizen.tools/Outposts"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
+      }
     },
     {
       "id": "stanton-covalex-distribution-centre-s1dc06",
@@ -1087,7 +1297,28 @@
         "https://starcitizen.tools/Outposts"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
+      }
     },
     {
       "id": "stanton-covalex-distribution-centre-s4dc05",
@@ -1101,7 +1332,28 @@
         "https://starcitizen.tools/Outposts"
       ],
       "verification": "source-listed",
-      "patch": "4.10.3"
+      "patch": "4.10.3",
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
+      }
     },
     {
       "id": "pyro-bueno-ravine",
@@ -1279,6 +1531,27 @@
         "sources": [
           "https://starcitizen.tools/Space_stations"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1321,6 +1594,27 @@
         "sources": [
           "https://starcitizen.tools/Space_stations"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1464,6 +1758,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1571,6 +1886,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1678,6 +2014,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1785,6 +2142,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1879,6 +2257,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -1986,6 +2385,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2093,6 +2513,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2200,6 +2641,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2294,6 +2756,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2401,6 +2884,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2508,6 +3012,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2615,6 +3140,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2709,6 +3255,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2816,6 +3383,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -2923,6 +3511,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
@@ -3030,6 +3639,27 @@
           "https://www.sc-advisory.space/",
           "https://www.citadelsc.com/es/guides/hathor"
         ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null
+        },
+        "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
+        "sources": []
       }
     },
     {
