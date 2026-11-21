@@ -54,7 +54,7 @@ test('rearm coverage requires site evidence and does not infer from landing',()=
  assert.equal(at('Shubin Mining Facility SCD-1').services.rearm,'confirmed');
  assert.equal(at('Seraphim Station').services.rearm,undefined);
  assert.equal(at('Covalex Distribution Centre S1DC06').services?.rearm,undefined);
- assert.ok(stantonSections(at('Covalex Distribution Centre S1DC06')).every(section=>section.status.includes('Otra versión')));
+ assert.ok(stantonSections(at('Covalex Distribution Centre S1DC06')).filter(section=>section.title!=='Acceso público indicado').every(section=>section.status.includes('Otra versión')));
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Crusader'));
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Daymar'));
  assert.ok(!inStantonZone(at('Shubin Mining Facility SCD-1'),'only:Crusader'));
@@ -88,4 +88,13 @@ test('UUID binds the Hurston batch to the inventory and excludes historical and 
   {field:'missions',status:'historical',text:'Otra versión',sources:['https://starcitizen.tools/Evict_Illegal_Occupants']},
  ]}};
  assert.equal(stantonCoverage([indexed.get(clinic.id)],[noEvidence]).operational,0);
+ for(const name of ['Covalex Distribution Centre S1DC06','Dupree Industrial Manufacturing Facility',
+  'Greycat Stanton I Production Complex-B','HDPC-Cassillo','HDPC-Farnesway']){
+  const p=at(name);
+  const access=p.stantonIntel.claims.filter(c=>c.field==='access');
+  assert.equal(access.length,1,name);
+  assert.equal(access[0].patch,'4.10.3-LIVE.13165946',name);
+  assert.equal(stantonCoverage([indexed.get(p.stantonIntel.uuid)],[p]).counts.access,1,name);
+  assert.equal(p.services?.repair,undefined,name);
+ }
 });

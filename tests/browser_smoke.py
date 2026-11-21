@@ -187,8 +187,24 @@ with sync_playwright() as p:
             expect(dossier).to_contain_text(claim)
             expect(dossier).to_contain_text(patch)
             assert dossier.inner_text().count(claim) == 1
+            if search_name.endswith(' Clinic'):
+                expect(page.locator('#where')).to_have_text('Hora local sin cálculo')
+                expect(page.locator('#solarTimeline')).to_be_hidden()
+                expect(dossier).not_to_contain_text('Entorno regional')
             verify_layout()
         page.screenshot(path=f'/tmp/verse-lab-clinica-hur-l4-{device}.png', full_page=True)
+        for place, access_rule in [
+            ('Covalex Distribution Centre S1DC06','Acceso público indicado'),
+            ('HDPC-Cassillo','Permisos del interior'),
+        ]:
+            query(place, place)
+            access = dossier.locator('details[data-domain=navigation]')
+            access.locator('summary').click()
+            expect(access).to_contain_text(access_rule)
+            expect(access).to_contain_text('4.10.3-LIVE.13165946')
+            assert access.inner_text().count(access_rule) == 1
+        page.evaluate('window.scrollTo(0,0)')
+        page.screenshot(path=f'/tmp/verse-lab-cassillo-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

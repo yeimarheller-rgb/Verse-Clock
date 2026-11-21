@@ -164,7 +164,7 @@ function chooseSearchResult(item){
   const solar=locs.find(l=>normalize(l.name)===normalize(p.name)&&l.system===p.system);
   const referenceBody=stantonBody(p)||p.parent;
   const surface=/outpost|bunker|underground|surface|facility|planetary-alignment|settlement|moon|planet/i.test(p.type||'')&&!/orbital|platform$/i.test(p.type||'');
-  const reference=surface&&locs.find(l=>l.system===p.system&&normalize(l.body)===normalize(referenceBody));
+  const reference=surface&&!p.stantonIntel?.orbital&&locs.find(l=>l.system===p.system&&normalize(l.body)===normalize(referenceBody));
   setClock(solar,reference||null);
   if(solar)store.set('vc-last',solar.name);
   const url=new URL(location.href);
@@ -372,7 +372,7 @@ function applyPoiToMain(p){
  const previouslyOpen=new Set(same?Array.from(host.querySelectorAll('details[open]'),el=>el.dataset.domain):[]);
  host.replaceChildren();
  $('mainIntelLocation').textContent=p.name;
- const body=stantonBody(p)||p.parent||p.body;
+ const body=p.stantonIntel?.orbital?p.parent:stantonBody(p)||p.parent||p.body;
  $('locationMeta').textContent=[body&&body!==p.name?body:null,p.system,p.type].filter(Boolean).join(' · ');
  const environment=body&&poiData.find(row=>row.name===body&&row.system===p.system)?.stantonIntel?.environment;
  const c=exactSolar&&coords(exactSolar);

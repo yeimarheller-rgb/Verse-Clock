@@ -136,7 +136,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "HUR-L1 Green Glade Clinic",
@@ -167,7 +168,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "HUR-L2 Faithful Dream Clinic",
@@ -198,7 +200,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "HUR-L3 Thundering Express Clinic",
@@ -229,7 +232,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "HUR-L4 Melodic Fields Clinic",
@@ -260,7 +264,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "HUR-L5 High Course Clinic",
@@ -291,7 +296,8 @@
           "patch": "4.10.3",
           "title": "Farmacia"
         }
-      ]
+      ],
+      "orbital": true
     },
     {
       "name": "Maria Pure of Heart",
@@ -964,12 +970,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía incluye este centro entre los puntos de acceso más sencillos para visitantes. Comprueba el aviso de intrusión y las instrucciones del contrato antes de entrar en áreas internas.",
+          "status": "documented",
+          "title": "Acceso público indicado",
+          "text": "La descripción del juego identifica S1DC06 como abierto al público. Confirma por separado el permiso en las zonas interiores y el destino exacto del encargo.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/covalex-distribution-centre-s1dc06"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -989,7 +996,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "54a7fb84-3d4b-49ca-9b70-6f13bac89c54",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Covalex Distribution Centre S4DC05",
@@ -1175,12 +1184,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía identifica esta familia de centros entre las instalaciones con acceso condicionado. Acepta un encargo que indique el destino y comprueba los permisos al llegar.",
+          "status": "documented",
+          "title": "Instalación privada",
+          "text": "La descripción del juego identifica Dupree como instalación privada con aviso contra intrusos. Si vas por un contrato, revisa el punto y el aviso de intrusión antes de cruzar al interior.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/dupree-industrial-manufacturing-facility"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -1200,7 +1210,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "e188371f-7aaa-4ed3-b396-294dc874119a",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Eager Flats Aid Shelter",
@@ -1388,12 +1400,13 @@
       "claims": [
         {
           "field": "access",
-          "status": "historical",
-          "text": "La guía identifica esta familia de centros entre las instalaciones con acceso condicionado. Acepta un encargo que indique el destino y comprueba los permisos al llegar.",
+          "status": "documented",
+          "title": "Acceso restringido",
+          "text": "El texto del complejo B reserva el acceso al personal de Greycat. Confirma que el contrato indique el complejo B de Hurston y revisa el aviso al entrar.",
           "sources": [
-            "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
+            "https://api.star-citizen.wiki/locations/greycat-stanton-i-production-complex-b"
           ],
-          "patch": "4.10"
+          "patch": "4.10.3-LIVE.13165946"
         },
         {
           "field": "missions",
@@ -1413,7 +1426,9 @@
           ],
           "patch": "4.10"
         }
-      ]
+      ],
+      "uuid": "b065505f-0dac-4bdc-bbaa-fc612f3143ea",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "Greycat Stanton IV Production Complex-A",
@@ -1816,6 +1831,16 @@
       "body": "Hurston",
       "claims": [
         {
+          "field": "access",
+          "status": "documented",
+          "title": "Permisos del interior",
+          "text": "El centro figura para personal autorizado y afiliados. Su descripción distingue el interior: lo reserva a empleados designados de Hurston Dynamics. Comprueba el aviso aunque puedas acercarte al exterior.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/hdpc-cassillo"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
           "field": "missions",
           "status": "historical",
           "text": "Los centros de distribución aparecen como destinos para carga, seguridad y recuperación. Los contratos disponibles y la asignación de este centro dependen del gestor de misiones.",
@@ -1832,23 +1857,26 @@
             "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
           ],
           "patch": "4.10"
-        },
-        {
-          "field": "access",
-          "status": "historical",
-          "text": "La ficha de mapa de 3.23 reserva el interior a personal designado de Hurston Dynamics. Comprueba el permiso y el objetivo del contrato antes de entrar.",
-          "sources": [
-            "https://starcitizen.tools/HDPC-Cassillo"
-          ],
-          "patch": "3.23"
         }
-      ]
+      ],
+      "uuid": "8cd86a33-a3b4-47ed-9e35-9351b84f108d",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HDPC-Farnesway",
       "body": "Hurston",
       "claims": [
         {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso autorizado",
+          "text": "La descripción del juego reserva este centro a personal autorizado y afiliados de Hurston Dynamics. Revisa que tu encargo indique Farnesway y comprueba el aviso del recinto al aproximarte.",
+          "sources": [
+            "https://api.star-citizen.wiki/locations/hdpc-farnesway"
+          ],
+          "patch": "4.10.3-LIVE.13165946"
+        },
+        {
           "field": "missions",
           "status": "historical",
           "text": "Los centros de distribución aparecen como destinos para carga, seguridad y recuperación. Los contratos disponibles y la asignación de este centro dependen del gestor de misiones.",
@@ -1865,17 +1893,10 @@
             "https://scanz.space/news/guides/distribution-centres-a-practical-field-guide"
           ],
           "patch": "4.10"
-        },
-        {
-          "field": "access",
-          "status": "historical",
-          "text": "La ficha de mapa de 3.23 restringe el centro a personal autorizado o afiliado. Comprueba el permiso y el objetivo del contrato antes de entrar.",
-          "sources": [
-            "https://starcitizen.tools/HDPC-Farnesway"
-          ],
-          "patch": "3.23"
         }
-      ]
+      ],
+      "uuid": "0f53ff9f-7fb1-4c8e-b26e-1438e9261e68",
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HDSF-Barnabas",
