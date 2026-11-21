@@ -267,6 +267,17 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-base-minera-{place.split("#")[-1]}-{device}.png', full_page=True)
+        for name, ore in [('HUR L1', 'Laranite'), ('CRU L2', 'Bexalite'), ('MIC L3', 'Aslarite')]:
+            query(name, name)
+            field = dossier.locator('[data-domain="loot"]')
+            expect(field).to_contain_text('Campo minero regional')
+            expect(field).to_contain_text(ore)
+            expect(dossier).not_to_contain_text('Destino en el mapa estelar')
+            if name == 'HUR L1':
+                expect(field).to_contain_text('HUR-L1 Green Glade Station')
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-lagrange-{name.replace(" ","-")}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

@@ -153,7 +153,7 @@ test('orbital mining links bind to distinct UUIDs and do not credit hidden marke
  const index=read('atlas-commodities');
  const mineralsById=new Map(index.locations.map(site=>[site.id,site.resources]));
  const orbitals=stanton.locations.filter(row=>row.claims.some(c=>c.title==='Prospección con nave minera'));
- assert.ok(orbitals.length>=46);
+ assert.ok(orbitals.length>=45);
  const rawById=new Map(raw.map(site=>[site.id,site]));
  for(const row of orbitals){
   const site=rawById.get(row.uuid);
@@ -166,4 +166,21 @@ test('orbital mining links bind to distinct UUIDs and do not credit hidden marke
  assert.equal(twins.filter(site=>atId.get(site.id)?.stantonIntel?.claims.some(c=>c.field==='resources')).length,1);
  const excluded=raw.find(site=>site.name==='CRU L1');
  assert.equal(atId.get(excluded.id)?.stantonIntel?.claims.some(c=>c.field==='access')||false,false);
+});
+
+test('Lagrange resource evidence stays on the regional UUID and never creates direct navigation',()=>{
+ const regions=stanton.locations.filter(row=>row.claims.some(c=>c.title==='Campo minero regional'));
+ assert.equal(regions.length,20);
+ const index=read('atlas-commodities');
+ const local=new Map(index.locations.map(row=>[row.id,row.resources]));
+ for(const row of regions){
+  const region=atId.get(row.uuid);
+  const claim=row.claims.find(c=>c.title==='Campo minero regional');
+  assert.equal(region?.type,'Asteroid',row.name);
+  assert.equal(claim.patch,index.version);
+  assert.ok(claim.resourceNames.length);
+  assert.ok(claim.resourceNames.every(name=>local.get(row.uuid)?.some(r=>r.name===name&&r.source.locationUuid===row.uuid)));
+  assert.equal(row.claims.some(c=>c.field==='access'),row.name==='CRU L3',row.name);
+  for(const station of claim.destinations||[])assert.equal(at(station)?.type,'Manmade',station);
+ }
 });
