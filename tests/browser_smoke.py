@@ -209,6 +209,17 @@ with sync_playwright() as p:
         assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 29
         page.screenshot(path=f'/tmp/verse-lab-iconografia-{name}.png',full_page=True)
         page.close()
+    for device, width, height in [('iphone',390,844),('desktop',1440,900)]:
+        page = b.new_page(viewport={'width':width,'height':height})
+        page.goto(BASE + 'lab-preview/')
+        page.wait_for_function("document.getElementById('atlasProgressBar').getAttribute('aria-valuenow') > 0")
+        page.screenshot(path=f'/tmp/verse-lab-antes-inicio-{device}.png',full_page=True)
+        for q, label in [('Ruptura PAF-I','ruptura'),('Seraphim','seraphim'),('Lorville','lorville'),('Everus','everus'),('Ghost Hollow','ghost-hollow'),('Checkmate','checkmate')]:
+            page.locator('#q').fill(q)
+            page.locator('#suggestions button').first.click()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-antes-{label}-{device}.png',full_page=True)
+        page.close()
     b.close()
 print('\n'.join(fails) or 'OK: la web arranca en iPhone y escritorio')
 sys.exit(1 if fails else 0)
