@@ -2,7 +2,10 @@
 import {readFile,writeFile} from 'node:fs/promises';
 const catalog=JSON.parse(await readFile('lab-preview/data/wiki-atlas.json','utf8'));
 const seed=JSON.parse(await readFile('lab-preview/data/atlas-poi-seed.json','utf8'));
-let enriched={locations:[],version:null};try{enriched=JSON.parse(await readFile('lab-preview/data/atlas-enriched.json','utf8'))}catch{}
+const enriched=JSON.parse(await readFile('lab-preview/data/atlas-enriched.json','utf8'));
+if(enriched.version!==catalog.version||!Array.isArray(enriched.locations)||enriched.locations.length!==catalog.locations.length)throw Error('Atlas enrichment missing, stale, or incomplete: refusing to publish misleading coverage');
+const catalogIds=new Set(catalog.locations.map(p=>p.id));
+if(new Set(enriched.locations.map(p=>p.id)).size!==catalogIds.size||enriched.locations.some(p=>!catalogIds.has(p.id)))throw Error('Atlas enrichment IDs differ from catalog');
 let commodities={locations:[],version:null};try{commodities=JSON.parse(await readFile('lab-preview/data/atlas-commodities.json','utf8'))}catch{}
 const normalizedSystem=s=>String(s||'').replace(/\s+system$/i,'').trim().toLocaleLowerCase('es');
 const key=p=>[normalizedSystem(p.system),p.name||''].join('|').toLocaleLowerCase('es');
