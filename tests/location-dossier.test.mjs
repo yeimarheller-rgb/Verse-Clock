@@ -41,3 +41,10 @@ test('operations changes emphasis without duplicating services or tactical claim
  assert.equal(checkmate.groups.get('combat').length,1);
  assert.match(text(checkmate,'loot'),/Placas 1, 2 y 3/);
 });
+
+test('a terminal with a direct sourced record replaces the older general catalog description',()=>{
+ const rappel=model('Rappel');
+ assert.match(text(rappel,'services'),/RAPPE, ID 274/);
+ assert.doesNotMatch(text(rappel,'services'),/UEX #274/);
+ assert.ok(rappel.sources.some(source=>source.url.includes('/terminals/info/name/scrap-commodities-rappel')));
+});
