@@ -1333,6 +1333,34 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "tacticalIntel": {
+        "title": "Dupree Industrial Manufacturing Facility · ficha operativa Hurston",
+        "steps": [
+          "Centro de distribución identificado en Hurston; comprobar en mobiGlas si existe contrato que lleve específicamente a esta instalación.",
+          "Verificar autorización de acceso y punto de aterrizaje en la instancia antes de aproximarse.",
+          "Confirmar presencia de NPC, cajas, almacenes y objetivos en la misión activa; la clasificación del centro no demuestra botín disponible."
+        ],
+        "threats": [
+          "Sin datos contrastados de tasa PvP específica de este emplazamiento.",
+          "Sin verificación de aparición de NPC o botín en la instancia LIVE."
+        ],
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ],
+        "caveat": "Fuente de ubicación/categoría; no acredita contratos, stock, botín ni presencia hostil en 4.10.3 LIVE."
+      },
+      "operationalNotes": {
+        "missions": "No hay misión específica validada para este punto; consultar contratos activos en el juego.",
+        "pve": "Presencia de NPC no verificada por ubicación.",
+        "pvp": "Sin medición de encuentros PvP para este punto.",
+        "loot": "Sin tabla de botín individual comprobada.",
+        "weapons": "Sin stock o drops de armas comprobados.",
+        "trade": "Sin terminales, productos o precios confirmados en esta ficha.",
+        "hazards": "Sin medición de amenazas locales; no confundir ausencia de evidencia con seguridad.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
       }
     },
     {
@@ -1368,6 +1396,34 @@
         },
         "note": "No se ha confirmado una terminal de reparación para esta instalación. No utilizar como destino de reparación de emergencia hasta contrastarlo en LIVE.",
         "sources": []
+      },
+      "tacticalIntel": {
+        "title": "Covalex Distribution Centre S1DC06 · ficha operativa Hurston",
+        "steps": [
+          "Centro de distribución identificado en Hurston; comprobar en mobiGlas si existe contrato que lleve específicamente a esta instalación.",
+          "Verificar autorización de acceso y punto de aterrizaje en la instancia antes de aproximarse.",
+          "Confirmar presencia de NPC, cajas, almacenes y objetivos en la misión activa; la clasificación del centro no demuestra botín disponible."
+        ],
+        "threats": [
+          "Sin datos contrastados de tasa PvP específica de este emplazamiento.",
+          "Sin verificación de aparición de NPC o botín en la instancia LIVE."
+        ],
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ],
+        "caveat": "Fuente de ubicación/categoría; no acredita contratos, stock, botín ni presencia hostil en 4.10.3 LIVE."
+      },
+      "operationalNotes": {
+        "missions": "No hay misión específica validada para este punto; consultar contratos activos en el juego.",
+        "pve": "Presencia de NPC no verificada por ubicación.",
+        "pvp": "Sin medición de encuentros PvP para este punto.",
+        "loot": "Sin tabla de botín individual comprobada.",
+        "weapons": "Sin stock o drops de armas comprobados.",
+        "trade": "Sin terminales, productos o precios confirmados en esta ficha.",
+        "hazards": "Sin medición de amenazas locales; no confundir ausencia de evidencia con seguridad.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
       }
     },
     {
@@ -5099,6 +5155,34 @@
         "sources": [
           "https://starcitizen.tools/Outposts"
         ]
+      },
+      "tacticalIntel": {
+        "title": "HDMS-Stanhope · ficha operativa Hurston",
+        "steps": [
+          "Puesto de superficie catalogado en Hurston; localizar el marcador de navegación antes de aproximarse.",
+          "Comprobar físicamente pads, terminales, servicios y estado de acceso antes de operar.",
+          "No asumir contratos, botín, tiendas ni reparación por el mero hecho de ser un HDMS."
+        ],
+        "threats": [
+          "Sin datos contrastados de tasa PvP específica de este emplazamiento.",
+          "Sin verificación de aparición de NPC o botín en la instancia LIVE."
+        ],
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ],
+        "caveat": "Fuente de ubicación/categoría; no acredita contratos, stock, botín ni presencia hostil en 4.10.3 LIVE."
+      },
+      "operationalNotes": {
+        "missions": "No hay misión específica validada para este punto; consultar contratos activos en el juego.",
+        "pve": "Presencia de NPC no verificada por ubicación.",
+        "pvp": "Sin medición de encuentros PvP para este punto.",
+        "loot": "Sin tabla de botín individual comprobada.",
+        "weapons": "Sin stock o drops de armas comprobados.",
+        "trade": "Sin terminales, productos o precios confirmados en esta ficha.",
+        "hazards": "Sin medición de amenazas locales; no confundir ausencia de evidencia con seguridad.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
       }
     },
     {
@@ -5136,6 +5220,34 @@
           "sources": []
         },
         "note": "Puesto identificado en el catálogo de ubicaciones. La presencia de reparación no está demostrada; candidato para comprobación LIVE.",
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ]
+      },
+      "tacticalIntel": {
+        "title": "HDMS-Thedus · ficha operativa Hurston",
+        "steps": [
+          "Puesto de superficie catalogado en Hurston; localizar el marcador de navegación antes de aproximarse.",
+          "Comprobar físicamente pads, terminales, servicios y estado de acceso antes de operar.",
+          "No asumir contratos, botín, tiendas ni reparación por el mero hecho de ser un HDMS."
+        ],
+        "threats": [
+          "Sin datos contrastados de tasa PvP específica de este emplazamiento.",
+          "Sin verificación de aparición de NPC o botín en la instancia LIVE."
+        ],
+        "sources": [
+          "https://starcitizen.tools/Outposts"
+        ],
+        "caveat": "Fuente de ubicación/categoría; no acredita contratos, stock, botín ni presencia hostil en 4.10.3 LIVE."
+      },
+      "operationalNotes": {
+        "missions": "No hay misión específica validada para este punto; consultar contratos activos en el juego.",
+        "pve": "Presencia de NPC no verificada por ubicación.",
+        "pvp": "Sin medición de encuentros PvP para este punto.",
+        "loot": "Sin tabla de botín individual comprobada.",
+        "weapons": "Sin stock o drops de armas comprobados.",
+        "trade": "Sin terminales, productos o precios confirmados en esta ficha.",
+        "hazards": "Sin medición de amenazas locales; no confundir ausencia de evidencia con seguridad.",
         "sources": [
           "https://starcitizen.tools/Outposts"
         ]
@@ -5271,10 +5383,34 @@
         ]
       },
       "operationalNotes": {
-        "hazards": "La ficha de la wiki no identifica peligro ambiental específico",
+        "hazards": "La ficha de referencia no identifica un peligro ambiental específico; amenazas de NPC y PvP no medidas.",
         "sources": [
           "https://starcitizen.tools/HDMS-Pinewood"
-        ]
+        ],
+        "missions": "No hay misión específica validada para este punto; consultar contratos activos en el juego.",
+        "pve": "Presencia de NPC no verificada por ubicación.",
+        "pvp": "Sin medición de encuentros PvP para este punto.",
+        "loot": "Sin tabla de botín individual comprobada.",
+        "weapons": "Sin stock o drops de armas comprobados.",
+        "trade": "Sin terminales, productos o precios confirmados en esta ficha.",
+        "services": "La wiki de HDMS-Pinewood documenta reparación, rearme y repostaje a petición en pads medianos/grandes; estado LIVE sin comprobar. Platinum Bay no prueba reparación de vehículos terrestres."
+      },
+      "tacticalIntel": {
+        "title": "HDMS-Pinewood · ficha operativa Hurston",
+        "steps": [
+          "Puesto de superficie catalogado en Hurston; localizar el marcador de navegación antes de aproximarse.",
+          "Comprobar físicamente pads, terminales, servicios y estado de acceso antes de operar.",
+          "No asumir contratos, botín, tiendas ni reparación por el mero hecho de ser un HDMS.",
+          "Pinewood: el servicio de mantenimiento de naves figura en fuente comunitaria; verificar que aparece y funciona en LIVE antes de depender de él."
+        ],
+        "threats": [
+          "Sin datos contrastados de tasa PvP específica de este emplazamiento.",
+          "Sin verificación de aparición de NPC o botín en la instancia LIVE."
+        ],
+        "sources": [
+          "https://starcitizen.tools/HDMS-Pinewood"
+        ],
+        "caveat": "Fuente de ubicación/categoría; no acredita contratos, stock, botín ni presencia hostil en 4.10.3 LIVE."
       }
     },
     {
