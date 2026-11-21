@@ -410,6 +410,19 @@ function renderTacticalCards(p,sec,loot){
   }
  }
  // Render newly sourced patch/service evidence; never promote directory listings to LIVE confirmation.
+ // Surface all existing structured tactical intelligence, not only free-text notes.
+ const ti=p.tacticalIntel||{};
+ for(const [title,field] of [['PASOS DE ACTIVIDAD','steps'],['REQUISITOS','requirements'],['AMENAZAS DOCUMENTADAS','threats'],['RECURSOS','resources'],['ARMAS POSIBLES','weapons'],['ARMADURAS POSIBLES','armor'],['COMPONENTES POSIBLES','components']]){
+  const values=Array.isArray(ti[field])?ti[field].filter(x=>typeof x==='string'&&x.trim()):[];
+  if(!values.length)continue;
+  const isPossible=/POSIBLES/.test(title);
+  cards.push([isPossible?'loot':'intel',title,values.join(' · ')+(isPossible?' · Posibles según fuentes; no garantizados en esta ubicación ni servidor.':''),false,'Ficha curada; revisar procedencia, actividad y parche']);
+ }
+ if(p.lootIntel){
+  const li=p.lootIntel;
+  if(li.scope)cards.push(['loot','ÁMBITO DE BOTÍN',li.scope+(li.status?' · '+li.status:''),false,'No confirma aparición de objetos en esta instancia']);
+  if(li.mining)cards.push(['resources','MINERÍA DE ACTIVIDAD',li.mining,false,'Condiciones de acceso y aparición variables']);
+ }
  if(p.serviceDirectory4103){
   const sd=p.serviceDirectory4103;
   const names={vehicleServices:'servicios de nave',refinery:'refinería',clinic:'clínica',weaponsShop:'tienda de armas',shipItemsShop:'componentes de nave',commodityTrading:'comercio'};
