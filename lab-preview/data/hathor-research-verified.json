@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-21",
+  "status": "research_verified_not_yet_integrated",
+  "entries": [
+    {
+      "id": "hathor-daymar",
+      "name": "Hathor — Daymar",
+      "system": "Stanton",
+      "body": "Daymar",
+      "activity": "Orbital laser and mining cave opening via alignment stations",
+      "pve": [
+        "Valakkar can appear during alignment blade stages (community guide; verify on LIVE)"
+      ],
+      "pvp": [
+        "Potential player conflict at shared installation; no live encounter frequency verified"
+      ],
+      "missions": [
+        "Foxwell Enforcement Red Level Contract: clear PAFs, recover cargo from freight elevators and deliver to OLP; mission availability on current LIVE not confirmed"
+      ],
+      "loot": [
+        "Carinite and Saldynium reported for Hathor caves; availability and spawn rates not guaranteed"
+      ],
+      "hazards": [
+        "Community issue report: laser may fail to fire, keycards or NPC spawns may malfunction"
+      ],
+      "sources": [
+        "https://www.citadelsc.com/en/guides",
+        "https://api.star-citizen.wiki/changelog/4.10.0-LIVE.12519617?change_type=modified&entity_type=mission&page=3",
+        "https://www.sc-advisory.space/",
+        "https://scminer.rocks/data/mineral-directory"
+      ],
+      "verification": "Published references; current LIVE functionality unverified"
+    },
+    {
+      "id": "hathor-aberdeen",
+      "name": "Hathor — Aberdeen",
+      "system": "Stanton",
+      "body": "Aberdeen",
+      "activity": "Orbital laser and mining cave opening via alignment stations",
+      "pve": [
+        "Valakkar can appear during alignment blade stages (community guide; verify on LIVE)"
+      ],
+      "pvp": [
+        "Potential player conflict at shared installation; no live encounter frequency verified"
+      ],
+      "missions": [
+        "Foxwell Enforcement Red Level Contract includes PAF/OLP locations; current LIVE availability unverified"
+      ],
+      "loot": [
+        "Carinite and Saldynium reported for Hathor caves; availability and spawn rates not guaranteed"
+      ],
+      "hazards": [
+        "Community issue report: laser alignment, keycard and NPC spawn problems"
+      ],
+      "sources": [
+        "https://www.citadelsc.com/en/guides",
+        "https://www.sc-advisory.space/",
+        "https://scminer.rocks/data/mineral-directory"
+      ],
+      "verification": "Published references; current LIVE functionality unverified"
+    }
+  ]
+}
