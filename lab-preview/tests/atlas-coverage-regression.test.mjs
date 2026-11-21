@@ -103,7 +103,7 @@ test('Hurston repair guidance never upgrades old API service listings to verifie
     const poi = seed.locations.find(p => p.system === 'Stanton' && p.parent === 'Hurston' && p.name === name);
     assert.ok(poi, name + ': missing from curated atlas');
     assert.equal(poi.verification, 'api-catalog-prior-patch', name);
-    assert.match(poi.patch, /4\\.9\\.0/, name + ': source patch missing');
+    assert.match(poi.patch, /4\.9\.0/, name + ': source patch missing');
     assert.equal(poi.services.vehicleServices, 'reported', name);
     assert.notEqual(poi.repairIntel.ship.status, 'confirmed', name + ': ship repair falsely confirmed');
     assert.notEqual(poi.repairIntel.groundVehicle.status, 'confirmed', name + ': ground repair falsely confirmed');
