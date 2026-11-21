@@ -377,8 +377,21 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Refinería y servicios de escala",
+          "text": "Estación de Lagrange de ArcCorp con refinería y centro de carga. Además de reparación, rearme y repostaje, es una escala para procesar minerales, organizar carga y reabastecer una nave. Verifica que el terminal de refinería acepte el mineral y que el servicio de mantenimiento esté disponible antes de comprometer una ruta.",
+          "sources": [
+            "https://starcitizen.tools/ARC-L1_Wide_Forest_Station",
+            "https://starcitizen.tools/Refinery_Deck"
+          ],
+          "patch": "4.10.3 (consulta documental)",
+          "uncertainty": "Costes, tiempos y estado real de terminales no comprobados."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "ARC-L2 Lively Pathway Station",
@@ -1506,8 +1519,20 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Operativa terrestre en Arial",
+          "text": "Puesto minero de Hurston Dynamics en Arial. Tiene dos plataformas de aterrizaje y servicios de reparación, repostaje y rearme para naves; dispone de almacén y terminal de comercio de materias primas. No se documentan hangares ni instalación médica: no lo consideres punto de regeneración ni refugio protegido en PvP.",
+          "sources": [
+            "https://starcitizen.tools/HDMS-Bezdek"
+          ],
+          "patch": "4.10.3 (consulta de ficha histórica)",
+          "uncertainty": "Servicio operativo en servidor LIVE, dimensiones de naves admitidas y seguridad PvP no comprobados."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HDMS-Edmond",
@@ -1590,8 +1615,20 @@
             "refuel",
             "rearm"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Escala de superficie en Arial",
+          "text": "Instalación minera de Hurston Dynamics sobre Arial con plataformas de aterrizaje, terminal de comercio y servicios de reparación, rearme y repostaje para naves. Se identifica además generación de vehículos terrestres; confirma disponibilidad en el terminal. No consta clínica de regeneración.",
+          "sources": [
+            "https://starcitizen.tools/HDMS-Lathan"
+          ],
+          "patch": "4.10.3 (consulta de ficha histórica)",
+          "uncertainty": "Operatividad de generación terrestre y servicios en LIVE no probada; no se infiere ausencia de enemigos."
         }
-      ]
+      ],
+      "checkedAt": "2026-11-21"
     },
     {
       "name": "HDMS-Norgaard",
