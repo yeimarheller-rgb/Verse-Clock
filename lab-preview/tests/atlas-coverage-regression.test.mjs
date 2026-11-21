@@ -66,3 +66,12 @@ test('tactical evidence coverage is separated from commodity associations', () =
   assert.equal(c.resourceAssociationsOnly + c.verifiedOperationalExcludingCommodityAssociations <= c.actionable, true);
   assert.equal(quality.counts.total, c.total);
 });
+
+
+test('Hathor aliases remain discoverable even without literal Hathor names', () => {
+  const seed = JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json', import.meta.url), 'utf8'));
+  const aliases = seed.locations.filter(p => /^(Attritus|Lamina|Ruptura|Vivere) (OLP|PAF-(I|II|III))$/i.test(p.name));
+  assert.equal(aliases.length, 16, 'expected four Hathor families, each with OLP and three PAFs');
+  assert.equal(meta.researchSummary.hathorCurated, aliases.length);
+  assert.equal(meta.researchSummary.hathorCuratedMatched + meta.researchSummary.hathorCuratedUnmatched, aliases.length);
+});
