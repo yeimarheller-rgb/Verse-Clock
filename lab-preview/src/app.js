@@ -1,3 +1,4 @@
+import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
 import { sunState, buildScene, paintScene, photoWeights } from './scene.js';
@@ -235,11 +236,71 @@ function chooseSearchResult(item){
  hideMenu();input.blur();
 }
 function pick(i){chooseSearchResult(suggestions[i])}
+const serviceIcons={repair:'repair',rearm:'rearm',refuel:'refuel',refinery:'refinery',clinic:'medic',cargo:'cargo'};
+const evidenceState=value=>({confirmed:'confirmed',reported:'possible',possible:'possible',unavailable:'unavailable'}[value]||'unknown');
+const dossierIcons=p=>new Set(tacticalSections(p).flatMap(section=>section.icons||[]));
+let activeFilter='';
+let operationsEnabled=false;
+const filters=[['repair','Reparación'],['refuel','Repostaje'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
+function matchesFilter(p,filter){
+ if(!filter)return true;
+ if(serviceIcons[filter])return ['confirmed','possible'].includes(evidenceState(p.services?.[filter]));
+ if(filter==='loot'&&(p.lootIntel?.categories?.length||p.tacticalIntel?.weapons?.length))return true;
+ return dossierIcons(p).has(filter);
+}
+function makeTacticalLabel(icon,text,size=20,state){
+ const label=document.createElement('span');label.className='tactical-label';
+ label.append(tacticalIcon(icon,{size,state}),text);
+ return label;
+}
+function resultIcon(p){
+ if(activeFilter)return activeFilter;
+ const shape=normalize(p.name+' '+p.type);
+ if(/distribution (center|centre)|centro de distribucion/.test(shape))return 'distribution';
+ if(/bunker|security depot/.test(shape))return 'bunker';
+ if(/\bcave\b|cueva/.test(shape))return 'cave';
+ if(dossierIcons(p).has('contested'))return 'contested';
+ if(p.hathor)return /OLP$/.test(p.name)?'mining':'bunker';
+ if(matchesFilter(p,'repair'))return 'repair';
+ if(matchesFilter(p,'trade'))return 'commodity';
+ return 'intel';
+}
+for(const [id,title] of filters){
+ const button=document.createElement('button');button.type='button';
+ button.dataset.filter=id;button.setAttribute('aria-pressed','false');
+ button.append(makeTacticalLabel(id,title));$('tacticalFilters').append(button);
+ button.addEventListener('click',()=>{
+  activeFilter=activeFilter===id?'':id;
+  for(const filter of $('tacticalFilters').children)filter.setAttribute('aria-pressed',String(filter.dataset.filter===activeFilter));
+  updateMenu();
+ });
+}
+$('operationsToggle').addEventListener('click',()=>{
+ operationsEnabled=!operationsEnabled;
+ $('operationsToggle').setAttribute('aria-pressed',String(operationsEnabled));
+ const selected=poiData.find(p=>atlasKey(p)===selectedPoiKey);
+ if(selected)renderLocationDossier(selected);
+ else if(operationsEnabled){
+  $('q').focus();
+ }
+});
+function renderOperations(p){
+ const panel=$('operationsPanel');panel.replaceChildren();panel.hidden=!operationsEnabled;
+ if(!operationsEnabled)return;
+ const title=document.createElement('h3');title.textContent='Operaciones · servicios de nave';
+ const list=document.createElement('ul');list.className='service-icons';
+ for(const key of ['repair','rearm','refuel']){
+  const state=evidenceState(p.services?.[key]);
+  const row=document.createElement('li');row.append(makeTacticalLabel(key,tacticalIcons[key][0]+' · '+tacticalStates[state][0],24,state));list.append(row);
+ }
+ panel.append(title,list);
+}
+
 function updateMenu(){
  const q=normalize(input.value);
- if(!q){hideMenu();return}
- const solar=locs.map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
- const pois=poiData.map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
+ if(!q&&!activeFilter){hideMenu();return}
+ const solar=(activeFilter?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
+ const pois=poiData.filter(p=>matchesFilter(p,activeFilter)).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
  p.type,p.operator,p.affiliation,p.jurisdiction,...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
@@ -264,7 +325,11 @@ function updateMenu(){
  }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||Number(Boolean(b.item.value.serviceIntel||b.item.value.hathor))-Number(Boolean(a.item.value.serviceIntel||a.item.value.hathor))||a.item.name.localeCompare(b.item.name,'es')).slice(0,16).map(x=>x.item);
  menu.replaceChildren();cursor=-1;
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
- suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
+ suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar'].filter(Boolean).join(' · ');if(item.kind==='poi'){
+  const icon=resultIcon(item.value);
+  const state=['repair','refuel'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
+  name.prepend(tacticalIcon(icon,{size:20,state}));name.className='tactical-label';
+ }btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
 }
 $('searchAgain').addEventListener('click',()=>{
@@ -285,7 +350,7 @@ input.addEventListener('keydown',e=>{
     if(item){e.preventDefault();chooseSearchResult(item)}
   }
 });
-document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search'))hideMenu();});
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search, .tactical-toolbar'))hideMenu();});
 $('copyCoord').addEventListener('click', async () => {
   if (!cur) return; const c = coords(cur);
   const txt = `${cur.name} (${cur.body}) — ${fmtCoords(c)} · alt ${c.altKm.toFixed(2)} km · x ${c.x.toFixed(3)} y ${c.y.toFixed(3)} z ${c.z.toFixed(3)} km`;
@@ -389,24 +454,24 @@ function renderTacticalCards(p,sec,loot){
  const hasResources=Boolean(resources.length||intel?.mining||p.tacticalIntel?.resources?.length);
  const hasServices=Boolean(amenities.length||Object.values(p.services||{}).some(x=>x==='reported'||x==='confirmed'));
  const cards=[
-  ['⚔','PVE / NPC',p.hathor?sec.pve:p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
-  ['◎','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
-  ['◈','BOTÍN / EQUIPO',p.hathor?p.hathor.sections[3].text:p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
-  ['◆','MISIONES',p.hathor?'Align & Mine · pedido de Shubin relacionado':missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
-  ['⬡','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
-  ['✚','SERVICIOS',p.serviceIntel?.services.length?p.serviceIntel.services.map(s=>serviceNames[s]).join(' · '):amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
+  ['pve','PVE / NPC',p.hathor?sec.pve:p.tacticalIntel?.threats?.length?p.tacticalIntel.threats.join(' · '):hasPve?sec.pve:'Sin datos específicos',hasPve,'Evaluación documental, no estado del servidor'],
+  ['pvp','PVP / JUGADORES',hasPvp?sec.pvp:'Sin datos específicos',hasPvp,'No detecta jugadores en vivo'],
+  ['loot','BOTÍN / EQUIPO',p.hathor?p.hathor.sections[3].text:p.tacticalIntel?.weapons?.length?p.tacticalIntel.weapons.length+' armas posibles · pool PAF':intel?.categories?.length?intel.categories.length+' categorías documentadas':loot?.summary||'Sin botín específico verificado',hasLoot,'Pool posible ≠ objeto garantizado'],
+  ['mission','MISIONES',p.hathor?'Align & Mine · pedido de Shubin relacionado':missions.length?missions.length+' contratos identificados':p.activities?.length?p.activities.length+' actividades documentadas':'Sin contratos identificados',hasMissions,'Disponibilidad dependiente del servidor'],
+  ['mining','RECURSOS',resources.length?resources.length+' recursos identificados':p.tacticalIntel?.resources?.length?p.tacticalIntel.resources.length+' recursos / recompensas documentados':intel?.mining?'Minería de evento documentada':'Sin recursos específicos verificados',hasResources,'Presencia en campo no garantizada'],
+  ['repair','SERVICIOS',p.serviceIntel?.services.length?p.serviceIntel.services.map(s=>serviceNames[s]).join(' · '):amenities.length?amenities.length+' servicios catalogados':hasServices?'Servicios reportados':'Sin servicios específicos registrados',hasServices,'Confirmar antes de desplazarte']
  ];
  const covered=cards.filter(c=>c[3]).length,score=Math.round(100*covered/cards.length);
  const header=document.createElement('div');header.className='intel-readiness-head';
- const label=document.createElement('span');label.textContent='◈ COBERTURA DE INTELIGENCIA';
+ const label=document.createElement('span');label.textContent='COBERTURA DE INTELIGENCIA';
  const value=document.createElement('strong');value.textContent=covered+'/6 DOMINIOS';
  header.append(label,value);
  const meter=document.createElement('div');meter.className='intel-readiness-meter';const fill=document.createElement('span');fill.style.width=score+'%';meter.append(fill);
  const caption=document.createElement('div');caption.className='intel-readiness-caption';caption.textContent='Cobertura documental '+score+'% · no mide seguridad, calidad ni probabilidad de botín. '+(p.intelCheckedAt?'API consultada: '+new Date(p.intelCheckedAt).toLocaleDateString('es-ES'):'Ficha sin fecha de consulta API');
  readiness.append(header,meter,caption);
- for(const [symbol,title,value,known,evidence] of cards){
+ for(const [icon,title,value,known,evidence] of cards){
   const card=document.createElement('div');card.className='intel-tactical-card';card.dataset.kind=known?'known':'unknown';
-  const t=document.createElement('div');t.className='intel-tactical-title';t.textContent=symbol+' '+title;
+  const t=document.createElement('div');t.className='intel-tactical-title';t.append(tacticalIcon(icon,{size:24}),title);
   const v=document.createElement('div');v.className='intel-tactical-value';v.textContent=value;
   const e=document.createElement('small');e.className='intel-evidence';e.textContent=(known?'DOCUMENTADO · ':'SIN COBERTURA · ')+evidence;
   card.append(t,v,e);root.append(card)
@@ -420,8 +485,9 @@ function renderLocationDossier(p){
  const host=$('locationDossier');
  host.replaceChildren();
  const sections=tacticalSections(p);
+ renderOperations(p);
  host.hidden=!sections.length;
- $('tacticalPanel').hidden=!sections.length;
+ $('tacticalPanel').hidden=!sections.length&&!operationsEnabled;
  const nav=names=>{
   const bar=document.createElement('div');bar.className='location-dossier-nav';
   for(const name of names){
@@ -440,7 +506,9 @@ function renderLocationDossier(p){
  }
  for(const section of sections){
   const block=document.createElement('section');block.className='location-dossier-block';
-  const title=document.createElement('h3');title.textContent=section.title;
+  const title=document.createElement('h3');title.className='tactical-label';
+  for(const icon of section.icons||[])title.append(tacticalIcon(icon,{size:24}));
+  title.append(section.title);
   const copy=document.createElement('p');copy.textContent=section.text;
   const links=document.createElement('div');links.className='intel-source-links';
   for(const item of section.sources){
@@ -448,6 +516,16 @@ function renderLocationDossier(p){
    links.append(link);
   }
   block.append(title,copy);
+  if(section.icons?.length===0&&p.serviceIntel?.services.length){
+   const list=document.createElement('ul');list.className='service-icons';
+   for(const key of p.serviceIntel.services){
+    const icon=serviceIcons[key];if(!icon)continue;
+    const state=evidenceState(p.services?.[key]);
+    const row=document.createElement('li');
+    row.append(makeTacticalLabel(icon,serviceNames[key]+' · '+tacticalStates[state][0],24,state));list.append(row);
+   }
+   block.append(list);
+  }
   if(section.destinations)block.append(nav(section.destinations));
   block.append(links);host.append(block);
  }
@@ -533,7 +611,7 @@ function renderPoi(){
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
  for(const p of matches.slice(0,100)){
- const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.textContent=p.name;
+ const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.append(makeTacticalLabel(resultIcon(p),p.name));
  const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type].filter(Boolean).join(' · ');
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
@@ -566,7 +644,7 @@ async function mergeFreshIntel(d){
  poiData=poiData.map(p=>{const e=byUuid.get(p.source?.uuid||p.id);if(!e)return p;changed=true;return {...p,missions:e.missions||p.missions||[],resources:e.resources||p.resources||[],nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt}});
  if(!changed)return;
  if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
- if(input.value.trim())updateMenu();
+ if(input.value.trim()||activeFilter)updateMenu();
  renderPoi();
 }
 
@@ -588,7 +666,7 @@ function mergeFreshResources(data){
  });
  if(changed){
   if(selectedPoiKey){const p=poiData.find(x=>atlasKey(x)===selectedPoiKey);if(p)applyPoiToMain(p)}
-  if(input.value.trim())updateMenu();
+  if(input.value.trim()||activeFilter)updateMenu();
   renderPoi();
  }
 }
@@ -669,7 +747,7 @@ async function loadAtlas(){
  poiData=[...byKey.values()].sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  updateAtlasProgress({generatedAt:serviceSnapshot?.checkedAt});
  await refreshResourceIndex(version);
- if(input.value.trim())updateMenu();
+ if(input.value.trim()||activeFilter)updateMenu();
  const requested=byKey.get(initialDestination);
  if(requested&&!selectedPoiKey)chooseSearchResult({kind:'poi',value:requested});
  else{
