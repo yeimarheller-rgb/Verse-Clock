@@ -5575,6 +5575,911 @@
           "https://starcitizen.tools/Deakins_Research_Outpost"
         ]
       }
+    },
+    {
+      "id": "hurston-hdms-edmond",
+      "name": "HDMS-Edmond",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {
+        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
+        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+      },
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDMS-Edmond · puesto minero HDMS",
+        "steps": [
+          "Ubicación HDMS catalogada en Hurston.",
+          "El catálogo 4.9 muestra terminal de comercio, pad mediano y Vehicle Services; confirmar funcionamiento y tamaño admitido en 4.10.3 antes de utilizarla como punto de reparación."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "El catálogo 4.9 lista Commodity Trading; inventario y precios 4.10.3 no contrastados.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Vehicle Services aparece en catálogo 4.9, pero reparación y reabastecimiento en 4.10.3 NO verificados.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+        ]
+      }
+    },
+    {
+      "id": "hurston-hdms-hadley",
+      "name": "HDMS-Hadley",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {
+        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
+        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+      },
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDMS-Hadley · puesto minero HDMS",
+        "steps": [
+          "Ubicación HDMS catalogada en Hurston.",
+          "El catálogo 4.9 muestra terminal de comercio, pad mediano y Vehicle Services; confirmar funcionamiento y tamaño admitido en 4.10.3 antes de utilizarla como punto de reparación."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "El catálogo 4.9 lista Commodity Trading; inventario y precios 4.10.3 no contrastados.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Vehicle Services aparece en catálogo 4.9, pero reparación y reabastecimiento en 4.10.3 NO verificados.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+        ]
+      }
+    },
+    {
+      "id": "hurston-hdms-oparei",
+      "name": "HDMS-Oparei",
+      "system": "Stanton",
+      "type": "surface-outpost",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {
+        "vehicleServices": "api-listed-4.9-unverified-4.10.3",
+        "commodityTrading": "api-listed-4.9-unverified-4.10.3"
+      },
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDMS-Oparei · puesto minero HDMS",
+        "steps": [
+          "Ubicación HDMS catalogada en Hurston.",
+          "El catálogo 4.9 muestra terminal de comercio, pad mediano y Vehicle Services; confirmar funcionamiento y tamaño admitido en 4.10.3 antes de utilizarla como punto de reparación."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "El catálogo 4.9 lista Commodity Trading; inventario y precios 4.10.3 no contrastados.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "source-listed",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": [
+            "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+          ]
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "Vehicle Services aparece en catálogo 4.9, pero reparación y reabastecimiento en 4.10.3 NO verificados.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306"
+        ]
+      }
+    },
+    {
+      "id": "hurston-hdsf-adlai",
+      "name": "HDSF-Adlai",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Adlai · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-barnabas",
+      "name": "HDSF-Barnabas",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Barnabas · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-breckinridge",
+      "name": "HDSF-Breckinridge",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Breckinridge · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-colfax",
+      "name": "HDSF-Colfax",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Colfax · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-damaris",
+      "name": "HDSF-Damaris",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Damaris · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-elbridge",
+      "name": "HDSF-Elbridge",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Elbridge · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-hendricks",
+      "name": "HDSF-Hendricks",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Hendricks · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-hiram",
+      "name": "HDSF-Hiram",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Hiram · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-hobart",
+      "name": "HDSF-Hobart",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Hobart · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
+    },
+    {
+      "id": "hurston-hdsf-ishmael",
+      "name": "HDSF-Ishmael",
+      "system": "Stanton",
+      "type": "underground-facility",
+      "parent": "Hurston",
+      "operator": null,
+      "services": {},
+      "sourceUrls": [
+        "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+        "https://starcitizen.tools/Hurston"
+      ],
+      "verification": "api-catalog-prior-patch",
+      "patch": "4.9.0-LIVE.12232306 (source); 4.10.3 not verified",
+      "tacticalIntel": {
+        "title": "HDSF-Ishmael · instalación subterránea HDSF",
+        "steps": [
+          "Instalación subterránea HDSF catalogada en Hurston.",
+          "La ficha de ubicación no demuestra que exista un contrato activo, enemigos presentes ni botín en esta instancia."
+        ],
+        "threats": [
+          "Sin frecuencia de PvP específica contrastada.",
+          "Presencia de NPC y acceso por misión no confirmados en 4.10.3 LIVE."
+        ],
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ],
+        "caveat": "Fuente 4.9; no extrapolar servicios, drops o encuentros a 4.10.3."
+      },
+      "operationalNotes": {
+        "missions": "Contrato específico no documentado para esta ubicación.",
+        "pve": "Encuentros NPC no confirmados en la instancia LIVE.",
+        "pvp": "Sin datos de frecuencia de PvP local.",
+        "loot": "Sin tabla de drops específica validada.",
+        "weapons": "Sin stock o drops de armas validados.",
+        "trade": "Sin terminal de comercio validado.",
+        "hazards": "Sin evaluación de riesgo específica contrastada.",
+        "sources": [
+          "https://api.star-citizen.wiki/locations/hurston?version=4.9.0-LIVE.12232306",
+          "https://starcitizen.tools/Hurston"
+        ]
+      },
+      "repairIntel": {
+        "ship": {
+          "status": "unverified",
+          "method": "landing-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "groundVehicle": {
+          "status": "unverified",
+          "method": "vehicle-service",
+          "vehicleClasses": [],
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "field": {
+          "status": "unverified",
+          "method": "manual",
+          "verifiedPatch": null,
+          "sources": []
+        },
+        "note": "No se documenta reparación en este emplazamiento.",
+        "sources": []
+      }
     }
   ]
 }
