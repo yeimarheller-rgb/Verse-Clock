@@ -115,3 +115,19 @@ test('Hurston repair guidance never upgrades old API service listings to verifie
     assert.ok(poi.sourceUrls?.length, poi.name + ': missing identification provenance');
   }
 });
+
+
+test('Hathor PAF mission evidence is patch-scoped and rendered without guaranteeing assignment', () => {
+ const seed=JSON.parse(readFileSync(new URL('../data/atlas-poi-seed.json', import.meta.url),'utf8'));
+ const paf=seed.locations.filter(p=>p.type==='planetary-alignment-facility');
+ assert.equal(paf.length,12);
+ for(const p of paf){
+  const m=p.operationalNotes?.missionEvidence4103;
+  assert.ok(m,p.id+' missing mission evidence');
+  assert.equal(m.sourcePatch,'4.10.3-LIVE.13165946');
+  assert.match(m.locationScope,/no garantiza/i);
+  assert.ok(p.sourceUrls.includes(m.source));
+ }
+ const ui=readFileSync(new URL('../src/app.js',import.meta.url),'utf8');
+ assert.ok(ui.includes('op.missionEvidence4103'));
+});
