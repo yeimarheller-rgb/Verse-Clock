@@ -333,6 +333,18 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-hurston-loot-{name.split()[0]}-{device}.png', full_page=True)
+        for name, points, weapons in [('HDRSO-Bardie', 16, True), ('HDRSO-Brel', 11, False), ('HDRSO-Pearce', 20, True)]:
+            query(name, name)
+            loot = dossier.locator('[data-domain="loot"]')
+            expect(loot).to_contain_text(f'{points} puntos de botín')
+            count = 1 if weapons else 0
+            expect(loot.locator('.dossier-fact').filter(has_text='P8-SC SMG')).to_have_count(count)
+            navigation = dossier.locator('[data-domain="navigation"]')
+            navigation.locator('summary').click()
+            expect(navigation).to_contain_text('Puesto inactivo y acceso prohibido')
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-hdrso-{name}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

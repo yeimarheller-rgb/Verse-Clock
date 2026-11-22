@@ -273,3 +273,24 @@ test('Hurston Paladin loot resolves to seven distinct sites and the right contai
  assert.ok(baier.stantonIntel.claims.some(claim=>claim.field==='loot'&&claim.text.includes('XDL Monocular Rangefinder')));
  assert.ok(baier.stantonIntel.claims.every(claim=>!claim.text.includes('Paladin')));
 });
+
+test('HDRSO outposts receive only their own versioned loot and access evidence',()=>{
+ const entries=stanton.locations.filter(row=>row.claims.some(c=>c.title==='Cajas de equipo HDRSO'));
+ const spots={Bardie:16,Bersch:20,Bowes:20,Brel:11,Cronshaw:13,Foster:16,Franz:20,Giblin:11,Hosley:20,Malloy:20,Marling:11,McKuen:20,Newman:11,Olliff:13,Pearce:20};
+ assert.equal(entries.length,Object.keys(spots).length);
+ for(const entry of entries){
+  const {name,uuid,claims}=entry;
+  const count=spots[name.slice('HDRSO-'.length)];
+  const record=raw.find(r=>r.id===uuid);
+  assert.equal(record?.name,name);
+  assert.equal(record.parent,'Hurston');
+  assert.ok(claims.every(c=>c.patch===catalogue.version&&c.sources.includes('https://api.star-citizen.wiki/api/locations/'+uuid)&&c.sources.includes('https://loot-verse.com/#place-stanton1-ugf-'+name.toLowerCase())));
+  assert.match(claims.find(c=>c.field==='loot').text,new RegExp(count+' puntos'));
+  const coverage=stantonCoverage([record],[atId.get(uuid)]);
+  assert.equal(coverage.operational,1,name);
+  assert.equal(coverage.counts.access,1,name);
+  assert.equal(coverage.counts.loot,1,name);
+  assert.equal(coverage.counts.weapons,count===11?0:1,name);
+  assert.equal(coverage.counts.pve+coverage.counts.pvp+coverage.counts.missions,0,name);
+ }
+});

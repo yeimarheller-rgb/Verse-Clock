@@ -8875,6 +8875,618 @@
       ],
       "uuid": "afbe55fc-d07f-4697-9a50-c76d0a8b97f0",
       "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Bardie",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/81a14c69-e391-472d-9e61-863684d7b758",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bardie"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 16 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bardie",
+            "https://api.star-citizen.wiki/api/locations/81a14c69-e391-472d-9e61-863684d7b758"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bardie",
+            "https://api.star-citizen.wiki/api/locations/81a14c69-e391-472d-9e61-863684d7b758"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "81a14c69-e391-472d-9e61-863684d7b758",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Bersch",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3a7af953-61c0-4aa0-87fb-888dd82891c8",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bersch"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bersch",
+            "https://api.star-citizen.wiki/api/locations/3a7af953-61c0-4aa0-87fb-888dd82891c8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bersch",
+            "https://api.star-citizen.wiki/api/locations/3a7af953-61c0-4aa0-87fb-888dd82891c8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "3a7af953-61c0-4aa0-87fb-888dd82891c8",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Bowes",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8ea5c66c-eab0-4874-8f22-a643fd4f7400",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bowes"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bowes",
+            "https://api.star-citizen.wiki/api/locations/8ea5c66c-eab0-4874-8f22-a643fd4f7400"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-bowes",
+            "https://api.star-citizen.wiki/api/locations/8ea5c66c-eab0-4874-8f22-a643fd4f7400"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "8ea5c66c-eab0-4874-8f22-a643fd4f7400",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Brel",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0276cc47-3fba-4995-9a18-d49a0cab077f",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-brel"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 11 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-brel",
+            "https://api.star-citizen.wiki/api/locations/0276cc47-3fba-4995-9a18-d49a0cab077f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        }
+      ],
+      "uuid": "0276cc47-3fba-4995-9a18-d49a0cab077f",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Cronshaw",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/40fe989c-8cdb-45dd-97b1-cdc154d390b2",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-cronshaw"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 13 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-cronshaw",
+            "https://api.star-citizen.wiki/api/locations/40fe989c-8cdb-45dd-97b1-cdc154d390b2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-cronshaw",
+            "https://api.star-citizen.wiki/api/locations/40fe989c-8cdb-45dd-97b1-cdc154d390b2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "40fe989c-8cdb-45dd-97b1-cdc154d390b2",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Foster",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bb35f8b6-fb5a-4662-8e9c-dd09aa1ee95e",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-foster"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 16 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-foster",
+            "https://api.star-citizen.wiki/api/locations/bb35f8b6-fb5a-4662-8e9c-dd09aa1ee95e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-foster",
+            "https://api.star-citizen.wiki/api/locations/bb35f8b6-fb5a-4662-8e9c-dd09aa1ee95e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "bb35f8b6-fb5a-4662-8e9c-dd09aa1ee95e",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Franz",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4358eeb7-cafd-4878-83a9-83c9872a7451",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-franz"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-franz",
+            "https://api.star-citizen.wiki/api/locations/4358eeb7-cafd-4878-83a9-83c9872a7451"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-franz",
+            "https://api.star-citizen.wiki/api/locations/4358eeb7-cafd-4878-83a9-83c9872a7451"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "4358eeb7-cafd-4878-83a9-83c9872a7451",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Giblin",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ed2047f1-c76f-44da-8005-86d4833887bb",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-giblin"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 11 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-giblin",
+            "https://api.star-citizen.wiki/api/locations/ed2047f1-c76f-44da-8005-86d4833887bb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        }
+      ],
+      "uuid": "ed2047f1-c76f-44da-8005-86d4833887bb",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Hosley",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c18791da-b7ff-4c60-b0cb-4a14b54a2361",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-hosley"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-hosley",
+            "https://api.star-citizen.wiki/api/locations/c18791da-b7ff-4c60-b0cb-4a14b54a2361"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-hosley",
+            "https://api.star-citizen.wiki/api/locations/c18791da-b7ff-4c60-b0cb-4a14b54a2361"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "c18791da-b7ff-4c60-b0cb-4a14b54a2361",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Malloy",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0792815f-d7b7-45ea-bce8-9150436d04e4",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-malloy"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-malloy",
+            "https://api.star-citizen.wiki/api/locations/0792815f-d7b7-45ea-bce8-9150436d04e4"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-malloy",
+            "https://api.star-citizen.wiki/api/locations/0792815f-d7b7-45ea-bce8-9150436d04e4"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "0792815f-d7b7-45ea-bce8-9150436d04e4",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Marling",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/be8c80ab-1e6f-489e-9e6d-93ce433ceaff",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-marling"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 11 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-marling",
+            "https://api.star-citizen.wiki/api/locations/be8c80ab-1e6f-489e-9e6d-93ce433ceaff"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        }
+      ],
+      "uuid": "be8c80ab-1e6f-489e-9e6d-93ce433ceaff",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-McKuen",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/318ca5a8-637f-4f6c-8009-2a49d00dcfb3",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-mckuen"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-mckuen",
+            "https://api.star-citizen.wiki/api/locations/318ca5a8-637f-4f6c-8009-2a49d00dcfb3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-mckuen",
+            "https://api.star-citizen.wiki/api/locations/318ca5a8-637f-4f6c-8009-2a49d00dcfb3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "318ca5a8-637f-4f6c-8009-2a49d00dcfb3",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Newman",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/335afae8-3086-4e12-8c88-f827204e235a",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-newman"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 11 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-newman",
+            "https://api.star-citizen.wiki/api/locations/335afae8-3086-4e12-8c88-f827204e235a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        }
+      ],
+      "uuid": "335afae8-3086-4e12-8c88-f827204e235a",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Olliff",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ecbe605d-19a8-4712-b415-f08f6a0e8875",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-olliff"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 13 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-olliff",
+            "https://api.star-citizen.wiki/api/locations/ecbe605d-19a8-4712-b415-f08f6a0e8875"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-olliff",
+            "https://api.star-citizen.wiki/api/locations/ecbe605d-19a8-4712-b415-f08f6a0e8875"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "ecbe605d-19a8-4712-b415-f08f6a0e8875",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Pearce",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo de Hurston Dynamics marca el puesto como inactivo y de acceso prohibido. La extracción identifica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/75ca5d40-a1b2-4b7b-ad06-fc0535bf46e2",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-pearce"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La respuesta de torretas y NPC sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo HDRSO",
+          "text": "La extracción registra 20 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-pearce",
+            "https://api.star-citizen.wiki/api/locations/75ca5d40-a1b2-4b7b-ad06-fc0535bf46e2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El recuento incluye varios tipos de punto. El contenido de cada caja depende de su tirada y de la sesión."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas HDRSO",
+          "text": "Las cajas de armas (Weapons crate) incluyen S-38 Pistol y P8-SC SMG entre sus posibles tiradas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-pearce",
+            "https://api.star-citizen.wiki/api/locations/75ca5d40-a1b2-4b7b-ad06-fc0535bf46e2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín aleatorio según las tablas del lugar. La disponibilidad de las cajas sigue pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "75ca5d40-a1b2-4b7b-ad06-fc0535bf46e2",
+      "checkedAt": "2026-11-22"
     }
   ]
 }
