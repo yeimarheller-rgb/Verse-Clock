@@ -143,7 +143,7 @@ test('the FPS mining batch credits resources only from current, matching locatio
    assert.equal(source?.locationUuid,id,name+' '+gem);
    assert.equal(source?.version,index.version);
   }
-  const result=stantonCoverage(raw.filter(row=>row.id===id),[site]);
+  const result=stantonCoverage(raw.filter(row=>row.id===id),[{...site,stantonIntel:{claims:[claim]}}]);
   assert.equal(result.counts.resources,1,name);
   assert.equal(result.counts.loot,0,name);
  }
@@ -222,7 +222,7 @@ test('documented pharmacy stock resolves to the clinic UUID without implying shi
 });
 
 test('Lyria and Calliope loot is tied to exact location links and its own build',()=>{
- const sites=stanton.locations.filter(row=>row.claims.some(claim=>claim.field==='loot'&&claim.sources.some(url=>url.startsWith('https://loot-verse.com/#place-'))));
+ const sites=stanton.locations.filter(row=>['Lyria','Calliope'].includes(row.body)&&row.claims.some(claim=>claim.field==='loot'&&claim.sources.some(url=>url.startsWith('https://loot-verse.com/#place-'))));
  assert.equal(sites.length,42);
  const links=new Set();
  for(const row of sites){
@@ -243,4 +243,33 @@ test('Lyria and Calliope loot is tied to exact location links and its own build'
  const spmc14=at('Shubin Processing Facility SPMC-14');
  const generic={...spmc14,stantonIntel:{claims:[{field:'loot',status:'documented',text:'Sin lugar específico',sources:['https://loot-verse.com/#places']}]}};
  assert.equal(stantonCoverage(raw.filter(location=>location.id===spmc14.stantonIntel.uuid),[generic]).operational,0);
+});
+
+test('Hurston Paladin loot resolves to seven distinct sites and the right container type',()=>{
+ const containers=new Map([
+  ["Cutter's Rig",['Metal loot crate','Weapon case']],
+  ["Finn's Folly",['Metal loot crate']],
+  ['Ludlow',['Metal loot crate']],
+  ["Maker's Point",['Metal loot crate']],
+  ["Picker's Field",['Weapon case']],
+  ['Reclamation & Disposal Orinth',['Weapon case']],
+  ['Zephyr',['Metal loot crate','Weapon case']],
+ ]);
+ const sites=stanton.locations.filter(row=>row.claims.some(claim=>claim.title==='Casco Paladin'));
+ assert.equal(sites.length,containers.size);
+ for(const row of sites){
+  const site=atId.get(row.uuid);
+  const record=raw.find(location=>location.id===row.uuid);
+  const loot=row.claims.find(claim=>claim.title==='Casco Paladin');
+  assert.equal(record?.name,row.name);
+  assert.equal(record?.parent,'Hurston');
+  assert.equal(loot.patch,catalogue.version);
+  assert.deepEqual([...loot.text.matchAll(/Metal loot crate|Weapon case/g)].map(m=>m[0]),containers.get(row.name));
+  assert.ok(loot.sources.includes('https://api.star-citizen.wiki/api/locations/'+row.uuid));
+  assert.equal(stantonCoverage([record],[site]).counts.loot,1,row.name);
+ }
+ const baier=at('HDRSO-Baier');
+ assert.ok(baier.stantonIntel.claims.some(claim=>claim.field==='access'));
+ assert.ok(baier.stantonIntel.claims.some(claim=>claim.field==='loot'&&claim.text.includes('XDL Monocular Rangefinder')));
+ assert.ok(baier.stantonIntel.claims.every(claim=>!claim.text.includes('Paladin')));
 });

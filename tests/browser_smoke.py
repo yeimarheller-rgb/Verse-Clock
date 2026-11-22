@@ -321,6 +321,18 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-stanton-bunker-{name.split()[-1]}-{device}.png', full_page=True)
+        for search, name, item, container in [
+            ('Paladin', 'Zephyr', 'Casco Paladin', 'Metal loot crate'),
+            ("Picker's Field", "Picker's Field", 'Casco Paladin', 'Weapon case'),
+            ('HDRSO-Baier', 'HDRSO-Baier', 'XDL Monocular Rangefinder', 'Misc crate'),
+        ]:
+            query(search, name)
+            loot = dossier.locator('[data-domain="loot"]')
+            expect(loot.locator('.dossier-fact').filter(has_text=item)).to_have_count(1)
+            expect(loot).to_contain_text(container)
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-hurston-loot-{name.split()[0]}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

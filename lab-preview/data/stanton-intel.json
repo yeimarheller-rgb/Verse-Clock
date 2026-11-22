@@ -1270,8 +1270,22 @@
           ],
           "patch": "Versión de la fuente no determinada; pendiente de validar en 4.10.3 LIVE",
           "uncertainty": "La fuente describe el lugar o servicio, pero no acredita por sí sola disponibilidad ni funcionamiento en el servidor LIVE 4.10.3."
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de cajas metálicas (Metal loot crate) y estuches de armas (Weapon case) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-cuttersrig",
+            "https://api.star-citizen.wiki/api/locations/50a868c0-07dc-480b-9282-46067bf015e1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
         }
-      ]
+      ],
+      "uuid": "50a868c0-07dc-480b-9282-46067bf015e1",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Daymar",
@@ -2900,11 +2914,25 @@
             "https://uexcorp.space/terminals/info/name/pickers-field/tab/buy/"
           ],
           "patch": "4.10.1"
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de estuches de armas (Weapon case) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-pickersfield",
+            "https://api.star-citizen.wiki/api/locations/b15c830d-2be3-4df7-a721-0b28a86f64bf"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
         }
       ],
       "reviewNotes": [
         "AUDITORÍA 2026-11-21: campos repetidos (trade). Conservar afirmaciones y fuentes separadas hasta contrastar versiones, alcances y vigencia; no sumar cada afirmación como una ubicación adicional ni interpretar un dato histórico como verificación LIVE."
-      ]
+      ],
+      "uuid": "b15c830d-2be3-4df7-a721-0b28a86f64bf",
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Port Tressler",
@@ -3134,10 +3162,22 @@
           ],
           "title": "Venta al terminal",
           "patch": "4.10.3"
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de estuches de armas (Weapon case) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-junksite-reclamationanddisposalorinth",
+            "https://api.star-citizen.wiki/api/locations/a0e7c619-4120-409a-9b54-5cc7310457d1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
         }
       ],
       "uuid": "a0e7c619-4120-409a-9b54-5cc7310457d1",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Sakura Sun Goldenrod Workcenter",
@@ -4119,10 +4159,22 @@
             "Hadanite",
             "Janalite"
           ]
+        },
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de cajas metálicas (Metal loot crate) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ludlow",
+            "https://api.star-citizen.wiki/api/locations/3fbe0a2a-c042-4f96-a941-286268504576"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
         }
       ],
       "uuid": "3fbe0a2a-c042-4f96-a941-286268504576",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-22"
     },
     {
       "name": "Adair's Retreat",
@@ -8730,6 +8782,98 @@
         }
       ],
       "uuid": "297e55a7-2a4c-46d2-96f6-014b00541494",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Finn's Folly",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de cajas metálicas (Metal loot crate) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-finnsfolly",
+            "https://api.star-citizen.wiki/api/locations/8f8f7b55-bca3-425d-b004-d123c2fc95f8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
+        }
+      ],
+      "uuid": "8f8f7b55-bca3-425d-b004-d123c2fc95f8",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Maker's Point",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de cajas metálicas (Metal loot crate) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-makerspoint",
+            "https://api.star-citizen.wiki/api/locations/0c026684-1360-48d4-8cac-00e2f2a3fc1b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
+        }
+      ],
+      "uuid": "0c026684-1360-48d4-8cac-00e2f2a3fc1b",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Zephyr",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Casco Paladin",
+          "text": "La tabla de cajas metálicas (Metal loot crate) y estuches de armas (Weapon case) incluye el casco Paladin en tres variantes: Black/Silver, Black/Gold/Red y White/Black.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-zephyr",
+            "https://api.star-citizen.wiki/api/locations/2f26aee5-8a5f-48cd-8226-3fbdea6df3b6"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La extracción documenta las tiradas posibles. El casco y los contenedores disponibles dependen de la sesión."
+        }
+      ],
+      "uuid": "2f26aee5-8a5f-48cd-8226-3fbdea6df3b6",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Baier",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo en Baier",
+          "text": "La extracción registra 11 puntos de botín configurados. Las cajas de equipo (Misc crate) pueden contener Pyro RYT Multi-Tool, XDL Monocular Rangefinder o Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-baier",
+            "https://api.star-citizen.wiki/api/locations/afbe55fc-d07f-4697-9a50-c76d0a8b97f0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín de la tabla del contenedor. Su aparición efectiva sigue pendiente de comprobar en partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Intrusión y permisos de entrada",
+          "text": "El catálogo marca HDRSO-Baier como inactivo y con acceso prohibido. Los datos locales también registran una zona de intrusión.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-baier",
+            "https://api.star-citizen.wiki/api/locations/afbe55fc-d07f-4697-9a50-c76d0a8b97f0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Pendiente de comprobar la respuesta de las defensas en una sesión LIVE."
+        }
+      ],
+      "uuid": "afbe55fc-d07f-4697-9a50-c76d0a8b97f0",
       "checkedAt": "2026-11-22"
     }
   ]
