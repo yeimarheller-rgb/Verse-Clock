@@ -352,3 +352,35 @@ test('Stanton Onyx and security evidence is independent for all 110 UUIDs in the
  assert.equal(ids.size,110);
  assert.equal(sources.size,110);
 });
+
+test('private claims document restrictions for distinct UUIDs without inferring mining or direct travel',()=>{
+ const title='Concesión privada sin destino de salto directo';
+ const claims=stanton.locations.filter(entry=>entry.claims.some(row=>row.title===title));
+ assert.ok(claims.length>=94);
+ assert.equal(new Set(claims.map(entry=>entry.uuid)).size,claims.length);
+ for(const entry of claims){
+  const record=raw.find(row=>row.id===entry.uuid);
+  const site=atId.get(entry.uuid);
+  const claim=entry.claims.find(row=>row.title===title);
+  assert.equal(record?.name,entry.name);
+  assert.equal(record?.parent,entry.body);
+  assert.equal(claim.patch,catalogue.version);
+  assert.deepEqual(claim.sources,['https://api.star-citizen.wiki/api/locations/'+entry.uuid]);
+  assert.equal(claim.resourceNames,undefined);
+  const coverage=stantonCoverage([record],[site]);
+  assert.equal(coverage.counts.access,1,entry.name);
+  assert.equal(coverage.counts.resources+coverage.counts.loot+coverage.counts.missions,0,entry.name);
+ }
+});
+
+test('Kareah loot, assigned resources and the Euterpe racing activity remain separate',()=>{
+ const kareah=at('Security Post Kareah');
+ assert.ok(kareah.stantonIntel.claims.some(claim=>claim.field==='loot'&&claim.text.includes('69 puntos')));
+ const base=atId.get('d6a51101-0480-4e80-8de2-5c6452879298');
+ const assigned=read('atlas-commodities').locations.find(row=>row.id===base.stantonIntel.uuid).resources;
+ const resources=base.stantonIntel.claims.find(claim=>claim.field==='resources').resourceNames;
+ assert.ok(resources.length);
+ assert.ok(resources.every(name=>assigned.some(item=>item.name===name&&item.kind==='mineable'&&item.source.locationUuid===base.stantonIntel.uuid&&item.source.version===catalogue.version)));
+ const circuit=at('The Icebreaker');
+ assert.ok(circuit.stantonIntel.claims.some(claim=>claim.field==='missions'&&claim.text.includes('20,3 km')));
+});

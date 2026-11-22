@@ -376,6 +376,19 @@ with sync_playwright() as p:
             page.evaluate('window.scrollTo(0,0)')
             file_name = name.lower().replace(' ', '-')
             page.screenshot(path=f'/tmp/verse-lab-stanton110-{file_name}-{device}.png', full_page=True)
+        for short_name, title, domain, expected in [
+            ('kareah', 'Security Post Kareah', 'loot', '69 puntos de botín'),
+            ('icebreaker', 'The Icebreaker', 'missions', '20,3 km'),
+            ('private-claim', 'Mining Claim #031-L6W', 'navigation', 'Concesión privada sin destino de salto directo'),
+        ]:
+            query(title, title)
+            section = dossier.locator(f'[data-domain="{domain}"]')
+            if domain == 'navigation' and section.get_attribute('open') is None:
+                section.locator('summary').click()
+            expect(section).to_contain_text(expected)
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton200-{short_name}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()
