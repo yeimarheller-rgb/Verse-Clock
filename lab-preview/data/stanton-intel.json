@@ -9507,6 +9507,1302 @@
       ],
       "uuid": "75ca5d40-a1b2-4b7b-ad06-fc0535bf46e2",
       "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 066",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 20 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost066",
+            "https://api.star-citizen.wiki/api/locations/2716131f-2cab-4ec8-8bfe-87465872beb0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso restringido a personal y contratistas",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción indica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2716131f-2cab-4ec8-8bfe-87465872beb0",
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost066"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost066",
+            "https://api.star-citizen.wiki/api/locations/2716131f-2cab-4ec8-8bfe-87465872beb0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "2716131f-2cab-4ec8-8bfe-87465872beb0",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 078",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 13 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost078",
+            "https://api.star-citizen.wiki/api/locations/6461cfd2-3ce6-41c9-b1bf-e3b721ae5f17"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso restringido a personal y contratistas",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción indica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6461cfd2-3ce6-41c9-b1bf-e3b721ae5f17",
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost078"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost078",
+            "https://api.star-citizen.wiki/api/locations/6461cfd2-3ce6-41c9-b1bf-e3b721ae5f17"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "6461cfd2-3ce6-41c9-b1bf-e3b721ae5f17",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 087",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 16 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost087",
+            "https://api.star-citizen.wiki/api/locations/9a07ea6b-db73-4ee9-8b6b-57bee9da1ceb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso restringido a personal y contratistas",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción indica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9a07ea6b-db73-4ee9-8b6b-57bee9da1ceb",
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost087"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost087",
+            "https://api.star-citizen.wiki/api/locations/9a07ea6b-db73-4ee9-8b6b-57bee9da1ceb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "9a07ea6b-db73-4ee9-8b6b-57bee9da1ceb",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "ArcCorp Security Post 108",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 11 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost108",
+            "https://api.star-citizen.wiki/api/locations/5f0d87d4-186c-4520-943c-a49841cfdb93"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso restringido a personal y contratistas",
+          "text": "El catálogo marca el puesto como inactivo y reserva el acceso a personal y contratistas de ArcCorp. La extracción indica una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5f0d87d4-186c-4520-943c-a49841cfdb93",
+            "https://loot-verse.com/#place-stanton3b-arccorpsecuritypost108"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "5f0d87d4-186c-4520-943c-a49841cfdb93",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Sheppard",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 13 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-sheppard",
+            "https://api.star-citizen.wiki/api/locations/2f9bdf8a-20ae-49c4-8d93-02fe35637dc8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2f9bdf8a-20ae-49c4-8d93-02fe35637dc8",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-sheppard"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-sheppard",
+            "https://api.star-citizen.wiki/api/locations/2f9bdf8a-20ae-49c4-8d93-02fe35637dc8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "2f9bdf8a-20ae-49c4-8d93-02fe35637dc8",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Sims",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 11 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-simms",
+            "https://api.star-citizen.wiki/api/locations/4afac518-011b-4b26-9842-0b52d06c056a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4afac518-011b-4b26-9842-0b52d06c056a",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-simms"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        }
+      ],
+      "uuid": "4afac518-011b-4b26-9842-0b52d06c056a",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Stott",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 13 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-stott",
+            "https://api.star-citizen.wiki/api/locations/69478e8a-ea01-42e9-8f7d-300c54e81d29"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/69478e8a-ea01-42e9-8f7d-300c54e81d29",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-stott"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-stott",
+            "https://api.star-citizen.wiki/api/locations/69478e8a-ea01-42e9-8f7d-300c54e81d29"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "69478e8a-ea01-42e9-8f7d-300c54e81d29",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Tillman",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 13 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-tillman",
+            "https://api.star-citizen.wiki/api/locations/47aea516-d208-48be-907e-5ca402099fbb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/47aea516-d208-48be-907e-5ca402099fbb",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-tillman"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-tillman",
+            "https://api.star-citizen.wiki/api/locations/47aea516-d208-48be-907e-5ca402099fbb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "47aea516-d208-48be-907e-5ca402099fbb",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Walker",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 16 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-walker",
+            "https://api.star-citizen.wiki/api/locations/c87ddc97-b469-4813-927d-2b3c94b75fa5"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c87ddc97-b469-4813-927d-2b3c94b75fa5",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-walker"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-walker",
+            "https://api.star-citizen.wiki/api/locations/c87ddc97-b469-4813-927d-2b3c94b75fa5"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "c87ddc97-b469-4813-927d-2b3c94b75fa5",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "HDRSO-Wyatt",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas de equipo del puesto",
+          "text": "La extracción registra 20 puntos de botín configurados. En las cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-wyatt",
+            "https://api.star-citizen.wiki/api/locations/251c67e1-942f-41aa-9a51-d3b13f769c93"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Puesto inactivo y acceso prohibido",
+          "text": "El catálogo marca este puesto como inactivo y de acceso prohibido. Los datos locales identifican una zona de intrusión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/251c67e1-942f-41aa-9a51-d3b13f769c93",
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-wyatt"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El comportamiento de las defensas y de los NPC queda pendiente de comprobar en partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en cajas del puesto",
+          "text": "S-38 Pistol y P8-SC SMG figuran en las tiradas de las cajas de armas (Weapons crate).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton1-ugf-hdrso-wyatt",
+            "https://api.star-citizen.wiki/api/locations/251c67e1-942f-41aa-9a51-d3b13f769c93"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        }
+      ],
+      "uuid": "251c67e1-942f-41aa-9a51-d3b13f769c93",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B1",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B1. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/f7c2c82d-87c3-4e37-a12c-36a750d18816"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/f7c2c82d-87c3-4e37-a12c-36a750d18816"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f7c2c82d-87c3-4e37-a12c-36a750d18816",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "f7c2c82d-87c3-4e37-a12c-36a750d18816",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B10",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B10. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/179a95ba-429a-4e3b-93da-017aeaa71a2b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/179a95ba-429a-4e3b-93da-017aeaa71a2b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/179a95ba-429a-4e3b-93da-017aeaa71a2b",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "179a95ba-429a-4e3b-93da-017aeaa71a2b",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B2",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B2. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/f206fc67-1e72-48cc-8fc6-d010bc266a5b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/f206fc67-1e72-48cc-8fc6-d010bc266a5b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f206fc67-1e72-48cc-8fc6-d010bc266a5b",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "f206fc67-1e72-48cc-8fc6-d010bc266a5b",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B3",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B3. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/e4e76054-a914-46ec-b00d-30a8d5d31de9"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/e4e76054-a914-46ec-b00d-30a8d5d31de9"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e4e76054-a914-46ec-b00d-30a8d5d31de9",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "e4e76054-a914-46ec-b00d-30a8d5d31de9",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B4",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B4. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/426de01d-6d56-4f73-8d1d-4cf020e6d35b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/426de01d-6d56-4f73-8d1d-4cf020e6d35b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/426de01d-6d56-4f73-8d1d-4cf020e6d35b",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "426de01d-6d56-4f73-8d1d-4cf020e6d35b",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B5",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B5. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/b3b89a31-fb76-413e-b9ea-4a6963d59788"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/b3b89a31-fb76-413e-b9ea-4a6963d59788"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/b3b89a31-fb76-413e-b9ea-4a6963d59788",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "b3b89a31-fb76-413e-b9ea-4a6963d59788",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B6",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B6. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/f1a96149-d0ba-4dce-895c-1c1240283cbd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/f1a96149-d0ba-4dce-895c-1c1240283cbd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f1a96149-d0ba-4dce-895c-1c1240283cbd",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "f1a96149-d0ba-4dce-895c-1c1240283cbd",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B7",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B7. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/c33df615-d78d-4ed8-a6a7-8d123553de29"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/c33df615-d78d-4ed8-a6a7-8d123553de29"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c33df615-d78d-4ed8-a6a7-8d123553de29",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "c33df615-d78d-4ed8-a6a7-8d123553de29",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B8",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B8. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/47d198d9-4c1c-4836-8f3c-35195f5a290e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/47d198d9-4c1c-4836-8f3c-35195f5a290e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/47d198d9-4c1c-4836-8f3c-35195f5a290e",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "47d198d9-4c1c-4836-8f3c-35195f5a290e",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4B9",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4B9. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/5c446c7a-4129-4dd6-bd6f-19af034439b0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4b-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/5c446c7a-4129-4dd6-bd6f-19af034439b0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5c446c7a-4129-4dd6-bd6f-19af034439b0",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "5c446c7a-4129-4dd6-bd6f-19af034439b0",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C1",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C1. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/0512a231-f8af-4755-afc4-564bb5d37094"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-001",
+            "https://api.star-citizen.wiki/api/locations/0512a231-f8af-4755-afc4-564bb5d37094"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0512a231-f8af-4755-afc4-564bb5d37094",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "0512a231-f8af-4755-afc4-564bb5d37094",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C10",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C10. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/9dde9d01-23b0-4a49-a837-90d24cd1b41f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-010",
+            "https://api.star-citizen.wiki/api/locations/9dde9d01-23b0-4a49-a837-90d24cd1b41f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9dde9d01-23b0-4a49-a837-90d24cd1b41f",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "9dde9d01-23b0-4a49-a837-90d24cd1b41f",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C2",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C2. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/9ddc39bf-5c2f-4a68-9a40-448f2d805b0f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-002",
+            "https://api.star-citizen.wiki/api/locations/9ddc39bf-5c2f-4a68-9a40-448f2d805b0f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9ddc39bf-5c2f-4a68-9a40-448f2d805b0f",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "9ddc39bf-5c2f-4a68-9a40-448f2d805b0f",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C3",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C3. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/88d8f848-7023-4188-b1f3-16c11827a0cb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-003",
+            "https://api.star-citizen.wiki/api/locations/88d8f848-7023-4188-b1f3-16c11827a0cb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/88d8f848-7023-4188-b1f3-16c11827a0cb",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "88d8f848-7023-4188-b1f3-16c11827a0cb",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C4",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C4. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/bf3f3e2d-5a07-4918-bf62-49afc7465508"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-004",
+            "https://api.star-citizen.wiki/api/locations/bf3f3e2d-5a07-4918-bf62-49afc7465508"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bf3f3e2d-5a07-4918-bf62-49afc7465508",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "bf3f3e2d-5a07-4918-bf62-49afc7465508",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C5",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C5. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-005",
+            "https://api.star-citizen.wiki/api/locations/d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "d08a9bc5-b9e5-4f0d-8af0-77a245bb0f4c",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C6",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C6. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/e2e3c600-166e-4106-bd7c-22b10a6974c5"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-006",
+            "https://api.star-citizen.wiki/api/locations/e2e3c600-166e-4106-bd7c-22b10a6974c5"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e2e3c600-166e-4106-bd7c-22b10a6974c5",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "e2e3c600-166e-4106-bd7c-22b10a6974c5",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C7",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C7. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/4348d7fd-2988-451e-870b-3a096e489515"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-007",
+            "https://api.star-citizen.wiki/api/locations/4348d7fd-2988-451e-870b-3a096e489515"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4348d7fd-2988-451e-870b-3a096e489515",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "4348d7fd-2988-451e-870b-3a096e489515",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C8",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C8. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/5bd716d5-a185-43d5-a1b8-abc16ba8064f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-008",
+            "https://api.star-citizen.wiki/api/locations/5bd716d5-a185-43d5-a1b8-abc16ba8064f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5bd716d5-a185-43d5-a1b8-abc16ba8064f",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "5bd716d5-a185-43d5-a1b8-abc16ba8064f",
+      "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Onyx Facility S4C9",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Cajas y armadura Corbel Smolder",
+          "text": "La extracción registra 335 puntos de botín configurados en Onyx Facility S4C9. Las cajas de armadura única pueden contener las piezas Corbel Smolder de casco, torso y piernas.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/69a5933c-083e-4ab4-a38d-eb8858c6cb8c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armas en soportes Onyx",
+          "text": "Los soportes registran Zenith Laser Sniper Rifle y Fresnel Energy LMG como botín posible.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton4c-asd-delve-facility-009",
+            "https://api.star-citizen.wiki/api/locations/69a5933c-083e-4ab4-a38d-eb8858c6cb8c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Botín posible según la extracción. El contenido y la disponibilidad dependen de la partida."
+        },
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso mediante marcador de misión",
+          "text": "El catálogo oculta esta instalación en el mapa y en el mundo, y la describe como clausurada. La guía de Onyx indica que el acceso cuántico directo depende de un marcador de misión.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/69a5933c-083e-4ab4-a38d-eb8858c6cb8c",
+            "https://starcitizen.tools/Onyx_Facility_(ASD)"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Confirma el código de la instalación y el marcador en mobiGlas. La asignación y la respuesta de las defensas quedan pendientes de comprobar en partida."
+        }
+      ],
+      "uuid": "69a5933c-083e-4ab4-a38d-eb8858c6cb8c",
+      "checkedAt": "2026-11-22"
     }
   ]
 }

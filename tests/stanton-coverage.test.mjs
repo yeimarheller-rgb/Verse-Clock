@@ -294,3 +294,29 @@ test('HDRSO outposts receive only their own versioned loot and access evidence',
   assert.equal(coverage.counts.pve+coverage.counts.pvp+coverage.counts.missions,0,name);
  }
 });
+
+test('the Clio, Euterpe, Hurston and Wala batch resolves distinct documented local claims',()=>{
+ const onyx=['B','C'].flatMap(letter=>Array.from({length:10},(_,i)=>'Onyx Facility S4'+letter+(i+1)));
+ const hdrso=['Sheppard','Sims','Stott','Tillman','Walker','Wyatt'].map(name=>'HDRSO-'+name);
+ const wala=['066','078','087','108'].map(number=>'ArcCorp Security Post '+number);
+ const names=[...onyx,...hdrso,...wala];
+ const urls=new Set();
+ for(const name of names){
+  const site=at(name);
+  assert.ok(site?.stantonIntel?.uuid,name);
+  const {uuid,claims}=site.stantonIntel;
+  const record=raw.find(row=>row.id===uuid);
+  assert.equal(record?.name,name);
+  assert.equal(record.parent,site.stantonIntel.body);
+  const loot=claims.find(c=>c.field==='loot');
+  urls.add(loot.sources.find(url=>url.startsWith('https://loot-verse.com/#place-')));
+  assert.ok(claims.every(c=>c.status==='documented'&&c.patch===catalogue.version&&c.sources.includes('https://api.star-citizen.wiki/api/locations/'+uuid)),name);
+  const coverage=stantonCoverage([record],[site]);
+  assert.equal(coverage.documentedLocal,1,name);
+  assert.equal(coverage.operational,1,name);
+  assert.equal(coverage.counts.access+coverage.counts.loot,2,name);
+  assert.equal(coverage.counts.weapons,['HDRSO-Sims','ArcCorp Security Post 108'].includes(name)?0:1,name);
+ }
+ assert.equal(urls.size,30);
+ assert.ok(!urls.has(undefined));
+});
