@@ -263,7 +263,7 @@ function renderStantonCoverage(){
  note.textContent=c.catalogTotal+' registros en el catálogo. '+c.excludedTemporary+' plataformas temporales de RSI Discovery Month fuera de cobertura. Los registros sin nombre de juego siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
  const inventory=document.createElement('small');
  if(reviews.length){
-  inventory.textContent=(reviews.length-technical-c.excludedTemporary)+' registros revisados pendientes de evidencia operativa · '+technical+' registros técnicos sin evidencia operativa';
+  inventory.textContent=(reviews.length-technical-c.excludedTemporary)+' registros revisados pendientes de evidencia operativa · '+technical+' registros técnicos sin evidencia operativa. ';
   host.replaceChildren(summary,list,inventory,note);
  }else host.replaceChildren(summary,list,note);
 }
