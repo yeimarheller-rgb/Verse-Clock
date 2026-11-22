@@ -24420,6 +24420,27 @@
           ]
         }
       ]
+    },
+    {
+      "name": "Echo Isle",
+      "uuid": "1427271e-0ee7-4620-9b91-a954d0124fda",
+      "body": "Hurston",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Posible destino de un encargo de Ruto",
+          "text": "La plantilla de eliminación de residuos de Ruto incluye Echo Isle como posible destino. Comprueba el nombre del punto en la oferta o en el marcador de tu contrato antes de ir a Hurston.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1427271e-0ee7-4620-9b91-a954d0124fda",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/trade_locations.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/contracts/16a9aa88-de61-4e2b-8581-3638724fc5c1.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Coincidencia única por nombre y planeta con la plantilla de misión. No se ha comprobado la oferta ni el acceso en una sesión LIVE."
+        }
+      ]
     }
   ],
   "catalogReview": {
@@ -24432,7 +24453,6 @@
       "04ff332d-e355-45bf-ab16-04df30fe0a44": "unplaced",
       "07b47705-a5b7-4bb2-b339-3dad7d590a0f": "unplaced",
       "0b609497-2305-4880-8a89-11e05f6b7d83": "technical",
-      "1427271e-0ee7-4620-9b91-a954d0124fda": "unplaced",
       "14e90a7a-78b5-438a-b71a-0d6f1a7dc5b1": "unplacedEventPlatform",
       "16ad0892-c755-4bce-a2e9-3230692de2b6": "technical",
       "18f212c9-6c79-4b8a-a6ac-ea501bade318": "unplacedEventPlatform",

@@ -456,7 +456,7 @@ test('every Stanton UUID has operational evidence or an explicit catalog disposi
  const version=stanton.catalogReview.version;
  assert.equal(version,catalogue.version);
  assert.equal(raw.length,949);
- assert.equal(Object.keys(stanton.catalogReview.records).length,142);
+ assert.equal(Object.keys(stanton.catalogReview.records).length,141);
  const reasons=new Map();
  for(const row of raw){
   const site=atId.get(row.id);
@@ -469,7 +469,7 @@ test('every Stanton UUID has operational evidence or an explicit catalog disposi
   if(site)assert.deepEqual(site.stantonCatalogReview,review);
   assert.equal(stantonCatalogReview({...row,source:{...row.source,version:'4.10.2'}},stanton.catalogReview),null);
  }
- assert.deepEqual(Object.fromEntries(reasons),{technical:26,hidden:8,unplaced:44,unplacedEventPlatform:63,placed:1});
+ assert.deepEqual(Object.fromEntries(reasons),{technical:26,hidden:8,unplaced:43,unplacedEventPlatform:63,placed:1});
  for(const [name,destination] of [['Stanton - Magnus Jump Point','Nyx Gateway'],['Stanton - Terra Jump Point','Terra Gateway']]){
   const row=at(name);
   assert.deepEqual(row.stantonIntel.claims[0].destinations,[destination]);
@@ -496,4 +496,16 @@ test('station approaches identify placed pockets without supplying local service
  assert.deepEqual(wreck.stantonIntel.claims[0].destinations,['Pyro Gateway']);
  assert.match(wreck.stantonIntel.claims[0].text,/632 km/);
  assert.equal(at('CRU L2-B').stantonCatalogReview.state,'hidden');
+});
+
+test('Echo Isle documents a conditional Ruto mission without inferring terminal stock or ship services',()=>{
+ const site=at('Echo Isle');
+ const claim=site.stantonIntel.claims[0];
+ assert.equal(claim.field,'missions');
+ assert.equal(claim.patch,catalogue.version);
+ assert.match(claim.text,/posible destino/);
+ assert.ok(claim.sources.some(url=>url.endsWith('/contracts/16a9aa88-de61-4e2b-8581-3638724fc5c1.json')));
+ const metric=stantonCoverage(raw.filter(row=>row.id===site.source.uuid),[site]);
+ assert.equal(metric.counts.missions,1);
+ assert.equal(metric.counts.trade+metric.counts.repair+metric.counts.rearm+metric.counts.refuel,0);
 });
