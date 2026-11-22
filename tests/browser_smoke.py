@@ -422,7 +422,7 @@ with sync_playwright() as p:
             page.screenshot(path=f'/tmp/verse-lab-stanton-navigation-{short_name}-{device}.png', full_page=True)
         for short_name, title, expected in [
             ('magnus', 'Stanton - Magnus Jump Point', 'Antiguo punto de salto a Magnus'),
-            ('palomar', 'HDOF-Palomar', 'Estado de la evidencia local'),
+            ('palomar', 'HDOF-Palomar', 'búnker de Hurston Dynamics Operations Facility'),
             ('arc-l1a', 'ARC L1-A', 'El centro de la bolsa ARC L1-A figura a unos 20 km'),
             ('jump-wreck', 'Stanton-Pyro Jump Point Wreck Site', 'unos 632 km en línea recta de Pyro Gateway'),
         ]:

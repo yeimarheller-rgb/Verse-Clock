@@ -102,7 +102,10 @@ export function stantonCatalogReview(p, review){
  if(!review?.version||review.version!==p.source?.version||!httpsSource(review.positionSource))return null;
  const state=review.records?.[locationUuid(p)];
  if(!Object.hasOwn(catalogReviewMessages,state))return null;
- return {state,text:catalogReviewMessages[state],source:review.positionSource,checkedAt:review.checkedAt};
+ const note=review.notes?.[locationUuid(p)];
+ const validNote=typeof note?.text==='string'&&note.text.trim()&&httpsSource(note.source);
+ return {state,text:validNote?note.text:catalogReviewMessages[state],source:review.positionSource,
+  ...(validNote?{noteSource:note.source}:{}),checkedAt:review.checkedAt};
 }
 
 export function mergeStanton(byKey, data) {

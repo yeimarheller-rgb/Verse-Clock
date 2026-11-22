@@ -24589,6 +24589,28 @@
       "fbf318bb-ebb9-4037-ba4b-2f1213979e2f": "unplaced",
       "fc3653e6-fa9a-4dc5-8021-f8c927330f12": "unplacedEventPlatform",
       "fe3950f6-0244-4c83-a50f-9a329877ffe1": "unplacedEventPlatform"
+    },
+    "notes": {
+      "b190f52c-0b30-4482-b6ed-897eb7b4cdf8": {
+        "text": "La descripción del mundo oceánico coincide con Green (Ellis III) en la Galactapedia de RSI. Esta ficha de Stanton tiene un conflicto de identidad; carece de posición en la extracción y queda pendiente de confirmar como destino de Stanton.",
+        "source": "https://robertsspaceindustries.com/galactapedia/article/RWoNrNeLKP-green-ellis-iii"
+      },
+      "a3de0e92-b9fb-4866-9636-4b3a8584443b": {
+        "text": "RSI identifica Palomar como un búnker de Hurston Dynamics Operations Facility. Esta extracción carece de posición para el UUID. Quedan pendientes los accesos, contratos y servicios en LIVE.",
+        "source": "https://robertsspaceindustries.com/en/comm-link/spectrum-dispatch/19375-Loremakers-Community-Questions"
+      },
+      "297e55a7-2a4c-46d2-96f6-014b00541494": {
+        "text": "La ficha de referencia sitúa la instalación de procesamiento en Calliope. Esta extracción carece de posición para el UUID SPMC-1. El contrato histórico de la ficha queda pendiente de confirmar en LIVE con ese código exacto.",
+        "source": "https://starcitizen.tools/Shubin_Processing_Facility_SPMC-1"
+      },
+      "8a55463e-e472-4871-833b-dc0747af7b7d": {
+        "text": "Para aproximarte a Prospect Point, busca la variante f903ba70 en el buscador. Esa variante tiene un marcador cuántico colocado en Crusader. Este segundo UUID carece de colocación en la extracción.",
+        "source": "https://api.star-citizen.wiki/api/locations/f903ba70-e567-4b71-9062-26c8f58dcd99"
+      },
+      "23098c21-935e-425a-a2bd-6e25b6e3d6b3": {
+        "text": "En New Babbage, la ruta oficial de IAE 2956 lleva al Tobin Expo Center por Metroloop. Esta variante técnica de Vision Center figura como marcador oculto y su acceso sigue pendiente.",
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+      }
     }
   }
 }

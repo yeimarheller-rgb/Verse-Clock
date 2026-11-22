@@ -531,3 +531,20 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
  }
  console.log('Stanton active scope:',JSON.stringify(scoped));
 });
+
+test('site-specific Stanton review notes provide context without counting operational coverage',()=>{
+ const notes=stanton.catalogReview.notes;
+ assert.equal(Object.keys(notes).length,5);
+ for(const [id,note] of Object.entries(notes)){
+  const row=raw.find(p=>p.id===id);
+  const site=atId.get(id);
+  assert.equal(site.stantonCatalogReview.text,note.text);
+  assert.equal(site.stantonCatalogReview.noteSource,note.source);
+  assert.equal(stantonCoverage([row],[site],'Stanton',stanton.catalogReview).operational,0);
+ }
+ const green=raw.find(p=>p.id==='b190f52c-0b30-4482-b6ed-897eb7b4cdf8');
+ assert.match(stantonCatalogReview(green,stanton.catalogReview).text,/Ellis III/);
+ const badReview={...stanton.catalogReview,notes:{[green.id]:{text:'Unsafe note',source:'http://example.org/source'}}};
+ assert.equal(stantonCatalogReview(green,badReview).noteSource,undefined);
+ assert.notEqual(stantonCatalogReview(green,badReview).text,'Unsafe note');
+});
