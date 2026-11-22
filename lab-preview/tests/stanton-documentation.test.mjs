@@ -22,3 +22,8 @@ test('inherited service evidence cannot certify documentedLocal',()=>{
  assert.equal(result.documentedLocal,0);
  assert.equal(result.operational,1);
 });
+
+test('documentedLocal counts unique inventory UUIDs, not duplicate rows',()=>{
+ const repeated=[raw[0],{...raw[0]}];
+ assert.equal(stantonCoverage(repeated,visible([claim('documented')])).documentedLocal,1);
+});
