@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, isStantonTemporaryEvent, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
 
 const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue=read('wiki-atlas');
@@ -508,4 +508,26 @@ test('Echo Isle documents a conditional Ruto mission without inferring terminal 
  const metric=stantonCoverage(raw.filter(row=>row.id===site.source.uuid),[site]);
  assert.equal(metric.counts.missions,1);
  assert.equal(metric.counts.trade+metric.counts.repair+metric.counts.rearm+metric.counts.refuel,0);
+});
+
+test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
+ const scoped=stantonCoverage(raw,visible,'Stanton',stanton.catalogReview);
+ const full=stantonCoverage(raw,visible);
+ const platforms=raw.filter(row=>isStantonTemporaryEvent(row,stanton.catalogReview));
+ assert.equal(platforms.length,63);
+ assert.equal(scoped.catalogTotal,949);
+ assert.equal(scoped.excludedTemporary,63);
+ assert.equal(scoped.total,886);
+ assert.equal(scoped.operational,808);
+ assert.equal(scoped.operational,full.operational);
+ assert.equal(scoped.documentedLocal,663);
+ assert.deepEqual(scoped.counts,full.counts);
+ assert.ok(raw.filter(isStantonPlaceholder).every(row=>!isStantonTemporaryEvent(row,stanton.catalogReview)));
+ assert.ok(platforms.every(row=>!isStantonTemporaryEvent({...row,source:{...row.source,version:'other'}},stanton.catalogReview)));
+ assert.ok(platforms.every(row=>!isStantonTemporaryEvent({...row,name:'Permanent outpost'},stanton.catalogReview)));
+ for(const zone of ['Hurston','Crusader','ArcCorp','microTech']){
+  const metrics=stantonCoverage(raw,visible,zone,stanton.catalogReview);
+  assert.equal(metrics.excludedTemporary,platforms.filter(row=>inStantonZone(row,zone)).length,zone);
+ }
+ console.log('Stanton active scope:',JSON.stringify(scoped));
 });

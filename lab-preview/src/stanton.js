@@ -93,7 +93,7 @@ const httpsSource=value=>{
 const catalogReviewMessages={
  technical:'Registro técnico sin identidad de juego. Excluido de la cobertura operativa.',
  hidden:'La posición extraída corresponde a un marcador oculto. El acceso, las actividades y los servicios locales siguen pendientes de evidencia.',
- unplacedEventPlatform:'El catálogo registra una plataforma RSI con este nombre. La extracción no vincula este UUID a una posición individual. El evento, la ruta y los servicios quedan pendientes.',
+ unplacedEventPlatform:'Plataforma del evento temporal RSI Discovery Month. El registro se conserva como referencia del catálogo.',
  unplaced:'Este UUID carece de una posición en la extracción revisada. Su presencia y su uso en partida siguen pendientes de evidencia local.',
  placed:'La extracción confirma la posición de este marcador. Sus actividades y servicios locales siguen pendientes de evidencia.',
 };
@@ -136,8 +136,13 @@ export function stantonSections(p) {
  return sections;
 }
 
-export function stantonCoverage(raw, visible, zone='Stanton'){
- const catalog=[...new Map(raw.filter(p=>inStantonZone(p,zone)).map(p=>[locationUuid(p),p])).values()];
+export const isStantonTemporaryEvent=(p,review)=>
+ atlasSystem(p.system)==='Stanton'&&p.name==='RSI Event Platform'&&
+ stantonCatalogReview(p,review)?.state==='unplacedEventPlatform';
+
+export function stantonCoverage(raw, visible, zone='Stanton', review){
+ const inventory=[...new Map(raw.filter(p=>inStantonZone(p,zone)).map(p=>[locationUuid(p),p])).values()];
+ const catalog=inventory.filter(p=>!isStantonTemporaryEvent(p,review));
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
@@ -180,5 +185,6 @@ export function stantonCoverage(raw, visible, zone='Stanton'){
   for(const field of facts)counts[field]++;
   for(const grade of grades)sources[grade]++;
  }
- return {total:catalog.length,geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources};
+ return {total:catalog.length,catalogTotal:inventory.length,excludedTemporary:inventory.length-catalog.length,
+  geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources};
 }
