@@ -80,7 +80,7 @@ test('UUID binds the Hurston batch to the inventory and excludes historical and 
  const clinic=at('HUR-L4 Melodic Fields Clinic');
  const c=stantonCoverage([indexed.get(clinic.id)],[clinic]);
  assert.equal(c.counts.trade,1);
- assert.equal(c.counts.logistics,0);
+ assert.equal(c.counts.logistics,1);
  assert.equal(c.counts.repair,0);
  assert.equal(c.counts.hazards,0);
  const mismatched={...clinic,id:'different',source:{uuid:'different'}};
@@ -420,4 +420,34 @@ test('Stanton additions bind the expo, wreck access, and identified Yela loot to
   const record=raw.find(entry=>entry.id===row.uuid);
   assert.equal(stantonCoverage([record],[atId.get(row.uuid)]).counts.loot,1,row.name);
  }
+});
+
+test('current starmap claims preserve outpost variants and hospital scope',()=>{
+ const route='Marcador de salto en el cuerpo padre';
+ const entries=stanton.locations.filter(row=>row.claims.some(c=>c.title===route));
+ assert.equal(entries.length,45);
+ for(const row of entries){
+  const inventory=raw.find(p=>p.id===row.uuid);
+  const claim=row.claims.find(c=>c.title===route);
+  const local=stantonCoverage([inventory],[atId.get(row.uuid)]);
+  assert.equal(claim.patch,catalogue.version);
+  assert.deepEqual(claim.destinations,[inventory.parent]);
+  assert.ok(claim.sources.includes('https://api.star-citizen.wiki/api/locations/'+row.uuid));
+  assert.ok(claim.sources.some(url=>url.endsWith('/starmap_positions.json')));
+  assert.equal(local.counts.access,1,row.name);
+  assert.equal(local.counts.missions+local.counts.loot+local.counts.repair,0,row.name);
+ }
+ for(const [name,length] of [['MT OpCenter TLI-4',12],['Prospect Point',2]]){
+  const variants=raw.filter(row=>row.name===name);
+  assert.equal(variants.length,length);
+  const documented=variants.filter(row=>atId.get(row.id)?.stantonIntel?.claims.some(c=>c.title===route));
+  assert.equal(documented.length,1);
+  assert.ok(variants.filter(row=>row!==documented[0]).every(row=>!atId.get(row.id)?.stantonIntel));
+ }
+ const clinic=at('ARC-L3 Modern Express Clinic');
+ const metrics=stantonCoverage(raw.filter(row=>row.id===clinic.id),[clinic]);
+ assert.equal(metrics.documentedLocal,1);
+ assert.equal(metrics.counts.logistics,1);
+ assert.equal(metrics.counts.rearm+metrics.counts.refuel+metrics.counts.repair,0);
+ assert.equal(at('Tobin Center').type,'Centro de exposiciones');
 });

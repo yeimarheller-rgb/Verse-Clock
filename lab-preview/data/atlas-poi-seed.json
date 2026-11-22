@@ -4,6 +4,18 @@
   "scope": "curated-source-listed; not a complete import",
   "locations": [
     {
+      "id": "e5397b11-f4b3-4681-9a0e-10912aa2dfb2",
+      "name": "Tobin Center",
+      "system": "Stanton",
+      "parent": "New Babbage",
+      "type": "Centro de exposiciones",
+      "sourceUrls": [
+        "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+      ],
+      "verification": "source-listed",
+      "patch": "4.10.3-LIVE.13165946"
+    },
+    {
       "id": "pyro-orbituary",
       "name": "Orbituary",
       "system": "Pyro",

@@ -254,23 +254,9 @@
     {
       "name": "HUR-L4 Melodic Fields Clinic",
       "uuid": "3e466e2a-9bc6-4d4f-848f-3c189a6b32e7",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "body": "Hurston",
       "claims": [
-        {
-          "field": "logistics",
-          "status": "historical",
-          "text": "El registro 4.10.2 identifica esta clínica dentro de Melodic Fields Station con reaparición hospitalaria. Comprueba en el terminal si puedes fijar aquí el punto de regeneración.",
-          "sources": [
-            "https://api.star-citizen.wiki/locations/hur-l4-melodic-fields-station"
-          ],
-          "patch": "4.10.2",
-          "destinations": [
-            "HUR-L4 Melodic Fields Station"
-          ],
-          "title": "Clínica y regeneración",
-          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
-        },
         {
           "field": "trade",
           "status": "reported",
@@ -281,6 +267,21 @@
           "patch": "4.10.3",
           "title": "Farmacia",
           "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura HUR-L4 Melodic Fields Clinic como punto hospitalario dentro de HUR-L4 Melodic Fields Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3e466e2a-9bc6-4d4f-848f-3c189a6b32e7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "HUR-L4 Melodic Fields Station"
+          ]
         }
       ],
       "orbital": true
@@ -7600,6 +7601,21 @@
           "destinations": [
             "ARC-L4 Faint Glen Station"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura ARC-L4 Faint Glen Clinic como punto hospitalario dentro de ARC-L4 Faint Glen Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/642fa3a6-f9c5-42f2-8685-1dcd01f475cc",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "ARC-L4 Faint Glen Station"
+          ]
         }
       ]
     },
@@ -7621,6 +7637,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "ARC-L5 Yellow Core Station"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura ARC-L5 Yellow Core Clinic como punto hospitalario dentro de ARC-L5 Yellow Core Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/258dc922-4fd6-4f66-a822-abaf8db9f6c4",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "ARC-L5 Yellow Core Station"
           ]
@@ -7648,6 +7679,21 @@
           "destinations": [
             "Baijini Point"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Baijini Point Clinic como punto hospitalario dentro de Baijini Point. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a5473302-e063-4c25-a932-b54c47042955",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "Baijini Point"
+          ]
         }
       ]
     },
@@ -7669,6 +7715,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "CRU-L5 Beautiful Glen Station"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura CRU-L5 Beautiful Glen Clinic como punto hospitalario dentro de CRU-L5 Beautiful Glen Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9926b1c9-a4de-497b-9c0e-eef252dbec4c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "CRU-L5 Beautiful Glen Station"
           ]
@@ -7696,6 +7757,21 @@
           "destinations": [
             "MIC-L3 Endless Odyssey Station"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura MIC-L3 Endless Odyssey Clinic como punto hospitalario dentro de MIC-L3 Endless Odyssey Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e30b4352-7cfc-4e14-aea4-199d11576be5",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "MIC-L3 Endless Odyssey Station"
+          ]
         }
       ]
     },
@@ -7717,6 +7793,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Nyx Gateway"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Magnus Gateway Clinic como punto hospitalario dentro de Nyx Gateway. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9eb50da4-db00-43fd-919e-3781937bc6b2",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "Nyx Gateway"
           ]
@@ -7744,6 +7835,21 @@
           "destinations": [
             "Port Tressler"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Port Tressler Clinic como punto hospitalario dentro de Port Tressler. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c000ea75-90f8-49ab-9225-a5e938273dd1",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "Port Tressler"
+          ]
         }
       ]
     },
@@ -7765,6 +7871,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Pyro Gateway"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Pyro Gateway Clinic como punto hospitalario dentro de Pyro Gateway. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7c46edbc-6eb5-4219-b37a-ef2a8ea3c63c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "Pyro Gateway"
           ]
@@ -7792,6 +7913,21 @@
           "destinations": [
             "Seraphim Station"
           ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Seraphim Clinic como punto hospitalario dentro de Seraphim Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/348d9b9d-8e33-4e39-855c-f6eb06a3a5a8",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "Seraphim Station"
+          ]
         }
       ]
     },
@@ -7813,6 +7949,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Terra Gateway"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Terra Gateway Clinic como punto hospitalario dentro de Terra Gateway. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/20dcd70b-1478-409b-830c-281354c04480",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "Terra Gateway"
           ]
@@ -7838,6 +7989,21 @@
           ],
           "patch": "4.10.3",
           "uncertainty": "Inventario documentado del terminal en 4.10.3. Comprueba existencias y precio al llegar.",
+          "destinations": [
+            "Orison"
+          ]
+        },
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura Orison General como punto hospitalario dentro de Orison. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
           "destinations": [
             "Orison"
           ]
@@ -22577,6 +22743,1158 @@
           ],
           "patch": "4.10.3-LIVE.13165946",
           "uncertainty": "Actividad temporal. Comprueba el calendario del evento y la selección del día."
+        }
+      ]
+    },
+    {
+      "name": "Ako's Return",
+      "uuid": "7d972948-8e00-4239-bf6e-bdaf32ea4363",
+      "checkedAt": "2026-11-22",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Wala para buscar Ako's Return. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7d972948-8e00-4239-bf6e-bdaf32ea4363",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Wala"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ARC-L3 Modern Express Clinic",
+      "uuid": "8338308e-1288-4ecb-b4e8-dbe272180665",
+      "checkedAt": "2026-11-22",
+      "body": "ARC-L3 Modern Express Station",
+      "claims": [
+        {
+          "field": "logistics",
+          "status": "documented",
+          "title": "Punto de regeneración hospitalaria",
+          "text": "El mapa de esta versión configura ARC-L3 Modern Express Clinic como punto hospitalario dentro de ARC-L3 Modern Express Station. Dirígete a la instalación y consulta en su terminal si puedes fijar allí tu regeneración.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8338308e-1288-4ecb-b4e8-dbe272180665",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://scuplift.com/fr/locations/arc-l3_modern_express_station"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Configuración del juego. Quedan por comprobar el nivel de las camas, la operatividad del terminal y la disponibilidad en tu sesión.",
+          "destinations": [
+            "ARC-L3 Modern Express Station"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Balto's Blind",
+      "uuid": "f7eb7480-3f53-46e5-a74c-4c111dae61b7",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar Balto's Blind. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f7eb7480-3f53-46e5-a74c-4c111dae61b7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bevic Convention Center",
+      "uuid": "a375ef83-65fc-42f0-bb31-5539a67444fb",
+      "checkedAt": "2026-11-22",
+      "body": "ArcCorp",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cityflight al centro de convenciones",
+          "text": "El recinto de Area18 tiene conexión por Cityflight. Usa el transporte de la ciudad hacia Bevic Convention Center y consulta el acceso del evento.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a375ef83-65fc-42f0-bb31-5539a67444fb",
+            "https://starcitizen.tools/Bevic_Convention_Center",
+            "https://api.star-citizen.wiki/locations/area18"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La ruta está documentada. La apertura de puertas depende del evento.",
+          "destinations": [
+            "Area18"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blighter's Run",
+      "uuid": "748ccd9f-7b66-439d-a053-f237fc43e666",
+      "checkedAt": "2026-11-22",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Calliope para buscar Blighter's Run. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/748ccd9f-7b66-439d-a053-f237fc43e666",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Calliope"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Boondoggle",
+      "uuid": "f5ff5490-698b-48f1-b045-2b9d0ac92b78",
+      "checkedAt": "2026-11-22",
+      "body": "Aberdeen",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Aberdeen para buscar Boondoggle. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f5ff5490-698b-48f1-b045-2b9d0ac92b78",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Aberdeen"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Broken Patch",
+      "uuid": "e49f4dbb-b70a-4319-a1a2-1572ce94b0db",
+      "checkedAt": "2026-11-22",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Hurston para buscar Broken Patch. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e49f4dbb-b70a-4319-a1a2-1572ce94b0db",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Hurston"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burnout",
+      "uuid": "9d1dae65-7868-48fc-b1cd-8c2fac764f1a",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar Burnout. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9d1dae65-7868-48fc-b1cd-8c2fac764f1a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Consumption",
+      "uuid": "59c19ba8-fd59-4784-8b3a-71a4cd37b1a3",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Cellin para buscar Consumption. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/59c19ba8-fd59-4784-8b3a-71a4cd37b1a3",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Cellin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Coven",
+      "uuid": "468347e2-99b5-4476-bb00-667f49e0770b",
+      "checkedAt": "2026-11-22",
+      "body": "Arial",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Arial para buscar Coven. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/468347e2-99b5-4476-bb00-667f49e0770b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Arial"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Downlow",
+      "uuid": "02b06d19-0da6-473c-ad49-2f43516231a5",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar Downlow. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/02b06d19-0da6-473c-ad49-2f43516231a5",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Drifters",
+      "uuid": "a2c0879a-4cf7-4dd5-a04a-85e14c503041",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona microTech para buscar Drifters. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a2c0879a-4cf7-4dd5-a04a-85e14c503041",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "microTech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fetch",
+      "uuid": "fb813913-5031-4c71-be44-5d1924866680",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Cellin para buscar Fetch. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fb813913-5031-4c71-be44-5d1924866680",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Cellin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Half Stack",
+      "uuid": "dfdb72e7-55af-4bdd-a2e5-aa4d54edf521",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Yela para buscar Half Stack. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/dfdb72e7-55af-4bdd-a2e5-aa4d54edf521",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Yela"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hard Knocks",
+      "uuid": "a4cc42d9-f044-43b9-a963-077fe591e9cd",
+      "checkedAt": "2026-11-22",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Calliope para buscar Hard Knocks. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a4cc42d9-f044-43b9-a963-077fe591e9cd",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Calliope"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hasbin Hall",
+      "uuid": "504777d2-8100-4641-99ce-e57f36a5c3cc",
+      "checkedAt": "2026-11-22",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Calliope para buscar Hasbin Hall. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/504777d2-8100-4641-99ce-e57f36a5c3cc",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Calliope"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hela's Regret",
+      "uuid": "0b07f5ab-f4d6-471c-af52-8c3b13344a61",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona microTech para buscar Hela's Regret. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0b07f5ab-f4d6-471c-af52-8c3b13344a61",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "microTech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hospice",
+      "uuid": "dce44638-7b10-423e-8fe3-1e81b26aa0d0",
+      "checkedAt": "2026-11-22",
+      "body": "Daymar",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Daymar para buscar Hospice. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/dce44638-7b10-423e-8fe3-1e81b26aa0d0",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Daymar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kant's Peak",
+      "uuid": "af056a9f-0357-4240-a285-f943de173b3a",
+      "checkedAt": "2026-11-22",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Clio para buscar Kant's Peak. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/af056a9f-0357-4240-a285-f943de173b3a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Clio"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kelo Bottom",
+      "uuid": "1c6caaa0-54e6-402b-9a14-d64d1a42948b",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona microTech para buscar Kelo Bottom. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1c6caaa0-54e6-402b-9a14-d64d1a42948b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "microTech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Last Day",
+      "uuid": "bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar Last Day. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lowdown",
+      "uuid": "bbc0de76-2793-4b4d-9d94-7512ce6278a8",
+      "checkedAt": "2026-11-22",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Hurston para buscar Lowdown. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bbc0de76-2793-4b4d-9d94-7512ce6278a8",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Hurston"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mainline",
+      "uuid": "19fc539b-3bd1-4a61-b7ac-925ab4a98b0e",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Yela para buscar Mainline. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/19fc539b-3bd1-4a61-b7ac-925ab4a98b0e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Yela"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Minlo Spire",
+      "uuid": "1f07228d-f360-4a42-9b4f-415d22c92fe7",
+      "checkedAt": "2026-11-22",
+      "body": "Daymar",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Daymar para buscar Minlo Spire. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1f07228d-f360-4a42-9b4f-415d22c92fe7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Daymar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MT OpCenter TLI-4",
+      "uuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona microTech para buscar MT OpCenter TLI-4. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km. Esta ficha identifica la única variante con una colocación visible en esta extracción.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0751fdb9-c6da-40c8-b924-f217c2c0c68f",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "microTech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nevermind",
+      "uuid": "7fccba09-4fa8-4038-a056-cff8d8244e47",
+      "checkedAt": "2026-11-22",
+      "body": "Magda",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Magda para buscar Nevermind. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7fccba09-4fa8-4038-a056-cff8d8244e47",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Magda"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prospect Point",
+      "uuid": "f903ba70-e567-4b71-9062-26c8f58dcd99",
+      "checkedAt": "2026-11-22",
+      "body": "Crusader",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Crusader para buscar Prospect Point. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km. Esta ficha identifica la única variante con una colocación visible en esta extracción.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f903ba70-e567-4b71-9062-26c8f58dcd99",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Crusader"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regiment Downs",
+      "uuid": "2a93560b-5549-49aa-9f3c-3555d7cea851",
+      "checkedAt": "2026-11-22",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Calliope para buscar Regiment Downs. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2a93560b-5549-49aa-9f3c-3555d7cea851",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Calliope"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rico's Remains",
+      "uuid": "8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
+      "checkedAt": "2026-11-22",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Hurston para buscar Rico's Remains. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Hurston"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rock Bottom",
+      "uuid": "0c5e44b1-2ef3-4e62-98c9-37bb4e49f43d",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar Rock Bottom. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0c5e44b1-2ef3-4e62-98c9-37bb4e49f43d",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rolo's Crater",
+      "uuid": "443703c2-9701-4e7d-b3f6-7aaf3132ed39",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Yela para buscar Rolo's Crater. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/443703c2-9701-4e7d-b3f6-7aaf3132ed39",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Yela"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scuttle",
+      "uuid": "18463c18-1721-4ccc-a8a2-1e89aeac6bdc",
+      "checkedAt": "2026-11-22",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Wala para buscar Scuttle. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/18463c18-1721-4ccc-a8a2-1e89aeac6bdc",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Wala"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shanks",
+      "uuid": "10ef4b7f-de6d-4612-a1f2-da06e2063060",
+      "checkedAt": "2026-11-22",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Euterpe para buscar Shanks. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/10ef4b7f-de6d-4612-a1f2-da06e2063060",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Euterpe"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Smokestack",
+      "uuid": "3d72936b-d142-40b5-871d-49e0219c7b5e",
+      "checkedAt": "2026-11-22",
+      "body": "Arial",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Arial para buscar Smokestack. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3d72936b-d142-40b5-871d-49e0219c7b5e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Arial"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Stone's Throw",
+      "uuid": "24d980d2-e3f3-4d1d-84cc-92ae982ecf60",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Cellin para buscar Stone's Throw. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/24d980d2-e3f3-4d1d-84cc-92ae982ecf60",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Cellin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Barrens",
+      "uuid": "4a91aa41-b322-4676-9bc9-b0cd2c01261d",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona microTech para buscar The Barrens. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4a91aa41-b322-4676-9bc9-b0cd2c01261d",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "microTech"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Dregs",
+      "uuid": "a10ae56b-ddcb-4fdb-97b5-fd583a1bcdd0",
+      "checkedAt": "2026-11-22",
+      "body": "Arial",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Arial para buscar The Dregs. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a10ae56b-ddcb-4fdb-97b5-fd583a1bcdd0",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Arial"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Grove",
+      "uuid": "037e30d1-dc2d-495f-bb6b-7349f21ee204",
+      "checkedAt": "2026-11-22",
+      "body": "Aberdeen",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Aberdeen para buscar The Grove. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/037e30d1-dc2d-495f-bb6b-7349f21ee204",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Aberdeen"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Hollows",
+      "uuid": "17f63167-aff9-4cfd-88b0-4f7637baf16a",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Cellin para buscar The Hollows. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/17f63167-aff9-4cfd-88b0-4f7637baf16a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Cellin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Shades",
+      "uuid": "d73aeaa1-d846-48c1-9f9c-c15ca23577d5",
+      "checkedAt": "2026-11-22",
+      "body": "Ita",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Ita para buscar The Shades. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d73aeaa1-d846-48c1-9f9c-c15ca23577d5",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Ita"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thimblerig",
+      "uuid": "71bad51c-879f-49a7-9768-868321f8c920",
+      "checkedAt": "2026-11-22",
+      "body": "Ita",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Ita para buscar Thimblerig. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/71bad51c-879f-49a7-9768-868321f8c920",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Ita"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tremonte",
+      "uuid": "2d04b28f-33e1-4f64-93e3-3a2a2d677330",
+      "checkedAt": "2026-11-22",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Clio para buscar Tremonte. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2d04b28f-33e1-4f64-93e3-3a2a2d677330",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Clio"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Trilo",
+      "uuid": "e9b0722d-56b8-465a-b6e7-a653c54d1644",
+      "checkedAt": "2026-11-22",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Hurston para buscar Trilo. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e9b0722d-56b8-465a-b6e7-a653c54d1644",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Hurston"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vision Center",
+      "uuid": "2fab7ac2-17e6-496b-bd90-75353c9f5c11",
+      "checkedAt": "2026-11-22",
+      "body": "Crusader",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Lanzadera al Vision Center",
+          "text": "Desde August Dunlow Spaceport, toma la línea Vision Center hacia el recinto de exposiciones de Orison. La ficha corresponde al recinto de Crusader.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2fab7ac2-17e6-496b-bd90-75353c9f5c11",
+            "https://starcitizen.tools/Vision_Center",
+            "https://starcitizen.tools/Orison_Skyway_Shuttle_Services"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Ruta publicada. El horario de la lanzadera y la apertura del recinto quedan sujetos a la sesión.",
+          "destinations": [
+            "August Dunlow Spaceport"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wailing Rock",
+      "uuid": "afbc6373-662c-4fdb-8f9b-d811c20357f7",
+      "checkedAt": "2026-11-22",
+      "body": "Daymar",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Daymar para buscar Wailing Rock. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/afbc6373-662c-4fdb-8f9b-d811c20357f7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Daymar"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Washout",
+      "uuid": "77ea2d54-6a6e-4168-a6db-12ccda26043a",
+      "checkedAt": "2026-11-22",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Wala para buscar Washout. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/77ea2d54-6a6e-4168-a6db-12ccda26043a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Wala"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wiley Flats",
+      "uuid": "30df2855-805c-4f88-8ccd-4f11ade83502",
+      "checkedAt": "2026-11-22",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Wala para buscar Wiley Flats. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/30df2855-805c-4f88-8ccd-4f11ade83502",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Wala"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "World's End",
+      "uuid": "12b87563-f768-4606-9c14-90c433d60232",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Marcador de salto en el cuerpo padre",
+          "text": "En el mapa estelar, selecciona Lyria para buscar World's End. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/12b87563-f768-4606-9c14-90c433d60232",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+          "destinations": [
+            "Lyria"
+          ]
         }
       ]
     }
