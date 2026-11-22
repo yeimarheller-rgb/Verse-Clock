@@ -132,7 +132,8 @@
           "destinations": [
             "Everus Harbor"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -142,7 +143,8 @@
             "https://starcitizen.tools/ParaMed_Medical_Device"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -164,7 +166,8 @@
           "destinations": [
             "HUR-L1 Green Glade Station"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -174,7 +177,8 @@
             "https://starcitizen.tools/Pancea_MedGel_Canister"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -196,7 +200,8 @@
           "destinations": [
             "HUR-L2 Faithful Dream Station"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -206,7 +211,8 @@
             "https://starcitizen.tools/ParaMed_Medical_Device"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -228,7 +234,8 @@
           "destinations": [
             "HUR-L3 Thundering Express Station"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -238,7 +245,8 @@
             "https://starcitizen.tools/ParaMed_Medical_Device"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -260,7 +268,8 @@
           "destinations": [
             "HUR-L4 Melodic Fields Station"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -270,7 +279,8 @@
             "https://starcitizen.tools/Medpen"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -292,7 +302,8 @@
           "destinations": [
             "HUR-L5 High Course Station"
           ],
-          "title": "Clínica y regeneración"
+          "title": "Clínica y regeneración",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -302,7 +313,8 @@
             "https://starcitizen.tools/ParaMed_Medical_Device"
           ],
           "patch": "4.10.3",
-          "title": "Farmacia"
+          "title": "Farmacia",
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         }
       ],
       "orbital": true
@@ -6470,7 +6482,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "ARC-L1 Wide Forest Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6508,7 +6521,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "ARC-L2 Lively Pathway Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6546,7 +6560,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "MIC-L1 Shallow Frontier Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6584,7 +6599,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "MIC-L2 Long Forest Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6622,7 +6638,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "MIC-L4 Red Crossroads Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6660,7 +6677,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "MIC-L5 Modern Icarus Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6698,7 +6716,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "CRU-L1 Ambitious Dream Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
@@ -6736,7 +6755,8 @@
           "patch": "4.10.3-LIVE.13165946",
           "destinations": [
             "CRU-L4 Shallow Fields Station"
-          ]
+          ],
+          "uncertainty": "Fuente documental; disponibilidad de servicios, terminales, personal NPC y funcionamiento en la sesión LIVE no verificados. No asumir servicios de nave por la presencia de una clínica."
         },
         {
           "field": "trade",
