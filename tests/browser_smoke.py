@@ -389,6 +389,19 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-stanton200-{short_name}-{device}.png', full_page=True)
+        for short_name, title, domain, expected in [
+            ('tobin', 'Tobin Center', 'missions', 'Exposición IAE 2956'),
+            ('gundo', 'Covalex Shipping Hub Gundo', 'navigation', 'entrada en EVA'),
+            ('ecn', 'Comm Array ST1-02', 'navigation', 'Cobertura de comunicaciones ECN'),
+        ]:
+            query(title, title)
+            section = dossier.locator(f'[data-domain="{domain}"]')
+            if domain == 'navigation' and section.get_attribute('open') is None:
+                section.locator('summary').click()
+            expect(section).to_contain_text(expected)
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton-ecn-{short_name}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

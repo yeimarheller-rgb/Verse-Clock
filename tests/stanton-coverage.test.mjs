@@ -356,7 +356,7 @@ test('Stanton Onyx and security evidence is independent for all 110 UUIDs in the
 test('private claims document restrictions for distinct UUIDs without inferring mining or direct travel',()=>{
  const title='Concesión privada sin destino de salto directo';
  const claims=stanton.locations.filter(entry=>entry.claims.some(row=>row.title===title));
- assert.ok(claims.length>=94);
+ assert.equal(claims.length,160);
  assert.equal(new Set(claims.map(entry=>entry.uuid)).size,claims.length);
  for(const entry of claims){
   const record=raw.find(row=>row.id===entry.uuid);
@@ -383,4 +383,41 @@ test('Kareah loot, assigned resources and the Euterpe racing activity remain sep
  assert.ok(resources.every(name=>assigned.some(item=>item.name===name&&item.kind==='mineable'&&item.source.locationUuid===base.stantonIntel.uuid&&item.source.version===catalogue.version)));
  const circuit=at('The Icebreaker');
  assert.ok(circuit.stantonIntel.claims.some(claim=>claim.field==='missions'&&claim.text.includes('20,3 km')));
+});
+
+test('ECN repeaters count current access separately from older contract evidence',()=>{
+ const antennas=stanton.locations.filter(row=>row.claims.some(claim=>claim.title==='Cobertura de comunicaciones ECN'));
+ assert.equal(antennas.length,16);
+ assert.equal(new Set(antennas.map(row=>row.body)).size,16);
+ for(const row of antennas){
+  const record=raw.find(entry=>entry.id===row.uuid);
+  const access=row.claims.find(claim=>claim.field==='access');
+  assert.equal(record?.parent,row.body);
+  assert.equal(access.patch,catalogue.version);
+  assert.ok(access.sources.includes('https://api.star-citizen.wiki/api/locations/'+row.uuid));
+  assert.equal(row.claims.find(claim=>claim.field==='missions')?.status,'historical');
+  const coverage=stantonCoverage([record],[atId.get(row.uuid)]);
+  assert.equal(coverage.documentedLocal,1,row.name);
+  assert.equal(coverage.counts.access,1,row.name);
+  assert.equal(coverage.counts.missions+coverage.counts.repair+coverage.counts.refuel+coverage.counts.rearm,0,row.name);
+ }
+});
+
+test('Stanton additions bind the expo, wreck access, and identified Yela loot to distinct local records',()=>{
+ const tobin=at('Tobin Center').stantonIntel;
+ assert.equal(tobin.body,'New Babbage');
+ assert.equal(tobin.claims.find(claim=>claim.field==='missions').patch,catalogue.version);
+ assert.match(tobin.claims.find(claim=>claim.field==='access').text,/segunda parada/);
+ const gundo=at('Covalex Shipping Hub Gundo').stantonIntel;
+ assert.equal(gundo.body,'Daymar');
+ assert.match(gundo.claims.find(claim=>claim.field==='access').text,/EVA/);
+ const xx=at('NT-999-XX').stantonIntel,xxii=at('NT-999-XXII').stantonIntel;
+ assert.notEqual(xx.uuid,xxii.uuid);
+ const link=row=>row.claims.find(claim=>claim.field==='loot').sources[0];
+ assert.notEqual(link(xx),link(xxii));
+ for(const row of [xx,xxii]){
+  assert.equal(row.body,'Yela');
+  const record=raw.find(entry=>entry.id===row.uuid);
+  assert.equal(stantonCoverage([record],[atId.get(row.uuid)]).counts.loot,1,row.name);
+ }
 });

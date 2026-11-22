@@ -20570,6 +20570,2015 @@
       ],
       "uuid": "9ba52600-3db3-4741-b4a1-fe5560dd261b",
       "checkedAt": "2026-11-22"
+    },
+    {
+      "name": "Admin Center",
+      "uuid": "6f9547a6-341a-4c2e-ac3f-fda96a0bb81b",
+      "checkedAt": "2026-11-22",
+      "body": "<= UNINITIALIZED =>",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Plataformas del centro administrativo",
+          "text": "La guía localiza plataformas en ADMN-A, ADMN-B y ADMN-D, y un atraque para barcazas en ADMN-D. Consulta el contrato antes de intentar llevar tu nave a la plataforma.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6f9547a6-341a-4c2e-ac3f-fda96a0bb81b",
+            "https://starcitizen.tools/Inspiration_Park"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Infraestructura documentada. Horarios de lanzadera, permisos y disponibilidad de plataformas pendientes en sesión."
+        }
+      ]
+    },
+    {
+      "name": "Brushwood",
+      "uuid": "295888cc-d3b5-43ab-80c0-ea5ccc418c5b",
+      "checkedAt": "2026-11-22",
+      "body": "<= UNINITIALIZED =>",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso a Brushwood",
+          "text": "Busca la parada Brushwood en la línea Inspiration Park del Skyway de Orison. La plataforma está dividida en tres zonas conectadas por puentes, con jardines en una de ellas.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/295888cc-d3b5-43ab-80c0-ea5ccc418c5b",
+            "https://starcitizen.tools/Inspiration_Park"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Infraestructura documentada. Horarios de lanzadera, permisos y disponibilidad de plataformas pendientes en sesión."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST1-02",
+      "uuid": "bd938343-c1bf-4397-9f6d-2a1b15f34db0",
+      "checkedAt": "2026-11-22",
+      "body": "Ita",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST1-02 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Ita. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bd938343-c1bf-4397-9f6d-2a1b15f34db0",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bd938343-c1bf-4397-9f6d-2a1b15f34db0",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST1-13",
+      "uuid": "8161aada-e08d-464a-95ac-974d13e1fb59",
+      "checkedAt": "2026-11-22",
+      "body": "Arial",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST1-13 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Arial. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8161aada-e08d-464a-95ac-974d13e1fb59",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8161aada-e08d-464a-95ac-974d13e1fb59",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST1-48",
+      "uuid": "d7acf24e-0466-4ed1-8357-cdac58c7399b",
+      "checkedAt": "2026-11-22",
+      "body": "Magda",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST1-48 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Magda. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d7acf24e-0466-4ed1-8357-cdac58c7399b",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d7acf24e-0466-4ed1-8357-cdac58c7399b",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST1-61",
+      "uuid": "7db4570e-3ea3-4352-982f-d3d34df92632",
+      "checkedAt": "2026-11-22",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST1-61 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Hurston. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7db4570e-3ea3-4352-982f-d3d34df92632",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7db4570e-3ea3-4352-982f-d3d34df92632",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST1-92",
+      "uuid": "245d683e-45eb-49b2-9de4-576bab3ce03e",
+      "checkedAt": "2026-11-22",
+      "body": "Aberdeen",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST1-92 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Aberdeen. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/245d683e-45eb-49b2-9de4-576bab3ce03e",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/245d683e-45eb-49b2-9de4-576bab3ce03e",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST2-28",
+      "uuid": "279c6997-be8b-4a98-8921-cf4ac5f9095d",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST2-28 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Cellin. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/279c6997-be8b-4a98-8921-cf4ac5f9095d",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/279c6997-be8b-4a98-8921-cf4ac5f9095d",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST2-47",
+      "uuid": "3e24e35f-2ac1-4c3a-85bc-c448222552ed",
+      "checkedAt": "2026-11-22",
+      "body": "Daymar",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST2-47 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Daymar. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3e24e35f-2ac1-4c3a-85bc-c448222552ed",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3e24e35f-2ac1-4c3a-85bc-c448222552ed",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST2-55",
+      "uuid": "20e6f57a-5446-47c5-a23e-9df6bd7239d5",
+      "checkedAt": "2026-11-22",
+      "body": "Crusader",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST2-55 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Crusader. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/20e6f57a-5446-47c5-a23e-9df6bd7239d5",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/20e6f57a-5446-47c5-a23e-9df6bd7239d5",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST2-76",
+      "uuid": "3797fd7c-5121-4cd1-9685-2a9c36a95060",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST2-76 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Yela. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3797fd7c-5121-4cd1-9685-2a9c36a95060",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3797fd7c-5121-4cd1-9685-2a9c36a95060",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST3-18",
+      "uuid": "855e8dd2-23b1-4997-9de2-c0b17b542679",
+      "checkedAt": "2026-11-22",
+      "body": "Lyria",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST3-18 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Lyria. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/855e8dd2-23b1-4997-9de2-c0b17b542679",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/855e8dd2-23b1-4997-9de2-c0b17b542679",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST3-35",
+      "uuid": "6e2b3287-01dd-4ee7-a5cc-48405d90f45a",
+      "checkedAt": "2026-11-22",
+      "body": "Wala",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST3-35 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Wala. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6e2b3287-01dd-4ee7-a5cc-48405d90f45a",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6e2b3287-01dd-4ee7-a5cc-48405d90f45a",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST3-90",
+      "uuid": "04eb557f-f248-47c9-be23-49ddb262beee",
+      "checkedAt": "2026-11-22",
+      "body": "ArcCorp",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST3-90 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de ArcCorp. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/04eb557f-f248-47c9-be23-49ddb262beee",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/04eb557f-f248-47c9-be23-49ddb262beee",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST4-22",
+      "uuid": "58a0d924-9786-4dab-b6f8-328c0eb6f456",
+      "checkedAt": "2026-11-22",
+      "body": "microTech",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST4-22 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de microTech. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/58a0d924-9786-4dab-b6f8-328c0eb6f456",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/58a0d924-9786-4dab-b6f8-328c0eb6f456",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST4-31",
+      "uuid": "6228e342-9172-4012-be26-5e5f4c220c92",
+      "checkedAt": "2026-11-22",
+      "body": "Calliope",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST4-31 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Calliope. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6228e342-9172-4012-be26-5e5f4c220c92",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6228e342-9172-4012-be26-5e5f4c220c92",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST4-59",
+      "uuid": "04a4c07f-dce3-4c7d-96fc-7d655ca674db",
+      "checkedAt": "2026-11-22",
+      "body": "Clio",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST4-59 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Clio. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/04a4c07f-dce3-4c7d-96fc-7d655ca674db",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/04a4c07f-dce3-4c7d-96fc-7d655ca674db",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Comm Array ST4-64",
+      "uuid": "521aa728-cf13-4ce1-85f1-ab9f2a26a924",
+      "checkedAt": "2026-11-22",
+      "body": "Euterpe",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Cobertura de comunicaciones ECN",
+          "text": "El catálogo registra Comm Array ST4-64 como destino de salto directo y antena de Aciedo para comunicaciones y servicio ECN en el sector de Euterpe. Consulta el estado del enlace antes de depender de su cobertura.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/521aa728-cf13-4ce1-85f1-ab9f2a26a924",
+            "https://starcitizen.tools/Emergency_Communication_Network"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "El registro acredita la función de la antena. La conexión puede cambiar en la sesión."
+        },
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Defensa de la antena ECN",
+          "text": "La guía del contrato describe una alerta que puede activarse al intentar desconectar una antena y que puede requerir restaurar el enlace. Comprueba en mobiGlas que la alerta corresponde a esta antena antes de viajar.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/521aa728-cf13-4ce1-85f1-ab9f2a26a924",
+            "https://starcitizen.tools/ECN_ALERT%3A_Network_Intrusion"
+          ],
+          "patch": "4.10.0",
+          "uncertainty": "La guía de 4.10.0 describe esta mecánica. La aparición del contrato en 4.10.3 queda pendiente."
+        }
+      ]
+    },
+    {
+      "name": "Covalex Shipping Hub Gundo",
+      "uuid": "6dbbb484-2aca-419f-b5ef-8f1efde030e3",
+      "checkedAt": "2026-11-22",
+      "body": "Daymar",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Estación cerrada: entrada en EVA",
+          "text": "La estación orbital está destruida y la aproximación emite avisos de cierre y propiedad privada. La guía describe la entrada en actividad extravehicular (EVA). Covalex trasladó sus operaciones a Orison.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6dbbb484-2aca-419f-b5ef-8f1efde030e3",
+            "https://starcitizen.tools/Covalex_Hub_Gundo"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Consulta el estado de tu contrato y el acceso en tu sesión. El sitio corresponde a la estación abandonada."
+        }
+      ]
+    },
+    {
+      "name": "Hartmoore",
+      "uuid": "fa405db0-2cce-489a-a4d5-25aef5039e59",
+      "checkedAt": "2026-11-22",
+      "body": "<= UNINITIALIZED =>",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso a Hartmoore",
+          "text": "Busca la parada Hartmoore en la línea Inspiration Park del Skyway de Orison. La referencia local de la plataforma es el campo de golf.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fa405db0-2cce-489a-a4d5-25aef5039e59",
+            "https://starcitizen.tools/Inspiration_Park"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Infraestructura documentada. Horarios de lanzadera, permisos y disponibilidad de plataformas pendientes en sesión."
+        }
+      ]
+    },
+    {
+      "name": "Miner's Lament",
+      "uuid": "7df76d40-6f7d-4b30-a605-7191ee231032",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Circuito de Wildstar entre asteroides",
+          "text": "El circuito de vuelo en gravedad cero discurre entre asteroides explotados del cinturón orbital de Yela. Se disputa en el espacio alrededor de la luna.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7df76d40-6f7d-4b30-a605-7191ee231032",
+            "https://starcitizen.tools/Miner%E2%80%99s_Lament"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Trazado documentado. La oferta de la carrera y los requisitos están pendientes en mobiGlas."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #26X-9QI",
+      "uuid": "a2d76baf-454b-48e1-b1f1-a38fc139f93b",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a2d76baf-454b-48e1-b1f1-a38fc139f93b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #2NB-SH5",
+      "uuid": "5ba14b7a-71e8-491b-a67e-693f81d59f48",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5ba14b7a-71e8-491b-a67e-693f81d59f48"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #3UB-W93",
+      "uuid": "dcf35dd7-87bf-41d4-8186-73716211af85",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/dcf35dd7-87bf-41d4-8186-73716211af85"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #407-4F2",
+      "uuid": "bbe974fe-64d3-451c-95e5-0a5775aec9a7",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bbe974fe-64d3-451c-95e5-0a5775aec9a7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #46K-104",
+      "uuid": "eca284dc-b7a6-4a2d-ab86-68a6c0073ace",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/eca284dc-b7a6-4a2d-ab86-68a6c0073ace"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #5O8-Q79",
+      "uuid": "bc99da90-ae5a-43a1-a0dc-51a9f50372ce",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bc99da90-ae5a-43a1-a0dc-51a9f50372ce"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #623-1V4",
+      "uuid": "3c6d66db-7d40-4d91-8b66-724937a487d1",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3c6d66db-7d40-4d91-8b66-724937a487d1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #6VQ-R0L",
+      "uuid": "fb2adb23-390d-4fb6-8b79-ea1f297d3335",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fb2adb23-390d-4fb6-8b79-ea1f297d3335"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #7BH-6IB",
+      "uuid": "26162567-208c-4399-944b-59fad6185fba",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/26162567-208c-4399-944b-59fad6185fba"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #94T-Y5T",
+      "uuid": "d098aefd-4a41-43cf-a454-b52137745c78",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d098aefd-4a41-43cf-a454-b52137745c78"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #960-5X4",
+      "uuid": "e1eb2e12-2f23-4a7b-85e9-e817fe9a2624",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e1eb2e12-2f23-4a7b-85e9-e817fe9a2624"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #9OE-85E",
+      "uuid": "4a4f8f82-fd72-4a88-a7eb-91a3870f0a2e",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4a4f8f82-fd72-4a88-a7eb-91a3870f0a2e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #9R4-US2",
+      "uuid": "b2c0f1c4-9eb5-4254-884b-efbba03664b2",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/b2c0f1c4-9eb5-4254-884b-efbba03664b2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #B93-ECE",
+      "uuid": "282c31cc-fee7-400e-be63-e43f509fa1c4",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/282c31cc-fee7-400e-be63-e43f509fa1c4"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #EOB-B9F",
+      "uuid": "65623121-ac05-4d26-b7b5-e1730be358d9",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/65623121-ac05-4d26-b7b5-e1730be358d9"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #FJ2-26X",
+      "uuid": "014d9aa7-d3b7-4985-b371-17faaafa5b67",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/014d9aa7-d3b7-4985-b371-17faaafa5b67"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #FR8-8XV",
+      "uuid": "2700fbed-cd34-4c5b-85bf-5a017f00107f",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/2700fbed-cd34-4c5b-85bf-5a017f00107f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #FUR-603",
+      "uuid": "11afd3b7-e839-45b4-8bf9-1a6610c39546",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/11afd3b7-e839-45b4-8bf9-1a6610c39546"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #H08-C6Q",
+      "uuid": "873202d4-b48d-4ad1-bab4-bd5584d30c3d",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/873202d4-b48d-4ad1-bab4-bd5584d30c3d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #H20-5FY",
+      "uuid": "25da8156-010c-418b-bc29-16d41074045a",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/25da8156-010c-418b-bc29-16d41074045a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #I13-200",
+      "uuid": "a4f71fef-0437-4a38-8be2-5139ce03209a",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a4f71fef-0437-4a38-8be2-5139ce03209a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #IF4-44E",
+      "uuid": "c4028a03-81c9-4663-a927-430a6ffae26f",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c4028a03-81c9-4663-a927-430a6ffae26f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #IUP-MT4",
+      "uuid": "007bda95-4749-4a7e-ba98-9b45629af3fb",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/007bda95-4749-4a7e-ba98-9b45629af3fb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #J5B-CJZ",
+      "uuid": "578bcf0f-09cf-4154-bdb7-fa1a7ea34151",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/578bcf0f-09cf-4154-bdb7-fa1a7ea34151"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #KY3-74D",
+      "uuid": "774170ec-de8d-4aa9-aef9-472f4c8a67c7",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/774170ec-de8d-4aa9-aef9-472f4c8a67c7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #L7D-UG3",
+      "uuid": "ac301238-cb11-4884-bfd9-18dd32c2dc6c",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ac301238-cb11-4884-bfd9-18dd32c2dc6c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #L7X-O1Z",
+      "uuid": "37bcd9b5-2e45-4a0d-9d87-cd0a31fabb15",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/37bcd9b5-2e45-4a0d-9d87-cd0a31fabb15"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #L9N-MH5",
+      "uuid": "bcb53108-ab99-4938-b83c-69d3b012999a",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bcb53108-ab99-4938-b83c-69d3b012999a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #LCU-0CH",
+      "uuid": "bc8ca4a9-88d4-48e9-8a52-d28ecc002c9d",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bc8ca4a9-88d4-48e9-8a52-d28ecc002c9d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #LH7-KP4",
+      "uuid": "d6e808cd-2133-43bb-9806-6a942fd2347b",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d6e808cd-2133-43bb-9806-6a942fd2347b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #LW2-QQA",
+      "uuid": "14257739-bab1-4371-8692-9ef1083cc1de",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/14257739-bab1-4371-8692-9ef1083cc1de"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #LX4-224",
+      "uuid": "00506b11-4482-4d8a-9363-8d767875aed8",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/00506b11-4482-4d8a-9363-8d767875aed8"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #M9Q-1JW",
+      "uuid": "7dc9d72b-41c1-4e5b-baab-0d489c9f7b5f",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7dc9d72b-41c1-4e5b-baab-0d489c9f7b5f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #MHP-7R3",
+      "uuid": "1847ee42-c944-4b51-a94c-148e3a078b16",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1847ee42-c944-4b51-a94c-148e3a078b16"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #MJF-18Z",
+      "uuid": "093e326e-c4e2-4f63-add0-2f38907ac629",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/093e326e-c4e2-4f63-add0-2f38907ac629"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #MY9-2O0",
+      "uuid": "47937c66-42b7-4d61-8788-ea29e0ad6cd0",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/47937c66-42b7-4d61-8788-ea29e0ad6cd0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #N03-CF2",
+      "uuid": "6b9fd038-f958-4d00-a7f5-003d27344bc0",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6b9fd038-f958-4d00-a7f5-003d27344bc0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #OXK-LWP",
+      "uuid": "427b7407-a87a-4b68-a0df-0dbdd35aad0b",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/427b7407-a87a-4b68-a0df-0dbdd35aad0b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #P0C-84M",
+      "uuid": "8a97ef58-3037-43fc-881c-d47d251294a0",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8a97ef58-3037-43fc-881c-d47d251294a0"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #P0C-84M",
+      "uuid": "e4bb5fe1-bd35-439c-9256-34bf131e6ddd",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e4bb5fe1-bd35-439c-9256-34bf131e6ddd"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #P15-YC2",
+      "uuid": "f3364420-45b0-4bcd-9c3f-b9b005585eea",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f3364420-45b0-4bcd-9c3f-b9b005585eea"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #P4S-50Z",
+      "uuid": "759c5524-5579-4047-ae9f-46de1798f18f",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/759c5524-5579-4047-ae9f-46de1798f18f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #PCV-664",
+      "uuid": "5462aad7-e300-4401-bef2-0c25c916c19c",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5462aad7-e300-4401-bef2-0c25c916c19c"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #PWG-V76",
+      "uuid": "ab22a298-6892-4d13-b9b5-4619422cc5dc",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ab22a298-6892-4d13-b9b5-4619422cc5dc"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #PY9-010",
+      "uuid": "1dc73c8f-79cf-4c8f-b02e-e8b462e99581",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1dc73c8f-79cf-4c8f-b02e-e8b462e99581"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #Q02-658",
+      "uuid": "73af8f80-c660-432f-95b2-f3fe1d2ce4c1",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/73af8f80-c660-432f-95b2-f3fe1d2ce4c1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #Q97-6C7",
+      "uuid": "8fe17788-f49a-42f5-9478-ac9edaddf941",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8fe17788-f49a-42f5-9478-ac9edaddf941"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #QR4-25Q",
+      "uuid": "06ac4faf-65cf-46ae-8933-bb46db81ff70",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/06ac4faf-65cf-46ae-8933-bb46db81ff70"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #RDM-570",
+      "uuid": "090d363c-5538-4519-bd47-2fd5a8d02931",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/090d363c-5538-4519-bd47-2fd5a8d02931"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #SA0-62G",
+      "uuid": "fc3d43db-c358-40ca-9e5c-bff6a59a79d1",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fc3d43db-c358-40ca-9e5c-bff6a59a79d1"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #SNS-133",
+      "uuid": "5112a857-3640-4005-bdba-f36c1c3e23f7",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5112a857-3640-4005-bdba-f36c1c3e23f7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #SR3-8DH",
+      "uuid": "5d7f3eb5-67de-4fbb-b82c-a58541839f72",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/5d7f3eb5-67de-4fbb-b82c-a58541839f72"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #T8B-OA8",
+      "uuid": "ec58b56b-12e5-4c00-8b15-ff47cc63f44f",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/ec58b56b-12e5-4c00-8b15-ff47cc63f44f"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #T9P-B90",
+      "uuid": "fd686ddb-d7b4-4139-b8d1-1d688bfdae39",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fd686ddb-d7b4-4139-b8d1-1d688bfdae39"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #U3Z-O5M",
+      "uuid": "0dfb89b3-4af3-43da-8466-c6a0232ce73a",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0dfb89b3-4af3-43da-8466-c6a0232ce73a"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #U7S-YF2",
+      "uuid": "b6be1bf7-2fd7-4910-9473-05ef71b55dba",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/b6be1bf7-2fd7-4910-9473-05ef71b55dba"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #UU1-PPU",
+      "uuid": "51fbc709-dd4e-4cd5-9cc0-af71a9e6f962",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/51fbc709-dd4e-4cd5-9cc0-af71a9e6f962"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #W70-48O",
+      "uuid": "a824e3ee-867a-4332-98a5-d5c67239a8ae",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a824e3ee-867a-4332-98a5-d5c67239a8ae"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #W80-8T2",
+      "uuid": "bc4dcb7c-5e60-4e5d-9109-1451df094630",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bc4dcb7c-5e60-4e5d-9109-1451df094630"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #X1A-79O",
+      "uuid": "39c7ee76-f87d-46a5-9aad-481ccfe0bcf2",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L1",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L1; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/39c7ee76-f87d-46a5-9aad-481ccfe0bcf2"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #X31-V3V",
+      "uuid": "8ba2d353-46d5-4e42-93ac-1975ad030aa3",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8ba2d353-46d5-4e42-93ac-1975ad030aa3"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #X79-361",
+      "uuid": "93793580-5640-4e3b-ae47-20063455ee21",
+      "checkedAt": "2026-11-22",
+      "body": "HUR L3",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en HUR L3; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/93793580-5640-4e3b-ae47-20063455ee21"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #YNV-4N2",
+      "uuid": "8ae98725-d7d5-402d-b1ef-8ee48a979826",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8ae98725-d7d5-402d-b1ef-8ee48a979826"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #Z4O-0M1",
+      "uuid": "fcfbe9c5-6add-4692-85e5-dd0267f703eb",
+      "checkedAt": "2026-11-22",
+      "body": "ARC L2",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en ARC L2; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/fcfbe9c5-6add-4692-85e5-dd0267f703eb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #Z8V-6O0",
+      "uuid": "6376c232-ff99-4b15-b435-a00714062fc7",
+      "checkedAt": "2026-11-22",
+      "body": "CRU L5",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en CRU L5; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/6376c232-ff99-4b15-b435-a00714062fc7"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "Mining Claim #ZGA-66M",
+      "uuid": "d7861f5e-71f7-425d-adc2-94f49215b78e",
+      "checkedAt": "2026-11-22",
+      "body": "MIC L4",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Concesión privada sin destino de salto directo",
+          "text": "El catálogo oculta esta concesión en el mapa estelar y en el mundo y no la clasifica como destino de salto directo. Está registrada como privada en MIC L4; la entrada exige autorización.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d7861f5e-71f7-425d-adc2-94f49215b78e"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Advertencia de acceso del registro 4.10.3. Quedan pendientes los recursos locales y las condiciones de un posible contrato."
+        }
+      ]
+    },
+    {
+      "name": "NT-999-XX",
+      "uuid": "d7c5c0cc-f037-4fcc-9021-c70dc72dcb09",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín local por contenedor",
+          "text": "La extracción registra 6 puntos de botín configurados en el lugar. Entre las posibles apariciones en estuches de armas (Weapon case) figuran Pyro RYT Multi-Tool, Pink QuikFlare y Aril Helmet (Modified).",
+          "sources": [
+            "https://loot-verse.com/#place-stanton2c-stash-unknown-001",
+            "https://api.star-citizen.wiki/api/locations/d7c5c0cc-f037-4fcc-9021-c70dc72dcb09"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La tabla recoge posibles apariciones. La tirada y la disponibilidad en una sesión concreta quedan pendientes de comprobar."
+        }
+      ]
+    },
+    {
+      "name": "NT-999-XXII",
+      "uuid": "b53701f2-daf7-4c84-a485-be558d55cf98",
+      "checkedAt": "2026-11-22",
+      "body": "Yela",
+      "claims": [
+        {
+          "field": "loot",
+          "status": "documented",
+          "title": "Botín local por contenedor",
+          "text": "La extracción registra 13 puntos de botín configurados en el lugar. Entre las posibles apariciones en cajas de equipo (Misc crate) figuran Pyro RYT Multi-Tool, XDL Monocular Rangefinder y Pink QuikFlare.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton2c-nt-999-xxii",
+            "https://api.star-citizen.wiki/api/locations/b53701f2-daf7-4c84-a485-be558d55cf98"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La tabla recoge posibles apariciones. La tirada y la disponibilidad en una sesión concreta quedan pendientes de comprobar."
+        },
+        {
+          "field": "weapons",
+          "status": "documented",
+          "title": "Armamento en las tablas locales",
+          "text": "Las tablas de cajas de armas (Weapons crate) registran S-38 Pistol, P8-SC SMG y Coda Pistol entre sus posibles apariciones.",
+          "sources": [
+            "https://loot-verse.com/#place-stanton2c-nt-999-xxii",
+            "https://api.star-citizen.wiki/api/locations/b53701f2-daf7-4c84-a485-be558d55cf98"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "La tabla recoge posibles apariciones. La tirada y la disponibilidad en una sesión concreta quedan pendientes de comprobar."
+        }
+      ]
+    },
+    {
+      "name": "PRIVATE PROPERTY",
+      "uuid": "c6987a08-91bf-4fda-93be-62d03b344a8d",
+      "checkedAt": "2026-11-22",
+      "body": "Cellin",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Propiedad privada en Cellin",
+          "text": "El catálogo de esta ubicación indica acceso prohibido. Revisa el destino de tu contrato y el aviso del HUD antes de aproximarte.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c6987a08-91bf-4fda-93be-62d03b344a8d"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Pendiente de comprobar en partida la aplicación de esta restricción y la reacción de las defensas."
+        }
+      ]
+    },
+    {
+      "name": "Solanki",
+      "uuid": "d78536c3-c88f-4e06-8e1c-617d0747c7c6",
+      "checkedAt": "2026-11-22",
+      "body": "<= UNINITIALIZED =>",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Acceso a Solanki",
+          "text": "Desde Cloudview Center toma la línea Inspiration Park del Skyway. En Solanki, la guía identifica el acceso a la plaza de bienvenida por SNK-A y dos plataformas en las azoteas de SNK-A y SNK-C.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d78536c3-c88f-4e06-8e1c-617d0747c7c6",
+            "https://starcitizen.tools/Inspiration_Park"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Infraestructura documentada. Horarios de lanzadera, permisos y disponibilidad de plataformas pendientes en sesión."
+        }
+      ]
+    },
+    {
+      "name": "Stanton-Pyro Jump Point",
+      "uuid": "f497eb74-7875-42e6-9694-632cb4a76f8c",
+      "checkedAt": "2026-11-22",
+      "body": "Pyro Gateway",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Aproximación por Pyro Gateway en Stanton",
+          "text": "En el lado de Stanton, el catálogo sitúa la puerta junto a Pyro Gateway. Traza el salto cuántico a la estación cercana; el registro de la puerta queda oculto y carece de destino cuántico directo.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/f497eb74-7875-42e6-9694-632cb4a76f8c",
+            "https://starcitizen.tools/Stanton_-_Pyro_jump_point"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Comprueba la señal y el estado del paso en la sesión. La estación y la puerta son destinos distintos."
+        }
+      ]
+    },
+    {
+      "name": "Tobin Center",
+      "uuid": "e5397b11-f4b3-4681-9a0e-10912aa2dfb2",
+      "checkedAt": "2026-11-22",
+      "body": "New Babbage",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Metroloop al Tobin Expo Center",
+          "text": "Desde el espaciopuerto de New Babbage, pasa el control y baja al Metroloop. Toma el tren hacia Commons/Tobin Expo Center y baja en la segunda parada. Desde The Nest, el centro figura como primera parada.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e5397b11-f4b3-4681-9a0e-10912aa2dfb2",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Ruta publicada por RSI para la IAE 2956."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Exposición IAE 2956",
+          "text": "RSI anuncia la exposición del 13 al 27 de noviembre de 2026, con naves de exhibición y vuelos de prueba. La selección de fabricantes rota durante la feria.",
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e5397b11-f4b3-4681-9a0e-10912aa2dfb2",
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Actividad temporal. Comprueba el calendario del evento y la selección del día."
+        }
+      ]
     }
   ]
 }
