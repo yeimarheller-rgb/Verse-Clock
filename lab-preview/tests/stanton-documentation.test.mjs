@@ -27,3 +27,20 @@ test('documentedLocal counts unique inventory UUIDs, not duplicate rows',()=>{
  const repeated=[raw[0],{...raw[0]}];
  assert.equal(stantonCoverage(repeated,visible([claim('documented')])).documentedLocal,1);
 });
+
+
+test('documentedLocal rejects unknown fields, blank text and missing sources',()=>{
+ const cases=[
+  {field:'unrecognized',status:'documented',text:'Specific claim',sources:['https://starcitizen.tools/Hurston']},
+  {field:'access',status:'documented',text:'   ',sources:['https://starcitizen.tools/Hurston']},
+  {field:'access',status:'documented',text:'Specific claim',sources:[]},
+  {field:'access',status:'documented',text:'Specific claim',sources:['https://example.org/']},
+ ];
+ for(const item of cases)assert.equal(stantonCoverage(raw,visible([item])).documentedLocal,0);
+});
+
+test('documentedLocal remains geographically scoped',()=>{
+ const local=visible([claim('documented')]);
+ assert.equal(stantonCoverage(raw,local,'Hurston').documentedLocal,1);
+ assert.equal(stantonCoverage(raw,local,'Crusader').documentedLocal,0);
+});
