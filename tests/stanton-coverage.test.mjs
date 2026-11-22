@@ -534,12 +534,21 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
 
 test('site-specific Stanton review notes provide context without counting operational coverage',()=>{
  const notes=stanton.catalogReview.notes;
- assert.equal(Object.keys(notes).length,5);
+ const named=Object.entries(stanton.catalogReview.records)
+  .filter(([,state])=>['unplaced','hidden','placed'].includes(state)).map(([id])=>id);
+ assert.deepEqual(Object.keys(notes).sort(),named.sort());
  for(const [id,note] of Object.entries(notes)){
   const row=raw.find(p=>p.id===id);
   const site=atId.get(id);
   assert.equal(site.stantonCatalogReview.text,note.text);
   assert.equal(site.stantonCatalogReview.noteSource,note.source);
+  if(note.destinationUuid){
+   assert.notEqual(id,note.destinationUuid);
+   const destination=atId.get(note.destinationUuid);
+   assert.ok(destination,note.destinationUuid);
+   assert.notEqual(destination.stantonCatalogReview?.state,'hidden');
+   assert.notEqual(destination.stantonCatalogReview?.state,'unplaced');
+  }
   assert.equal(stantonCoverage([row],[site],'Stanton',stanton.catalogReview).operational,0);
  }
  const green=raw.find(p=>p.id==='b190f52c-0b30-4482-b6ed-897eb7b4cdf8');
@@ -547,6 +556,11 @@ test('site-specific Stanton review notes provide context without counting operat
  const badReview={...stanton.catalogReview,notes:{[green.id]:{text:'Unsafe note',source:'http://example.org/source'}}};
  assert.equal(stantonCatalogReview(green,badReview).noteSource,undefined);
  assert.notEqual(stantonCatalogReview(green,badReview).text,'Unsafe note');
+ const tli4='0751fdb9-c6da-40c8-b924-f217c2c0c68f';
+ const outpost54='af133812-bbf1-4d3f-adfa-90d5aec5ea50';
+ assert.equal(Object.values(notes).filter(note=>note.destinationUuid===tli4).length,11);
+ assert.equal(Object.values(notes).filter(note=>note.destinationUuid===outpost54).length,3);
+ assert.equal(notes['8a55463e-e472-4871-833b-dc0747af7b7d'].destinationUuid,'f903ba70-e567-4b71-9062-26c8f58dcd99');
 });
 
 test('placed orbital mining and regional markers keep visibility separate from direct quantum access',()=>{

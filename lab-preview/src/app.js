@@ -445,10 +445,13 @@ function applyPoiToMain(p){
    section.append(copy);
    if(fact.destinations?.length){
     const links=document.createElement('div');links.className='location-dossier-nav';
-    for(const name of fact.destinations){
-     const dest=poiData.find(item=>atlasKey(item)===atlasKey({system:p.system,name}));
+    for(const target of fact.destinations){
+     const dest=target.uuid
+      ? poiData.find(item=>(item.source?.uuid||item.id)===target.uuid)
+      : poiData.find(item=>atlasKey(item)===atlasKey({system:p.system,name:target}));
      if(!dest)continue;
-     const button=document.createElement('button');button.type='button';button.textContent=name;
+     const button=document.createElement('button');button.type='button';
+     button.textContent=target.uuid?[dest.name,dest.parent].filter(Boolean).join(' · '):target;
      button.addEventListener('click',()=>chooseSearchResult({kind:'poi',value:dest}));links.append(button);
     }
     if(links.childElementCount)section.append(links);

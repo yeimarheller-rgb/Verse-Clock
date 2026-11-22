@@ -24729,25 +24729,238 @@
       "fe3950f6-0244-4c83-a50f-9a329877ffe1": "unplacedEventPlatform"
     },
     "notes": {
-      "b190f52c-0b30-4482-b6ed-897eb7b4cdf8": {
-        "text": "La descripción del mundo oceánico coincide con Green (Ellis III) en la Galactapedia de RSI. Esta ficha de Stanton tiene un conflicto de identidad; carece de posición en la extracción y queda pendiente de confirmar como destino de Stanton.",
-        "source": "https://robertsspaceindustries.com/galactapedia/article/RWoNrNeLKP-green-ellis-iii"
+      "04ff332d-e355-45bf-ab16-04df30fe0a44": {
+        "text": "El catálogo distingue este asteroide por UUID, pero carece de posición y su nombre no lo diferencia de bases homónimas. Busca una base numerada para ver su evidencia de acceso y los recursos catalogados.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
       },
-      "a3de0e92-b9fb-4866-9636-4b3a8584443b": {
-        "text": "RSI identifica Palomar como un búnker de Hurston Dynamics Operations Facility. Esta extracción carece de posición para el UUID. Quedan pendientes los accesos, contratos y servicios en LIVE.",
-        "source": "https://robertsspaceindustries.com/en/comm-link/spectrum-dispatch/19375-Loremakers-Community-Questions"
+      "07b47705-a5b7-4bb2-b339-3dad7d590a0f": {
+        "text": "Este marcador corresponde a una sala de exposiciones, distinta del puerto espacial August Dunlow. Carece de posición en la extracción. La ruta oficial de IAE 2956 lleva a Tobin Expo Center en New Babbage.",
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+      },
+      "19eb5151-0d25-40f8-be5c-56c5bb68223b": {
+        "text": "Bolsa de gas catalogada bajo CRU L3. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "2083c403-4c40-4727-b392-49976c460028"
+      },
+      "1a18fc98-56c2-480b-bcf3-5fa0bb2f130a": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "23098c21-935e-425a-a2bd-6e25b6e3d6b3": {
+        "text": "En New Babbage, la ruta oficial de IAE 2956 lleva al Tobin Expo Center por Metroloop. Esta variante técnica de Vision Center figura como marcador oculto y su acceso sigue pendiente.",
+        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+      },
+      "25a4c763-e75c-4167-89b1-5b653e872cb7": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
       },
       "297e55a7-2a4c-46d2-96f6-014b00541494": {
         "text": "La ficha de referencia sitúa la instalación de procesamiento en Calliope. Esta extracción carece de posición para el UUID SPMC-1. El contrato histórico de la ficha queda pendiente de confirmar en LIVE con ese código exacto.",
         "source": "https://starcitizen.tools/Shubin_Processing_Facility_SPMC-1"
       },
-      "8a55463e-e472-4871-833b-dc0747af7b7d": {
-        "text": "Para aproximarte a Prospect Point, busca la variante f903ba70 en el buscador. Esa variante tiene un marcador cuántico colocado en Crusader. Este segundo UUID carece de colocación en la extracción.",
-        "source": "https://api.star-citizen.wiki/api/locations/f903ba70-e567-4b71-9062-26c8f58dcd99"
+      "2c23ef48-f43f-4a91-af38-a11e60c0ac40": {
+        "text": "DefenseCon identifica una feria de Drake. El UUID de ArcCorp carece de posición en la extracción y su acceso depende de la edición. Consulta la sede anunciada antes de viajar.",
+        "source": "https://starcitizen.tools/Drake_Defensecon"
       },
-      "23098c21-935e-425a-a2bd-6e25b6e3d6b3": {
-        "text": "En New Babbage, la ruta oficial de IAE 2956 lleva al Tobin Expo Center por Metroloop. Esta variante técnica de Vision Center figura como marcador oculto y su acceso sigue pendiente.",
-        "source": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056530134-Welcome-to-the-Intergalactic-Aerospace-Expo-2956"
+      "2cb3d58e-1e0b-4f25-b2d3-dd76cbc15fd6": {
+        "text": "El catálogo distingue este asteroide por UUID, pero carece de posición y su nombre no lo diferencia de bases homónimas. Busca una base numerada para ver su evidencia de acceso y los recursos catalogados.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "305bf43d-5bcb-44d3-8ee4-837c8f29669a": {
+        "text": "Bolsa de gas catalogada bajo MIC L2. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "33eee167-01aa-474b-868c-5989bd45dac1": {
+        "text": "Bolsa de gas catalogada bajo MIC L1. Este UUID carece de posición en la extracción. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "3425cfc9-15c2-4b35-8618-f6d982dff521": {
+        "text": "El catálogo identifica Area17 como un distrito industrial y comercial de ArcCorp. Carece de posición propia en la extracción. Para comercio utilizable y un marcador colocado, consulta las fichas de la red de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "34fa1d2d-fbbd-4467-b3cb-dfca167b293e": {
+        "text": "Las estaciones Cry-Astro se retiraron en Alpha 3.3. Esta ficha permanece en el catálogo y carece de posición en el parche revisado. Para combustible y rearme, usa los filtros del atlas para localizar servicios documentados.",
+        "source": "https://starcitizen.tools/Cry-Astro_%28stanton%29"
+      },
+      "34ff378f-faee-47bb-b5fe-f505e665c5ca": {
+        "text": "Marcador visible de la estrella central y raíz de los destinos de Stanton. Figura en el origen del sistema y carece de salto cuántico directo. Las referencias de contratos pertenecen al sistema, sin actividad local asociada a la estrella.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "3a728623-e778-4e16-a640-0cc584fd5cd7": {
+        "text": "La fuente identifica un repetidor caído en Hurston. El registro del parche carece de posición para este UUID y los avistamientos de otras versiones no confirman el acceso actual.",
+        "source": "https://starcitizen.tools/Downed_Relay_AC-652"
+      },
+      "430b44df-7510-4ed7-a444-7d23a46840c7": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "44493299-964d-478f-8ba1-75c22c92ae9c": {
+        "text": "ArcCorp es el cuerpo padre de Orbital Relay AC-421. El UUID carece de posición en la extracción. Comm Array ST3-90 tiene un UUID propio y constituye otra instalación.",
+        "source": "https://api.star-citizen.wiki/locations/35a9f8f5-8f80-4796-83db-7d7362baeb9a"
+      },
+      "46c7db91-10f2-443e-9303-77ef044c71ee": {
+        "text": "Bolsa de gas catalogada bajo MIC L2. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "48bcd204-ae47-4ef2-9865-bfa61583014d": {
+        "text": "Area18 Central figura como punto separado en el catálogo, sin posición propia en la extracción. Para llegar a la zona de aterrizaje, abre la ficha de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "503581e8-9c37-48cb-9ef1-6c9ebf0e52b9": {
+        "text": "La referencia histórica de XenoThreat ubica la estación naval cerca de MIC L1 y cita un marcador visible durante el evento. Este UUID (Manmade, bajo MIC L1) carece de posición en el parche revisado. El reabastecimiento militar descrito no acredita un servicio público en LIVE.",
+        "source": "https://starcitizen.tools/INS_Jericho"
+      },
+      "53b8d22c-62bb-4c4e-98dc-4bb99706b45d": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1": {
+        "text": "Bolsa de gas catalogada bajo CRU L2. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0"
+      },
+      "5d70de1f-9aa2-422a-a1d8-371c29480148": {
+        "text": "Este registro de Aberdeen carece de posición en la extracción. Hay un puesto homónimo con marcador y salto configurado en microTech. Comprueba el cuerpo en la ficha antes de viajar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "af133812-bbf1-4d3f-adfa-90d5aec5ea50"
+      },
+      "6bf52a58-f396-48f7-8e66-c4c92ca6bdfb": {
+        "text": "El catálogo identifica Area06 como un distrito industrial y comercial de ArcCorp. Carece de posición propia en la extracción. Para comercio utilizable y un marcador colocado, consulta las fichas de la red de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7": {
+        "text": "Bolsa de gas catalogada bajo CRU L2. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0"
+      },
+      "6ee3934b-0825-4496-94a9-cc1dd0c194dd": {
+        "text": "El catálogo identifica Area11 como un distrito industrial y comercial de ArcCorp. Carece de posición propia en la extracción. Para comercio utilizable y un marcador colocado, consulta las fichas de la red de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "7343225d-25a4-45f8-8f93-c8f19c9bcde4": {
+        "text": "La sonda aparece bajo Crusader y carece de posición en la extracción. Los encargos de ICC Assistance de Tessa Bannister se retiraron en Alpha 3.0. Su disponibilidad en el parche actual carece de corroboración.",
+        "source": "https://starcitizen.tools/Tessa_Bannister"
+      },
+      "75f34f42-a4f5-4d01-80cb-35422ecb9db8": {
+        "text": "El catálogo distingue este asteroide por UUID, pero carece de posición y su nombre no lo diferencia de bases homónimas. Busca una base numerada para ver su evidencia de acceso y los recursos catalogados.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "8349be8c-6d99-4739-9be1-983625f9b4a3": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "86a655fa-85c7-49e5-85ff-ed51fe4c06f5": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "8a55463e-e472-4871-833b-dc0747af7b7d": {
+        "text": "Prospect Point tiene una variante visible con salto cuántico configurado en Crusader. El acceso a ese marcador corresponde al UUID enlazado. Esta variante carece de posición en la extracción.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "f903ba70-e567-4b71-9062-26c8f58dcd99"
+      },
+      "8c154143-04eb-4ef6-b159-e3f702bf0606": {
+        "text": "El catálogo identifica Area20 como un distrito industrial y comercial de ArcCorp. Carece de posición propia en la extracción. Para comercio utilizable y un marcador colocado, consulta las fichas de la red de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "8db480d0-7b21-4865-80ea-8537588a3976": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "9415f1bb-fbb5-44fd-a6a1-fa4ed012402a": {
+        "text": "Bolsa de gas catalogada bajo CRU L2. El marcador extraído está oculto y carece de salto directo. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0"
+      },
+      "9c54eaf2-1663-4f6a-812e-00d70afe1129": {
+        "text": "La fuente comunitaria ubica Bevic en Area18 y documenta el acceso mediante Cityflight. Este marcador está oculto en la extracción, aunque tiene salto configurado. La disponibilidad de la parada y del salto sigue pendiente en LIVE.",
+        "source": "https://starcitizen.tools/Bevic_Convention_Center"
+      },
+      "9f914432-1ade-4200-a0a0-21f6e42a5f80": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "a3caead2-e304-43a1-90aa-4f28c2f95391": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "a3de0e92-b9fb-4866-9636-4b3a8584443b": {
+        "text": "RSI identifica Palomar como un búnker de Hurston Dynamics Operations Facility. Esta extracción carece de posición para el UUID. Quedan pendientes los accesos, contratos y servicios en LIVE.",
+        "source": "https://robertsspaceindustries.com/en/comm-link/spectrum-dispatch/19375-Loremakers-Community-Questions"
+      },
+      "a42fe406-ce60-4e6d-8e1e-5285fcce2b75": {
+        "text": "Bolsa de gas catalogada bajo MIC L5. Este UUID carece de posición en la extracción. La ficha de la región sirve de referencia para orientarte; el acceso y los recursos de esta bolsa siguen pendientes de corroborar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "aaba55af-fde6-4b29-9708-235652524d44": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "b190f52c-0b30-4482-b6ed-897eb7b4cdf8": {
+        "text": "La descripción del mundo oceánico coincide con Green (Ellis III) en la Galactapedia de RSI. Esta ficha de Stanton tiene un conflicto de identidad; carece de posición en la extracción y queda pendiente de confirmar como destino de Stanton.",
+        "source": "https://robertsspaceindustries.com/galactapedia/article/RWoNrNeLKP-green-ellis-iii"
+      },
+      "bea9756e-0232-4a48-a8c3-d87b717b03e6": {
+        "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
+        "source": "https://starcitizen.tools/MT_OpCenter_TLI-4",
+        "destinationUuid": "0751fdb9-c6da-40c8-b924-f217c2c0c68f"
+      },
+      "c5b38575-a40a-49f6-a04c-701c4093ec5b": {
+        "text": "El catálogo identifica Area04 como un distrito industrial y comercial de ArcCorp. Carece de posición propia en la extracción. Para comercio utilizable y un marcador colocado, consulta las fichas de la red de Area18.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "c6535844-c615-494e-9dc1-c2d0c6e7190a"
+      },
+      "c9c137cf-c520-47ee-9e6d-5d653dfbe201": {
+        "text": "Registro del sistema solar, con alcance regional para contratos. Para navegación, elige el planeta, la estación o el punto concreto desde el buscador. Las referencias regionales no sitúan un objetivo en este UUID.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "d12b0f75-aba9-4a5b-91f0-f23182c60445": {
+        "text": "El catálogo distingue este asteroide por UUID, pero carece de posición y su nombre no lo diferencia de bases homónimas. Busca una base numerada para ver su evidencia de acceso y los recursos catalogados.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "d1818d52-e4d6-4587-a679-600593f873e9": {
+        "text": "El catálogo distingue este asteroide por UUID, pero carece de posición y su nombre no lo diferencia de bases homónimas. Busca una base numerada para ver su evidencia de acceso y los recursos catalogados.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "d213b013-c8fe-4ad3-9ec6-5c00a7a37aef": {
+        "text": "Este registro de Aberdeen carece de posición en la extracción. Hay un puesto homónimo con marcador y salto configurado en microTech. Comprueba el cuerpo en la ficha antes de viajar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "af133812-bbf1-4d3f-adfa-90d5aec5ea50"
+      },
+      "d3a5204d-3e80-4d19-8047-2f5d96faff5c": {
+        "text": "El catálogo identifica una refinería en desarrollo (WIP) sin posición. Busca una refinería operativa mediante el filtro de servicios; esta ficha no acredita una terminal utilizable.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "e365b479-6927-493a-bf85-a855b563e889": {
+        "text": "La extracción identifica este registro de Greycat como un puesto de microTech. Carece de posición y el nombre interno no identifica una instalación pública para la que se haya corroborado acceso, contrato o comercio.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "ec5dff12-5416-4d9d-8118-9033f323075a": {
+        "text": "La referencia histórica de XenoThreat ubica la estación naval cerca de MIC L1 y cita un marcador visible durante el evento. Este UUID (Anomaly, bajo Stanton-Pyro Jump Point) carece de posición en el parche revisado. El reabastecimiento militar descrito no acredita un servicio público en LIVE.",
+        "source": "https://starcitizen.tools/INS_Jericho"
+      },
+      "f045b1b9-2177-49a1-b2bf-c5a19967ec6b": {
+        "text": "El catálogo describe la última posición conocida de una nave en peligro. El registro depende de MIC L1 y carece de posición en la extracción. Toma la ruta del contrato aceptado si el juego genera una baliza.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json"
+      },
+      "fbf318bb-ebb9-4037-ba4b-2f1213979e2f": {
+        "text": "Este registro de Aberdeen carece de posición en la extracción. Hay un puesto homónimo con marcador y salto configurado en microTech. Comprueba el cuerpo en la ficha antes de viajar.",
+        "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+        "destinationUuid": "af133812-bbf1-4d3f-adfa-90d5aec5ea50"
       }
     }
   }

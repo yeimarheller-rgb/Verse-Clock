@@ -164,7 +164,11 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   if(p.hathor?.linked.length)add('navigation','Instalaciones de la serie '+p.hathor.group,{destinations:p.hathor.linked});
   if(p.stantonCatalogReview){
     const review=p.stantonCatalogReview;
-    add('navigation',review.text,{title:'Estado de la evidencia local',status:'Revisado · '+review.checkedAt,sources:[review.source,review.noteSource].filter(Boolean)});
+    add('navigation',review.text,{
+      title:'Estado de la evidencia local',status:'Revisado · '+review.checkedAt,
+      sources:[review.source,review.noteSource].filter(Boolean),
+      destinations:review.destinationUuid?[{uuid:review.destinationUuid}]:undefined,
+    });
   }
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);

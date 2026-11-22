@@ -105,7 +105,7 @@ export function stantonCatalogReview(p, review){
  const note=review.notes?.[locationUuid(p)];
  const validNote=typeof note?.text==='string'&&note.text.trim()&&httpsSource(note.source);
  return {state,text:validNote?note.text:catalogReviewMessages[state],source:review.positionSource,
-  ...(validNote?{noteSource:note.source}:{}),checkedAt:review.checkedAt};
+  ...(validNote?{noteSource:note.source,destinationUuid:note.destinationUuid}:{}),checkedAt:review.checkedAt};
 }
 
 export function mergeStanton(byKey, data) {
