@@ -120,7 +120,7 @@ export function stantonCoverage(raw, visible, zone='Stanton'){
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
- let geographic=0,enriched=0,operational=0,reviewedAll=0;
+ let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0;
  for(const row of catalog){
   const p=matches.get(locationUuid(row));
   if(!p||isStantonPlaceholder(row))continue;
@@ -146,9 +146,14 @@ export function stantonCoverage(raw, visible, zone='Stanton'){
    grades.add('reported');
   }
   if(facts.size)operational++;
+  // Independent local-evidence metric: never infer coverage from inherited services or Hathor.
+  // Reported/historical claims remain visible but do not certify documented local coverage.
+  if(p.stantonIntel?.uuid===locationUuid(row)&&p.stantonIntel.claims?.some(claim=>
+   claim.status==='documented'&&claim.field in stantonFields&&claim.text?.trim()&&
+   claim.sources?.length&&claim.sources.every(httpsSource)))documentedLocal++;
   if(Object.keys(counts).every(field=>facts.has(field)||p.stantonIntel?.reviewedWithoutEvidence?.includes(field)))reviewedAll++;
   for(const field of facts)counts[field]++;
   for(const grade of grades)sources[grade]++;
  }
- return {total:catalog.length,geographic,enriched,operational,reviewedAll,counts,sources};
+ return {total:catalog.length,geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources};
 }
