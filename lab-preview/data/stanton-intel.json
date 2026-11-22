@@ -16,7 +16,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.3"
+          "patch": "4.10.3",
+          "uncertainty": "Destino posible documentado; la disponibilidad y asignación del contrato deben comprobarse en mobiGlas en LIVE. No implica misión activa permanente."
         },
         {
           "field": "pve",
@@ -25,7 +26,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.0"
+          "patch": "4.10.0",
+          "uncertainty": "Descripción histórica de enemigos y torretas: no confirma número de NPC, estado de defensas ni botín en el parche LIVE actual."
         }
       ]
     },
@@ -42,7 +44,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.3"
+          "patch": "4.10.3",
+          "uncertainty": "Destino posible documentado; la disponibilidad y asignación del contrato deben comprobarse en mobiGlas en LIVE. No implica misión activa permanente."
         },
         {
           "field": "pve",
@@ -51,7 +54,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.0"
+          "patch": "4.10.0",
+          "uncertainty": "Descripción histórica de enemigos y torretas: no confirma número de NPC, estado de defensas ni botín en el parche LIVE actual."
         }
       ]
     },
@@ -68,7 +72,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.3"
+          "patch": "4.10.3",
+          "uncertainty": "Destino posible documentado; la disponibilidad y asignación del contrato deben comprobarse en mobiGlas en LIVE. No implica misión activa permanente."
         },
         {
           "field": "pve",
@@ -77,7 +82,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.0"
+          "patch": "4.10.0",
+          "uncertainty": "Descripción histórica de enemigos y torretas: no confirma número de NPC, estado de defensas ni botín en el parche LIVE actual."
         }
       ]
     },
@@ -94,7 +100,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.3"
+          "patch": "4.10.3",
+          "uncertainty": "Destino posible documentado; la disponibilidad y asignación del contrato deben comprobarse en mobiGlas en LIVE. No implica misión activa permanente."
         },
         {
           "field": "pve",
@@ -103,7 +110,8 @@
           "sources": [
             "https://starcitizen.tools/Evict_Illegal_Occupants"
           ],
-          "patch": "4.10.0"
+          "patch": "4.10.0",
+          "uncertainty": "Descripción histórica de enemigos y torretas: no confirma número de NPC, estado de defensas ni botín en el parche LIVE actual."
         }
       ]
     },
