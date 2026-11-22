@@ -435,7 +435,8 @@ test('current starmap claims preserve outpost variants and hospital scope',()=>{
   assert.ok(claim.sources.includes('https://api.star-citizen.wiki/api/locations/'+row.uuid));
   assert.ok(claim.sources.some(url=>url.endsWith('/starmap_positions.json')));
   assert.equal(local.counts.access,1,row.name);
-  assert.equal(local.counts.missions+local.counts.loot+local.counts.repair,0,row.name);
+  assert.equal(local.counts.missions,Number(row.name==='Prospect Point'),row.name);
+  assert.equal(local.counts.loot+local.counts.repair,0,row.name);
  }
  for(const [name,length] of [['MT OpCenter TLI-4',12],['Prospect Point',2]]){
   const variants=raw.filter(row=>row.name===name);
@@ -575,4 +576,23 @@ test('placed orbital mining and regional markers keep visibility separate from d
   assert.ok(claim.sources.some(url=>url.endsWith('/starmap.json')));
   if(row.name!=='CRU L3')assert.match(claim.text,/privada y exige autorización/);
  }
+});
+
+
+test('Orison contract advisory stays on documented destinations and historical Palomar stays out of coverage',()=>{
+ const title='Repel Raid on Orison · fallo conocido';
+ const affected=stanton.locations.filter(row=>row.claims.some(claim=>claim.title===title));
+ assert.deepEqual(affected.map(row=>row.name).sort(),['Brushwood','Cloudrest Retreat','Empyrean Park','Prospect Point']);
+ for(const row of affected){
+  const site=atId.get(row.uuid);
+  const claim=row.claims.find(claim=>claim.title===title);
+  assert.equal(claim.patch,catalogue.version);
+  assert.ok(claim.sources.some(url=>url.startsWith('https://support.robertsspaceindustries.com/')));
+  assert.match(claim.text,/penaliza la reputación/);
+  assert.equal(stantonCoverage(raw.filter(record=>record.id===row.uuid),[site]).counts.missions,1);
+ }
+ assert.equal(affected.find(row=>row.name==='Prospect Point').uuid,'f903ba70-e567-4b71-9062-26c8f58dcd99');
+ const palomar=at('HDOF-Palomar');
+ assert.equal(palomar.stantonIntel.claims[0].status,'historical');
+ assert.equal(stantonCoverage(raw.filter(record=>record.id===palomar.id),[palomar]).operational,0);
 });

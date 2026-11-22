@@ -16966,10 +16966,23 @@
           ],
           "patch": "4.10.3-LIVE.13165946",
           "uncertainty": "Pendiente de comprobar en partida la aplicación de esta restricción y la reacción de las defensas."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Repel Raid on Orison · fallo conocido",
+          "text": "La documentación del contrato cita Cloudrest Retreat como posible destino. RSI advierte que en Alpha 4.10.3 no aparecen los objetivos hostiles y aconseja evitar el contrato: fallarlo o abandonarlo penaliza la reputación con Crusader Security.",
+          "sources": [
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+            "https://starcitizen.tools/Repel_Raid_on_Orison",
+            "https://api.star-citizen.wiki/api/locations/b128be65-aaca-438c-ab34-0ea4a383fefb"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "RSI documenta el fallo del contrato. La lista comunitaria identifica destinos posibles; la asignación en esta build queda pendiente de comprobar en partida."
         }
       ],
       "uuid": "b128be65-aaca-438c-ab34-0ea4a383fefb",
-      "checkedAt": "2026-11-22"
+      "checkedAt": "2026-11-23"
     },
     {
       "name": "Elsewhere",
@@ -17030,10 +17043,23 @@
           ],
           "patch": "4.10.3-LIVE.13165946",
           "uncertainty": "Pendiente de comprobar en partida la aplicación de esta restricción y la reacción de las defensas."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Repel Raid on Orison · fallo conocido",
+          "text": "La documentación del contrato cita ADMN-D, Empyrean Park como posible destino. RSI advierte que en Alpha 4.10.3 no aparecen los objetivos hostiles y aconseja evitar el contrato: fallarlo o abandonarlo penaliza la reputación con Crusader Security.",
+          "sources": [
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+            "https://starcitizen.tools/Repel_Raid_on_Orison",
+            "https://api.star-citizen.wiki/api/locations/171b08de-64ab-4345-b8d3-1af0a8ade6be"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "RSI documenta el fallo del contrato. La lista comunitaria identifica destinos posibles; la asignación en esta build queda pendiente de comprobar en partida."
         }
       ],
       "uuid": "171b08de-64ab-4345-b8d3-1af0a8ade6be",
-      "checkedAt": "2026-11-22"
+      "checkedAt": "2026-11-23"
     },
     {
       "name": "Frostbite",
@@ -20898,7 +20924,7 @@
     {
       "name": "Brushwood",
       "uuid": "295888cc-d3b5-43ab-80c0-ea5ccc418c5b",
-      "checkedAt": "2026-11-22",
+      "checkedAt": "2026-11-23",
       "body": "<= UNINITIALIZED =>",
       "claims": [
         {
@@ -20912,6 +20938,19 @@
           ],
           "patch": "4.10.3-LIVE.13165946",
           "uncertainty": "Infraestructura documentada. Horarios de lanzadera, permisos y disponibilidad de plataformas pendientes en sesión."
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Repel Raid on Orison · fallo conocido",
+          "text": "La documentación del contrato cita BWD-F, Brushwood como posible destino. RSI advierte que en Alpha 4.10.3 no aparecen los objetivos hostiles y aconseja evitar el contrato: fallarlo o abandonarlo penaliza la reputación con Crusader Security.",
+          "sources": [
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+            "https://starcitizen.tools/Repel_Raid_on_Orison",
+            "https://api.star-citizen.wiki/api/locations/295888cc-d3b5-43ab-80c0-ea5ccc418c5b"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "RSI documenta el fallo del contrato. La lista comunitaria identifica destinos posibles; la asignación en esta build queda pendiente de comprobar en partida."
         }
       ]
     },
@@ -23511,7 +23550,7 @@
     {
       "name": "Prospect Point",
       "uuid": "f903ba70-e567-4b71-9062-26c8f58dcd99",
-      "checkedAt": "2026-11-22",
+      "checkedAt": "2026-11-23",
       "body": "Crusader",
       "claims": [
         {
@@ -23529,6 +23568,19 @@
           "destinations": [
             "Crusader"
           ]
+        },
+        {
+          "field": "missions",
+          "status": "documented",
+          "title": "Repel Raid on Orison · fallo conocido",
+          "text": "La documentación del contrato cita Prospect Point como posible destino. RSI advierte que en Alpha 4.10.3 no aparecen los objetivos hostiles y aconseja evitar el contrato: fallarlo o abandonarlo penaliza la reputación con Crusader Security.",
+          "sources": [
+            "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues",
+            "https://starcitizen.tools/Repel_Raid_on_Orison",
+            "https://api.star-citizen.wiki/api/locations/f903ba70-e567-4b71-9062-26c8f58dcd99"
+          ],
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "RSI documenta el fallo del contrato. La lista comunitaria identifica destinos posibles; la asignación en esta build queda pendiente de comprobar en partida."
         }
       ]
     },
@@ -24579,6 +24631,27 @@
           "uncertainty": "Coincidencia única por nombre y planeta con la plantilla de misión. No se ha comprobado la oferta ni el acceso en una sesión LIVE."
         }
       ]
+    },
+    {
+      "name": "HDOF-Palomar",
+      "uuid": "a3de0e92-b9fb-4866-9636-4b3a8584443b",
+      "checkedAt": "2026-11-23",
+      "body": "Hurston",
+      "claims": [
+        {
+          "field": "missions",
+          "status": "historical",
+          "title": "Assist in Defending Site en Alpha 3.19.1",
+          "text": "Una grabación de Alpha 3.19.1 muestra el contrato Assist in Defending Site en HDOF-Palomar. Quedan pendientes su asignación en 4.10.3 y una posición para el UUID actual.",
+          "sources": [
+            "https://www.youtube.com/watch?v=J08SQkusbzc",
+            "https://robertsspaceindustries.com/en/comm-link/spectrum-dispatch/19375-Loremakers-Community-Questions",
+            "https://api.star-citizen.wiki/api/locations/a3de0e92-b9fb-4866-9636-4b3a8584443b"
+          ],
+          "patch": "3.19.1",
+          "uncertainty": "La grabación verifica el destino del contrato en la versión histórica."
+        }
+      ]
     }
   ],
   "catalogReview": {
@@ -24884,8 +24957,9 @@
         "destinationUuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0"
       },
       "9c54eaf2-1663-4f6a-812e-00d70afe1129": {
-        "text": "La fuente comunitaria ubica Bevic en Area18 y documenta el acceso mediante Cityflight. Este marcador está oculto en la extracción, aunque tiene salto configurado. La disponibilidad de la parada y del salto sigue pendiente en LIVE.",
-        "source": "https://starcitizen.tools/Bevic_Convention_Center"
+        "text": "Esta variante tiene un marcador oculto con salto configurado en la extracción. La ficha enlazada identifica el centro de convenciones en Area18 y recoge la ruta de Cityflight. El salto y la parada siguen pendientes de comprobación en partida.",
+        "source": "https://starcitizen.tools/Bevic_Convention_Center",
+        "destinationUuid": "a375ef83-65fc-42f0-bb31-5539a67444fb"
       },
       "9f914432-1ade-4200-a0a0-21f6e42a5f80": {
         "text": "La ficha comunitaria identifica un centro de datos de microTech y cita visitas de Alpha 3.10 y 3.21. Este UUID carece de posición en la extracción. La variante enlazada tiene un marcador visible con salto configurado.",
