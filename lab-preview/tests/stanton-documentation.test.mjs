@@ -44,3 +44,12 @@ test('documentedLocal remains geographically scoped',()=>{
  assert.equal(stantonCoverage(raw,local,'Hurston').documentedLocal,1);
  assert.equal(stantonCoverage(raw,local,'Crusader').documentedLocal,0);
 });
+
+
+test('coverage denominator counts unique inventory UUIDs',()=>{
+ const repeated=[raw[0],{...raw[0]}];
+ const result=stantonCoverage(repeated,visible([claim('documented')]));
+ assert.equal(result.total,1);
+ assert.equal(result.documentedLocal,1);
+ assert.equal(result.geographic,1);
+});
