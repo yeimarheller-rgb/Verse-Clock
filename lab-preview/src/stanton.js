@@ -137,7 +137,7 @@ export function stantonSections(p) {
 }
 
 export function stantonCoverage(raw, visible, zone='Stanton'){
- const catalog=raw.filter(p=>inStantonZone(p,zone));
+ const catalog=[...new Map(raw.filter(p=>inStantonZone(p,zone)).map(p=>[locationUuid(p),p])).values()];
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
