@@ -266,7 +266,7 @@ with sync_playwright() as p:
             expect(resources).to_contain_text('Recursos catalogados por UUID')
             nav = dossier.locator('[data-domain="navigation"]')
             nav.locator('summary').click()
-            expect(nav).to_contain_text('Destino en el mapa estelar')
+            expect(nav).to_contain_text('Marcador visible sin salto directo')
             expect(dossier.locator('[data-domain="security"]')).to_have_count(0)
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
@@ -276,7 +276,7 @@ with sync_playwright() as p:
             field = dossier.locator('[data-domain="loot"]')
             expect(field).to_contain_text('Campo minero regional')
             expect(field).to_contain_text(ore)
-            expect(dossier).not_to_contain_text('Destino en el mapa estelar')
+            expect(dossier).not_to_contain_text('Marcador visible sin salto directo')
             if name == 'HUR L1':
                 expect(field).to_contain_text('HUR-L1 Green Glade Station')
             verify_layout()

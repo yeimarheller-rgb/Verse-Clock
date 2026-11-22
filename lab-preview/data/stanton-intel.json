@@ -4936,12 +4936,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador regional CRU L3 está colocado y visible en los datos del parche. Úsalo como referencia del sector de Crusader. El marcador carece de configuración para el salto cuántico directo.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/2083c403-4c40-4727-b392-49976c460028"
+            "https://api.star-citizen.wiki/locations/2083c403-4c40-4727-b392-49976c460028",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Referencia regional. La ruta de aproximación y la disponibilidad de recursos se comprueban en partida."
         },
         {
           "field": "resources",
@@ -4969,12 +4972,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/b76cb376-ee74-43ca-8549-9759945daaf4"
+            "https://api.star-citizen.wiki/locations/b76cb376-ee74-43ca-8549-9759945daaf4",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5006,12 +5012,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/5f51ae32-f37d-487a-b911-da96502c8690"
+            "https://api.star-citizen.wiki/locations/5f51ae32-f37d-487a-b911-da96502c8690",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5043,12 +5052,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/f74ea008-4932-4eb0-93ed-419d983e8c52"
+            "https://api.star-citizen.wiki/locations/f74ea008-4932-4eb0-93ed-419d983e8c52",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5080,12 +5092,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/10727ca9-f721-42d3-b6f6-e5b8a812429a"
+            "https://api.star-citizen.wiki/locations/10727ca9-f721-42d3-b6f6-e5b8a812429a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5117,12 +5132,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/79396580-c492-4909-bcd1-8ecaa4358967"
+            "https://api.star-citizen.wiki/locations/79396580-c492-4909-bcd1-8ecaa4358967",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5154,12 +5172,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/15dc0d54-fc71-4ce3-94e7-e2767125141e"
+            "https://api.star-citizen.wiki/locations/15dc0d54-fc71-4ce3-94e7-e2767125141e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5191,12 +5212,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1"
+            "https://api.star-citizen.wiki/locations/df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5228,12 +5252,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/e8306b2c-9a10-41e6-abb2-2033f40deff1"
+            "https://api.star-citizen.wiki/locations/e8306b2c-9a10-41e6-abb2-2033f40deff1",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5265,12 +5292,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/2ce5281e-ae41-474d-ade8-c804cce21c9b"
+            "https://api.star-citizen.wiki/locations/2ce5281e-ae41-474d-ade8-c804cce21c9b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5302,12 +5332,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/10bb340b-9ab3-4fa6-b3d4-ddea1e92682c"
+            "https://api.star-citizen.wiki/locations/10bb340b-9ab3-4fa6-b3d4-ddea1e92682c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5339,12 +5372,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/786bd06a-cdd1-41c6-9a70-b2dd79c18618"
+            "https://api.star-citizen.wiki/locations/786bd06a-cdd1-41c6-9a70-b2dd79c18618",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5376,12 +5412,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/be313093-1d4a-4ca7-9fd2-855b045423fe"
+            "https://api.star-citizen.wiki/locations/be313093-1d4a-4ca7-9fd2-855b045423fe",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5413,12 +5452,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/b761b610-f9a9-4439-ae1b-eb3cb5e58ba1"
+            "https://api.star-citizen.wiki/locations/b761b610-f9a9-4439-ae1b-eb3cb5e58ba1",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5450,12 +5492,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/09a558dd-d040-48ed-bfd4-070083fcb84c"
+            "https://api.star-citizen.wiki/locations/09a558dd-d040-48ed-bfd4-070083fcb84c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5487,12 +5532,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/7e7ba348-c8ed-47da-8e5f-f0114beae392"
+            "https://api.star-citizen.wiki/locations/7e7ba348-c8ed-47da-8e5f-f0114beae392",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5524,12 +5572,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/eb5af0fe-54ac-437f-9dcd-2c80477ca3f6"
+            "https://api.star-citizen.wiki/locations/eb5af0fe-54ac-437f-9dcd-2c80477ca3f6",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5561,12 +5612,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/411da23b-ac58-4a83-b546-08971bd40b9e"
+            "https://api.star-citizen.wiki/locations/411da23b-ac58-4a83-b546-08971bd40b9e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5598,12 +5652,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/d3705180-7019-44ca-959a-e21c4b086d30"
+            "https://api.star-citizen.wiki/locations/d3705180-7019-44ca-959a-e21c4b086d30",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5635,12 +5692,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/d838c2c4-b88d-42df-8c61-4549cce2690e"
+            "https://api.star-citizen.wiki/locations/d838c2c4-b88d-42df-8c61-4549cce2690e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5672,12 +5732,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/29e69c79-5526-406f-a492-5049c5bcc9aa"
+            "https://api.star-citizen.wiki/locations/29e69c79-5526-406f-a492-5049c5bcc9aa",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5709,12 +5772,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/1e3bf65a-a643-4f22-a5af-09eff5ea4917"
+            "https://api.star-citizen.wiki/locations/1e3bf65a-a643-4f22-a5af-09eff5ea4917",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5746,12 +5812,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/04e690e8-aca8-421d-97f6-e7e766995ac9"
+            "https://api.star-citizen.wiki/locations/04e690e8-aca8-421d-97f6-e7e766995ac9",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5783,12 +5852,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/ea489dfa-fdba-4408-ba42-0dfd5d21f918"
+            "https://api.star-citizen.wiki/locations/ea489dfa-fdba-4408-ba42-0dfd5d21f918",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5820,12 +5892,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/2e684c05-ee96-4d04-94f5-ffad800db7b7"
+            "https://api.star-citizen.wiki/locations/2e684c05-ee96-4d04-94f5-ffad800db7b7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5857,12 +5932,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9"
+            "https://api.star-citizen.wiki/locations/f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5894,12 +5972,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/8670ad9c-e5e4-422f-a005-228e3793e066"
+            "https://api.star-citizen.wiki/locations/8670ad9c-e5e4-422f-a005-228e3793e066",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5931,12 +6012,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/c0bc4aa9-4e45-4281-a513-3248d0b8a03f"
+            "https://api.star-citizen.wiki/locations/c0bc4aa9-4e45-4281-a513-3248d0b8a03f",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -5968,12 +6052,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/a0e51eb6-4b19-4302-994d-68b4f6209bd0"
+            "https://api.star-citizen.wiki/locations/a0e51eb6-4b19-4302-994d-68b4f6209bd0",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6005,12 +6092,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/6fdba030-3358-44ee-9736-aa0f155b758a"
+            "https://api.star-citizen.wiki/locations/6fdba030-3358-44ee-9736-aa0f155b758a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6042,12 +6132,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/032fa15d-33a1-42a9-afb9-744811d1335d"
+            "https://api.star-citizen.wiki/locations/032fa15d-33a1-42a9-afb9-744811d1335d",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6079,12 +6172,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/c29799ed-fe83-4f8b-b564-7729f251fbc8"
+            "https://api.star-citizen.wiki/locations/c29799ed-fe83-4f8b-b564-7729f251fbc8",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6116,12 +6212,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/25d9cb75-4887-41f2-86f1-c61164d2430e"
+            "https://api.star-citizen.wiki/locations/25d9cb75-4887-41f2-86f1-c61164d2430e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6153,12 +6252,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/600c66af-2cb4-475d-b938-861a408c348f"
+            "https://api.star-citizen.wiki/locations/600c66af-2cb4-475d-b938-861a408c348f",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6190,12 +6292,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/eaa1600c-144d-49d1-a364-ae74670ef652"
+            "https://api.star-citizen.wiki/locations/eaa1600c-144d-49d1-a364-ae74670ef652",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6227,12 +6332,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/372fdcaf-6a55-42bc-8321-758424e87ceb"
+            "https://api.star-citizen.wiki/locations/372fdcaf-6a55-42bc-8321-758424e87ceb",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6264,12 +6372,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/dfaa2695-9769-4cd8-bc56-7f80430325c5"
+            "https://api.star-citizen.wiki/locations/dfaa2695-9769-4cd8-bc56-7f80430325c5",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6301,12 +6412,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/2850373c-0f1c-41f5-a1b4-da58670e2ea6"
+            "https://api.star-citizen.wiki/locations/2850373c-0f1c-41f5-a1b4-da58670e2ea6",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6338,12 +6452,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/71847f14-2295-4318-bc48-80ba3e444b3a"
+            "https://api.star-citizen.wiki/locations/71847f14-2295-4318-bc48-80ba3e444b3a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6375,12 +6492,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/c953aee5-b192-4496-886c-c8e30f0d5f05"
+            "https://api.star-citizen.wiki/locations/c953aee5-b192-4496-886c-c8e30f0d5f05",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6412,12 +6532,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/c422d8b9-dbfc-4e9e-9d66-da57c4da25a0"
+            "https://api.star-citizen.wiki/locations/c422d8b9-dbfc-4e9e-9d66-da57c4da25a0",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6449,12 +6572,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/456abfb7-4fa0-4251-a6a9-1ccc44170b57"
+            "https://api.star-citizen.wiki/locations/456abfb7-4fa0-4251-a6a9-1ccc44170b57",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6486,12 +6612,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/cd95c910-36ab-4d2b-9e8f-64c9edc44fa4"
+            "https://api.star-citizen.wiki/locations/cd95c910-36ab-4d2b-9e8f-64c9edc44fa4",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6523,12 +6652,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/44ef9c98-adf2-46e8-8dd2-2799c78cee2b"
+            "https://api.star-citizen.wiki/locations/44ef9c98-adf2-46e8-8dd2-2799c78cee2b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6560,12 +6692,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/076add9c-feea-4261-876c-e05de2e21a1c"
+            "https://api.star-citizen.wiki/locations/076add9c-feea-4261-876c-e05de2e21a1c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",
@@ -6597,12 +6732,15 @@
         {
           "field": "access",
           "status": "documented",
-          "title": "Destino en el mapa estelar",
-          "text": "El catálogo de este UUID indica marcador visible y viaje permitido. Selecciona el marcador con ese nombre en el mapa estelar y comprueba que tu nave pueda trazar el salto en la sesión.",
+          "title": "Marcador visible sin salto directo",
+          "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
           "sources": [
-            "https://api.star-citizen.wiki/locations/7798b8d7-cb14-4741-be99-13dd0693c74b"
+            "https://api.star-citizen.wiki/locations/7798b8d7-cb14-4741-be99-13dd0693c74b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
           ],
-          "patch": "4.10.3-LIVE.13165946"
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida."
         },
         {
           "field": "resources",

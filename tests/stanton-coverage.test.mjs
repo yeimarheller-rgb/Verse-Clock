@@ -548,3 +548,17 @@ test('site-specific Stanton review notes provide context without counting operat
  assert.equal(stantonCatalogReview(green,badReview).noteSource,undefined);
  assert.notEqual(stantonCatalogReview(green,badReview).text,'Unsafe note');
 });
+
+test('placed orbital mining and regional markers keep visibility separate from direct quantum access',()=>{
+ const placed=stanton.locations.flatMap(row=>row.claims
+  .filter(c=>c.title==='Marcador visible sin salto directo')
+  .map(claim=>({row,claim})));
+ assert.equal(placed.length,46);
+ for(const {row,claim} of placed){
+  assert.equal(claim.status,'documented');
+  assert.match(claim.text,/sin salto cuántico directo|carece de configuración para el salto cuántico directo/);
+  assert.ok(claim.sources.some(url=>url.endsWith('/starmap_positions.json')));
+  assert.ok(claim.sources.some(url=>url.endsWith('/starmap.json')));
+  if(row.name!=='CRU L3')assert.match(claim.text,/privada y exige autorización/);
+ }
+});
