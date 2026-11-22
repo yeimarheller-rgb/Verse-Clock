@@ -361,6 +361,21 @@ with sync_playwright() as p:
             page.evaluate('window.scrollTo(0,0)')
             path_name = name.lower().replace(' ', '-')
             page.screenshot(path=f'/tmp/verse-lab-stanton30-{path_name}-{device}.png', full_page=True)
+        for name, loot_text, access_text in [
+            ('Onyx Facility S1A1', 'Corbel Smolder', 'Acceso mediante marcador de misión'),
+            ('ArcCorp Security Post 111', 'P8-SC SMG', 'Zona de intrusión documentada'),
+            ('MT SecurityCenter 6EE-GVH-9', 'XDL Monocular Rangefinder', 'Zona de intrusión documentada'),
+        ]:
+            query(name, name)
+            expect(dossier.locator('[data-domain="loot"]')).to_contain_text(loot_text)
+            navigation = dossier.locator('[data-domain="navigation"]')
+            if navigation.get_attribute('open') is None:
+                navigation.locator('summary').click()
+            expect(navigation.get_by_text(access_text, exact=True)).to_be_visible()
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            file_name = name.lower().replace(' ', '-')
+            page.screenshot(path=f'/tmp/verse-lab-stanton110-{file_name}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

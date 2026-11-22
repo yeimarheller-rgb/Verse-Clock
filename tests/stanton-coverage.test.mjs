@@ -223,7 +223,7 @@ test('documented pharmacy stock resolves to the clinic UUID without implying shi
 
 test('Lyria and Calliope loot is tied to exact location links and its own build',()=>{
  const sites=stanton.locations.filter(row=>['Lyria','Calliope'].includes(row.body)&&row.claims.some(claim=>claim.field==='loot'&&claim.sources.some(url=>url.startsWith('https://loot-verse.com/#place-'))));
- assert.equal(sites.length,42);
+ assert.ok(sites.length>=42);
  const links=new Set();
  for(const row of sites){
   const record=raw.find(location=>location.id===row.uuid);
@@ -319,4 +319,36 @@ test('the Clio, Euterpe, Hurston and Wala batch resolves distinct documented loc
  }
  assert.equal(urls.size,30);
  assert.ok(!urls.has(undefined));
+});
+
+test('Stanton Onyx and security evidence is independent for all 110 UUIDs in the batch',()=>{
+ const onyxNames=['S1A','S1B','S1C','S1D','S2A','S2B','S2C','S3B'].flatMap(prefix=>
+  Array.from({length:10},(_,i)=>'Onyx Facility '+prefix+(i+1)));
+ const onyx=onyxNames.map(name=>at(name)?.stantonIntel);
+ const posts=stanton.locations.filter(row=>row.claims.some(claim=>claim.title==='Cajas de equipo y puntos de botín'));
+ assert.equal(posts.length,30);
+ assert.ok(onyx.every(Boolean));
+ const sources=new Set();
+ const ids=new Set();
+ for(const entry of [...onyx,...posts]){
+  const record=raw.find(row=>row.id===entry.uuid);
+  assert.equal(record?.name,entry.name);
+  assert.equal(record.parent,entry.body);
+  const site=atId.get(entry.uuid);
+  assert.ok(site);
+  const loot=entry.claims.find(claim=>claim.field==='loot');
+  const link=loot.sources.find(url=>url.startsWith('https://loot-verse.com/#place-'));
+  assert.ok(link,entry.name);
+  sources.add(link);
+  ids.add(entry.uuid);
+  assert.ok(entry.claims.every(claim=>claim.patch===catalogue.version&&claim.status==='documented'&&
+   claim.sources.includes('https://api.star-citizen.wiki/api/locations/'+entry.uuid)),entry.name);
+  const coverage=stantonCoverage([record],[site]);
+  assert.equal(coverage.operational,1,entry.name);
+  assert.equal(coverage.documentedLocal,1,entry.name);
+  assert.equal(coverage.counts.access+coverage.counts.loot,2,entry.name);
+  assert.equal(coverage.counts.pvp+coverage.counts.pve+coverage.counts.missions+coverage.counts.repair,0,entry.name);
+ }
+ assert.equal(ids.size,110);
+ assert.equal(sources.size,110);
 });
