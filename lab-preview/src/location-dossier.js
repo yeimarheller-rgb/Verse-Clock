@@ -162,6 +162,10 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   if(!serviceIntel)list('services','Equipamiento y servicios registrados',p.amenities);
   if((p.missionCount||0)>0&&!p.missions?.length&&!p.activities?.length&&!groups.has('missions'))add('missions',p.missionCount+' referencias de contrato en catálogo. Disponibilidad por verificar.');
   if(p.hathor?.linked.length)add('navigation','Instalaciones de la serie '+p.hathor.group,{destinations:p.hathor.linked});
+  if(p.stantonCatalogReview){
+    const review=p.stantonCatalogReview;
+    add('navigation',review.text,{title:'Estado de la evidencia local',status:'Revisado · '+review.checkedAt,sources:[review.source]});
+  }
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);
   const version=p.source?.version||p.patch||p.intelDetailSource?.version;

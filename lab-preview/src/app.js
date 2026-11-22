@@ -1,5 +1,5 @@
 import {dossierGroups,locationDossier} from './location-dossier.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,mergeStanton,stantonBody,stantonCatalogReview,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
@@ -193,6 +193,7 @@ $('filterToggle').addEventListener('click',()=>{
  hideMenu();
 });
 let rawStantonCatalog=[];
+let stantonReview;
 const stantonZone=$('stantonZone');
 const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
 const filters=[['repair','Reparación'],['refuel','Repostaje'],['rearm','Rearme'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
@@ -240,7 +241,11 @@ stantonZone.addEventListener('change',()=>{updateMenu();renderStantonCoverage();
 function renderStantonCoverage(){
  const host=$('stantonCoverage');
  if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
- const c=stantonCoverage(rawStantonCatalog,poiData,stantonZone.value||'Stanton');
+ const zone=stantonZone.value||'Stanton';
+ const c=stantonCoverage(rawStantonCatalog,poiData,zone);
+ const reviews=rawStantonCatalog.filter(row=>inStantonZone(row,zone))
+  .map(row=>stantonCatalogReview(row,stantonReview)).filter(Boolean);
+ const technical=reviews.filter(review=>review.state==='technical').length;
  const summary=document.createElement('p');
  summary.textContent=c.operational+' / '+c.total+' operativas · '+(c.total?(100*c.operational/c.total).toFixed(1):'0')+' % · objetivo 90 %';
  const list=document.createElement('dl');list.className='stanton-metrics';
@@ -255,7 +260,11 @@ function renderStantonCoverage(){
  }
  const note=document.createElement('small');
  note.textContent='Registros originales del catálogo API. Los registros sin nombre de juego siguen en el denominador. Las variantes con el mismo nombre conservan su UUID. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
- host.replaceChildren(summary,list,note);
+ const inventory=document.createElement('small');
+ if(reviews.length){
+  inventory.textContent=(reviews.length-technical)+' registros revisados pendientes de evidencia operativa · '+technical+' registros técnicos excluidos';
+  host.replaceChildren(summary,list,inventory,note);
+ }else host.replaceChildren(summary,list,note);
 }
 $('operationsToggle').addEventListener('click',()=>{
  operationsEnabled=!operationsEnabled;
@@ -626,7 +635,9 @@ async function loadAtlas(){
  try{const er=await fetch('./data/atlas-enriched.json',{cache:'no-cache'});if(er.ok){const ed=await er.json();lastEnrichmentFingerprint=[ed.version,ed.enrichedCount,ed.generatedAt].join('|');if(ed.version===version&&Array.isArray(ed.locations)){const byUuid=new Map([...byKey.values()].filter(p=>p.id||p.source?.uuid).map(p=>[p.source?.uuid||p.id,p]));for(const e of ed.locations){const current=byUuid.get(e.id);if(!current)continue;const k=key(current);byKey.set(k,{...current,missions:e.missions||current.missions,resources:e.resources||current.resources,nearbyLocations:e.nearbyLocations||[],intelDetailSource:e.source,intelCheckedAt:e.checkedAt})}}}}catch(err){console.warn('Detailed atlas unavailable',err)}
  const serviceSnapshot=await servicesRequest;
  mergeTacticalAtlas(byKey,serviceSnapshot,version);
- mergeStanton(byKey,await stantonRequest);
+ const stantonSnapshot=await stantonRequest;
+ stantonReview=stantonSnapshot?.catalogReview;
+ mergeStanton(byKey,stantonSnapshot);
  poiData=traceStantonParents([...byKey.values()]).sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  updateAtlasProgress({generatedAt:serviceSnapshot?.checkedAt});
  renderStantonCoverage();

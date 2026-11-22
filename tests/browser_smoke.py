@@ -416,6 +416,18 @@ with sync_playwright() as p:
             verify_layout()
             page.evaluate('window.scrollTo(0,0)')
             page.screenshot(path=f'/tmp/verse-lab-stanton-navigation-{short_name}-{device}.png', full_page=True)
+        for short_name, title, expected in [
+            ('magnus', 'Stanton - Magnus Jump Point', 'Antiguo punto de salto a Magnus'),
+            ('palomar', 'HDOF-Palomar', 'Estado de la evidencia local'),
+        ]:
+            query(title, title)
+            section = dossier.locator('[data-domain="navigation"]')
+            if section.get_attribute('open') is None:
+                section.locator('summary').click()
+            expect(section).to_contain_text(expected)
+            verify_layout()
+            page.evaluate('window.scrollTo(0,0)')
+            page.screenshot(path=f'/tmp/verse-lab-stanton-review-{short_name}-{device}.png', full_page=True)
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
         page.close()

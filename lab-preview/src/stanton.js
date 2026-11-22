@@ -90,6 +90,21 @@ const httpsSource=value=>{
  catch { return false; }
 };
 
+const catalogReviewMessages={
+ technical:'Registro técnico sin identidad de juego. Excluido de la cobertura operativa.',
+ hidden:'La posición extraída corresponde a un marcador oculto. El acceso, las actividades y los servicios locales siguen pendientes de evidencia.',
+ unplacedEventPlatform:'El catálogo registra una plataforma RSI con este nombre. La extracción no vincula este UUID a una posición individual. El evento, la ruta y los servicios quedan pendientes.',
+ unplaced:'Este UUID carece de una posición en la extracción revisada. Su presencia y su uso en partida siguen pendientes de evidencia local.',
+ placed:'La extracción confirma la posición de este marcador. Sus actividades y servicios locales siguen pendientes de evidencia.',
+};
+
+export function stantonCatalogReview(p, review){
+ if(!review?.version||review.version!==p.source?.version||!httpsSource(review.positionSource))return null;
+ const state=review.records?.[locationUuid(p)];
+ if(!Object.hasOwn(catalogReviewMessages,state))return null;
+ return {state,text:catalogReviewMessages[state],source:review.positionSource,checkedAt:review.checkedAt};
+}
+
 export function mergeStanton(byKey, data) {
  if(data?.schemaVersion!==1)return;
  const byUuid=new Map([...byKey].flatMap(([key,p])=>atlasSystem(p.system)==='Stanton'&&locationUuid(p)?[[locationUuid(p),key]]:[]));
@@ -102,6 +117,12 @@ export function mergeStanton(byKey, data) {
    if(claim.status==='documented'&&claim.sources?.every(httpsSource)&&claim.sources.length)for(const service of claim.services||[])services[service]='confirmed';
   }
   byKey.set(key,{...original,services,stantonIntel:{...row,checkedAt:row.checkedAt||data.checkedAt}});
+ }
+ for(const [uuid,key] of byUuid){
+  if(!Object.hasOwn(data.catalogReview?.records||{},uuid))continue;
+  const location=byKey.get(key);
+  const review=stantonCatalogReview(location,data.catalogReview);
+  if(review)byKey.set(key,{...location,stantonCatalogReview:review});
  }
 }
 export function stantonSections(p) {

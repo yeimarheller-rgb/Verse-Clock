@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, mergeStanton, stantonBodies, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
 
 const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue=read('wiki-atlas');
@@ -450,4 +450,29 @@ test('current starmap claims preserve outpost variants and hospital scope',()=>{
  assert.equal(metrics.counts.logistics,1);
  assert.equal(metrics.counts.rearm+metrics.counts.refuel+metrics.counts.repair,0);
  assert.equal(at('Tobin Center').type,'Centro de exposiciones');
+});
+
+test('every Stanton UUID has operational evidence or an explicit catalog disposition',()=>{
+ const version=stanton.catalogReview.version;
+ assert.equal(version,catalogue.version);
+ assert.equal(raw.length,949);
+ assert.equal(Object.keys(stanton.catalogReview.records).length,161);
+ const reasons=new Map();
+ for(const row of raw){
+  const site=atId.get(row.id);
+  const metrics=stantonCoverage([row],site?[site]:[]);
+  const review=stantonCatalogReview(row,stanton.catalogReview);
+  assert.equal(metrics.operational+Number(Boolean(review)),1,row.id);
+  if(!review)continue;
+  assert.equal(review.state==='technical',isStantonPlaceholder(row),row.id);
+  reasons.set(review.state,(reasons.get(review.state)||0)+1);
+  if(site)assert.deepEqual(site.stantonCatalogReview,review);
+  assert.equal(stantonCatalogReview({...row,source:{...row.source,version:'4.10.2'}},stanton.catalogReview),null);
+ }
+ assert.deepEqual(Object.fromEntries(reasons),{technical:26,hidden:27,unplaced:44,unplacedEventPlatform:63,placed:1});
+ for(const [name,destination] of [['Stanton - Magnus Jump Point','Nyx Gateway'],['Stanton - Terra Jump Point','Terra Gateway']]){
+  const row=at(name);
+  assert.deepEqual(row.stantonIntel.claims[0].destinations,[destination]);
+  assert.match(row.stantonIntel.claims[0].uncertainty,/pendiente/);
+ }
 });
