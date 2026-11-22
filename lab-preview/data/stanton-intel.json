@@ -23945,6 +23945,481 @@
           "uncertainty": "Navegación al lado de Stanton. Disponibilidad del tránsito intersistema pendiente de comprobar en sesión."
         }
       ]
+    },
+    {
+      "uuid": "0bb52ea3-d7b2-4b32-9d5f-6ecd7676a36f",
+      "name": "HUR L4-A",
+      "body": "HUR L4",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector HUR L4",
+          "text": "Selecciona HUR-L4 Melodic Fields Station como destino cuántico. El centro de la bolsa HUR L4-A figura a unos 20 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "HUR-L4 Melodic Fields Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/0bb52ea3-d7b2-4b32-9d5f-6ecd7676a36f",
+            "https://api.star-citizen.wiki/api/locations/6e99473c-8446-4c5a-81cb-039a53c1960d",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "1820b8fc-e7c1-49f0-9020-5c8c5f7aae4c",
+      "name": "ARC L3-A",
+      "body": "ARC L3",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector ARC L3",
+          "text": "Selecciona ARC-L3 Modern Express Station como destino cuántico. El centro de la bolsa ARC L3-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "ARC-L3 Modern Express Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/1820b8fc-e7c1-49f0-9020-5c8c5f7aae4c",
+            "https://api.star-citizen.wiki/api/locations/3a43118d-b1b7-4822-8fb2-13f7abe6ac8b",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "3e3b751e-0515-4bc8-9b59-229ed654f685",
+      "name": "HUR L5-A",
+      "body": "HUR L5",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector HUR L5",
+          "text": "Selecciona HUR-L5 High Course Station como destino cuántico. El centro de la bolsa HUR L5-A figura a unos 44 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "HUR-L5 High Course Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/3e3b751e-0515-4bc8-9b59-229ed654f685",
+            "https://api.star-citizen.wiki/api/locations/8e83f4da-c85d-4f00-b98d-bc734a07c5d4",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "46a84972-5b6f-4202-88bf-2628ee6aa6f0",
+      "name": "MIC L2-A",
+      "body": "MIC L2",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector MIC L2",
+          "text": "Selecciona MIC-L2 Long Forest Station como destino cuántico. El centro de la bolsa MIC L2-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "MIC-L2 Long Forest Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/46a84972-5b6f-4202-88bf-2628ee6aa6f0",
+            "https://api.star-citizen.wiki/api/locations/f602528f-acf3-4564-960c-fc344269a7a9",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "4f8d892a-da82-4062-9b3a-aef9e191060b",
+      "name": "MIC L5-A",
+      "body": "MIC L5",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector MIC L5",
+          "text": "Selecciona MIC-L5 Modern Icarus Station como destino cuántico. El centro de la bolsa MIC L5-A figura a unos 28 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "MIC-L5 Modern Icarus Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/4f8d892a-da82-4062-9b3a-aef9e191060b",
+            "https://api.star-citizen.wiki/api/locations/54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "604eea8b-24e4-4425-806d-922a277ff308",
+      "name": "MIC L4-A",
+      "body": "MIC L4",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector MIC L4",
+          "text": "Selecciona MIC-L4 Red Crossroads Station como destino cuántico. El centro de la bolsa MIC L4-A figura a unos 43 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "MIC-L4 Red Crossroads Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/604eea8b-24e4-4425-806d-922a277ff308",
+            "https://api.star-citizen.wiki/api/locations/317b7505-e562-4caf-9691-1516ab639bbf",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "63911c27-0274-471d-ae51-273dde3fa737",
+      "name": "MIC L3-A",
+      "body": "MIC L3",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector MIC L3",
+          "text": "Selecciona MIC-L3 Endless Odyssey Station como destino cuántico. El centro de la bolsa MIC L3-A figura a unos 71 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "MIC-L3 Endless Odyssey Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/63911c27-0274-471d-ae51-273dde3fa737",
+            "https://api.star-citizen.wiki/api/locations/2800c56f-0123-4c31-95d6-bfcf73ba8485",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "63bf3acd-7678-47b5-92cb-450f6cb73c4f",
+      "name": "ARC L5-A",
+      "body": "ARC L5",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector ARC L5",
+          "text": "Selecciona ARC-L5 Yellow Core Station como destino cuántico. El centro de la bolsa ARC L5-A figura a unos 27 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "ARC-L5 Yellow Core Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/63bf3acd-7678-47b5-92cb-450f6cb73c4f",
+            "https://api.star-citizen.wiki/api/locations/137c093d-a3fd-47ce-bd78-94772ce8f46e",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "650f9d25-807d-4441-8ac7-1f982f08d0b1",
+      "name": "HUR L2-A",
+      "body": "HUR L2",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector HUR L2",
+          "text": "Selecciona HUR-L2 Faithful Dream Station como destino cuántico. El centro de la bolsa HUR L2-A figura a unos 46 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "HUR-L2 Faithful Dream Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/650f9d25-807d-4441-8ac7-1f982f08d0b1",
+            "https://api.star-citizen.wiki/api/locations/81e3150a-9c12-4715-85d4-afd6da69b8f0",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "8e371ce2-17ec-4508-8493-02463ea47960",
+      "name": "CRU L4-A",
+      "body": "CRU L4",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector CRU L4",
+          "text": "Selecciona CRU-L4 Shallow Fields Station como destino cuántico. El centro de la bolsa CRU L4-A figura a unos 28 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "CRU-L4 Shallow Fields Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/8e371ce2-17ec-4508-8493-02463ea47960",
+            "https://api.star-citizen.wiki/api/locations/8f23301d-0711-47ec-9efb-76a6d8d1c9e6",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "94fb0b94-8604-4302-8897-45fed6087b4b",
+      "name": "ARC L4-A",
+      "body": "ARC L4",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector ARC L4",
+          "text": "Selecciona ARC-L4 Faint Glen Station como destino cuántico. El centro de la bolsa ARC L4-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "ARC-L4 Faint Glen Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/94fb0b94-8604-4302-8897-45fed6087b4b",
+            "https://api.star-citizen.wiki/api/locations/2dbccd4e-81de-45fa-a24c-cd32d29a8ec4",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "9c2490b6-b31d-47cb-9f97-9a8825578bdf",
+      "name": "CRU L5-A",
+      "body": "CRU L5",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector CRU L5",
+          "text": "Selecciona CRU-L5 Beautiful Glen Station como destino cuántico. El centro de la bolsa CRU L5-A figura a unos 32 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "CRU-L5 Beautiful Glen Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/9c2490b6-b31d-47cb-9f97-9a8825578bdf",
+            "https://api.star-citizen.wiki/api/locations/5905eecd-258a-4046-ad08-90571c41b03c",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "a8750e45-537e-481d-8a53-a24f8b42fa08",
+      "name": "ARC L1-A",
+      "body": "ARC L1",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector ARC L1",
+          "text": "Selecciona ARC-L1 Wide Forest Station como destino cuántico. El centro de la bolsa ARC L1-A figura a unos 20 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "ARC-L1 Wide Forest Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/a8750e45-537e-481d-8a53-a24f8b42fa08",
+            "https://api.star-citizen.wiki/api/locations/59485d8c-7947-4e00-871c-d35f6451aab8",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "bf8b7b1e-467d-4382-8cea-d65ef06a9f5e",
+      "name": "HUR L1-A",
+      "body": "HUR L1",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector HUR L1",
+          "text": "Selecciona HUR-L1 Green Glade Station como destino cuántico. El centro de la bolsa HUR L1-A figura a unos 57 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "HUR-L1 Green Glade Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/bf8b7b1e-467d-4382-8cea-d65ef06a9f5e",
+            "https://api.star-citizen.wiki/api/locations/689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "c54d8f3d-165a-41d4-a778-8f51ba7162c7",
+      "name": "HUR L3-A",
+      "body": "HUR L3",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector HUR L3",
+          "text": "Selecciona HUR-L3 Thundering Express Station como destino cuántico. El centro de la bolsa HUR L3-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "HUR-L3 Thundering Express Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c54d8f3d-165a-41d4-a778-8f51ba7162c7",
+            "https://api.star-citizen.wiki/api/locations/de5f2d1d-78e5-4273-8028-c06690c03685",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "c8307d0e-20c7-46ac-b2b9-f145d8d86bb5",
+      "name": "ARC L2-A",
+      "body": "ARC L2",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector ARC L2",
+          "text": "Selecciona ARC-L2 Lively Pathway Station como destino cuántico. El centro de la bolsa ARC L2-A figura a unos 23 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "ARC-L2 Lively Pathway Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/c8307d0e-20c7-46ac-b2b9-f145d8d86bb5",
+            "https://api.star-citizen.wiki/api/locations/45b909df-7b0c-40c9-ab83-a7cd7d3a980f",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "d3b67f92-4f51-4643-8f45-8edac6ac0cf1",
+      "name": "MIC L1-A",
+      "body": "MIC L1",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector MIC L1",
+          "text": "Selecciona MIC-L1 Shallow Frontier Station como destino cuántico. El centro de la bolsa MIC L1-A figura a unos 50 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "MIC-L1 Shallow Frontier Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/d3b67f92-4f51-4643-8f45-8edac6ac0cf1",
+            "https://api.star-citizen.wiki/api/locations/f4b118f8-3102-4a5c-b8ca-ff013c2f674a",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "e5a875d5-d68f-4a50-b4ca-674a42c273b7",
+      "name": "CRU L1-A",
+      "body": "CRU L1",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación en el sector CRU L1",
+          "text": "Selecciona CRU-L1 Ambitious Dream Station como destino cuántico. El centro de la bolsa CRU L1-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+          "destinations": [
+            "CRU-L1 Ambitious Dream Station"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/e5a875d5-d68f-4a50-b4ca-674a42c273b7",
+            "https://api.star-citizen.wiki/api/locations/75e777cf-a055-4bc3-8ca7-602eb38be4f3",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "7d1f6c36-52f3-4802-85fb-c00a0c8eb228",
+      "name": "Stanton-Pyro Jump Point Wreck Site",
+      "body": "Stanton-Pyro Jump Point",
+      "checkedAt": "2026-11-22",
+      "claims": [
+        {
+          "field": "access",
+          "status": "documented",
+          "title": "Referencia de aproximación a los restos en Stanton",
+          "text": "El punto de restos figura a unos 632 km en línea recta de Pyro Gateway, del lado de Stanton. Pyro Gateway es un destino cuántico independiente. El marcador de los restos está oculto y carece de salto directo.",
+          "patch": "4.10.3-LIVE.13165946",
+          "uncertainty": "Separación entre centros en los datos del parche. El pecio, su acceso y su botín están pendientes de confirmación en partida.",
+          "destinations": [
+            "Pyro Gateway"
+          ],
+          "sources": [
+            "https://api.star-citizen.wiki/api/locations/7d1f6c36-52f3-4802-85fb-c00a0c8eb228",
+            "https://api.star-citizen.wiki/api/locations/59b22155-405f-4785-9f73-d2028b46f5c3",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+            "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          ]
+        }
+      ]
     }
   ],
   "catalogReview": {
@@ -23957,11 +24432,9 @@
       "04ff332d-e355-45bf-ab16-04df30fe0a44": "unplaced",
       "07b47705-a5b7-4bb2-b339-3dad7d590a0f": "unplaced",
       "0b609497-2305-4880-8a89-11e05f6b7d83": "technical",
-      "0bb52ea3-d7b2-4b32-9d5f-6ecd7676a36f": "hidden",
       "1427271e-0ee7-4620-9b91-a954d0124fda": "unplaced",
       "14e90a7a-78b5-438a-b71a-0d6f1a7dc5b1": "unplacedEventPlatform",
       "16ad0892-c755-4bce-a2e9-3230692de2b6": "technical",
-      "1820b8fc-e7c1-49f0-9020-5c8c5f7aae4c": "hidden",
       "18f212c9-6c79-4b8a-a6ac-ea501bade318": "unplacedEventPlatform",
       "19eb5151-0d25-40f8-be5c-56c5bb68223b": "hidden",
       "1a18fc98-56c2-480b-bcf3-5fa0bb2f130a": "unplaced",
@@ -23991,18 +24464,15 @@
       "3a32ad75-197f-4ef0-a555-0330f4a5175a": "unplacedEventPlatform",
       "3a728623-e778-4e16-a640-0cc584fd5cd7": "unplaced",
       "3dff9502-c1f7-4612-b4c9-d161fdb7642f": "unplacedEventPlatform",
-      "3e3b751e-0515-4bc8-9b59-229ed654f685": "hidden",
       "3f7f974e-cbf4-422c-a856-e6efde9e7512": "unplacedEventPlatform",
       "430b44df-7510-4ed7-a444-7d23a46840c7": "unplaced",
       "44493299-964d-478f-8ba1-75c22c92ae9c": "unplaced",
       "45f2ab03-e9a8-492e-994a-24373dd166c3": "unplacedEventPlatform",
-      "46a84972-5b6f-4202-88bf-2628ee6aa6f0": "hidden",
       "46c7db91-10f2-443e-9303-77ef044c71ee": "hidden",
       "485b5a94-db4e-4f71-a504-e674cc97466d": "technical",
       "48bcd204-ae47-4ef2-9865-bfa61583014d": "unplaced",
       "4a0e8de6-a067-4275-956c-05866d1b38db": "unplacedEventPlatform",
       "4f42ced7-7ecc-4acc-b8c5-fbdd337ea052": "unplacedEventPlatform",
-      "4f8d892a-da82-4062-9b3a-aef9e191060b": "hidden",
       "503581e8-9c37-48cb-9ef1-6c9ebf0e52b9": "unplaced",
       "51207d0f-a361-4f84-ba59-faacd6c8618c": "unplacedEventPlatform",
       "5322c8de-5e17-49af-bda2-de640b9cb62c": "technical",
@@ -24013,13 +24483,9 @@
       "5c4d4202-00e1-4909-9482-685eca657687": "unplacedEventPlatform",
       "5d70de1f-9aa2-422a-a1d8-371c29480148": "unplaced",
       "5d966ec0-49b6-4bd0-9634-62883757fa8e": "unplacedEventPlatform",
-      "604eea8b-24e4-4425-806d-922a277ff308": "hidden",
-      "63911c27-0274-471d-ae51-273dde3fa737": "hidden",
       "639d7adf-860b-4c0c-b0bf-10e16d5dad88": "unplacedEventPlatform",
-      "63bf3acd-7678-47b5-92cb-450f6cb73c4f": "hidden",
       "6412c140-188b-4aba-9ebc-d64eda4954ed": "technical",
       "647d4ee7-f5a0-4a56-bc62-922b1b9031ee": "unplacedEventPlatform",
-      "650f9d25-807d-4441-8ac7-1f982f08d0b1": "hidden",
       "685179fe-3be9-4ce2-a80e-2b2a499729a6": "technical",
       "6bf52a58-f396-48f7-8e66-c4c92ca6bdfb": "unplaced",
       "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7": "hidden",
@@ -24034,7 +24500,6 @@
       "77abe9ae-3a06-411b-bc72-ad561193e72a": "technical",
       "78c6d5fe-899d-4da1-8d9f-8793d8e65766": "unplacedEventPlatform",
       "7ce20eb9-9720-41ae-a7de-1b6d167108e4": "unplacedEventPlatform",
-      "7d1f6c36-52f3-4802-85fb-c00a0c8eb228": "hidden",
       "7fbdf13c-307f-4917-9053-6e2ed10c975a": "unplacedEventPlatform",
       "80a0a96d-4c24-4961-8422-3e9a5a98a98d": "technical",
       "8308cafb-3018-466c-9566-2130dc002ffa": "unplacedEventPlatform",
@@ -24047,14 +24512,11 @@
       "8a55463e-e472-4871-833b-dc0747af7b7d": "unplaced",
       "8c154143-04eb-4ef6-b159-e3f702bf0606": "unplaced",
       "8db480d0-7b21-4865-80ea-8537588a3976": "unplaced",
-      "8e371ce2-17ec-4508-8493-02463ea47960": "hidden",
       "90952bc0-39db-4a1c-a63e-5622fe796cb4": "unplacedEventPlatform",
       "90ebaa2b-a8da-47b5-9a2f-ae2d9373f650": "unplacedEventPlatform",
       "9415f1bb-fbb5-44fd-a6a1-fa4ed012402a": "hidden",
       "94af4aae-6c8d-483f-9142-1f3a7ef15e2d": "unplacedEventPlatform",
-      "94fb0b94-8604-4302-8897-45fed6087b4b": "hidden",
       "9a1203ca-075d-413f-80d6-33e48416c9db": "technical",
-      "9c2490b6-b31d-47cb-9f97-9a8825578bdf": "hidden",
       "9c54eaf2-1663-4f6a-812e-00d70afe1129": "hidden",
       "9e5dea5c-f389-48e1-a8bd-f416176bd606": "unplacedEventPlatform",
       "9f914432-1ade-4200-a0a0-21f6e42a5f80": "unplaced",
@@ -24064,7 +24526,6 @@
       "a5204b4c-34e1-42ae-a043-297ae70126fb": "unplacedEventPlatform",
       "a5b0dae4-a50a-4f5a-b28f-e9977545cbc3": "unplacedEventPlatform",
       "a818883e-1d83-4ee0-9032-67fe2b35692c": "unplacedEventPlatform",
-      "a8750e45-537e-481d-8a53-a24f8b42fa08": "hidden",
       "a881b282-66a6-4bbc-81d8-3983628b0853": "unplacedEventPlatform",
       "aaba55af-fde6-4b29-9708-235652524d44": "unplaced",
       "ab7a3bf6-66ec-4981-96a2-5f18696f8f5d": "technical",
@@ -24080,25 +24541,20 @@
       "bcc9af53-4316-40f1-91f6-02a47fcf13b9": "technical",
       "bdbc57f9-0aa8-445e-81fc-a4dd54f96396": "unplacedEventPlatform",
       "bea9756e-0232-4a48-a8c3-d87b717b03e6": "unplaced",
-      "bf8b7b1e-467d-4382-8cea-d65ef06a9f5e": "hidden",
       "c0c47e3f-6a2d-41b4-9af5-6eecee5c216e": "technical",
-      "c54d8f3d-165a-41d4-a778-8f51ba7162c7": "hidden",
       "c5b38575-a40a-49f6-a04c-701c4093ec5b": "unplaced",
       "c77c3bfb-2bc3-4cd0-b5b1-571f7927fb7e": "unplacedEventPlatform",
-      "c8307d0e-20c7-46ac-b2b9-f145d8d86bb5": "hidden",
       "c9c137cf-c520-47ee-9e6d-5d653dfbe201": "unplaced",
       "d12b0f75-aba9-4a5b-91f0-f23182c60445": "unplaced",
       "d1818d52-e4d6-4587-a679-600593f873e9": "unplaced",
       "d213b013-c8fe-4ad3-9ec6-5c00a7a37aef": "unplaced",
       "d3a5204d-3e80-4d19-8047-2f5d96faff5c": "unplaced",
-      "d3b67f92-4f51-4643-8f45-8edac6ac0cf1": "hidden",
       "d68e500c-386b-4d06-9d88-57f90460220f": "unplacedEventPlatform",
       "d6af9afe-6ab2-4cd7-92ca-c6fae1ae713f": "unplacedEventPlatform",
       "dfa1d3c8-005c-4c14-b149-a34e3277c95c": "unplacedEventPlatform",
       "e1fc6660-cf55-4db0-b477-d7c8c05fbe82": "unplacedEventPlatform",
       "e3006016-96b4-4739-a2a4-531556dd23bc": "unplacedEventPlatform",
       "e365b479-6927-493a-bf85-a855b563e889": "unplaced",
-      "e5a875d5-d68f-4a50-b4ca-674a42c273b7": "hidden",
       "ea2e87f5-8c81-4975-9d37-60538a04e973": "unplacedEventPlatform",
       "ea6fc334-c984-4089-b191-c44ecbee49cd": "technical",
       "ec5dff12-5416-4d9d-8118-9033f323075a": "unplaced",

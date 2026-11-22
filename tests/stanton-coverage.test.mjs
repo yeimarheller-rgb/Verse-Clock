@@ -456,7 +456,7 @@ test('every Stanton UUID has operational evidence or an explicit catalog disposi
  const version=stanton.catalogReview.version;
  assert.equal(version,catalogue.version);
  assert.equal(raw.length,949);
- assert.equal(Object.keys(stanton.catalogReview.records).length,161);
+ assert.equal(Object.keys(stanton.catalogReview.records).length,142);
  const reasons=new Map();
  for(const row of raw){
   const site=atId.get(row.id);
@@ -469,10 +469,31 @@ test('every Stanton UUID has operational evidence or an explicit catalog disposi
   if(site)assert.deepEqual(site.stantonCatalogReview,review);
   assert.equal(stantonCatalogReview({...row,source:{...row.source,version:'4.10.2'}},stanton.catalogReview),null);
  }
- assert.deepEqual(Object.fromEntries(reasons),{technical:26,hidden:27,unplaced:44,unplacedEventPlatform:63,placed:1});
+ assert.deepEqual(Object.fromEntries(reasons),{technical:26,hidden:8,unplaced:44,unplacedEventPlatform:63,placed:1});
  for(const [name,destination] of [['Stanton - Magnus Jump Point','Nyx Gateway'],['Stanton - Terra Jump Point','Terra Gateway']]){
   const row=at(name);
   assert.deepEqual(row.stantonIntel.claims[0].destinations,[destination]);
   assert.match(row.stantonIntel.claims[0].uncertainty,/pendiente/);
  }
+});
+
+test('station approaches identify placed pockets without supplying local services or resources',()=>{
+ const approaches=stanton.locations.filter(row=>row.claims.some(c=>c.title?.startsWith('Referencia de aproximación en el sector ')));
+ assert.equal(approaches.length,18);
+ for(const row of approaches){
+  const site=atId.get(row.uuid);
+  const [claim]=row.claims;
+  const [stationName]=claim.destinations;
+  const station=at(stationName);
+  assert.ok(station?.source?.uuid,stationName);
+  assert.ok(claim.sources.includes('https://api.star-citizen.wiki/api/locations/'+station.source.uuid));
+  assert.match(claim.text,/carece de salto directo/);
+  const c=stantonCoverage(raw.filter(p=>p.id===row.uuid),[site]);
+  assert.equal(c.counts.access,1);
+  assert.equal(c.counts.resources+c.counts.repair+c.counts.refuel+c.counts.rearm,0);
+ }
+ const wreck=at('Stanton-Pyro Jump Point Wreck Site');
+ assert.deepEqual(wreck.stantonIntel.claims[0].destinations,['Pyro Gateway']);
+ assert.match(wreck.stantonIntel.claims[0].text,/632 km/);
+ assert.equal(at('CRU L2-B').stantonCatalogReview.state,'hidden');
 });
