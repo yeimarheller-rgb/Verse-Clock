@@ -1,4 +1,4 @@
-import {applyPyroIntel} from './pyro.js';
+import {applyCatalogIntel} from './catalog-intel.js';
 import {dossierGroups,locationDossier} from './location-dossier.js';
 import {identifyCatalogVariants,inStantonZone,isStantonPlaceholder,isStantonTemporaryEvent,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
@@ -196,6 +196,7 @@ $('filterToggle').addEventListener('click',()=>{
 let rawStantonCatalog=[];
 let stantonReview;
 const stantonZone=$('stantonZone');
+const auditedSystems=['Pyro','Nyx'];
 const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
 const filters=[['repair','Reparación'],['refuel','Repostaje'],['rearm','Rearme'],['contested','Zona disputada'],['loot','Botín'],['trade','Comercio']];
 function matchesFilter(p,filter){
@@ -242,7 +243,7 @@ stantonZone.addEventListener('change',()=>{updateMenu();renderStantonCoverage();
 function renderStantonCoverage(){
  const host=$('stantonCoverage');
  if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
- const zone=stantonZone.value==='Pyro'?'Stanton':stantonZone.value||'Stanton';
+ const zone=auditedSystems.includes(stantonZone.value)?'Stanton':stantonZone.value||'Stanton';
  const c=stantonCoverage(rawStantonCatalog,poiData,zone,stantonReview);
  const summary=document.createElement('p');
  const percentage=(c.total?100*c.operational/c.total:0).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
@@ -279,7 +280,7 @@ function updateMenu(){
  const q=normalize(input.value);
  if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
  const solar=(activeFilter||stantonZone.value?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
- const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&(stantonZone.value==='Pyro'?atlasSystem(p.system)==='Pyro':inStantonZone(p,stantonZone.value))).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
+ const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&(auditedSystems.includes(stantonZone.value)?atlasSystem(p.system)===stantonZone.value:inStantonZone(p,stantonZone.value))).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
  p.type,p.operator,p.affiliation,p.jurisdiction,...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
@@ -625,7 +626,8 @@ async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=atlasKey;
  const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
- const pyroRequest=fetch('./data/pyro-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
+ const catalogIntelRequests=Promise.all(auditedSystems.map(system=>
+  fetch('./data/'+system.toLowerCase()+'-intel.json').then(r=>r.ok?r.json():null).catch(()=>null)));
  const servicesRequest=fetch('./data/atlas-services.json').then(r=>{if(!r.ok)throw Error('Services HTTP '+r.status);return r.json()})
   .catch(error=>{console.warn('Tactical services unavailable',error);return null});
  for(const p of base.locations||[])byKey.set(key(p),p);
@@ -634,7 +636,7 @@ async function loadAtlas(){
   const r=await fetch('./data/wiki-atlas.json',{cache:'no-cache'});
   if(r.ok){const d=await r.json();if(d.schemaVersion!==1||!Array.isArray(d.locations)||!d.locations.length)throw Error('Invalid API catalog');
    version=d.version||'';
-   catalog=identifyCatalogVariants(identifyCatalogVariants(d.locations),'Pyro');
+   catalog=auditedSystems.reduce((rows,system)=>identifyCatalogVariants(rows,system),identifyCatalogVariants(d.locations));
    rawStantonCatalog=traceStantonParents(catalog.filter(p=>atlasSystem(p.system)==='Stanton'));
    for(const entry of catalog){if(!entry.name||!entry.system||isStantonPlaceholder(entry))continue;const p={...entry,system:atlasSystem(entry.system)};const k=key(p),old=byKey.get(k);if(old){byKey.set(k,{...p,...old,affiliation:p.affiliation||old.affiliation||null,jurisdiction:p.jurisdiction||old.jurisdiction||null,amenities:[...new Set([...(p.amenities||[]),...(old.amenities||[])])],missionCount:p.missionCount??old.missionCount??null,childCount:p.childCount??old.childCount??null,source:p.source||old.source,operator:old.operator||p.affiliation||null,sourceUrls:[...(old.sourceUrls||[]),...(p.source?.uuid?['https://api.star-citizen.wiki/api/locations/'+encodeURIComponent(p.source.uuid)]:[])]})}else{byKey.set(k,{...p,operator:p.affiliation||null,services:Object.fromEntries((p.amenities||[]).filter(x=>/refiner/i.test(x)).map(()=>['refinery','reported'])),sourceUrls:[],verification:'api-catalog',patch:d.version})}apiCount++}
   }
@@ -645,14 +647,17 @@ async function loadAtlas(){
  const stantonSnapshot=await stantonRequest;
  stantonReview=stantonSnapshot?.catalogReview;
  mergeStanton(byKey,stantonSnapshot);
- const pyro=applyPyroIntel(byKey,catalog,await pyroRequest,version);
- const pyroSummary=$('pyroCoverage');
- if(pyro){
-  const count=pyro.counts;
-  pyroSummary.textContent=pyro.reviewed+' / '+pyro.total+' UUID revisados · '+count.jump+
-   ' con salto configurado · '+count.visible+' visibles sin salto · '+count.hidden+
-   ' ocultos · '+count.unplaced+' sin posición · '+count.technical+' técnicos.';
- }else pyroSummary.textContent='Auditoría de Pyro pendiente para esta versión del catálogo.';
+ const snapshots=await catalogIntelRequests;
+ for(const [index,system] of auditedSystems.entries()){
+  const review=applyCatalogIntel(byKey,catalog,snapshots[index],version,system);
+  const summary=$(system.toLowerCase()+'Coverage');
+  if(review){
+   const c=review.counts;
+   summary.textContent=review.reviewed+' / '+review.total+' UUID revisados · '+c.jump+
+    ' con salto configurado · '+c.visible+' visibles sin salto · '+c.hidden+
+    ' ocultos · '+c.unplaced+' sin posición · '+c.technical+' técnicos.';
+  }else summary.textContent='Auditoría de '+system+' pendiente para esta versión del catálogo.';
+ }
  poiData=traceStantonParents([...byKey.values()]).filter(p=>!isStantonTemporaryEvent(p,stantonReview))
   .sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
  updateAtlasProgress({generatedAt:serviceSnapshot?.checkedAt});

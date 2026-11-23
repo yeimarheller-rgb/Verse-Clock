@@ -1,0 +1,1427 @@
+{
+  "schemaVersion": 1,
+  "version": "4.10.3-LIVE.13165946",
+  "checkedAt": "2026-11-23",
+  "definitionSource": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+  "positionSource": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+  "records": {
+    "f867c263-f34c-4064-84f6-49e5a9f99e71": "technical",
+    "f6cb8264-90b6-467e-93ba-a4eb6f5d5adf": "unplaced",
+    "f0551966-135c-41bd-a1b2-b79d30503c95": "hidden",
+    "0a5d7fba-89e8-4558-9ea7-09497b3046ea": "unplaced",
+    "944737c5-fdfb-45ef-8514-5565c8da5240": "unplaced",
+    "51ebd535-3053-4790-99e6-093433ff3119": "unplaced",
+    "4a92b0e1-be94-401e-b549-7e1ac00a657d": "unplaced",
+    "fb69b343-181c-4f49-8bdf-44582aa7246d": "unplaced",
+    "636dc325-fe33-4955-8c4e-ee81600b9b28": "unplaced",
+    "7ee7edbf-1b77-4fb5-9fa3-d2b86ba99052": "hidden",
+    "efdaa0b6-1f7f-4b30-a3fa-b2d50248957e": "unplaced",
+    "6b14c5fc-68e9-4bc6-ae12-1a27eb036b81": "hidden",
+    "0c39de63-bb45-496e-8029-0ed91580c84a": "unplaced",
+    "eb8fbb27-d630-4a9f-9791-fe99caabf9f1": "unplaced",
+    "15be8bc1-cb5b-4a94-ba1c-742baf7c1f0b": "unplaced",
+    "71a74381-0078-493a-84bb-03eb82e88a12": "hidden",
+    "0bbad0b9-54f6-4f05-9feb-11a5791e049f": "unplaced",
+    "db2883b7-5d6e-4eb2-9e00-4f86e8e49447": "unplaced",
+    "d9fed388-6aaa-40a5-837f-51a54fd9f0d3": "hidden",
+    "57cbf576-4f78-401b-881d-7ff52f2666a8": "hidden",
+    "468d4102-a210-47b5-8bc3-084f791a173c": "jump",
+    "5d1a53cc-fcea-4571-8416-482295f79571": "unplaced",
+    "720b9776-5b37-4671-9fbb-f7d79a05847a": "unplaced",
+    "983c868c-dca1-48be-a5da-a22d95cc6541": "unplaced",
+    "fd62f17a-c46a-4ac0-9352-28f46bd7bef4": "unplaced",
+    "7c663520-7b01-4b17-ab30-03dde80eefa9": "unplaced",
+    "a82b87a6-d0d3-44c9-9509-d49128c4f941": "unplaced",
+    "865120e3-bda7-408f-928c-ef3afabc19c1": "unplaced",
+    "aaa1e82a-1017-4133-8856-40043ffea5ba": "unplaced",
+    "548bc567-f28b-4749-ad17-93ef6df67b71": "unplaced",
+    "5ea6a7e4-0b55-4d49-bb8b-00fe7c730684": "unplaced",
+    "1140b5a3-48a9-4028-ae85-1d50bc400a18": "hidden",
+    "a08b21df-0fe9-4342-a1e6-b408bf56d803": "unplaced",
+    "77ed5653-bd14-4952-b904-afd79faeef60": "visible",
+    "55d962ba-2cb4-4894-a8cd-24fb76dd8f5c": "unplaced",
+    "9328b87c-7722-4924-a7ab-ac314488dd5d": "hidden",
+    "eda164e7-44be-47b5-937f-8e8a12e3a96a": "unplaced",
+    "63105afc-38df-48cc-b570-8eba703a57d7": "hidden",
+    "9c8bc8f8-f869-4017-bc82-228f2bbfc102": "unplaced",
+    "53300788-13cd-41cd-93bd-eb92d36d28ff": "unplaced",
+    "2a8a3554-b2f2-489d-a50c-5adff46cbf1b": "jump",
+    "d957a643-a90d-489a-b762-63367ab21249": "jump",
+    "4142e7b3-c868-49c8-bb64-be7a45054bf3": "jump",
+    "17092f34-d9c8-4d50-89f6-a92940b9cd52": "unplaced",
+    "8ef8417d-2d3c-4172-8030-63f63b95eed4": "jump",
+    "4939d2da-c098-4d4c-9272-ead91cbb5fa4": "jump",
+    "6eb6d82c-637d-4dd6-bf74-d2282983f676": "jump",
+    "1af3f93e-3ef9-442d-9cb6-a633463a24e5": "jump",
+    "77d29b58-d764-41ca-84ee-ffe13af889ba": "hidden",
+    "a1702d0c-bf12-46e6-894b-be39a2292d62": "hidden",
+    "ee1dbdfc-7dae-4b14-b140-734169b1db08": "hidden",
+    "78d77cdf-3db7-49ec-a147-49d9b4b0150c": "hidden",
+    "a66119fa-6d93-4e56-bcd1-c9bd2c50beb7": "jump",
+    "f1017b15-7cca-4f7d-bf33-16178571aa72": "hidden",
+    "dea7dbcf-cc94-48f4-bdac-f2eb955c2d0d": "hidden",
+    "b6f5c396-3712-4435-8e1c-bf5fa3b1cd41": "unplaced",
+    "fa63870c-cbb3-4a7e-8967-9830b0c2bcf3": "unplaced",
+    "b2c07b4d-2df7-4b86-ba45-c15d9b7a0290": "unplaced",
+    "1985c407-b02e-4044-a88e-e6e8474bd126": "unplaced",
+    "1662aba5-c68d-4b28-ab39-045bb0748c8d": "hidden",
+    "9e3bee94-dd4d-42aa-b345-c9ae453fef7d": "unplaced",
+    "7d215223-5688-4414-aabe-ff3724b9badd": "unplaced",
+    "5ea8816e-5215-418f-a312-e9261b053c12": "hidden",
+    "c1f3b0be-1cd3-434f-a68d-27560416718f": "hidden",
+    "d7a48e5e-3648-4e7c-a28c-ff11a1405753": "unplaced",
+    "33210fa5-559c-43c8-b3ad-2ec41fc31d52": "hidden",
+    "af01f884-3261-4d8d-b4e8-988b87a914cc": "hidden",
+    "a90af2b5-2b54-4acd-bcb8-ac6c9cbff188": "hidden",
+    "d31686bd-a3fe-4f12-bb16-f3c2c0366bfb": "hidden",
+    "f27576fa-efaa-49aa-8e74-b22b7dc50ea4": "unplaced",
+    "ad396091-b2d0-4c8e-82b6-1fcbe7429a6a": "hidden",
+    "9bc6e1e3-1faf-4bb0-a273-797e918d7231": "hidden",
+    "4643a0bf-1e85-46ca-817b-eb07b0116249": "hidden",
+    "cb5bf63b-cf5b-48e0-8327-1063d1970754": "unplaced",
+    "9ad3e571-bc7d-4423-987e-8d09838f0c5f": "hidden",
+    "a60ba194-d4ce-4e6c-9849-0c3992b6738b": "unplaced",
+    "f81abeac-6cf9-4e69-b3c5-c31fa06ba5d3": "unplaced",
+    "85ec7c84-9ff7-4400-bd35-5e8b20727aea": "hidden",
+    "524d14d7-5752-4c07-9ddc-c3fe6b70c141": "unplaced",
+    "0d963aaa-7a1f-4b12-87fe-2c4ae48ded26": "unplaced",
+    "30d324ec-6352-48a5-83a3-b6090e693b39": "unplaced",
+    "7f5437b5-b69d-4cb0-ae00-7d4c9e2471c0": "unplaced",
+    "cd21a10b-9f77-4afb-a8cd-4f27bddec128": "unplaced",
+    "42f77630-6ab2-403b-8443-0dc2c35c8d61": "hidden",
+    "9474a0ca-26fe-4c7e-8fb0-7cb673d520d9": "unplaced",
+    "c4b6f8d8-5ca8-4e04-8a0b-434044026747": "unplaced",
+    "5b3fa22b-8614-4859-8b50-c099897ad111": "unplaced",
+    "9f1ea9bd-7a54-40ec-966e-37b478963b78": "unplaced",
+    "66afd75f-c41f-405d-ba4e-81706e2b73ff": "unplaced",
+    "a4c1a6e3-5c98-4971-8e7b-71e54def7dfa": "unplaced",
+    "65628b9f-6eb4-4c4c-b0a3-5197e5c30126": "unplaced",
+    "f8c90940-bbc4-4356-9f75-c2a55339c43f": "unplaced",
+    "5a75f9de-f3ce-4310-a4cf-b6ce906ce0ab": "unplaced",
+    "78f28dd0-5aa1-41f1-90af-b6e2a2250aef": "unplaced",
+    "0b7b5935-2d44-4a37-bb5d-c054a94cbe4e": "unplaced",
+    "f2a8a7b6-1f34-441d-bc69-3cc638150d91": "unplaced",
+    "a7fa4925-176c-4afc-9fb0-0044998419fa": "unplaced",
+    "f0be1fe1-6072-4fa0-9029-4554ff07f8e4": "hidden",
+    "adcc3744-ad7e-4d8a-943e-f55653f0b40e": "hidden",
+    "39d3eeff-454f-4730-8cde-fea19bb81ab9": "hidden",
+    "67f1d2b2-821d-449d-a4b5-f5c97f29fa38": "hidden",
+    "680a5cf0-dc84-4de1-8582-966befa8abda": "hidden",
+    "859feef1-32af-4864-8870-57c662a15aca": "hidden",
+    "5541f051-fa2f-4b4e-9a84-46c93408b801": "hidden",
+    "a8fbfd71-faca-4b96-97ba-71c53d0a290f": "hidden",
+    "f6880b7f-770f-48ef-99de-540179f51f50": "unplaced",
+    "324a5ea1-f580-4ac0-877f-d279a4c221d4": "hidden",
+    "36a9e3b4-cb53-4dab-8cf3-d630e1dc089f": "hidden",
+    "9da55651-df7d-49be-ba05-548b744b7ddf": "hidden",
+    "2336b147-35e2-4e3e-897d-5a5ad718ecce": "hidden",
+    "52d28464-6a08-43d3-abc9-18ca8b15cb38": "hidden",
+    "8c2ce601-f0a2-4ad2-8a3f-05f13d9e30cc": "hidden",
+    "d899d7c3-8c0c-442c-9def-c4c37815659d": "hidden",
+    "8d17a89a-0633-4df0-bbe4-992e56f4d769": "hidden",
+    "8d962d6c-4af2-490c-b1fa-d7fa24225969": "jump",
+    "1382530f-2283-4559-897f-770e571e1763": "unplaced",
+    "35c28367-2337-4b95-bccb-b7a0bbc07272": "unplaced",
+    "8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1": "jump",
+    "70847df0-156c-407c-bc2d-40ccf7ce87f0": "hidden",
+    "cc4d7f56-6c51-4677-94d3-1f3da9f8a6eb": "hidden",
+    "ddf5f3f7-8072-44cb-acba-10d47996f19b": "unplaced",
+    "490d662c-ea17-4789-9742-9a20a2a5f56c": "hidden",
+    "fac812bf-ea31-48b6-81b1-9b54cf4442b9": "jump",
+    "0e7ad495-0fef-4141-b074-9c9210baa156": "jump",
+    "9b262cb0-aa5b-4442-bc7e-fc30bfa960af": "unplaced",
+    "7711e485-0854-4528-b1ea-6307dd89ade5": "hidden",
+    "09b32bf9-49b7-47e2-ac29-18b37ec8e3c8": "unplaced",
+    "9dadcb6f-d551-4b56-adbd-63099bb82ce0": "jump",
+    "28744466-c098-49e0-8daa-aa764216ea52": "unplaced",
+    "541c9236-96ec-4358-8b54-a1bdf18bc076": "hidden",
+    "a1fb8d93-71d9-40c1-b139-71affbb28fc6": "unplaced",
+    "d36f137a-f241-4c2f-849c-cbb8c8ad3d54": "unplaced",
+    "9dd578cf-68ad-422f-9167-c1d8a5562de5": "unplaced",
+    "31064d76-21ed-4629-a4c2-c95b1a9afc58": "unplaced",
+    "83236763-7004-4620-bd98-f75a695e4a1a": "unplaced",
+    "f254123a-7aef-4b72-b822-162d527160fc": "hidden",
+    "a0b95e05-2a98-4338-8af4-1a24e2cdd7d2": "hidden",
+    "835975c9-6112-4e6a-852f-a14663456ca5": "hidden",
+    "05ea1954-aa2f-4138-b5f1-b8788723dad2": "unplaced",
+    "9ff4affc-0e88-4e1d-82ea-22a9b4b33de4": "hidden",
+    "7e06e50e-516c-4b0c-8f18-d99fa205ac30": "unplaced",
+    "52618fbf-e992-42fc-996b-a16bc7f7734d": "unplaced",
+    "ff10b6b7-7434-451c-bf69-22de89892c26": "hidden",
+    "e4b95984-e845-45c3-94b9-a5fdc3d8dba6": "hidden",
+    "4eba1c40-2896-4718-a6b6-37ac5b3a855c": "hidden",
+    "ae248b5c-da78-49c3-a032-bce260d99a41": "hidden",
+    "93680154-37a6-47b2-b063-f0df3bdb6303": "hidden",
+    "424fefd2-e76b-4cd5-a932-b1b945da495e": "hidden",
+    "c1f64882-9f73-4c43-b475-94ce96d94187": "hidden",
+    "fee07eba-b396-4524-aadd-35f2f3fa0c73": "hidden",
+    "827206a3-a815-4b44-8fe4-5bb44a6bf259": "hidden",
+    "25468056-1a2c-488f-a8b5-b1fe760eeca9": "hidden",
+    "e4d12b71-aa56-4fe6-a5fe-7ecb4d2721dd": "unplaced",
+    "e53ac009-4faa-4c5f-b205-25243505c305": "unplaced",
+    "8d777695-b177-4818-8625-060749392e11": "hidden",
+    "28a944a4-a72b-4407-abd1-786224f1c333": "hidden",
+    "c82edfb2-3491-46fb-a76f-1e364739855f": "hidden",
+    "5635024e-d98e-4c57-bc63-6f476f92ac8a": "hidden",
+    "f19dd3c8-31f8-476a-b951-971852d508e4": "unplaced",
+    "22ddc448-c35e-4b94-bee2-8db2e98eea40": "hidden",
+    "bd26c883-04e9-4d45-81f6-296ab1e039eb": "hidden",
+    "a6257eeb-62ed-4c63-886b-29d8258ddc34": "hidden",
+    "ef986934-6dfe-4473-8c9a-f6d97096e22f": "hidden",
+    "f9943b28-da0d-4cb5-b2b3-eaad8e77aec9": "hidden",
+    "2255284a-9355-42c0-bc53-46106bcf2b10": "hidden",
+    "2302c5da-c387-4c3c-bb63-9fe245b64570": "hidden",
+    "e9e56529-6d25-414c-9071-a85bbbaffa4f": "hidden",
+    "535ebd35-544c-4ae1-8507-dbebe045ea3b": "hidden",
+    "c7c6d4d7-2e72-4c4c-91df-74639b55405b": "hidden",
+    "7790e2d0-e92c-4cff-b38c-2f9928a43d93": "hidden",
+    "389e33ff-f08d-46e2-9282-f78fd6f624be": "unplaced",
+    "b0b98b06-b782-4eb0-b0b7-a2e8743c4946": "unplaced",
+    "8c66a940-bfc0-4da3-ac22-3c3e133b66ea": "unplaced",
+    "2ec30d8d-1281-4a84-9dac-f1a3380e16fb": "unplaced",
+    "5cd438f1-b7cf-4eaa-99ec-62c18b0dbc3a": "hidden",
+    "d9eec698-4bcf-4a8b-ba02-2b81bbe8af9b": "hidden",
+    "2b9691a1-0092-4edd-803a-3fd13137887b": "hidden",
+    "332dd564-71e7-4b2b-acb7-c5e4e0976841": "hidden",
+    "ee342b0b-890a-4690-b49b-3e4114eab7a4": "hidden",
+    "5b4ea578-36ab-4cac-9dc1-631efcf6f4a4": "hidden",
+    "6ac4b872-42ee-4671-bbb9-94300ce6cf26": "hidden",
+    "43e4a08d-3319-445c-a20e-fbbe693dd6ce": "hidden",
+    "49439dcf-9c47-4856-af94-f46af9ed8d89": "hidden",
+    "646f4768-b63a-45aa-82ad-b9bc5feba894": "hidden",
+    "e73652c8-a09e-4fa0-a1bd-9e46f4bc7e5b": "hidden",
+    "15ef11f9-068e-4a18-9afe-74bd39bef926": "unplaced",
+    "98beb8e7-5f8a-4314-bf9c-c09a59de7d66": "unplaced",
+    "513b77d6-6e65-4020-af80-dee30056140d": "unplaced",
+    "1ac1eb4f-7206-40db-84db-c37029404530": "unplaced",
+    "31b87123-d35d-4e8d-8922-405c1fc92d58": "unplaced",
+    "75d48e54-dbbf-46ac-87ec-cabc702de433": "unplaced",
+    "dbda433c-82dc-4ba8-b2c2-ac673091e1c3": "unplaced",
+    "d7e52f94-d2b6-4c50-be3e-1901968491a5": "hidden",
+    "131a4315-acf4-4ebc-aa93-a4341d3bd596": "unplaced",
+    "4534351c-a162-46e4-84e9-3e6a200f49f6": "unplaced",
+    "7de6d252-6212-45c4-baf1-c3793a98e759": "unplaced",
+    "0de10acf-22a7-4312-b9aa-f4baaa5ee80f": "unplaced",
+    "6fb3ce63-58bf-430d-a84b-3ed60ab920b9": "unplaced",
+    "8f4fc965-b3cd-4cac-92d1-2d787d7257fd": "unplaced",
+    "de6948a0-0af4-402b-9b0c-e2581e62b36a": "unplaced",
+    "993a838c-21e1-43f5-9df9-af359784e84a": "unplaced",
+    "9fe912c0-4220-4c23-a09b-0318b8b68767": "unplaced",
+    "d1ff9441-b67b-4096-a247-c8aa8fd473cb": "unplaced",
+    "8b29c4cd-7388-427f-a8b6-611b78cea35e": "unplaced",
+    "b35af770-e5c4-4b2e-8a23-1a62bec529f1": "unplaced",
+    "3e20c1a2-0c90-4079-95c9-32dc8ae3467f": "unplaced",
+    "9b9e3d65-cb02-4bb5-9a6e-edd6b2375f79": "unplaced",
+    "d2145cab-0cc1-4d54-b58a-792c1efcc699": "unplaced",
+    "abea0e60-684d-4c42-9035-b713fa2bdf1a": "unplaced",
+    "793b3ce5-ac7c-458c-9e9e-292d35c174da": "unplaced",
+    "ac259f95-78df-4ccf-98f8-a92e0f42ff17": "unplaced",
+    "fcc97405-8fce-42cf-87fb-1fb0ca612949": "unplaced",
+    "bb7aff8b-7348-44b1-a354-9fe0f195eea9": "unplaced",
+    "92e757c7-2abf-492b-ae93-f0eb3c42158a": "unplaced",
+    "43088ce6-9e99-4f74-b46c-720d5413f6dc": "unplaced",
+    "3cb5c674-d304-4b64-b286-be7a3969836d": "unplaced",
+    "cd211da7-c33e-4554-9d1e-08a845a5bb03": "unplaced",
+    "db12be2a-9953-44ae-ac66-23adc361665e": "unplaced",
+    "68d69a54-5be8-41a6-815b-bf77de3560f7": "unplaced",
+    "666cb489-4e96-4ce4-ac91-018b6df4f7d5": "unplaced",
+    "23d209e3-5716-4668-b10c-6cfc9044fc20": "unplaced",
+    "9fae5443-d1e4-42f8-af68-1ec9b416b6db": "unplaced",
+    "495e57a6-ca5e-42fe-b2b9-b0fed6dbb32d": "unplaced",
+    "36d95dc5-dc41-46f6-84b2-35143aee9184": "unplaced",
+    "444e2a1b-1da5-4a58-841d-1f91d08665dc": "unplaced",
+    "1fedab66-3421-4a76-8894-02fbb541aabd": "unplaced",
+    "56fd6f1f-ea37-462b-ab2e-a178e32acccb": "unplaced",
+    "158f9aa2-1473-4969-849d-ddfbb2263ac3": "unplaced",
+    "7588600a-b705-4f6b-8c68-2c1d45beaa54": "unplaced",
+    "b889fe98-0f7c-4de1-a8a0-d8eb4fb8d0fc": "unplaced",
+    "0f88d3fb-6aad-4b46-87b4-6a536823478d": "unplaced",
+    "7b7ea657-818c-4e50-ac7b-ad252f105c5d": "unplaced",
+    "2d744e1d-b93c-425b-8f63-751254dea5fd": "unplaced",
+    "3414a887-e0b6-41e3-89d9-6dbe206e7d61": "unplaced",
+    "7aa220e8-82f8-4d15-9f2d-2c6d0d8d015f": "unplaced",
+    "696f006f-41d2-4c20-b8a9-4ba8bd8bdb32": "unplaced",
+    "e8352091-e99c-4e1a-8928-205143b4d00f": "unplaced",
+    "cffa455b-57c6-42ea-a86b-ea81a4a9f39a": "unplaced",
+    "6f3832e8-cc9d-49f2-851b-67a332461d20": "unplaced",
+    "48eec9d0-ea90-4a34-9dd9-0bff5f25dc41": "unplaced",
+    "68fd0947-93cc-4c98-bce7-2fffbf44c277": "unplaced",
+    "9a83f028-fba2-45c1-8ea0-a4af37d15bee": "unplaced",
+    "9787cd3e-bf94-46d6-a99c-5858b256f759": "unplaced",
+    "93828500-38ee-4a03-b091-eac911d491de": "unplaced",
+    "b4289f8f-b38e-41a9-a696-b5c6fb841273": "unplaced",
+    "e12b2253-f5f0-4f50-b2ae-2c1931b925f1": "unplaced",
+    "25dfe606-064c-49ce-be54-f9b89afc11db": "unplaced",
+    "2320025d-edfd-40c3-a155-cd383e3f1049": "unplaced",
+    "894d06f2-f706-4751-aee3-802a4df60b27": "unplaced",
+    "9ab1fce4-4da2-4bd7-bf30-2ddad4534dd4": "unplaced",
+    "699235b2-3578-4005-892d-d9e10782ed82": "unplaced",
+    "93bd8680-6dd9-407b-90a8-41162d8389c0": "unplaced",
+    "d71c1524-4123-4720-8798-b92f1e3eda7e": "unplaced",
+    "2c17eae3-8d1d-4782-be0c-092881b12b0c": "unplaced",
+    "4a548ea1-669c-4718-aaae-7ef751a85278": "unplaced",
+    "9a0cd009-dc23-4e60-bf87-173747ba58ea": "unplaced",
+    "eb3f0575-988a-4c38-ae4c-841ca7c0d2d5": "unplaced",
+    "2d5bad6c-42dc-4098-9aab-abb4debe8412": "unplaced",
+    "f39c04d3-3e15-4c53-bc0f-1439cf180d58": "unplaced",
+    "58a9ff13-3cb0-482a-88d8-a55db2761eb7": "unplaced",
+    "897e4f2e-eb14-4ec5-afe7-8cf64b5753f3": "unplaced",
+    "1535a9ec-4489-4077-a86a-c8ea95cc19cd": "unplaced",
+    "09bd46a4-396d-47f1-9408-eb90fba0cac6": "unplaced",
+    "6e22dd79-bbb7-4bf2-b5ae-d2e271db3939": "unplaced",
+    "bafe728a-7da5-43af-b41e-2a7ca40ef864": "unplaced",
+    "1522ada7-820d-4eb3-a4e4-beca4ef28e5d": "unplaced",
+    "e2f6cee7-0ba7-40f6-ae1a-ce276a7a52ad": "unplaced",
+    "2f120b7b-8cdb-486e-b4ec-3ba66ff68053": "unplaced",
+    "0f0d8cb2-265c-4f4e-bad7-391058e3a217": "unplaced",
+    "f478dcce-3c68-43fd-9a32-7382f924eb94": "unplaced",
+    "8849a75b-9ab2-43ab-9e7c-9df388f9b82b": "unplaced",
+    "5af753a8-f3c1-4d0d-9313-5e91021118c8": "unplaced",
+    "0b529e4c-3375-4243-91fb-5991a4b94e31": "unplaced",
+    "6cf23271-bf92-48f4-846a-1538125433f1": "unplaced",
+    "d52746a7-83b8-451f-aabe-a71af0c7da4e": "unplaced",
+    "c2499505-0180-413e-84ba-a05749a1a376": "unplaced",
+    "0ea5880b-8d48-42f8-8508-30f507ac9c43": "unplaced",
+    "d9abc387-1925-4250-afae-a31ae7f923e7": "unplaced",
+    "f87baf6c-c7be-4ba4-9967-a95a64abdafd": "unplaced",
+    "93810eb8-96c6-4a50-8294-404bbd2b157e": "unplaced",
+    "476e1c96-8e79-484d-9b31-ae46b4e1be82": "unplaced",
+    "aa4e8a19-fd49-43f6-8589-2bccf66dfc5d": "unplaced",
+    "82b9d880-18aa-48f5-9579-cee98226195b": "unplaced",
+    "fc94cc6f-465a-4f3c-8f8f-d96d70fac9c6": "unplaced",
+    "d7e726ca-1902-43e9-9907-2e3eecb844d9": "unplaced",
+    "0219f8f9-0ad3-4125-9525-ba2effc3ff85": "unplaced",
+    "08339d12-7919-4e39-82da-a50828ea4c69": "unplaced",
+    "7763af60-8a73-480a-9cbc-1fdcf03d29ab": "unplaced",
+    "4f0e8264-5c63-468e-b6cf-7a5c60e102c0": "unplaced",
+    "179a180c-f3ee-43c6-b137-a7a7e2983950": "unplaced",
+    "cd94f3af-017d-4000-9db4-3e68c77f600f": "unplaced",
+    "536d6a1a-5265-45b2-a7f7-47e0052b3478": "unplaced",
+    "e8a51fb2-3d76-49f2-93aa-83edbdcba970": "unplaced",
+    "c58c073e-92f4-48a0-8d06-55d490ebdc1f": "unplaced",
+    "242ede1d-73ad-429d-9847-373c0529b3c3": "unplaced",
+    "84d2730f-292a-486b-93a1-fafdad462bfa": "unplaced",
+    "5c1836e1-0a92-4c46-b40b-594cfc6e773f": "unplaced",
+    "62832115-b428-42be-a1ee-76dc5e9199ef": "unplaced",
+    "57a22402-5ae8-4a15-b771-e2f32079d215": "unplaced",
+    "1c7c192f-a3fb-4cce-bb6a-b331f7a4f733": "unplaced",
+    "1a67e150-5ebe-46bb-9d46-8787817670a5": "unplaced",
+    "65242853-c80d-4a4d-a527-3c12d17a3ae5": "unplaced",
+    "24b0865b-5e2a-46a4-b152-a941782125a9": "unplaced",
+    "29d39504-57fe-42f0-862e-328a9a9b374d": "unplaced",
+    "5427f29d-55b3-4cd1-8f7d-0f3a921270f1": "unplaced",
+    "1df0f806-eb83-4b3d-b99f-b8f5cd73bae6": "unplaced",
+    "56be4d6d-8221-4d83-ae15-4304e1271691": "unplaced",
+    "52754821-1b60-4726-8a8e-30fc2d268c18": "unplaced",
+    "26cdd268-5fac-47c9-a9ef-a5ca9ac946a6": "unplaced",
+    "93e024c7-e28e-4f01-bd8f-22653029106e": "unplaced",
+    "12a41d5c-3599-4c8c-8ef2-0025ce228acf": "unplaced",
+    "a8908900-9306-4561-b503-7086dabbd10d": "unplaced",
+    "deaed1e5-cb1d-49ac-a264-552bafe23268": "unplaced",
+    "b75099a2-b832-414f-85c4-0d71d479541c": "unplaced",
+    "39159190-fba4-447e-8cdc-4b9a24c8afa3": "unplaced",
+    "09a55c10-90f1-4e12-bb56-78d6742e56cd": "unplaced",
+    "213edd0a-0c10-4512-8fba-a16233014693": "unplaced",
+    "53980771-767b-4eb2-a10d-9420903b4e4f": "unplaced",
+    "f5debc91-5c5c-47a0-a663-30cbc2db9545": "unplaced",
+    "4f85ace5-859d-4fc6-a79f-a660ae4250d3": "unplaced",
+    "79cecc5b-f6dc-46fb-b1af-7ee16af856e5": "unplaced",
+    "d702d845-af4d-444c-ab9c-9e0f0692a825": "unplaced",
+    "892fe7bb-5d04-4df4-802a-8a4855836a57": "unplaced",
+    "5c46980b-218e-49b0-95c5-286833df8781": "unplaced",
+    "107de55e-07fe-4bd3-bddd-0de6e6f5cb8d": "unplaced",
+    "8cc794ee-cfcc-47c3-9607-d8b5e682d584": "unplaced",
+    "d5d6c93e-26ac-417c-8ba1-c83e29510203": "unplaced",
+    "fbf9c88d-a958-47d7-b5b6-3cf93474d0aa": "unplaced",
+    "773ba50b-cd93-4f83-aab7-7a65b0cf8e8a": "unplaced",
+    "dbb86831-ca9a-4f63-9dfc-b47c143586a0": "unplaced",
+    "6c69adb8-ae59-4a33-a3e5-16ecf40aacc4": "unplaced",
+    "bbec9c48-a129-4f37-aecf-2f79cebc122b": "unplaced",
+    "4ee6aec1-1714-4ffd-b0fc-ff441538cf6c": "unplaced",
+    "363c3429-78f5-4556-9828-78b83759b8a9": "unplaced",
+    "68982d92-61f4-47d9-981a-565c585e7f5c": "unplaced",
+    "5ade8530-d9f6-4d76-902a-b61486315394": "unplaced",
+    "bcb23e18-d10c-42fc-b655-0fc1d041e69a": "unplaced",
+    "e8bda6f3-3168-4ef2-9efd-f67784dd6ea5": "unplaced",
+    "1830e9f4-bea4-49bc-80c1-aab719d03bba": "unplaced",
+    "d99173fc-806e-450d-b909-d6c5c9440368": "unplaced",
+    "cf1fbcb6-b819-44b7-a6d5-4c19d45bb59b": "unplaced",
+    "cf1dc725-a49a-42d8-9aa3-7a1963f34017": "unplaced",
+    "3d33d224-e22b-4d17-a8e0-b64f45452497": "unplaced",
+    "234eb5af-36d4-4d02-b896-d5265bb128c6": "unplaced",
+    "b8f5dee4-2500-4437-9d47-0cad7a8fcfd0": "unplaced",
+    "73613347-bdf1-4207-93fc-4472cadae3bd": "unplaced",
+    "2d2934a5-588e-4f6f-aff9-8faaea22b08b": "unplaced",
+    "5835e292-c605-44eb-95a5-91196e9e1947": "unplaced",
+    "77ffa551-8fc8-4e1c-96ea-a278ac82c835": "unplaced",
+    "1b9bf423-08d5-4b90-8472-f59790734ecb": "unplaced",
+    "dfcc4b97-bc1d-44b6-9743-0ffb04baec8d": "unplaced",
+    "63799ee2-5e34-433a-b675-eda4b334952f": "unplaced",
+    "e7f13344-9b85-4541-9ac7-03620c767e0c": "unplaced",
+    "429b5fb2-a336-409d-87e5-905c19c069c4": "unplaced",
+    "17d7af9a-82d0-4268-a71e-e1d25fbc7c76": "unplaced",
+    "878b0c49-eba9-4465-a629-de561496fd3d": "unplaced",
+    "2cd88159-6e20-4f50-9358-3c6618fdb2c6": "unplaced",
+    "dd3bcbd4-5887-4a33-9b84-0b4df7fbb6ec": "unplaced",
+    "5350aade-1192-424a-bade-8aeee7c9560c": "unplaced",
+    "b88ebec6-802c-4aca-b19d-5ff7c3d82598": "unplaced",
+    "86e51066-e1d8-4015-b589-12aed4775773": "unplaced",
+    "76070709-e0e0-443d-ba10-378ad2628ed7": "unplaced",
+    "4890d8b1-7fd4-44b6-8855-44bc26544764": "unplaced",
+    "8975d342-c6f5-4545-b336-b6c5afca1031": "unplaced",
+    "ec308dfa-8ff6-463f-84b4-d01485ca4ec1": "unplaced",
+    "093dfb33-9869-41dd-ad2f-74af01965134": "unplaced",
+    "b7df56db-8b2c-4b0e-a946-aadd9703aeaa": "unplaced",
+    "e5eb3820-a747-4387-bbb1-7e50393ee6ac": "unplaced",
+    "3d3d7f38-ad8d-4f98-a215-0e245e49776c": "unplaced",
+    "bf1c9ffb-719d-48c4-a53d-efb06008fcfc": "unplaced",
+    "dafcee2b-c264-4dd6-ae06-09965e232ad6": "unplaced",
+    "d4ea2eb8-230d-48bf-ab9c-e2b441a0a80e": "unplaced",
+    "e685a8e4-6c42-43f9-ad4c-8908614f314b": "unplaced",
+    "450b1d07-bab4-4a2b-89d4-f72175e1bedf": "unplaced",
+    "5308c1e3-6825-4228-b56c-6a155f8ba85c": "unplaced",
+    "93311a96-602f-4e2c-b8ba-e16fa0fae0bc": "unplaced",
+    "6837871b-16b1-4e57-94c3-e405bad9ada9": "unplaced",
+    "47bfe610-fdc6-4a63-8b1a-c106efb72d70": "unplaced",
+    "515b2a03-95b0-40e0-af47-6612d0e42fd4": "unplaced",
+    "57aab807-7e6b-4cde-88df-aa70cb37a84e": "unplaced",
+    "fc2dfca6-7587-45a2-b107-3c71576a882a": "unplaced",
+    "cf5b436a-3126-4e1c-ba12-9e0f56923e56": "unplaced",
+    "cf493983-d844-48c5-9cc2-49168dc3419d": "unplaced",
+    "afb4e4f0-c00f-456c-8f01-e8a33d89dedf": "unplaced",
+    "ab14b66c-cecb-4522-9d89-e4c69e23f7c5": "unplaced",
+    "47c9ab2c-92a7-4480-bdb7-b50848608937": "unplaced",
+    "db2ebbe5-c942-498d-946c-b9b7fac3148f": "unplaced",
+    "c3007050-e070-4965-82d2-9d88242677a9": "unplaced",
+    "a22029a8-e78c-4232-817e-59f6e1b7517e": "hidden",
+    "81803da5-ae3d-4749-895e-16ce21e5f168": "unplaced",
+    "5d4a1e52-6fba-44d0-94f3-46d4a9463506": "unplaced",
+    "c69aed91-f55c-4cea-a472-3a6a8d8ba567": "unplaced",
+    "5a3506a8-5a55-4ad0-b194-fed203332114": "unplaced",
+    "9056b50f-5f2f-4bd0-bda6-c365f8375715": "unplaced",
+    "5ad75b35-89aa-448d-b1a7-5fa686426662": "unplaced",
+    "d261ab16-11e1-4f84-8541-a0d2d4525c8e": "unplaced",
+    "10a1e3e8-061e-47e0-b402-1400ae82dcc2": "unplaced",
+    "269e71a6-539b-40ba-988a-4e5b68b04126": "unplaced",
+    "34f85375-ddb1-4d97-967a-a7c79a74d1ce": "unplaced",
+    "8cbdb0f7-085c-4cb1-9c08-f7fcb72b9e02": "unplaced",
+    "d436f08f-19a5-4147-b0da-8b85f7f7cee2": "unplaced",
+    "a50ad49d-181b-4a6c-94f1-af009d289958": "unplaced",
+    "47feda06-316e-4e6f-ab50-be3b59b21716": "unplaced",
+    "9bff94c4-9d98-4d49-806a-3f21ce73fc6c": "unplaced",
+    "2a45aa39-130b-4958-9f59-9a3534e3519c": "unplaced",
+    "bcbc66b4-e7c1-4c10-97d9-9a62642040cb": "unplaced",
+    "6a92a330-8399-4b24-9751-edce96b9b649": "unplaced",
+    "6599ff90-92e7-41d8-bb82-f0d9656870aa": "unplaced",
+    "03216ec9-3ec8-41d0-94a2-1da18c4cc6f9": "unplaced",
+    "ed2de2bf-e31e-488a-9919-e8ab3b419dc5": "unplaced",
+    "4dbcaaa2-79d7-4eda-a8f6-bb8ba0d6ba5e": "unplaced",
+    "da02b79e-e497-4381-8cc8-a79893ae151f": "unplaced",
+    "451ec5cf-9575-4e46-aa76-63598ffc1253": "unplaced",
+    "80b58ade-11ea-4149-8046-8f97f6e29a8a": "unplaced",
+    "87159be5-ae5e-4d12-8727-63ed3dbf181d": "unplaced",
+    "6b9ad296-49c4-45b7-97e5-c5c8653a150f": "unplaced",
+    "016721e4-4613-41c8-9ab4-4d4e942d3837": "unplaced",
+    "2a90982a-ea4b-441d-a9a0-1d22cc29a577": "unplaced",
+    "e8cfb957-566a-4421-b283-8fd109dd9ef7": "unplaced",
+    "b5a5a931-0779-4854-b873-fcaf2ac4520a": "unplaced",
+    "e4c772ab-e190-4d72-80b5-36f42153f56b": "unplaced",
+    "cbccce04-85f7-4765-8949-02660693036d": "unplaced",
+    "4bd9c376-9fc1-4f4d-9bbd-2721debc441c": "unplaced",
+    "3d00e930-38e4-4eb8-a05d-24d87eeccdec": "unplaced",
+    "bb8e5a4e-f61d-45b8-98c6-2fc194ccf7ee": "unplaced",
+    "4c316efa-6ac4-4cab-9965-fbad59ff1351": "unplaced",
+    "8d5862a8-0f25-4dd6-9f1d-04ba23474209": "unplaced",
+    "93f09c20-2adf-4890-bc84-4fb0e607b6c3": "unplaced",
+    "e8fbf159-9ca3-4e8e-9a7b-b6af07c558e3": "unplaced",
+    "dce5e9da-9dcd-4760-b018-a9ad1cf9ce07": "unplaced",
+    "c7873d90-2a16-4334-8f9c-0ec9d7dee78f": "unplaced",
+    "c89f4981-84f0-456a-af23-27ede070a823": "unplaced",
+    "f72306ed-bb68-46ac-a3c2-93ea1918c592": "unplaced",
+    "6cc025e5-9f16-4444-9e08-407a54e56b34": "unplaced",
+    "052d4223-a8ba-4613-80f3-9b913074ecf0": "unplaced",
+    "e4aa6bc3-c7dd-4d9e-823f-5921734d6071": "unplaced",
+    "2b6765c5-0e88-477a-9d3e-ecfc978dd6aa": "unplaced",
+    "01c2a248-716f-4e90-a1a9-29648b665e02": "unplaced",
+    "4664105b-3907-4dab-922c-42127798aca2": "unplaced",
+    "3c1e7cce-1584-46f6-90f4-4b2ab9add368": "unplaced",
+    "0ff3e83d-ede4-45c0-bd63-8a20873de1f7": "unplaced",
+    "9fc71de4-a52d-43fa-8670-1c01d909b871": "unplaced",
+    "35455bc3-dbbb-4e5b-bf0d-b4aa23325e07": "unplaced",
+    "815e312b-b6f9-4fd8-a930-1a68091cfa18": "unplaced",
+    "7323bb0a-a2b2-409c-b77e-49078a100687": "unplaced",
+    "76996699-8bc4-4ea5-8ddb-6ae11a433d79": "unplaced",
+    "90e0db64-0248-42a4-a589-d841a6044f44": "unplaced",
+    "567ea54d-a6b7-4cc8-b8a3-4bc7af3ce05d": "unplaced",
+    "9e7e14b3-c18c-4047-ad69-dabf21739768": "unplaced",
+    "4121f580-0a28-48ad-82be-26e58ff86553": "unplaced",
+    "af0a1bde-7cc7-451c-b562-892a06c6ca35": "unplaced",
+    "6d8de35e-5895-4cd4-87cd-264a8a59450b": "unplaced",
+    "89e029f4-34a5-41fd-81f8-34e06331963a": "unplaced",
+    "128a6d47-443a-4dcf-b2d6-f0ae7987cecf": "unplaced",
+    "0fd6a610-bcca-4aa4-8ed3-8586e9111d60": "unplaced",
+    "4b65ae15-791a-4858-af2f-693014e3bb05": "unplaced",
+    "d7ccd5e3-ae86-431a-9402-8a814f3f1c8e": "unplaced",
+    "de0e5f94-6123-4b5c-ac49-a103e6f3d69c": "unplaced",
+    "b6e91e39-6fee-4ee1-bca3-fcce4e7bbc48": "unplaced",
+    "e7de392b-0d76-479f-a63d-8f37220b63cf": "unplaced",
+    "65cf2187-69aa-4586-9824-f18e2311228e": "unplaced",
+    "ee13fdee-b016-46ac-a031-2797ceed77f6": "unplaced",
+    "5ba735f7-570c-4c76-8856-7ab7719f1bde": "unplaced",
+    "56e43288-fbc3-400a-ab66-9b4bbef6d7ad": "unplaced",
+    "810af42f-3d2a-4526-953d-afbb034119f9": "unplaced",
+    "48c1b4f5-0bb9-4bda-8d8e-bc88710926cc": "unplaced",
+    "7e5a8daa-dd17-432b-8c1c-b310d9cff195": "unplaced",
+    "44620d32-0042-418a-ae9f-163ac0d19025": "unplaced",
+    "05dfb206-5cb6-4965-9841-a3375fc372dc": "unplaced",
+    "883a0d41-f29a-4147-a3bb-7485f532dbaf": "unplaced",
+    "08d13bfc-2e2b-4b37-b851-6cf5d85be521": "unplaced",
+    "a37789ac-d905-40e9-90e6-84a0bb663bcc": "unplaced",
+    "fc325012-3b92-4a26-84a8-42d5b12d2850": "unplaced",
+    "72a65e90-470c-45ef-a05e-0056ce5e102c": "unplaced",
+    "b9860c1d-2fe9-44d4-8894-a02884fddd11": "unplaced",
+    "789ce3fa-a38c-4a54-854e-b09e10f5e449": "unplaced",
+    "6396623a-61bd-4ced-9c8b-77c47753ef8f": "jump",
+    "3e9ec8c5-10fb-41f2-afdf-bc1e146dd2d6": "hidden",
+    "9cb81910-1567-45e0-8ed1-d8b5a4ca5dba": "hidden",
+    "296dd332-13da-485a-b6c2-7ab09b60ec36": "jump",
+    "dcdafcd8-df76-447d-a10e-63373052545e": "jump",
+    "fff3fb38-bcbf-44b4-907c-b2e584372249": "jump"
+  },
+  "details": {
+    "468d4102-a210-47b5-8bc3-084f791a173c": [
+      {
+        "title": "Hangar XL y atraque",
+        "icons": [
+          "landing"
+        ],
+        "text": "El catálogo 4.10.3 registra hangar XL, plataforma XL y atraque en Levski. Confirma en el ATC qué plaza asigna a tu nave.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki · Levski 4.10.3",
+            "url": "https://api.star-citizen.wiki/locations/levski"
+          }
+        ]
+      },
+      {
+        "title": "Hospital de Levski",
+        "icons": [
+          "clinic"
+        ],
+        "text": "Mercy Hospital figura como hospital asociado a Levski. Para regeneración o tratamiento, abre la ficha del hospital de Levski.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/720b9776-5b37-4671-9fbb-f7d79a05847a"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "720b9776-5b37-4671-9fbb-f7d79a05847a"
+          }
+        ]
+      },
+      {
+        "title": "Dónde comprar y refinar",
+        "icons": [
+          "trade"
+        ],
+        "text": "El directorio lista el terminal de mercancías Levski, Refinement Center, Pharmacy, Teach’s Ship Shop y Teach’s Rentals. Consulta existencias en cada terminal.",
+        "sources": [
+          {
+            "name": "UEX · directorio de terminales de Levski",
+            "url": "https://uexcorp.space/terminals/info/name/nyx-nax---levski/"
+          }
+        ]
+      },
+      {
+        "title": "Servicios de aterrizaje",
+        "icons": [
+          "repair"
+        ],
+        "text": "UEX registra el terminal Landing Services #393 para repostaje y reparación. Comprueba disponibilidad tras aterrizar.",
+        "sources": [
+          {
+            "name": "UEX · Landing Services #393",
+            "url": "https://uexcorp.space/terminals/info/name/landing-services-levski/"
+          }
+        ]
+      }
+    ],
+    "0c39de63-bb45-496e-8029-0ed91580c84a": [
+      {
+        "title": "Puerto de referencia · Levski",
+        "icons": [
+          "landing"
+        ],
+        "text": "Para llegar al puerto de Delamar, busca Levski. Es el registro con marcador visible y salto configurado en esta extracción.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/468d4102-a210-47b5-8bc3-084f791a173c"
+          },
+          {
+            "name": "SCMINER · Levski y Delamar",
+            "url": "https://scminer.rocks/data/refineries/levski"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "468d4102-a210-47b5-8bc3-084f791a173c"
+          }
+        ]
+      }
+    ],
+    "720b9776-5b37-4671-9fbb-f7d79a05847a": [
+      {
+        "title": "Hospital asociado a Levski",
+        "icons": [
+          "clinic"
+        ],
+        "text": "El catálogo registra este hospital bajo Levski y lo identifica como punto de regeneración hospitalaria. Consulta la disponibilidad de la sesión.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/720b9776-5b37-4671-9fbb-f7d79a05847a"
+          },
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/468d4102-a210-47b5-8bc3-084f791a173c"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "468d4102-a210-47b5-8bc3-084f791a173c"
+          }
+        ]
+      }
+    ],
+    "8ef8417d-2d3c-4172-8030-63f63b95eed4": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona People's Service Station Alpha en Nyx. El marcador de esta estación está visible con salto configurado y UEX registra un terminal de mercancías en ella.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/8ef8417d-2d3c-4172-8030-63f63b95eed4"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "4939d2da-c098-4d4c-9272-ead91cbb5fa4": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona People's Service Station Delta en Nyx. El marcador de esta estación está visible con salto configurado y UEX registra un terminal de mercancías en ella.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/4939d2da-c098-4d4c-9272-ead91cbb5fa4"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "6eb6d82c-637d-4dd6-bf74-d2282983f676": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona People's Service Station Lambda en Nyx. El marcador de esta estación está visible con salto configurado y UEX registra un terminal de mercancías en ella.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/6eb6d82c-637d-4dd6-bf74-d2282983f676"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "1af3f93e-3ef9-442d-9cb6-a633463a24e5": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona People's Service Station Theta en Nyx. El marcador de esta estación está visible con salto configurado y UEX registra un terminal de mercancías en ella.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/1af3f93e-3ef9-442d-9cb6-a633463a24e5"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "a66119fa-6d93-4e56-bcd1-c9bd2c50beb7": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona Pyro Gateway dentro de Nyx. La estación tiene su propio marcador cuántico visible. Comprueba el sistema seleccionado antes de viajar, hay nombres similares al otro lado.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/a66119fa-6d93-4e56-bcd1-c9bd2c50beb7"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "6396623a-61bd-4ced-9c8b-77c47753ef8f": [
+      {
+        "title": "Estación con marcador cuántico",
+        "icons": [
+          "landing"
+        ],
+        "text": "Selecciona Stanton Gateway dentro de Nyx. La estación tiene su propio marcador cuántico visible. Comprueba el sistema seleccionado antes de viajar, hay nombres similares al otro lado.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/6396623a-61bd-4ced-9c8b-77c47753ef8f"
+          },
+          {
+            "name": "UEX · terminales de Nyx",
+            "url": "https://uexcorp.space/terminals/home/type/commodity/"
+          }
+        ]
+      }
+    ],
+    "8d962d6c-4af2-490c-b1fa-d7fa24225969": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "1382530f-2283-4559-897f-770e571e1763": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "35c28367-2337-4b95-bccb-b7a0bbc07272": [
+      {
+        "title": "Otra variante del marcador",
+        "icons": [
+          "landing"
+        ],
+        "text": "Esta variante carece de posición. La ficha enlazada corresponde al marcador BRK-204 colocado en la extracción.",
+        "sources": [
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/35c28367-2337-4b95-bccb-b7a0bbc07272"
+          },
+          {
+            "name": "Star Citizen Wiki API · registro de ubicación",
+            "url": "https://api.star-citizen.wiki/api/locations/8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1"
+          },
+          {
+            "name": "Posiciones de 4.10.3",
+            "url": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1"
+          }
+        ]
+      },
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "8cf3eb9c-a3cb-402e-b7fe-6c84ef9fffe1": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "70847df0-156c-407c-bc2d-40ccf7ce87f0": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "cc4d7f56-6c51-4677-94d3-1f3da9f8a6eb": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "ddf5f3f7-8072-44cb-acba-10d47996f19b": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "490d662c-ea17-4789-9742-9a20a2a5f56c": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "fac812bf-ea31-48b6-81b1-9b54cf4442b9": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "0e7ad495-0fef-4141-b074-9c9210baa156": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "9b262cb0-aa5b-4442-bc7e-fc30bfa960af": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "7711e485-0854-4528-b1ea-6307dd89ade5": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "09b32bf9-49b7-47e2-ac29-18b37ec8e3c8": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "9dadcb6f-d551-4b56-adbd-63099bb82ce0": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "28744466-c098-49e0-8daa-aa764216ea52": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "541c9236-96ec-4358-8b54-a1bdf18bc076": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "a1fb8d93-71d9-40c1-b139-71affbb28fc6": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "d36f137a-f241-4c2f-849c-cbb8c8ad3d54": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "9dd578cf-68ad-422f-9167-c1d8a5562de5": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "31064d76-21ed-4629-a4c2-c95b1a9afc58": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ],
+    "83236763-7004-4620-bd98-f75a695e4a1a": [
+      {
+        "title": "Operación Breaker Station",
+        "icons": [
+          "mission"
+        ],
+        "text": "Las fuentes describen una actividad de extracción minera en el cinturón Keeger con acceso ligado a contratos. Comprueba que el gestor asigne la estación concreta antes de desplazarte.",
+        "sources": [
+          {
+            "name": "Citadel · guía Rock Breaker",
+            "url": "https://www.citadelsc.com/en/guides/rock-breaker"
+          },
+          {
+            "name": "Star Citizen Wiki · QV Breaker",
+            "url": "https://starcitizen.tools/QV_Breaker_stations"
+          }
+        ]
+      },
+      {
+        "title": "Láser industrial del complejo",
+        "icons": [
+          "danger"
+        ],
+        "text": "La documentación identifica un láser para fracturar el asteroide. La evidencia disponible no confirma su uso como defensa anticapital de esta estación.",
+        "sources": [
+          {
+            "name": "RSI · Jump Point, QV Breaker Station",
+            "url": "https://media.robertsspaceindustries.com/px8gxtb43pv4j/source.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "parentReferences": {
+    "4a92b0e1-be94-401e-b549-7e1ac00a657d": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "fb69b343-181c-4f49-8bdf-44582aa7246d": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "636dc325-fe33-4955-8c4e-ee81600b9b28": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "5d1a53cc-fcea-4571-8416-482295f79571": "51ebd535-3053-4790-99e6-093433ff3119",
+    "720b9776-5b37-4671-9fbb-f7d79a05847a": "468d4102-a210-47b5-8bc3-084f791a173c",
+    "983c868c-dca1-48be-a5da-a22d95cc6541": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "fd62f17a-c46a-4ac0-9352-28f46bd7bef4": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "7c663520-7b01-4b17-ab30-03dde80eefa9": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "a82b87a6-d0d3-44c9-9509-d49128c4f941": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "865120e3-bda7-408f-928c-ef3afabc19c1": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "aaa1e82a-1017-4133-8856-40043ffea5ba": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "548bc567-f28b-4749-ad17-93ef6df67b71": "0c39de63-bb45-496e-8029-0ed91580c84a",
+    "5ea6a7e4-0b55-4d49-bb8b-00fe7c730684": "0c39de63-bb45-496e-8029-0ed91580c84a"
+  }
+}

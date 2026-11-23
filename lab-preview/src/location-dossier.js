@@ -19,7 +19,7 @@ const iconGroup={
   danger:'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
   mission:'missions', mining:'missions', loot:'loot', weapons:'loot', cave:'loot',
   repair:'services', rearm:'services', refuel:'services', trade:'services', commodity:'services',
-  hangar:'services', landing:'navigation',
+  hangar:'services', clinic:'services', landing:'navigation',
 };
 const meaningful = v => v && !/^(sin datos|no confirmad[ao]|sin verificar|según misión \/ sin datos|desconocido)$/i.test(v);
 const textOf = row => typeof row === 'string' ? row : [
@@ -170,8 +170,8 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
       destinations:review.destinationUuid?[{uuid:review.destinationUuid}]:undefined,
     });
   }
-  if(p.pyroIntel?.marker){
-    const marker=p.pyroIntel.marker;
+  if(p.catalogIntel?.marker){
+    const marker=p.catalogIntel.marker;
     add('navigation',marker.text,{title:'Marcador del parche',sources:marker.sources});
     if(marker.parentUuid)add('navigation','Ubicación superior en la jerarquía del catálogo. La ruta en partida sigue pendiente.',{
       title:'Referencia cartográfica',sources:marker.sources,destinations:[{uuid:marker.parentUuid}],
@@ -180,7 +180,7 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);
   const version=p.source?.version||p.patch||p.intelDetailSource?.version;
-  const review=p.pyroIntel?.checkedAt||p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
+  const review=p.catalogIntel?.checkedAt||p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
   const versionLabel=[version&&'Datos '+version, review&&'Consulta '+review].filter(Boolean).join(' · ');
   return {groups,services,sources:[...sources.values()],versionLabel};
 }

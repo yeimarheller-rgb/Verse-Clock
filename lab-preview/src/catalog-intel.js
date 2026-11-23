@@ -8,17 +8,17 @@ const markerText = {
  technical: 'Registro técnico del mapa sin identidad de destino.',
 };
 
-export function applyPyroIntel(byKey, catalog, snapshot, version) {
+export function applyCatalogIntel(byKey, catalog, snapshot, version, system) {
  if(!snapshot || snapshot.schemaVersion!==1 || snapshot.version!==version) return null;
- const ids=new Set(catalog.filter(row=>atlasSystem(row.system)==='Pyro').map(row=>row.id));
+ const ids=new Set(catalog.filter(row=>atlasSystem(row.system)===system).map(row=>row.id));
  const statuses=new Map(Object.entries(snapshot.records).filter(([id,state])=>ids.has(id)&&Object.hasOwn(markerText,state)));
  for(const [key,location] of byKey){
-  if(atlasSystem(location.system)!=='Pyro')continue;
+  if(atlasSystem(location.system)!==system)continue;
   const id=location.source?.uuid||location.id;
   if(!statuses.has(id))continue;
   const state=statuses.get(id);
   const parent=state==='unplaced'&&snapshot.parentReferences?.[id];
-  byKey.set(key,{...location,pyroIntel:{
+  byKey.set(key,{...location,catalogIntel:{
    checkedAt:snapshot.checkedAt,
    marker:{
     text:markerText[state],

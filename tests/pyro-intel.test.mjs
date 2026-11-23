@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {applyPyroIntel} from '../lab-preview/src/pyro.js';
+import {applyCatalogIntel} from '../lab-preview/src/catalog-intel.js';
 import {identifyCatalogVariants} from '../lab-preview/src/stanton.js';
 import {atlasKey, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
 
@@ -14,17 +14,17 @@ const pyro=rows.filter(row=>row.system==='Pyro System');
 test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from tactical claims',()=>{
  const byKey=new Map(pyro.map(row=>[atlasKey(row),row]));
  assert.equal(byKey.size,586);
- assert.equal(applyPyroIntel(byKey,rows,snapshot,'outdated'),null);
- assert.deepEqual(applyPyroIntel(byKey,rows,snapshot,catalogue.version),{
+ assert.equal(applyCatalogIntel(byKey,rows,snapshot,'outdated','Pyro'),null);
+ assert.deepEqual(applyCatalogIntel(byKey,rows,snapshot,catalogue.version,'Pyro'),{
   total:586,reviewed:586,counts:{jump:127,visible:103,hidden:57,unplaced:295,technical:4},
  });
- const reviewed=[...byKey.values()].filter(row=>row.pyroIntel);
+ const reviewed=[...byKey.values()].filter(row=>row.catalogIntel);
  assert.equal(reviewed.length,586);
  const hubs=reviewed.filter(row=>row.name.startsWith('Lazarus Transport Hub'));
  const sites=new Map(pyro.map(row=>[row.id,row]));
  assert.equal(hubs.length,6);
  for(const hub of hubs){
-  const id=hub.pyroIntel.sections[0].destinations[0].uuid;
+  const id=hub.catalogIntel.sections[0].destinations[0].uuid;
   assert.equal(sites.get(id).name,hub.name.replace('Transport Hub','Complex'));
   assert.equal(snapshot.records[id],'hidden');
   assert.equal(hub.services?.repair,undefined);
@@ -34,7 +34,7 @@ test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from t
  for(const [child,parent] of Object.entries(snapshot.parentReferences)){
   assert.equal(snapshot.records[child],'unplaced');
   assert.equal(sites.get(child).parent,sites.get(parent).name);
-  const marker=byKey.get(atlasKey(sites.get(child))).pyroIntel.marker;
+  const marker=byKey.get(atlasKey(sites.get(child))).catalogIntel.marker;
   assert.equal(marker.parentUuid,parent);
   assert.match(marker.text,/carece de posición/);
  }
@@ -52,4 +52,22 @@ test('reported Pyro ship services attach to the exact station and do not confer 
  assert.equal(patch.serviceIntel.id,34);
  assert.equal(get('Pyro','Nyx Gateway').serviceIntel.id,55);
  assert.notEqual(get('Stanton','Nyx Gateway').serviceIntel.id,55);
+});
+
+test('Nyx keeps both BRK-204 variants and routes to the correct Levski hospital',()=>{
+ const snapshot=read('nyx-intel');
+ const nyx=identifyCatalogVariants(catalogue.locations,'Nyx').filter(row=>row.system==='Nyx System');
+ const byKey=new Map(nyx.map(row=>[atlasKey(row),row]));
+ assert.equal(byKey.size,482);
+ assert.deepEqual(applyCatalogIntel(byKey,nyx,snapshot,catalogue.version,'Nyx'),{
+  total:482,reviewed:482,counts:{jump:18,visible:1,hidden:93,unplaced:369,technical:1},
+ });
+ const levski=byKey.get(atlasKey({system:'Nyx',name:'Levski'}));
+ const hospital=levski.catalogIntel.sections.find(s=>s.title==='Hospital de Levski').destinations[0].uuid;
+ assert.equal(nyx.find(row=>row.id===hospital).parent,'Levski');
+ const variants=[...byKey.values()].filter(row=>row.name==='QV Breaker Station BRK-204');
+ const [placed,unplaced]=variants.sort((a,b)=>snapshot.records[a.id]==='jump'?-1:1);
+ assert.equal(snapshot.records[placed.id],'jump');
+ assert.equal(snapshot.records[unplaced.id],'unplaced');
+ assert.equal(unplaced.catalogIntel.sections[0].destinations[0].uuid,placed.id);
 });
