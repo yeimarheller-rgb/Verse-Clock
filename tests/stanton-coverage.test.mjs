@@ -522,9 +522,10 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
  assert.equal(scoped.operational,808);
  assert.equal(scoped.operational,full.operational);
  assert.equal(scoped.documentedLocal,663);
- assert.equal(scoped.certifiedLocal,738);
- assert.equal(scoped.certifiedCounts.access,738);
+ assert.equal(scoped.certifiedLocal,801);
+ assert.equal(scoped.certifiedCounts.access,798);
  assert.equal(scoped.certifiedCounts.repair,0);
+ assert.equal(scoped.certifiedCounts.logistics,3);
  assert.equal(scoped.certifiedCounts.refuel,21);
  assert.equal(scoped.certifiedCounts.rearm,21);
  assert.deepEqual(scoped.pending,{technical:26,hidden:8,unplaced:43,placed:1,unclassified:0});
@@ -625,6 +626,16 @@ test('Stanton navigation certifies configured access per UUID and keeps ship ser
   assert.ok(!hasStantonLocalAttestation({...claim,text:'Salto garantizado'},uuid,catalogue.version));
   assert.ok(!site.stantonIntel.certifiedClaims.some(item=>item.field!=='access'),name);
  }
+ const hospital=at('Maria Pure of Heart').stantonIntel.certifiedClaims[0];
+ assert.equal(hospital.field,'logistics');
+ assert.equal(hospital.localEvidence.proof,'registry');
+ assert.match(hospital.text,/punto hospitalario de reaparición/);
+ const l2b=at('CRU L2-B').stantonIntel.certifiedClaims[0];
+ assert.match(l2b.text,/marcador está oculto y carece de salto directo/);
+ assert.match(l2b.text,/sector de CRU L2/);
+ const inactive=at('ArcCorp Security Post 017').stantonIntel.certifiedClaims[0];
+ assert.match(inactive.text,/puesto está inactivo/);
+ assert.match(inactive.uncertainty,/requieren comprobación en partida/);
  const unplaced=at('HDOF-Palomar');
  assert.equal(unplaced.stantonIntel?.certifiedClaims?.length,0);
 });

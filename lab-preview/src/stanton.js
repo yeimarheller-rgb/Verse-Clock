@@ -1,4 +1,4 @@
-import {navigationUncertainty, stantonNavigationText} from './stanton-navigation.js';
+import {navigationUncertainty, registryUncertainty, stantonNavigationText, stantonRegistryText} from './stanton-navigation.js';
 import {atlasKey, atlasSystem, normalize, tacticalSections} from './tactical-atlas.js';
 
 export const stantonGroups = {
@@ -114,6 +114,14 @@ export function hasStantonLocalAttestation(claim, uuid, version) {
    return detail.referenceUuid!==uuid&&stantonNavigationText(detail,detail.name)===claim.text;
   }catch{return false;}
  }
+ if(e.proof==='registry'){
+  if(!e.source.endsWith('/starmap.json')||claim.uncertainty!==registryUncertainty)return false;
+  try{
+   const detail=JSON.parse(e.sourceDetail);
+   const field=detail.mode==='hospital-record'?'logistics':'access';
+   return claim.field===field&&detail.referenceUuid!==uuid&&stantonRegistryText(detail,detail.name)===claim.text;
+  }catch{return false;}
+ }
  if(e.proof==='position')return claim.field==='access'&&e.source.endsWith('/starmap_positions.json');
  return e.proof==='description'&&e.source.endsWith('/starmap.json')&&
   Object.hasOwn(serviceTerms,claim.field)&&e.sourceDetail===serviceTerms[claim.field];
@@ -165,7 +173,7 @@ export function mergeStanton(byKey, data, shared, audit) {
      reviewedAt:audit.reviewedAt,source:fact.source,locator:fact.uuid,proof:fact.proof,sourceDetail:fact.sourceDetail,
     }};
    if(!hasStantonLocalAttestation(claim,fact.uuid,audit.version)||!new URL(fact.source).pathname.includes('/'+audit.commit+'/'))continue;
-   if(fact.proof==='navigation'&&JSON.parse(fact.sourceDetail).name!==original.name)continue;
+   if(['navigation','registry'].includes(fact.proof)&&JSON.parse(fact.sourceDetail).name!==original.name)continue;
    if(fact.proof==='position'&&!intelByUuid.get(fact.uuid)?.claims.some(candidate=>
     candidate.field===fact.field&&candidate.status==='documented'&&candidate.patch===audit.version&&
     candidate.text===fact.text&&candidate.uncertainty===fact.uncertainty&&candidate.sources.includes(fact.source)))continue;

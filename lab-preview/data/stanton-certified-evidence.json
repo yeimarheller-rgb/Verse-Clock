@@ -204,6 +204,15 @@
       "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"direct\",\"arrivalMeters\":24000,\"selectParent\":false,\"name\":\"ARC-L2 Lively Pathway Station\"}"
     },
     {
+      "uuid": "8338308e-1288-4ecb-b4e8-dbe272180665",
+      "field": "logistics",
+      "text": "El parche registra ARC-L3 Modern Express Clinic (ARC-L3 Modern Express Station) como punto hospitalario de reaparición. Comprueba el destino de la impronta en el terminal antes de depender de este punto.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"3a43118d-b1b7-4822-8fb2-13f7abe6ac8b\",\"referenceName\":\"ARC-L3 Modern Express Station\",\"mode\":\"hospital-record\",\"name\":\"ARC-L3 Modern Express Clinic\"}"
+    },
+    {
       "uuid": "3a43118d-b1b7-4822-8fb2-13f7abe6ac8b",
       "field": "access",
       "text": "ARC-L3 Modern Express Station tiene marcador visible y salto cuántico directo configurado. Radio de llegada en los archivos del parche: 24 km.",
@@ -337,6 +346,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"referenceUuid\":\"452de0e6-e31d-4e2c-b249-1c4244cb713b\",\"referenceName\":\"Lyria\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"ArcCorp Security Post 011\"}"
+    },
+    {
+      "uuid": "65e5479f-29cb-4439-b683-d47af7b69ac2",
+      "field": "access",
+      "text": "La ficha de ArcCorp Security Post 017 (Lyria) indica que el puesto está inactivo y reserva el acceso al personal de ArcCorp y sus contratistas.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"452de0e6-e31d-4e2c-b249-1c4244cb713b\",\"referenceName\":\"Lyria\",\"mode\":\"restricted-post\",\"name\":\"ArcCorp Security Post 017\"}"
     },
     {
       "uuid": "1ee369c1-53e4-4e23-8e93-179a93cf4382",
@@ -681,6 +699,15 @@
       "sourceDetail": "{\"referenceUuid\":\"e658b2b1-fae7-4945-89b8-b332f235d59b\",\"referenceName\":\"Daymar\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Bountiful Harvest Hydroponics\"}"
     },
     {
+      "uuid": "20049797-8919-4e2e-875b-e2d7b7b54dd8",
+      "field": "logistics",
+      "text": "El parche registra Brentworth Care Center (New Babbage) como punto hospitalario de reaparición. Comprueba el destino de la impronta en el terminal antes de depender de este punto.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"122e8057-831d-4517-a23b-0eb8382b90a2\",\"referenceName\":\"New Babbage\",\"mode\":\"hospital-record\",\"name\":\"Brentworth Care Center\"}"
+    },
+    {
       "uuid": "9cbe6717-5f67-4774-bed6-0150e7c1b97d",
       "field": "access",
       "text": "Selecciona Daymar en el mapa estelar. Brio's Breaker Yard tiene marcador visible y salto cuántico directo configurado. Radio de llegada en los archivos del parche: 20 km.",
@@ -987,6 +1014,42 @@
       "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=75e777cf-a055-4bc3-8ca7-602eb38be4f3; distance_km=30"
     },
     {
+      "uuid": "31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0",
+      "field": "access",
+      "text": "El marcador es visible y carece de salto directo. El registro ubica CRU L2 en el sector de Crusader. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"mode\":\"sector\",\"referenceUuid\":\"c15033ab-2eb3-4d6d-b882-0cb336e67ed8\",\"referenceName\":\"Crusader\",\"hidden\":false,\"name\":\"CRU L2\"}"
+    },
+    {
+      "uuid": "6d1b09ae-bdcd-47d7-a506-c8aba2b18af7",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica CRU L2-A en el sector de CRU L2. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0\",\"referenceName\":\"CRU L2\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"CRU L2-A\"}"
+    },
+    {
+      "uuid": "9415f1bb-fbb5-44fd-a6a1-fa4ed012402a",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica CRU L2-B en el sector de CRU L2. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0\",\"referenceName\":\"CRU L2\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"CRU L2-B\"}"
+    },
+    {
+      "uuid": "5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica CRU L2-C en el sector de CRU L2. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"31aa09fe-9090-4bbf-9cb8-42d0cdc66cf0\",\"referenceName\":\"CRU L2\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"CRU L2-C\"}"
+    },
+    {
       "uuid": "2083c403-4c40-4727-b392-49976c460028",
       "field": "access",
       "text": "El marcador regional CRU L3 está colocado y visible en los datos del parche. Úsalo como referencia del sector de Crusader. El marcador carece de configuración para el salto cuántico directo.",
@@ -994,6 +1057,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "hidden=false; qt_valid=false; A Lagrangian gravity well located in the orbit of Crusader."
+    },
+    {
+      "uuid": "19eb5151-0d25-40f8-be5c-56c5bb68223b",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica CRU L3-A en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"CRU L3-A\"}"
     },
     {
       "uuid": "c67d1b8f-32ee-4fe1-8a66-bd1bfa04c5c0",
@@ -1266,6 +1338,15 @@
       "sourceDetail": "{\"referenceUuid\":\"452de0e6-e31d-4e2c-b249-1c4244cb713b\",\"referenceName\":\"Lyria\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Elsewhere\"}"
     },
     {
+      "uuid": "73cb1196-062e-42c9-99dc-cf66802807d7",
+      "field": "access",
+      "text": "Viaja a Area18 y busca allí Empire Health Services Medstation. El marcador propio del centro médico está oculto en el mapa estelar.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"c6535844-c615-494e-9dc1-c2d0c6e7190a\",\"referenceName\":\"Area18\",\"mode\":\"clinic\",\"name\":\"Empire Health Services Medstation\"}"
+    },
+    {
       "uuid": "171b08de-64ab-4345-b8d3-1af0a8ade6be",
       "field": "access",
       "text": "Selecciona Crusader en el mapa estelar. Empyrean Park tiene marcador visible y salto cuántico directo configurado. Radio de llegada en los archivos del parche: 20 km.",
@@ -1390,6 +1471,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"referenceUuid\":\"d6f1ccd9-fbfb-4086-9608-8466ef2c1c93\",\"referenceName\":\"Wala\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Good Times Temple\"}"
+    },
+    {
+      "uuid": "0b21cc36-fe5d-4b73-8a7d-8edd724094fe",
+      "field": "access",
+      "text": "Viaja a Grim HEX y busca allí Green Imperial Medical. El marcador propio del centro médico está oculto en el mapa estelar.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"8cda0b9b-22a8-43fe-ac33-df7a1ba9434d\",\"referenceName\":\"Grim HEX\",\"mode\":\"clinic\",\"name\":\"Green Imperial Medical\"}"
     },
     {
       "uuid": "b065505f-0dac-4bdc-bbaa-fc612f3143ea",
@@ -2472,6 +2562,15 @@
       "sourceDetail": "{\"referenceUuid\":\"551af60b-7727-4936-acc7-763d25d7a1de\",\"referenceName\":\"Hurston\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Maker's Point\"}"
     },
     {
+      "uuid": "4a4a8455-02d4-4c4a-bb97-a47f0e006c13",
+      "field": "logistics",
+      "text": "El parche registra Maria Pure of Heart (Lorville) como punto hospitalario de reaparición. Comprueba el destino de la impronta en el terminal antes de depender de este punto.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f1759f46-e3c0-4dc1-94bc-c94488b58913\",\"referenceName\":\"Lorville\",\"mode\":\"hospital-record\",\"name\":\"Maria Pure of Heart\"}"
+    },
+    {
       "uuid": "82e23fbe-4478-4281-bcd6-bc68280d7976",
       "field": "access",
       "text": "El marcador de MIC L1 está oculto y carece de salto directo. Usa MIC-L1 Shallow Frontier Station como referencia cuántica. Su centro queda a unos 6 km del centro de ese destino en los archivos del parche.",
@@ -2490,6 +2589,15 @@
       "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=f4b118f8-3102-4a5c-b8ca-ff013c2f674a; distance_km=50"
     },
     {
+      "uuid": "142cf72a-da60-4348-bc37-44046a6ed458",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L2 en el sector de microTech. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"mode\":\"sector\",\"referenceUuid\":\"5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57\",\"referenceName\":\"microTech\",\"hidden\":true,\"name\":\"MIC L2\"}"
+    },
+    {
       "uuid": "46a84972-5b6f-4202-88bf-2628ee6aa6f0",
       "field": "access",
       "text": "Selecciona MIC-L2 Long Forest Station como destino cuántico. El centro de la bolsa MIC L2-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
@@ -2497,6 +2605,33 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=f602528f-acf3-4564-960c-fc344269a7a9; distance_km=30"
+    },
+    {
+      "uuid": "305bf43d-5bcb-44d3-8ee4-837c8f29669a",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L2-B en el sector de MIC L2. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"142cf72a-da60-4348-bc37-44046a6ed458\",\"referenceName\":\"MIC L2\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"MIC L2-B\"}"
+    },
+    {
+      "uuid": "46c7db91-10f2-443e-9303-77ef044c71ee",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L2-C en el sector de MIC L2. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"142cf72a-da60-4348-bc37-44046a6ed458\",\"referenceName\":\"MIC L2\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":false,\"name\":\"MIC L2-C\"}"
+    },
+    {
+      "uuid": "d61da713-acdb-43c7-8605-8acb2a0fa190",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L3 en el sector de microTech. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"mode\":\"sector\",\"referenceUuid\":\"5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57\",\"referenceName\":\"microTech\",\"hidden\":true,\"name\":\"MIC L3\"}"
     },
     {
       "uuid": "63911c27-0274-471d-ae51-273dde3fa737",
@@ -2508,6 +2643,15 @@
       "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=2800c56f-0123-4c31-95d6-bfcf73ba8485; distance_km=71"
     },
     {
+      "uuid": "5e71e60c-52cc-42b9-806a-d8d2a236df28",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L4 en el sector de microTech. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"mode\":\"sector\",\"referenceUuid\":\"5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57\",\"referenceName\":\"microTech\",\"hidden\":true,\"name\":\"MIC L4\"}"
+    },
+    {
       "uuid": "604eea8b-24e4-4425-806d-922a277ff308",
       "field": "access",
       "text": "Selecciona MIC-L4 Red Crossroads Station como destino cuántico. El centro de la bolsa MIC L4-A figura a unos 43 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
@@ -2515,6 +2659,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=317b7505-e562-4caf-9691-1516ab639bbf; distance_km=43"
+    },
+    {
+      "uuid": "3a42031e-71a7-4bd4-ac71-8dcdad4b52ed",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica MIC L5 en el sector de microTech. Usa esa referencia para identificar el sector antes de trazar la ruta.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"mode\":\"sector\",\"referenceUuid\":\"5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57\",\"referenceName\":\"microTech\",\"hidden\":true,\"name\":\"MIC L5\"}"
     },
     {
       "uuid": "4f8d892a-da82-4062-9b3a-aef9e191060b",
@@ -2751,6 +2904,15 @@
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
     },
     {
+      "uuid": "e0d7434a-c364-40a5-b3d7-8e7f1a47ae63",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #0Z9-SVV (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #0Z9-SVV\"}"
+    },
+    {
       "uuid": "7f939e56-47c9-4d76-8bce-7ebfa64880ce",
       "field": "access",
       "text": "Mining Base #1XA-3GI tiene marcador visible sin salto directo. El registro de la UEE exige autorización de acceso a esta base minera.",
@@ -2814,6 +2976,15 @@
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
     },
     {
+      "uuid": "5b810fef-6ca8-4314-b09c-ce2c91adcfb3",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #6RU-55R (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #6RU-55R\"}"
+    },
+    {
       "uuid": "e8306b2c-9a10-41e6-abb2-2033f40deff1",
       "field": "access",
       "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
@@ -2850,6 +3021,15 @@
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
     },
     {
+      "uuid": "ad4088ea-00a6-42b6-b72f-1addc41da91f",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #851-81H (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #851-81H\"}"
+    },
+    {
       "uuid": "be313093-1d4a-4ca7-9fd2-855b045423fe",
       "field": "access",
       "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
@@ -2866,6 +3046,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"private\",\"name\":\"Mining Base #8PV-WNE\"}"
+    },
+    {
+      "uuid": "66c55cc0-38df-43eb-b9e5-dc07073ad378",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #90O-0HA (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #90O-0HA\"}"
     },
     {
       "uuid": "b761b610-f9a9-4439-ae1b-eb3cb5e58ba1",
@@ -2913,6 +3102,15 @@
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
     },
     {
+      "uuid": "8473177a-f9df-4c82-a5fd-4e82cef87684",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #C6P-3KJ (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #C6P-3KJ\"}"
+    },
+    {
       "uuid": "d3705180-7019-44ca-959a-e21c4b086d30",
       "field": "access",
       "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
@@ -2929,6 +3127,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "f9c62e6d-52c7-4cad-a6ae-20ad9bd8fc87",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #DU4-XBU (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #DU4-XBU\"}"
     },
     {
       "uuid": "29e69c79-5526-406f-a492-5049c5bcc9aa",
@@ -3012,6 +3219,15 @@
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
     },
     {
+      "uuid": "e0159330-3e09-45cc-a602-7e12cb6199f8",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #PHB-DYC (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #PHB-DYC\"}"
+    },
+    {
       "uuid": "6fdba030-3358-44ee-9736-aa0f155b758a",
       "field": "access",
       "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
@@ -3091,6 +3307,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "d8622532-337c-457c-b15f-0db8540b8e06",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Base #TP1-N76 (Stanton). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"34ff378f-faee-47bb-b5fe-f505e665c5ca\",\"referenceName\":\"Stanton\",\"mode\":\"mining-permit\",\"name\":\"Mining Base #TP1-N76\"}"
     },
     {
       "uuid": "71847f14-2295-4318-bc48-80ba3e444b3a",
@@ -3282,6 +3507,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"81e3150a-9c12-4715-85d4-afd6da69b8f0\",\"referenceName\":\"HUR-L2 Faithful Dream Station\",\"distanceKm\":212,\"privateAccess\":true,\"name\":\"Mining Claim #17D-NF2\"}"
     },
     {
+      "uuid": "1c2f89f5-b4b5-414d-bf39-9019c2759265",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #187-EK3 en el sector de CRU L2-C. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1\",\"referenceName\":\"CRU L2-C\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #187-EK3\"}"
+    },
+    {
       "uuid": "e5d12b47-b920-4ea9-adf7-b28139ce6dd6",
       "field": "access",
       "text": "El marcador de Mining Claim #187-EK3 está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 36 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3291,6 +3525,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"75e777cf-a055-4bc3-8ca7-602eb38be4f3\",\"referenceName\":\"CRU-L1 Ambitious Dream Station\",\"distanceKm\":36,\"privateAccess\":true,\"name\":\"Mining Claim #187-EK3\"}"
     },
     {
+      "uuid": "e8736da7-c411-4f7e-a90b-2dc56b0e70cf",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #18H-T53 en el sector de MIC L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"305bf43d-5bcb-44d3-8ee4-837c8f29669a\",\"referenceName\":\"MIC L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #18H-T53\"}"
+    },
+    {
       "uuid": "6c30e16e-f38e-4e1e-9675-f541e816e035",
       "field": "access",
       "text": "El marcador de Mining Claim #19F-MUY está oculto y carece de salto directo. Usa ARC-L2 Lively Pathway Station como referencia cuántica. Su centro queda a unos 59 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3298,6 +3541,24 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"45b909df-7b0c-40c9-ab83-a7cd7d3a980f\",\"referenceName\":\"ARC-L2 Lively Pathway Station\",\"distanceKm\":59,\"privateAccess\":true,\"name\":\"Mining Claim #19F-MUY\"}"
+    },
+    {
+      "uuid": "1b219169-a6a9-48cc-baaf-696f1311fa36",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #1A0-R16 en el sector de MIC L1. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"82e23fbe-4478-4281-bcd6-bc68280d7976\",\"referenceName\":\"MIC L1\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #1A0-R16\"}"
+    },
+    {
+      "uuid": "c139e87a-5bd2-437b-a690-9c755a3d31c1",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #1OD-G13 en el sector de MIC L5. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"3a42031e-71a7-4bd4-ac71-8dcdad4b52ed\",\"referenceName\":\"MIC L5\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #1OD-G13\"}"
     },
     {
       "uuid": "7b2c459e-d33c-4661-8a67-52487c2249a0",
@@ -3316,6 +3577,24 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"137c093d-a3fd-47ce-bd78-94772ce8f46e\",\"referenceName\":\"ARC-L5 Yellow Core Station\",\"distanceKm\":102,\"privateAccess\":true,\"name\":\"Mining Claim #1TM-U9Z\"}"
+    },
+    {
+      "uuid": "98fd90eb-d262-4d3c-89d8-5228215885f9",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #1WF-8Q2 en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #1WF-8Q2\"}"
+    },
+    {
+      "uuid": "ea75323c-9d9e-4c11-b924-b2357fb1e579",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #233-0BG en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #233-0BG\"}"
     },
     {
       "uuid": "fb143d40-0599-4232-a541-08b398f414cd",
@@ -3372,6 +3651,24 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"45b909df-7b0c-40c9-ab83-a7cd7d3a980f\",\"referenceName\":\"ARC-L2 Lively Pathway Station\",\"distanceKm\":83,\"privateAccess\":true,\"name\":\"Mining Claim #29N-704\"}"
     },
     {
+      "uuid": "516f9042-c274-4ef2-aaee-5cc9c8f5b07f",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #2A5-7XY en el sector de MIC L5. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"3a42031e-71a7-4bd4-ac71-8dcdad4b52ed\",\"referenceName\":\"MIC L5\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #2A5-7XY\"}"
+    },
+    {
+      "uuid": "301d04fe-2d90-4b4e-9e34-42f6c0d545c9",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #2AO-YXA en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #2AO-YXA\"}"
+    },
+    {
       "uuid": "c3145e2c-8fc3-4899-89d0-b588648a2b83",
       "field": "access",
       "text": "El marcador de Mining Claim #2FC-DQ3 está oculto y carece de salto directo. Usa ARC-L2 Lively Pathway Station como referencia cuántica. Su centro queda a unos 72 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3381,6 +3678,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"45b909df-7b0c-40c9-ab83-a7cd7d3a980f\",\"referenceName\":\"ARC-L2 Lively Pathway Station\",\"distanceKm\":72,\"privateAccess\":true,\"name\":\"Mining Claim #2FC-DQ3\"}"
     },
     {
+      "uuid": "c02a3a9d-3db5-476a-9cc9-2b09abf56017",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #2JR-IH4 en el sector de CRU L2-C. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1\",\"referenceName\":\"CRU L2-C\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #2JR-IH4\"}"
+    },
+    {
       "uuid": "8a896ee1-259e-4720-89c9-c3a2562d9bb5",
       "field": "access",
       "text": "El marcador de Mining Claim #2JR-IH4 está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 118 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3388,6 +3694,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"75e777cf-a055-4bc3-8ca7-602eb38be4f3\",\"referenceName\":\"CRU-L1 Ambitious Dream Station\",\"distanceKm\":118,\"privateAccess\":true,\"name\":\"Mining Claim #2JR-IH4\"}"
+    },
+    {
+      "uuid": "5ba14b7a-71e8-491b-a67e-693f81d59f48",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #2NB-SH5 en el sector de MIC L5. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"3a42031e-71a7-4bd4-ac71-8dcdad4b52ed\",\"referenceName\":\"MIC L5\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #2NB-SH5\"}"
     },
     {
       "uuid": "613484bb-1267-4370-be25-91b86e5fadfc",
@@ -3460,6 +3775,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"8f23301d-0711-47ec-9efb-76a6d8d1c9e6\",\"referenceName\":\"CRU-L4 Shallow Fields Station\",\"distanceKm\":87,\"privateAccess\":true,\"name\":\"Mining Claim #3S4-69I\"}"
+    },
+    {
+      "uuid": "dcf35dd7-87bf-41d4-8186-73716211af85",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #3UB-W93 en el sector de MIC L5. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"3a42031e-71a7-4bd4-ac71-8dcdad4b52ed\",\"referenceName\":\"MIC L5\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #3UB-W93\"}"
     },
     {
       "uuid": "bbe974fe-64d3-451c-95e5-0a5775aec9a7",
@@ -3579,6 +3903,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"317b7505-e562-4caf-9691-1516ab639bbf\",\"referenceName\":\"MIC-L4 Red Crossroads Station\",\"distanceKm\":75,\"privateAccess\":true,\"name\":\"Mining Claim #5NN-VVJ\"}"
     },
     {
+      "uuid": "bc99da90-ae5a-43a1-a0dc-51a9f50372ce",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #5O8-Q79 en el sector de MIC L1. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"82e23fbe-4478-4281-bcd6-bc68280d7976\",\"referenceName\":\"MIC L1\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #5O8-Q79\"}"
+    },
+    {
       "uuid": "7997b07d-7b74-4259-aa29-014c714eb04b",
       "field": "access",
       "text": "El marcador de Mining Claim #5P7-CB5 está oculto y carece de salto directo. Usa HUR-L4 Melodic Fields Station como referencia cuántica. Su centro queda a unos 49 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3586,6 +3919,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"6e99473c-8446-4c5a-81cb-039a53c1960d\",\"referenceName\":\"HUR-L4 Melodic Fields Station\",\"distanceKm\":49,\"privateAccess\":true,\"name\":\"Mining Claim #5P7-CB5\"}"
+    },
+    {
+      "uuid": "37fce05d-31ac-4568-b657-60353ca395ba",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #5QZ-EVL en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #5QZ-EVL\"}"
     },
     {
       "uuid": "88dd13bd-1b73-4ccc-98cf-6acefdd72f9f",
@@ -3624,6 +3966,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"8e83f4da-c85d-4f00-b98d-bc734a07c5d4\",\"referenceName\":\"HUR-L5 High Course Station\",\"distanceKm\":82,\"privateAccess\":true,\"name\":\"Mining Claim #62W-6FF\"}"
     },
     {
+      "uuid": "8219ddd2-080a-4ad3-b413-34a448f0f614",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #656-VXK en el sector de MIC L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"305bf43d-5bcb-44d3-8ee4-837c8f29669a\",\"referenceName\":\"MIC L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #656-VXK\"}"
+    },
+    {
       "uuid": "d27f2702-5b3b-42e9-876f-36f27ec83b37",
       "field": "access",
       "text": "El marcador de Mining Claim #69H-T0M está oculto y carece de salto directo. Usa HUR-L5 High Course Station como referencia cuántica. Su centro queda a unos 215 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3660,6 +4011,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"3a43118d-b1b7-4822-8fb2-13f7abe6ac8b\",\"referenceName\":\"ARC-L3 Modern Express Station\",\"distanceKm\":118,\"privateAccess\":true,\"name\":\"Mining Claim #6H0-FUN\"}"
     },
     {
+      "uuid": "8dd8a9ff-04a2-4101-b04a-e91bd5831688",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #6QU-VLF en el sector de CRU L2-C. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"5991fd21-7ff6-44b7-a6cc-9eb2ed1200f1\",\"referenceName\":\"CRU L2-C\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #6QU-VLF\"}"
+    },
+    {
       "uuid": "d31f5f2e-bdfe-4cbe-bc64-479d613b317f",
       "field": "access",
       "text": "El marcador de Mining Claim #6QU-VLF está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 135 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3667,6 +4027,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"75e777cf-a055-4bc3-8ca7-602eb38be4f3\",\"referenceName\":\"CRU-L1 Ambitious Dream Station\",\"distanceKm\":135,\"privateAccess\":true,\"name\":\"Mining Claim #6QU-VLF\"}"
+    },
+    {
+      "uuid": "fb2adb23-390d-4fb6-8b79-ea1f297d3335",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #6VQ-R0L en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #6VQ-R0L\"}"
     },
     {
       "uuid": "909ed934-5cfd-4906-b1b7-707f594138b8",
@@ -3685,6 +4054,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"3a43118d-b1b7-4822-8fb2-13f7abe6ac8b\",\"referenceName\":\"ARC-L3 Modern Express Station\",\"distanceKm\":44,\"privateAccess\":true,\"name\":\"Mining Claim #761-0K4\"}"
+    },
+    {
+      "uuid": "26162567-208c-4399-944b-59fad6185fba",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #7BH-6IB en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #7BH-6IB\"}"
     },
     {
       "uuid": "8615449d-77d1-4adc-9100-4e470183f4a0",
@@ -3741,6 +4119,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"59485d8c-7947-4e00-871c-d35f6451aab8\",\"referenceName\":\"ARC-L1 Wide Forest Station\",\"distanceKm\":51,\"privateAccess\":true,\"name\":\"Mining Claim #95S-AN6\"}"
     },
     {
+      "uuid": "e1eb2e12-2f23-4a7b-85e9-e817fe9a2624",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #960-5X4 en el sector de MIC L1. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"82e23fbe-4478-4281-bcd6-bc68280d7976\",\"referenceName\":\"MIC L1\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #960-5X4\"}"
+    },
+    {
       "uuid": "2bffebc7-b7c0-4ad1-83c1-953654b742d4",
       "field": "access",
       "text": "El marcador de Mining Claim #9GW-F38 está oculto y carece de salto directo. Usa ARC-L5 Yellow Core Station como referencia cuántica. Su centro queda a unos 56 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -3793,6 +4180,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"5905eecd-258a-4046-ad08-90571c41b03c\",\"referenceName\":\"CRU-L5 Beautiful Glen Station\",\"distanceKm\":97,\"privateAccess\":true,\"name\":\"Mining Claim #A83-1XB\"}"
+    },
+    {
+      "uuid": "282c31cc-fee7-400e-be63-e43f509fa1c4",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #B93-ECE en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #B93-ECE\"}"
     },
     {
       "uuid": "5ceeaaf2-4912-4ce4-ad6d-19c58aba8344",
@@ -3975,6 +4371,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"6e99473c-8446-4c5a-81cb-039a53c1960d\",\"referenceName\":\"HUR-L4 Melodic Fields Station\",\"distanceKm\":151,\"privateAccess\":true,\"name\":\"Mining Claim #K16-4PN\"}"
     },
     {
+      "uuid": "99583f4d-a178-4d63-8940-ddca7a74b465",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Claim #KA3-ON4 (MIC L2-C). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"46c7db91-10f2-443e-9303-77ef044c71ee\",\"referenceName\":\"MIC L2-C\",\"mode\":\"mining-permit\",\"name\":\"Mining Claim #KA3-ON4\"}"
+    },
+    {
       "uuid": "774170ec-de8d-4aa9-aef9-472f4c8a67c7",
       "field": "access",
       "text": "El marcador de Mining Claim #KY3-74D está oculto y carece de salto directo. Usa ARC-L4 Faint Glen Station como referencia cuántica. Su centro queda a unos 10 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -4047,6 +4452,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"59485d8c-7947-4e00-871c-d35f6451aab8\",\"referenceName\":\"ARC-L1 Wide Forest Station\",\"distanceKm\":57,\"privateAccess\":true,\"name\":\"Mining Claim #LH7-KP4\"}"
     },
     {
+      "uuid": "51306977-b333-4610-9fc9-99e523b6c88f",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #LOW-9SW en el sector de CRU L2-A. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"6d1b09ae-bdcd-47d7-a506-c8aba2b18af7\",\"referenceName\":\"CRU L2-A\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #LOW-9SW\"}"
+    },
+    {
       "uuid": "ef292b2d-1d5c-43ae-ab8c-a1284866d766",
       "field": "access",
       "text": "El marcador de Mining Claim #LOW-9SW está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 76 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -4072,6 +4486,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"317b7505-e562-4caf-9691-1516ab639bbf\",\"referenceName\":\"MIC-L4 Red Crossroads Station\",\"distanceKm\":65,\"privateAccess\":true,\"name\":\"Mining Claim #LX4-224\"}"
+    },
+    {
+      "uuid": "463c4222-9f35-4200-9eb4-98416a2b42c5",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #M77-B9R en el sector de CRU L2-A. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"6d1b09ae-bdcd-47d7-a506-c8aba2b18af7\",\"referenceName\":\"CRU L2-A\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #M77-B9R\"}"
     },
     {
       "uuid": "9ba52600-3db3-4741-b4a1-fe5560dd261b",
@@ -4126,6 +4549,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5\",\"referenceName\":\"MIC-L5 Modern Icarus Station\",\"distanceKm\":131,\"privateAccess\":true,\"name\":\"Mining Claim #N03-CF2\"}"
+    },
+    {
+      "uuid": "6f157e1a-4ef9-4c23-a726-82a280d07e8c",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #O36-381 en el sector de MIC L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"305bf43d-5bcb-44d3-8ee4-837c8f29669a\",\"referenceName\":\"MIC L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #O36-381\"}"
     },
     {
       "uuid": "427b7407-a87a-4b68-a0df-0dbdd35aad0b",
@@ -4200,6 +4632,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"8e83f4da-c85d-4f00-b98d-bc734a07c5d4\",\"referenceName\":\"HUR-L5 High Course Station\",\"distanceKm\":38,\"privateAccess\":true,\"name\":\"Mining Claim #PY9-010\"}"
     },
     {
+      "uuid": "089f4e94-7ef9-4bb1-afb6-c9eb3ebf9fd5",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #Q02-658 en el sector de CRU L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"9415f1bb-fbb5-44fd-a6a1-fa4ed012402a\",\"referenceName\":\"CRU L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #Q02-658\"}"
+    },
+    {
       "uuid": "73af8f80-c660-432f-95b2-f3fe1d2ce4c1",
       "field": "access",
       "text": "El marcador de Mining Claim #Q02-658 está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 137 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -4227,6 +4668,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"137c093d-a3fd-47ce-bd78-94772ce8f46e\",\"referenceName\":\"ARC-L5 Yellow Core Station\",\"distanceKm\":79,\"privateAccess\":true,\"name\":\"Mining Claim #QR4-25Q\"}"
     },
     {
+      "uuid": "f5ad5a3b-2cd0-4227-8663-3628e9610ca4",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #RDM-570 en el sector de CRU L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"9415f1bb-fbb5-44fd-a6a1-fa4ed012402a\",\"referenceName\":\"CRU L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #RDM-570\"}"
+    },
+    {
       "uuid": "090d363c-5538-4519-bd47-2fd5a8d02931",
       "field": "access",
       "text": "El marcador de Mining Claim #RDM-570 está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 122 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -4243,6 +4693,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7\",\"referenceName\":\"HUR-L1 Green Glade Station\",\"distanceKm\":72,\"privateAccess\":true,\"name\":\"Mining Claim #SA0-62G\"}"
+    },
+    {
+      "uuid": "5112a857-3640-4005-bdba-f36c1c3e23f7",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #SNS-133 en el sector de CRU L3. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"2083c403-4c40-4727-b392-49976c460028\",\"referenceName\":\"CRU L3\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #SNS-133\"}"
     },
     {
       "uuid": "5d7f3eb5-67de-4fbb-b82c-a58541839f72",
@@ -4272,6 +4731,15 @@
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"de5f2d1d-78e5-4273-8028-c06690c03685\",\"referenceName\":\"HUR-L3 Thundering Express Station\",\"distanceKm\":129,\"privateAccess\":true,\"name\":\"Mining Claim #T9P-B90\"}"
     },
     {
+      "uuid": "379e8c6f-6a68-4024-8b78-4b0ef87f65e2",
+      "field": "access",
+      "text": "El marcador está oculto y carece de salto directo. El registro ubica Mining Claim #U3Z-O5M en el sector de CRU L2-B. Usa esa referencia para identificar el sector antes de trazar la ruta. La UEE exige autorización de acceso a la concesión minera.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"9415f1bb-fbb5-44fd-a6a1-fa4ed012402a\",\"referenceName\":\"CRU L2-B\",\"mode\":\"sector\",\"hidden\":true,\"privateAccess\":true,\"name\":\"Mining Claim #U3Z-O5M\"}"
+    },
+    {
       "uuid": "0dfb89b3-4af3-43da-8466-c6a0232ce73a",
       "field": "access",
       "text": "El marcador de Mining Claim #U3Z-O5M está oculto y carece de salto directo. Usa CRU-L1 Ambitious Dream Station como referencia cuántica. Su centro queda a unos 112 km del centro de ese destino en los archivos del parche. El registro de la UEE exige autorización de acceso.",
@@ -4288,6 +4756,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"mode\":\"approach\",\"referenceUuid\":\"6e99473c-8446-4c5a-81cb-039a53c1960d\",\"referenceName\":\"HUR-L4 Melodic Fields Station\",\"distanceKm\":117,\"privateAccess\":true,\"name\":\"Mining Claim #U7S-YF2\"}"
+    },
+    {
+      "uuid": "a8f88f03-0558-427d-945c-1365c93f8771",
+      "field": "access",
+      "text": "El registro de la UEE exige autorización para entrar en Mining Claim #UR6-090 (MIC L2-C). La posición operativa está pendiente de verificación.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"46c7db91-10f2-443e-9303-77ef044c71ee\",\"referenceName\":\"MIC L2-C\",\"mode\":\"mining-permit\",\"name\":\"Mining Claim #UR6-090\"}"
     },
     {
       "uuid": "51fbc709-dd4e-4cd5-9cc0-af71a9e6f962",
@@ -5856,6 +6333,15 @@
       "sourceDetail": "{\"referenceUuid\":\"732dedf3-9530-4972-98ab-2fcae64669db\",\"referenceName\":\"Euterpe\",\"mode\":\"restricted\",\"name\":\"Onyx Facility S4C9\"}"
     },
     {
+      "uuid": "c1e86db7-ee74-45fe-8ae7-d7d01fe6b91a",
+      "field": "access",
+      "text": "La ficha de Operations Depot Lyria-1 (Lyria) reserva el acceso al personal autorizado y advierte de sanciones por entrada sin autorización.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"452de0e6-e31d-4e2c-b249-1c4244cb713b\",\"referenceName\":\"Lyria\",\"mode\":\"restricted-depot\",\"name\":\"Operations Depot Lyria-1\"}"
+    },
+    {
       "uuid": "567f92d7-d34c-42fa-b57b-f1939d4c5f5b",
       "field": "access",
       "text": "Selecciona Crusader en el mapa estelar. Orison tiene marcador visible y salto cuántico directo configurado. Radio de llegada en los archivos del parche: 20 km.",
@@ -5863,6 +6349,15 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"referenceUuid\":\"c15033ab-2eb3-4d6d-b882-0cb336e67ed8\",\"referenceName\":\"Crusader\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Orison\"}"
+    },
+    {
+      "uuid": "1124700d-4a9a-40d3-bc67-3ca8e48857fb",
+      "field": "access",
+      "text": "Viaja a Orison y busca allí Orison General. El marcador propio del centro médico está oculto en el mapa estelar.",
+      "uncertainty": "Configuración del mapa extraída del parche. La visibilidad durante una misión y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "navigation",
+      "sourceDetail": "{\"referenceUuid\":\"567f92d7-d34c-42fa-b57b-f1939d4c5f5b\",\"referenceName\":\"Orison\",\"mode\":\"clinic\",\"name\":\"Orison General\"}"
     },
     {
       "uuid": "af133812-bbf1-4d3f-adfa-90d5aec5ea50",
@@ -6070,6 +6565,42 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "position",
       "sourceDetail": "parent_uuid=3304263b-f133-41f8-85e7-79693e5bb2de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "69b59df3-3f41-4dbd-b457-b1f8d6feb942",
+      "field": "access",
+      "text": "La ficha de Reyes Mining Compound-A (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Reyes Mining Compound-A\"}"
+    },
+    {
+      "uuid": "4b14562a-4447-493c-a730-07161267f08b",
+      "field": "access",
+      "text": "La ficha de Reyes Mining Compound-B (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Reyes Mining Compound-B\"}"
+    },
+    {
+      "uuid": "05c12718-d668-4718-ba17-44f6916586a4",
+      "field": "access",
+      "text": "La ficha de Reyes Mining Compound-C (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Reyes Mining Compound-C\"}"
+    },
+    {
+      "uuid": "fd3387e1-fd7c-4154-90f3-c64d8d275f65",
+      "field": "access",
+      "text": "La ficha de Reyes Mining Compound-D (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Reyes Mining Compound-D\"}"
     },
     {
       "uuid": "8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
@@ -6628,6 +7159,42 @@
       "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
       "proof": "navigation",
       "sourceDetail": "{\"referenceUuid\":\"3304263b-f133-41f8-85e7-79693e5bb2de\",\"referenceName\":\"Calliope\",\"mode\":\"direct\",\"arrivalMeters\":20000,\"selectParent\":true,\"name\":\"Shubin Processing Facility SPMC-5\"}"
+    },
+    {
+      "uuid": "1f0b9df7-2dd3-47da-9a18-f1bb8182e8ec",
+      "field": "access",
+      "text": "La ficha de Sloane Mining Compound-A (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Sloane Mining Compound-A\"}"
+    },
+    {
+      "uuid": "c3a82f82-0027-4152-920e-63895009b7e0",
+      "field": "access",
+      "text": "La ficha de Sloane Mining Compound-B (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Sloane Mining Compound-B\"}"
+    },
+    {
+      "uuid": "c497baa1-b10c-4fc9-8a26-da1189775316",
+      "field": "access",
+      "text": "La ficha de Sloane Mining Compound-C (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Sloane Mining Compound-C\"}"
+    },
+    {
+      "uuid": "8617e09b-a658-4a30-8d06-22fcfc445209",
+      "field": "access",
+      "text": "La ficha de Sloane Mining Compound-D (Aberdeen) declara la explotación fuera de servicio por condiciones inestables. Verifica la ubicación y la actividad antes de planificar una extracción.",
+      "uncertainty": "La afirmación procede de la ficha del mapa incluida en el parche. La actividad, el estado de la instalación y el acceso físico requieren comprobación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "registry",
+      "sourceDetail": "{\"referenceUuid\":\"f8f07f5b-1c0e-47c9-aa50-46963065bf18\",\"referenceName\":\"Aberdeen\",\"mode\":\"closed-mine\",\"name\":\"Sloane Mining Compound-D\"}"
     },
     {
       "uuid": "3d72936b-d142-40b5-871d-49e0219c7b5e",

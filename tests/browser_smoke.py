@@ -143,7 +143,7 @@ with sync_playwright() as p:
         expect(page.locator('#stantonCoverage')).to_contain_text('949 / 949 registros conciliados')
         expect(page.locator('#stantonCoverage')).to_contain_text('43 sin posición extraída · 8 con marcador oculto')
         expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Documentación candidata por UUID')).to_have_attribute('value','663')
-        expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Evidencia local certificada')).to_have_attribute('value','738')
+        expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Evidencia local certificada')).to_have_attribute('value','801')
         page.screenshot(path=f'/tmp/verse-lab-stanton-scope-{device}.png',full_page=True)
         page.locator('#q').fill('RSI Event Platform')
         expect(page.locator('#suggestions button').filter(has_text='RSI Event Platform')).to_have_count(0)
