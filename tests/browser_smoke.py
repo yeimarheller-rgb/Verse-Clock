@@ -473,8 +473,7 @@ with sync_playwright() as p:
         page.screenshot(path=f'/tmp/verse-lab-pyro-phoenix-{device}.png', full_page=True)
         query('Chawla', "Chawla's Beach")
         loot = dossier.locator('[data-domain="loot"]')
-        if loot.get_attribute('open') is None:
-            loot.locator('summary').click()
+        expect(loot).to_be_visible()
         expect(loot).to_contain_text('salvamento al aire libre')
         expect(loot).to_contain_text('XL-1')
         expect(loot).to_contain_text('modelos pendientes de comprobar')
