@@ -26,7 +26,7 @@
   {"id":68,"name":"Rustville","system":"Pyro","body":"Pyro I","type":"outposts","services":["repair","refuel"],"padTypes":"M","tradeTerminal":true,"trade":[[590,"Rustville","4.0"]]},
   {"id":102,"name":"Sacren's Plot","system":"Pyro","body":"Pyro IV","type":"outposts","services":[],"padTypes":"L","tradeTerminal":true,"trade":[[688,"Sacren's Plot","4.0.1"]]},
   {"id":75,"name":"Shepherd's Rest","system":"Pyro","body":"Bloom","type":"outposts","services":[],"padTypes":"M","tradeTerminal":true,"trade":[[555,"Shepherd's Rest","3.24.3"]]},
-  {"id":116,"name":"Slowburn Depot","system":"Pyro","body":"Monox","type":"outposts","services":[],"tradeTerminal":true},
+  {"id":116,"name":"Slowburn Depot","system":"Pyro","catalogVariant":"51d4fdfb-421d-49d9-b75a-2f1d531b7720","body":"Monox","type":"outposts","services":[],"tradeTerminal":true},
   {"id":50,"name":"Stanton Gateway","system":"Pyro","body":"Stanton Gateway (Pyro system)","type":"space_stations","services":["repair","refuel","refinery","clinic","cargo"],"sourceName":"Stanton Gateway (Pyro)","padTypes":"S,M,L","tradeTerminal":true,"trade":[[520,"Admin - Stanton Gateway (Pyro)","4.8.0"]]},
   {"id":71,"name":"Sunset Mesa","system":"Pyro","body":"Monox","type":"outposts","services":["repair","refuel"],"padTypes":"M","tradeTerminal":true,"trade":[[599,"Sunset Mesa","4.0.1"]]},
   {"id":76,"name":"The Golden Riviera","system":"Pyro","body":"Bloom","type":"outposts","services":[],"padTypes":"L","tradeTerminal":true,"trade":[[665,"The Golden Riviera","4.0.1"]]},

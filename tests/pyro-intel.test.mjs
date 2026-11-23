@@ -114,3 +114,24 @@ test('Nyx applies QV resource, danger and Vanduul loot only to the matching stat
   assert.ok(matched.every(row=>row.name===family||row.name.startsWith(family+' ')));
  }
 });
+
+
+test('Pyro maps Slowburn services and local loot to the registered destination only',()=>{
+ const byKey=new Map(pyro.map(row=>[atlasKey(row),{...row,system:'Pyro'}]));
+ mergeTacticalAtlas(byKey,read('atlas-services'),catalogue.version);
+ applyCatalogIntel(byKey,rows,snapshot,catalogue.version,'Pyro');
+ const variants=[...byKey.values()].filter(row=>row.name==='Slowburn Depot');
+ assert.equal(variants.length,2);
+ const placed=variants.find(row=>row.catalogIntel.marker.state==='jump');
+ const unplaced=variants.find(row=>row.catalogIntel.marker.state==='unplaced');
+ assert.equal(placed.serviceIntel.id,116);
+ assert.ok(placed.catalogIntel.sections.some(s=>/82 puntos/.test(s.text)));
+ assert.equal(unplaced.serviceIntel,undefined);
+ assert.ok(!unplaced.catalogIntel.sections.some(s=>/82 puntos/.test(s.text)));
+ const get=name=>byKey.get(atlasKey({system:'Pyro',name}));
+ assert.ok(get('Last Ditch').catalogIntel.sections.some(s=>/302 puntos/.test(s.text)));
+ const cave=get('Monox').catalogIntel.sections.find(s=>s.title==='Cuevas · botín de la región');
+ assert.match(cave.text,/1444 puntos.*grupo regional/);
+ assert.match(cave.sources[0].url,/#place-pyro2-cave$/);
+ assert.equal(get('PYAM-EXHANG-0-1').catalogIntel.sections.find(s=>s.title==='Botín por hangar ejecutivo').sources.length,3);
+});
