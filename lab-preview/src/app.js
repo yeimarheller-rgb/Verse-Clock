@@ -436,6 +436,8 @@ function applyPoiToMain(p){
   nav?'Desde '+nav.from.name+': '+nav.km.toFixed(1)+' km por superficie, rumbo '+nav.bearing.toFixed(0)+'° ('+compass(nav.bearing)+')':null,
  ].filter(Boolean).join(' · ');
  const model=locationDossier(p,{environment,body,solar,operations:operationsEnabled});
+ $('locationEvidence').textContent=model.stantonVersionLabel;
+ $('locationEvidence').hidden=!model.stantonVersionLabel;
  const order=Object.keys(dossierGroups);
  if(operationsEnabled){order.splice(order.indexOf('services'),1);order.unshift('services')}
  const makeLink=(url,label)=>{
@@ -493,6 +495,10 @@ function applyPoiToMain(p){
     copy.append(refs);
    }
    section.append(copy);
+   if(operationsEnabled&&fact.uncertainty){
+    const limit=document.createElement('small');
+    limit.className='dossier-limit';limit.textContent=fact.uncertainty;section.append(limit);
+   }
    if(fact.destinations?.length){
     const links=document.createElement('div');links.className='location-dossier-nav';
     for(const target of fact.destinations){

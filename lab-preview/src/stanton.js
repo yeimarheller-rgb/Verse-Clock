@@ -201,7 +201,7 @@ export function stantonSections(p) {
  const candidates=[...(p.stantonIntel?.claims||[]),...(p.stantonIntel?.sharedClaims||[])];
  const sections=candidates.map(claim=>({
   title:claim.title||stantonFields[claim.field], icons:[iconsByField[claim.field]],
-  text:claim.text, destinations:claim.destinations, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
+  text:claim.text, destinations:claim.destinations, uncertainty:claim.uncertainty, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
   sources:claim.sources.map(url=>({url,name:new URL(url).hostname})),
  }));
  for(const claim of local){
@@ -218,7 +218,7 @@ export function stantonSections(p) {
    continue;
   }
   sections.push({title:stantonFields[claim.field]+' · configuración del parche',icons:[iconsByField[claim.field]],
-   text:claim.text,status:label,sources});
+   text:claim.text,status:label,sources,uncertainty:claim.uncertainty});
  }
  if(p.stantonIntel?.reviewNote)sections.push({title:p.stantonIntel.reviewedWithoutEvidence.length>1?'Servicios de nave':'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
   status:'Investigado sin corroboración LIVE',sources:[{url:p.stantonIntel.reviewSource,name:'Star Citizen Wiki'}]});
