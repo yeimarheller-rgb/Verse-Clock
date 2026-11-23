@@ -21,6 +21,7 @@ export function applyCatalogIntel(byKey, catalog, snapshot, version, system) {
   byKey.set(key,{...location,catalogIntel:{
    checkedAt:snapshot.checkedAt,
    marker:{
+    state,
     text:markerText[state],
     sources:[snapshot.definitionSource,snapshot.positionSource],
     parentUuid:parent!==id&&ids.has(parent)?parent:undefined,

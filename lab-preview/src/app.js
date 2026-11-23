@@ -281,7 +281,7 @@ function updateMenu(){
  if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
  const solar=(activeFilter||stantonZone.value?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
  const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&(auditedSystems.includes(stantonZone.value)?atlasSystem(p.system)===stantonZone.value:inStantonZone(p,stantonZone.value))).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
- p.type,p.operator,p.affiliation,p.jurisdiction,...tacticalTags(p),
+ p.type,p.operator,p.affiliation,p.jurisdiction,p.catalogVariant,...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
  ...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.armor||[]),
@@ -300,9 +300,14 @@ function updateMenu(){
   const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
   const text=[n,parent,sys,tags].join(' ');
   const matches=q.split(/\s+/).every(term=>text.includes(term));
-  const score=n===q?0:n.startsWith(q)?1:n.includes(q)?2:tags.includes(q)?3:matches?4:99;
-  return{item,score};
- }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||Number(Boolean(b.item.value.serviceIntel||b.item.value.hathor))-Number(Boolean(a.item.value.serviceIntel||a.item.value.hathor))||a.item.name.localeCompare(b.item.name,'es')).slice(0,activeFilter?100:16).map(x=>x.item);
+  const intel=item.value.catalogIntel;
+  const state=intel?.marker.state;
+  const ambiguous=Boolean(item.value.catalogVariant)&&['hidden','unplaced'].includes(state);
+  const score=n===q?(ambiguous?2:0):n.startsWith(q)?1:n.includes(q)?2:tags.includes(q)?3:matches?4:99;
+  const jump=Number(state==='jump');
+  const detailed=Number(Boolean(item.value.serviceIntel||item.value.hathor||intel?.sections.length));
+  return{item,score,jump,detailed};
+ }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||b.jump-a.jump||b.detailed-a.detailed||a.item.name.localeCompare(b.item.name,'es')).slice(0,activeFilter?100:16).map(x=>x.item);
  menu.replaceChildren();cursor=-1;
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
  suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
