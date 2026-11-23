@@ -16,7 +16,7 @@ export const shipServices = {repair:'Reparación de nave',refuel:'Repostaje',rea
 const serviceLabels={...serviceNames,...shipServices};
 const indexedResourceLabels={mineable:'Minería',harvestable:'Recolección',salvage:'Salvamento',remains:'Restos'};
 const iconGroup={
-  danger:'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
+  danger:'security', 'anti-capital':'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
   mission:'missions', mining:'missions', loot:'loot', weapons:'loot', cave:'loot',
   repair:'services', rearm:'services', refuel:'services', trade:'services', commodity:'services',
   hangar:'services', clinic:'services', landing:'navigation',
@@ -37,14 +37,14 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(!sources.has(url))sources.set(url,{url,label:entry.name||new URL(url).hostname,index:sources.size+1});
     return [sources.get(url).index];
   });
-  const add=(group,text,{title,status,sources:refs,destinations,temperature}={})=>{
+  const add=(group,text,{title,status,sources:refs,destinations,temperature,icons}={})=>{
     const indexes=[...new Set(addSources(refs))];
     if(!text&&!temperature)return;
     const key=normalize([temperature,text].filter(Boolean).join(' ')).replace(/[^\p{L}\p{N}]+/gu,' ').trim();
     if(seen.has(key))return;
     seen.add(key);
     if(!groups.has(group))groups.set(group,[]);
-    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature});
+    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature,icon:icons?.[0]});
   };
   const geographicalSections=tacticalSections(p);
   const catalogTrade=geographicalSections.find(section=>section.title==='Comercio');

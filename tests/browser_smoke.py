@@ -505,11 +505,19 @@ with sync_playwright() as p:
         expect(dossier.locator('[data-domain="loot"]')).to_contain_text('Sadaryx · minería a mano')
         expect(dossier.locator('[data-domain="loot"]')).to_contain_text('QV Secure Storage Keycard')
         expect(dossier.locator('[data-domain="services"]')).to_contain_text('20 millones de aUEC')
+        expect(dossier.locator('svg[data-icon="anti-capital"]')).to_have_count(0)
         expect(dossier).not_to_contain_text('Peligro crítico · defensas láser anticapital')
         verify_layout()
         page.screenshot(path=f'/tmp/verse-lab-nyx-breaker-{device}.png', full_page=True)
-        query('QV Extraction Station', 'QV Extraction Station')
-        expect(dossier.locator('[data-domain="security"]')).to_contain_text('defensas láser anticapital')
+        page.locator('#q').fill('QV Extraction Station')
+        option = page.locator('#suggestions button').filter(has_text='QV Extraction Station').first
+        expect(option.locator('svg[data-icon="anti-capital"]')).to_be_visible()
+        expect(option).to_contain_text('Anticapital por misión')
+        option.click()
+        security = dossier.locator('[data-domain="security"]')
+        expect(security).to_contain_text('defensas láser anticapital')
+        expect(security.locator('svg[data-icon="anti-capital"]')).to_be_visible()
+        page.screenshot(path=f'/tmp/verse-lab-nyx-anticapital-{device}.png', full_page=True)
         query('QV Logistics Station', 'QV Logistics Station')
         expect(dossier.locator('[data-domain="loot"]')).to_contain_text('Botín Vanduul · Testudo y materiales')
         show_filters()
@@ -521,13 +529,13 @@ with sync_playwright() as p:
         page = b.new_page(viewport={'width': width, 'height': height})
         page.goto(BASE + 'lab-preview/iconos.html')
         tiles = page.locator('.icon-tile')
-        expect(tiles).to_have_count(29)
-        assert page.locator('.icon-tile svg').count() == 87
+        expect(tiles).to_have_count(30)
+        assert page.locator('.icon-tile svg').count() == 90
         assert page.locator('.tactical-icon-state').count() == 4
         assert page.evaluate('document.documentElement.scrollWidth') <= width
         for tile in tiles.all():
             assert [svg.bounding_box()['width'] for svg in tile.locator('svg').all()] == [20,24,32]
-        assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 29
+        assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 30
         page.screenshot(path=f'/tmp/verse-lab-iconografia-{name}.png',full_page=True)
         page.close()
     b.close()

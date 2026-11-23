@@ -10,6 +10,7 @@ export const tacticalIcons = {
   landing: ['Plataforma de aterrizaje', 'service', 'Naves y logística', 'M11 5h10l8 8v6l-8 8H11l-8-8v-6z M11 10v12m10-12v12m-10-6h10 M16 2v3m0 22v3 M1 16h2m26 0h2'],
   pvp: ['PvP', 'danger', 'Combate', 'M3 9l6 2 3 5-3 5-6 2 2-7z M29 9l-6 2-3 5 3 5 6 2-2-7z M14 8h4m-2-2v4m-2 14h4m-2-2v4 M15 16h2'],
   pve: ['PvE', 'warning', 'Combate', 'M16 17l3 6 5 5-5-1-3 3-3-3-5 1 5-5z M4 7l3-3 4 3v4l-4 2-3-2z M21 7l4-3 3 3v4l-3 2-4-2z M14 5l2-2 2 2v4l-2 2-2-2z M7 16v2m18-2v2m-9-5v2'],
+  'anti-capital': ['Defensa láser anticapital', 'danger', 'Combate', 'M4 25l6-7 8-2 8-7v8l3 3-7 7H7z M8 24h11l4-4 M2 6l11 6m-8-9l10 6 M14 11v5m-3-2h6'],
   danger: ['Zona peligrosa', 'danger', 'Combate', 'M16 4l13 23H3z M9 23h14 M16 11v6m0 3v1'],
   contested: ['Zona disputada', 'danger', 'Combate', 'M3 11V6l4-3h5m8 0h5l4 3v5m0 10v5l-4 3h-5m-8 0H7l-4-3v-5 M9 11l14 10M23 11L9 21 M7 13V9h4m10 0h4v4m0 6v4h-4m-10 0H7v-4'],
   fps: ['Combate FPS', 'danger', 'Combate', 'M6 9V6l3-3h5l3 3v5h-4l-1 3H8l-2-2z M7 15l-3 3v8l3-1 1-6m1-4l5 2 3 3h5v4h-7l-4-3v5l4 3m-7 0v-4 M19 17h10v3h-8m6-3v-2m-6 8l2 3'],

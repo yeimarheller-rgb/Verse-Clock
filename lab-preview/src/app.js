@@ -211,6 +211,7 @@ function makeTacticalLabel(icon,text,size=20,state){
  return label;
 }
 function resultIcon(p){
+ if(dossierIcons(p).has('anti-capital'))return 'anti-capital';
  if(activeFilter)return activeFilter;
  const shape=normalize(p.name+' '+p.type);
  if(/distribution (center|centre)|centro de distribucion/.test(shape))return 'distribution';
@@ -313,6 +314,7 @@ function updateMenu(){
  suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
   const icon=resultIcon(item.value);
   const state=['repair','refuel','rearm'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
+  if(icon==='anti-capital')meta.textContent+=' · Anticapital por misión';
   name.prepend(tacticalIcon(icon,{size:20,state}));name.className='tactical-label';
  }btn.append(name,meta);btn.addEventListener('pointerdown',e=>e.preventDefault());btn.addEventListener('click',()=>pick(i));menu.append(btn)});
  menu.hidden=false;input.setAttribute('aria-expanded','true');
@@ -429,7 +431,14 @@ function applyPoiToMain(p){
   }
   for(const fact of facts){
    const copy=document.createElement('p');copy.className='dossier-fact';
-   if(fact.title){const lead=document.createElement('strong');lead.textContent=fact.title;copy.append(lead,' · ')}
+   if(fact.title){
+    const lead=document.createElement('strong');lead.textContent=fact.title;
+    if(fact.icon==='anti-capital'){
+     lead.className='tactical-label';
+     lead.prepend(tacticalIcon(fact.icon,{size:20}));
+    }
+    copy.append(lead,' · ');
+   }
    if(fact.temperature){
     const temp=document.createElement('strong');
     temp.className='environment-temperature';temp.textContent=fact.temperature;
