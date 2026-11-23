@@ -116,5 +116,6 @@
   {"id":42,"name":"Dudley & Daughters","system":"Pyro","body":"Pyro VI Lagrange Point 4","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
   {"id":43,"name":"Megumi Refueling","system":"Pyro","body":"Pyro VI Lagrange Point 5","type":"space_stations","services":["repair","refuel","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
   {"id":46,"name":"Gaslight","system":"Pyro","body":"Pyro V Lagrange Point 2","type":"space_stations","services":["repair","refuel","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
-  {"id":55,"name":"Nyx Gateway","system":"Pyro","body":"Nyx Gateway (Pyro system)","type":"space_stations","services":["repair","refuel","refinery","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","sourceName":"Nyx Gateway (Pyro)"}
+  {"id":55,"name":"Nyx Gateway","system":"Pyro","body":"Nyx Gateway (Pyro system)","type":"space_stations","services":["repair","refuel","refinery","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","sourceName":"Nyx Gateway (Pyro)"},
+  {"id":113,"name":"Seer's Canyon","system":"Pyro","body":"Vatra","type":"outposts","services":["repair","refuel"],"tradeTerminal":true,"checkedAt":"2026-11-23","landingSourceUrl":"https://uexcorp.space/terminals/info/name/landing-services-seer-s-canyon/","trade":[[518,"Commodity Shop - Seer's Canyon","4.10.3"]]}
 ]}

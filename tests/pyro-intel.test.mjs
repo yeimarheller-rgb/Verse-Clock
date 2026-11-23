@@ -29,7 +29,7 @@ test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from t
   assert.equal(snapshot.records[id],'hidden');
   assert.equal(hub.services?.repair,undefined);
  }
- assert.equal(Object.keys(snapshot.details).length,32);
+ assert.ok(Object.keys(snapshot.details).every(id=>sites.has(id)));
  assert.equal(Object.keys(snapshot.parentReferences).length,220);
  for(const [child,parent] of Object.entries(snapshot.parentReferences)){
   assert.equal(snapshot.records[child],'unplaced');
@@ -64,6 +64,20 @@ test('reported Pyro ship services attach to the exact station and do not confer 
  assert.equal(patch.serviceIntel.id,34);
  assert.equal(get('Pyro','Nyx Gateway').serviceIntel.id,55);
  assert.notEqual(get('Stanton','Nyx Gateway').serviceIntel.id,55);
+});
+
+test('Pyro body dossiers link to documented landing services without claiming ground repairs',()=>{
+ const byKey=new Map(pyro.map(row=>[atlasKey(row),{...row,system:'Pyro'}]));
+ mergeTacticalAtlas(byKey,read('atlas-services'),catalogue.version);
+ applyCatalogIntel(byKey,rows,snapshot,catalogue.version,'Pyro');
+ const get=name=>byKey.get(atlasKey({system:'Pyro',name}));
+ const vatra=get('Vatra');
+ const seers=get("Seer's Canyon");
+ assert.equal(vatra.catalogIntel.sections[0].destinations[0].uuid,seers.id);
+ assert.equal(seers.services.repair,'reported');
+ assert.equal(seers.services.rearm,undefined);
+ assert.match(seers.catalogIntel.sections.find(s=>s.title.includes('Vehículos terrestres')).text,/pendiente/);
+ assert.equal(get("Jackson's Swap").services.repair,undefined);
 });
 
 test('Nyx keeps both BRK-204 variants and routes to the correct Levski hospital',()=>{

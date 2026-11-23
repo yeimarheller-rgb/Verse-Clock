@@ -110,9 +110,13 @@ export function stantonCatalogReview(p, review){
   ...(validNote?{noteSource:note.source,destinationUuid:note.destinationUuid}:{}),checkedAt:review.checkedAt};
 }
 
-export function mergeStanton(byKey, data) {
+export function mergeStanton(byKey, data, shared) {
  if(data?.schemaVersion!==1)return;
  const byUuid=new Map([...byKey].flatMap(([key,p])=>atlasSystem(p.system)==='Stanton'&&locationUuid(p)?[[locationUuid(p),key]]:[]));
+ const sharedByUuid=new Map();
+ for(const {locationIds,claims} of (shared?.schemaVersion===1&&shared.version===data.live?shared.sharedClaims:[])||[]){
+  for(const uuid of locationIds)sharedByUuid.set(uuid,[...(sharedByUuid.get(uuid)||[]),...claims]);
+ }
  for(const row of data.locations){
   const key=row.uuid?byUuid.get(row.uuid):atlasKey({system:'Stanton',name:row.name});
   const original=byKey.get(key);
@@ -121,7 +125,7 @@ export function mergeStanton(byKey, data) {
   for(const claim of row.claims){
    if(claim.status==='documented'&&claim.sources?.every(httpsSource)&&claim.sources.length)for(const service of claim.services||[])services[service]='confirmed';
   }
-  byKey.set(key,{...original,services,stantonIntel:{...row,checkedAt:row.checkedAt||data.checkedAt}});
+  byKey.set(key,{...original,services,stantonIntel:{...row,sharedClaims:sharedByUuid.get(row.uuid),checkedAt:row.checkedAt||data.checkedAt}});
  }
  for(const [uuid,key] of byUuid){
   if(!Object.hasOwn(data.catalogReview?.records||{},uuid))continue;
@@ -131,7 +135,7 @@ export function mergeStanton(byKey, data) {
  }
 }
 export function stantonSections(p) {
- const sections=(p.stantonIntel?.claims||[]).map(claim=>({
+ const sections=[...(p.stantonIntel?.claims||[]),...(p.stantonIntel?.sharedClaims||[])].map(claim=>({
   title:claim.title||stantonFields[claim.field], icons:[iconsByField[claim.field]],
   text:claim.text, destinations:claim.destinations, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
   sources:claim.sources.map(url=>({url,name:new URL(url).hostname})),

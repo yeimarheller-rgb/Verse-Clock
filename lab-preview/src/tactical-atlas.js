@@ -96,7 +96,7 @@ export function tacticalSections(p) {
     const pads = intel.padTypes ? ' Plataformas registradas: ' + intel.padTypes.replaceAll(',', ', ') + '.' : '';
     const how = hasLandingServices ? ' Aterriza y abre los servicios de aterrizaje desde el mobiGlas en el asiento de piloto.' : '';
     sections.push({title: 'Servicios registrados', icons: [], text: services + '.' + pads + how,
-      sources: hasLandingServices ? [uex, source('RSI · servicios de mantenimiento', maintenance)] : [uex]});
+      sources: hasLandingServices ? [intel.landingSourceUrl ? source('UEX · servicios de aterrizaje', intel.landingSourceUrl) : uex, source('RSI · servicios de mantenimiento', maintenance)] : [uex]});
   }
   if (intel.tradeTerminal || intel.trade?.length) {
     const named = (intel.trade || []).map(([id, name, version]) => name + ' (UEX #' + id + (version ? ', registro ' + version : '') + ')');

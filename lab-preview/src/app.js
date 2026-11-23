@@ -544,7 +544,8 @@ function renderPoi(){
   const text=normalize([p.name,p.system,p.parent,p.operator,p.type,p.catalogVariant,...(p.amenities||[]),...tacticalTags(p),
    ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),
    ...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),
-   ...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].join(' '));
+   ...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name),
+   ...stantonSections(p).map(section=>section.title+' '+section.text)].join(' '));
   return queryTerms.every(term=>text.includes(term));
  }),query,p=>p);
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
@@ -554,7 +555,7 @@ function renderPoi(){
  const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.append(makeTacticalLabel(resultIcon(p),p.name));
  const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type,qvMarkerLabel(p)].filter(Boolean).join(' · ');
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
- const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
+ const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(matchesFilter(p,'loot'))labels.push('Botín');if(matchesFilter(p,'repair'))labels.push('Reparación');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
  card.append(h,meta,org,intel,svc);
  card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label','Ver información de '+p.name);
@@ -671,6 +672,7 @@ async function loadAtlas(){
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=atlasKey;
  const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
+ const stantonSharedRequest=fetch('./data/stanton-shared-claims.json').then(r=>r.ok?r.json():null).catch(()=>null);
  const catalogIntelRequests=Promise.all(auditedSystems.map(system=>
   fetch('./data/'+system.toLowerCase()+'-intel.json').then(r=>r.ok?r.json():null).catch(()=>null)));
  const servicesRequest=fetch('./data/atlas-services.json').then(r=>{if(!r.ok)throw Error('Services HTTP '+r.status);return r.json()})
@@ -691,7 +693,7 @@ async function loadAtlas(){
  mergeTacticalAtlas(byKey,serviceSnapshot,version);
  const stantonSnapshot=await stantonRequest;
  stantonReview=stantonSnapshot?.catalogReview;
- mergeStanton(byKey,stantonSnapshot);
+ mergeStanton(byKey,stantonSnapshot,await stantonSharedRequest);
  const snapshots=await catalogIntelRequests;
  for(const [index,system] of auditedSystems.entries()){
   const review=applyCatalogIntel(byKey,catalog,snapshots[index],version,system);

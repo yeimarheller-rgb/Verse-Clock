@@ -2005,6 +2005,42 @@
           }
         ],
         "status": "Datos extraídos · contenido por punto variable"
+      },
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Pyro IV con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/chawla-s-beach"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
       }
     ],
     "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8": [
@@ -2021,6 +2057,42 @@
           }
         ],
         "status": "Datos extraídos · contenido por punto variable"
+      },
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Pyro I con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/rustville"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
       }
     ],
     "8d7e2b47-d27b-4e0d-9760-7bb502ae02e1": [
@@ -2037,6 +2109,24 @@
           }
         ],
         "status": "Datos extraídos · contenido por punto variable"
+      },
+      {
+        "title": "Armas FPS y accesorios · cajas de equipo",
+        "icons": [
+          "loot"
+        ],
+        "text": "En Ashland se han observado armas FPS con accesorios dentro de cajas del puesto. Busca contenedores de equipo en los edificios. El reparto por modelo y por caja sigue pendiente.",
+        "sources": [
+          {
+            "name": "SALCOM · recorrido en Ashland",
+            "url": "https://saltscommand.com/pyro-outposts.html"
+          },
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Observado en PTU 4.2 · puntos del puesto presentes en 4.10.3"
       }
     ],
     "e58aad93-edd0-43b6-878c-255b604daeb5": [
@@ -2152,6 +2242,574 @@
             "url": "https://www.citadelsc.com/es/contested-zones"
           }
         ]
+      }
+    ],
+    "15f00205-1b3a-49ec-9b21-d74b60cf2b86": [
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Monox con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/sunset-mesa"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
+      }
+    ],
+    "e4653c71-cc4a-495a-b115-886bc84e79cc": [
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Bloom con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/windfall"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
+      }
+    ],
+    "4a971e19-7390-4075-bd16-3ef71ad9394e": [
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Vatra con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
+      },
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 181 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "256e7587-7c08-41de-8786-2338e51be039": [
+      {
+        "title": "Reparación y repostaje · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Plataforma de superficie en Terminus con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/last-landings"
+          },
+          {
+            "name": "RSI · Servicios de aterrizaje",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360007981814-Vehicle-Maintenance-Services"
+          },
+          {
+            "name": "RSI · Incidencias 4.10.3",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
+          }
+        ],
+        "status": "Servicio reportado · disponibilidad por sesión"
+      },
+      {
+        "title": "Vehículos terrestres · reparación pendiente",
+        "icons": [
+          "repair"
+        ],
+        "text": "La reparación de vehículos terrestres en su plataforma sigue pendiente de verificar.",
+        "sources": [
+          {
+            "name": "RSI · compatibilidad con vehículos terrestres",
+            "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/17653304787223-Ground-Vehicles-and-Initial-Spawn-Points"
+          }
+        ],
+        "status": "Pendiente en 4.10.3 LIVE"
+      },
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 164 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "bd473b11-e20d-415f-bac3-e9e8099582b2": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville (Pyro I) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/rustville"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          }
+        ]
+      }
+    ],
+    "ee842006-2374-4fe9-939d-8f02ac8cd4f3": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Sunset Mesa (Monox) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/sunset-mesa"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "15f00205-1b3a-49ec-9b21-d74b60cf2b86"
+          }
+        ]
+      },
+      {
+        "title": "Reparación de nave · estaciones orbitales",
+        "icons": [
+          "repair"
+        ],
+        "text": "Estaciones de la región con reparación registrada: Checkmate. Abre cada ficha para consultar sus servicios y el acceso.",
+        "sources": [
+          {
+            "name": "UEX · estaciones espaciales",
+            "url": "https://uexcorp.space/resources/home/type/space_stations/"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "07463f54-4ecd-4323-8a28-fb65b8a4ebca"
+          }
+        ]
+      }
+    ],
+    "59637d5a-c67a-47eb-96dc-b648298f0023": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Windfall (Bloom) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/windfall"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "e4653c71-cc4a-495a-b115-886bc84e79cc"
+          }
+        ]
+      },
+      {
+        "title": "Reparación de nave · estaciones orbitales",
+        "icons": [
+          "repair"
+        ],
+        "text": "Estaciones de la región con reparación registrada: Orbituary, Starlight Service Station, Patch City. Abre cada ficha para consultar sus servicios y el acceso.",
+        "sources": [
+          {
+            "name": "UEX · estaciones espaciales",
+            "url": "https://uexcorp.space/resources/home/type/space_stations/"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "28e220ba-ba74-42eb-bae5-382475eba65d"
+          },
+          {
+            "uuid": "a8b1ec44-6287-4687-9a56-476663db591a"
+          },
+          {
+            "uuid": "430316d5-f330-4e6c-93b8-823a062689db"
+          }
+        ]
+      }
+    ],
+    "ac826dfb-7142-4a15-bcdd-8e15d337ad1f": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Chawla's Beach (Pyro IV) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/chawla-s-beach"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "6654a246-09af-4e6a-bbab-764dce07d635"
+          }
+        ]
+      }
+    ],
+    "baccdeb5-1960-487e-beab-d7b51f1871d1": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Seer's Canyon (Vatra) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "4a971e19-7390-4075-bd16-3ef71ad9394e"
+          }
+        ]
+      }
+    ],
+    "c8cd0adb-d75e-483e-aa5c-027495c83cdc": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Seer's Canyon (Vatra) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "4a971e19-7390-4075-bd16-3ef71ad9394e"
+          }
+        ]
+      },
+      {
+        "title": "Reparación de nave · estaciones orbitales",
+        "icons": [
+          "repair"
+        ],
+        "text": "Estaciones de la región con reparación registrada: Gaslight, Rod's Fuel 'N Supplies, Rat's Nest. Abre cada ficha para consultar sus servicios y el acceso.",
+        "sources": [
+          {
+            "name": "UEX · estaciones espaciales",
+            "url": "https://uexcorp.space/resources/home/type/space_stations/"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "beaadc7f-9f3c-4a2d-8dd6-f56d57de1c60"
+          },
+          {
+            "uuid": "1711f3cc-59ef-4b08-a762-19d8691ae268"
+          },
+          {
+            "uuid": "5e241629-e58f-4c15-b938-acc2cc287cd4"
+          }
+        ]
+      }
+    ],
+    "8c462714-a82e-4d91-8d13-33b325a8efa5": [
+      {
+        "title": "Reparación de nave · puesto de superficie",
+        "icons": [
+          "repair"
+        ],
+        "text": "Last Landings (Terminus) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "sources": [
+          {
+            "name": "Registro del puesto",
+            "url": "https://www.citadelsc.com/en/map/last-landings"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "256e7587-7c08-41de-8786-2338e51be039"
+          }
+        ]
+      },
+      {
+        "title": "Reparación de nave · estaciones orbitales",
+        "icons": [
+          "repair"
+        ],
+        "text": "Estaciones de la región con reparación registrada: Ruin Station, Endgame, Dudley & Daughters, Megumi Refueling. Abre cada ficha para consultar sus servicios y el acceso.",
+        "sources": [
+          {
+            "name": "UEX · estaciones espaciales",
+            "url": "https://uexcorp.space/resources/home/type/space_stations/"
+          }
+        ],
+        "status": "Servicio reportado",
+        "destinations": [
+          {
+            "uuid": "1c585a2e-73c4-4bc5-8922-e0b434b8c8ea"
+          },
+          {
+            "uuid": "b6771617-3965-4663-bb53-5f595ab1c761"
+          },
+          {
+            "uuid": "a88ae72e-15e9-43da-8a20-c14cc851d2da"
+          },
+          {
+            "uuid": "82a8afd8-cd0a-4f5b-b448-35fa1214684e"
+          }
+        ]
+      }
+    ],
+    "7c76625d-956c-4028-9649-bc29f037ac72": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 38 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "aa347865-7054-4578-b96b-7e0108259909": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 50 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "887e6fe8-34f2-40f4-b59b-c1863c1621fd": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 43 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "8233ce04-4baa-424a-a1c5-9a4ee2898a7e": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 104 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "310f1f19-11f7-45b1-b897-0685b01ab570": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 182 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "89fd83cb-1216-4177-97d0-cff7ed403363": [
+      {
+        "title": "Botín del puesto de superficie",
+        "icons": [
+          "loot"
+        ],
+        "text": "La extracción de 4.10.3 lista 43 puntos de aparición en este puesto. Abre el mapa del lugar en la fuente para consultar contenedores y puntos individuales.",
+        "sources": [
+          {
+            "name": "Loot Verse · 4.10.3 LIVE",
+            "url": "https://loot-verse.com/"
+          }
+        ],
+        "status": "Configuración de botín · contenido variable"
+      }
+    ],
+    "07463f54-4ecd-4323-8a28-fb65b8a4ebca": [
+      {
+        "title": "Armaduras Scorched y Rager · cajas naranjas",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía comunitaria documenta piezas de Scorched Iridescent y Rager Green Pink en cajas naranjas de las zonas disputadas. Busca dentro del recinto PvPvE. La distribución exacta por sala sigue pendiente.",
+        "sources": [
+          {
+            "name": "SC Loadouts · armaduras de zonas disputadas",
+            "url": "https://scloadouts.com/"
+          }
+        ],
+        "status": "Botín reportado para la familia"
+      }
+    ],
+    "28e220ba-ba74-42eb-bae5-382475eba65d": [
+      {
+        "title": "Armaduras Scorched y Rager · cajas naranjas",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía comunitaria documenta piezas de Scorched Iridescent y Rager Green Pink en cajas naranjas de las zonas disputadas. Busca dentro del recinto PvPvE. La distribución exacta por sala sigue pendiente.",
+        "sources": [
+          {
+            "name": "SC Loadouts · armaduras de zonas disputadas",
+            "url": "https://scloadouts.com/"
+          }
+        ],
+        "status": "Botín reportado para la familia"
+      }
+    ],
+    "1c585a2e-73c4-4bc5-8922-e0b434b8c8ea": [
+      {
+        "title": "Armaduras Scorched y Rager · cajas naranjas",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía comunitaria documenta piezas de Scorched Iridescent y Rager Green Pink en cajas naranjas de las zonas disputadas. Busca dentro del recinto PvPvE. La distribución exacta por sala sigue pendiente.",
+        "sources": [
+          {
+            "name": "SC Loadouts · armaduras de zonas disputadas",
+            "url": "https://scloadouts.com/"
+          }
+        ],
+        "status": "Botín reportado para la familia"
       }
     ]
   },
@@ -2491,6 +3149,88 @@
             }
           ],
           "status": "Pendiente de verificación en partida"
+        }
+      ]
+    },
+    {
+      "locationIds": [
+        "f3f28c8d-9891-44f2-8c4f-502039645dde",
+        "bae9d976-d314-4998-a1f9-555619769436",
+        "f884b3ca-6a43-45d9-b37e-3dc5e2fa5acc",
+        "df7a76c9-7a37-4028-b584-f53a930f848c",
+        "142f694d-6d72-4915-bfa1-ead77af036ce",
+        "8f348f9f-48bc-4a4d-923a-6ea8751792ae",
+        "fa914ecb-2c0e-4512-987c-ecd5dfeed408",
+        "27f1a509-4775-437a-a0a9-88205cfc019a",
+        "90879129-2010-474b-81c3-0416964d6f81",
+        "acb7dde1-23f5-48c7-b7c8-0ab6585815f6"
+      ],
+      "sections": [
+        {
+          "title": "Armadura pesada · Dust Devil y ADP-mk4 Camo Green",
+          "icons": [
+            "loot"
+          ],
+          "text": "Las guías registran piezas Dust Devil y de la ADP-mk4 Camo Green en cajas de esta familia de instalaciones. El contenido varía por caja y sesión.",
+          "sources": [
+            {
+              "name": "Citadel · Dust Devil",
+              "url": "https://www.citadelsc.com/en/gear/set/set-dust-devil"
+            },
+            {
+              "name": "SC Loadouts · armaduras",
+              "url": "https://scloadouts.com/"
+            }
+          ],
+          "status": "Botín reportado para la familia"
+        },
+        {
+          "title": "Prism Laser Shotgun · sala de procesamiento",
+          "icons": [
+            "loot"
+          ],
+          "text": "La ruta comunitaria coloca la escopeta láser Prism entre el botín posible de la sala de procesamiento de Farro. Revisa las cajas de armas y el equipo de los enemigos.",
+          "sources": [
+            {
+              "name": "CmdGlas · tabla de equipo",
+              "url": "https://cmdglas.com/"
+            },
+            {
+              "name": "Citadel · ruta de la Prism",
+              "url": "https://www.citadelsc.com/en/wikelo/make-volt-shotgun-angrier"
+            }
+          ],
+          "status": "Botín reportado para la familia"
+        }
+      ]
+    },
+    {
+      "locationIds": [
+        "9eabd9ac-5e54-4683-aa08-3490b29a56ce",
+        "5c1b2f4f-6876-4c5e-8b6d-a58160aca027",
+        "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c",
+        "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929",
+        "26afa18b-af55-44a5-8a19-ceb06c3f69ba",
+        "5b6422d9-4f8b-42ff-b892-1a6ac17439ad"
+      ],
+      "sections": [
+        {
+          "title": "Armadura pesada · Dust Devil y ADP-mk4 Camo Green",
+          "icons": [
+            "loot"
+          ],
+          "text": "Las guías registran piezas Dust Devil y de la ADP-mk4 Camo Green en cajas de esta familia de instalaciones. El contenido varía por caja y sesión.",
+          "sources": [
+            {
+              "name": "Citadel · Dust Devil",
+              "url": "https://www.citadelsc.com/en/gear/set/set-dust-devil"
+            },
+            {
+              "name": "SC Loadouts · armaduras",
+              "url": "https://scloadouts.com/"
+            }
+          ],
+          "status": "Botín reportado para la familia"
         }
       ]
     }
