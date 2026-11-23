@@ -92,6 +92,18 @@ const httpsSource=value=>{
  catch { return false; }
 };
 
+// Explicit, per-location attestation. A valid HTTPS URL alone is not evidence that
+// the linked page establishes a particular facility's service or activity.
+export function hasStantonLocalAttestation(claim, uuid) {
+ const evidence=claim?.localEvidence;
+ return Boolean(uuid && evidence?.uuid===uuid &&
+  evidence?.scope==='location' && evidence?.reviewed===true &&
+  typeof evidence.patch==='string' && evidence.patch.trim() &&
+  typeof evidence.source==='string' && httpsSource(evidence.source) &&
+  claim?.sources?.includes(evidence.source) &&
+  claim?.status==='documented' && claim?.text?.trim());
+}
+
 const catalogReviewMessages={
  technical:'Registro técnico sin identidad de juego. Excluido de la cobertura operativa.',
  hidden:'La posición extraída corresponde a un marcador oculto. El acceso, las actividades y los servicios locales siguen pendientes de evidencia.',
@@ -123,7 +135,7 @@ export function mergeStanton(byKey, data, shared) {
   if(!original)continue;
   const services={...original.services};
   for(const claim of row.claims){
-   if(claim.status==='documented'&&claim.sources?.every(httpsSource)&&claim.sources.length)for(const service of claim.services||[])services[service]='confirmed';
+   if(hasStantonLocalAttestation(claim,row.uuid)&&claim.sources?.every(httpsSource)&&claim.sources.length)for(const service of claim.services||[])services[service]='confirmed';
   }
   byKey.set(key,{...original,services,stantonIntel:{...row,sharedClaims:sharedByUuid.get(row.uuid),checkedAt:row.checkedAt||data.checkedAt}});
  }
@@ -156,7 +168,7 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
  const pending={technical:0,hidden:0,unplaced:0,placed:0,unclassified:0};
- let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0;
+ let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0,certifiedLocal=0;
  const countedDocumentedUuids=new Set();
  for(const row of catalog){
   const p=matches.get(locationUuid(row));
@@ -197,10 +209,13 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
    documentedLocal++;
    countedDocumentedUuids.add(locationUuid(row));
   }
+  if(p.stantonIntel?.uuid===locationUuid(row)&&p.stantonIntel.claims?.some(claim=>
+   claim.field in stantonFields && claim.sources?.length && claim.sources.every(httpsSource) &&
+   hasStantonLocalAttestation(claim,locationUuid(row))))certifiedLocal++;
   if(Object.keys(counts).every(field=>facts.has(field)||p.stantonIntel?.reviewedWithoutEvidence?.includes(field)))reviewedAll++;
   for(const field of facts)counts[field]++;
   for(const grade of grades)sources[grade]++;
  }
  return {total:catalog.length,catalogTotal:inventory.length,excludedTemporary:inventory.length-catalog.length,
-  geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources,pending};
+  geographic,enriched,operational,documentedLocal,certifiedLocal,reviewedAll,counts,sources,pending};
 }
