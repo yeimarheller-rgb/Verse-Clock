@@ -28,7 +28,12 @@ export function stantonNavigationText(detail, name) {
  if (mode === 'private' && /^Mining Base #/.test(name)) {
   return name + ' tiene marcador visible sin salto directo. El registro de la UEE exige autorización de acceso a esta base minera.';
  }
- if (mode === 'approach'  && Number.isInteger(distanceKm) && distanceKm > 0 && distanceKm <= 10000) {
+ if (mode === 'race-approach' && name==="Miner's Lament" && referenceName==='Grim HEX' &&
+     Number.isInteger(distanceKm) && distanceKm>0 && distanceKm<=10000) {
+  return "Miner's Lament es un circuito de Wildstar Racing en gravedad cero junto a Yela. El marcador es visible y carece de salto directo. El centro del circuito figura a unos " +
+   distanceKm.toLocaleString('es-ES') + ' km del centro de Grim HEX, que sí tiene salto cuántico.';
+ }
+ if (mode === 'approach'   && Number.isInteger(distanceKm) && distanceKm > 0 && distanceKm <= 10000) {
   const direction = 'El marcador de ' + name + ' está oculto y carece de salto directo. Usa ' + referenceName + ' como referencia cuántica. Su centro queda a unos ' + distanceKm.toLocaleString('es-ES') + ' km del centro de ese destino en los archivos del parche.';
   return detail.privateAccess === true ? direction + ' El registro de la UEE exige autorización de acceso.' : direction;
  }

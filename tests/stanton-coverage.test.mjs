@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
-import {hasStantonLocalAttestation, identifyStantonVariants,inStantonZone,isStantonPlaceholder, isStantonTemporaryEvent, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
+import {hasStantonLocalAttestation, identifyStantonVariants,inStantonZone,isStantonPlaceholder, isStantonTemporaryEvent, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonDisposition, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
 
 const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue=read('wiki-atlas');
@@ -522,8 +522,8 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
  assert.equal(scoped.operational,808);
  assert.equal(scoped.operational,full.operational);
  assert.equal(scoped.documentedLocal,663);
- assert.equal(scoped.certifiedLocal,801);
- assert.equal(scoped.certifiedCounts.access,798);
+ assert.equal(scoped.certifiedLocal,802);
+ assert.equal(scoped.certifiedCounts.access,799);
  assert.equal(scoped.certifiedCounts.repair,0);
  assert.equal(scoped.certifiedCounts.logistics,3);
  assert.equal(scoped.certifiedCounts.refuel,21);
@@ -638,4 +638,22 @@ test('Stanton navigation certifies configured access per UUID and keeps ship ser
  assert.match(inactive.uncertainty,/requieren comprobación en partida/);
  const unplaced=at('HDOF-Palomar');
  assert.equal(unplaced.stantonIntel?.certifiedClaims?.length,0);
+});
+
+test('the LIVE audit reconciles every Stanton UUID without certifying unresolved records',()=>{
+ const audit=read('stanton-certified-evidence');
+ const certified=new Set(audit.claims.map(c=>c.uuid));
+ for(const row of raw){
+  const result=stantonDisposition(row,stanton.catalogReview,audit);
+  assert.notEqual(Boolean(result),certified.has(row.id),row.id);
+  if(result)assert.equal(stantonDisposition({...row,source:{...row.source,version:'5.0-PTU'}},stanton.catalogReview,audit),null);
+ }
+ assert.equal(certified.size+Object.keys(audit.dispositions).length,raw.length);
+ const coverage=stantonCoverage(raw,visible,'Stanton',stanton.catalogReview,audit);
+ assert.equal(coverage.audited,886);
+ assert.deepEqual(coverage.auditedDispositions,{technical:26,homonym:30,unplaced:26,reference:2});
+ assert.equal(coverage.total-coverage.certifiedLocal,84);
+ const race=at("Miner's Lament").stantonIntel.certifiedClaims[0];
+ assert.match(race.text,/157 km del centro de Grim HEX/);
+ assert.equal(race.field,'access');
 });

@@ -194,7 +194,7 @@ $('filterToggle').addEventListener('click',()=>{
  hideMenu();
 });
 let rawStantonCatalog=[];
-let stantonReview;
+let stantonReview,stantonAudit;
 const stantonZone=$('stantonZone');
 const auditedSystems=['Pyro','Nyx'];
 const sectionsFor=p=>[...tacticalSections(p),...stantonSections(p)];
@@ -245,13 +245,13 @@ function renderStantonCoverage(){
  const host=$('stantonCoverage');
  if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
  const zone=auditedSystems.includes(stantonZone.value)?'Stanton':stantonZone.value||'Stanton';
- const c=stantonCoverage(rawStantonCatalog,poiData,zone,stantonReview);
+ const c=stantonCoverage(rawStantonCatalog,poiData,zone,stantonReview,stantonAudit);
  const summary=document.createElement('p');
  const percentage=count=>(c.total?100*count/c.total:0).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
- summary.textContent=c.operational+' / '+c.total+' operativas · '+percentage(c.operational)+' % · '+c.certifiedLocal+' / '+c.total+' certificadas · '+percentage(c.certifiedLocal)+' % · objetivo certificado 90 %';
+ summary.textContent=c.operational+' / '+c.total+' operativas · '+percentage(c.operational)+' % · '+c.certifiedLocal+' / '+c.total+' certificadas · '+percentage(c.certifiedLocal)+' %';
  const list=document.createElement('dl');list.className='stanton-metrics';
  const metrics={'Geografía con identidad única':c.geographic,'Fichas con datos añadidos':c.enriched,
-  'Documentación candidata por UUID':c.documentedLocal,'Evidencia local certificada':c.certifiedLocal,'Campos aplicables revisados':c.reviewedAll,
+  'UUID revisados':c.audited,'Documentación candidata por UUID':c.documentedLocal,'Evidencia local certificada':c.certifiedLocal,'Campos aplicables revisados':c.reviewedAll,
   ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
   'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
  for(const [label,count] of Object.entries(metrics)){
@@ -272,7 +272,12 @@ function renderStantonCoverage(){
  };
  const pending=Object.entries(pendingLabels).flatMap(([key,label])=>c.pending[key]?[c.pending[key]+' '+label]:[]);
  inventory.textContent=(c.catalogTotal-c.pending.unclassified)+' / '+c.catalogTotal+' registros conciliados'+(pending.length?' · '+pending.join(' · '):'')+'.';
- host.replaceChildren(summary,list,inventory,note);
+ const closure=document.createElement('p');
+ const reasons={technical:'registros técnicos',reference:'referencias estelares',homonym:'registros con nombres repetidos',
+  unplaced:'registros sin posición',hidden:'marcadores ocultos',placed:'marcadores sin uso local confirmado'};
+ const findings=Object.entries(reasons).flatMap(([key,label])=>c.auditedDispositions[key]?[c.auditedDispositions[key]+' '+label]:[]);
+ closure.textContent=c.audited+' / '+c.total+' UUID revisados · '+percentage(c.audited)+' %. '+(c.total-c.certifiedLocal)+' sin evidencia local certificada'+(findings.length?' · '+findings.join(' · '):'')+'.';
+ host.replaceChildren(summary,closure,list,inventory,note);
 }
 $('operationsToggle').addEventListener('click',()=>{
  operationsEnabled=!operationsEnabled;
@@ -703,7 +708,8 @@ async function loadAtlas(){
  mergeTacticalAtlas(byKey,serviceSnapshot,version);
  const stantonSnapshot=await stantonRequest;
  stantonReview=stantonSnapshot?.catalogReview;
- mergeStanton(byKey,stantonSnapshot,await stantonSharedRequest,await stantonAuditRequest);
+ stantonAudit=await stantonAuditRequest;
+ mergeStanton(byKey,stantonSnapshot,await stantonSharedRequest,stantonAudit);
  const snapshots=await catalogIntelRequests;
  for(const [index,system] of auditedSystems.entries()){
   const review=applyCatalogIntel(byKey,catalog,snapshots[index],version,system);

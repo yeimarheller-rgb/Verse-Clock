@@ -51,6 +51,15 @@ function navigation(def,pos) {
   return {...parentReference,mode:'direct',arrivalMeters:def.QuantumTravel?.ArrivalRadius??null,
    selectParent:def.OnlyShowWhenParentSelected===true};
  }
+ if (!pos.hidden && !def.HideInStarmap && pos.qt_valid===false && pos.type==='Asteroid' &&
+     def.Name==="Miner's Lament" && parent.Name==='Yela' &&
+     def.Description==='A small cluster of mined-out asteroids that have been repurposed into a zero-g racetrack. Operated by Wildstar Racing.') {
+  const target=placedNames.get('Grim HEX');
+  if(target?.parent_uuid===parent.UUID && directDestination(definitions.get(target.uuid),target)){
+   return {referenceUuid:target.uuid,referenceName:target.name,mode:'race-approach',
+    distanceKm:Math.round(distance(pos,target)/1000)};
+  }
+ }
  if (!pos.hidden && !def.HideInStarmap && !pos.qt_valid && pos.type==='Asteroid' &&
      /No unauthorized access allowed\./.test(def.Description)) return {...parentReference,mode:'private'};
  const regional=/^(ARC|CRU|HUR|MIC) L[1-5]$/.test(def.Name) &&
@@ -163,6 +172,29 @@ for(const row of inventory){
   add(uuid,field,`La descripción de ${def.Name} enumera ${label} como servicio de la estación.`,uncertainty,definitionSource,'description',token);
  }
 }
-const output={schemaVersion:1,version:intel.live,reviewedAt,status:'source-reviewed',commit:sourceCommit,claims};
+const certified=new Set(claims.map(claim=>claim.uuid));
+const dispositions={};
+for(const row of inventory){
+ if(certified.has(row.id))continue;
+ const def=definitions.get(row.id), pos=placements.get(row.id);
+ if(def?.Name!==row.name)throw Error('Definition mismatch: '+row.id);
+ let reason;
+ if(/^<= (?:PLACEHOLDER|UNINITIALIZED) =>$/.test(row.name)){
+  reason='technical';
+ }else if(row.name==='RSI Event Platform' && intel.catalogReview.records[row.id]==='unplacedEventPlatform'){
+  reason='event';
+ }else if(row.name==='Stanton' && def.Type?.Classification==='Star' ||
+          row.name==='Stanton System' && def.Type?.Classification==='Solar System'){
+  reason='reference';
+ }else if(!inventoryNames.get(row.name)){
+  reason='homonym';
+ }else if(!pos){
+  reason='unplaced';
+ }else{
+  reason=pos.hidden?'hidden':'placed';
+ }
+ dispositions[row.id]={reason,placed:Boolean(pos),...(pos?{hidden:pos.hidden}:{}),definitionType:def.Type.Classification};
+}
+const output={schemaVersion:1,version:intel.live,reviewedAt,status:'source-reviewed',commit:sourceCommit,claims,dispositions};
 writeFileSync(new URL('../lab-preview/data/stanton-certified-evidence.json',import.meta.url),JSON.stringify(output,null,2)+'\n');
 console.log(JSON.stringify({inventory:inventory.length,claims:claims.length,locations:new Set(claims.map(x=>x.uuid)).size,fields:Object.fromEntries(['access','logistics','refuel','rearm'].map(f=>[f,claims.filter(c=>c.field===f).length]))}));

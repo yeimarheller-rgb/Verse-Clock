@@ -134,7 +134,7 @@ function specificServiceCandidate(claim, location) {
 }
 
 const catalogReviewMessages={
- technical:'Registro técnico sin identidad de juego. Excluido de la cobertura operativa.',
+ technical:'Registro técnico sin identidad de juego ni evidencia operativa.',
  hidden:'La posición extraída corresponde a un marcador oculto. El acceso, las actividades y los servicios locales siguen pendientes de evidencia.',
  unplacedEventPlatform:'Plataforma del evento temporal RSI Discovery Month. El registro se conserva como referencia del catálogo.',
  unplaced:'Este UUID carece de una posición en la extracción revisada. Su presencia y su uso en partida siguen pendientes de evidencia local.',
@@ -151,6 +151,29 @@ export function stantonCatalogReview(p, review){
   ...(validNote?{noteSource:note.source,destinationUuid:note.destinationUuid}:{}),checkedAt:review.checkedAt};
 }
 
+const dispositionMessages={
+ technical:'Identificador técnico sin nombre de juego.',
+ event:'Plataforma de evento temporal.',
+ reference:'Referencia del mapa estelar sin una actividad local evaluable.',
+ homonym:'Hay otros UUID con el mismo nombre. Este registro carece de evidencia local que lo distinga.',
+ unplaced:'La extracción no contiene una posición para este UUID.',
+ hidden:'Marcador oculto con uso local sin confirmar.',
+ placed:'Marcador extraído con uso local sin confirmar.',
+};
+
+function currentStantonAudit(audit,review){
+ return audit?.schemaVersion===1 && audit.status==='source-reviewed' && audit.version===review?.version &&
+  dateIsValid(audit.reviewedAt) &&
+  review.positionSource===`https://github.com/StarCitizenWiki/scunpacked-data/blob/${audit.commit}/starmap_positions.json`;
+}
+
+export function stantonDisposition(p,review,audit){
+ if(!currentStantonAudit(audit,review)||p.source?.version!==audit.version)return null;
+ const item=audit.dispositions?.[locationUuid(p)];
+ if(!Object.hasOwn(dispositionMessages,item?.reason)||typeof item.definitionType!=='string'||typeof item.placed!=='boolean')return null;
+ return {reason:item.reason,text:dispositionMessages[item.reason],source:review.positionSource,checkedAt:audit.reviewedAt};
+}
+
 export function mergeStanton(byKey, data, shared, audit) {
  if(data?.schemaVersion!==1)return;
  const byUuid=new Map([...byKey].flatMap(([key,p])=>atlasSystem(p.system)==='Stanton'&&locationUuid(p)?[[locationUuid(p),key]]:[]));
@@ -160,8 +183,7 @@ export function mergeStanton(byKey, data, shared, audit) {
  }
  const intelByUuid=new Map(data.locations.filter(row=>row.uuid).map(row=>[row.uuid,row]));
  const localByUuid=new Map();
- if(audit?.schemaVersion===1&&audit.status==='source-reviewed'&&audit.version===data.live&&
-    data.catalogReview?.positionSource===`https://github.com/StarCitizenWiki/scunpacked-data/blob/${audit.commit}/starmap_positions.json`){
+ if(currentStantonAudit(audit,data.catalogReview)&&audit.version===data.live){
   for(const fact of audit.claims||[]){
    const key=byUuid.get(fact.uuid);
    const original=byKey.get(key);
@@ -208,9 +230,8 @@ export function mergeStanton(byKey, data, shared, audit) {
   byKey.set(key,{...location,services,stantonIntel:{uuid,claims:[],certifiedClaims,checkedAt:audit.reviewedAt}});
  }
  for(const [uuid,key] of byUuid){
-  if(!Object.hasOwn(data.catalogReview?.records||{},uuid))continue;
   const location=byKey.get(key);
-  const review=stantonCatalogReview(location,data.catalogReview);
+  const review=stantonCatalogReview(location,data.catalogReview)||stantonDisposition(location,data.catalogReview,audit);
   if(review)byKey.set(key,{...location,stantonCatalogReview:review});
  }
 }
@@ -236,7 +257,7 @@ export function stantonSections(p) {
    continue;
   }
   const detail=claim.localEvidence.proof==='navigation'?JSON.parse(claim.localEvidence.sourceDetail):null;
-  const destinations=detail&&['approach','clinic','gateway','restricted'].includes(detail.mode)?[{uuid:detail.referenceUuid}]:undefined;
+  const destinations=detail&&['approach','race-approach','clinic','gateway','restricted'].includes(detail.mode)?[{uuid:detail.referenceUuid}]:undefined;
   sections.push({title:stantonFields[claim.field]+' · configuración del parche',icons:[iconsByField[claim.field]],
    text:claim.text,status:label,sources,destinations,uncertainty:claim.uncertainty});
  }
@@ -249,7 +270,7 @@ export const isStantonTemporaryEvent=(p,review)=>
  atlasSystem(p.system)==='Stanton'&&p.name==='RSI Event Platform'&&
  stantonCatalogReview(p,review)?.state==='unplacedEventPlatform';
 
-export function stantonCoverage(raw, visible, zone='Stanton', review){
+export function stantonCoverage(raw, visible, zone='Stanton', review, audit){
  const inventory=[...new Map(raw.filter(p=>inStantonZone(p,zone)).map(p=>[locationUuid(p),p])).values()];
  const catalog=inventory.filter(p=>!isStantonTemporaryEvent(p,review));
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
@@ -257,12 +278,18 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
  const certifiedCounts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
  const pending={technical:0,hidden:0,unplaced:0,placed:0,unclassified:0};
- let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0,certifiedLocal=0;
+ let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0,certifiedLocal=0,audited=0;
+ const auditedDispositions={};
  const countedDocumentedUuids=new Set();
  for(const row of catalog){
   const p=matches.get(locationUuid(row));
   const disposition=stantonCatalogReview(row,review)?.state;
   const state=Object.hasOwn(pending,disposition)?disposition:'unclassified';
+  const result=stantonDisposition(row,review,audit);
+  if(result){
+   audited++;
+   auditedDispositions[result.reason]=(auditedDispositions[result.reason]||0)+1;
+  }
   if(!p||isStantonPlaceholder(row)){
    pending[state]++;
    continue;
@@ -301,13 +328,16 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
   const localFields=new Set((p.stantonIntel?.certifiedClaims||[])
    .filter(claim=>hasStantonLocalAttestation(claim,locationUuid(row),row.source?.version))
    .map(claim=>claim.field));
-  if(localFields.size)certifiedLocal++;
+  if(localFields.size){
+   certifiedLocal++;
+   if(!result)audited++;
+  }
   for(const field of localFields)certifiedCounts[field]++;
   if(Object.keys(counts).every(field=>facts.has(field)||p.stantonIntel?.reviewedWithoutEvidence?.includes(field)))reviewedAll++;
   for(const field of facts)counts[field]++;
   for(const grade of grades)sources[grade]++;
  }
  return {total:catalog.length,catalogTotal:inventory.length,excludedTemporary:inventory.length-catalog.length,
-  geographic,enriched,operational,documentedLocal,certifiedLocal,reviewedAll,counts,certifiedCounts,
+  geographic,enriched,operational,documentedLocal,certifiedLocal,reviewedAll,audited,auditedDispositions,counts,certifiedCounts,
   pendingFields:Object.fromEntries(Object.entries(certifiedCounts).map(([key,count])=>[key,catalog.length-count])),sources,pending};
 }
