@@ -36,6 +36,7 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
       if (alternate && existing) byKey.delete(alternateKey);
       const location = existing ? {...alternate, ...existing} : {
         name: entry.name, system: entry.system, parent: entry.body, type: typeNames[entry.type],
+        ...(entry.catalogVariant?{catalogVariant:entry.catalogVariant}:{}),
       };
       const services = {...location.services};
       for (const label of entry.services) services[label] = 'reported';

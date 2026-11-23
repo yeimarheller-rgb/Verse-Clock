@@ -3,9 +3,11 @@ import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas, tacticalSections, tacticalTags} from '../lab-preview/src/tactical-atlas.js';
 
+import {identifyCatalogVariants} from '../lab-preview/src/stanton.js';
+
 const json = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue = new Map([
-  ...json('wiki-atlas').locations.map(p => ({...p, system: atlasSystem(p.system)})),
+  ...identifyCatalogVariants(json('wiki-atlas').locations,'Pyro').map(p => ({...p, system: atlasSystem(p.system)})),
   ...json('atlas-poi-seed').locations,
 ].map(p => [atlasKey(p), p]));
 const snapshot = json('atlas-services');
