@@ -1,5 +1,5 @@
 import {dossierGroups,locationDossier} from './location-dossier.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,isStantonTemporaryEvent,mergeStanton,stantonBody,stantonCatalogReview,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
+import {identifyStantonVariants,inStantonZone,isStantonPlaceholder,isStantonTemporaryEvent,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
 import {tacticalIcon,tacticalIcons,tacticalStates} from './tactical-icons.js';
 // VERSE CLOCK 1.5 — interfaz. Datos: src/engine.js + data/locations.json. Escena: src/scene.js.
 import { compute } from './engine.js';
@@ -243,14 +243,12 @@ function renderStantonCoverage(){
  if(!rawStantonCatalog.length){host.textContent='Catálogo Stanton pendiente de cargar.';return;}
  const zone=stantonZone.value||'Stanton';
  const c=stantonCoverage(rawStantonCatalog,poiData,zone,stantonReview);
- const reviews=rawStantonCatalog.filter(row=>inStantonZone(row,zone))
-  .map(row=>stantonCatalogReview(row,stantonReview)).filter(Boolean);
- const technical=reviews.filter(review=>review.state==='technical').length;
  const summary=document.createElement('p');
  const percentage=(c.total?100*c.operational/c.total:0).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
  summary.textContent=c.operational+' / '+c.total+' operativas · '+percentage+' % · objetivo 90 %';
  const list=document.createElement('dl');list.className='stanton-metrics';
- const metrics={'Geografía con identidad única':c.geographic,'Fichas con datos añadidos':c.enriched,'Campos aplicables revisados':c.reviewedAll,
+ const metrics={'Geografía con identidad única':c.geographic,'Fichas con datos añadidos':c.enriched,
+  'Evidencia documental por UUID':c.documentedLocal,'Campos aplicables revisados':c.reviewedAll,
   ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
   'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
  for(const [label,count] of Object.entries(metrics)){
@@ -262,10 +260,13 @@ function renderStantonCoverage(){
  const note=document.createElement('small');
  note.textContent=c.catalogTotal+' registros en el catálogo. '+c.excludedTemporary+' plataformas temporales de RSI Discovery Month fuera de cobertura. Los registros sin nombre de juego siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
  const inventory=document.createElement('small');
- if(reviews.length){
-  inventory.textContent=(reviews.length-technical-c.excludedTemporary)+' registros revisados pendientes de evidencia operativa · '+technical+' registros técnicos sin evidencia operativa. ';
-  host.replaceChildren(summary,list,inventory,note);
- }else host.replaceChildren(summary,list,note);
+ const pendingLabels={
+  unplaced:'sin posición extraída',hidden:'con marcador oculto',placed:'visibles sin evidencia operativa',
+  technical:'registros técnicos',unclassified:'sin clasificación',
+ };
+ const pending=Object.entries(pendingLabels).flatMap(([key,label])=>c.pending[key]?[c.pending[key]+' '+label]:[]);
+ inventory.textContent=(c.catalogTotal-c.pending.unclassified)+' / '+c.catalogTotal+' registros conciliados'+(pending.length?' · '+pending.join(' · '):'')+'.';
+ host.replaceChildren(summary,list,inventory,note);
 }
 $('operationsToggle').addEventListener('click',()=>{
  operationsEnabled=!operationsEnabled;

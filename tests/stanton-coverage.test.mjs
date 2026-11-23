@@ -522,6 +522,8 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
  assert.equal(scoped.operational,808);
  assert.equal(scoped.operational,full.operational);
  assert.equal(scoped.documentedLocal,663);
+ assert.deepEqual(scoped.pending,{technical:26,hidden:8,unplaced:43,placed:1,unclassified:0});
+ assert.equal(scoped.operational+Object.values(scoped.pending).reduce((sum,count)=>sum+count,0),scoped.total);
  assert.deepEqual(scoped.counts,full.counts);
  assert.ok(raw.filter(isStantonPlaceholder).every(row=>!isStantonTemporaryEvent(row,stanton.catalogReview)));
  assert.ok(platforms.every(row=>!isStantonTemporaryEvent({...row,source:{...row.source,version:'other'}},stanton.catalogReview)));

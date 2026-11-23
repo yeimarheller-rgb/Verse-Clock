@@ -149,11 +149,17 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
  const matches=new Map(visible.filter(p=>inStantonZone(p,zone)&&locationUuid(p)).map(p=>[locationUuid(p),p]));
  const counts=Object.fromEntries(Object.keys(stantonFields).map(key=>[key,0]));
  const sources={documented:0,reported:0,historical:0};
+ const pending={technical:0,hidden:0,unplaced:0,placed:0,unclassified:0};
  let geographic=0,enriched=0,operational=0,reviewedAll=0,documentedLocal=0;
  const countedDocumentedUuids=new Set();
  for(const row of catalog){
   const p=matches.get(locationUuid(row));
-  if(!p||isStantonPlaceholder(row))continue;
+  const disposition=stantonCatalogReview(row,review)?.state;
+  const state=Object.hasOwn(pending,disposition)?disposition:'unclassified';
+  if(!p||isStantonPlaceholder(row)){
+   pending[state]++;
+   continue;
+  }
   geographic++;
   if(p.stantonIntel||p.serviceIntel||p.hathor||
    (p.intelDetailSource?.uuid===locationUuid(row)&&[p.missions,p.resources,p.nearbyLocations].some(items=>items?.length)))enriched++;
@@ -176,6 +182,7 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
    grades.add('reported');
   }
   if(facts.size)operational++;
+  else pending[state]++;
   // Independent local-evidence metric: never infer coverage from inherited services or Hathor.
   // Reported/historical claims remain visible but do not certify documented local coverage.
   if(!countedDocumentedUuids.has(locationUuid(row))&&p.stantonIntel?.uuid===locationUuid(row)&&p.stantonIntel.claims?.some(claim=>
@@ -189,5 +196,5 @@ export function stantonCoverage(raw, visible, zone='Stanton', review){
   for(const grade of grades)sources[grade]++;
  }
  return {total:catalog.length,catalogTotal:inventory.length,excludedTemporary:inventory.length-catalog.length,
-  geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources};
+  geographic,enriched,operational,documentedLocal,reviewedAll,counts,sources,pending};
 }
