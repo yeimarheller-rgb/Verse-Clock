@@ -503,7 +503,7 @@ with sync_playwright() as p:
         services = dossier.locator('[data-domain="services"]')
         services.get_by_role('button', name=re.compile(r"^Seer's Canyon")).click()
         expect(page.locator('#mainIntelLocation')).to_contain_text("Seer's Canyon")
-        expect(services).to_contain_text('Reparación de nave')
+        expect(services).to_contain_text('Repostaje · reparación de nave pendiente')
         expect(services).to_contain_text('Vehículos terrestres · reparación pendiente')
         expect(dossier.locator('[data-domain="loot"]')).to_contain_text('181 puntos de aparición')
         verify_layout()

@@ -74,7 +74,9 @@ test('Pyro body dossiers link to documented landing services without claiming gr
  const vatra=get('Vatra');
  const seers=get("Seer's Canyon");
  assert.equal(vatra.catalogIntel.sections[0].destinations[0].uuid,seers.id);
- assert.equal(seers.services.repair,'reported');
+ assert.equal(seers.services.repair,undefined);
+ assert.equal(seers.services.refuel,'reported');
+ assert.match(seers.catalogIntel.sections[0].text,/API del puesto no la registra/);
  assert.equal(seers.services.rearm,undefined);
  assert.match(seers.catalogIntel.sections.find(s=>s.title.includes('Vehículos terrestres')).text,/pendiente/);
  assert.equal(get("Jackson's Swap").services.repair,undefined);

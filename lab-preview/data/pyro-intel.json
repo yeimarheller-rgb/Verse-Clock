@@ -2434,15 +2434,19 @@
     ],
     "4a971e19-7390-4075-bd16-3ef71ad9394e": [
       {
-        "title": "Reparación y repostaje · puesto de superficie",
+        "title": "Repostaje · reparación de nave pendiente",
         "icons": [
-          "repair"
+          "refuel"
         ],
-        "text": "Plataforma de superficie en Vatra con reparación de nave y repostaje reportados. Desde el asiento de piloto abre mobiGlas (F1) → Servicios de aterrizaje. Si el menú tarda en mostrar opciones, espera y vuelve a abrirlo.",
+        "text": "El terminal lista combustible de hidrógeno y cuántico. UEX registra plataforma S. La ficha del terminal menciona reparación, pero la API del puesto no la registra. Comprueba las opciones desde el asiento de piloto en Servicios de aterrizaje.",
         "sources": [
           {
-            "name": "Registro del puesto",
-            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+            "name": "UEX · API de puestos (ID 113)",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · terminal de Seer's Canyon",
+            "url": "https://uexcorp.space/terminals/info/name/landing-services-seer-s-canyon/"
           },
           {
             "name": "RSI · Servicios de aterrizaje",
@@ -2453,7 +2457,7 @@
             "url": "https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues"
           }
         ],
-        "status": "Servicio reportado · disponibilidad por sesión"
+        "status": "Repostaje reportado · reparación pendiente"
       },
       {
         "title": "Vehículos terrestres · reparación pendiente",
@@ -2876,18 +2880,22 @@
     ],
     "baccdeb5-1960-487e-beab-d7b51f1871d1": [
       {
-        "title": "Reparación de nave · puesto de superficie",
+        "title": "Repostaje de nave · puesto de superficie",
         "icons": [
-          "repair"
+          "refuel"
         ],
-        "text": "Seer's Canyon (Vatra) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "text": "Seer's Canyon (Vatra) tiene repostaje reportado. La reparación de nave queda pendiente por discrepancia entre las fuentes de UEX.",
         "sources": [
           {
-            "name": "Registro del puesto",
-            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+            "name": "UEX · API de puestos (ID 113)",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · terminal de Seer's Canyon",
+            "url": "https://uexcorp.space/terminals/info/name/landing-services-seer-s-canyon/"
           }
         ],
-        "status": "Servicio reportado",
+        "status": "Repostaje reportado · reparación pendiente",
         "destinations": [
           {
             "uuid": "4a971e19-7390-4075-bd16-3ef71ad9394e"
@@ -2911,18 +2919,22 @@
     ],
     "c8cd0adb-d75e-483e-aa5c-027495c83cdc": [
       {
-        "title": "Reparación de nave · puesto de superficie",
+        "title": "Repostaje de nave · puesto de superficie",
         "icons": [
-          "repair"
+          "refuel"
         ],
-        "text": "Seer's Canyon (Vatra) tiene reparación y repostaje reportados. La ficha del puesto indica cómo abrir Servicios de aterrizaje y si hay datos sobre reparación terrestre.",
+        "text": "Seer's Canyon (Vatra) tiene repostaje reportado. La reparación de nave queda pendiente por discrepancia entre las fuentes de UEX.",
         "sources": [
           {
-            "name": "Registro del puesto",
-            "url": "https://uexcorp.space/terminals/info/name/seer-s-canyon/?set_lang=pt_BR"
+            "name": "UEX · API de puestos (ID 113)",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · terminal de Seer's Canyon",
+            "url": "https://uexcorp.space/terminals/info/name/landing-services-seer-s-canyon/"
           }
         ],
-        "status": "Servicio reportado",
+        "status": "Repostaje reportado · reparación pendiente",
         "destinations": [
           {
             "uuid": "4a971e19-7390-4075-bd16-3ef71ad9394e"
