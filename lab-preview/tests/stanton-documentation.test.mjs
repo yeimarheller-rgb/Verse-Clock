@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {stantonCoverage} from '../src/stanton.js';
+import {stantonCoverage,mergeStanton} from '../src/stanton.js';
 
 const uuid='11111111-1111-4111-8111-111111111111';
 const raw=[{id:uuid,name:'Audited facility',system:'Stanton',parent:'Hurston'}];
@@ -74,6 +74,8 @@ test('per-UUID reviewed evidence certifies only the matching facility',()=>{
 test('generic evidence does not automatically confirm repair services',()=>{
  const original={...raw[0],services:{},stantonIntel:{uuid,claims:[{...claim('documented'),services:['repair']}]}};
  const map=new Map([['facility',original]]);
- // mergeStanton is tested in its own integration tests; certification here remains zero.
+ const data={schemaVersion:1,locations:[{uuid,claims:[{...claim('documented'),services:['repair']}]}]};
+ mergeStanton(map,data,null);
+ assert.notEqual(map.get('facility').services.repair,'confirmed');
  assert.equal(stantonCoverage(raw,[original]).certifiedLocal,0);
 });
