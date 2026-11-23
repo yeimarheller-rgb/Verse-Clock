@@ -1554,6 +1554,29 @@
           ]
         },
         {
+          "title": "Botín reportado · armaduras, railgun y miras",
+          "icons": [
+            "loot",
+            "weapons"
+          ],
+          "text": "Avistamientos de jugador en las QV Breaker: piezas Morozov-SH-I Pyrotechnic de varios estilos, Overlord Gilded (dorada), railguns, otras armas y miras tácticas. Un reporte comunitario independiente sitúa un railgun en una caja grande de armas cerca del hueco de un ascensor abandonado. La estación concreta, los modelos de miras y la frecuencia de aparición siguen por verificar.",
+          "status": "Observación de jugador · botín variable por estación y sesión",
+          "sources": [
+            {
+              "name": "Star Citizen Wiki · nombre de la familia Morozov-SH-I",
+              "url": "https://starcitizen.tools/Morozov-SH"
+            },
+            {
+              "name": "Star Citizen Wiki · nombre de la variante dorada",
+              "url": "https://starcitizen.tools/Overlord_Helmet_Gilded"
+            },
+            {
+              "name": "Reporte comunitario · caja de armas y railgun",
+              "url": "https://www.reddit.com/r/starcitizen/comments/1we9ne8/found_this_1_scu_crate_inside_an_elevator_shaft/"
+            }
+          ]
+        },
+        {
           "title": "Sadaryx · mercado entre jugadores",
           "icons": [
             "trade"
