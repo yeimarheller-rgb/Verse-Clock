@@ -474,6 +474,7 @@ with sync_playwright() as p:
         query('Patch City', 'Patch City')
         expect(dossier.locator('[data-domain="services"]')).to_contain_text('Reparación de nave')
         expect(page.locator('#pyroCoverage')).to_contain_text('350 / 586 UUID revisados')
+        show_filters()
         zone.select_option('')
         query('Calliope', 'Calliope')
         expect(dossier.locator('.environment-temperature')).to_have_text('Máxima de referencia −72 °C.')
