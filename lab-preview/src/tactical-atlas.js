@@ -81,7 +81,7 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
 
 export function tacticalSections(p) {
   if (p.hathor) return p.hathor.sections;
-  const sections = [...(p.catalogIntel?.sections || [])];
+  const sections = [...(p.catalogIntel?.sections || []), ...(p.nyxReleaseSections || [])];
   const intel = p.serviceIntel;
   const contested = p.system === 'Pyro' ? contestedSites[p.name] : null;
   if (contested) {

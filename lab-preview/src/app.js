@@ -1,3 +1,4 @@
+import {applyNyxI, canReleaseNyxI, fetchCurrentLive, isNyxI} from './nyx-release.js';
 import {applyCatalogIntel} from './catalog-intel.js';
 import {dossierGroups,locationDossier} from './location-dossier.js';
 import {identifyCatalogVariants,inStantonZone,isStantonPlaceholder,isStantonTemporaryEvent,mergeStanton,stantonBody,stantonCoverage,stantonFields,stantonGroups,stantonSections,traceStantonParents} from './stanton.js';
@@ -18,6 +19,7 @@ const store = { get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? 
 const initialDestination = new URLSearchParams(location.search).get('dest');
 const SIM = (() => { const t = Date.parse(new URLSearchParams(location.search).get('t')); return Number.isFinite(t) ? t - Date.now() : 0; })();
 const nowMs = () => Date.now() + SIM;
+let nyxIVisible=false;
 let locs = [], cur = null, favs = store.get('vc-favs', []);
 // Migración: quita los tres favoritos que venían por defecto en 1.0, sin tocar favoritos elegidos por el usuario.
 const OLD_DEFAULT = ['Lorville', 'HDSF-Elbridge', 'Dupree Industrial Manufacturing Facility'];
@@ -35,7 +37,7 @@ function mono(el, text) {
   }
   el.innerHTML = [...text].map(c => kind(c) === 'd' ? `<span class="dg" aria-hidden="true">${c}</span>` : kind(c) === 'c' ? '<span class="cl" aria-hidden="true">:</span>' : `<span aria-hidden="true">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
 }
-const byName = n => locs.find(l => l.name === n);
+const byName = n => locs.find(l => l.name === n && (nyxIVisible||!isNyxI(l)));
 const dur = s => { s = Math.max(0, Math.round(s)); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60); return h ? `${h} h ${String(m).padStart(2, '0')} min` : `${m} min ${String(s % 60).padStart(2, '0')} s`; };
 
 let exactSolar=null;
@@ -142,7 +144,7 @@ function frame(timestamp) {
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
-function fromHash() { const h = decodeURIComponent(location.hash.slice(1)).replace(/_/g, ' ').toLowerCase(); return h && locs.find(l => l.name.toLowerCase() === h); }
+function fromHash() { const h = decodeURIComponent(location.hash.slice(1)).replace(/_/g, ' ').toLowerCase(); return h && locs.find(l => l.name.toLowerCase() === h && (nyxIVisible||!isNyxI(l))); }
 
 buildScene($('scene'));
 // Las fotos solo se muestran si cargan las cuatro; si falta alguna, queda la escena procedural.
@@ -317,9 +319,9 @@ function qvMarkerLabel(p){
 function updateMenu(){
  const q=normalize(input.value);
  if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
- const solar=(activeFilter||stantonZone.value?[]:locs).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
+ const solar=(activeFilter||stantonZone.value?[]:locs.filter(l=>nyxIVisible||!isNyxI(l))).map(l=>({kind:'solar',value:l,name:l.name,parent:l.body,system:l.system,tags:searchTags(l)}));
  const pois=poiData.filter(p=>matchesFilter(p,activeFilter)&&(auditedSystems.includes(stantonZone.value)?atlasSystem(p.system)===stantonZone.value:inStantonZone(p,stantonZone.value))).map(p=>({kind:'poi',value:p,name:p.name,parent:p.parent,system:p.system,tags:[
- p.type,p.operator,p.affiliation,p.jurisdiction,p.catalogVariant,...tacticalTags(p),
+ p.type,p.operator,p.affiliation,p.jurisdiction,p.catalogVariant,...(p.aliases||[]),...tacticalTags(p),
  ...(p.amenities||[]),
  ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),
  ...(p.tacticalIntel?.weapons||[]),...(p.tacticalIntel?.armor||[]),
@@ -683,6 +685,7 @@ function updateAtlasQuality(d){
  el.append(title,desc,perSystem,note);el.dataset.loaded='true';
 }
 async function loadAtlas(){
+ const currentLiveRequest=fetchCurrentLive();
  const base=await fetch('./data/atlas-poi-seed.json').then(r=>{if(!r.ok)throw Error('Seed HTTP '+r.status);return r.json()});
  const byKey=new Map();const key=atlasKey;
  const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
@@ -720,6 +723,13 @@ async function loadAtlas(){
     ' con salto configurado · '+c.visible+' visibles sin salto · '+c.hidden+
     ' ocultos · '+c.unplaced+' sin posición · '+c.technical+' técnicos.';
   }else summary.textContent='Auditoría de '+system+' pendiente para esta versión del catálogo.';
+ }
+ nyxIVisible=canReleaseNyxI(await currentLiveRequest,version);
+ if(nyxIVisible){
+  const prepared=await fetch('./data/nyx-i-5.0.json').then(r=>r.ok?r.json():null).catch(()=>null);
+  applyNyxI(byKey,prepared);
+ }else{
+  for(const [key,place] of byKey)if(isNyxI(place))byKey.delete(key);
  }
  poiData=traceStantonParents([...byKey.values()]).filter(p=>!isStantonTemporaryEvent(p,stantonReview))
   .sort((a,b)=>a.system.localeCompare(b.system)||a.name.localeCompare(b.name));
