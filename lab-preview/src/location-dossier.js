@@ -171,7 +171,11 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     });
   }
   if(p.pyroIntel?.marker){
-    add('navigation',p.pyroIntel.marker.text,{title:'Marcador del parche',sources:p.pyroIntel.marker.sources});
+    const marker=p.pyroIntel.marker;
+    add('navigation',marker.text,{title:'Marcador del parche',sources:marker.sources});
+    if(marker.parentUuid)add('navigation','Ubicación superior en la jerarquía del catálogo. La ruta en partida sigue pendiente.',{
+      title:'Referencia cartográfica',sources:marker.sources,destinations:[{uuid:marker.parentUuid}],
+    });
   }
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);

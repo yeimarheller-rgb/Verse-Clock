@@ -17,11 +17,13 @@ export function applyPyroIntel(byKey, catalog, snapshot, version) {
   const id=location.source?.uuid||location.id;
   if(!statuses.has(id))continue;
   const state=statuses.get(id);
+  const parent=state==='unplaced'&&snapshot.parentReferences?.[id];
   byKey.set(key,{...location,pyroIntel:{
    checkedAt:snapshot.checkedAt,
    marker:{
     text:markerText[state],
     sources:[snapshot.definitionSource,snapshot.positionSource],
+    parentUuid:parent!==id&&ids.has(parent)?parent:undefined,
    },
    sections:snapshot.details?.[id]||[],
   }});

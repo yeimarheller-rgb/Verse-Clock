@@ -11,15 +11,15 @@ const snapshot=read('pyro-intel');
 const rows=identifyCatalogVariants(catalogue.locations,'Pyro');
 const pyro=rows.filter(row=>row.system==='Pyro System');
 
-test('the first Pyro batch uses unique UUIDs and distinguishes map evidence from tactical claims',()=>{
+test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from tactical claims',()=>{
  const byKey=new Map(pyro.map(row=>[atlasKey(row),row]));
  assert.equal(byKey.size,586);
  assert.equal(applyPyroIntel(byKey,rows,snapshot,'outdated'),null);
  assert.deepEqual(applyPyroIntel(byKey,rows,snapshot,catalogue.version),{
-  total:586,reviewed:350,counts:{jump:127,visible:103,hidden:57,unplaced:59,technical:4},
+  total:586,reviewed:586,counts:{jump:127,visible:103,hidden:57,unplaced:295,technical:4},
  });
  const reviewed=[...byKey.values()].filter(row=>row.pyroIntel);
- assert.equal(reviewed.length,350);
+ assert.equal(reviewed.length,586);
  const hubs=reviewed.filter(row=>row.name.startsWith('Lazarus Transport Hub'));
  const sites=new Map(pyro.map(row=>[row.id,row]));
  assert.equal(hubs.length,6);
@@ -30,6 +30,14 @@ test('the first Pyro batch uses unique UUIDs and distinguishes map evidence from
   assert.equal(hub.services?.repair,undefined);
  }
  assert.equal(Object.keys(snapshot.details).length,22);
+ assert.equal(Object.keys(snapshot.parentReferences).length,220);
+ for(const [child,parent] of Object.entries(snapshot.parentReferences)){
+  assert.equal(snapshot.records[child],'unplaced');
+  assert.equal(sites.get(child).parent,sites.get(parent).name);
+  const marker=byKey.get(atlasKey(sites.get(child))).pyroIntel.marker;
+  assert.equal(marker.parentUuid,parent);
+  assert.match(marker.text,/carece de posición/);
+ }
 });
 
 test('reported Pyro ship services attach to the exact station and do not confer rearm',()=>{
