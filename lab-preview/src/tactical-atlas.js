@@ -39,7 +39,7 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
       };
       const services = {...location.services};
       for (const label of entry.services) services[label] = 'reported';
-      byKey.set(key, {...location, services, serviceIntel: {...entry, checkedAt: snapshot.checkedAt, live: snapshot.live}});
+      byKey.set(key, {...location, services, serviceIntel: {...entry, checkedAt: entry.checkedAt || snapshot.checkedAt, live: snapshot.live}});
     }
   }
   for (const [key, location] of byKey) {
@@ -79,7 +79,7 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
 
 export function tacticalSections(p) {
   if (p.hathor) return p.hathor.sections;
-  const sections = [];
+  const sections = [...(p.pyroIntel?.sections || [])];
   const intel = p.serviceIntel;
   const contested = p.system === 'Pyro' ? contestedSites[p.name] : null;
   if (contested) {

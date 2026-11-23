@@ -1,0 +1,1745 @@
+{
+  "schemaVersion": 1,
+  "version": "4.10.3-LIVE.13165946",
+  "checkedAt": "2026-11-23",
+  "definitionSource": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+  "positionSource": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+  "records": {
+    "d8935d2e-1b10-4b50-b188-80e35dd0876a": "jump",
+    "0e9953a5-1106-4032-b27c-da83ff91b511": "jump",
+    "8d7e2b47-d27b-4e0d-9760-7bb502ae02e1": "jump",
+    "a62a39e5-a7a6-4e2d-972e-0a3f802798f4": "jump",
+    "59637d5a-c67a-47eb-96dc-b648298f0023": "jump",
+    "399b5e2a-603b-4c4e-a1f8-c86f8e00713a": "jump",
+    "ffa208d7-3e96-4c18-8796-044fddeaaeea": "jump",
+    "d2cccd21-41a2-43fc-bebb-9bce14f6c59b": "jump",
+    "8c92229b-cd0c-44ed-9820-fb9b5f7a740b": "jump",
+    "6654a246-09af-4e6a-bbab-764dce07d635": "jump",
+    "07463f54-4ecd-4323-8a28-fb65b8a4ebca": "jump",
+    "e58aad93-edd0-43b6-878c-255b604daeb5": "jump",
+    "a88ae72e-15e9-43da-8a20-c14cc851d2da": "jump",
+    "b6771617-3965-4663-bb53-5f595ab1c761": "jump",
+    "73733370-d920-4056-9326-8c1f8b5a8a04": "jump",
+    "ffab0e7d-7874-412b-8894-7b310880af1b": "jump",
+    "f3f28c8d-9891-44f2-8c4f-502039645dde": "jump",
+    "bae9d976-d314-4998-a1f9-555619769436": "jump",
+    "f884b3ca-6a43-45d9-b37e-3dc5e2fa5acc": "jump",
+    "df7a76c9-7a37-4028-b584-f53a930f848c": "jump",
+    "142f694d-6d72-4915-bfa1-ead77af036ce": "jump",
+    "8f348f9f-48bc-4a4d-923a-6ea8751792ae": "jump",
+    "fa914ecb-2c0e-4512-987c-ecd5dfeed408": "jump",
+    "27f1a509-4775-437a-a0a9-88205cfc019a": "jump",
+    "90879129-2010-474b-81c3-0416964d6f81": "jump",
+    "acb7dde1-23f5-48c7-b7c8-0ab6585815f6": "jump",
+    "858b3afc-eb98-488f-a70f-7e2fc9152f10": "jump",
+    "7bdef226-f0c2-4877-81cb-d97731cd6fc7": "jump",
+    "5a680a01-11c3-40f9-a200-42832cf8707a": "jump",
+    "beaadc7f-9f3c-4a2d-8dd6-f56d57de1c60": "jump",
+    "89fd83cb-1216-4177-97d0-cff7ed403363": "jump",
+    "443bdcfa-ecb3-4eb1-9f56-088cf7a82c62": "jump",
+    "88c11b95-0d17-4d48-ad6f-2bbaad4a472f": "jump",
+    "57a9e4e4-477a-40c8-971c-5b4129f6b73b": "jump",
+    "887e6fe8-34f2-40f4-b59b-c1863c1621fd": "jump",
+    "7a6a0f08-83bf-4e2b-be93-a0fd5fd705f1": "jump",
+    "bba0b5ec-d057-4cfe-b136-11ac408c22e1": "jump",
+    "256e7587-7c08-41de-8786-2338e51be039": "jump",
+    "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79": "jump",
+    "675489ae-e83c-4e5d-9601-61dce33f7f75": "jump",
+    "0b615583-ceb4-4763-9e3e-2a7f1aa1c78c": "jump",
+    "958a1221-eb53-4a8b-b08d-4207405e84aa": "jump",
+    "d0864e96-643f-4c55-984e-a130611fcc56": "jump",
+    "fe52faa3-9528-45cf-a30d-b354b7a47116": "jump",
+    "82a8afd8-cd0a-4f5b-b448-35fa1214684e": "jump",
+    "ee842006-2374-4fe9-939d-8f02ac8cd4f3": "jump",
+    "e386e0b4-58a0-4141-b112-f99bf801a430": "jump",
+    "2cc61d92-b7bc-4533-9b97-6a32482a28f1": "jump",
+    "28e220ba-ba74-42eb-bae5-382475eba65d": "jump",
+    "bcc76508-8eb4-4813-8368-4d7abfb89ec7": "jump",
+    "430316d5-f330-4e6c-93b8-823a062689db": "jump",
+    "8233ce04-4baa-424a-a1c5-9a4ee2898a7e": "jump",
+    "c5d50aca-fea4-41f5-a094-9785bc55e39c": "jump",
+    "bd473b11-e20d-415f-bac3-e9e8099582b2": "jump",
+    "ac826dfb-7142-4a15-bcdd-8e15d337ad1f": "jump",
+    "c8cd0adb-d75e-483e-aa5c-027495c83cdc": "jump",
+    "5e241629-e58f-4c15-b938-acc2cc287cd4": "jump",
+    "1711f3cc-59ef-4b08-a762-19d8691ae268": "jump",
+    "aa347865-7054-4578-b96b-7e0108259909": "jump",
+    "1c585a2e-73c4-4bc5-8922-e0b434b8c8ea": "jump",
+    "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8": "jump",
+    "310f1f19-11f7-45b1-b897-0685b01ab570": "jump",
+    "d8c6513e-dcab-4a96-8a80-6ca4098acd71": "jump",
+    "4a971e19-7390-4075-bd16-3ef71ad9394e": "jump",
+    "407847a6-4aae-4c3c-9a36-b80108d776f0": "jump",
+    "d4086e66-2a16-4b58-be48-2bde84620f2e": "jump",
+    "51d4fdfb-421d-49d9-b75a-2f1d531b7720": "jump",
+    "7c76625d-956c-4028-9649-bc29f037ac72": "jump",
+    "a1b8a311-6465-45dc-873d-e8d06d4372df": "jump",
+    "a8b1ec44-6287-4687-9a56-476663db591a": "jump",
+    "a02e0cb7-4a76-4481-b74a-0c3a0972bca9": "jump",
+    "15f00205-1b3a-49ec-9b21-d74b60cf2b86": "jump",
+    "8c462714-a82e-4d91-8d13-33b325a8efa5": "jump",
+    "0d636f4c-c113-4622-9848-b824f5270eb7": "jump",
+    "72533bf5-9ceb-4317-8dc9-5577496fe997": "jump",
+    "baccdeb5-1960-487e-beab-d7b51f1871d1": "jump",
+    "b5240b3a-ee0e-4c3f-b93c-f7aaadc81b2e": "jump",
+    "a3d38eff-a061-45c6-a9d6-e9d9f5ce166f": "jump",
+    "e4653c71-cc4a-495a-b115-886bc84e79cc": "jump",
+    "fa9d6e08-6827-4b32-816a-28bb8629d47f": "jump",
+    "93964959-8546-4cfb-a9d2-91a04d21fbcf": "jump",
+    "4d02b242-bdf2-4a23-b180-749b0901aa07": "jump",
+    "0fbfb15a-44cc-48eb-9043-edc68930fec0": "jump",
+    "163b1f81-2147-4e8b-b3f8-30193418b1f3": "jump",
+    "3454b2c5-786a-4dbb-9d90-87a4e1e4cfdc": "jump",
+    "e48d6157-f89f-4c6f-9600-27bf9fd65fa2": "jump",
+    "b6628ada-d636-46a7-a01c-eba5bc8ce746": "jump",
+    "0fce1b55-8fe7-44a9-b806-7e0d40b789fa": "jump",
+    "59bbebf0-f68c-4c9f-a8b2-815b6fa770c5": "jump",
+    "b8bee188-f8da-4bc8-8b2a-e25fb6ca6a57": "jump",
+    "f0f2f24f-65af-466c-9f81-eef7b085322f": "jump",
+    "80236691-0376-442a-8d18-7e2499b86bea": "jump",
+    "ce6e4620-0c47-4d27-b433-6cdcaf6fb1ac": "jump",
+    "1f4e3282-5f06-436c-930a-6f5b0311ee5b": "jump",
+    "a8a209f7-8dce-4c15-af84-fadfa4352306": "jump",
+    "5110de08-be14-4fe5-830d-c0c748e8e045": "jump",
+    "72c33c95-4420-4f8a-9811-f42c47f5b152": "jump",
+    "21207af3-64a7-4abc-b51b-b6d3fb8dbf11": "jump",
+    "61d66cca-8043-4ba1-9ec1-cc2657bd3757": "jump",
+    "1d8e4b27-4be5-404e-9b1b-44682a8c1d78": "jump",
+    "4d472bd0-23ae-4479-b1e3-4200e9f2e450": "jump",
+    "36dd282c-499f-4f52-b441-359427975625": "jump",
+    "74330cd4-a7f8-456b-aa20-a31e778f2bce": "jump",
+    "2fc7e6d4-6ab4-40f9-821e-acdb041b3abd": "jump",
+    "85000a66-815c-486f-a7fa-b0c6f13ef96f": "jump",
+    "b3c81bff-6aaa-41ca-b8d9-546a8eca0b7a": "jump",
+    "6d4d9e01-cd70-4007-ae2a-4604a6a114f3": "jump",
+    "86fa3e37-22a5-4ff2-b2ea-de49f6ca639f": "jump",
+    "d575a8d1-8102-44ef-ae33-10a2f1c8dae9": "jump",
+    "c83efdfe-eeb9-4a13-bcb9-1f3537c9c1bd": "jump",
+    "2bf56608-62ea-4d1a-9e9b-38377004dc1b": "jump",
+    "bdf961e3-348f-4ea7-8cd0-4f3b55938438": "jump",
+    "0dcd6b37-74e5-4c8d-b5fc-a8a8ee925825": "jump",
+    "b0ab852e-b723-4c02-8405-61c85487d320": "jump",
+    "0686cb11-f099-46f1-a7e1-68780bb4ce97": "jump",
+    "f6d07e98-a3c5-44bd-b77b-3080ce6ac5e3": "jump",
+    "fc553cd1-9b13-4ceb-a9a7-40d74a0a8c62": "jump",
+    "82534ebc-3a3b-4308-a574-d5e0476951e6": "jump",
+    "4b837add-89b3-4932-85c1-eebc2749d480": "jump",
+    "60803028-8aa5-48d9-b64f-29a826ad8d82": "jump",
+    "80d543be-8480-48cf-89c8-5b33b6b455b1": "jump",
+    "98cfe715-15c7-48f0-b522-f9bee9707b7d": "jump",
+    "73364092-6b92-4cc6-ad1a-0d241838d2cf": "jump",
+    "bb25427a-b97d-47fd-9c9d-24b3ebfe4e63": "jump",
+    "3499e1c7-7f37-4b61-b267-6de228dbd2e2": "jump",
+    "87f74eca-9f56-453d-bdc1-31ae558b7aa5": "jump",
+    "bf106da2-f2d4-4eb3-aedd-dd8eb195f8c9": "jump",
+    "a14bec87-5801-4440-8ca8-35597487ac9a": "visible",
+    "acd13d89-925d-4cd1-a9cb-c38a0d678ad0": "visible",
+    "e7f80a4c-c878-4d9b-b172-6513f8e18e71": "visible",
+    "7a7e8368-5a4d-47f6-aaac-328f990e3364": "visible",
+    "2f7fd0a4-1266-4879-a374-a24a1699166d": "visible",
+    "46318483-ce52-4f99-82ed-325ae8f89fba": "visible",
+    "9fe65999-7197-4bd5-aee0-c3f5e134a9a7": "visible",
+    "1aba2189-3f25-417c-8d55-067f3e5e4c47": "visible",
+    "0ae62541-8808-4b3e-976d-20d7e130ff2c": "visible",
+    "9fbd2d63-4794-45ef-a636-2c44cbfc4827": "visible",
+    "acb188c7-d9d9-4b55-8f23-06aa9385ce55": "visible",
+    "b901b69f-a3c1-457a-b1fb-a47681ea7cb4": "visible",
+    "05db261d-efe5-4a4e-9300-20e07f6f5cde": "visible",
+    "5449fdbb-7305-4aa6-99c5-2cd476f5c0d4": "visible",
+    "4871fbe5-4330-46e0-8648-cd561d8c09f4": "visible",
+    "cdbcaba9-9d33-414c-a71b-e8e621fb1312": "visible",
+    "17806761-6207-46f4-a7ca-309568cf1fd2": "visible",
+    "e154be4b-2139-4771-87d5-3cf78807b7d2": "visible",
+    "decaadd5-40d1-4913-b00c-18a089e6e72f": "visible",
+    "0b6475b2-9b52-46ea-954a-133a11dadd8e": "visible",
+    "029ab865-e8ac-4cec-9a61-5e39125126b3": "visible",
+    "f190a18c-c7ec-4d7f-8c61-5ebd26b6503d": "visible",
+    "61653585-3522-41b6-aa7a-a63c82073919": "visible",
+    "7b88cdb4-6ca9-4560-b650-34bbae8804a2": "visible",
+    "2d47ba75-ab09-4e73-865c-e3537bef3428": "visible",
+    "489db56c-b334-4813-b6c7-f96b521edeae": "visible",
+    "09f726f5-435e-4d0c-be31-c44bc39b39ef": "visible",
+    "dff79d0e-f318-4ed3-9401-ece3e58f4626": "visible",
+    "7f4c85f5-d508-42c8-9262-2e46c6105cb9": "visible",
+    "da4c4e6b-e8ca-4369-acf2-6ba850fcfd20": "visible",
+    "8296d7bc-e332-4397-9310-891bd0045e2d": "visible",
+    "9f015be6-8431-4d91-b243-994785764219": "visible",
+    "17b2f39c-7453-4932-81ba-519f49fed814": "visible",
+    "3ad48109-15e7-4575-9589-af7f46a92b5e": "visible",
+    "4a7c8e13-301c-4bc9-a271-cea1bcd25c98": "visible",
+    "39c77283-98ec-449e-9563-f2bd4e0fb1b0": "visible",
+    "c9c1e8bd-3f4b-4aa5-a331-7a0acf932531": "visible",
+    "dea4fe9c-4e48-475d-ad6d-6da6a5ddc70e": "visible",
+    "ef6569a7-8d42-42be-90e2-0f5ec7c02416": "visible",
+    "4029be96-9188-47ba-a6de-457a974ea9e4": "visible",
+    "e148b772-b232-46b7-b81d-8e5484bfa314": "visible",
+    "fd92ecc2-dd24-4d48-b3ce-12be05f81a4d": "visible",
+    "febade8a-1c94-4c42-9c98-f0270dcd6249": "visible",
+    "5166bda3-7234-4769-8d2d-b86710ced303": "visible",
+    "5d1103d6-cfb9-4319-b4c4-4bcd64bce44b": "visible",
+    "5c62bd57-d630-472c-8193-cdd41c6c8a26": "visible",
+    "2d89d887-f5c6-40e4-9ec1-5eeaed4856c0": "visible",
+    "2c507fae-95ea-4dfa-ac40-54757f346cc5": "visible",
+    "4931d790-a832-4dea-87db-3007a81537c5": "visible",
+    "5bc69585-fae1-4eec-9e1a-dce7860f8d35": "visible",
+    "6a1e4f4e-94cb-4a6f-864c-927fd171ada9": "visible",
+    "06a818cb-c7f4-4872-93e4-0a17eb6401c5": "visible",
+    "4aee5dfc-620b-4f27-a3fc-ae7d0a4292c1": "visible",
+    "9e276de1-2d66-4fa0-ac4e-e4e01f8f0548": "visible",
+    "2655bae3-416d-4d5d-a4e3-35cd690c8025": "visible",
+    "0d7529a4-a510-4a4b-b51f-e73a53e092bb": "visible",
+    "a2d889c3-d473-4095-8631-08d7f868cf2c": "visible",
+    "a284aff3-7d64-48b5-990d-36ee6b456984": "visible",
+    "31ac933d-8f27-436a-82aa-4acbd58ecf8f": "visible",
+    "ecd9cd60-785f-4fc3-a488-ffbf20b686c6": "visible",
+    "9f54da9c-e241-4909-8366-b56c7cda6c5c": "visible",
+    "1b7407d0-b501-4434-9785-f2afaec329b5": "visible",
+    "0d2966ab-86c4-4f30-ac3d-76c5fee95d15": "visible",
+    "984d71ca-901b-482b-bb0d-f387acf79b5f": "visible",
+    "4bc8a77d-3454-4be8-81b9-4e676bd18746": "visible",
+    "4f03be5d-618e-4683-9a4c-6584304f485d": "visible",
+    "839a1f49-bf24-4e0b-8376-10b7b205e8b0": "visible",
+    "f0dda51d-3ea1-46ee-b996-fb9b6d642ff0": "visible",
+    "e45d12e7-e3c0-4559-bc4c-37bab55811ae": "visible",
+    "9bc2b01b-2888-4590-b805-152092afcde7": "visible",
+    "2ffb5ea3-8355-4654-813e-15ae75be0beb": "visible",
+    "14038458-3a68-462f-a2cd-93280c01a68f": "visible",
+    "a7e5d714-b107-4fc7-bd1e-eb1aad45b2a3": "visible",
+    "37f2fe41-c155-42fe-a954-e813c1b5af59": "visible",
+    "5a667570-ed92-4e28-b998-dfd88e0d0750": "visible",
+    "7359d9fb-0c8f-42cd-b765-815bfbda2d55": "visible",
+    "9a5f95cf-f593-4cf7-8200-e8df245ad58c": "visible",
+    "14d4f78e-e303-40c1-a85b-21d101cee95e": "visible",
+    "fd8d1d9c-ab33-4f74-ac77-6aa945a158b0": "visible",
+    "544034db-6fde-44b4-aba8-c2ea35421ccd": "visible",
+    "eb581731-fa19-4e10-bace-4f5d3897856a": "visible",
+    "76129194-af6f-4a50-b458-5ef0b5a2e614": "visible",
+    "bc93b494-5403-4820-aae5-29f5ab21f86f": "visible",
+    "4f6a3169-12b6-4298-b7b7-14480584c0d5": "visible",
+    "ca1393b1-8297-4788-b819-5884ea70954c": "visible",
+    "ae672fab-8cf4-49ce-ae7a-fd2f1258f143": "visible",
+    "887ef7d1-7599-4676-8580-25ac351a727d": "visible",
+    "371b4fb1-840f-4368-834c-dd8096ae8c26": "visible",
+    "d8ee1258-941e-411c-9e05-9e3d0059f56d": "visible",
+    "d8793e3d-f5ba-48b6-825a-068ff7abbaed": "visible",
+    "99e8858e-2d0e-46a7-8419-16e7cb3a5d2f": "visible",
+    "eb730bdd-59b2-4f24-b979-4613289a85e8": "visible",
+    "a1490619-926c-4190-a828-47d68169998c": "visible",
+    "33bec8b7-b646-471f-a4b4-3548465af1f4": "visible",
+    "cf04c060-21c2-49c7-affb-9dc0393d5273": "visible",
+    "de4ed01e-dcf6-4e84-87cc-4f188d0d8c34": "visible",
+    "7961a1d3-1e77-49a1-8027-1bf3c8a030ea": "visible",
+    "f4cb5b02-bff8-460e-9415-073adc5dcc0a": "visible",
+    "9104328b-9128-4e91-a1b5-20559c40c1f3": "visible",
+    "95b26839-a3d6-4803-aa9c-45d7f99111d4": "visible",
+    "27d5ffbc-46c9-41f6-90bd-eb0b7dc1b752": "visible",
+    "493e6aa2-fb57-4589-8b21-d767e5963c4e": "visible",
+    "55fd5203-5587-4115-997a-566e939b42df": "visible",
+    "d31821cb-b713-4e21-bf6f-203ce5f6c7ca": "hidden",
+    "35cfd356-5d77-4bdd-bace-03ce59544d9f": "hidden",
+    "451aa5c9-4ab0-4b3d-ac93-4579cbac88c2": "hidden",
+    "77a6240a-ed72-4024-8026-e2ebb8a11c38": "hidden",
+    "a4d5be82-f7c6-4ca8-875e-1b719eddc180": "hidden",
+    "06ed053f-b45b-420d-bd28-d625720ca16b": "hidden",
+    "0af37acd-99ab-476c-a383-44e5638de224": "hidden",
+    "1333f125-97ac-4905-99fa-eae6a21587c6": "hidden",
+    "37169606-93f7-48ee-9d14-33d13c6faaad": "hidden",
+    "39950709-3729-4bc4-8ce9-973689c65c24": "hidden",
+    "624ca6d8-302c-4eeb-b3d6-b8086fe61c7c": "hidden",
+    "67b26f30-bc36-4c3f-b143-d5beda464d7e": "hidden",
+    "6816ae44-f83a-4264-a364-12b8faeb6294": "hidden",
+    "7383d3d4-fa9c-4e57-bfa1-ad6f0085c92f": "hidden",
+    "8087b033-4aec-49c5-930c-5054c206d237": "hidden",
+    "8d828d5e-dff1-4a40-9afd-853efd17af0d": "hidden",
+    "91a30b4e-99e1-41fe-913f-82ce50e60a55": "hidden",
+    "a33f733c-242b-49e0-b2a9-b4cbebf91d6d": "hidden",
+    "af53669f-655d-4df1-a8ca-8f6e8109ba8f": "hidden",
+    "b7c99c15-54be-418e-bd06-e6e524b767c6": "hidden",
+    "dfc4e255-b7db-4239-a87d-0fe599e2b116": "hidden",
+    "e4b2b315-80a3-4fab-b910-19917c5d568f": "hidden",
+    "e60527c2-2c75-492b-9dae-50a7576866d7": "hidden",
+    "f2d53ff3-a96c-4a27-9d4c-5708972978f2": "hidden",
+    "ab6ea528-d0e1-4486-b475-5da18f34c9f9": "hidden",
+    "a98cfddb-1671-4abe-82e0-b368f2904977": "hidden",
+    "a2c17d34-8f41-4e16-b236-c8196588857d": "hidden",
+    "33559c88-b561-47ee-a124-7683bfc68bec": "hidden",
+    "fca7465e-b779-45b1-a415-680e21378ce6": "hidden",
+    "2bd3f695-b64a-469c-8a21-6e5962bd1a46": "hidden",
+    "aaf3e5d1-69c0-4dba-86dd-ec01b2bdd4ef": "hidden",
+    "d2e3bd79-0e6b-4877-9bb9-10480a5a6c56": "hidden",
+    "9eabd9ac-5e54-4683-aa08-3490b29a56ce": "hidden",
+    "5c1b2f4f-6876-4c5e-8b6d-a58160aca027": "hidden",
+    "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c": "hidden",
+    "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929": "hidden",
+    "26afa18b-af55-44a5-8a19-ceb06c3f69ba": "hidden",
+    "5b6422d9-4f8b-42ff-b892-1a6ac17439ad": "hidden",
+    "80c0c3b4-e3da-410f-a394-e9a5ebbb421c": "hidden",
+    "9e80238d-7dc5-46eb-a486-1f6bc3e7d2ed": "hidden",
+    "75674e67-2bc0-4b90-a51f-dff7ecceaf3e": "hidden",
+    "56f0ddd4-3db5-4b10-9e52-a314eb01611e": "hidden",
+    "80bac534-3e84-4a2d-97c2-3edefa2d5bef": "hidden",
+    "5de4be76-7d6c-47e3-ab7b-9d344d27f506": "hidden",
+    "cc97bf2d-ad8b-487e-bca5-10a224858f53": "hidden",
+    "88505906-4318-4fee-9ecd-748b8db3483c": "hidden",
+    "81b83bac-9131-40dc-93fa-e0dbef20bf20": "hidden",
+    "a037da4f-e3f3-4d66-98fb-b4c70b97f5c8": "hidden",
+    "586018a7-0b89-47d3-afc7-a21aba34e7ae": "hidden",
+    "7e49e1b6-e531-4885-955d-6b0c15549070": "hidden",
+    "01e005cb-dd9f-435b-9453-0bea3e344c40": "hidden",
+    "4e0a8e98-61b9-4fd3-8552-f43cad1c38c9": "hidden",
+    "0abc4180-a91a-4052-8517-e83ae2689410": "hidden",
+    "6c49c959-7766-4275-9620-1b57be0c8ed6": "hidden",
+    "cdce82df-d064-4a91-8731-ca2fdc946210": "hidden",
+    "7393deb2-5f16-4121-a04a-67a25c4af36b": "hidden",
+    "db98caba-70b2-4792-8c02-8e5ca49e95f6": "hidden",
+    "0701b451-faa3-4931-8dbd-69fa11c879ba": "technical",
+    "0b582605-45f6-4ae6-94b3-95851ac83125": "technical",
+    "ee3d4ce0-c4d5-4ed2-8b75-ac24984b0f97": "technical",
+    "f258144f-cf57-4f03-b6ed-ef8452f0b6c3": "technical",
+    "026dec28-05b5-435f-8a2b-c723e44e3ffb": "unplaced",
+    "1b0b3b60-c24c-4eb5-85a2-9755bbcacbec": "unplaced",
+    "2f3f79cc-3364-474e-98b0-5db28dc0ec6a": "unplaced",
+    "6869bdde-5d35-4459-b17e-6d969fc4d918": "unplaced",
+    "7f154b15-5368-4c81-8f7c-f4c65bccd613": "unplaced",
+    "9ea843c6-b688-49cc-8838-1064906a7f93": "unplaced",
+    "b5de6a7a-80c0-4fbf-a343-3d1260790e2d": "unplaced",
+    "c3ea7e95-231b-4da4-827b-6db4c84e2b60": "unplaced",
+    "c9e73da3-d3bc-4646-98e9-fe19c0162f58": "unplaced",
+    "67062dae-186c-4594-906d-79cadca76481": "unplaced",
+    "8ed083df-11ff-41e2-97fd-36f2ecdbd23b": "unplaced",
+    "aaded153-2394-43b9-9f23-b2cb1b4ab58a": "unplaced",
+    "a6142415-2bb1-4490-ae72-e240cbbf4a50": "unplaced",
+    "8404d828-a239-45ff-a0cd-26e2aeb888b1": "unplaced",
+    "1281a3e8-5562-4437-bc1e-635f69d93ffb": "unplaced",
+    "adbb1bb0-0734-42da-99ae-d907452193cd": "unplaced",
+    "3f3c7267-bc8d-4722-8c0c-54e89c7d03f5": "unplaced",
+    "1a2603ce-cf53-4176-a74a-918e6e94dcc7": "unplaced",
+    "5f6e91f1-f6c3-4dee-a6ba-723c9f02808e": "unplaced",
+    "67297c48-fed1-43a8-ad1e-8e671f996653": "unplaced",
+    "15c0678a-5240-4866-9e67-52c8e2baa74c": "unplaced",
+    "a9b95fff-73aa-4907-8b82-efc1baa4014b": "unplaced",
+    "56e49a2a-fa5d-45b1-b154-a1e738818a15": "unplaced",
+    "f428a522-c653-4738-adf0-f0f97b2f3311": "unplaced",
+    "286cb603-b4ae-4279-80a1-d4505fee1916": "unplaced",
+    "19e07c17-4301-4b84-93f6-7c3cfbc57dda": "unplaced",
+    "9573db8c-6c35-4510-b94d-e1c38c2e81de": "unplaced",
+    "f9ad5a00-74ed-45bf-933a-00b86445bb7a": "unplaced",
+    "b04f3839-5dbb-46e7-8b31-009dee6445bf": "unplaced",
+    "1cc72e48-1645-4c32-8db1-a2c5555b954f": "unplaced",
+    "1464330b-77f0-465d-b3a3-6ff44dcd54bf": "unplaced",
+    "be8ed35b-74da-49ac-816c-028c4c833669": "unplaced",
+    "c19a4cb9-0d72-4202-9fef-cd8be1df4326": "unplaced",
+    "cb3c0ff6-5c25-46a0-a3bd-01ff89f047cf": "unplaced",
+    "e30aad66-b1f8-4805-b85b-04d4f665cb1c": "unplaced",
+    "b2c5fef1-80e8-4e1b-8bb1-592a906298e9": "unplaced",
+    "051d95a2-d457-4e2d-bb8a-9804ac24431a": "unplaced",
+    "f8d974f5-0a65-4452-be7c-1828e34cdfbb": "unplaced",
+    "087ffca4-d7d7-435e-a66f-153dde5ca410": "unplaced",
+    "d6a10dbc-77ae-4cd7-bafb-eba7e707eb93": "unplaced",
+    "50280c46-358d-4c22-a24f-5b258b4967a2": "unplaced",
+    "b52e0642-ae06-4670-b6dc-0e0fd425b05b": "unplaced",
+    "248239f3-762c-4fcc-973d-607e7592552c": "unplaced",
+    "e58cd622-ee1f-4688-9743-e8baf6ea66d8": "unplaced",
+    "e328af56-dc4f-4d73-ba99-6f5d86d3c996": "unplaced",
+    "690d91ef-a007-4c4c-b859-fdd7b1d80bc1": "unplaced",
+    "9ccb622a-c5c9-49ab-bed9-2ce117b124e3": "unplaced",
+    "c4c836a1-542b-4f7c-bdf5-333c0e0d8fbf": "unplaced",
+    "a0bd0531-d9ff-4828-acfc-416b7f57fbe6": "unplaced",
+    "eb90b0a5-98fa-4ccf-acb8-bee1b69e40a8": "unplaced",
+    "5658fbae-e6d2-493d-bfa5-6f23c230f12e": "unplaced",
+    "7486d798-dc20-4577-ab74-267ecc1ba91d": "unplaced",
+    "c4f839f9-8ca1-4f29-ba87-5c1edc918a14": "unplaced",
+    "ee0bed4b-778c-4c12-846e-86187fec8964": "unplaced",
+    "e57537a7-1f4c-4794-8962-5dea3afa049d": "unplaced",
+    "6b401b22-2b84-4ccf-905e-8b55111b948a": "unplaced",
+    "c28aeead-f960-48fb-89ad-53d55cb25333": "unplaced",
+    "56766dff-ec1c-4e6c-8f57-58e28dce6dd1": "unplaced",
+    "874a87c7-b04e-40b8-bd7e-ac3a84edd777": "unplaced"
+  },
+  "details": {
+    "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "9eabd9ac-5e54-4683-aa08-3490b29a56ce"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "9eabd9ac-5e54-4683-aa08-3490b29a56ce": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "675489ae-e83c-4e5d-9601-61dce33f7f75": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "5c1b2f4f-6876-4c5e-8b6d-a58160aca027"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "5c1b2f4f-6876-4c5e-8b6d-a58160aca027": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "675489ae-e83c-4e5d-9601-61dce33f7f75"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "0b615583-ceb4-4763-9e3e-2a7f1aa1c78c": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "2df99b08-e06a-43a5-a0bc-e66d5bb5f43c": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b615583-ceb4-4763-9e3e-2a7f1aa1c78c"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "958a1221-eb53-4a8b-b08d-4207405e84aa": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "f5c47a9e-0b4c-49ee-adf4-a5f65f3c3929": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "d0864e96-643f-4c55-984e-a130611fcc56": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "26afa18b-af55-44a5-8a19-ceb06c3f69ba"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "26afa18b-af55-44a5-8a19-ceb06c3f69ba": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "d0864e96-643f-4c55-984e-a130611fcc56"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "fe52faa3-9528-45cf-a30d-b354b7a47116": [
+      {
+        "title": "Lanzadera al complejo Lazarus",
+        "icons": [
+          "landing"
+        ],
+        "text": "Aterriza en el hub de Pyro I y toma la lanzadera hacia el recinto de investigación. La guía documenta distorsión capaz de dejar la nave sin energía durante la aproximación al laboratorio.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "5b6422d9-4f8b-42ff-b892-1a6ac17439ad"
+          }
+        ]
+      },
+      {
+        "title": "Paradas con mantenimiento reportado",
+        "icons": [
+          "repair"
+        ],
+        "text": "Rustville ofrece una alternativa en Pyro I con plataforma M registrada. Para una nave que necesite más espacio, comprueba tamaño y servicios en Stanton Gateway, lado Pyro.",
+        "sources": [
+          {
+            "name": "UEX · Rustville #68",
+            "url": "https://api.uexcorp.uk/2.0/outposts"
+          },
+          {
+            "name": "UEX · Stanton Gateway (Pyro) #50",
+            "url": "https://api.uexcorp.uk/2.0/space_stations"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "b7732f5f-8ad0-416e-bc4b-8e8329a73ba8"
+          },
+          {
+            "uuid": "a1b8a311-6465-45dc-873d-e8d06d4372df"
+          }
+        ]
+      }
+    ],
+    "5b6422d9-4f8b-42ff-b892-1a6ac17439ad": [
+      {
+        "title": "Acceso por el hub de transporte",
+        "icons": [
+          "landing"
+        ],
+        "text": "El marcador del complejo está oculto y carece de salto cuántico directo en la extracción. La guía indica tomar la lanzadera desde el hub.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "fe52faa3-9528-45cf-a30d-b354b7a47116"
+          }
+        ]
+      },
+      {
+        "title": "Radiación y distorsión",
+        "icons": [
+          "danger"
+        ],
+        "text": "La guía documenta radiación intensa y distorsión que puede desactivar naves. Lleva protección de radiación y localiza la enfermería exterior al llegar.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Storm Breaker · Valakkar Apex",
+        "icons": [
+          "pve"
+        ],
+        "text": "Lleva la tarjeta obtenida en Farro para acceder al Specimen Cache. El huevo se lleva a la torre de llamada para atraer al Valakkar Apex. La aparición y el estado de la actividad dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "f3f28c8d-9891-44f2-8c4f-502039645dde"
+          }
+        ]
+      },
+      {
+        "title": "Recompensas de Storm Breaker",
+        "icons": [
+          "loot"
+        ],
+        "text": "La guía de la actividad cita perlas y colmillos de Valakkar Apex, equipamiento Sterling y armas VOLT. Las recompensas corresponden al recorrido; el contenido de cada sala o contenedor depende de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      }
+    ],
+    "f3f28c8d-9891-44f2-8c4f-502039645dde": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "bae9d976-d314-4998-a1f9-555619769436": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "f884b3ca-6a43-45d9-b37e-3dc5e2fa5acc": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "df7a76c9-7a37-4028-b584-f53a930f848c": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "142f694d-6d72-4915-bfa1-ead77af036ce": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "8f348f9f-48bc-4a4d-923a-6ea8751792ae": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "fa914ecb-2c0e-4512-987c-ecd5dfeed408": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "27f1a509-4775-437a-a0a9-88205cfc019a": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "90879129-2010-474b-81c3-0416964d6f81": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ],
+    "acb7dde1-23f5-48c7-b7c8-0ab6585815f6": [
+      {
+        "title": "Storm Breaker · tarjeta Lazarus",
+        "icons": [
+          "mission"
+        ],
+        "text": "Los centros Farro de Pyro IV son el punto de partida. Busca la tarjeta de mantenimiento ASD, el código de cinco cifras en Data Processing y la impresora de tarjetas en Tower 01.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Defensas del centro de datos",
+        "icons": [
+          "pve"
+        ],
+        "text": "La guía documenta torretas en el exterior y una fuerza de intervención durante la impresión. Los NPC y el estado del recinto dependen de la sesión.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ]
+      },
+      {
+        "title": "Siguiente etapa · Pyro I",
+        "icons": [
+          "landing"
+        ],
+        "text": "Una vez obtenida la tarjeta Lazarus, ve a un hub de transporte de Pyro I para tomar la lanzadera.",
+        "sources": [
+          {
+            "name": "Citadel · guía de Storm Breaker",
+            "url": "https://www.citadelsc.com/es/guides/storm-breaker"
+          },
+          {
+            "name": "Community Hub · mapas de Alpha 4.2",
+            "url": "https://robertsspaceindustries.com/community-hub/post/storm-breaker-one-page-guide-XTU7HaiJkZyFs"
+          }
+        ],
+        "destinations": [
+          {
+            "uuid": "0b57ac9e-5f4f-4321-9c23-518bbdd3cb79"
+          },
+          {
+            "uuid": "958a1221-eb53-4a8b-b08d-4207405e84aa"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -170,10 +170,13 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
       destinations:review.destinationUuid?[{uuid:review.destinationUuid}]:undefined,
     });
   }
+  if(p.pyroIntel?.marker){
+    add('navigation',p.pyroIntel.marker.text,{title:'Marcador del parche',sources:p.pyroIntel.marker.sources});
+  }
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);
   const version=p.source?.version||p.patch||p.intelDetailSource?.version;
-  const review=p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
+  const review=p.pyroIntel?.checkedAt||p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
   const versionLabel=[version&&'Datos '+version, review&&'Consulta '+review].filter(Boolean).join(' · ');
   return {groups,services,sources:[...sources.values()],versionLabel};
 }

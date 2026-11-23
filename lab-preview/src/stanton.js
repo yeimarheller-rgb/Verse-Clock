@@ -32,16 +32,18 @@ export function inStantonZone(p, zone) {
 
 export const isStantonPlaceholder=p=>atlasSystem(p.system)==='Stanton'&&/^<=\s*(uninitialized|placeholder)\s*=>$/i.test(p.name);
 
-export function identifyStantonVariants(rows) {
+export function identifyCatalogVariants(rows, system='Stanton') {
  const names=new Map();
  for(const p of rows){
-  if(atlasSystem(p.system)!=='Stanton')continue;
+  if(atlasSystem(p.system)!==system)continue;
   const key=normalize(p.name);
   names.set(key,(names.get(key)||0)+1);
  }
- return rows.map(p=>atlasSystem(p.system)==='Stanton'&&names.get(normalize(p.name))>1&&p.id
+ return rows.map(p=>atlasSystem(p.system)===system&&names.get(normalize(p.name))>1&&p.id
   ? {...p,catalogVariant:p.id} : p);
 }
+
+export {identifyCatalogVariants as identifyStantonVariants};
 
 export function traceStantonParents(rows) {
  const byName=new Map();

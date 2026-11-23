@@ -107,5 +107,14 @@
   {"id":55,"name":"Terra Mills HydroFarm","system":"Stanton","body":"Cellin","type":"outposts","services":["repair","refuel"],"tradeTerminal":true,"trade":[[86,"Terra Mills Hydrofarm","3.24.2"]]},
   {"id":52,"name":"Wikelo Emporium Dasi Station","system":"Stanton","body":null,"type":"space_stations","services":["repair","refuel"],"padTypes":"XL"},
   {"id":51,"name":"Wikelo Emporium Kinga Station","system":"Stanton","body":null,"type":"space_stations","services":["repair","refuel"],"padTypes":"XL"},
-  {"id":53,"name":"Wikelo Emporium Selo Station","system":"Stanton","body":null,"type":"space_stations","services":["repair","refuel"],"padTypes":"XL"}
+  {"id":53,"name":"Wikelo Emporium Selo Station","system":"Stanton","body":null,"type":"space_stations","services":["repair","refuel"],"padTypes":"XL"},
+  {"id":33,"name":"Starlight Service Station","system":"Pyro","body":"Bloom Lagrange Point 1","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"L"},
+  {"id":34,"name":"Patch City","system":"Pyro","body":"Bloom Lagrange Point 3","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":38,"name":"Rod's Fuel 'N Supplies","system":"Pyro","body":"Pyro V Lagrange Point 4","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":39,"name":"Rat's Nest","system":"Pyro","body":"Pyro V Lagrange Point 5","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":41,"name":"Endgame","system":"Pyro","body":"Pyro VI Lagrange Point 3","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":42,"name":"Dudley & Daughters","system":"Pyro","body":"Pyro VI Lagrange Point 4","type":"space_stations","services":["repair","refuel","clinic"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":43,"name":"Megumi Refueling","system":"Pyro","body":"Pyro VI Lagrange Point 5","type":"space_stations","services":["repair","refuel","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":46,"name":"Gaslight","system":"Pyro","body":"Pyro V Lagrange Point 2","type":"space_stations","services":["repair","refuel","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","padTypes":"S,M,L"},
+  {"id":55,"name":"Nyx Gateway","system":"Pyro","body":"Nyx Gateway (Pyro system)","type":"space_stations","services":["repair","refuel","refinery","clinic","cargo"],"tradeTerminal":true,"trade":[],"checkedAt":"2026-11-23","sourceName":"Nyx Gateway (Pyro)"}
 ]}
