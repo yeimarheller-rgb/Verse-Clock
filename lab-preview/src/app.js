@@ -343,7 +343,9 @@ function updateMenu(){
   const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
   const text=[n,parent,sys,tags].join(' ');
   const matches=q.split(/\s+/).every(term=>text.includes(term));
-  const intel=auditedSystems.includes(atlasSystem(item.system))?item.value.catalogIntel:null;
+  const system=atlasSystem(item.system);
+  const exactPyroVariant=system==='Pyro'&&Boolean(item.value.catalogVariant)&&n===q;
+  const intel=system==='Nyx'||exactPyroVariant?item.value.catalogIntel:null;
   const state=intel?.marker.state;
   const ambiguous=Boolean(item.value.catalogVariant)&&['hidden','unplaced'].includes(state);
   const score=n===q?(ambiguous?2:0):n.startsWith(q)?1:n.includes(q)?2:tags.includes(q)?3:matches?4:99;
