@@ -101,6 +101,7 @@ with sync_playwright() as p:
         expect(dossier).to_contain_text('Carinite')
         query('Lazarus Complex')
         expect(dossier).to_contain_text('Valakkar')
+        expect(page.locator('#locationEvidence')).to_be_hidden()
         expect(dossier).to_contain_text('1.')
         query('Jumptown')
         expect(dossier).to_contain_text('Amioshi Plague')
@@ -109,6 +110,9 @@ with sync_playwright() as p:
         page.get_by_role('button',name='Modo Operaciones').click()
         expect(dossier.locator('section').first).to_have_attribute('data-domain','services')
         expect(dossier).to_contain_text('Rearme · Certificado')
+        expect(page.locator('#locationEvidence')).to_contain_text('4.10.3-LIVE.13165946')
+        expect(dossier).to_contain_text('Si no aparece el servicio')
+        expect(dossier.locator('.dossier-limit').first).to_be_visible()
         assert dossier.locator('.service-icons').count() == 1
         assert dossier.inner_text().count('Reparación de nave') == 1
         page.get_by_role('button',name='Modo Operaciones').click()

@@ -1,7 +1,7 @@
 import {envFor, SOURCE} from './environment.js';
 import {securityFor} from './security.js';
 import {lootFor} from './loot.js';
-import {normalize, serviceNames, tacticalSections} from './tactical-atlas.js';
+import {atlasSystem, normalize, serviceNames, tacticalSections} from './tactical-atlas.js';
 import {stantonSections} from './stanton.js';
 
 export const dossierGroups = {
@@ -14,6 +14,10 @@ export const dossierGroups = {
 };
 export const shipServices = {repair:'Reparación de nave',refuel:'Repostaje',rearm:'Rearme'};
 const serviceLabels={...serviceNames,...shipServices};
+const landingIssue={
+  version:'4.10.3-LIVE.13165946',
+  source:'https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues',
+};
 const indexedResourceLabels={mineable:'Minería',harvestable:'Recolección',salvage:'Salvamento',remains:'Restos'};
 const iconGroup={
   danger:'security', 'anti-capital':'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
@@ -37,14 +41,14 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
     if(!sources.has(url))sources.set(url,{url,label:entry.name||new URL(url).hostname,index:sources.size+1});
     return [sources.get(url).index];
   });
-  const add=(group,text,{title,status,sources:refs,destinations,temperature,icons}={})=>{
+  const add=(group,text,{title,status,sources:refs,destinations,temperature,icons,uncertainty}={})=>{
     const indexes=[...new Set(addSources(refs))];
     if(!text&&!temperature)return;
     const key=normalize([temperature,text].filter(Boolean).join(' ')).replace(/[^\p{L}\p{N}]+/gu,' ').trim();
     if(seen.has(key))return;
     seen.add(key);
     if(!groups.has(group))groups.set(group,[]);
-    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature,icon:icons?.[0]});
+    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature,icon:icons?.[0],uncertainty});
   };
   const geographicalSections=tacticalSections(p);
   const catalogTrade=geographicalSections.find(section=>section.title==='Comercio');
@@ -58,6 +62,14 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   for(const key of Object.keys(serviceLabels)){
     const state=p.services?.[key];
     if(meaningful(state)||operations&&key in shipServices)services.set(key,{label:serviceLabels[key],state:state||'unknown'});
+  }
+  const version=p.source?.version||p.patch||p.intelDetailSource?.version;
+  const isStanton=atlasSystem(p.system)==='Stanton';
+  if(operations&&isStanton&&version===landingIssue.version&&[...services].some(([key,item])=>
+    key in shipServices&&['confirmed','possible','reported'].includes(item.state))){
+    add('services','Si el mobiGlas no muestra los servicios tras aterrizar, espera unos minutos y vuelve a abrir Servicios de aterrizaje. Si estás en un hangar, deja que se cierren las puertas.',{
+      title:'Si no aparece el servicio',icons:['danger'],sources:[{name:'RSI · incidencias de aterrizaje 4.10.3',url:landingIssue.source}],
+    });
   }
   const directTerminals=new Set(p.stantonIntel?.claims.map(claim=>claim.terminalId).filter(Boolean));
   const knownEnvironment=p.stantonIntel?.environment||environment;
@@ -179,8 +191,8 @@ export function locationDossier(p,{environment,body,solar,operations=false}={}){
   }
   if(solar)add('navigation',solar,{title:'Navegación solar'});
   addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);
-  const version=p.source?.version||p.patch||p.intelDetailSource?.version;
   const review=p.catalogIntel?.checkedAt||p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
   const versionLabel=[version&&'Datos '+version, review&&'Consulta '+review].filter(Boolean).join(' · ');
-  return {groups,services,sources:[...sources.values()],versionLabel};
+  const stantonVersionLabel=isStanton&&version?[version, review&&'Revisión documental '+review,'Comprueba la disponibilidad en partida'].filter(Boolean).join(' · '):'';
+  return {groups,services,sources:[...sources.values()],versionLabel,stantonVersionLabel};
 }

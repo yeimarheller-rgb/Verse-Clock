@@ -69,9 +69,11 @@ export function mergeTacticalAtlas(byKey, snapshot, wikiVersion) {
       {title: 'Contrato relacionado · Shubin', icons: ['mission'], text: 'XL Purchase Order: Hand Mined Materials. El pedido menciona Hathor en Daymar y Aberdeen como origen de materiales. Consulta la oferta en el gestor de contratos.',
       sources: [source('Star Citizen Wiki API · contrato', contract)]},
     ];
-    if (byKey.get(atlasKey({system: location.system, name: recovery}))?.serviceIntel?.services.includes('repair')) {
-      sections.push({title: 'Reparación en la misma luna', icons: ['repair'], text: recovery + ' tiene reparación de nave registrada por UEX. Comprueba el tamaño de la plataforma y la disponibilidad al aterrizar.',
-        destinations: [recovery], sources: [source('Star Citizen Wiki · servicios del puesto', wiki + recovery.replaceAll(' ', '_'))]});
+    const recoveryIntel = byKey.get(atlasKey({system: location.system, name: recovery}))?.serviceIntel;
+    if (recoveryIntel?.services.includes('repair')) {
+      sections.push({title: 'Reparación en la misma luna', icons: ['repair'], text: recovery + ' tiene reparación de nave reportada por UEX.',
+        status: 'Reportado · comprobar en partida', uncertainty: 'Comprueba el tamaño de la plataforma y la disponibilidad del servicio antes de depender de él.',
+        destinations: [recovery], sources: [source('UEX · ' + recovery + ' · #' + recoveryIntel.id, recoveryIntel.landingSourceUrl || api + recoveryIntel.type)]});
     }
     byKey.set(key, {...location, hathor: {moon, group, linked, sections}, patch: wikiVersion || location.patch});
   }

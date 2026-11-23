@@ -27,6 +27,9 @@ test('a Hathor PAF has one account of the hazards, one weapon list and its route
  assert.match(all,/XL Purchase Order/);
  assert.doesNotMatch(all,/Carinite/);
  assert.ok(dossier.sources.some(source=>source.url.includes('Planetary_alignment_facilities')));
+ const repair=dossier.groups.get('services').find(fact=>fact.title==='Reparación en la misma luna');
+ assert.match(repair.uncertainty,/tamaño de la plataforma/);
+ assert.ok(dossier.sources.some(source=>repair.sources.includes(source.index)&&source.url.includes('uexcorp')));
  assert.equal(new Set(dossier.sources.map(source=>source.url)).size,dossier.sources.length);
 });
 
@@ -34,6 +37,11 @@ test('operations changes emphasis without duplicating services or tactical claim
  const seraphim=model('Seraphim Station','Stanton',{operations:true});
  assert.equal(seraphim.services.get('repair').state,'reported');
  assert.equal(seraphim.services.get('rearm').state,'confirmed');
+ assert.match(seraphim.stantonVersionLabel,/4\.10\.3-LIVE\.13165946/);
+ assert.match(text(seraphim,'services'),/Si el mobiGlas no muestra los servicios/);
+ assert.doesNotMatch(text(model('Seraphim Station'),'services'),/Si el mobiGlas no muestra los servicios/);
+ const anotherBuild=locationDossier({...map.get(atlasKey({name:'Seraphim Station',system:'Stanton'})),source:{version:'4.11'}},{operations:true});
+ assert.doesNotMatch(text(anotherBuild,'services'),/Si el mobiGlas no muestra los servicios/);
  assert.doesNotMatch(text(seraphim,'services'),/Reparación de nave/);
  const everus=model('Everus Harbor');
  assert.equal(everus.services.get('rearm').state,'confirmed');
