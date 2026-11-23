@@ -1,5 +1,6 @@
 import {execFileSync} from 'node:child_process';
 import {readFileSync, writeFileSync} from 'node:fs';
+import {navigationUncertainty, registryUncertainty, stantonNavigationText, stantonRegistryText} from '../lab-preview/src/stanton-navigation.js';
 
 const [sourceRepo, reviewedAt] = process.argv.slice(2);
 if (!sourceRepo || !/^\d{4}-\d{2}-\d{2}$/.test(reviewedAt || '')) {
@@ -26,15 +27,103 @@ const definitions = unique(extract('starmap.json'),row=>row.UUID);
 const placements = unique(extract('starmap_positions.json').entities.filter(row=>row.system==='stanton'),row=>row.uuid);
 const placedNames=unique([...placements.values()].filter(Boolean),row=>row.name);
 const inventory = index.locations.filter(row=>row.system==='Stanton System');
+const inventoryNames=unique(inventory,row=>row.name);
+const inventoryIds = new Set(inventory.map(row=>row.id));
+const finitePosition = pos => [pos.x,pos.y,pos.z].every(Number.isFinite);
+const directDestination = (def,pos) => def && pos && finitePosition(pos) && def.Name===pos.name &&
+ !pos.hidden && !def.HideInStarmap && !def.BlockTravel && pos.qt_valid===true;
+const approachReferences = [...placements.values()].filter(pos => pos && inventoryIds.has(pos.uuid) &&
+ ['Manmade','Manmade_VisibleOnInteraction','Planet','Moon','Settlement'].includes(pos.type) &&
+ directDestination(definitions.get(pos.uuid),pos));
+const distance = (pos,other) => Math.hypot(pos.x-other.x,pos.y-other.y,pos.z-other.z);
 const rows = unique(intel.locations.filter(row=>row.uuid),row=>row.uuid);
 const claims = [];
 const add = (uuid,field,text,uncertainty,source,proof,sourceDetail) => {
  claims.push({uuid,field,text,uncertainty,source,proof,sourceDetail});
 };
+function navigation(def,pos) {
+ const parent=definitions.get(pos.parent_uuid);
+ const parentPos=placements.get(pos.parent_uuid);
+ if (!parent || def.ParentUUID!==parent.UUID || /^<=/.test(def.Name)) return;
+ const parentReference={referenceUuid:parent.UUID,referenceName:parent.Name};
+ if (directDestination(def,pos)) {
+  if (def.OnlyShowWhenParentSelected && !directDestination(parent,parentPos)) return;
+  return {...parentReference,mode:'direct',arrivalMeters:def.QuantumTravel?.ArrivalRadius??null,
+   selectParent:def.OnlyShowWhenParentSelected===true};
+ }
+ if (!pos.hidden && !def.HideInStarmap && !pos.qt_valid && pos.type==='Asteroid' &&
+     /No unauthorized access allowed\./.test(def.Description)) return {...parentReference,mode:'private'};
+ const regional=/^(ARC|CRU|HUR|MIC) L[1-5]$/.test(def.Name) &&
+  /^(A Lagrangian gravity well located in the orbit of )/.test(def.Description);
+ if (!pos.hidden && !def.HideInStarmap && !pos.qt_valid && regional) {
+  const body=[...definitions.values()].find(item=>item?.Name===def.Description.match(/orbit of ([^.]+)\./)?.[1] &&
+   directDestination(item,placements.get(item.UUID)));
+  if(body)return {mode:'sector',referenceUuid:body.UUID,referenceName:body.Name,hidden:false};
+ }
+ if (!pos.hidden || !def.HideInStarmap) return;
+ if (pos.qt_valid && directDestination(parent,parentPos)) {
+  if (/^This ASD Research Facility is no longer in operation\. No trespassing\.$/.test(def.Description) &&
+      /^Onyx Facility S\d[A-Z]\d+$/.test(def.Name)) return {...parentReference,mode:'restricted'};
+  if (!def.QuantumTravel && !def.HideInWorld && ['Hospital','CriminalHospital'].includes(def.RespawnLocationType) &&
+      ['LandingZone','Manmade','Manmade_VisibleOnInteraction'].includes(parentPos.type)) return {...parentReference,mode:'clinic'};
+ }
+ if (!pos.qt_valid && ['JumpPoint','Anomaly'].includes(pos.type) &&
+     directDestination(parent,parentPos) && /^This jump point connects Stanton to the /.test(def.Description)) {
+  return {...parentReference,mode:'gateway'};
+ }
+ if (!pos.qt_valid && pos.type==='Asteroid' && !def.BlockTravel) {
+  const reference=approachReferences.reduce((nearest,candidate) =>
+   !nearest || distance(pos,candidate)<distance(pos,nearest) ? candidate : nearest,null);
+  if (!reference) return;
+  const distanceKm=Math.round(distance(pos,reference)/1000);
+  // A nearby reference is useful for arrival planning. Large offsets do not provide a practical approach here.
+  if (distanceKm>0 && distanceKm<=10000) return {mode:'approach',referenceUuid:reference.uuid,
+   referenceName:reference.name,distanceKm,privateAccess:/No unauthorized access allowed\./.test(def.Description)};
+  const privateAccess=/^A privately owned mining claim .*No unauthorized access allowed\.$/.test(def.Description);
+  if((privateAccess || /^A gas pocket contained in the Lagrangian gravity well /.test(def.Description)) &&
+     /^(ARC|CRU|HUR|MIC) L[1-5](?:-[A-Z])?$/.test(parent.Name)) {
+   return {...parentReference,mode:'sector',hidden:true,privateAccess};
+  }
+  if(regional){
+   const body=[...definitions.values()].find(item=>item?.Name===def.Description.match(/orbit of ([^.]+)\./)?.[1] &&
+    directDestination(item,placements.get(item.UUID)));
+   if(body)return {mode:'sector',referenceUuid:body.UUID,referenceName:body.Name,hidden:true};
+  }
+ }
+}
+
+function registry(def) {
+ const parent=definitions.get(def.ParentUUID);
+ if(!parent || /^<=/.test(parent.Name) || !inventoryNames.get(def.Name))return;
+ const reference={referenceUuid:parent.UUID,referenceName:parent.Name};
+ if(/^A privately owned mining (?:base|claim) that has been registered with the UEE Bureau of Resource Management\. No unauthorized access allowed\.$/.test(def.Description)){
+  return {...reference,mode:'mining-permit'};
+ }
+ if(def.Description==='Owing to unstable conditions, this mining compound is no longer in operation.'){
+  return {...reference,mode:'closed-mine'};
+ }
+ if(def.Description==='This security post is currently inactive. Access remains restricted to ArcCorp personnel and contractors only.'){
+  return {...reference,mode:'restricted-post'};
+ }
+ if(def.Description==='This remote operations depot is for use by authorized personnel only. Trespassers will be prosecuted.'){
+  return {...reference,mode:'restricted-depot'};
+ }
+ if(def.RespawnLocationType==='Hospital' && directDestination(parent,placements.get(parent.UUID))){
+  return {...reference,mode:'hospital-record'};
+ }
+}
+
 for(const row of inventory){
  const uuid=row.id;
  const def=definitions.get(uuid), pos=placements.get(uuid);
- if(!def || def.Name!==row.name || !pos || pos.name!==row.name || ![pos.x,pos.y,pos.z].every(Number.isFinite))continue;
+ if(!def || def.Name!==row.name || /^<=/.test(row.name) || row.name==='RSI Event Platform')continue;
+ if(!pos){
+  const detail=registry(def);
+  const text=stantonRegistryText(detail,def.Name);
+  if(text)add(uuid,detail.mode==='hospital-record'?'logistics':'access',text,registryUncertainty,definitionSource,'registry',JSON.stringify({...detail,name:def.Name}));
+  continue;
+ }
+ if(pos.name!==row.name || !finitePosition(pos))continue;
  for(const claim of rows.get(uuid)?.claims||[]){
   if(claim.field!=='access'||claim.status!=='documented'||claim.patch!==intel.live||!claim.uncertainty||
      !claim.sources.includes(pinnedSource)||!claim.sources.includes(definitionSource))continue;
@@ -63,6 +152,11 @@ for(const row of inventory){
   }
   if(sourceDetail)add(uuid,'access',claim.text,claim.uncertainty,pinnedSource,'position',sourceDetail);
  }
+ if(!claims.some(claim=>claim.uuid===uuid && claim.field==='access')){
+  const detail=navigation(def,pos);
+  const text=stantonNavigationText(detail,def.Name);
+  if(text)add(uuid,'access',text,navigationUncertainty,pinnedSource,'navigation',JSON.stringify({...detail,name:def.Name}));
+ }
  if(pos.hidden||def.HideInStarmap||def.Type?.Classification!=='Manmade'||!/\b(?:including|like): Refueling, Restocking,/.test(def.Description))continue;
  const uncertainty='El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.';
  for(const [field,label,token] of [['refuel','repostaje','Refueling'],['rearm','reabastecimiento de munición','Restocking']]){
@@ -71,4 +165,4 @@ for(const row of inventory){
 }
 const output={schemaVersion:1,version:intel.live,reviewedAt,status:'source-reviewed',commit:sourceCommit,claims};
 writeFileSync(new URL('../lab-preview/data/stanton-certified-evidence.json',import.meta.url),JSON.stringify(output,null,2)+'\n');
-console.log(JSON.stringify({inventory:inventory.length,claims:claims.length,locations:new Set(claims.map(x=>x.uuid)).size,fields:Object.fromEntries(['access','refuel','rearm'].map(f=>[f,claims.filter(c=>c.field===f).length]))}));
+console.log(JSON.stringify({inventory:inventory.length,claims:claims.length,locations:new Set(claims.map(x=>x.uuid)).size,fields:Object.fromEntries(['access','logistics','refuel','rearm'].map(f=>[f,claims.filter(c=>c.field===f).length]))}));
