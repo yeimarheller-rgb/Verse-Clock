@@ -277,6 +277,35 @@ $('operationsToggle').addEventListener('click',()=>{
  if(activeLocation)applyPoiToMain(activeLocation);
 });
 
+function isQvStation(p){
+ return atlasSystem(p.system)==='Nyx'&&/^QV (?:Breaker|Extraction|Logistics) Station(?: BRK-\d+)?$/.test(p.name);
+}
+function searchesVariant(p,query){
+ return /^[a-f0-9]{8}[a-f0-9-]*$/.test(query)&&p.catalogVariant?.startsWith(query);
+}
+function qvStationNames(items,query,locationOf){
+ const preferred=new Map();
+ const priority={jump:0,visible:1,hidden:2,unplaced:3};
+ const rank=p=>priority[p.catalogIntel?.marker.state]??4;
+ for(const item of items){
+  const p=locationOf(item);
+  if(!isQvStation(p)||searchesVariant(p,query))continue;
+  const previous=preferred.get(p.name);
+  if(!previous||rank(p)<rank(locationOf(previous)))preferred.set(p.name,item);
+ }
+ return items.filter(item=>{
+  const p=locationOf(item);
+  return !isQvStation(p)||searchesVariant(p,query)||preferred.get(p.name)===item;
+ });
+}
+function qvMarkerLabel(p){
+ if(!isQvStation(p))return '';
+ if(p.catalogIntel?.marker.state==='jump')return 'Salto cuántico';
+ if(p.name.endsWith('Station'))return 'Destino por contrato';
+ if(p.catalogIntel?.marker.state==='hidden')return 'Marcador oculto';
+ return 'Sin posición extraída';
+}
+
 function updateMenu(){
  const q=normalize(input.value);
  if(!q&&!activeFilter&&!stantonZone.value){hideMenu();return}
@@ -297,7 +326,7 @@ function updateMenu(){
  ].filter(Boolean).join(' ')}));
  const unique=new Map();
  for(const item of [...pois,...solar]){const key=atlasKey(item.value);if(!unique.has(key))unique.set(key,item)}
- suggestions=[...unique.values()].map(item=>{
+ const ranked=[...unique.values()].map(item=>{
   const n=normalize(item.name),parent=normalize(item.parent),sys=normalize(item.system),tags=normalize(item.tags);
   const text=[n,parent,sys,tags].join(' ');
   const matches=q.split(/\s+/).every(term=>text.includes(term));
@@ -308,10 +337,11 @@ function updateMenu(){
   const jump=Number(state==='jump');
   const detailed=Number(Boolean(item.value.serviceIntel||item.value.hathor||intel?.sections.length));
   return{item,score,jump,detailed};
- }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||b.jump-a.jump||b.detailed-a.detailed||a.item.name.localeCompare(b.item.name,'es')).slice(0,activeFilter?100:16).map(x=>x.item);
+ }).filter(x=>x.score<99).sort((a,b)=>a.score-b.score||b.jump-a.jump||b.detailed-a.detailed||a.item.name.localeCompare(b.item.name,'es')).map(x=>x.item);
+ suggestions=qvStationNames(ranked,q,item=>item.value).slice(0,activeFilter?100:16);
  menu.replaceChildren();cursor=-1;
  if(!suggestions.length){const empty=document.createElement('div');empty.className='empty';empty.textContent=poiData.length?'Sin coincidencias en el atlas':'Cargando atlas…';menu.append(empty)}
- suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
+ suggestions.forEach((item,i)=>{const btn=document.createElement('button');btn.type='button';btn.id='suggestion-'+i;btn.setAttribute('role','option');btn.setAttribute('aria-selected','false');const name=document.createElement('span');name.textContent=item.name;const meta=document.createElement('small');meta.textContent=[item.parent,item.system,item.kind==='poi'?'Ficha táctica':'Reloj solar',qvMarkerLabel(item.value),(!isQvStation(item.value)||searchesVariant(item.value,q))&&item.value.catalogVariant?.slice(0,8)].filter(Boolean).join(' · ');if(item.kind==='poi'){
   const icon=resultIcon(item.value);
   const state=['repair','refuel','rearm'].includes(icon)?evidenceState(item.value.services?.[icon]):undefined;
   if(icon==='anti-capital')meta.textContent+=' · Anticapital por misión';
@@ -506,22 +536,23 @@ function applyPoiToMain(p){
 }
 
 function renderPoi(){
- const queryTerms=normalize(poiQuery.value).split(/\s+/).filter(Boolean);
- const matches=poiData.filter(p=>{
+ const query=normalize(poiQuery.value);
+ const queryTerms=query.split(/\s+/).filter(Boolean);
+ const matches=qvStationNames(poiData.filter(p=>{
   if(poiSystem.value&&p.system!==poiSystem.value)return false;
   if(poiService.value&&!['reported','confirmed'].includes(p.services?.[poiService.value]))return false;
-  const text=normalize([p.name,p.system,p.parent,p.operator,p.type,...(p.amenities||[]),...tacticalTags(p),
+  const text=normalize([p.name,p.system,p.parent,p.operator,p.type,p.catalogVariant,...(p.amenities||[]),...tacticalTags(p),
    ...(p.tacticalIntel?.threats||[]),...(p.tacticalIntel?.resources||[]),...(p.tacticalIntel?.weapons||[]),
    ...(p.tacticalIntel?.steps||[]),...(p.lootIntel?.categories||[]),
    ...(p.missions||[]).map(x=>x.name),...(p.resources||[]).map(x=>x.name)].join(' '));
   return queryTerms.every(term=>text.includes(term));
- });
+ }),query,p=>p);
  $('poiCount').textContent=matches.length+' de '+poiData.length+' ubicaciones catalogadas · servicios sujetos a verificación';
  poiResults.replaceChildren();
  if(!matches.length){const p=document.createElement('p');p.textContent='No hay resultados documentados para estos filtros.';poiResults.append(p);return;}
  for(const p of matches.slice(0,100)){
  const card=document.createElement('article');card.className='poi-entry';const h=document.createElement('h3');h.append(makeTacticalLabel(resultIcon(p),p.name));
- const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type].filter(Boolean).join(' · ');
+ const meta=document.createElement('p');meta.className='poi-meta';meta.textContent=[p.system,p.parent,p.type,qvMarkerLabel(p)].filter(Boolean).join(' · ');
  const org=document.createElement('p');org.textContent='Operador: '+(p.operator||'Sin verificar');
  const intel=document.createElement('p');intel.className='poi-meta';const labels=[];if(p.missions?.length)labels.push('Misiones '+p.missions.length);if(p.tacticalIntel?.threats?.length)labels.push('PvE');if(p.tacticalIntel?.resources?.length||p.resources?.length)labels.push('Recursos');if(p.tacticalIntel?.weapons?.length||p.lootIntel?.categories?.length)labels.push('Botín');if(p.tacticalIntel?.steps?.length)labels.push('Guía '+p.tacticalIntel.steps.length+' pasos');intel.textContent=labels.length?'INTEL: '+labels.join(' · '):'Solo ficha geográfica / información operativa no documentada';
  const svc=document.createElement('p');svc.textContent='Refinería: '+({confirmed:'confirmada',reported:'reportada, sin confirmar',unknown:'desconocida',unavailable:'no disponible'}[p.services?.refinery]||'sin datos');
