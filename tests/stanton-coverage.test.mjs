@@ -24,7 +24,7 @@ for(const p of byKey.values()){
 mergeTacticalAtlas(byKey,read('atlas-services'),catalogue.version);
 const baseline=stantonCoverage(raw,traceStantonParents([...byKey.values()]));
 const stanton=read('stanton-intel');
-mergeStanton(byKey,stanton);
+mergeStanton(byKey,stanton,null,read('stanton-certified-evidence'));
 const visible=traceStantonParents([...byKey.values()]);
 const at=name=>byKey.get(atlasKey({system:'Stanton',name}));
 const atId=new Map(visible.filter(row=>row.source?.uuid).map(row=>[row.source.uuid,row]));
@@ -53,8 +53,8 @@ test('Stanton keeps raw denominator and credits only located, sourced evidence',
 
 test('rearm coverage requires site evidence and does not infer from landing',()=>{
  assert.equal(at('Everus Harbor').services.rearm,'confirmed');
- assert.equal(at('Shubin Mining Facility SCD-1').services.rearm,'confirmed');
- assert.equal(at('Seraphim Station').services.rearm,undefined);
+ assert.equal(at('Shubin Mining Facility SCD-1').services.rearm,'possible');
+ assert.equal(at('Seraphim Station').services.rearm,'confirmed');
  assert.equal(at('Covalex Distribution Centre S1DC06').services?.rearm,undefined);
  assert.ok(stantonSections(at('Covalex Distribution Centre S1DC06')).filter(section=>section.title!=='Acceso público indicado').every(section=>section.status.includes('Otra versión')));
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Crusader'));

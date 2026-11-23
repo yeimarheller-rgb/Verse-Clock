@@ -1,0 +1,1359 @@
+{
+  "schemaVersion": 1,
+  "version": "4.10.3-LIVE.13165946",
+  "reviewedAt": "2026-11-23",
+  "status": "source-reviewed",
+  "commit": "3cc8072b24df2a2d71eb6207708e2039f909b342",
+  "claims": [
+    {
+      "uuid": "7d972948-8e00-4239-bf6e-bdaf32ea4363",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Wala para buscar Ako's Return. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=d6f1ccd9-fbfb-4086-9608-8466ef2c1c93; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "a8750e45-537e-481d-8a53-a24f8b42fa08",
+      "field": "access",
+      "text": "Selecciona ARC-L1 Wide Forest Station como destino cuántico. El centro de la bolsa ARC L1-A figura a unos 20 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=59485d8c-7947-4e00-871c-d35f6451aab8; distance_km=20"
+    },
+    {
+      "uuid": "c8307d0e-20c7-46ac-b2b9-f145d8d86bb5",
+      "field": "access",
+      "text": "Selecciona ARC-L2 Lively Pathway Station como destino cuántico. El centro de la bolsa ARC L2-A figura a unos 23 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=45b909df-7b0c-40c9-ab83-a7cd7d3a980f; distance_km=23"
+    },
+    {
+      "uuid": "1820b8fc-e7c1-49f0-9020-5c8c5f7aae4c",
+      "field": "access",
+      "text": "Selecciona ARC-L3 Modern Express Station como destino cuántico. El centro de la bolsa ARC L3-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=3a43118d-b1b7-4822-8fb2-13f7abe6ac8b; distance_km=30"
+    },
+    {
+      "uuid": "94fb0b94-8604-4302-8897-45fed6087b4b",
+      "field": "access",
+      "text": "Selecciona ARC-L4 Faint Glen Station como destino cuántico. El centro de la bolsa ARC L4-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=2dbccd4e-81de-45fa-a24c-cd32d29a8ec4; distance_km=30"
+    },
+    {
+      "uuid": "63bf3acd-7678-47b5-92cb-450f6cb73c4f",
+      "field": "access",
+      "text": "Selecciona ARC-L5 Yellow Core Station como destino cuántico. El centro de la bolsa ARC L5-A figura a unos 27 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=137c093d-a3fd-47ce-bd78-94772ce8f46e; distance_km=27"
+    },
+    {
+      "uuid": "59485d8c-7947-4e00-871c-d35f6451aab8",
+      "field": "refuel",
+      "text": "La descripción de ARC-L1 Wide Forest Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "59485d8c-7947-4e00-871c-d35f6451aab8",
+      "field": "rearm",
+      "text": "La descripción de ARC-L1 Wide Forest Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "164ca676-83eb-448d-ab0b-1ddde8a9c0bd",
+      "field": "refuel",
+      "text": "La descripción de Baijini Point enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "164ca676-83eb-448d-ab0b-1ddde8a9c0bd",
+      "field": "rearm",
+      "text": "La descripción de Baijini Point enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "f7eb7480-3f53-46e5-a74c-4c111dae61b7",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar Balto's Blind. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "748ccd9f-7b66-439d-a053-f237fc43e666",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Calliope para buscar Blighter's Run. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=3304263b-f133-41f8-85e7-79693e5bb2de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "f5ff5490-698b-48f1-b045-2b9d0ac92b78",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Aberdeen para buscar Boondoggle. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=f8f07f5b-1c0e-47c9-aa50-46963065bf18; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "e49f4dbb-b70a-4319-a1a2-1572ce94b0db",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Hurston para buscar Broken Patch. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=551af60b-7727-4936-acc7-763d25d7a1de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "9d1dae65-7868-48fc-b1cd-8c2fac764f1a",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar Burnout. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "59c19ba8-fd59-4784-8b3a-71a4cd37b1a3",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Cellin para buscar Consumption. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=b41a1bc9-5bca-489b-8273-de90f18ec60d; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "468347e2-99b5-4476-bb00-667f49e0770b",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Arial para buscar Coven. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=f3fa9d13-3fdc-41f3-b5e5-25f0b74c0728; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "e5a875d5-d68f-4a50-b4ca-674a42c273b7",
+      "field": "access",
+      "text": "Selecciona CRU-L1 Ambitious Dream Station como destino cuántico. El centro de la bolsa CRU L1-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=75e777cf-a055-4bc3-8ca7-602eb38be4f3; distance_km=30"
+    },
+    {
+      "uuid": "2083c403-4c40-4727-b392-49976c460028",
+      "field": "access",
+      "text": "El marcador regional CRU L3 está colocado y visible en los datos del parche. Úsalo como referencia del sector de Crusader. El marcador carece de configuración para el salto cuántico directo.",
+      "uncertainty": "Referencia regional. La ruta de aproximación y la disponibilidad de recursos se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A Lagrangian gravity well located in the orbit of Crusader."
+    },
+    {
+      "uuid": "8e371ce2-17ec-4508-8493-02463ea47960",
+      "field": "access",
+      "text": "Selecciona CRU-L4 Shallow Fields Station como destino cuántico. El centro de la bolsa CRU L4-A figura a unos 28 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=8f23301d-0711-47ec-9efb-76a6d8d1c9e6; distance_km=28"
+    },
+    {
+      "uuid": "9c2490b6-b31d-47cb-9f97-9a8825578bdf",
+      "field": "access",
+      "text": "Selecciona CRU-L5 Beautiful Glen Station como destino cuántico. El centro de la bolsa CRU L5-A figura a unos 32 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=5905eecd-258a-4046-ad08-90571c41b03c; distance_km=32"
+    },
+    {
+      "uuid": "75e777cf-a055-4bc3-8ca7-602eb38be4f3",
+      "field": "refuel",
+      "text": "La descripción de CRU-L1 Ambitious Dream Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "75e777cf-a055-4bc3-8ca7-602eb38be4f3",
+      "field": "rearm",
+      "text": "La descripción de CRU-L1 Ambitious Dream Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "8f23301d-0711-47ec-9efb-76a6d8d1c9e6",
+      "field": "refuel",
+      "text": "La descripción de CRU-L4 Shallow Fields Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "8f23301d-0711-47ec-9efb-76a6d8d1c9e6",
+      "field": "rearm",
+      "text": "La descripción de CRU-L4 Shallow Fields Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "5905eecd-258a-4046-ad08-90571c41b03c",
+      "field": "refuel",
+      "text": "La descripción de CRU-L5 Beautiful Glen Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "5905eecd-258a-4046-ad08-90571c41b03c",
+      "field": "rearm",
+      "text": "La descripción de CRU-L5 Beautiful Glen Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "02b06d19-0da6-473c-ad49-2f43516231a5",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar Downlow. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "a2c0879a-4cf7-4dd5-a04a-85e14c503041",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona microTech para buscar Drifters. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "ab29f65e-c792-4b1f-b23d-5810cb0ef416",
+      "field": "refuel",
+      "text": "La descripción de Everus Harbor enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "ab29f65e-c792-4b1f-b23d-5810cb0ef416",
+      "field": "rearm",
+      "text": "La descripción de Everus Harbor enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "fb813913-5031-4c71-be44-5d1924866680",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Cellin para buscar Fetch. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=b41a1bc9-5bca-489b-8273-de90f18ec60d; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "dfdb72e7-55af-4bdd-a2e5-aa4d54edf521",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Yela para buscar Half Stack. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=ee63a520-43df-4e1c-8af7-8b8df06b3dd2; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "a4cc42d9-f044-43b9-a963-077fe591e9cd",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Calliope para buscar Hard Knocks. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=3304263b-f133-41f8-85e7-79693e5bb2de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "504777d2-8100-4641-99ce-e57f36a5c3cc",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Calliope para buscar Hasbin Hall. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=3304263b-f133-41f8-85e7-79693e5bb2de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "0b07f5ab-f4d6-471c-af52-8c3b13344a61",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona microTech para buscar Hela's Regret. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "dce44638-7b10-423e-8fe3-1e81b26aa0d0",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Daymar para buscar Hospice. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=e658b2b1-fae7-4945-89b8-b332f235d59b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "bf8b7b1e-467d-4382-8cea-d65ef06a9f5e",
+      "field": "access",
+      "text": "Selecciona HUR-L1 Green Glade Station como destino cuántico. El centro de la bolsa HUR L1-A figura a unos 57 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7; distance_km=57"
+    },
+    {
+      "uuid": "650f9d25-807d-4441-8ac7-1f982f08d0b1",
+      "field": "access",
+      "text": "Selecciona HUR-L2 Faithful Dream Station como destino cuántico. El centro de la bolsa HUR L2-A figura a unos 46 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=81e3150a-9c12-4715-85d4-afd6da69b8f0; distance_km=46"
+    },
+    {
+      "uuid": "c54d8f3d-165a-41d4-a778-8f51ba7162c7",
+      "field": "access",
+      "text": "Selecciona HUR-L3 Thundering Express Station como destino cuántico. El centro de la bolsa HUR L3-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=de5f2d1d-78e5-4273-8028-c06690c03685; distance_km=30"
+    },
+    {
+      "uuid": "0bb52ea3-d7b2-4b32-9d5f-6ecd7676a36f",
+      "field": "access",
+      "text": "Selecciona HUR-L4 Melodic Fields Station como destino cuántico. El centro de la bolsa HUR L4-A figura a unos 20 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=6e99473c-8446-4c5a-81cb-039a53c1960d; distance_km=20"
+    },
+    {
+      "uuid": "3e3b751e-0515-4bc8-9b59-229ed654f685",
+      "field": "access",
+      "text": "Selecciona HUR-L5 High Course Station como destino cuántico. El centro de la bolsa HUR L5-A figura a unos 44 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=8e83f4da-c85d-4f00-b98d-bc734a07c5d4; distance_km=44"
+    },
+    {
+      "uuid": "689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7",
+      "field": "refuel",
+      "text": "La descripción de HUR-L1 Green Glade Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "689ff011-e2e9-4f6e-b5a3-7cea4bbc86c7",
+      "field": "rearm",
+      "text": "La descripción de HUR-L1 Green Glade Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "81e3150a-9c12-4715-85d4-afd6da69b8f0",
+      "field": "refuel",
+      "text": "La descripción de HUR-L2 Faithful Dream Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "81e3150a-9c12-4715-85d4-afd6da69b8f0",
+      "field": "rearm",
+      "text": "La descripción de HUR-L2 Faithful Dream Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "de5f2d1d-78e5-4273-8028-c06690c03685",
+      "field": "refuel",
+      "text": "La descripción de HUR-L3 Thundering Express Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "de5f2d1d-78e5-4273-8028-c06690c03685",
+      "field": "rearm",
+      "text": "La descripción de HUR-L3 Thundering Express Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "6e99473c-8446-4c5a-81cb-039a53c1960d",
+      "field": "refuel",
+      "text": "La descripción de HUR-L4 Melodic Fields Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "6e99473c-8446-4c5a-81cb-039a53c1960d",
+      "field": "rearm",
+      "text": "La descripción de HUR-L4 Melodic Fields Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "8e83f4da-c85d-4f00-b98d-bc734a07c5d4",
+      "field": "refuel",
+      "text": "La descripción de HUR-L5 High Course Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "8e83f4da-c85d-4f00-b98d-bc734a07c5d4",
+      "field": "rearm",
+      "text": "La descripción de HUR-L5 High Course Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "af056a9f-0357-4240-a285-f943de173b3a",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Clio para buscar Kant's Peak. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=2a21d86f-ebf0-4052-a134-c414c9998592; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "1c6caaa0-54e6-402b-9a14-d64d1a42948b",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona microTech para buscar Kelo Bottom. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "bab4ee83-4eb3-4823-8c59-8e4b41dfdeaf",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar Last Day. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "bbc0de76-2793-4b4d-9d94-7512ce6278a8",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Hurston para buscar Lowdown. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=551af60b-7727-4936-acc7-763d25d7a1de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "19fc539b-3bd1-4a61-b7ac-925ab4a98b0e",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Yela para buscar Mainline. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=ee63a520-43df-4e1c-8af7-8b8df06b3dd2; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "d3b67f92-4f51-4643-8f45-8edac6ac0cf1",
+      "field": "access",
+      "text": "Selecciona MIC-L1 Shallow Frontier Station como destino cuántico. El centro de la bolsa MIC L1-A figura a unos 50 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=f4b118f8-3102-4a5c-b8ca-ff013c2f674a; distance_km=50"
+    },
+    {
+      "uuid": "46a84972-5b6f-4202-88bf-2628ee6aa6f0",
+      "field": "access",
+      "text": "Selecciona MIC-L2 Long Forest Station como destino cuántico. El centro de la bolsa MIC L2-A figura a unos 30 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=f602528f-acf3-4564-960c-fc344269a7a9; distance_km=30"
+    },
+    {
+      "uuid": "63911c27-0274-471d-ae51-273dde3fa737",
+      "field": "access",
+      "text": "Selecciona MIC-L3 Endless Odyssey Station como destino cuántico. El centro de la bolsa MIC L3-A figura a unos 71 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=2800c56f-0123-4c31-95d6-bfcf73ba8485; distance_km=71"
+    },
+    {
+      "uuid": "604eea8b-24e4-4425-806d-922a277ff308",
+      "field": "access",
+      "text": "Selecciona MIC-L4 Red Crossroads Station como destino cuántico. El centro de la bolsa MIC L4-A figura a unos 43 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=317b7505-e562-4caf-9691-1516ab639bbf; distance_km=43"
+    },
+    {
+      "uuid": "4f8d892a-da82-4062-9b3a-aef9e191060b",
+      "field": "access",
+      "text": "Selecciona MIC-L5 Modern Icarus Station como destino cuántico. El centro de la bolsa MIC L5-A figura a unos 28 km del centro de la estación en los archivos del parche. La bolsa está oculta y carece de salto directo.",
+      "uncertainty": "Distancia en línea recta entre centros, distinta de la distancia que marca el HUD tras el salto. El acceso a la nube y los recursos no se han comprobado en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5; distance_km=28"
+    },
+    {
+      "uuid": "f4b118f8-3102-4a5c-b8ca-ff013c2f674a",
+      "field": "refuel",
+      "text": "La descripción de MIC-L1 Shallow Frontier Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "f4b118f8-3102-4a5c-b8ca-ff013c2f674a",
+      "field": "rearm",
+      "text": "La descripción de MIC-L1 Shallow Frontier Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "f602528f-acf3-4564-960c-fc344269a7a9",
+      "field": "refuel",
+      "text": "La descripción de MIC-L2 Long Forest Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "f602528f-acf3-4564-960c-fc344269a7a9",
+      "field": "rearm",
+      "text": "La descripción de MIC-L2 Long Forest Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "2800c56f-0123-4c31-95d6-bfcf73ba8485",
+      "field": "refuel",
+      "text": "La descripción de MIC-L3 Endless Odyssey Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "2800c56f-0123-4c31-95d6-bfcf73ba8485",
+      "field": "rearm",
+      "text": "La descripción de MIC-L3 Endless Odyssey Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "317b7505-e562-4caf-9691-1516ab639bbf",
+      "field": "refuel",
+      "text": "La descripción de MIC-L4 Red Crossroads Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "317b7505-e562-4caf-9691-1516ab639bbf",
+      "field": "rearm",
+      "text": "La descripción de MIC-L4 Red Crossroads Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5",
+      "field": "refuel",
+      "text": "La descripción de MIC-L5 Modern Icarus Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "54ab7b59-e808-43c4-9e5b-fbfaa03eb3d5",
+      "field": "rearm",
+      "text": "La descripción de MIC-L5 Modern Icarus Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "b76cb376-ee74-43ca-8549-9759945daaf4",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "5f51ae32-f37d-487a-b911-da96502c8690",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "f74ea008-4932-4eb0-93ed-419d983e8c52",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "10727ca9-f721-42d3-b6f6-e5b8a812429a",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "79396580-c492-4909-bcd1-8ecaa4358967",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "15dc0d54-fc71-4ce3-94e7-e2767125141e",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "df06cdcd-6bd7-48b7-93cd-ed0a25f5b6c1",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "e8306b2c-9a10-41e6-abb2-2033f40deff1",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "2ce5281e-ae41-474d-ade8-c804cce21c9b",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "10bb340b-9ab3-4fa6-b3d4-ddea1e92682c",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "786bd06a-cdd1-41c6-9a70-b2dd79c18618",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "be313093-1d4a-4ca7-9fd2-855b045423fe",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "b761b610-f9a9-4439-ae1b-eb3cb5e58ba1",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "09a558dd-d040-48ed-bfd4-070083fcb84c",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "7e7ba348-c8ed-47da-8e5f-f0114beae392",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "eb5af0fe-54ac-437f-9dcd-2c80477ca3f6",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "411da23b-ac58-4a83-b546-08971bd40b9e",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "d3705180-7019-44ca-959a-e21c4b086d30",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "d838c2c4-b88d-42df-8c61-4549cce2690e",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "29e69c79-5526-406f-a492-5049c5bcc9aa",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "1e3bf65a-a643-4f22-a5af-09eff5ea4917",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "04e690e8-aca8-421d-97f6-e7e766995ac9",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "ea489dfa-fdba-4408-ba42-0dfd5d21f918",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "2e684c05-ee96-4d04-94f5-ffad800db7b7",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "f87e8930-2fcc-4a4b-9a07-8fa4018fdfb9",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "8670ad9c-e5e4-422f-a005-228e3793e066",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "c0bc4aa9-4e45-4281-a513-3248d0b8a03f",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "a0e51eb6-4b19-4302-994d-68b4f6209bd0",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "6fdba030-3358-44ee-9736-aa0f155b758a",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "032fa15d-33a1-42a9-afb9-744811d1335d",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "c29799ed-fe83-4f8b-b564-7729f251fbc8",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "25d9cb75-4887-41f2-86f1-c61164d2430e",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "600c66af-2cb4-475d-b938-861a408c348f",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "eaa1600c-144d-49d1-a364-ae74670ef652",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "372fdcaf-6a55-42bc-8321-758424e87ceb",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "dfaa2695-9769-4cd8-bc56-7f80430325c5",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "2850373c-0f1c-41f5-a1b4-da58670e2ea6",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "71847f14-2295-4318-bc48-80ba3e444b3a",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "c953aee5-b192-4496-886c-c8e30f0d5f05",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "c422d8b9-dbfc-4e9e-9d66-da57c4da25a0",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "456abfb7-4fa0-4251-a6a9-1ccc44170b57",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "cd95c910-36ab-4d2b-9e8f-64c9edc44fa4",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "44ef9c98-adf2-46e8-8dd2-2799c78cee2b",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "076add9c-feea-4261-876c-e05de2e21a1c",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "7798b8d7-cb14-4741-be99-13dd0693c74b",
+      "field": "access",
+      "text": "El marcador de esta base minera está colocado y visible en los datos del parche, sin salto cuántico directo. El registro de la UEE identifica la base como privada y exige autorización de acceso.",
+      "uncertainty": "Visibilidad y permisos según la configuración del parche. La disponibilidad del marcador y la aproximación se comprueban en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=false; qt_valid=false; A privately owned mining base that has been registered with the UEE Bureau of Resource Management. No unauthorized access allowed."
+    },
+    {
+      "uuid": "1f07228d-f360-4a42-9b4f-415d22c92fe7",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Daymar para buscar Minlo Spire. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=e658b2b1-fae7-4945-89b8-b332f235d59b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "7fccba09-4fa8-4038-a056-cff8d8244e47",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Magda para buscar Nevermind. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=6f22b292-38d6-4429-b504-99b39514a2f8; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "e1501a68-09e5-472e-93a4-01efcde8c8f8",
+      "field": "refuel",
+      "text": "La descripción de Nyx Gateway enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "e1501a68-09e5-472e-93a4-01efcde8c8f8",
+      "field": "rearm",
+      "text": "La descripción de Nyx Gateway enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "233238ee-adeb-4405-8045-49fa07370f37",
+      "field": "refuel",
+      "text": "La descripción de Port Tressler enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "233238ee-adeb-4405-8045-49fa07370f37",
+      "field": "rearm",
+      "text": "La descripción de Port Tressler enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "59b22155-405f-4785-9f73-d2028b46f5c3",
+      "field": "refuel",
+      "text": "La descripción de Pyro Gateway enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "59b22155-405f-4785-9f73-d2028b46f5c3",
+      "field": "rearm",
+      "text": "La descripción de Pyro Gateway enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "2a93560b-5549-49aa-9f3c-3555d7cea851",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Calliope para buscar Regiment Downs. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=3304263b-f133-41f8-85e7-79693e5bb2de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "8f78ebfc-cecb-4933-86b3-80f3e34cf40a",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Hurston para buscar Rico's Remains. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=551af60b-7727-4936-acc7-763d25d7a1de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "0c5e44b1-2ef3-4e62-98c9-37bb4e49f43d",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar Rock Bottom. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "443703c2-9701-4e7d-b3f6-7aaf3132ed39",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Yela para buscar Rolo's Crater. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=ee63a520-43df-4e1c-8af7-8b8df06b3dd2; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "18463c18-1721-4ccc-a8a2-1e89aeac6bdc",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Wala para buscar Scuttle. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=d6f1ccd9-fbfb-4086-9608-8466ef2c1c93; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "45d2d370-9fab-4e6b-b84b-e9c913bc316a",
+      "field": "refuel",
+      "text": "La descripción de Seraphim Station enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "45d2d370-9fab-4e6b-b84b-e9c913bc316a",
+      "field": "rearm",
+      "text": "La descripción de Seraphim Station enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "10ef4b7f-de6d-4612-a1f2-da06e2063060",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Euterpe para buscar Shanks. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=732dedf3-9530-4972-98ab-2fcae64669db; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "3d72936b-d142-40b5-871d-49e0219c7b5e",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Arial para buscar Smokestack. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=f3fa9d13-3fdc-41f3-b5e5-25f0b74c0728; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "7d1f6c36-52f3-4802-85fb-c00a0c8eb228",
+      "field": "access",
+      "text": "El punto de restos figura a unos 632 km en línea recta de Pyro Gateway, del lado de Stanton. Pyro Gateway es un destino cuántico independiente. El marcador de los restos está oculto y carece de salto directo.",
+      "uncertainty": "Separación entre centros en los datos del parche. El pecio, su acceso y su botín están pendientes de confirmación en partida.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "hidden=true; qt_valid=false; destination_uuid=59b22155-405f-4785-9f73-d2028b46f5c3; distance_km=632"
+    },
+    {
+      "uuid": "24d980d2-e3f3-4d1d-84cc-92ae982ecf60",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Cellin para buscar Stone's Throw. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=b41a1bc9-5bca-489b-8273-de90f18ec60d; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "a3a7fa73-42bd-40ff-958c-e5c0d300ddc8",
+      "field": "refuel",
+      "text": "La descripción de Terra Gateway enumera repostaje como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Refueling"
+    },
+    {
+      "uuid": "a3a7fa73-42bd-40ff-958c-e5c0d300ddc8",
+      "field": "rearm",
+      "text": "La descripción de Terra Gateway enumera reabastecimiento de munición como servicio de la estación.",
+      "uncertainty": "El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap.json",
+      "proof": "description",
+      "sourceDetail": "Restocking"
+    },
+    {
+      "uuid": "4a91aa41-b322-4676-9bc9-b0cd2c01261d",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona microTech para buscar The Barrens. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=5a529db7-1a4e-45b0-bdcb-a5a0c7a7fc57; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "a10ae56b-ddcb-4fdb-97b5-fd583a1bcdd0",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Arial para buscar The Dregs. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=f3fa9d13-3fdc-41f3-b5e5-25f0b74c0728; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "037e30d1-dc2d-495f-bb6b-7349f21ee204",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Aberdeen para buscar The Grove. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=f8f07f5b-1c0e-47c9-aa50-46963065bf18; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "17f63167-aff9-4cfd-88b0-4f7637baf16a",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Cellin para buscar The Hollows. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=b41a1bc9-5bca-489b-8273-de90f18ec60d; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "d73aeaa1-d846-48c1-9f9c-c15ca23577d5",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Ita para buscar The Shades. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=11368ee6-a2de-4948-a9b0-608ce565f3e3; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "71bad51c-879f-49a7-9768-868321f8c920",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Ita para buscar Thimblerig. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=11368ee6-a2de-4948-a9b0-608ce565f3e3; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "2d04b28f-33e1-4f64-93e3-3a2a2d677330",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Clio para buscar Tremonte. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=2a21d86f-ebf0-4052-a134-c414c9998592; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "e9b0722d-56b8-465a-b6e7-a653c54d1644",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Hurston para buscar Trilo. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=551af60b-7727-4936-acc7-763d25d7a1de; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "afbc6373-662c-4fdb-8f9b-d811c20357f7",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Daymar para buscar Wailing Rock. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=e658b2b1-fae7-4945-89b8-b332f235d59b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "77ea2d54-6a6e-4168-a6db-12ccda26043a",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Wala para buscar Washout. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=d6f1ccd9-fbfb-4086-9608-8466ef2c1c93; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "30df2855-805c-4f88-8ccd-4f11ade83502",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Wala para buscar Wiley Flats. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=d6f1ccd9-fbfb-4086-9608-8466ef2c1c93; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    },
+    {
+      "uuid": "12b87563-f768-4606-9c14-90c433d60232",
+      "field": "access",
+      "text": "En el mapa estelar, selecciona Lyria para buscar World's End. Su marcador colocado está configurado para salto cuántico y tiene un radio de llegada de referencia de 20 km.",
+      "uncertainty": "Datos de configuración del marcador. La trayectoria, distancia efectiva de llegada y opciones de aterrizaje se comprueban en sesión.",
+      "source": "https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/starmap_positions.json",
+      "proof": "position",
+      "sourceDetail": "parent_uuid=452de0e6-e31d-4e2c-b249-1c4244cb713b; hidden=false; qt_valid=true; ArrivalRadius=20000"
+    }
+  ]
+}
