@@ -1,5 +1,6 @@
 import {execFileSync} from 'node:child_process';
 import {readFileSync, writeFileSync} from 'node:fs';
+import {navigationUncertainty, stantonNavigationText} from '../lab-preview/src/stanton-navigation.js';
 
 const [sourceRepo, reviewedAt] = process.argv.slice(2);
 if (!sourceRepo || !/^\d{4}-\d{2}-\d{2}$/.test(reviewedAt || '')) {
@@ -26,11 +27,53 @@ const definitions = unique(extract('starmap.json'),row=>row.UUID);
 const placements = unique(extract('starmap_positions.json').entities.filter(row=>row.system==='stanton'),row=>row.uuid);
 const placedNames=unique([...placements.values()].filter(Boolean),row=>row.name);
 const inventory = index.locations.filter(row=>row.system==='Stanton System');
+const inventoryIds = new Set(inventory.map(row=>row.id));
+const finitePosition = pos => [pos.x,pos.y,pos.z].every(Number.isFinite);
+const directDestination = (def,pos) => def && pos && finitePosition(pos) && def.Name===pos.name &&
+ !pos.hidden && !def.HideInStarmap && !def.BlockTravel && pos.qt_valid===true;
+const approachReferences = [...placements.values()].filter(pos => pos && inventoryIds.has(pos.uuid) &&
+ ['Manmade','Manmade_VisibleOnInteraction','Planet','Moon','Settlement'].includes(pos.type) &&
+ directDestination(definitions.get(pos.uuid),pos));
+const distance = (pos,other) => Math.hypot(pos.x-other.x,pos.y-other.y,pos.z-other.z);
 const rows = unique(intel.locations.filter(row=>row.uuid),row=>row.uuid);
 const claims = [];
 const add = (uuid,field,text,uncertainty,source,proof,sourceDetail) => {
  claims.push({uuid,field,text,uncertainty,source,proof,sourceDetail});
 };
+function navigation(def,pos) {
+ const parent=definitions.get(pos.parent_uuid);
+ const parentPos=placements.get(pos.parent_uuid);
+ if (!parent || def.ParentUUID!==parent.UUID || /^<=/.test(def.Name)) return;
+ const parentReference={referenceUuid:parent.UUID,referenceName:parent.Name};
+ if (directDestination(def,pos)) {
+  if (def.OnlyShowWhenParentSelected && !directDestination(parent,parentPos)) return;
+  return {...parentReference,mode:'direct',arrivalMeters:def.QuantumTravel?.ArrivalRadius??null,
+   selectParent:def.OnlyShowWhenParentSelected===true};
+ }
+ if (!pos.hidden && !def.HideInStarmap && !pos.qt_valid && pos.type==='Asteroid' &&
+     /No unauthorized access allowed\./.test(def.Description)) return {...parentReference,mode:'private'};
+ if (!pos.hidden || !def.HideInStarmap) return;
+ if (pos.qt_valid && directDestination(parent,parentPos)) {
+  if (/^This ASD Research Facility is no longer in operation\. No trespassing\.$/.test(def.Description) &&
+      /^Onyx Facility S\d[A-Z]\d+$/.test(def.Name)) return {...parentReference,mode:'restricted'};
+  if (!def.QuantumTravel && !def.HideInWorld && def.RespawnLocationType==='Hospital' &&
+      ['Settlement','Manmade','Manmade_VisibleOnInteraction'].includes(parentPos.type)) return {...parentReference,mode:'clinic'};
+ }
+ if (!pos.qt_valid && ['JumpPoint','Anomaly'].includes(pos.type) &&
+     directDestination(parent,parentPos) && /^This jump point connects Stanton to the /.test(def.Description)) {
+  return {...parentReference,mode:'gateway'};
+ }
+ if (!pos.qt_valid && pos.type==='Asteroid' && !def.BlockTravel) {
+  const reference=approachReferences.reduce((nearest,candidate) =>
+   !nearest || distance(pos,candidate)<distance(pos,nearest) ? candidate : nearest,null);
+  if (!reference) return;
+  const distanceKm=Math.round(distance(pos,reference)/1000);
+  // A nearby reference is useful for arrival planning. Large offsets do not provide a practical approach here.
+  if (distanceKm>0 && distanceKm<=10000) return {mode:'approach',referenceUuid:reference.uuid,
+   referenceName:reference.name,distanceKm,privateAccess:/No unauthorized access allowed\./.test(def.Description)};
+ }
+}
+
 for(const row of inventory){
  const uuid=row.id;
  const def=definitions.get(uuid), pos=placements.get(uuid);
@@ -62,6 +105,11 @@ for(const row of inventory){
    }
   }
   if(sourceDetail)add(uuid,'access',claim.text,claim.uncertainty,pinnedSource,'position',sourceDetail);
+ }
+ if(!claims.some(claim=>claim.uuid===uuid && claim.field==='access')){
+  const detail=navigation(def,pos);
+  const text=stantonNavigationText(detail,def.Name);
+  if(text)add(uuid,'access',text,navigationUncertainty,pinnedSource,'navigation',JSON.stringify({...detail,name:def.Name}));
  }
  if(pos.hidden||def.HideInStarmap||def.Type?.Classification!=='Manmade'||!/\b(?:including|like): Refueling, Restocking,/.test(def.Description))continue;
  const uncertainty='El texto de la instalación enumera el servicio. Su funcionamiento y disponibilidad no se han comprobado en sesión.';

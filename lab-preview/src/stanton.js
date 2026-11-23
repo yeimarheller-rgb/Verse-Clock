@@ -1,3 +1,4 @@
+import {navigationUncertainty, stantonNavigationText} from './stanton-navigation.js';
 import {atlasKey, atlasSystem, normalize, tacticalSections} from './tactical-atlas.js';
 
 export const stantonGroups = {
@@ -106,6 +107,13 @@ export function hasStantonLocalAttestation(claim, uuid, version) {
     claim.status!=='documented'||!claim.text?.trim()||!claim.uncertainty?.trim()||
     !Array.isArray(claim.sources)||!claim.sources.includes(e.source)||!sourcePattern.test(e.source)||
     e.locator!==uuid||!e.sourceDetail?.trim())return false;
+ if(e.proof==='navigation'){
+  if(claim.field!=='access'||!e.source.endsWith('/starmap_positions.json')||claim.uncertainty!==navigationUncertainty)return false;
+  try{
+   const detail=JSON.parse(e.sourceDetail);
+   return detail.referenceUuid!==uuid&&stantonNavigationText(detail,detail.name)===claim.text;
+  }catch{return false;}
+ }
  if(e.proof==='position')return claim.field==='access'&&e.source.endsWith('/starmap_positions.json');
  return e.proof==='description'&&e.source.endsWith('/starmap.json')&&
   Object.hasOwn(serviceTerms,claim.field)&&e.sourceDetail===serviceTerms[claim.field];
@@ -149,14 +157,16 @@ export function mergeStanton(byKey, data, shared, audit) {
   for(const fact of audit.claims||[]){
    const key=byUuid.get(fact.uuid);
    const original=byKey.get(key);
-   if(original?.source?.version!==audit.version)continue;
+   if(original?.source?.version!==audit.version||typeof fact.source!=='string')continue;
    const claim={field:fact.field,text:fact.text,uncertainty:fact.uncertainty,
-    patch:audit.version,status:'documented',sources:[fact.source],localEvidence:{
+    patch:audit.version,status:'documented',sources:fact.proof==='navigation'
+     ? [fact.source,fact.source.replace('/starmap_positions.json','/starmap.json')] : [fact.source],localEvidence:{
      uuid:fact.uuid,field:fact.field,scope:'location',reviewed:true,patch:audit.version,
      reviewedAt:audit.reviewedAt,source:fact.source,locator:fact.uuid,proof:fact.proof,sourceDetail:fact.sourceDetail,
     }};
    if(!hasStantonLocalAttestation(claim,fact.uuid,audit.version)||!new URL(fact.source).pathname.includes('/'+audit.commit+'/'))continue;
-   if(fact.field==='access'&&!intelByUuid.get(fact.uuid)?.claims.some(candidate=>
+   if(fact.proof==='navigation'&&JSON.parse(fact.sourceDetail).name!==original.name)continue;
+   if(fact.proof==='position'&&!intelByUuid.get(fact.uuid)?.claims.some(candidate=>
     candidate.field===fact.field&&candidate.status==='documented'&&candidate.patch===audit.version&&
     candidate.text===fact.text&&candidate.uncertainty===fact.uncertainty&&candidate.sources.includes(fact.source)))continue;
    if(!localByUuid.has(fact.uuid))localByUuid.set(fact.uuid,[]);
@@ -217,8 +227,10 @@ export function stantonSections(p) {
    sections[maintenance].sources.push(...sources);
    continue;
   }
+  const detail=claim.localEvidence.proof==='navigation'?JSON.parse(claim.localEvidence.sourceDetail):null;
+  const destinations=detail&&['approach','clinic','gateway','restricted'].includes(detail.mode)?[{uuid:detail.referenceUuid}]:undefined;
   sections.push({title:stantonFields[claim.field]+' · configuración del parche',icons:[iconsByField[claim.field]],
-   text:claim.text,status:label,sources,uncertainty:claim.uncertainty});
+   text:claim.text,status:label,sources,destinations,uncertainty:claim.uncertainty});
  }
  if(p.stantonIntel?.reviewNote)sections.push({title:p.stantonIntel.reviewedWithoutEvidence.length>1?'Servicios de nave':'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
   status:'Investigado sin corroboración LIVE',sources:[{url:p.stantonIntel.reviewSource,name:'Star Citizen Wiki'}]});

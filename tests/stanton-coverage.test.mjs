@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {atlasKey, atlasSystem, mergeTacticalAtlas} from '../lab-preview/src/tactical-atlas.js';
-import {identifyStantonVariants,inStantonZone,isStantonPlaceholder, isStantonTemporaryEvent, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
+import {hasStantonLocalAttestation, identifyStantonVariants,inStantonZone,isStantonPlaceholder, isStantonTemporaryEvent, mergeStanton, stantonBodies, stantonCatalogReview, stantonCoverage, stantonFields, stantonSections, traceStantonParents} from '../lab-preview/src/stanton.js';
 
 const read = name => JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json', import.meta.url)));
 const catalogue=read('wiki-atlas');
@@ -56,7 +56,7 @@ test('rearm coverage requires site evidence and does not infer from landing',()=
  assert.equal(at('Shubin Mining Facility SCD-1').services.rearm,'possible');
  assert.equal(at('Seraphim Station').services.rearm,'confirmed');
  assert.equal(at('Covalex Distribution Centre S1DC06').services?.rearm,undefined);
- assert.ok(stantonSections(at('Covalex Distribution Centre S1DC06')).filter(section=>section.title!=='Acceso público indicado').every(section=>section.status.includes('Otra versión')));
+ assert.ok(stantonSections(at('Covalex Distribution Centre S1DC06')).filter(section=>!section.icons.includes('landing')).every(section=>section.status.includes('Otra versión')));
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Crusader'));
  assert.ok(inStantonZone(at('Shubin Mining Facility SCD-1'),'Daymar'));
  assert.ok(!inStantonZone(at('Shubin Mining Facility SCD-1'),'only:Crusader'));
@@ -522,6 +522,11 @@ test('Stanton target excludes only the reviewed RSI event platform UUIDs',()=>{
  assert.equal(scoped.operational,808);
  assert.equal(scoped.operational,full.operational);
  assert.equal(scoped.documentedLocal,663);
+ assert.equal(scoped.certifiedLocal,738);
+ assert.equal(scoped.certifiedCounts.access,738);
+ assert.equal(scoped.certifiedCounts.repair,0);
+ assert.equal(scoped.certifiedCounts.refuel,21);
+ assert.equal(scoped.certifiedCounts.rearm,21);
  assert.deepEqual(scoped.pending,{technical:26,hidden:8,unplaced:43,placed:1,unclassified:0});
  assert.equal(scoped.operational+Object.values(scoped.pending).reduce((sum,count)=>sum+count,0),scoped.total);
  assert.deepEqual(scoped.counts,full.counts);
@@ -597,4 +602,29 @@ test('Orison contract advisory stays on documented destinations and historical P
  const palomar=at('HDOF-Palomar');
  assert.equal(palomar.stantonIntel.claims[0].status,'historical');
  assert.equal(stantonCoverage(raw.filter(record=>record.id===palomar.id),[palomar]).operational,0);
+});
+
+test('Stanton navigation certifies configured access per UUID and keeps ship services independent',()=>{
+ for(const [name,mode,reference] of [
+  ['Onyx Facility S1A1','restricted','Arial'],
+  ['Mining Claim #SR3-8DH','approach','ARC-L3 Modern Express Station'],
+  ['Port Tressler Clinic','clinic','Port Tressler'],
+  ['Jumptown','direct','Daymar'],
+  ['Stanton - Terra Jump Point','gateway','Terra Gateway'],
+ ]){
+  const site=at(name);
+  const uuid=site.source.uuid;
+  const claim=site.stantonIntel.certifiedClaims.find(item=>item.localEvidence.proof==='navigation');
+  const detail=JSON.parse(claim.localEvidence.sourceDetail);
+  assert.equal(detail.mode,mode,name);
+  assert.equal(detail.referenceName,reference,name);
+  assert.equal(detail.name,site.name);
+  assert.equal(claim.sources.length,2,name);
+  assert.ok(hasStantonLocalAttestation(claim,uuid,catalogue.version));
+  assert.ok(!hasStantonLocalAttestation(claim,detail.referenceUuid,catalogue.version));
+  assert.ok(!hasStantonLocalAttestation({...claim,text:'Salto garantizado'},uuid,catalogue.version));
+  assert.ok(!site.stantonIntel.certifiedClaims.some(item=>item.field!=='access'),name);
+ }
+ const unplaced=at('HDOF-Palomar');
+ assert.equal(unplaced.stantonIntel?.certifiedClaims?.length,0);
 });
