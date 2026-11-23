@@ -29,7 +29,7 @@ test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from t
   assert.equal(snapshot.records[id],'hidden');
   assert.equal(hub.services?.repair,undefined);
  }
- assert.equal(Object.keys(snapshot.details).length,22);
+ assert.equal(Object.keys(snapshot.details).length,32);
  assert.equal(Object.keys(snapshot.parentReferences).length,220);
  for(const [child,parent] of Object.entries(snapshot.parentReferences)){
   assert.equal(snapshot.records[child],'unplaced');
@@ -38,6 +38,18 @@ test('the Pyro inventory uses unique UUIDs and distinguishes map evidence from t
   assert.equal(marker.parentUuid,parent);
   assert.match(marker.text,/carece de posición/);
  }
+});
+
+test('Pyro loot preserves the distinction between exterior salvage and location spawns',()=>{
+ const byKey=new Map(pyro.map(row=>[atlasKey(row),row]));
+ applyCatalogIntel(byKey,rows,snapshot,catalogue.version,'Pyro');
+ const sections=name=>byKey.get(atlasKey({system:'Pyro',name})).catalogIntel.sections;
+ const salvage=sections("Chawla's Beach").find(s=>s.title.includes('salvamento al aire libre'));
+ assert.match(salvage.text,/XL-1.*restos abandonados/);
+ assert.match(salvage.status,/pendientes de comprobar/);
+ assert.ok(!sections('Rustville').some(s=>s.text.includes('XL-1')));
+ assert.equal(sections('RAB-ALPHA')[0].icons[0],'loot');
+ assert.equal(sections('PYAM-FARSTAT-1-3')[0].icons[0],'landing');
 });
 
 test('reported Pyro ship services attach to the exact station and do not confer rearm',()=>{
