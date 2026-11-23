@@ -42,6 +42,9 @@ with sync_playwright() as p:
         page = b.new_page(viewport={'width':width,'height':height})
         errors = []
         page.on('pageerror', lambda error: errors.append(str(error)))
+        page.route('**/api/game-versions/default', lambda route: route.fulfill(
+            json={'data': {'code': '4.10.3-LIVE.13165946', 'channel': 'live'}},
+            headers={'Access-Control-Allow-Origin': '*'}))
         page.goto(BASE + 'lab-preview/')
         page.wait_for_function("document.getElementById('atlasProgressBar').getAttribute('aria-valuenow') > 0")
         expect(page.locator('#mainIntelLocation')).to_contain_text('Lorville')
@@ -577,6 +580,29 @@ with sync_playwright() as p:
             assert [svg.bounding_box()['width'] for svg in tile.locator('svg').all()] == [20,24,32]
         assert len(set(page.locator('.icon-tile svg[width="24"] path').evaluate_all('(paths) => paths.map(p => p.getAttribute("d"))'))) == 30
         page.screenshot(path=f'/tmp/verse-lab-iconografia-{name}.png',full_page=True)
+        page.close()
+    version_url = '**/api/game-versions/default'
+    for code, channel, visible in [('5.0.0-PTU.13248297', 'ptu', False), ('5.0.0-LIVE.99999999', 'live', True)]:
+        page = b.new_page(service_workers='block')
+        page.route(version_url, lambda route: route.fulfill(
+            json={'data': {'code': code, 'channel': channel}}, headers={'Access-Control-Allow-Origin': '*'}))
+        requested = []
+        page.on('request', lambda request: requested.append(request.url))
+        page.goto(BASE + 'lab-preview/?dest=nyx%7Cnyx%20i')
+        page.wait_for_function("document.getElementById('atlasProgressBar').getAttribute('aria-valuenow') > 0")
+        if visible:
+            expect(page.locator('#mainIntelLocation')).to_have_text('Nyx I')
+        page.locator('#q').fill('Liberated Stronghold Linton')
+        option = page.locator('#suggestions button').filter(has_text='Liberated Stronghold Linton')
+        if visible:
+            expect(option).to_have_count(1)
+            option.click()
+            expect(page.locator('#locationDossier')).to_contain_text('370 puntos de aparición')
+            expect(page.locator('#locationDossier')).to_contain_text('5.0.0-PTU.13248297')
+        else:
+            expect(option).to_have_count(0)
+            expect(page.locator('#mainIntelLocation')).not_to_contain_text('Nyx I')
+        assert any(url.endswith('/nyx-i-5.0.json') for url in requested) is visible
         page.close()
     b.close()
 print('\n'.join(fails) or 'OK: la web arranca en iPhone y escritorio')
