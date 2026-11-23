@@ -7,9 +7,13 @@ import {locationDossier} from '../lab-preview/src/location-dossier.js';
 
 const read=name=>JSON.parse(readFileSync(new URL('../lab-preview/data/'+name+'.json',import.meta.url)));
 const wiki=read('wiki-atlas');
-const map=new Map([...wiki.locations,...read('atlas-poi-seed').locations].map(p=>[atlasKey(p),{...p,system:atlasSystem(p.system)}]));
+const map=new Map(read('atlas-poi-seed').locations.map(p=>[atlasKey(p),p]));
+for(const row of wiki.locations){
+ const key=atlasKey(row);
+ map.set(key,{...row,...map.get(key),system:atlasSystem(row.system),source:row.source});
+}
 mergeTacticalAtlas(map,read('atlas-services'),wiki.version);
-mergeStanton(map,read('stanton-intel'));
+mergeStanton(map,read('stanton-intel'),null,read('stanton-certified-evidence'));
 
 const model=(name,system='Stanton',options={})=>locationDossier(map.get(atlasKey({name,system})),options);
 const text=(dossier,domain)=>dossier.groups.get(domain)?.map(fact=>fact.text).join('\n')||'';
@@ -29,7 +33,7 @@ test('a Hathor PAF has one account of the hazards, one weapon list and its route
 test('operations changes emphasis without duplicating services or tactical claims',()=>{
  const seraphim=model('Seraphim Station','Stanton',{operations:true});
  assert.equal(seraphim.services.get('repair').state,'reported');
- assert.equal(seraphim.services.get('rearm').state,'unknown');
+ assert.equal(seraphim.services.get('rearm').state,'confirmed');
  assert.doesNotMatch(text(seraphim,'services'),/Reparación de nave/);
  const everus=model('Everus Harbor');
  assert.equal(everus.services.get('rearm').state,'confirmed');

@@ -247,18 +247,21 @@ function renderStantonCoverage(){
  const zone=auditedSystems.includes(stantonZone.value)?'Stanton':stantonZone.value||'Stanton';
  const c=stantonCoverage(rawStantonCatalog,poiData,zone,stantonReview);
  const summary=document.createElement('p');
- const percentage=(c.total?100*c.operational/c.total:0).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
- summary.textContent=c.operational+' / '+c.total+' operativas · '+percentage+' % · objetivo 90 %';
+ const percentage=count=>(c.total?100*count/c.total:0).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
+ summary.textContent=c.operational+' / '+c.total+' operativas · '+percentage(c.operational)+' % · '+c.certifiedLocal+' / '+c.total+' certificadas · '+percentage(c.certifiedLocal)+' % · objetivo certificado 90 %';
  const list=document.createElement('dl');list.className='stanton-metrics';
  const metrics={'Geografía con identidad única':c.geographic,'Fichas con datos añadidos':c.enriched,
-  'Evidencia documental por UUID':c.documentedLocal,'Campos aplicables revisados':c.reviewedAll,
+  'Documentación candidata por UUID':c.documentedLocal,'Evidencia local certificada':c.certifiedLocal,'Campos aplicables revisados':c.reviewedAll,
   ...Object.fromEntries(Object.entries(c.counts).map(([key,count])=>[stantonFields[key],count])),
   'Fuente documental':c.sources.documented,'Fuente reportada':c.sources.reported,'Fuente de otra versión':c.sources.historical};
  for(const [label,count] of Object.entries(metrics)){
   const row=document.createElement('div'),name=document.createElement('dt'),result=document.createElement('dd');
   name.textContent=label;
   const bar=document.createElement('progress');bar.max=Math.max(1,c.total);bar.value=count;bar.setAttribute('aria-label',label);
-  result.append(bar,count+' / '+c.total);row.append(name,result);list.append(row);
+  result.append(bar,count+' / '+c.total);
+  const field=Object.keys(stantonFields).find(key=>stantonFields[key]===label);
+  if(field)result.append(' · '+c.certifiedCounts[field]+' certificados · '+c.pendingFields[field]+' sin certificar');
+  row.append(name,result);list.append(row);
  }
  const note=document.createElement('small');
  note.textContent=c.catalogTotal+' registros en el catálogo. '+c.excludedTemporary+' plataformas temporales de RSI Discovery Month fuera de cobertura. Los registros sin nombre de juego siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
@@ -453,7 +456,7 @@ function applyPoiToMain(p){
    const list=document.createElement('ul');list.className='service-icons';
    for(const [key,item] of model.services){
     const state=evidenceState(item.state);
-    const status=state==='confirmed'?'Documentado · LIVE pendiente':tacticalStates[state][0];
+    const status=state==='confirmed'?(atlasSystem(p.system)==='Stanton'?'Certificado · funcionamiento LIVE pendiente':'Documentado · LIVE pendiente'):tacticalStates[state][0];
     const row=document.createElement('li');
     row.append(makeTacticalLabel(serviceIcons[key],item.label+' · '+status,20,state));list.append(row);
    }
@@ -673,6 +676,7 @@ async function loadAtlas(){
  const byKey=new Map();const key=atlasKey;
  const stantonRequest=fetch('./data/stanton-intel.json').then(r=>r.ok?r.json():null).catch(()=>null);
  const stantonSharedRequest=fetch('./data/stanton-shared-claims.json').then(r=>r.ok?r.json():null).catch(()=>null);
+ const stantonAuditRequest=fetch('./data/stanton-certified-evidence.json').then(r=>r.ok?r.json():null).catch(()=>null);
  const catalogIntelRequests=Promise.all(auditedSystems.map(system=>
   fetch('./data/'+system.toLowerCase()+'-intel.json').then(r=>r.ok?r.json():null).catch(()=>null)));
  const servicesRequest=fetch('./data/atlas-services.json').then(r=>{if(!r.ok)throw Error('Services HTTP '+r.status);return r.json()})
@@ -693,7 +697,7 @@ async function loadAtlas(){
  mergeTacticalAtlas(byKey,serviceSnapshot,version);
  const stantonSnapshot=await stantonRequest;
  stantonReview=stantonSnapshot?.catalogReview;
- mergeStanton(byKey,stantonSnapshot,await stantonSharedRequest);
+ mergeStanton(byKey,stantonSnapshot,await stantonSharedRequest,await stantonAuditRequest);
  const snapshots=await catalogIntelRequests;
  for(const [index,system] of auditedSystems.entries()){
   const review=applyCatalogIntel(byKey,catalog,snapshots[index],version,system);

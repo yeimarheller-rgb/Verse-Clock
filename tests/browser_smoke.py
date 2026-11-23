@@ -75,7 +75,7 @@ with sync_playwright() as p:
         for q, label, needle in [
             ('Ruptura PAF-I','ruptura','XL Purchase Order'),
             ('Seraphim','seraphim','Admin - Seraphim'),('Lorville','lorville','Gravedad regional'),
-            ('Everus','everus','Rearme · Documentado'),('Ghost Hollow','ghost-hollow','Nine Tails'),
+            ('Everus','everus','Rearme · Certificado'),('Ghost Hollow','ghost-hollow','Nine Tails'),
             ('Checkmate','checkmate','Placas 1, 2 y 3'),
         ]:
             query(q)
@@ -108,7 +108,7 @@ with sync_playwright() as p:
         show_filters()
         page.get_by_role('button',name='Modo Operaciones').click()
         expect(dossier.locator('section').first).to_have_attribute('data-domain','services')
-        expect(dossier).to_contain_text('Rearme · Desconocido')
+        expect(dossier).to_contain_text('Rearme · Certificado')
         assert dossier.locator('.service-icons').count() == 1
         assert dossier.inner_text().count('Reparación de nave') == 1
         page.get_by_role('button',name='Modo Operaciones').click()
@@ -118,9 +118,9 @@ with sync_playwright() as p:
         rearm.click()
         page.locator('#q').fill('Shubin')
         result=page.locator('#suggestions button').first
-        expect(result.locator('svg[data-icon=rearm][data-state=confirmed]')).to_be_visible()
+        expect(result.locator('svg[data-icon=rearm][data-state=possible]')).to_be_visible()
         result.click()
-        expect(dossier).to_contain_text('Rearme · Documentado')
+        expect(dossier).to_contain_text('Rearme · Posible')
         verify_layout()
         show_filters()
         zone.select_option('')
@@ -138,7 +138,8 @@ with sync_playwright() as p:
         expect(page.locator('#stantonCoverage')).to_contain_text('63 plataformas temporales de RSI Discovery Month fuera de cobertura')
         expect(page.locator('#stantonCoverage')).to_contain_text('949 / 949 registros conciliados')
         expect(page.locator('#stantonCoverage')).to_contain_text('43 sin posición extraída · 8 con marcador oculto')
-        expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Evidencia documental por UUID')).to_have_attribute('value','663')
+        expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Documentación candidata por UUID')).to_have_attribute('value','663')
+        expect(page.locator('#stantonCoverage').get_by_role('progressbar', name='Evidencia local certificada')).to_have_attribute('value','129')
         page.screenshot(path=f'/tmp/verse-lab-stanton-scope-{device}.png',full_page=True)
         page.locator('#q').fill('RSI Event Platform')
         expect(page.locator('#suggestions button').filter(has_text='RSI Event Platform')).to_have_count(0)

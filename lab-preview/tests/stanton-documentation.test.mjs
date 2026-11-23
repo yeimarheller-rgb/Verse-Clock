@@ -1,9 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {stantonCoverage,mergeStanton} from '../src/stanton.js';
+import {stantonCoverage,mergeStanton,hasStantonLocalAttestation} from '../src/stanton.js';
 
 const uuid='11111111-1111-4111-8111-111111111111';
-const raw=[{id:uuid,name:'Audited facility',system:'Stanton',parent:'Hurston'}];
+const version='4.10.3-LIVE.13165946';
+const pin='https://github.com/StarCitizenWiki/scunpacked-data/blob/3cc8072b24df2a2d71eb6207708e2039f909b342/';
+const raw=[{id:uuid,name:'Audited facility',system:'Stanton',parent:'Hurston',source:{uuid,version}}];
 const claim=(status,sources=['https://starcitizen.tools/Hurston'])=>({
  field:'access',status,text:'Acceso individual documentado',sources
 });
@@ -61,21 +63,26 @@ test('generic planetary source is NOT certified local evidence',()=>{
  assert.equal(result.certifiedLocal,0);
 });
 
-test('per-UUID reviewed evidence certifies only the matching facility',()=>{
- const source='https://starcitizen.tools/Hurston';
- const attested={...claim('documented',[source]),localEvidence:{uuid,scope:'location',reviewed:true,patch:'4.10.3 LIVE',source}};
- assert.equal(stantonCoverage(raw,visible([attested])).certifiedLocal,1);
- const mismatched={...attested,localEvidence:{...attested.localEvidence,uuid:'wrong'}};
- assert.equal(stantonCoverage(raw,visible([mismatched])).certifiedLocal,0);
- const noPatch={...attested,localEvidence:{...attested.localEvidence,patch:''}};
- assert.equal(stantonCoverage(raw,visible([noPatch])).certifiedLocal,0);
+test('local evidence requires the field, exact UUID, pinned proof, patch, date and uncertainty',()=>{
+ const source=pin+'starmap_positions.json';
+ const localEvidence={uuid,field:'access',scope:'location',reviewed:true,patch:version,source,
+  reviewedAt:'2026-11-23',locator:uuid,proof:'position',sourceDetail:'hidden=false; qt_valid=true'};
+ const attested={...claim('documented',[source]),uncertainty:'Funcionamiento pendiente en sesión.',patch:version,localEvidence};
+ const summarize=item=>stantonCoverage(raw,[{...raw[0],stantonIntel:{uuid,claims:[item],certifiedClaims:[item]}}]);
+ assert.equal(summarize(attested).certifiedCounts.access,1);
+ for(const change of [{uuid:'wrong'},{patch:''},{field:'rearm'},{locator:''},{reviewedAt:'2026-02-30'},{source:'https://starcitizen.tools/Hurston'}]){
+  assert.equal(summarize({...attested,localEvidence:{...localEvidence,...change}}).certifiedLocal,0);
+ }
+ assert.equal(summarize({...attested,uncertainty:''}).certifiedLocal,0);
+ assert.equal(hasStantonLocalAttestation(attested,uuid,'different-build'),false);
 });
 
-test('generic evidence does not automatically confirm repair services',()=>{
- const original={...raw[0],services:{},stantonIntel:{uuid,claims:[{...claim('documented'),services:['repair']}]}};
+test('generic URLs do not confirm repair, refuel or rearm even with self-declared proof',()=>{
+ const original={...raw[0],services:{}};
  const map=new Map([['facility',original]]);
- const data={schemaVersion:1,locations:[{uuid,claims:[{...claim('documented'),services:['repair']}]}]};
+ const data={schemaVersion:1,locations:[{uuid,claims:[{...claim('documented'),
+  services:['repair','refuel','rearm'],localEvidence:{uuid,reviewed:true}}]}]};
  mergeStanton(map,data,null);
- assert.notEqual(map.get('facility').services.repair,'confirmed');
- assert.equal(stantonCoverage(raw,[original]).certifiedLocal,0);
+ assert.deepEqual(map.get('facility').services,{});
+ assert.equal(stantonCoverage(raw,[map.get('facility')]).certifiedLocal,0);
 });
