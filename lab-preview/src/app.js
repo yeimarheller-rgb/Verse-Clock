@@ -264,7 +264,7 @@ function renderStantonCoverage(){
   row.append(name,result);list.append(row);
  }
  const note=document.createElement('small');
- note.textContent=c.catalogTotal+' registros en el catálogo. '+c.excludedTemporary+' plataformas temporales de RSI Discovery Month fuera de cobertura. Los registros sin nombre de juego siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
+ note.textContent=' '+c.catalogTotal+' registros en el catálogo. '+c.excludedTemporary+' plataformas temporales de RSI Discovery Month fuera de cobertura. Los registros sin nombre de juego siguen en el denominador. Las fuentes históricas y el entorno heredado no suman cobertura operativa.';
  const inventory=document.createElement('small');
  const pendingLabels={
   unplaced:'sin posición extraída',hidden:'con marcador oculto',placed:'visibles sin evidencia operativa',

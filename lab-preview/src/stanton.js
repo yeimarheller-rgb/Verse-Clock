@@ -198,20 +198,27 @@ export function mergeStanton(byKey, data, shared, audit) {
 }
 export function stantonSections(p) {
  const local=p.stantonIntel?.certifiedClaims||[];
- const sections=[...(p.stantonIntel?.claims||[]),...(p.stantonIntel?.sharedClaims||[])].map(claim=>({
+ const candidates=[...(p.stantonIntel?.claims||[]),...(p.stantonIntel?.sharedClaims||[])];
+ const sections=candidates.map(claim=>({
   title:claim.title||stantonFields[claim.field], icons:[iconsByField[claim.field]],
   text:claim.text, destinations:claim.destinations, status:statusText[claim.status]+(claim.patch?' · fuente '+claim.patch:''),
   sources:claim.sources.map(url=>({url,name:new URL(url).hostname})),
  }));
  for(const claim of local){
   const label='Evidencia local certificada · '+claim.patch+' · '+claim.localEvidence.reviewedAt;
+  const sources=claim.sources.map(url=>({url,name:'Extracción del parche · UUID '+claim.localEvidence.uuid}));
   const previous=sections.find(s=>s.text===claim.text);
   if(previous){
    previous.status=label;
-  }else{
-   sections.push({title:stantonFields[claim.field]+' · configuración del parche',icons:[iconsByField[claim.field]],
-    text:claim.text,status:label,sources:claim.sources.map(url=>({url,name:'Extracción del parche · UUID '+claim.localEvidence.uuid}))});
+   continue;
   }
+  const maintenance=candidates.findIndex(candidate=>candidate.status==='documented'&&candidate.services?.includes(claim.field));
+  if(maintenance>=0){
+   sections[maintenance].sources.push(...sources);
+   continue;
+  }
+  sections.push({title:stantonFields[claim.field]+' · configuración del parche',icons:[iconsByField[claim.field]],
+   text:claim.text,status:label,sources});
  }
  if(p.stantonIntel?.reviewNote)sections.push({title:p.stantonIntel.reviewedWithoutEvidence.length>1?'Servicios de nave':'Rearme',icons:['rearm'],text:p.stantonIntel.reviewNote,
   status:'Investigado sin corroboración LIVE',sources:[{url:p.stantonIntel.reviewSource,name:'Star Citizen Wiki'}]});
