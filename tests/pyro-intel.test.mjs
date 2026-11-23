@@ -71,3 +71,20 @@ test('Nyx keeps both BRK-204 variants and routes to the correct Levski hospital'
  assert.equal(snapshot.records[unplaced.id],'unplaced');
  assert.equal(unplaced.catalogIntel.sections[0].destinations[0].uuid,placed.id);
 });
+
+test('Nyx applies QV resource, danger and Vanduul loot only to the matching station families',()=>{
+ const snapshot=read('nyx-intel');
+ const nyx=identifyCatalogVariants(catalogue.locations,'Nyx').filter(row=>row.system==='Nyx System');
+ const byKey=new Map(nyx.map(row=>[atlasKey(row),row]));
+ applyCatalogIntel(byKey,nyx,snapshot,catalogue.version,'Nyx');
+ const labels=[
+  ['QV Breaker Station','Sadaryx · minería a mano',82],
+  ['QV Extraction Station','Peligro crítico · defensas láser anticapital',50],
+  ['QV Logistics Station','Botín Vanduul · Testudo y materiales',291],
+ ];
+ for(const [family,title,count] of labels){
+  const matched=[...byKey.values()].filter(row=>row.catalogIntel.sections.some(section=>section.title===title));
+  assert.equal(matched.length,count);
+  assert.ok(matched.every(row=>row.name===family||row.name.startsWith(family+' ')));
+ }
+});

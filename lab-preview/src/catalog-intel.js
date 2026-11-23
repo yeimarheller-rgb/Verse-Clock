@@ -12,6 +12,10 @@ export function applyCatalogIntel(byKey, catalog, snapshot, version, system) {
  if(!snapshot || snapshot.schemaVersion!==1 || snapshot.version!==version) return null;
  const ids=new Set(catalog.filter(row=>atlasSystem(row.system)===system).map(row=>row.id));
  const statuses=new Map(Object.entries(snapshot.records).filter(([id,state])=>ids.has(id)&&Object.hasOwn(markerText,state)));
+ const sharedSections=new Map();
+ for(const {locationIds,sections} of snapshot.sharedDetails||[]){
+  for(const id of locationIds)sharedSections.set(id,[...(sharedSections.get(id)||[]),...sections]);
+ }
  for(const [key,location] of byKey){
   if(atlasSystem(location.system)!==system)continue;
   const id=location.source?.uuid||location.id;
@@ -26,7 +30,7 @@ export function applyCatalogIntel(byKey, catalog, snapshot, version, system) {
     sources:[snapshot.definitionSource,snapshot.positionSource],
     parentUuid:parent!==id&&ids.has(parent)?parent:undefined,
    },
-   sections:snapshot.details?.[id]||[],
+   sections:[...(snapshot.details?.[id]||[]),...(sharedSections.get(id)||[])],
   }});
  }
  const counts=Object.fromEntries(Object.keys(markerText).map(state=>[state,0]));
