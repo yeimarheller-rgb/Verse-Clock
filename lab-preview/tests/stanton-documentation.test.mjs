@@ -53,3 +53,27 @@ test('coverage denominator counts unique inventory UUIDs',()=>{
  assert.equal(result.documentedLocal,1);
  assert.equal(result.geographic,1);
 });
+
+
+test('generic planetary source is NOT certified local evidence',()=>{
+ const result=stantonCoverage(raw,visible([claim('documented')]));
+ assert.equal(result.documentedLocal,1); // legacy candidate metric remains unchanged
+ assert.equal(result.certifiedLocal,0);
+});
+
+test('per-UUID reviewed evidence certifies only the matching facility',()=>{
+ const source='https://starcitizen.tools/Hurston';
+ const attested={...claim('documented',[source]),localEvidence:{uuid,scope:'location',reviewed:true,patch:'4.10.3 LIVE',source}};
+ assert.equal(stantonCoverage(raw,visible([attested])).certifiedLocal,1);
+ const mismatched={...attested,localEvidence:{...attested.localEvidence,uuid:'wrong'}};
+ assert.equal(stantonCoverage(raw,visible([mismatched])).certifiedLocal,0);
+ const noPatch={...attested,localEvidence:{...attested.localEvidence,patch:''}};
+ assert.equal(stantonCoverage(raw,visible([noPatch])).certifiedLocal,0);
+});
+
+test('generic evidence does not automatically confirm repair services',()=>{
+ const original={...raw[0],services:{},stantonIntel:{uuid,claims:[{...claim('documented'),services:['repair']}]}};
+ const map=new Map([['facility',original]]);
+ // mergeStanton is tested in its own integration tests; certification here remains zero.
+ assert.equal(stantonCoverage(raw,[original]).certifiedLocal,0);
+});
