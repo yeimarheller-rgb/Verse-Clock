@@ -79,7 +79,8 @@ export function compute(p, ms = Date.now()) {
   return {
     utc: new Date(ms).toISOString(),
     hourAngle: ha,
-    localTimeSeconds: localSeconds,
+    localTimeSeconds: mod(localSeconds, 86400),
+    sunriseLocalFraction: riseFrac,
     localTime: fmt(localSeconds),
     isDay,
     polar,

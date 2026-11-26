@@ -39,7 +39,7 @@ export function securityFor(location, mission = null) {
   const type = String(location?.type || '').toLowerCase();
   const e = entries.find(x=>x.match.test(name));
   const base = e ? {...e} : {access:'Sin verificar',threat:'Desconocido',status:'Sin datos',notes:/bunker|underground|distribution|outpost|centro de distribuci/i.test(type)?'Instalación potencialmente sujeta a permisos, NPC o contratos. No hay clasificación fiable por nombre.':'No existe evidencia específica de hostilidad para esta ubicación.'};
-  if(!e && /bunker|underground facility|security post|outpost/i.test(type)){
+  if(!e && /bunker|underground facility|security post/i.test(type)){
     const sys=String(location?.system||'').toLowerCase();const body=String(location?.body||location?.parent||'').toLowerCase();
     if(/microtech|calliope|clio|euterpe/.test(body)){base.faction='MT Protection Services (guardias según contrato)';base.pve='Nine Tails en contratos Defend Occupants';base.notes='No asumir que todos los NPC son enemigos. En Defend Occupants los guardias MT Protection Services son aliados y los Nine Tails son hostiles. Torretas y permisos dependen del contrato.';base.evidence='microbunker'}
     else if(/hurston|arial|aberdeen|magda|ita/.test(body)){base.faction='Hurston Security (guardias según contrato)';base.pve='Nine Tails en contratos de limpieza';base.notes='Defensa y limpieza son escenarios distintos. Evict Illegal Occupants puede tener torretas hostiles; Assist in Defending Site incluye guardias aliados. Verificar contrato antes de abrir fuego.';base.evidence='hurstonbunker'}

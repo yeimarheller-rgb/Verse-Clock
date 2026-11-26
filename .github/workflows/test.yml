@@ -21,7 +21,13 @@ jobs:
         run: node tools/audit-atlas.mjs
       - run: sh tools/fetch-fonts.sh
       - run: pip install --quiet pillow && python3 tools/build-images.py
-      - run: node --test tests/*.test.mjs
+      - name: Preparar los mismos recursos LAB que en el despliegue
+        run: |
+          mkdir -p lab-preview/data lab-preview/fonts lab-preview/img
+          cp data/locations.json lab-preview/data/locations.json
+          cp -R fonts/. lab-preview/fonts/
+          cp -R img/. lab-preview/img/
+      - run: node --test tests/*.test.mjs lab-preview/tests/*.test.mjs
       - name: Prueba real en navegador (bloquea el despliegue si la web no arranca)
         run: |
           pip install --quiet playwright==1.56.0

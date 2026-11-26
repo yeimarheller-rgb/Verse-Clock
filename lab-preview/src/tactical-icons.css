@@ -1,0 +1,131 @@
+.tactical-icon {
+  --icon-ink: #70daf1;
+  display: inline-block;
+  flex: none;
+  vertical-align: middle;
+  color: var(--icon-ink);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.tactical-icon[data-tone="danger"] { --icon-ink: #ff747c; }
+.tactical-icon[data-tone="warning"] { --icon-ink: #ffc36d; }
+.tactical-icon[data-tone="service"] { --icon-ink: #75e1b1; }
+.tactical-icon[data-state="unknown"] { opacity: .75; }
+.tactical-icon[data-state="unavailable"] > path { opacity: .48; }
+.tactical-icon-state { color: #b4c4d3; }
+.tactical-icon-state rect { fill: #071521; }
+[data-state="confirmed"] .tactical-icon-state { color: #75e1b1; }
+[data-state="possible"] .tactical-icon-state { color: #ffc36d; }
+[data-state="unavailable"] .tactical-icon-state { color: #ff747c; }
+.tactical-toolbar,.tactical-filters,.tactical-tools,.tactical-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tactical-toolbar { flex-wrap: wrap; justify-content: space-between; }
+.tactical-filters,.tactical-tools { flex-wrap: wrap; }
+.tactical-filters button,#operationsToggle {
+  background: #0c2031;
+  border: 1px solid #46728b;
+  border-radius: 4px;
+  color: #d9f2ff;
+  font: 700 14px var(--hud,system-ui);
+  min-height: 36px;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+.tactical-filters button[aria-pressed="true"],#operationsToggle[aria-pressed="true"] { border-color:#70daf1;background:#204253; }
+.tactical-tools a { color: #70daf1; font-size: 14px; }
+#operationsPanel { margin: 8px 0; padding: 12px; border: 1px solid #46728b; background: #0b2032; }
+#operationsPanel h3 { margin: 0 0 8px; font: 700 17px var(--hud,system-ui); }
+.service-icons { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.service-icons li { color: #d9f2ff; font-size: 13px; }
+@media(max-width:520px) {
+  .tactical-filters,.tactical-tools { gap: 6px; }
+  .tactical-filters button,#operationsToggle { min-height: 44px; }
+}
+.stanton-zone { display:flex;align-items:center;gap:8px;font-weight:700;color:#d9f2ff }
+.stanton-zone select { min-height:44px;max-width:100%;background:#0c2031;color:#e4f2fa;border:1px solid #46728b;padding:5px 8px;border-radius:4px }
+.stanton-metrics { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:8px }
+.stanton-metrics div { border:1px solid #46728b;padding:7px }
+.stanton-metrics dd { margin:0;display:flex;gap:8px;align-items:center }
+.stanton-metrics progress { height:8px;flex:1;min-width:0;accent-color:#70daf1 }
+.stanton-source { color:#70daf1 }
+
+.stanton-pending { grid-column:1/-1;color:#b5d5e6;padding:8px 0 }
+.stanton-pending summary { cursor:pointer }
+/* The DOM and visual order match at every viewport. */
+main { display:flex;flex-direction:column;gap:10px;align-items:stretch }
+main > .atlas-search-stack { gap:0!important }
+#searchFilters { position:relative;padding-top:5px;color:#a9c4d4 }
+#searchFilters > summary,.atlas-audit > summary {
+ cursor:pointer;width:fit-content;font:700 13px var(--hud,system-ui);padding:5px 2px;
+}
+#searchFilters .tactical-toolbar { padding:8px 0 }
+main > .solar-console {
+ display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"hero" "solar" "tl";gap:8px;
+}
+.solar-console .hero { align-self:stretch;padding:8px 12px 10px }
+.solar-console #where { display:block;color:var(--acc2);margin-bottom:4px;overflow-wrap:anywhere }
+.solar-console #clock { font-size:clamp(34px,13.5cqi,108px) }
+.solar-console:has(#solarEvents[hidden]) #clock { font-size:34px }
+.solar-console .solar {
+ align-self:stretch;min-height:0;padding:8px 13px 11px;gap:5px;
+}
+.solar-console .ph { gap:10px }
+.solar-console #phase { color:var(--acc);font-size:18px }
+.solar-console .ev { min-height:0;padding-top:4px }
+.solar-console .ev strong { font-size:clamp(13px,3.5vw,19px);min-height:0 }
+.solar-console .solar-next { border-color:var(--acc) }
+.solar-console [hidden] { display:none }
+.solar-console .ev:not(:has(> :not([hidden]))) { display:none }
+.solar-console .tlw { padding:5px 17px 7px }
+.solar-console .tl { margin:14px 0 9px;background:#304255 }
+.solar-console .tll { letter-spacing:.09em;font-weight:700;color:var(--ink) }
+.solar-console #tlNow { top:-7px;width:2px;height:20px;background:var(--acc);box-shadow:0 0 10px var(--acc) }
+.solar-console #tlNow::before {
+ content:"";position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
+ border:5px solid transparent;border-top-color:var(--acc);border-bottom:0;
+}
+.solar-console #tlNow::after { content:none }
+@media(min-width:700px) {
+ main > .solar-console {
+  grid-template-columns:minmax(0,1fr) minmax(320px, 29%);
+  grid-template-areas:"hero solar" "tl tl";
+ }
+ .solar-console .hero { display:grid;align-content:center;padding:11px 17px 15px }
+ .solar-console .solar { align-content:center;padding:12px 17px 15px;gap:10px }
+ .solar-console:has(#solarEvents[hidden]) .hero { grid-column:1/-1 }
+}
+.environment-temperature { color:#ffc36d }
+main > #tacticalPanel { padding:12px;border-top:1px solid #70daf1 }
+.location-heading { display:flex;align-items:baseline;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;margin-bottom:10px }
+.location-heading #mainIntelLocation { margin:0;color:#ffc36d;font:700 clamp(19px,2.6vw,25px)/1.2 var(--hud,system-ui) }
+#locationMeta { margin:0;color:#a9c4d4;font:600 14px var(--hud,system-ui) }
+#locationDossier { display:grid;gap:8px;grid-template-columns:1fr!important }
+#locationDossier > section { min-width:0 }
+.location-dossier-block { padding:8px 10px;border-left-width:2px }
+.location-dossier-block > h2,.location-dossier-block > summary { margin:0 0 3px;font:700 15px var(--hud,system-ui);color:#8ce7fb }
+.location-dossier-block > summary { cursor:pointer }
+.location-dossier-block > summary.tactical-label { display:list-item }
+.location-dossier-block > summary .tactical-icon { margin-right:6px }
+.location-dossier-block > .dossier-fact { margin:3px 0;font:600 15px/1.32 var(--hud,system-ui);white-space:pre-line }
+.dossier-fact small { color:#9fb7cb;font-size:12px }
+.dossier-refs { margin-left:6px;white-space:nowrap }
+.dossier-refs a,.dossier-sources a { color:#8ce7fb }
+.dossier-refs a { font:700 12px var(--hud,system-ui);margin-inline-end:4px }
+.dossier-sources { margin:4px 0;padding-left:22px }
+.dossier-sources li { margin:4px 0;overflow-wrap:anywhere }
+#locationSources,#locationDossier [data-domain="navigation"] { grid-column:1/-1 }
+@media(min-width:840px){
+ #locationDossier { grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start }
+}
+#filterToggle{
+ flex:none;min-width:53px;border:1px solid #46728b;background:#0c2031;color:#aee8f6;
+ padding:0 7px;font:700 13px var(--hud,system-ui);cursor:pointer
+}
+#filterToggle[aria-expanded="true"]{background:#204253}

@@ -1,0 +1,198 @@
+import {envFor, SOURCE} from './environment.js';
+import {securityFor} from './security.js';
+import {lootFor} from './loot.js';
+import {atlasSystem, normalize, serviceNames, tacticalSections} from './tactical-atlas.js';
+import {stantonSections} from './stanton.js';
+
+export const dossierGroups = {
+  security:['Seguridad y peligros','danger'],
+  combat:['PvE y PvP','pvp'],
+  missions:['Misiones y actividades','mission'],
+  loot:['Botín, armas y recursos','loot'],
+  services:['Servicios y comercio','repair'],
+  navigation:['Acceso y navegación','landing'],
+};
+export const shipServices = {repair:'Reparación de nave',refuel:'Repostaje',rearm:'Rearme'};
+const serviceLabels={...serviceNames,...shipServices};
+const landingIssue={
+  version:'4.10.3-LIVE.13165946',
+  source:'https://support.robertsspaceindustries.com/hc/en-us/articles/360056254754-Star-Citizen-Alpha-4-10-3-Known-Issues',
+};
+const indexedResourceLabels={mineable:'Minería',harvestable:'Recolección',salvage:'Salvamento',remains:'Restos'};
+const iconGroup={
+  danger:'security', 'anti-capital':'security', pve:'combat', pvp:'combat', contested:'combat', valakkar:'combat',
+  mission:'missions', mining:'missions', loot:'loot', weapons:'loot', cave:'loot',
+  repair:'services', rearm:'services', refuel:'services', trade:'services', commodity:'services',
+  hangar:'services', clinic:'services', landing:'navigation',
+};
+const meaningful = v => v && !/^(sin datos|no confirmad[ao]|sin verificar|según misión \/ sin datos|desconocido)$/i.test(v);
+const textOf = row => typeof row === 'string' ? row : [
+  row?.name||row?.label||row?.title, row?.detail||row?.description||row?.location,
+  row?.confidence||row?.status, row?.patch||row?.source?.version,
+].filter(Boolean).join(' · ');
+
+export function locationDossier(p,{environment,body,solar,operations=false}={}){
+  const groups=new Map();
+  const sources=new Map();
+  const seen=new Set();
+  const addSources=(entries=[])=>entries.flatMap(entry=>{
+    const url=typeof entry==='string'?entry:entry?.url;
+    if(!/^https:\/\//i.test(url||''))return [];
+    if(!sources.has(url))sources.set(url,{url,label:entry.name||new URL(url).hostname,index:sources.size+1});
+    return [sources.get(url).index];
+  });
+  const add=(group,text,{title,status,sources:refs,destinations,temperature,icons,uncertainty}={})=>{
+    const indexes=[...new Set(addSources(refs))];
+    if(!text&&!temperature)return;
+    const key=normalize([temperature,text].filter(Boolean).join(' ')).replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+    if(seen.has(key))return;
+    seen.add(key);
+    if(!groups.has(group))groups.set(group,[]);
+    groups.get(group).push({title,text,status,sources:indexes,destinations,temperature,icon:icons?.[0],uncertainty});
+  };
+  const geographicalSections=tacticalSections(p);
+  const catalogTrade=geographicalSections.find(section=>section.title==='Comercio');
+  const sections=[...geographicalSections,...stantonSections(p)];
+  const isHathor=Boolean(p.hathor);
+  const isContested=sections.some(s=>s.icons?.includes('contested'));
+  const tactical=p.tacticalIntel, lootIntel=p.lootIntel;
+  const hasMaintenance=p.stantonIntel?.claims.some(c=>c.services?.length);
+  const serviceIntel=p.serviceIntel;
+  const services=new Map();
+  for(const key of Object.keys(serviceLabels)){
+    const state=p.services?.[key];
+    if(meaningful(state)||operations&&key in shipServices)services.set(key,{label:serviceLabels[key],state:state||'unknown'});
+  }
+  const version=p.source?.version||p.patch||p.intelDetailSource?.version;
+  const isStanton=atlasSystem(p.system)==='Stanton';
+  if(operations&&isStanton&&version===landingIssue.version&&[...services].some(([key,item])=>
+    key in shipServices&&['confirmed','possible','reported'].includes(item.state))){
+    add('services','Si el mobiGlas no muestra los servicios tras aterrizar, espera unos minutos y vuelve a abrir Servicios de aterrizaje. Si estás en un hangar, deja que se cierren las puertas.',{
+      title:'Si no aparece el servicio',icons:['danger'],sources:[{name:'RSI · incidencias de aterrizaje 4.10.3',url:landingIssue.source}],
+    });
+  }
+  const directTerminals=new Set(p.stantonIntel?.claims.map(claim=>claim.terminalId).filter(Boolean));
+  const knownEnvironment=p.stantonIntel?.environment||environment;
+  if(knownEnvironment){
+    const text=knownEnvironment.text;
+    const temperature=text.match(/Máxima (?:superficial )?de referencia [^.]+°C[^.]*\./)?.[0];
+    add('security',temperature?text.replace(temperature,'').replace(/ {2,}/g,' ').trim():text,{
+      title:'Entorno regional'+(body&&body!==p.name?' · '+body:''),sources:knownEnvironment.sources,temperature,
+    });
+  }
+  const visualEnv=envFor({body});
+  if(!knownEnvironment&&visualEnv.tags.length)add('security',visualEnv.tags.map(t=>t.label).join(' · '),{title:'Entorno regional',sources:['https://starcitizen.tools/']});
+  for(const section of sections){
+    if(section===catalogTrade&&serviceIntel?.trade?.length&&serviceIntel.trade.every(([id])=>directTerminals.has(id))){
+      addSources(section.sources);
+      continue;
+    }
+    if(!section.icons?.length){
+      const text=[serviceIntel?.padTypes&&'Plataformas registradas: '+serviceIntel.padTypes.replaceAll(',',', '),
+        !hasMaintenance&&serviceIntel?.services.some(key=>key in shipServices)&&'Abre Servicios de aterrizaje desde el asiento de piloto tras aterrizar.'].filter(Boolean).join('. ');
+      add('services',text,{sources:section.sources});
+      continue;
+    }
+    const group=iconGroup[section.icons[0]]||'navigation';
+    let text=section.text;
+    if(isHathor&&group==='loot'&&tactical?.weapons){
+      text='Posibles en los contenedores de las salas de seguridad: '+tactical.weapons.join(' · ')+'.';
+    }
+    if(hasMaintenance&&section.title?.match(/^(Mantenimiento de nave|Rearme y repostaje)$/)){
+      text='Abre Servicios de aterrizaje desde el asiento de piloto tras aterrizar.';
+    }
+    add(group,text,section);
+  }
+  if(meaningful(visualEnv.gravity.label)&&visualEnv.gravity.key!=='unknown'){
+    add('navigation','Gravedad regional: '+visualEnv.gravity.label+'. '+visualEnv.gravity.hint,{status:SOURCE.gravity,sources:['https://scminer.rocks/data/ore-by-location']});
+  }
+  if(!isHathor&&!isContested){
+    const sec=securityFor(p);
+    const refs=sec.source?[{url:sec.source.url,name:sec.source.source}]:[];
+    if(sec.source){
+      if(!p.stantonIntel?.claims.some(c=>c.field==='access')&&meaningful(sec.access))add('navigation',sec.access,{sources:refs});
+      if(!p.stantonIntel?.claims.some(c=>c.field==='pve')&&!tactical?.threats?.length&&meaningful(sec.pve))add('combat',sec.pve,{title:'PvE',sources:refs,status:sec.source.build});
+      if(!p.stantonIntel?.claims.some(c=>c.field==='pvp')&&meaningful(sec.pvp))add('combat',sec.pvp,{title:'PvP',sources:refs,status:sec.source.build});
+      if(!meaningful(sec.pve)&&!meaningful(sec.pvp))add('security',sec.notes,{status:sec.source.build,sources:refs});
+    }
+    const loot=lootFor(p);
+    if(!tactical?.weapons&&!tactical?.resources&&!lootIntel&&loot.source)add('loot',loot.summary,{sources:[loot.source]});
+  }
+  const faction=p.operator||p.affiliation;
+  if(faction&&!/^<=.*=>$/.test(faction))add('security',faction,{title:'Operador o afiliación'});
+  if(p.jurisdiction&&!/^<=.*=>$/.test(p.jurisdiction)&&normalize(p.jurisdiction)!==normalize(faction))add('security',p.jurisdiction,{title:'Jurisdicción'});
+
+  const tacticalRefs=tactical?.sources||[];
+  const list=(group,title,entries,refs)=>add(group,(entries||[]).map(textOf).filter(Boolean).join(' · '),{title,sources:refs});
+  if(tactical){
+    if(!isHathor)list('combat','Amenazas',tactical.threats,tacticalRefs);
+    if(!isHathor)list('loot','Armas posibles',tactical.weapons,tacticalRefs);
+    list('loot','Armaduras posibles',tactical.armor,tacticalRefs);
+    list('loot','Componentes posibles',tactical.components,tacticalRefs);
+    if(!isHathor)list('loot','Recursos',tactical.resources,tacticalRefs);
+    list('missions','Preparación',tactical.requirements,tacticalRefs);
+    if(!isHathor){
+      const steps=(tactical.steps||[]).map((step,index)=>(index+1)+'. '+step).join('\n');
+      add('missions',steps,{title:tactical.title,sources:tacticalRefs,status:tactical.caveat});
+    }
+  }
+  if(lootIntel&&!isHathor){
+    list('loot','Objetos y materiales',lootIntel.categories,lootIntel.sources);
+    add('loot',lootIntel.mining,{sources:lootIntel.sources,status:lootIntel.caveat});
+    add('missions',lootIntel.solo,{title:'En solitario',sources:lootIntel.sources});
+    add('missions',lootIntel.org,{title:'En grupo',sources:lootIntel.sources});
+  }
+  const describedResources=new Set((p.stantonIntel?.claims||[])
+    .filter(claim=>claim.field==='resources'&&claim.status!=='historical')
+    .flatMap(claim=>claim.resourceNames||[]).map(normalize));
+  const catalogResources=(p.resources||[]).filter(resource=>!describedResources.has(normalize(typeof resource==='string'?resource:resource?.name)));
+  const indexedResources=new Map();
+  const remainingResources=catalogResources.filter(resource=>{
+    const label=indexedResourceLabels[resource?.kind];
+    if(!label||resource.source?.provider!=='Star Citizen Wiki API'||resource.source.endpoint!=='/api/commodities')return true;
+    if(!indexedResources.has(label))indexedResources.set(label,[]);
+    indexedResources.get(label).push(resource.name);
+    return false;
+  });
+  if(indexedResources.size){
+    const categories=[...indexedResources].map(([label,names])=>label+' — '+names.join(', '));
+    add('loot',categories.join(' · ')+'. Disponibilidad y cantidad por verificar.',{
+      title:'Recursos catalogados por UUID',status:p.resourceIndexVersion,
+      sources:['https://api.star-citizen.wiki/api/commodities'],
+    });
+  }
+  for(const [group,title,rows] of [
+    ['missions','Actividades y contratos',[...(p.activities||[]),...(p.missions||[])]],
+    ['loot','Botín específico',p.lootItems],['loot','Recursos catalogados',remainingResources],
+    ['services','Mercancías',p.commodities],['services','Tiendas',p.shops],
+    ['combat','Enemigos catalogados',p.npcs],['navigation','Instalaciones vinculadas',p.nearbyLocations],
+    ['navigation','Consejos tácticos',p.tacticalTips],
+  ]){
+    const refs=(rows||[]).map(r=>r?.source?.url);
+    list(group,title,[...new Set((rows||[]).map(textOf).filter(Boolean))],refs);
+  }
+  if(!serviceIntel)list('services','Equipamiento y servicios registrados',p.amenities);
+  if((p.missionCount||0)>0&&!p.missions?.length&&!p.activities?.length&&!groups.has('missions'))add('missions',p.missionCount+' referencias de contrato en catálogo. Disponibilidad por verificar.');
+  if(p.hathor?.linked.length)add('navigation','Instalaciones de la serie '+p.hathor.group,{destinations:p.hathor.linked});
+  if(p.stantonCatalogReview){
+    const review=p.stantonCatalogReview;
+    add('navigation',review.text,{
+      title:'Estado de la evidencia local',status:'Revisado · '+review.checkedAt,
+      sources:[review.source,review.noteSource].filter(Boolean),
+      destinations:review.destinationUuid?[{uuid:review.destinationUuid}]:undefined,
+    });
+  }
+  if(p.catalogIntel?.marker){
+    const marker=p.catalogIntel.marker;
+    add('navigation',marker.text,{title:'Marcador del parche',sources:marker.sources});
+    if(marker.parentUuid)add('navigation','Ubicación superior en la jerarquía del catálogo. La ruta en partida sigue pendiente.',{
+      title:'Referencia cartográfica',sources:marker.sources,destinations:[{uuid:marker.parentUuid}],
+    });
+  }
+  if(solar)add('navigation',solar,{title:'Navegación solar'});
+  addSources([...(p.sourceUrls||[]),...(tacticalRefs||[]),...(lootIntel?.sources||[])]);
+  const review=p.catalogIntel?.checkedAt||p.stantonIntel?.checkedAt||p.serviceIntel?.checkedAt||p.intelCheckedAt?.slice(0,10);
+  const versionLabel=[version&&'Datos '+version, review&&'Consulta '+review].filter(Boolean).join(' · ');
+  const stantonVersionLabel=isStanton&&version?[version, review&&'Revisión documental '+review,'Comprueba la disponibilidad en partida'].filter(Boolean).join(' · '):'';
+  return {groups,services,sources:[...sources.values()],versionLabel,stantonVersionLabel};
+}
